@@ -14,18 +14,33 @@
    sizes. It is thin below about 24px. Body copy at 20px will look lighter than
    Anthropic's, which uses Tiempos Text. Swap the files if Text is acquired —
    nothing else changes, the family name stays the same.
+
+   Weight 400 loads the file named Light, and that is deliberate. Two things:
+
+   1. 'Tiempos Fine Regular' is a damaged file. Its CFF CharStrings INDEX fails
+      validation, so Chrome rejects the .woff2 and the .otf alike and silently
+      falls back to Georgia. 'Tiempos Fine Bold' is damaged the same way; no rule
+      points at it. Every other face decodes. Replace the file and this comment
+      goes away.
+   2. Of the faces that do work, Light is the one that reads as body copy at 20px.
+      Measured on the live page: Medium reads as bold, because a display cut's
+      Medium lands near a text cut's Bold at this size.
+
+   So the name says Light and the eye says regular. Trust the eye.
    -------------------------------------------------------------------------- */
 
 @font-face {
   font-family: 'Tiempos';
-  src: url('../fonts/tiempos/Tiempos Fine Regular.woff2') format('woff2'),
-       url('../fonts/tiempos/Tiempos Fine Regular.otf') format('opentype');
+  src: url('../fonts/tiempos/Tiempos Fine Light.woff2') format('woff2'),
+       url('../fonts/tiempos/Tiempos Fine Light.otf') format('opentype');
   font-weight: 400; font-style: normal; font-display: swap;
 }
+/* Light Italic, not Regular Italic. The roman above is Light; a Regular italic
+   beside it would set every italic phrase heavier than the words around it. */
 @font-face {
   font-family: 'Tiempos';
-  src: url('../fonts/tiempos/Tiempos Fine Regular Italic.woff2') format('woff2'),
-       url('../fonts/tiempos/Tiempos Fine Regular Italic.otf') format('opentype');
+  src: url('../fonts/tiempos/Tiempos Fine Light Italic.woff2') format('woff2'),
+       url('../fonts/tiempos/Tiempos Fine Light Italic.otf') format('opentype');
   font-weight: 400; font-style: italic; font-display: swap;
 }
 @font-face {

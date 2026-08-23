@@ -1,0 +1,51 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Which Tiempos face for body copy?</title>
+<!--
+  Tiempos Fine Regular is a damaged file: its CFF CharStrings INDEX fails validation,
+  so Chrome rejects both the .woff2 and the .otf and falls back to Georgia. This page
+  shows the working faces at the real body size, so the substitute is chosen by looking
+  rather than by guessing. Open it and read the paragraphs, not the labels.
+-->
+<style>
+  @font-face { font-family:'TFLight';    src:url('../../assets/fonts/tiempos/Tiempos Fine Light.woff2') format('woff2'); }
+  @font-face { font-family:'TFMedium';   src:url('../../assets/fonts/tiempos/Tiempos Fine Medium.woff2') format('woff2'); }
+  @font-face { font-family:'TFSemibold'; src:url('../../assets/fonts/tiempos/Tiempos Fine Semibold.woff2') format('woff2'); }
+  body { background:#F0EEE6; color:#191919; margin:0; padding:48px 40px; }
+  section { max-width:65ch; margin:0 0 40px; }
+  h2 { font:500 12px/1.4 ui-sans-serif, system-ui, sans-serif; letter-spacing:.08em;
+       text-transform:uppercase; color:#6B6558; margin:0 0 8px; }
+  p { font-size:20px; line-height:1.4; margin:0; }
+  .georgia   p { font-family: ui-serif, Georgia, Cambria, 'Times New Roman', serif; }
+  .light     p { font-family: TFLight; }
+  .medium    p { font-family: TFMedium; }
+  .semibold  p { font-family: TFSemibold; }
+</style>
+
+<section class="georgia">
+  <h2>Georgia — what the site actually ships today</h2>
+  <p>Every entry has a Skip if line. A link with no judgment is just a list, and lists
+  are what made this hard in the first place. We would rather have seventy resources we
+  can vouch for than seven hundred we cannot.</p>
+</section>
+
+<section class="light">
+  <h2>Tiempos Fine Light — closest to body weight</h2>
+  <p>Every entry has a Skip if line. A link with no judgment is just a list, and lists
+  are what made this hard in the first place. We would rather have seventy resources we
+  can vouch for than seven hundred we cannot.</p>
+</section>
+
+<section class="medium">
+  <h2>Tiempos Fine Medium — reads as bold at 20px</h2>
+  <p>Every entry has a Skip if line. A link with no judgment is just a list, and lists
+  are what made this hard in the first place. We would rather have seventy resources we
+  can vouch for than seven hundred we cannot.</p>
+</section>
+
+<section class="semibold">
+  <h2>Tiempos Fine Semibold — the heading face, for reference</h2>
+  <p>Every entry has a Skip if line. A link with no judgment is just a list, and lists
+  are what made this hard in the first place. We would rather have seventy resources we
+  can vouch for than seven hundred we cannot.</p>
+</section>
