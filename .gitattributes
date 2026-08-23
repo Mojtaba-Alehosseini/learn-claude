@@ -1,0 +1,14 @@
+# The build runs on Linux, this machine is Windows with core.autocrlf=true. Nothing
+# executed by the workflow may ever be stored with CRLF: Linux would read the shebang
+# as "/usr/bin/env bash\r" and stop with "bad interpreter". These lines make that
+# impossible rather than merely true today.
+*.sh  text eol=lf
+*.py  text eol=lf
+
+# Fonts and images are binary. Never let end-of-line conversion touch them.
+*.otf   binary
+*.woff2 binary
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.pdf   binary
