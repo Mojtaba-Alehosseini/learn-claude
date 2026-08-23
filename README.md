@@ -9,9 +9,15 @@ this hard in the first place.
 
 Not affiliated with Anthropic.
 
+**Live: https://mojtaba-alehosseini.github.io/learn-claude/**
+
 ## Run it
 
 Open `index.html`. That is the whole procedure — no server, no build, no install.
+
+Pushing to `master` deploys. `.github/workflows/deploy.yml` runs `build.sh` on the
+runner, so `data/*.js` stays out of git and the live site can never disagree with
+`data/items.json`.
 
 The data loads through `<script>` tags rather than `fetch()`, specifically so the site
 works opened straight from a folder. Browsers block `fetch()` on `file://`, and a
