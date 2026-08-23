@@ -261,8 +261,51 @@
   el.openSheet.addEventListener("click", openSheet);
   el.closeSheet.addEventListener("click", closeSheet);
   el.sheetConfirm.addEventListener("click", closeSheet);
+
+  /* Everything the Tab key is allowed to reach inside the sheet.
+     Read fresh on every keypress, never cached: render() rebuilds the filter controls
+     inside the sheet each time a box is ticked, so a cached list goes stale at once. */
+  var SHEET_STOPS = 'a[href], button:not([disabled]), input:not([disabled]), ' +
+                    'select:not([disabled]), textarea:not([disabled]), ' +
+                    '[tabindex]:not([tabindex="-1"])';
+
+  function sheetStops() {
+    return Array.prototype.filter.call(
+      el.sheet.querySelectorAll(SHEET_STOPS),
+      function (n) { return n.getClientRects().length > 0; }
+    );
+  }
+
+  /* Escape closes the sheet. Tab stays inside it.
+     aria-modal="true" is on the sheet already, and it does not do the second job — it
+     tells a screen reader to keep its virtual cursor in the dialog, and has no effect on
+     the Tab key. Without this, Tab walks out of the sheet and into the 400-odd links of
+     the page behind, which is still fully focusable under a position:fixed panel. The
+     focus ring then sits under the sheet, where nobody can see it. */
   document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape" && !el.sheet.classList.contains("hidden")) closeSheet();
+    if (el.sheet.classList.contains("hidden")) return;
+
+    if (e.key === "Escape") { closeSheet(); return; }
+    if (e.key !== "Tab") return;
+
+    var stops = sheetStops();
+    if (!stops.length) return;
+    var first = stops[0], last = stops[stops.length - 1];
+
+    /* Focus can start outside the sheet — a click on the page behind puts it there.
+       Send it back in rather than let Tab carry on down the page. */
+    if (!el.sheet.contains(document.activeElement)) {
+      e.preventDefault();
+      first.focus();
+      return;
+    }
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
+    }
   });
 
   /* ----------------------------------------------------------------- go ---- */

@@ -84,6 +84,7 @@
   --ivory-light:   #faf9f5;  /* card surfaces                                 */
   --clay:          #d97757;  /* THE single accent. One filled CTA per page.   */
   --clay-deep:     #c6613f;  /* clay hover and pressed                        */
+  --clay-text:     #ac5233;  /* clay as text — see the flag note below        */
   --bark:          #6c6b66;  /* ours, not Anthropic's — see the note below    */
 
   /* Why --bark exists. Measured 2026-08-19 against #f0eee6:
@@ -139,7 +140,13 @@
   --tier-listed-text:     var(--bark);   /* badges are 12px — cloud-medium is illegible there */
   --tier-listed-brdr:     var(--stone);
 
-  --flag-outdated: var(--clay-deep);   /* "possibly outdated", paired with text */
+  /* "possibly outdated" and "link is dead". Measured 2026-08-23 at 12px:
+       --clay-deep #c6613f   3.85:1 on the card, 3.49:1 on the canvas — both fail AA
+       --clay-text #ac5233   4.97:1 on the card, 4.51:1 on the canvas — both pass
+     Same hue, same saturation, lightness lowered until it cleared 4.5:1, which is the
+     method the --bark note above describes. A warning nobody can read is not a warning.
+     --clay itself does not change; the one filled button keeps its colour. */
+  --flag-outdated: var(--clay-text);
 
   /* ------------------------------------------------------------------------
      Type families
