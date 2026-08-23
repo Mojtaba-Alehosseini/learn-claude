@@ -384,11 +384,12 @@ button, .btn, .nav-link, .filter-option { min-height: 44px; }
   margin-top: var(--space-32);
 }
 
+/* Sticky, but it does not scroll inside itself. A capped, overflowing rail puts a
+   second scrollbar next to the page's own, and a reader then has to work out which one
+   moves what. The filters are short enough to simply be as tall as they are. */
 .filter-rail {
   position: sticky;
   top: var(--space-24);
-  max-height: calc(100vh - var(--space-48));
-  overflow: auto;
 }
 .filter-head {
   display: flex; align-items: center; justify-content: space-between;

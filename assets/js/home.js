@@ -30,7 +30,10 @@
   }
 
   /* Cross-fade rather than swap, so the change registers as an answer to what you just
-     clicked instead of a flicker. 220ms, and honoured only when motion is welcome. */
+     clicked instead of a flicker. 220ms, matching --dur-base in the stylesheet: if this
+     number is shorter than the CSS transition, the next fade starts before the last one
+     finished and both drawings show at once. */
+  var FADE_MS = 220;
   function fadeTo(src) {
     target = src;
     if (fading) return;
@@ -46,7 +49,7 @@
       fading = false;
       var now = (state.showB ? el.artB : el.artA).getAttribute("src");
       if (target && target !== now) fadeTo(target);
-    }, 240);
+    }, FADE_MS);
   }
 
   /* Before anyone has chosen, the drawing cycles slowly. It is the only hint that the

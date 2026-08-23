@@ -25,7 +25,10 @@
   .hero-art img {
     position: absolute; inset: 0; width: 100%; height: 100%;
     object-fit: contain;
-    transition: opacity var(--dur-slow) var(--ease-out);
+    /* Must match FADE_MS in home.js. When these drift apart the script unlocks
+       before the pixels have finished moving, a second fade starts on top of the
+       first, and two drawings are visible at once. */
+    transition: opacity var(--dur-base) var(--ease-out);
   }
   /* The one decorative use of clay allowed: it marks the thing you act on. */
   .blank {
@@ -33,7 +36,10 @@
     padding: 0; margin: 0; font: inherit; letter-spacing: inherit;
     color: var(--text-primary); cursor: pointer; text-align: left;
   }
-  .blank:hover, .blank[aria-expanded="true"] { background: var(--surface-panel); }
+  /* Only on hover. Tinting the open blank as well put a beige box around "a [role]" on
+     first load, which reads as a stray text selection rather than as an invitation.
+     The clay underline already says these words are the ones you press. */
+  .blank:hover { background: var(--surface-panel); }
   .blank span { border-bottom: 2px solid var(--clay); }
   .chooser { margin-top: var(--space-32); }
   .search-row {

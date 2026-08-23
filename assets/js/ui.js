@@ -127,6 +127,16 @@
     return s;
   };
 
+  /* "Anthropic Academy · Anthropic" says the same thing twice. Only show the author
+     when it adds a name the publisher line does not already carry. */
+  LC.authorLine = function (item) {
+    var a = (item.author || "").trim(), src = (item.source || "").trim();
+    if (!a || !src) return "";
+    var al = a.toLowerCase(), sl = src.toLowerCase();
+    if (al === sl || al.indexOf(sl) !== -1 || sl.indexOf(al) !== -1) return "";
+    return " · " + LC.esc(a);
+  };
+
   LC.chips = function (item) {
     return [LC.FORMAT[item.format] || item.format,
             LC.TIME[item.time] || item.time,
@@ -145,8 +155,7 @@
   LC.card = function (item, opts) {
     opts = opts || {};
     var fresh = LC.freshness(item);
-    var author = item.author && item.author !== item.source
-      ? " · " + LC.esc(item.author) : "";
+    var author = LC.authorLine(item);
 
     var pathLine = "";
     if (!opts.hidePath && item.paths && item.paths.length) {

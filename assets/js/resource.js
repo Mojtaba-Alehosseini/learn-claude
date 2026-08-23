@@ -26,8 +26,7 @@
   document.title = item.title + " — Learn Claude";
 
   var fresh = LC.freshness(item);
-  var author = item.author && item.author !== item.source
-    ? " · " + LC.esc(item.author) : "";
+  var author = LC.authorLine(item);
 
   function list(title, arr) {
     if (!arr || !arr.length) return "";
