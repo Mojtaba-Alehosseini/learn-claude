@@ -44,12 +44,13 @@
     target = src;
     if (fading) return;
     var showing = state.showB ? el.artB : el.artA;
-    if (showing.getAttribute("src") === src) return;
+    if (showing.getAttribute("src") === src) { markFromSrc(src); return; }
     fading = true;
     var next = state.showB ? el.artA : el.artB;
     next.src = src;
     next.style.opacity = "1";
     showing.style.opacity = "0";
+    markFromSrc(src);
     state.showB = !state.showB;
     setTimeout(function () {
       fading = false;
@@ -58,14 +59,11 @@
     }, FADE_MS);
   }
 
-  /* Move the drawing, and mark the chip it is drawing.
-     Everything that changes the picture goes through here, so the mark can never fall
-     out of step with what is on screen. */
+  /* Ask for a drawing. fadeTo does the marking, at the moment the picture changes. */
   function showArt(role, level) {
     state.artRole = role || "non-technical";
     state.artLevel = level || "never-used";
     fadeTo(art(state.artRole, state.artLevel));
-    markShowing();
   }
 
   function mark(row, value) {
@@ -75,13 +73,26 @@
     });
   }
 
-  function markShowing() {
-    mark(el.roleOptions, state.artRole);
+  /* Mark from the file that is going on screen, never from what was asked for.
+     fadeTo holds a request back while an earlier fade is still running, so a mark set at
+     request time can arrive before the picture does. Reading the src at the moment it is
+     committed means the chip and the drawing cannot disagree — and it stays true when a
+     background tab throttles the timers to a crawl. */
+  function markFromSrc(src) {
+    var p = src.split("/");                       /* .../roles/<role>/<level>.png */
+    mark(el.roleOptions, p[p.length - 2]);
     /* The level row is marked only when a level was really asked for. Every drawing
        needs some level, so it falls back to never-used; marking that chip on a fallback
        would show a choice nobody made. */
     var levelAsked = state.level || (previewing && previewing.kind === "level");
-    mark(el.levelOptions, levelAsked ? state.artLevel : null);
+    mark(el.levelOptions, levelAsked ? p[p.length - 1].replace(".png", "") : null);
+  }
+
+  /* Re-mark whatever is on screen. render() replaces both rows, which throws the marks
+     away with the old buttons. */
+  function markShowing() {
+    var img = state.showB ? el.artB : el.artA;
+    markFromSrc(img.getAttribute("src") || art("non-technical", "never-used"));
   }
 
   /* Before anyone has chosen, the drawing cycles slowly. It is the only hint that the
