@@ -1,0 +1,69 @@
+# Build the site and publish it to GitHub Pages.
+#
+# The pages load data/*.js, which build.sh writes from data/*.json. Those .js files are
+# gitignored on purpose — committing both copies makes every data change show up as two
+# diffs, one of them unreadable minified JSON. So the runner builds them here instead.
+# The consequence is that the live site can never disagree with data/items.json.
+
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# One deploy at a time. Do not cancel a running one — a half-finished deploy is worse
+# than a slightly stale one.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # Every build script uses the standard library only, and --keywords keeps
+      # build-search-index.py off the network. There is nothing to install.
+      - name: Build ids, sources, paths, search index and the js mirrors
+        run: ./build.sh
+
+      - name: Stop if a data file did not get written
+        run: |
+          for f in data/items.js data/paths.js data/search-keywords.js; do
+            test -s "$f" || { echo "missing or empty: $f"; exit 1; }
+          done
+
+      # Copy only what the browser asks for. scripts/, docs/, research/ and prompts/
+      # stay in the repo but do not need to be served.
+      - name: Assemble the site
+        run: |
+          mkdir -p _site
+          cp index.html browse.html paths.html resource.html how-we-check.html _site/
+          cp favicon.svg robots.txt sitemap.xml _site/
+          cp -r assets data _site/
+          touch _site/.nojekyll
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

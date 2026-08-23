@@ -3,4 +3,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: /sitemap.xml
+Sitemap: https://mojtaba-alehosseini.github.io/learn-claude/sitemap.xml
