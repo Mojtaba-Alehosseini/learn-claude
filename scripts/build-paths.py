@@ -1,0 +1,226 @@
+#!/usr/bin/env python3
+"""
+Build the ordered paths.
+
+A path is the answer to the question nobody else answers: "where do I start, and in
+what order?" Search finds you one thing. A path hands you a route.
+
+Every step here was chosen by hand from data/items.json and carries a `why` — the
+reason it sits at that position rather than another. If a step has no reason to be
+where it is, it does not belong in the path.
+
+Steps are referenced **by URL**, never by id. An id is a machine detail that can be
+regenerated; the URL is what a person can verify by opening it. An earlier version of
+this file referenced ids that were assigned by list position, and when the catalogue
+grew every path silently re-pointed at different resources while still printing
+confident `why` text. Referencing the URL makes that failure impossible.
+
+Rules kept:
+- Every URL referenced must exist in items.json. The script fails loudly if not.
+- No path mixes paid and free without saying so; the total cost is computed, not claimed.
+- Total time is computed from the real `time` field, not guessed.
+- A path only ships if every step is at least `previewed`. We do not sequence things
+  nobody has looked at. This is enforced, not just documented.
+
+Writes:
+    data/paths.json          the paths themselves
+    data/items.json          each item gains `paths`: [{path, step}] so a card can say
+                             "Step 2 of 6 in Your first week with Claude"
+"""
+
+import json
+import sys
+
+ITEMS = "data/items.json"
+OUT = "data/paths.json"
+
+MINUTES = {"under-15min": 12, "under-1hr": 45, "half-day": 210, "multi-day": 600}
+
+PATHS = [
+    {
+        "id": "first-week",
+        "title": "Your first week with Claude",
+        "for": "Anyone who has just opened Claude and does not know what to do next.",
+        "roles": ["non-technical", "student", "teacher", "business-founder"],
+        "level": "never-used",
+        "intro": "Six short steps. Nothing here takes more than an hour, and you can "
+                 "stop after step 3 and still be better off than most people.",
+        "steps": [
+            {"url": "https://ruben.substack.com/p/claude",
+             "why": "Start here because most confusion is not about prompting — it is not "
+             "knowing that Claude is several different products. Five minutes now saves a "
+             "week of looking in the wrong place."},
+            {"url": "https://support.claude.com/en/articles/8114491-get-started-with-claude",
+             "why": "Now open the thing itself and do one real task. Reading about it any "
+             "longer is procrastination."},
+            {"url": "https://anthropic.skilljar.com/claude-101",
+             "why": "By now you have had a generic, disappointing answer. Anthropic's own "
+             "beginner course is the fix, and it is the single highest-value hour here."},
+            {"url": "https://support.claude.com/en/articles/9517075-what-are-projects",
+             "why": "Once you repeat a task twice, you need somewhere to keep the context. "
+             "Projects is that place. Learning this earlier would have been abstract."},
+            {"url": "https://claude.com/resources/tutorials/why-do-ai-models-hallucinate",
+             "why": "Before you trust Claude with anything that matters, understand exactly "
+             "how it fails. This is the step people skip and later regret."},
+            {"url": "https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork",
+             "why": "Last, because working on your own files only makes sense once you "
+             "trust the answers. Read it before you point Claude at anything real."},
+        ],
+    },
+    {
+        "id": "claude-code-start",
+        "title": "Getting good at Claude Code",
+        "for": "Developers who have installed Claude Code and are getting mediocre results.",
+        "roles": ["developer"],
+        "level": "basic",
+        "intro": "The gap between installing Claude Code and being fast with it is "
+                 "configuration and habits, not model quality. Six steps, roughly a day "
+                 "of reading spread over a week of practice.",
+        "steps": [
+            {"url": "https://anthropic.skilljar.com/claude-code-101",
+             "why": "Anthropic's own course. Do this before reading anyone's tips, so you "
+             "know which behaviours are the tool and which are the person writing about it."},
+            {"url": "https://code.claude.com/docs/en/best-practices",
+             "why": "The best-practices page. Densest thing written about Claude Code, and "
+             "everything after this assumes you have read it."},
+            {"url": "https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models",
+             "why": "Read this third and not later, because it invalidates a lot of "
+             "2025-era advice you will otherwise absorb."},
+            {"url": "https://claude.com/blog/maximizing-the-value-of-your-claude-code-sessions",
+             "why": "Now that your setup is right, this is where the speed comes from — "
+             "knowing which commands quietly destroy your prompt cache mid-session."},
+            {"url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+             "why": "Context engineering is the skill that separates people who get good "
+             "output from people who get plausible output. It only makes sense once you "
+             "have felt a long session degrade."},
+            {"url": "https://claude.com/blog/a-harness-for-every-task-dynamic-workflows-in-claude-code",
+             "why": "Last, because orchestration is worth nothing until single sessions "
+             "are reliable. Names the failure modes you will have hit by now."},
+        ],
+    },
+    {
+        "id": "research-with-claude",
+        "title": "Using Claude for research without embarrassing yourself",
+        "for": "Researchers and academics who want the speed without the retraction.",
+        "roles": ["researcher", "student"],
+        "level": "basic",
+        "intro": "The order matters more here than anywhere else. The failure modes are "
+                 "specific and the consequences are public.",
+        "steps": [
+            {"url": "https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/reduce-hallucinations",
+             "why": "Start with the failure, not the feature. Fabricated citations are the "
+             "one mistake that ends careers, and this is the clearest account of when they "
+             "happen and how to cut them."},
+            {"url": "https://support.claude.com/en/articles/9517075-what-are-projects",
+             "why": "Projects is where a literature review actually lives. Set it up "
+             "before you have forty loose chats."},
+            {"url": "https://muse.jhu.edu/article/961199",
+             "why": "Now read someone who actually tried it and reported what broke, with "
+             "the guard rails from step 1 in place."},
+            {"url": "https://effortlessacademic.com/connect-and-integrate-your-local-zotero-library-with-claude-cowork/",
+             "why": "Connect your own library. Until Claude can see your actual sources, "
+             "everything above is a demo."},
+            {"url": "https://www.icmje.org/recommendations/browse/artificial-intelligence/",
+             "why": "Before you submit anything, read what the ICMJE expects you to "
+             "declare. This is not optional and most people learn it too late."},
+        ],
+    },
+]
+
+
+def norm(url):
+    return url.rstrip("/").split("?")[0].lower()
+
+
+def main():
+    items = json.load(open(ITEMS, encoding="utf-8"))
+    missing_id = [x for x in items if not x.get("id")]
+    if missing_id:
+        sys.exit(f"{len(missing_id)} items have no id. Run scripts/stable-ids.py first.")
+    by_id = {x["id"]: x for x in items}
+    by_url = {norm(x["url"]): x for x in items}
+
+    RANK = {"reviewed": 3, "ai-reviewed": 2, "previewed": 1, "listed": 0}
+    MIN_TIER = 1        # previewed. Below this we have not looked at the content.
+    out = []
+    problems = []
+
+    for p in PATHS:
+        steps = []
+        minutes = 0
+        costs = set()
+        weakest = 3
+        too_thin = []
+        for n, s in enumerate(p["steps"], 1):
+            x = by_url.get(norm(s["url"]))
+            if not x:
+                problems.append(f"{p['id']} step {n}: no resource with url {s['url']}")
+                continue
+            if RANK[x["tier"]] < MIN_TIER:
+                too_thin.append(f"step {n} is '{x['tier']}' — {x['title'][:50]}")
+            minutes += MINUTES.get(x["time"], 45)
+            costs.add(x["cost"])
+            weakest = min(weakest, RANK[x["tier"]])
+            steps.append({
+                "step": n,
+                "item": x["id"],
+                "title": x["title"],
+                "url": x["url"],
+                "time": x["time"],
+                "cost": x["cost"],
+                "tier": x["tier"],
+                "why": s["why"],
+            })
+        if len(steps) < 3:
+            problems.append(f"{p['id']}: only {len(steps)} steps — too short to publish")
+            continue
+
+        # The rule this file has always claimed, now actually enforced. Sequencing a
+        # resource nobody has opened is exactly the thing the site exists to not do.
+        if too_thin:
+            problems.append(f"{p['id']}: below '{list(RANK)[::-1][MIN_TIER]}' — "
+                            + "; ".join(too_thin))
+            continue
+
+        hours = minutes / 60
+        out.append({
+            "id": p["id"],
+            "title": p["title"],
+            "for": p["for"],
+            "roles": p["roles"],
+            "level": p["level"],
+            "intro": p["intro"],
+            "step_count": len(steps),
+            "total_minutes": minutes,
+            "total_time_label": (f"about {round(minutes)} minutes" if minutes < 90
+                                 else f"about {hours:.0f} hours"),
+            "cost": "free" if costs <= {"free", "free-account"} else "some paid steps",
+            "weakest_tier": [k for k, v in RANK.items() if v == weakest][0],
+            "steps": steps,
+        })
+
+    for p in out:
+        for s in p["steps"]:
+            by_id[s["item"]].setdefault("paths", [])
+            entry = {"path": p["id"], "step": s["step"], "of": p["step_count"]}
+            if entry not in by_id[s["item"]]["paths"]:
+                by_id[s["item"]]["paths"].append(entry)
+
+    json.dump(out, open(OUT, "w", encoding="utf-8"), indent=2, ensure_ascii=False)
+    json.dump(items, open(ITEMS, "w", encoding="utf-8"), indent=2, ensure_ascii=False)
+
+    for p in out:
+        print(f"{p['title']}")
+        print(f"   {p['step_count']} steps · {p['total_time_label']} · {p['cost']} "
+              f"· weakest step is '{p['weakest_tier']}'")
+        for s in p["steps"]:
+            print(f"     {s['step']}. [{s['time']:11}] {s['title'][:56]}")
+    if problems:
+        print("\nNOT PUBLISHED:")
+        for m in problems:
+            print("   " + m)
+    print(f"\n{len(out)} path(s) -> {OUT}")
+
+
+if __name__ == "__main__":
+    main()

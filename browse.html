@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Browse — Learn Claude</title>
+<meta name="description" content="Filter every checked Claude resource by role, level, time, topic, format and cost. Each one says who it is for and who should skip it.">
+<meta property="og:title" content="Browse — Learn Claude">
+<meta property="og:description" content="Filter every checked Claude resource by role, level, time, topic, format and cost.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/tiempos/Tiempos Fine Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="wordmark" href="index.html">Learn Claude</a>
+    <nav class="nav" aria-label="Main">
+      <a class="nav-link" href="browse.html" aria-current="page">Browse</a>
+      <a class="nav-link" href="paths.html">Paths</a>
+      <a class="nav-link" href="how-we-check.html">How we check</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="wrap page">
+  <h1 class="h1">Browse</h1>
+
+  <div class="browse-grid">
+
+    <aside class="filter-rail" aria-label="Filters">
+      <div class="filter-head">
+        <h2 class="h3">Filters</h2>
+        <button type="button" class="btn-quiet hidden" id="clearAll">Clear all</button>
+      </div>
+      <div id="filtersPrimary"></div>
+      <button type="button" class="filter-more" id="moreToggle" aria-expanded="false">
+        <span>More filters</span><span aria-hidden="true" id="moreGlyph">+</span>
+      </button>
+      <div id="filtersMore" class="hidden"></div>
+    </aside>
+
+    <section aria-label="Results">
+      <div class="results-bar">
+        <div class="field" style="flex:1 1 300px">
+          <label for="q">Search</label>
+          <input class="input" id="q" type="search" aria-label="Search resources"
+                 placeholder="Title, topic, or what you want to do" autocomplete="off">
+        </div>
+        <div class="field">
+          <label for="sort">Sort</label>
+          <select class="select" id="sort">
+            <option value="best">Best checked first</option>
+            <option value="newest">Newest first</option>
+            <option value="shortest">Shortest first</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="chip-row" id="appliedChips" style="margin-bottom:var(--space-16)"></div>
+
+      <p class="result-count" id="count" aria-live="polite" role="status"></p>
+
+      <div class="card-list" id="results" style="margin-top:var(--space-24)"></div>
+      <div id="empty"></div>
+    </section>
+
+  </div>
+</main>
+
+<div class="mobile-filter-bar">
+  <button type="button" class="btn btn-secondary" id="openSheet" aria-label="Open filters">
+    Filters
+  </button>
+</div>
+
+<div class="sheet hidden" id="sheet" role="dialog" aria-modal="true" aria-label="Filters">
+  <div class="sheet-head">
+    <h2 class="h3">Filters</h2>
+    <button type="button" class="btn-quiet" id="closeSheet">Close</button>
+  </div>
+  <div class="sheet-body" id="sheetBody"></div>
+  <div class="sheet-foot">
+    <button type="button" class="btn btn-primary" id="sheetConfirm">Show resources</button>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-col">
+      <a href="browse.html">Browse</a>
+      <a href="paths.html">Paths</a>
+      <a href="how-we-check.html">How we check</a>
+    </div>
+    <p class="footer-note">
+      Learn Claude is an independent directory. It is not affiliated with Anthropic.
+      Every entry says who it is for, who should skip it, and when we last checked it.
+    </p>
+  </div>
+</footer>
+
+<script src="data/items.js"></script>
+<script src="data/paths.js"></script>
+<script src="assets/js/ui.js"></script>
+<script src="assets/js/search.js"></script>
+<script src="assets/js/browse.js"></script>
+</body>
+</html>

@@ -1,0 +1,608 @@
+[
+  {
+    "title": "Claude for Writers",
+    "url": "https://www.anthropic.com/for/writers",
+    "author": "Anthropic",
+    "roles": [
+      "writer-marketer"
+    ],
+    "level": "basic",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "Anthropic's own use-case page showing how Claude fits into drafting, editorial feedback, and research phases of writing, with example prompts.",
+    "who_for": "Anyone who wants Anthropic's own framing of what Claude is good for as a writing tool, before trying prompts themselves.",
+    "skip_if": "You already use Claude daily for writing — this page is orientation, not a workflow.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-18",
+    "status": "live",
+    "notes": "Official marketing page, not tutorial content; light on specifics like model choice or editing depth."
+  },
+  {
+    "title": "Claude for Marketing",
+    "url": "https://claude.com/resources/tutorials/claude-for-marketing",
+    "author": "Anthropic",
+    "roles": [
+      "writer-marketer"
+    ],
+    "level": "basic",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "listed",
+    "summary": "Anthropic's tutorial hub of short example workflows for marketing teams, including Cowork-based weekly reporting and Claude Design for decks.",
+    "who_for": "Marketers wanting a menu of official example use cases to skim before picking one to try.",
+    "skip_if": "You want copy-paste prompts or a step-by-step tutorial — this page mostly links out to short video examples.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-18",
+    "status": "live",
+    "notes": "Page is a curated list of linked examples rather than a single how-to."
+  },
+  {
+    "title": "Understanding Claude's Personalization Features",
+    "url": "https://support.claude.com/en/articles/10185728-understanding-claude-s-personalization-features",
+    "author": "Anthropic (Help Center)",
+    "roles": [
+      "writer-marketer"
+    ],
+    "level": "basic",
+    "topics": [
+      "skills"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "ai-reviewed",
+    "summary": "Official explanation of how profile preferences, project instructions, and styles differ, and when to use each for a consistent voice.",
+    "who_for": "Anyone setting up Claude for a recurring writing role who is unsure where their voice rules should live.",
+    "skip_if": "You've already got Projects and Styles configured — this is a conceptual explainer, not new tactics.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-18",
+    "status": "live",
+    "notes": "Continuously updated help article (shown as 'Updated yesterday' at time of check); accurate as of Aug 2026."
+  },
+  {
+    "title": "How Can I Create and Manage Projects?",
+    "url": "https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects",
+    "author": "Anthropic (Help Center)",
+    "roles": [
+      "writer-marketer"
+    ],
+    "level": "basic",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "ai-reviewed",
+    "summary": "Step-by-step official instructions for setting up a Claude Project with knowledge files and persistent instructions — the base setup for a consistent editorial voice.",
+    "who_for": "Writers and editors who haven't yet set up a Project to hold style guides and reference material.",
+    "skip_if": "You already run a Project with knowledge and instructions configured.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-18",
+    "status": "live",
+    "notes": "Plan limits (e.g., how many projects on free vs. paid tiers) have shifted across versions of this article — check current limits in-app."
+  },
+  {
+    "title": "Organize Your Tasks With Projects in Claude Cowork",
+    "url": "https://support.claude.com/en/articles/14116274-organize-your-tasks-with-projects-in-claude-cowork",
+    "author": "Anthropic (Help Center)",
+    "roles": [
+      "writer-marketer"
+    ],
+    "level": "confident",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "Explains how Cowork projects combine instructions, scheduled tasks, local-folder context, and project-scoped memory for recurring document work.",
+    "who_for": "Writers or editorial teams handling long-running, file-heavy projects (a book, a recurring report) who want Claude working directly on local files.",
+    "skip_if": "You only do one-off chat-based writing tasks — Cowork setup overhead isn't worth it for that.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-18",
+    "status": "live",
+    "notes": "Described as desktop-only with no cloud sync at time of writing — worth confirming current status in-app before relying on it for team handoffs."
+  },
+  {
+    "title": "Claude 101",
+    "url": "https://anthropic.skilljar.com/claude-101",
+    "author": "Anthropic Academy",
+    "roles": [
+      "writer-marketer"
+    ],
+    "level": "basic",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "course",
+    "time": "under-1hr",
+    "cost": "free-account",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "Anthropic's official beginner course covering everyday Claude use and core features — 12 lectures, about an hour of video, no writing specialization.",
+    "who_for": "Someone who has never used Claude and wants the vendor's own orientation before moving to writing-specific prompts.",
+    "skip_if": "You've already completed onboarding or use Claude regularly — this is entry-level and not writing-specific.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-18",
+    "status": "live",
+    "notes": "General-purpose, not tailored to writers; hosted on Anthropic's Skilljar platform and requires a free account login. | URL corrected 2026-08-19: claude.com/courses path was wrong, real course lives on Anthropic Academy (Skilljar)."
+  },
+  {
+    "title": "Introduction to Claude Cowork",
+    "url": "https://anthropic.skilljar.com/introduction-to-claude-cowork",
+    "author": "Anthropic Academy",
+    "roles": [
+      "writer-marketer"
+    ],
+    "level": "basic",
+    "topics": [
+      "cowork"
+    ],
+    "format": "course",
+    "time": "under-15min",
+    "cost": "free-account",
+    "language": "en",
+    "tier": "listed",
+    "summary": "Short official course introducing the Cowork task loop, plugins, and skills for working on real files and projects.",
+    "who_for": "Writers or editorial teams curious whether Cowork is worth setting up for document-heavy work.",
+    "skip_if": "You do lightweight, single-document writing tasks in regular chat — Cowork's setup overhead likely won't pay off.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-18",
+    "status": "live",
+    "notes": "Lecture count and video length weren't shown on the catalog page at time of check, so depth couldn't be confirmed. | URL corrected 2026-08-19: claude.com/courses path was wrong, real course lives on Anthropic Academy (Skilljar)."
+  },
+  {
+    "title": "Multilingual Support",
+    "url": "https://platform.claude.com/docs/en/build-with-claude/multilingual-support",
+    "author": "Anthropic (Platform Docs)",
+    "roles": [
+      "writer-marketer"
+    ],
+    "level": "confident",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "ai-reviewed",
+    "summary": "Official documentation on how Claude handles languages beyond English, including guidance to account for cultural context rather than literal translation alone.",
+    "who_for": "Translators and localization leads who want Anthropic's own account of language performance and prompting tips before building a workflow.",
+    "skip_if": "You need production-grade localization tooling (glossaries, translation memory, QA) — this is prompting guidance, not a platform.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-18",
+    "status": "live",
+    "notes": "Written primarily for an API/developer audience, but the prompting advice applies equally in the regular chat app."
+  },
+  {
+    "title": "Wikipedia:Signs of AI writing",
+    "url": "https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing",
+    "author": "Wikipedia community (WikiProject AI Cleanup)",
+    "roles": [
+      "writer-marketer"
+    ],
+    "level": "basic",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-1hr",
+    "cost": "free",
+    "language": "en",
+    "tier": "ai-reviewed",
+    "summary": "A field guide, built from thousands of real cases, cataloguing the vocabulary, sentence patterns, and formatting habits that give away AI-generated text — the most thorough public resource on this topic.",
+    "who_for": "Any writer or editor who wants a concrete, evidence-based checklist for catching and removing AI 'tells' before publishing.",
+    "skip_if": "You want a short list — this runs to roughly 15,000 words and is written for Wikipedia editors first, general writers second.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-18",
+    "status": "live",
+    "notes": "Descriptive, not prescriptive — the page itself warns that no single sign proves AI authorship; use it as a pattern-matching aid, not a detector."
+  },
+  {
+    "title": "The Ethics of Using AI",
+    "url": "https://ethicscentral.org/the-ethics-of-using-ai/",
+    "author": "SPJ Ethics Central (Society of Professional Journalists)",
+    "roles": [
+      "writer-marketer"
+    ],
+    "level": "basic",
+    "topics": [
+      "safety"
+    ],
+    "format": "article",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "ai-reviewed",
+    "summary": "SPJ's early position statement on AI in journalism, prompted by the 2023 CNET AI-byline controversy, arguing AI use should be limited and judged case by case.",
+    "who_for": "Anyone wanting the professional-body baseline position that predates most outlets' individual AI policies.",
+    "skip_if": "You need current, specific rules — this predates SPJ's 2026 Code of Ethics revision (see next entry).",
+    "published": "2023-02-01",
+    "checked": "2026-08-18",
+    "status": "live",
+    "notes": "Flagged as possibly outdated — more than 12 months old and written before most newsroom AI policies existed."
+  },
+  {
+    "title": "Proposed Revisions to SPJ's Code of Ethics (2026)",
+    "url": "https://www.spj.org/spj-ethics-code-revision-project-2026/",
+    "author": "Society of Professional Journalists",
+    "roles": [
+      "writer-marketer"
+    ],
+    "level": "basic",
+    "topics": [
+      "safety"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "SPJ's first Code of Ethics revision since 2014, adding language on verifying AI-assisted work and holding journalists accountable regardless of what tool produced the content — deliberately avoids naming any AI product.",
+    "who_for": "Journalists, editors, and freelancers who want current professional-body ethics language to cite or adapt for a newsroom policy.",
+    "skip_if": "You need a ready-made newsroom operating policy — this is a professional code of conduct, not an operational AI policy document.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-18",
+    "status": "live",
+    "notes": "Was under public member review at time of writing; exact language may still change before final adoption."
+  },
+  {
+    "title": "Creating a Public AI Policy for Your Newsroom",
+    "url": "https://www.theopennotebook.com/2026/08/11/creating-a-public-ai-policy-for-your-newsroom/",
+    "author": "The Open Notebook",
+    "roles": [
+      "writer-marketer"
+    ],
+    "level": "basic",
+    "topics": [
+      "safety"
+    ],
+    "format": "article",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "A practical guide to what belongs in a newsroom's public AI policy, drawing on common threads across policies already published by other outlets.",
+    "who_for": "An editor or small newsroom without an AI policy who needs a starting checklist of what to cover.",
+    "skip_if": "You just want to read example policies rather than write one — go to individual outlet policies instead.",
+    "published": "2026-08-11",
+    "checked": "2026-08-18",
+    "status": "live",
+    "notes": "Aimed at science/specialist journalism outlets, but the framework generalizes to most newsrooms."
+  },
+  {
+    "title": "The Guardian Updates Its AI Policies Around Training, Trust and In-House Tools",
+    "url": "https://www.journalism.co.uk/the-guardian-updates-its-ai-policies-training-trust-and-in-house-tools/",
+    "author": "Journalism.co.uk",
+    "roles": [
+      "writer-marketer"
+    ],
+    "level": "basic",
+    "topics": [
+      "safety"
+    ],
+    "format": "article",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "ai-reviewed",
+    "summary": "Reports on The Guardian's March 2026 policy update, which now permits limited generative AI use (alt text, transcription, document analysis) with senior-editor approval and mandatory reader disclosure.",
+    "who_for": "Anyone benchmarking their own disclosure policy against a major outlet that moved from an outright ban to a narrow, approved list of AI uses.",
+    "skip_if": "You need the Guardian's full policy text verbatim — this is trade-press reporting on it, not the source document.",
+    "published": "2026-03-05",
+    "checked": "2026-08-18",
+    "status": "live",
+    "notes": "Secondary reporting; a standalone public URL for the Guardian's own editorial code text was not independently located during this research."
+  },
+  {
+    "title": "How Three Newsrooms Are Charting Different Paths for AI Use",
+    "url": "https://www.niemanlab.org/2026/07/how-three-newsrooms-are-charting-different-paths-for-ai-use/",
+    "author": "Erik P. Bucy and Milad Jalalian Ebrahimi, Nieman Journalism Lab",
+    "roles": [
+      "writer-marketer"
+    ],
+    "level": "basic",
+    "topics": [
+      "safety"
+    ],
+    "format": "article",
+    "time": "under-1hr",
+    "cost": "free",
+    "language": "en",
+    "tier": "ai-reviewed",
+    "summary": "A comparative case study of Reuters, the BBC, and The Guardian's AI policies, arguing each outlet's approach reflects its funding model and values rather than a shared industry standard.",
+    "who_for": "Anyone wanting a comparative, researched view of how newsroom ownership models shape AI policy, not just one outlet's rules.",
+    "skip_if": "You want operational how-to guidance rather than policy analysis.",
+    "published": "2026-07-29",
+    "checked": "2026-08-18",
+    "status": "live",
+    "notes": "Written by academic media researchers and published via Nieman Lab and The Conversation; well-sourced against public policy documents and BBC/EBU research."
+  },
+  {
+    "title": "AP Sets New AI Standards for Newsroom Use",
+    "url": "https://mediacopilot.ai/ap-ai-newsroom-standards-update/",
+    "author": "Romy Abu-Fadel, Media Copilot",
+    "roles": [
+      "writer-marketer"
+    ],
+    "level": "basic",
+    "topics": [
+      "safety"
+    ],
+    "format": "article",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "listed",
+    "summary": "Short report on the Associated Press updating its AI standards to allow tools for headlines and summaries while keeping reporting and writing with journalists.",
+    "who_for": "Anyone tracking how AP's position has shifted since its original 2023 guidelines.",
+    "skip_if": "You need AP's full stylebook chapter on AI rather than a news summary of the update.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-18",
+    "status": "live",
+    "notes": "Only a brief summary was available in search results; AP's own standards document was not independently located during this research."
+  },
+  {
+    "title": "How to Stop Claude Writing Like an AI",
+    "url": "https://willfrancis.com/how-to-stop-claude-writing-like-an-ai/",
+    "author": "Will Francis",
+    "roles": [
+      "writer-marketer"
+    ],
+    "level": "basic",
+    "topics": [
+      "chat-prompting",
+      "skills"
+    ],
+    "format": "article",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "ai-reviewed",
+    "summary": "A practical, copy-pasteable set of Custom Instructions and a banned-words list, built from Wikipedia's AI-writing-tells research plus the author's own year of producing content with Claude.",
+    "who_for": "Anyone who wants a ready-to-use starting point for Custom Instructions rather than building a voice guide from scratch.",
+    "skip_if": "You want a deep explanation of why each rule works — this is a practical toolkit, not a breakdown of the underlying research.",
+    "published": "2026-03-13",
+    "checked": "2026-08-18",
+    "status": "live",
+    "notes": "Named individual author with a stated methodology (Wikipedia + GPTZero + Grammarly + personal use); reads as genuine practitioner writing, not content-farm output."
+  },
+  {
+    "title": "How to Spot AI Writing, According to Wikipedia",
+    "url": "https://www.beutlerink.com/blog/how-to-spot-ai-writing",
+    "author": "William Beutler, Beutler Ink",
+    "roles": [
+      "writer-marketer"
+    ],
+    "level": "basic",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "article",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "ai-reviewed",
+    "summary": "A PR consultant's condensed, business-context version of Wikipedia's Signs of AI Writing guide, pulling out the seven patterns most recognizable outside an encyclopedia.",
+    "who_for": "Someone who wants the Wikipedia guide's key points without reading the full ~15,000-word source.",
+    "skip_if": "You've already read the full Wikipedia page — this doesn't add much beyond condensing it.",
+    "published": "2026-02-19",
+    "checked": "2026-08-18",
+    "status": "live",
+    "notes": "Named author at an established PR/Wikipedia-strategy agency; explicitly credits Wikipedia as the source rather than presenting the analysis as original."
+  },
+  {
+    "title": "avoid-ai-writing (Claude Code / agent skill)",
+    "url": "https://github.com/conorbronsdon/avoid-ai-writing",
+    "author": "Conor Bronsdon",
+    "roles": [
+      "writer-marketer"
+    ],
+    "level": "builder",
+    "topics": [
+      "skills",
+      "agents"
+    ],
+    "format": "repo",
+    "time": "under-1hr",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "An open-source skill that audits and rewrites text against a large, tiered word-replacement table and dozens of pattern categories, with a two-pass self-check before returning results.",
+    "who_for": "Technical writers or teams already using Claude Code who want an automated, repeatable AI-tell check rather than a manual read-through.",
+    "skip_if": "You don't use Claude Code or a similar agent tool — this doesn't work as a plain chat prompt.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-18",
+    "status": "live",
+    "notes": "Only the README/description was reviewed, not the full source; the author's claims about detection-tier weighting were not independently verified."
+  },
+  {
+    "title": "Claude Skills for Journalism, Media & Academia",
+    "url": "https://github.com/jamditis/claude-skills-journalism",
+    "author": "Joe Amditis (Center for Cooperative Media)",
+    "roles": [
+      "writer-marketer"
+    ],
+    "level": "builder",
+    "topics": [
+      "skills",
+      "agents"
+    ],
+    "format": "repo",
+    "time": "half-day",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "A curated set of Claude Code skills for newsroom work — AP-style checks, AI-slop detoxing, source verification, FOIA requests, fact-checking, and editorial workflow — built by a journalism-innovation practitioner.",
+    "who_for": "A newsroom or freelance journalist comfortable installing Claude Code who wants journalism-specific guardrails rather than generic writing skills.",
+    "skip_if": "You only use the Claude.ai chat app — these skills require Claude Code.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-18",
+    "status": "live",
+    "notes": "Author is affiliated with Montclair State University's Center for Cooperative Media, a real journalism-innovation body — one of the more credible practitioner sources found in this research."
+  },
+  {
+    "title": "Claude for Localization: Stop Starting Every Project from Zero",
+    "url": "https://localizelikeapro.com/claude-for-localization-stop-starting-every-project-from-zero/",
+    "author": "Dorota, Localize Like A Pro",
+    "roles": [
+      "writer-marketer"
+    ],
+    "level": "confident",
+    "topics": [
+      "chat-prompting",
+      "skills"
+    ],
+    "format": "article",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "A localization consultant's argument for building a persistent context file (register, forbidden terms, client-specific rules) instead of re-explaining brief details in every new Claude conversation.",
+    "who_for": "Freelance translators or localization managers using Claude ad hoc who are losing time re-establishing context each session.",
+    "skip_if": "You already run Claude through Projects with saved context and glossaries — you're doing what this post recommends.",
+    "published": "2026-04-17",
+    "checked": "2026-08-18",
+    "status": "live",
+    "notes": "Author runs paid training sessions on this exact topic, so the post is a soft pitch too — the free content itself is still specific and practical."
+  },
+  {
+    "title": "Claude, Editor",
+    "url": "https://restructurednews.substack.com/p/claude-editor",
+    "author": "Restructured (Substack)",
+    "roles": [
+      "writer-marketer"
+    ],
+    "level": "basic",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "article",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "A first-person account of using Claude as a developmental editor on a 7,000-word book proposal — checking clarity, cohesion, and flow, and reacting to late-night placeholder paragraphs.",
+    "who_for": "Writers curious what working with Claude as an editor actually feels like in practice, told as a specific story rather than a generic feature list.",
+    "skip_if": "You want a repeatable prompt or process — this is a narrative reflection, not a how-to.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-18",
+    "status": "live",
+    "notes": "Author's identity/credentials weren't confirmed beyond the Substack byline; treat as one writer's anecdote, not an authoritative source."
+  },
+  {
+    "title": "Claude AI for Writing: The Complete Guide for Authors and Content Creators",
+    "url": "https://kenny-kane.com/blog/claude-ai-for-writing",
+    "author": "Kenny Kane",
+    "roles": [
+      "writer-marketer"
+    ],
+    "level": "basic",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "article",
+    "time": "under-1hr",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "An author's account of using Claude across two of his own published books, covering manuscript structure and tone, and where Claude over-smooths voice unless explicitly told not to.",
+    "who_for": "Book authors or long-form content creators who want a real practitioner's workflow rather than a generic feature tour.",
+    "skip_if": "You want a neutral third-party review — Kane is a working author with his own books to promote, and this is personal experience, not independent testing.",
+    "published": "2026-07-06",
+    "checked": "2026-08-18",
+    "status": "live",
+    "notes": "Named author with specific, checkable book titles referenced (The Accidental Nonprofiteer, Mission-Driven Ecommerce) — a genuine practitioner voice."
+  },
+  {
+    "title": "Set Your Standards Before You Start: A Journalist's Journey Using Claude.md",
+    "url": "https://medium.com/@stephenstirling/set-your-standards-before-you-start-a-journalists-journey-using-claude-md-744b02bb4210",
+    "author": "Stephen Stirling",
+    "roles": [
+      "writer-marketer"
+    ],
+    "level": "confident",
+    "topics": [
+      "agents",
+      "chat-prompting"
+    ],
+    "format": "article",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "ai-reviewed",
+    "summary": "A 20-year journalist's account of building a personal CLAUDE.md with rules against fabricated quotes, mandatory verification flags, and AI-disclosure notes, with a sample file readers can adapt.",
+    "who_for": "Individual journalists who want to set explicit ethical guardrails for their own Claude use rather than waiting for a newsroom-wide policy.",
+    "skip_if": "You're not using Claude Code or a CLAUDE.md-style setup — the specific mechanism won't apply, though the underlying principles still would.",
+    "published": "2026-04-12",
+    "checked": "2026-08-18",
+    "status": "live",
+    "notes": "Author discloses 20 years as a journalist and credits Joe Amditis (see the claude-skills-journalism entry) for guidance, which corroborates that source."
+  },
+  {
+    "title": "How I Use Claude Cowork to Write With AI in My Voice",
+    "url": "https://ranthebuilder.cloud/blog/how-i-use-claude-cowork-to-write-with-ai-in-my-voice/",
+    "author": "Ran (ranthebuilder.cloud)",
+    "roles": [
+      "writer-marketer"
+    ],
+    "level": "builder",
+    "topics": [
+      "cowork",
+      "skills"
+    ],
+    "format": "article",
+    "time": "under-1hr",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "A detailed walkthrough of a Cowork project setup — a CLAUDE.md file, an anti-AI style guide, and a custom LinkedIn-post-drafter skill — built by someone already using Claude heavily for coding.",
+    "who_for": "Technically comfortable writers who want a concrete, file-by-file example of a voice-preserving Cowork setup to copy and adapt.",
+    "skip_if": "You're not comfortable with folder structures and markdown config files — this assumes an engineering-adjacent comfort level.",
+    "published": "2026-04-23",
+    "checked": "2026-08-18",
+    "status": "live",
+    "notes": "Author's primary audience is developers; the writing-voice content is a secondary application of a coding workflow, so parts may be more elaborate than a non-technical writer needs."
+  },
+  {
+    "title": "Claude AI Comprehensive Guide",
+    "url": "https://www.coursera.org/learn/claude-ai-comprehensive-guide",
+    "author": "Anton Voroniuk, SkillsBooster Academy (via Coursera)",
+    "roles": [
+      "writer-marketer"
+    ],
+    "level": "basic",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "course",
+    "time": "half-day",
+    "cost": "subscription",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "A six-module Coursera course with one module specifically on marketing and copywriting tasks (long-form content, landing pages, social media) using structured prompting.",
+    "who_for": "Someone who wants a structured, assessed course path with a shareable certificate rather than piecing together blog posts.",
+    "skip_if": "You don't want a Coursera Plus subscription — the course is listed as included with Coursera Plus rather than as a standalone free offering.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-18",
+    "status": "live",
+    "notes": "Listed as 'Recently updated! February 2026'; only the syllabus was reviewed, not the video content, so the depth of the marketing module is unconfirmed."
+  }
+]

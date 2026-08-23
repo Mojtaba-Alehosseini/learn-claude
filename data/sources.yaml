@@ -1,0 +1,477 @@
+# Source registry — where the pipeline looks for content.
+# The scheduler works through this file in priority order, one source per run.
+# Nothing is harvested that is not listed here.
+#
+# priority: 1 = harvest first and re-check most often, 3 = v2 / opportunistic
+# method:   how we get the data
+#             api      - official API or feed, clean and reliable
+#             fetch    - plain page fetch, parse HTML
+#             search   - web search results only (site blocks direct fetch)
+#             browser  - needs a real browser (JS-rendered or soft login wall)
+#             manual   - human has to do it
+# tier_cap: best review tier this source can reach
+#             reviewed  - we can consume the actual content
+#             previewed - we can read syllabus/outline/free sample only
+#             listed    - metadata only
+# cadence:  how often to re-check
+#
+# Created 2026-08-16. Every entry needs a checked date once harvested.
+
+groups:
+
+  # ---------------------------------------------------------------
+  # A. Official Anthropic — the backbone. Free, authoritative, clean.
+  # ---------------------------------------------------------------
+  - id: official
+    label: Official Anthropic
+    priority: 1
+    sources:
+      - name: Anthropic Academy course browser
+        url: https://claude.com/resources/courses
+        method: fetch
+        tier_cap: reviewed
+        cadence: weekly
+        notes: Exposes lecture count and video length per course. Best machine-readable seed we have.
+      - name: Anthropic Academy (Skilljar)
+        url: https://anthropic.skilljar.com/
+        method: fetch
+        tier_cap: reviewed
+        cadence: weekly
+        notes: 20 courses + 1 path, all free. Needs a Skilljar account to enrol, catalog is public.
+      - name: Official tutorials
+        url: https://claude.com/resources/tutorials
+        method: fetch
+        tier_cap: reviewed
+        cadence: weekly
+      - name: Claude Platform docs
+        url: https://platform.claude.com/docs/en/home
+        method: fetch
+        tier_cap: reviewed
+        cadence: monthly
+        notes: API and SDK. Do not conflate with the Claude Code docs.
+      - name: Claude Code docs
+        url: https://code.claude.com/docs/en/overview
+        method: fetch
+        tier_cap: reviewed
+        cadence: monthly
+      - name: Help Center
+        url: https://support.claude.com/en/
+        method: fetch
+        tier_cap: reviewed
+        cadence: monthly
+        notes: End-user, non-developer. Underrated for the non-technical audience.
+      - name: Anthropic engineering blog
+        url: https://www.anthropic.com/engineering
+        method: fetch
+        tier_cap: reviewed
+        cadence: weekly
+      - name: Claude blog
+        url: https://claude.com/blog
+        method: fetch
+        tier_cap: reviewed
+        cadence: weekly
+      - name: Anthropic newsroom
+        url: https://www.anthropic.com/news
+        method: fetch
+        tier_cap: reviewed
+        cadence: weekly
+      - name: YouTube @claude
+        url: https://www.youtube.com/@claude
+        feed: https://www.youtube.com/feeds/videos.xml?channel_id=UCV03SRZXJEz-hchIAogeJOg
+        method: api
+        tier_cap: reviewed
+        cadence: weekly
+        notes: The official teaching channel. Several uploads a week.
+      - name: YouTube @anthropic-ai
+        url: https://www.youtube.com/@anthropic-ai
+        feed: https://www.youtube.com/feeds/videos.xml?channel_id=UCrDwWp7EBBv4NwvScIpBDOA
+        method: api
+        tier_cap: reviewed
+        cadence: monthly
+        notes: Research and launches, not tutorials. Lower teaching value.
+      - name: Anthropic GitHub org
+        url: https://github.com/anthropics
+        method: api
+        tier_cap: reviewed
+        cadence: weekly
+        notes: >
+          Watch skills, claude-code, claude-cookbooks, claude-quickstarts,
+          prompt-eng-interactive-tutorial, claude-agent-sdk-python.
+          anthropics/courses is stale since 2025-11-13 - flag as superseded, do not recommend.
+      - name: Model Context Protocol org
+        url: https://github.com/modelcontextprotocol
+        method: api
+        tier_cap: reviewed
+        cadence: weekly
+      - name: Certification (Pearson VUE)
+        url: https://www.pearsonvue.com/us/en/anthropic.html
+        method: fetch
+        tier_cap: previewed
+        cadence: monthly
+        notes: >
+          Partner-Network gated. A whole SEO industry sells prep for exams most
+          readers cannot sit. Worth an explicit warning page on our site.
+
+  # ---------------------------------------------------------------
+  # B. Course platforms — where most people actually look.
+  # ---------------------------------------------------------------
+  - id: platforms_free
+    label: Course platforms (free)
+    priority: 1
+    sources:
+      - name: DeepLearning.AI
+        url: https://www.deeplearning.ai/courses/
+        method: fetch
+        tier_cap: reviewed
+        cadence: monthly
+        notes: Four free Anthropic-built courses. High trust.
+      - name: freeCodeCamp
+        url: https://www.freecodecamp.org/news/
+        method: fetch
+        tier_cap: reviewed
+        cadence: monthly
+        notes: Full multi-hour courses published on YouTube, articles on the news site.
+      - name: Frontend Masters / Master.dev
+        url: https://frontendmasters.com/courses/
+        method: fetch
+        tier_cap: previewed
+        cadence: monthly
+        notes: Claude Code course by Lydia Hallie is free. Rest of catalog is paid.
+      - name: Class Central
+        url: https://www.classcentral.com/subject/claude
+        method: fetch
+        tier_cap: listed
+        cadence: monthly
+        notes: >
+          Aggregator, not a publisher. 659 Claude courses with level and duration
+          filters. Use as a DISCOVERY SEED to find courses we then verify at source.
+          Never copy their descriptions.
+
+  - id: platforms_paid
+    label: Course platforms (paid)
+    priority: 2
+    sources:
+      - name: Coursera
+        url: https://www.coursera.org/search?query=claude
+        method: search
+        tier_cap: previewed
+        cadence: monthly
+        notes: Syllabus and module list are public. Anthropic has official courses here.
+      - name: Udemy
+        url: https://www.udemy.com/courses/search/?q=claude
+        method: search
+        tier_cap: previewed
+        cadence: monthly
+        notes: >
+          Full curriculum outline, free preview lectures, rating and review count are public.
+          Enough for a previewed-tier judgement. Bot-blocked on direct fetch.
+      - name: Pluralsight
+        url: https://www.pluralsight.com/paths/claude-code
+        method: fetch
+        tier_cap: previewed
+        cadence: monthly
+      - name: LinkedIn Learning
+        url: https://www.linkedin.com/learning/topics/claude
+        method: browser
+        tier_cap: previewed
+        cadence: monthly
+        notes: Blocks automated fetching. Course contents list is public once rendered.
+      - name: O'Reilly Learning
+        url: https://www.oreilly.com/search/?q=claude
+        method: browser
+        tier_cap: previewed
+        cadence: quarterly
+        notes: Table of contents public, body paywalled. No Claude-specific title verified yet.
+      - name: edX
+        url: https://www.edx.org/search?q=claude
+        method: search
+        tier_cap: previewed
+        cadence: quarterly
+      - name: Udacity
+        url: https://www.udacity.com/catalog
+        method: search
+        tier_cap: previewed
+        cadence: quarterly
+      - name: DataCamp
+        url: https://www.datacamp.com/
+        method: fetch
+        tier_cap: previewed
+        cadence: quarterly
+        notes: Their "best resources to learn Claude" article links only their own courses. Treat as marketing.
+      - name: Skillshare
+        url: https://www.skillshare.com/en/search?query=claude
+        method: browser
+        tier_cap: previewed
+        cadence: quarterly
+      - name: Codecademy / Educative / Scrimba / egghead.io
+        url: null
+        method: search
+        tier_cap: previewed
+        cadence: quarterly
+        notes: No Claude-specific course verified as of 2026-08-16. Re-check periodically.
+      - name: Maven (live cohorts)
+        url: https://maven.com/courses/claude-code
+        method: fetch
+        tier_cap: previewed
+        cadence: monthly
+        notes: Live cohort courses. Expensive, time-bound. Flag start dates.
+
+  - id: platforms_vendor
+    label: Cloud vendor academies
+    priority: 2
+    sources:
+      - name: AWS Skill Builder
+        url: https://skillbuilder.aws/
+        method: search
+        tier_cap: previewed
+        cadence: quarterly
+        notes: Claude on Amazon Bedrock.
+      - name: Google Cloud Skills Boost
+        url: https://www.cloudskillsboost.google/
+        method: search
+        tier_cap: previewed
+        cadence: quarterly
+        notes: Claude on Vertex AI.
+      - name: Microsoft Learn
+        url: https://learn.microsoft.com/
+        method: search
+        tier_cap: previewed
+        cadence: quarterly
+
+  # ---------------------------------------------------------------
+  # D. Written and independent — cheap to harvest, often better than video.
+  # ---------------------------------------------------------------
+  - id: independent
+    label: Independent sites and blogs
+    priority: 1
+    sources:
+      - name: ClaudeLog
+        url: https://claudelog.com/
+        method: fetch
+        tier_cap: reviewed
+        cadence: weekly
+        notes: Best independent Claude Code resource found. By a Claude Ambassador. Not Anthropic-affiliated.
+      - name: Simon Willison's Weblog
+        url: https://simonwillison.net/
+        feed: https://simonwillison.net/atom/everything/
+        method: api
+        tier_cap: reviewed
+        cadence: weekly
+        notes: Broad LLM coverage, high trust. Filter for Claude-relevant posts only.
+      - name: Peter Steinberger
+        url: https://steipete.me/
+        method: fetch
+        tier_cap: reviewed
+        cadence: monthly
+      - name: Awesome Claude (site)
+        url: https://awesomeclaude.ai/
+        method: fetch
+        tier_cap: listed
+        cadence: monthly
+        notes: Discovery seed. Webfuse marketing, no editorial judgement of its own.
+
+  - id: github_lists
+    label: GitHub community collections
+    priority: 1
+    sources:
+      - name: hesreallyhim/awesome-claude-code
+        url: https://github.com/hesreallyhim/awesome-claude-code
+        method: api
+        tier_cap: reviewed
+        cadence: weekly
+        notes: The canonical list. 52k stars, actively maintained. Best single discovery seed.
+      - name: travisvn/awesome-claude-skills
+        url: https://github.com/travisvn/awesome-claude-skills
+        method: api
+        tier_cap: reviewed
+        cadence: monthly
+      - name: davila7/claude-code-templates
+        url: https://github.com/davila7/claude-code-templates
+        method: api
+        tier_cap: reviewed
+        cadence: monthly
+      - name: zebbern/claude-code-guide
+        url: https://github.com/zebbern/claude-code-guide
+        method: api
+        tier_cap: reviewed
+        cadence: monthly
+      - name: punkpeye/awesome-mcp-servers
+        url: https://github.com/punkpeye/awesome-mcp-servers
+        method: api
+        tier_cap: reviewed
+        cadence: monthly
+    blocklist:
+      - win4r/Awesome-Claude-MCP-Servers   # abandoned since 2024-12-01
+      - subinium/awesome-claude-code        # name collision, low signal
+      - jmanhype/awesome-claude-code        # name collision, low signal
+      - ai-for-developers/awesome-claude    # unedited template, description still says "cloud computing"
+
+  - id: community
+    label: Community discussion
+    priority: 2
+    sources:
+      - name: r/ClaudeAI
+        url: https://www.reddit.com/r/ClaudeAI/
+        method: browser
+        tier_cap: reviewed
+        cadence: weekly
+        notes: >
+          Blocks automated fetchers, needs a browser. Use for demand signals
+          (what people ask for) as much as for content. ~1M members.
+      - name: Hacker News
+        url: https://hn.algolia.com/api/v1/search?query=claude
+        method: api
+        tier_cap: reviewed
+        cadence: monthly
+      - name: Anthropic Discord
+        url: https://discord.com/invite/6PPFFzqPDZ
+        method: manual
+        tier_cap: listed
+        cadence: quarterly
+
+  - id: publishing_platforms
+    label: General publishing platforms
+    priority: 2
+    sources:
+      - name: Medium / Dev.to / Hashnode
+        url: https://dev.to/t/claude
+        method: fetch
+        tier_cap: reviewed
+        cadence: monthly
+        notes: High volume, low average quality. Needs an aggressive quality filter.
+      - name: Substack (free tier)
+        url: null
+        method: fetch
+        tier_cap: reviewed
+        cadence: monthly
+        notes: >
+          Named newsletters only - Latent.Space, Chain of Thought, Addy Osmani, Nate's Newsletter.
+          Do NOT harvest broadly: a large cluster of SEO "Claude guide hub" Substacks exists.
+
+  # ---------------------------------------------------------------
+  # C. Creator platforms — mostly paywalled, hard to verify.
+  # ---------------------------------------------------------------
+  - id: creator_platforms
+    label: Creator platforms
+    priority: 3
+    sources:
+      - name: Patreon
+        url: https://www.patreon.com/search?q=claude
+        method: search
+        tier_cap: listed
+        cadence: quarterly
+        notes: >
+          Public page shows tier prices and a description, never the content.
+          Cannot reach previewed tier. List only creators already trusted elsewhere.
+      - name: Skool
+        url: https://www.skool.com/discovery
+        method: search
+        tier_cap: listed
+        cadence: quarterly
+        notes: Community + course bundles. Heavy marketing, very hard to verify.
+      - name: Gumroad
+        url: https://gumroad.com/
+        method: search
+        tier_cap: listed
+        cadence: quarterly
+      - name: Teachable / Thinkific / Kajabi / Podia / Circle
+        url: null
+        method: search
+        tier_cap: previewed
+        cadence: quarterly
+        notes: Self-hosted creator courses. Sales pages usually list the curriculum.
+
+  # ---------------------------------------------------------------
+  # E. Audio and non-YouTube video
+  # ---------------------------------------------------------------
+  - id: audio_video
+    label: Podcasts, talks, other video
+    priority: 3
+    sources:
+      - name: Independent YouTube channels
+        url: null
+        method: api
+        tier_cap: reviewed
+        cadence: weekly
+        notes: >
+          Per-channel RSS at youtube.com/feeds/videos.xml?channel_id=...
+          Verified active as of 2026-08-16: IndyDevDan, Cole Medin, Nick Saraev,
+          Simon Scrapes, Nate Herk, Riley Brown, AI Jason (gap since 2026-07-20).
+          ALWAYS verify a channel by its RSS feed before listing - listicle
+          recommendations are unreliable, one had its last upload in 2015.
+      - name: Podcasts
+        url: null
+        method: fetch
+        tier_cap: reviewed
+        cadence: monthly
+        notes: Latent.Space, Chain of Thought. Use RSS feeds, not Spotify.
+      - name: Conference talks
+        url: null
+        method: api
+        tier_cap: reviewed
+        cadence: quarterly
+        notes: Code w/ Claude, AI Engineer World's Fair. Usually YouTube-hosted.
+      - name: Short-form (TikTok / Reels / X)
+        url: null
+        method: manual
+        tier_cap: listed
+        cadence: never
+        notes: EXCLUDED from v1. High noise, low teaching value, unverifiable.
+
+  # ---------------------------------------------------------------
+  # F. Academic and public sector
+  # ---------------------------------------------------------------
+  - id: academic
+    label: Universities and public programs
+    priority: 3
+    sources:
+      - name: University AI-literacy courses
+        url: null
+        method: search
+        tier_cap: previewed
+        cadence: quarterly
+        notes: MIT OCW, Stanford, DTU. Check what Anthropic's Campus program lists.
+      - name: Anthropic Campus program
+        url: https://claude.com/programs/campus
+        method: fetch
+        tier_cap: previewed
+        cadence: quarterly
+      - name: National / EU AI literacy programs
+        url: null
+        method: search
+        tier_cap: previewed
+        cadence: quarterly
+        notes: Relevant to the Danish and EU audience specifically.
+
+  # ---------------------------------------------------------------
+  # G. Non-English — underserved, real differentiator later.
+  # ---------------------------------------------------------------
+  - id: non_english
+    label: Non-English content
+    priority: 3
+    sources:
+      - name: Bilibili
+        url: https://www.bilibili.com/
+        method: search
+        tier_cap: previewed
+        cadence: quarterly
+      - name: Regional YouTube / local platforms
+        url: null
+        method: search
+        tier_cap: previewed
+        cadence: quarterly
+        notes: >
+          Every item already carries a language field. Decide target languages
+          before harvesting - do not collect everything.
+
+# ---------------------------------------------------------------
+# Global rules
+# ---------------------------------------------------------------
+rules:
+  - No public submissions in v1. Submission flood is what killed curation on
+    every large list we studied (one competitor has 1,122 unprocessed PRs).
+  - Aggregators (Class Central, awesomeclaude.ai, awesome-lists) are DISCOVERY
+    SEEDS only. Always verify an item at its original source before listing it.
+  - Never copy another site's description or review. Write our own or say nothing.
+  - Every harvested item records the source id and the date checked.
+  - If a source blocks us, record that as a fact on the source, do not silently skip it.

@@ -1,0 +1,626 @@
+[
+  {
+    "title": "Design plugin (official)",
+    "url": "https://claude.com/plugins/design",
+    "author": "Anthropic",
+    "roles": [
+      "designer"
+    ],
+    "level": "confident",
+    "topics": [
+      "skills",
+      "cowork",
+      "claude-code"
+    ],
+    "format": "repo",
+    "time": "under-1hr",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "Anthropic's official design productivity plugin bundling 7 skills for design critique, UX writing, accessibility audits, research synthesis, and developer handoff. Runs in Cowork and Claude Code.",
+    "who_for": "UX/UI and content designers who want an official, ready-made set of Claude design workflows.",
+    "skip_if": "You don't use Cowork or Claude Code and only chat in the browser.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-20",
+    "status": "live",
+    "notes": "Apache-2.0; source repo anthropics/knowledge-work-plugins (23.2k stars). Supercharged when connected to Figma/Slack/Jira MCP."
+  },
+  {
+    "title": "knowledge-work-plugins/design/skills (source)",
+    "url": "https://github.com/anthropics/knowledge-work-plugins/tree/main/design/skills",
+    "author": "Anthropic",
+    "roles": [
+      "designer"
+    ],
+    "level": "builder",
+    "topics": [
+      "skills",
+      "mcp"
+    ],
+    "format": "repo",
+    "time": "under-1hr",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "The raw SKILL.md files behind the Design plugin: accessibility-review, design-critique, design-handoff, design-system, research-synthesis, user-research, ux-copy. Forkable to encode your own process.",
+    "who_for": "Designers comfortable editing markdown who want to customize Claude's design skills.",
+    "skip_if": "You want a guided course rather than raw files.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-20",
+    "status": "live",
+    "notes": "accessibility-review runs a WCAG 2.1 AA audit (contrast, keyboard, touch targets, screen readers)."
+  },
+  {
+    "title": "Using Claude Design for prototypes and UX",
+    "url": "https://claude.com/resources/tutorials/using-claude-design-for-prototypes-and-ux",
+    "author": "Anthropic",
+    "roles": [
+      "designer"
+    ],
+    "level": "basic",
+    "topics": [
+      "chat-prompting",
+      "claude-code"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "ai-reviewed",
+    "summary": "Official ~5-minute tutorial covering rapid prototyping in Claude Design, connecting your codebase for production-aware designs, and handing off to Claude Code.",
+    "who_for": "Product and UX designers wanting the official, honest overview of Claude Design's real workflow.",
+    "skip_if": "You want deep hands-on practice rather than an overview.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-20",
+    "status": "live",
+    "notes": "Claude Design is Anthropic Labs; web-only at claude.ai/design; Opus 4.7."
+  },
+  {
+    "title": "Introduction to Claude Cowork",
+    "url": "https://anthropic.skilljar.com/introduction-to-claude-cowork",
+    "author": "Anthropic Academy",
+    "roles": [
+      "designer"
+    ],
+    "level": "basic",
+    "topics": [
+      "cowork",
+      "skills"
+    ],
+    "format": "course",
+    "time": "under-1hr",
+    "cost": "free-account",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "Free official hands-on course on the Cowork task loop, plugins and skills, file/research workflows, and steering multi-step work; certificate on completion.",
+    "who_for": "Designers who want Claude to work on real files (research synthesis, handoff docs) beyond chat.",
+    "skip_if": "You only use Claude in the browser chat and never touch files.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-20",
+    "status": "live",
+    "notes": "Hosted on Skilljar; email/Skilljar account required. Page frames it as introductory but doesn't print the literal 'Beginner' label."
+  },
+  {
+    "title": "Get started with Claude Design (Help Center)",
+    "url": "https://support.claude.com/en/articles/14604416-get-started-with-claude-design",
+    "author": "Anthropic",
+    "roles": [
+      "designer"
+    ],
+    "level": "basic",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "ai-reviewed",
+    "summary": "Canonical setup and first-project reference for Claude Design, including which plans have access and that it's in beta.",
+    "who_for": "Any designer setting up Claude Design for the first time.",
+    "skip_if": "You've already set it up.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-20",
+    "status": "live",
+    "notes": "Available on Pro, Max, Team, Enterprise; default off for Enterprise."
+  },
+  {
+    "title": "Set up your design system in Claude Design",
+    "url": "https://support.claude.com/en/articles/14604397-set-up-your-design-system-in-claude-design",
+    "author": "Anthropic",
+    "roles": [
+      "designer"
+    ],
+    "level": "confident",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "ai-reviewed",
+    "summary": "Official guide to feeding Claude your brand (codebase, Figma exports, brand PDFs, assets) so every project stays on-brand.",
+    "who_for": "Designers and design leads establishing a reusable design system in Claude Design.",
+    "skip_if": "You have no design system or brand assets to import yet.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-20",
+    "status": "live",
+    "notes": "Publish toggle applies the system org-wide; Enterprise can restrict who publishes."
+  },
+  {
+    "title": "Claude Code and Figma: Set up the MCP server",
+    "url": "https://help.figma.com/hc/en-us/articles/39888612464151-Claude-Code-and-Figma-Set-up-the-MCP-server",
+    "author": "Figma",
+    "roles": [
+      "designer"
+    ],
+    "level": "confident",
+    "topics": [
+      "mcp",
+      "claude-code"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free-account",
+    "language": "en",
+    "tier": "ai-reviewed",
+    "summary": "Official Figma instructions for installing the Figma plugin/MCP server in Claude Code, including Agent Skills and the remote-vs-desktop server choice.",
+    "who_for": "UX/UI and design-system designers who want Claude Code to read and write Figma files.",
+    "skip_if": "You don't use Figma.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-20",
+    "status": "live",
+    "notes": "Install via `claude plugin install figma@claude-plugins-official`. Requires a paid Figma seat for Dev Mode features."
+  },
+  {
+    "title": "Guide to the Figma MCP server",
+    "url": "https://help.figma.com/hc/en-us/articles/32132100833559-Guide-to-the-Figma-MCP-server",
+    "author": "Figma",
+    "roles": [
+      "designer"
+    ],
+    "level": "confident",
+    "topics": [
+      "mcp"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free-account",
+    "language": "en",
+    "tier": "ai-reviewed",
+    "summary": "Explains what the Figma MCP server exposes (components, variables, tokens, layout), the write-to-canvas capability, and rate limits/seat requirements.",
+    "who_for": "Designers wanting to understand MCP capabilities before wiring it into Claude.",
+    "skip_if": "You're not using MCP.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-20",
+    "status": "live",
+    "notes": "Beta usage-based feature; read tools are rate-limited, write tools mostly exempt."
+  },
+  {
+    "title": "From Claude Code to Figma: Turning Production Code into Editable Figma Designs",
+    "url": "https://www.figma.com/blog/introducing-claude-code-to-figma/",
+    "author": "Figma (Gui, Design Director for AI)",
+    "roles": [
+      "designer"
+    ],
+    "level": "confident",
+    "topics": [
+      "mcp",
+      "claude-code"
+    ],
+    "format": "article",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "ai-reviewed",
+    "summary": "Primary-source announcement of the code-to-Figma direction: send live web interfaces from Claude Code into Figma as editable layers.",
+    "who_for": "Designers who prototype in code and want to bring work back onto the canvas for team review.",
+    "skip_if": "You only need setup steps, not the concept.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-20",
+    "status": "live",
+    "notes": "Assumes Claude Code + Figma MCP already set up."
+  },
+  {
+    "title": "A Designer's Guide to Claude Code",
+    "url": "https://medium.com/design-bootcamp/a-designers-guide-to-organizing-ai-skills-and-tools-in-claude-code-f87477c35b82",
+    "author": "Katherine Yeh",
+    "roles": [
+      "designer"
+    ],
+    "level": "confident",
+    "topics": [
+      "claude-code",
+      "skills",
+      "mcp"
+    ],
+    "format": "article",
+    "time": "under-1hr",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "A practical week-by-week plan for designers: build a design-principles skill, then component/token spec skills, connect Figma MCP, and get feedback that understands your system.",
+    "who_for": "UX/UI and design-system designers moving from chat to structured Claude Code skills.",
+    "skip_if": "You prefer video over long reads.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-20",
+    "status": "live",
+    "notes": "Assumes Claude Code + Figma. Single-author opinion; verify commands against official docs."
+  },
+  {
+    "title": "Claude Code for Designers (Builder.io)",
+    "url": "https://www.builder.io/blog/claude-code-for-designers",
+    "author": "Builder.io",
+    "roles": [
+      "designer"
+    ],
+    "level": "confident",
+    "topics": [
+      "claude-code",
+      "mcp"
+    ],
+    "format": "article",
+    "time": "under-1hr",
+    "cost": "free",
+    "language": "en",
+    "tier": "ai-reviewed",
+    "summary": "Getting-started guide plus an unusually honest section on where the workflow gets hard for designers: git, pull requests, and syncing with the dev team.",
+    "who_for": "Designers who want a realistic picture of Claude Code + Figma MCP, including the messy parts.",
+    "skip_if": "You want a vendor-neutral source (this is a Builder.io blog).",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-20",
+    "status": "live",
+    "notes": "Vendor blog; nudges toward Builder's own tooling at the end."
+  },
+  {
+    "title": "Claude Code for Designers: The Complete Guide",
+    "url": "https://www.intodesignsystems.com/claude-code-for-designers",
+    "author": "Into Design Systems",
+    "roles": [
+      "designer"
+    ],
+    "level": "confident",
+    "topics": [
+      "claude-code",
+      "skills",
+      "mcp"
+    ],
+    "format": "article",
+    "time": "under-1hr",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "Overview of designing with Claude Code: the frontend design skill, Figma workflows, giving Claude your design system as context, and examples from WhatsApp/Miro teams.",
+    "who_for": "Design-system practitioners wanting production-quality UI from Claude Code.",
+    "skip_if": "You only trust first-party documentation.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-20",
+    "status": "live",
+    "notes": "Links out to related Figma-CLI and Miro case-study articles."
+  },
+  {
+    "title": "A Better (and Cheaper) Figma MCP or How To Let Claude Design",
+    "url": "https://cianfrani.dev/posts/a-better-figma-mcp/",
+    "author": "Louis Cianfrani",
+    "roles": [
+      "designer"
+    ],
+    "level": "builder",
+    "topics": [
+      "mcp",
+      "claude-code"
+    ],
+    "format": "article",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "A community workaround: control Figma via the Chrome DevTools MCP (a single browser MCP) instead of the full Figma MCP, using fewer tokens; works with a free Figma account.",
+    "who_for": "Technically comfortable designers who want a lighter/cheaper Figma-Claude connection.",
+    "skip_if": "You're on an enterprise-locked setup or uneasy giving an LLM browser access.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-20",
+    "status": "live",
+    "notes": "Includes an explicit security warning about giving Claude browser control."
+  },
+  {
+    "title": "How to Use Claude Design for UX/UI",
+    "url": "https://designerup.co/blog/how-to-use-claude-design-for-ux-ui/",
+    "author": "Elizabeth Alli (DesignerUp)",
+    "roles": [
+      "designer"
+    ],
+    "level": "basic",
+    "topics": [
+      "chat-prompting",
+      "claude-code"
+    ],
+    "format": "article",
+    "time": "under-1hr",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "A practising designer tests Claude Design on a real UX/UI project: generating a design system, wireframe flows, hi-fi prototype with animations, and handoff to Claude Code — noting where it breaks.",
+    "who_for": "UX/UI designers evaluating Claude Design for real product work.",
+    "skip_if": "You want a shorter overview.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-20",
+    "status": "live",
+    "notes": "Written near Claude Design's April 2026 launch; some usage-limit details may have changed."
+  },
+  {
+    "title": "Building AI-driven workflows powered by Claude Code and other tools",
+    "url": "https://uxdesign.cc/designing-with-claude-code-and-codex-cli-building-ai-driven-workflows-powered-by-code-connect-ui-f10c136ec11f",
+    "author": "Iasonas Georgiadis (UX Collective)",
+    "roles": [
+      "designer"
+    ],
+    "level": "builder",
+    "topics": [
+      "claude-code",
+      "mcp"
+    ],
+    "format": "article",
+    "time": "under-1hr",
+    "cost": "free-account",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "Advanced workflow using Figma MCP + Code Connect UI with Claude Code (and Codex CLI) to turn rough ideas into production-ready code that reflects a real design system, not generic mockups.",
+    "who_for": "Senior designers building codebase-accurate prototypes with an existing design system.",
+    "skip_if": "You're a beginner or don't have a mature design system.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-20",
+    "status": "live",
+    "notes": "Medium/UX Collective; may hit a metered paywall."
+  },
+  {
+    "title": "Claude for Designers in 2026: Where AI Actually Helps",
+    "url": "https://artofstyleframe.com/blog/claude-for-designers-2026/",
+    "author": "Art of Styleframe",
+    "roles": [
+      "designer"
+    ],
+    "level": "basic",
+    "topics": [
+      "chat-prompting",
+      "claude-code"
+    ],
+    "format": "article",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "A balanced map of where Claude genuinely helps the UI workflow (UX copy, first-draft component code, token scaffolding, screenshot critique) and where it quietly hurts, with named failure modes.",
+    "who_for": "Designers wanting an honest, craft-first orientation before diving in.",
+    "skip_if": "You want hands-on setup steps.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-20",
+    "status": "live",
+    "notes": "Flags hallucinated pixel values and AI shipping 3:1 contrast as 'fine'."
+  },
+  {
+    "title": "How to Use Claude Code for UX Writing",
+    "url": "https://uxwritinghub.com/claude-code-ux-writing/",
+    "author": "UX Writing Hub",
+    "roles": [
+      "designer"
+    ],
+    "level": "confident",
+    "topics": [
+      "claude-code",
+      "chat-prompting"
+    ],
+    "format": "article",
+    "time": "under-1hr",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "Explains using CLAUDE.md to enforce brand voice/tone and run large-scale copy audits (e.g., replacing 'Click here' across hundreds of articles) as a content systems workflow.",
+    "who_for": "Content designers and UX writers wanting consistent copy at scale.",
+    "skip_if": "You don't write or own product copy.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-20",
+    "status": "live",
+    "notes": "Contains an upsell to the site's paid Claude Code course."
+  },
+  {
+    "title": "ux-writing-skill (open source)",
+    "url": "https://github.com/content-designer/ux-writing-skill",
+    "author": "content-designer",
+    "roles": [
+      "designer"
+    ],
+    "level": "confident",
+    "topics": [
+      "skills",
+      "claude-code"
+    ],
+    "format": "repo",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "An installable Agent Skill that makes Claude write/edit interface copy (CTAs, error messages, empty states, onboarding) to consistent standards, activating automatically when relevant.",
+    "who_for": "Content designers and product teams wanting UX-writing standards enforced across Claude/Codex/Cursor.",
+    "skip_if": "You prefer to write all copy manually.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-20",
+    "status": "live",
+    "notes": "Community skill (not Anthropic's official ux-copy skill); works via skills CLI."
+  },
+  {
+    "title": "Field Notes from the In-Between (Building Epilogue with Claude Code)",
+    "url": "https://permissionless.krispuckett.com/",
+    "author": "Kris Puckett (Stripe)",
+    "roles": [
+      "designer"
+    ],
+    "level": "confident",
+    "topics": [
+      "claude-code"
+    ],
+    "format": "article",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "ai-reviewed",
+    "summary": "A design manager's honest case study of building Epilogue — 'fourteen thousand lines of Swift, written through conversation with Claude' — shipped to the App Store, including what broke and what he learned about precise articulation.",
+    "who_for": "Designers who want proof and mindset for shipping real software without a traditional engineer.",
+    "skip_if": "You want a step-by-step tutorial rather than a reflective essay.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-20",
+    "status": "live",
+    "notes": "Companion: App Store id6751764862 and his CLAUDE.md iOS rules thread on X."
+  },
+  {
+    "title": "Kris Puckett - Becoming an AI-native designer (Dive Club)",
+    "url": "https://www.youtube.com/watch?v=nPyxVMd1LIA",
+    "author": "Dive Club / Ridd",
+    "roles": [
+      "designer"
+    ],
+    "level": "confident",
+    "topics": [
+      "claude-code",
+      "skills"
+    ],
+    "format": "podcast",
+    "time": "under-1hr",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "Long-form interview with a Stripe design manager on building his own apps with Claude Code, creating custom skills, teaching Claude metal shaders, and building internal tools.",
+    "who_for": "Designers wanting a deep, honest look at an AI-native design practice.",
+    "skip_if": "You prefer text to a ~1-hour podcast.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-20",
+    "status": "live",
+    "notes": "Also on Apple/Spotify. Previewed via description and secondary write-ups, not watched end-to-end."
+  },
+  {
+    "title": "How Claude Code's lead designer builds with AI",
+    "url": "https://www.youtube.com/watch?v=hKeDfupbA4U",
+    "author": "Dive Club / Meaghan Choi",
+    "roles": [
+      "designer"
+    ],
+    "level": "confident",
+    "topics": [
+      "claude-code",
+      "skills"
+    ],
+    "format": "video",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "~12-minute demo from Anthropic's Claude Code design lead showing her real setup: git worktrees, auto mode, a custom /prototype skill that generates five HTML variants, and reviewing the PR instead of the terminal.",
+    "who_for": "Product/UI designers who want to see an expert's actual daily Claude Code workflow.",
+    "skip_if": "You have no interest in Claude Code.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-20",
+    "status": "live",
+    "notes": "Recorded at Dive Club Live NYC; previewed via description/secondary sources."
+  },
+  {
+    "title": "Full Tutorial: From Design to Code with Claude Code (Meaghan Choi)",
+    "url": "https://creatoreconomy.so/p/full-tutorial-from-design-to-code-with-claude-code-meaghan-choi",
+    "author": "Peter Yang / Meaghan Choi",
+    "roles": [
+      "designer"
+    ],
+    "level": "confident",
+    "topics": [
+      "claude-code",
+      "mcp"
+    ],
+    "format": "video",
+    "time": "under-1hr",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "~40-minute walkthrough of a designer's Figma-to-working-code workflow with Claude Code, custom CLAUDE.md files for designers, and how designers can get permission to ship to production.",
+    "who_for": "Designers and PMs who dream of shipping frontend polish to prod.",
+    "skip_if": "You want a quick skim rather than a full session.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-20",
+    "status": "live",
+    "notes": "Includes chapter timestamps and a live Figma-to-code demo."
+  },
+  {
+    "title": "A designer's first attempt at building with Claude Code",
+    "url": "https://medium.com/design-bootcamp/a-designers-first-attempt-at-building-with-claude-code-571686dfa17f",
+    "author": "Zhiyang",
+    "roles": [
+      "designer"
+    ],
+    "level": "basic",
+    "topics": [
+      "claude-code",
+      "mcp"
+    ],
+    "format": "article",
+    "time": "under-1hr",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "A beginner-friendly ship story: using Claude to interview him into a PRD, building a Next.js PWA, setting up Figma MCP, and pushing a live URL his partner actually uses.",
+    "who_for": "Designers curious about building with AI who haven't taken the first step.",
+    "skip_if": "You're already shipping apps.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-20",
+    "status": "live",
+    "notes": "Honest that it's not one-shot magic; still a full design process."
+  },
+  {
+    "title": "Design Systems in 2026: Turn Your System into a Claude Skill",
+    "url": "https://www.designsystemscollective.com/design-systems-in-2026-turn-your-system-into-a-claude-skill-3dd4d8bf5feb",
+    "author": "Garima Agarwal",
+    "roles": [
+      "designer"
+    ],
+    "level": "confident",
+    "topics": [
+      "skills",
+      "claude-code"
+    ],
+    "format": "article",
+    "time": "under-1hr",
+    "cost": "free-account",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "A concrete SKILL.md template that encodes design tokens, naming conventions, component specs, and accessibility rules so Claude applies your system to UI and Figma/React work.",
+    "who_for": "Design-system owners who want Claude to respect their system consistently.",
+    "skip_if": "You don't maintain a design system.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-20",
+    "status": "live",
+    "notes": "Medium/Design Systems Collective; may hit a metered paywall."
+  },
+  {
+    "title": "Meaghan Choi - Designing Claude Code (and what's coming next)",
+    "url": "https://podcasts.apple.com/us/podcast/meaghan-choi-designing-claude-code-and-whats-coming-next/id1686414242",
+    "author": "Dive Club / Ridd",
+    "roles": [
+      "designer"
+    ],
+    "level": "confident",
+    "topics": [
+      "claude-code",
+      "chat-prompting"
+    ],
+    "format": "podcast",
+    "time": "under-1hr",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "Deep-dive interview with Anthropic's Claude Code design lead on how design operates at Anthropic, the Artifacts workflow, and where AI-native design is heading.",
+    "who_for": "Designers wanting a strategic, insider view of AI-native design.",
+    "skip_if": "You want practical steps only.",
+    "published": "2026-07-08",
+    "checked": "2026-08-20",
+    "status": "live",
+    "notes": "Also on YouTube and Spotify. Previewed via episode notes."
+  }
+]

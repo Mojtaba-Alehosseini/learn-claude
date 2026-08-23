@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fillable icons — level and time</title>
+<style>
+  :root{
+    --ivory:#f0eee6; --light:#faf9f5; --oat:#e3dacc; --ink:#141413; --stone:#cccbc8; --muted:#87867f;
+  }
+  body{background:var(--ivory);color:var(--ink);font:400 16px/1.6 system-ui,sans-serif;margin:0;padding:48px 32px;}
+  h1{font:400 28px/1.2 Georgia,serif;margin:0 0 4px;}
+  p.lede{color:var(--muted);font-size:14px;margin:0 0 40px;}
+  h2{font:400 18px/1.2 Georgia,serif;margin:40px 0 16px;}
+  .row{display:flex;gap:28px;flex-wrap:wrap;align-items:flex-start;}
+  .opt{text-align:center;width:112px;}
+  .cap{font-size:12px;color:var(--muted);margin-top:8px;display:block;}
+
+  /* The component. Two layers: a bar that grows, and the drawing on top.
+     The drawing is opaque everywhere except the shape's interior, so the bar
+     is only ever visible through that hole. The outline can never move. */
+  /* The light background shows only through the hole, so an empty shape has a
+     proper #faf9f5 inside like every other icon, not a see-through hole. */
+  .icon{position:relative;width:96px;height:96px;overflow:hidden;background:var(--light);}
+  .icon .bar{
+    position:absolute;left:0;right:0;bottom:0;background:var(--oat);
+    height:calc(var(--fill,0) * 100%);
+    transition:height .55s cubic-bezier(.4,0,.2,1), width .55s cubic-bezier(.4,0,.2,1);
+  }
+  .icon img{position:relative;width:100%;height:100%;display:block;}
+
+  /* Level fills left to right, so it reads as a moon phase.
+     Time fills bottom to top, like sand. Two axes, two different motions. */
+  .icon.level .bar{top:0;right:auto;height:100%;width:calc(var(--fill,0) * 100%);}
+
+  /* Time only uses the lower chamber, which sits between 50% and 86% of the box,
+     so its fill tops out at 50% of the box height. */
+  .icon.time .bar{height:calc(var(--fill,0) * 50%);}
+
+  button{font:inherit;font-size:13px;padding:7px 14px;background:var(--light);
+    border:1px solid var(--stone);border-radius:0 0 8px 8px;cursor:pointer;}
+  button:hover{border-color:var(--muted);}
+  .small .icon{width:32px;height:32px;}
+  .small .opt{width:52px;}
+  code{background:var(--light);padding:2px 6px;font-size:13px;}
+  pre{background:var(--light);border:1px solid var(--stone);border-radius:12px;
+    padding:16px 18px;font-size:13px;overflow:auto;line-height:1.5;}
+</style>
+</head>
+<body>
+
+<h1>Fillable icons</h1>
+<p class="lede">One drawing per axis. The amount of beige is set by CSS, so the four states can never drift apart — and they animate.</p>
+
+<h2>Level</h2>
+<div class="row" id="level"></div>
+
+<h2>Time</h2>
+<div class="row" id="time"></div>
+
+<h2>At 32px, the size used beside text</h2>
+<div class="row small" id="small"></div>
+
+<h2>Live</h2>
+<div class="row" style="align-items:center;">
+  <div class="icon level" id="demoMoon"><span class="bar"></span><img src="../../assets/icons/level/moon-frame.png" alt=""></div>
+  <div class="icon time" id="demoGlass"><span class="bar"></span><img src="../../assets/icons/time/hourglass-frame.png" alt=""></div>
+  <button id="cycle">Change</button>
+</div>
+
+<h2>How to use it</h2>
+<pre>&lt;span class="icon level" style="--fill:.5"&gt;
+  &lt;span class="bar"&gt;&lt;/span&gt;
+  &lt;img src="assets/icons/level/moon-frame.png" alt="confident"&gt;
+&lt;/span&gt;</pre>
+
+<p style="font-size:14px;color:var(--muted);max-width:60ch;">
+Set <code>--fill</code> from the data. Level: 0, .25, .5, 1. Time: 0, .38, .6, 1.
+Add <code>class="icon time"</code> for the hourglass, which fills only its lower chamber.
+</p>
+
+<script>
+var LEVEL=[["never used Claude",0],["used it a little",.25],["used it a lot",.5],["built things with it",1]];
+var TIME=[["15 minutes",0],["one hour",.38],["a half day",.6],["several days",1]];
+
+function make(host,set,src,cls,withCaption){
+  set.forEach(function(s){
+    var d=document.createElement("div"); d.className="opt";
+    d.innerHTML='<span class="icon '+cls+'" style="--fill:'+s[1]+'">'+
+      '<span class="bar"></span><img src="'+src+'" alt="'+s[0]+'"></span>'+
+      (withCaption?'<span class="cap">'+s[0]+'</span>':'');
+    host.appendChild(d);
+  });
+}
+var MOON="../../assets/icons/level/moon-frame.png";
+var GLASS="../../assets/icons/time/hourglass-frame.png";
+make(document.getElementById("level"),LEVEL,MOON,"level",true);
+make(document.getElementById("time"),TIME,GLASS,"time",true);
+make(document.getElementById("small"),LEVEL,MOON,"level",false);
+make(document.getElementById("small"),TIME,GLASS,"time",false);
+
+var i=0;
+document.getElementById("cycle").onclick=function(){
+  i=(i+1)%4;
+  document.getElementById("demoMoon").style.setProperty("--fill",LEVEL[i][1]);
+  document.getElementById("demoGlass").style.setProperty("--fill",TIME[i][1]);
+};
+</script>
+</body>
+</html>

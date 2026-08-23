@@ -1,0 +1,6 @@
+# Learn Claude — a curated directory of places to learn Anthropic's Claude.
+# Not affiliated with Anthropic.
+User-agent: *
+Allow: /
+
+Sitemap: /sitemap.xml

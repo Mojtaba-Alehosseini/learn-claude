@@ -1,0 +1,227 @@
+[
+  {
+    "id": "first-week",
+    "title": "Your first week with Claude",
+    "for": "Anyone who has just opened Claude and does not know what to do next.",
+    "roles": [
+      "non-technical",
+      "student",
+      "teacher",
+      "business-founder"
+    ],
+    "level": "never-used",
+    "intro": "Six short steps. Nothing here takes more than an hour, and you can stop after step 3 and still be better off than most people.",
+    "step_count": 6,
+    "total_minutes": 105,
+    "total_time_label": "about 2 hours",
+    "cost": "free",
+    "weakest_tier": "previewed",
+    "steps": [
+      {
+        "step": 1,
+        "item": "r-fc4a37f0dd",
+        "title": "Claude is not one tool. It's six.",
+        "url": "https://ruben.substack.com/p/claude",
+        "time": "under-15min",
+        "cost": "free",
+        "tier": "ai-reviewed",
+        "why": "Start here because most confusion is not about prompting — it is not knowing that Claude is several different products. Five minutes now saves a week of looking in the wrong place."
+      },
+      {
+        "step": 2,
+        "item": "r-55183ae43b",
+        "title": "Get started with Claude",
+        "url": "https://support.claude.com/en/articles/8114491-get-started-with-claude",
+        "time": "under-15min",
+        "cost": "free",
+        "tier": "ai-reviewed",
+        "why": "Now open the thing itself and do one real task. Reading about it any longer is procrastination."
+      },
+      {
+        "step": 3,
+        "item": "r-6b31501da8",
+        "title": "Claude 101",
+        "url": "https://anthropic.skilljar.com/claude-101",
+        "time": "under-1hr",
+        "cost": "free-account",
+        "tier": "previewed",
+        "why": "By now you have had a generic, disappointing answer. Anthropic's own beginner course is the fix, and it is the single highest-value hour here."
+      },
+      {
+        "step": 4,
+        "item": "r-6840ddca47",
+        "title": "What are Projects?",
+        "url": "https://support.claude.com/en/articles/9517075-what-are-projects",
+        "time": "under-15min",
+        "cost": "free-account",
+        "tier": "ai-reviewed",
+        "why": "Once you repeat a task twice, you need somewhere to keep the context. Projects is that place. Learning this earlier would have been abstract."
+      },
+      {
+        "step": 5,
+        "item": "r-42c17da63f",
+        "title": "Why do AI models hallucinate?",
+        "url": "https://claude.com/resources/tutorials/why-do-ai-models-hallucinate",
+        "time": "under-15min",
+        "cost": "free",
+        "tier": "previewed",
+        "why": "Before you trust Claude with anything that matters, understand exactly how it fails. This is the step people skip and later regret."
+      },
+      {
+        "step": 6,
+        "item": "r-f86a3e8189",
+        "title": "Get started with Claude Cowork (Help Center)",
+        "url": "https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork",
+        "time": "under-15min",
+        "cost": "free",
+        "tier": "ai-reviewed",
+        "why": "Last, because working on your own files only makes sense once you trust the answers. Read it before you point Claude at anything real."
+      }
+    ]
+  },
+  {
+    "id": "claude-code-start",
+    "title": "Getting good at Claude Code",
+    "for": "Developers who have installed Claude Code and are getting mediocre results.",
+    "roles": [
+      "developer"
+    ],
+    "level": "basic",
+    "intro": "The gap between installing Claude Code and being fast with it is configuration and habits, not model quality. Six steps, roughly a day of reading spread over a week of practice.",
+    "step_count": 6,
+    "total_minutes": 336,
+    "total_time_label": "about 6 hours",
+    "cost": "free",
+    "weakest_tier": "previewed",
+    "steps": [
+      {
+        "step": 1,
+        "item": "r-530cb03364",
+        "title": "Claude Code 101 (Anthropic Academy)",
+        "url": "https://anthropic.skilljar.com/claude-code-101",
+        "time": "half-day",
+        "cost": "free-account",
+        "tier": "previewed",
+        "why": "Anthropic's own course. Do this before reading anyone's tips, so you know which behaviours are the tool and which are the person writing about it."
+      },
+      {
+        "step": 2,
+        "item": "r-fb8dc53be9",
+        "title": "Best practices for Claude Code",
+        "url": "https://code.claude.com/docs/en/best-practices",
+        "time": "under-1hr",
+        "cost": "free",
+        "tier": "ai-reviewed",
+        "why": "The best-practices page. Densest thing written about Claude Code, and everything after this assumes you have read it."
+      },
+      {
+        "step": 3,
+        "item": "r-81e43f0350",
+        "title": "The new rules of context engineering for Claude 5 generation models",
+        "url": "https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models",
+        "time": "under-15min",
+        "cost": "free",
+        "tier": "ai-reviewed",
+        "why": "Read this third and not later, because it invalidates a lot of 2025-era advice you will otherwise absorb."
+      },
+      {
+        "step": 4,
+        "item": "r-9f1cc05b1c",
+        "title": "Maximizing the value of your Claude Code sessions",
+        "url": "https://claude.com/blog/maximizing-the-value-of-your-claude-code-sessions",
+        "time": "under-15min",
+        "cost": "free",
+        "tier": "ai-reviewed",
+        "why": "Now that your setup is right, this is where the speed comes from — knowing which commands quietly destroy your prompt cache mid-session."
+      },
+      {
+        "step": 5,
+        "item": "r-42516bb950",
+        "title": "Effective context engineering for AI agents",
+        "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+        "time": "under-1hr",
+        "cost": "free",
+        "tier": "previewed",
+        "why": "Context engineering is the skill that separates people who get good output from people who get plausible output. It only makes sense once you have felt a long session degrade."
+      },
+      {
+        "step": 6,
+        "item": "r-756c6a8e02",
+        "title": "A harness for every task: dynamic workflows in Claude Code",
+        "url": "https://claude.com/blog/a-harness-for-every-task-dynamic-workflows-in-claude-code",
+        "time": "under-15min",
+        "cost": "free",
+        "tier": "ai-reviewed",
+        "why": "Last, because orchestration is worth nothing until single sessions are reliable. Names the failure modes you will have hit by now."
+      }
+    ]
+  },
+  {
+    "id": "research-with-claude",
+    "title": "Using Claude for research without embarrassing yourself",
+    "for": "Researchers and academics who want the speed without the retraction.",
+    "roles": [
+      "researcher",
+      "student"
+    ],
+    "level": "basic",
+    "intro": "The order matters more here than anywhere else. The failure modes are specific and the consequences are public.",
+    "step_count": 5,
+    "total_minutes": 126,
+    "total_time_label": "about 2 hours",
+    "cost": "some paid steps",
+    "weakest_tier": "ai-reviewed",
+    "steps": [
+      {
+        "step": 1,
+        "item": "r-2350921236",
+        "title": "Reduce hallucinations",
+        "url": "https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/reduce-hallucinations",
+        "time": "under-15min",
+        "cost": "free",
+        "tier": "ai-reviewed",
+        "why": "Start with the failure, not the feature. Fabricated citations are the one mistake that ends careers, and this is the clearest account of when they happen and how to cut them."
+      },
+      {
+        "step": 2,
+        "item": "r-6840ddca47",
+        "title": "What are Projects?",
+        "url": "https://support.claude.com/en/articles/9517075-what-are-projects",
+        "time": "under-15min",
+        "cost": "free-account",
+        "tier": "ai-reviewed",
+        "why": "Projects is where a literature review actually lives. Set it up before you have forty loose chats."
+      },
+      {
+        "step": 3,
+        "item": "r-69ee3c03e3",
+        "title": "Claude AI and Literature Reviews: An Experiment in Utility and Ethical Use",
+        "url": "https://muse.jhu.edu/article/961199",
+        "time": "under-1hr",
+        "cost": "paid-once",
+        "tier": "ai-reviewed",
+        "why": "Now read someone who actually tried it and reported what broke, with the guard rails from step 1 in place."
+      },
+      {
+        "step": 4,
+        "item": "r-4ccc667a90",
+        "title": "Connect and integrate your local Zotero library with Claude Cowork",
+        "url": "https://effortlessacademic.com/connect-and-integrate-your-local-zotero-library-with-claude-cowork/",
+        "time": "under-1hr",
+        "cost": "free",
+        "tier": "ai-reviewed",
+        "why": "Connect your own library. Until Claude can see your actual sources, everything above is a demo."
+      },
+      {
+        "step": 5,
+        "item": "r-146910f648",
+        "title": "ICMJE Recommendations — Use of AI in Publishing",
+        "url": "https://www.icmje.org/recommendations/browse/artificial-intelligence/",
+        "time": "under-15min",
+        "cost": "free",
+        "tier": "ai-reviewed",
+        "why": "Before you submit anything, read what the ICMJE expects you to declare. This is not optional and most people learn it too late."
+      }
+    ]
+  }
+]

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Learn Claude — find what's worth your time</title>
+<meta name="description" content="A curated directory of the best places to learn Anthropic's Claude. Every resource says who it is for, who should skip it, and when we last checked it.">
+<meta property="og:title" content="Learn Claude — find what's worth your time">
+<meta property="og:description" content="A curated directory of the best places to learn Anthropic's Claude. Every resource says who it is for, who should skip it, and when we last checked it.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/tiempos/Tiempos Fine Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/site.css">
+<style>
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(260px, 440px);
+    gap: var(--space-76);
+    align-items: start;
+    padding-top: var(--space-76);
+  }
+  .hero-art { position: relative; aspect-ratio: 1/1; width: 100%; }
+  .hero-art img {
+    position: absolute; inset: 0; width: 100%; height: 100%;
+    object-fit: contain;
+    transition: opacity var(--dur-slow) var(--ease-out);
+  }
+  /* The one decorative use of clay allowed: it marks the thing you act on. */
+  .blank {
+    display: inline; background: transparent; border: 0; border-radius: 0;
+    padding: 0; margin: 0; font: inherit; letter-spacing: inherit;
+    color: var(--text-primary); cursor: pointer; text-align: left;
+  }
+  .blank:hover, .blank[aria-expanded="true"] { background: var(--surface-panel); }
+  .blank span { border-bottom: 2px solid var(--clay); }
+  .chooser { margin-top: var(--space-32); }
+  .search-row {
+    margin-top: var(--space-48); display: flex; gap: var(--space-12);
+    flex-wrap: wrap; align-items: stretch;
+  }
+  .search-row .input { flex: 1 1 260px; min-height: 52px; }
+  .why { margin-top: var(--space-100); display: grid;
+         grid-template-columns: repeat(3, minmax(0,1fr)); gap: var(--space-48); }
+  @media (max-width: 768px) {
+    .hero { grid-template-columns: 1fr; gap: var(--space-32); padding-top: var(--space-32); }
+    .hero-art { max-width: 280px; }
+    .why { grid-template-columns: 1fr; gap: var(--space-32); }
+  }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="wordmark" href="index.html" aria-current="page">Learn Claude</a>
+    <nav class="nav" aria-label="Main">
+      <a class="nav-link" href="browse.html">Browse</a>
+      <a class="nav-link" href="paths.html">Paths</a>
+      <a class="nav-link" href="how-we-check.html">How we check</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="wrap page">
+  <div class="hero">
+    <div>
+      <p class="meta" style="margin-bottom:var(--space-24)">Find what's worth your time.</p>
+
+      <p class="display">
+        I'm
+        <button type="button" class="blank" id="roleBlank" aria-expanded="true" aria-controls="chooser"><span id="roleText">a [role]</span></button>
+        and I've
+        <button type="button" class="blank" id="levelBlank" aria-expanded="false" aria-controls="chooser"><span id="levelText">[level]</span></button>.
+      </p>
+
+      <div class="chooser" id="chooser">
+        <div id="roleSet">
+          <h2 class="h3" style="margin-bottom:var(--space-12)">Who are you?</h2>
+          <div class="chip-row" id="roleOptions"></div>
+        </div>
+        <div id="levelSet" class="hidden">
+          <h2 class="h3" style="margin-bottom:var(--space-12)">How much Claude do you know?</h2>
+          <div class="chip-row" id="levelOptions"></div>
+        </div>
+      </div>
+
+      <form class="search-row" id="go">
+        <input class="input" id="q" aria-label="Search resources"
+               placeholder="Or describe what you want to do…" autocomplete="off">
+        <button type="submit" class="btn btn-primary">Show me</button>
+      </form>
+
+      <p class="meta" id="tally" style="margin-top:var(--space-16)"></p>
+    </div>
+
+    <div>
+      <div class="hero-art" id="art">
+        <img id="artA" alt="">
+        <img id="artB" alt="" style="opacity:0">
+      </div>
+    </div>
+  </div>
+
+  <section class="why">
+    <div>
+      <h2 class="h2">We say when to skip</h2>
+      <p class="prose" style="margin-top:var(--space-12)">Every entry has a
+        <strong>Skip if:</strong> line. A link with no judgment is just a list, and
+        lists are what made this hard in the first place.</p>
+    </div>
+    <div>
+      <h2 class="h2">We say how we checked</h2>
+      <p class="prose" style="margin-top:var(--space-12)">Four levels, and we do not
+        round up. If nobody has opened it, the card says so.</p>
+    </div>
+    <div>
+      <h2 class="h2">We show the date</h2>
+      <p class="prose" style="margin-top:var(--space-12)">Claude changes every few
+        months. You can see when we last looked, and whether the thing is old.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-col">
+      <a href="browse.html">Browse</a>
+      <a href="paths.html">Paths</a>
+      <a href="how-we-check.html">How we check</a>
+    </div>
+    <p class="footer-note">
+      Learn Claude is an independent directory. It is not affiliated with Anthropic.
+      Every entry says who it is for, who should skip it, and when we last checked it.
+    </p>
+  </div>
+</footer>
+
+<script src="data/items.js"></script>
+<script src="data/paths.js"></script>
+<script src="assets/js/ui.js"></script>
+<script src="assets/js/home.js"></script>
+</body>
+</html>

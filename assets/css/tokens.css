@@ -1,0 +1,217 @@
+/* ==========================================================================
+   Design tokens — Claude learning directory
+   Source: Anthropic's own design system, captured at
+   https://styles.refero.design/style/d469cba4-c448-4a43-a033-883f8bfcdc42
+   Checked 2026-08-19. Full reference: docs/design/anthropic-style-reference.md
+
+   Nothing in the site may hardcode a colour, size, or radius. Use these.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Fonts
+   Files live in /styrene-font-family and /Tiempos_Fine.
+   Note: the licensed Tiempos cut here is Fine, which is drawn for large display
+   sizes. It is thin below about 24px. Body copy at 20px will look lighter than
+   Anthropic's, which uses Tiempos Text. Swap the files if Text is acquired —
+   nothing else changes, the family name stays the same.
+   -------------------------------------------------------------------------- */
+
+@font-face {
+  font-family: 'Tiempos';
+  src: url('../fonts/tiempos/Tiempos Fine Regular.woff2') format('woff2'),
+       url('../fonts/tiempos/Tiempos Fine Regular.otf') format('opentype');
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Tiempos';
+  src: url('../fonts/tiempos/Tiempos Fine Regular Italic.woff2') format('woff2'),
+       url('../fonts/tiempos/Tiempos Fine Regular Italic.otf') format('opentype');
+  font-weight: 400; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: 'Tiempos';
+  src: url('../fonts/tiempos/Tiempos Fine Semibold.woff2') format('woff2'),
+       url('../fonts/tiempos/Tiempos Fine Semibold.otf') format('opentype');
+  font-weight: 600; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Styrene';
+  src: url('../fonts/styrene/StyreneB-Regular.woff2') format('woff2'),
+       url('../fonts/styrene/StyreneB-Regular.otf') format('opentype');
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Styrene';
+  src: url('../fonts/styrene/StyreneB-Medium.woff2') format('woff2'),
+       url('../fonts/styrene/StyreneB-Medium.otf') format('opentype');
+  font-weight: 500; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Styrene';
+  src: url('../fonts/styrene/StyreneB-Bold.woff2') format('woff2'),
+       url('../fonts/styrene/StyreneB-Bold.otf') format('opentype');
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+
+:root {
+
+  /* ------------------------------------------------------------------------
+     Palette — warm earth tones only. No cool gray, no blue, ever.
+     ------------------------------------------------------------------------ */
+  --slate-dark:    #141413;  /* primary text, headings, footer bg, hairlines  */
+  --slate-medium:  #3d3d3a;  /* dark-on-dark borders inside the footer        */
+  --cloud-dark:    #87867f;  /* outlined button borders, mid dividers         */
+  --cloud-medium:  #b0aea5;  /* muted helper text, inactive nav, secondary    */
+  --stone:         #cccbc8;  /* hairline borders between sections             */
+  --oat-warm:      #e3dacc;  /* grouped panels, the icon accent colour        */
+  --manilla:       #f5e3c7;  /* featured hero card only                       */
+  --ivory-medium:  #f0eee6;  /* page canvas                                   */
+  --ivory-light:   #faf9f5;  /* card surfaces                                 */
+  --clay:          #d97757;  /* THE single accent. One filled CTA per page.   */
+  --clay-deep:     #c6613f;  /* clay hover and pressed                        */
+  --bark:          #6c6b66;  /* ours, not Anthropic's — see the note below    */
+
+  /* Why --bark exists. Measured 2026-08-19 against #f0eee6:
+       --cloud-medium #b0aea5   1.91:1  fails WCAG at every size
+       --cloud-dark   #87867f   3.15:1  passes only at 18.66px+
+     Anthropic uses those two for small metadata anyway. We cannot: a directory
+     whose whole product is a date and a one-line judgement must have those legible.
+     --bark is --cloud-dark darkened on its own hue until it clears 4.60:1, so it
+     stays in the warm family and passes AA at any size. */
+
+  /* ------------------------------------------------------------------------
+     Surfaces — elevation comes from tone, never from a shadow
+     ------------------------------------------------------------------------ */
+  --surface-canvas:  var(--ivory-medium);
+  --surface-card:    var(--ivory-light);
+  --surface-feature: var(--manilla);
+  --surface-panel:   var(--oat-warm);
+  --surface-invert:  var(--slate-dark);
+
+  /* ------------------------------------------------------------------------
+     Text
+     ------------------------------------------------------------------------ */
+  /* Every one of these passes WCAG AA at any size. Verified, not assumed. */
+  --text-primary:   var(--slate-dark);   /* 15.87:1 on page */
+  --text-secondary: var(--bark);         /*  4.60:1 on page — dates, source, metadata */
+  --text-muted:     var(--bark);         /* same. There is no weaker legible option. */
+  --text-on-invert: var(--ivory-light);  /* 17.50:1 on the footer */
+  --text-on-clay:   var(--slate-dark);   /*  5.90:1. White on clay is 3.12:1 and fails. */
+
+  /* Decorative only. Never put text a reader must read in these. */
+  --line-quiet:     var(--cloud-medium); /* placeholder text, inactive nav, dividers */
+
+  /* ------------------------------------------------------------------------
+     Borders — 1px hairlines. There are no shadows in this system.
+     ------------------------------------------------------------------------ */
+  --border:        var(--stone);
+  --border-strong: var(--cloud-dark);
+  --border-invert: var(--slate-medium);
+
+  /* ------------------------------------------------------------------------
+     Semantic tokens for this site specifically.
+     The four review tiers must never be signalled by colour alone — every
+     badge carries its word as well. See docs/design/design-brief.md.
+     ------------------------------------------------------------------------ */
+  --tier-reviewed-bg:     var(--slate-dark);
+  --tier-reviewed-text:   var(--ivory-light);
+  --tier-ai-bg:           var(--oat-warm);
+  --tier-ai-text:         var(--slate-dark);
+  --tier-previewed-bg:    transparent;
+  --tier-previewed-text:  var(--bark);
+  --tier-previewed-brdr:  var(--cloud-dark);
+  --tier-listed-bg:       transparent;
+  --tier-listed-text:     var(--bark);   /* badges are 12px — cloud-medium is illegible there */
+  --tier-listed-brdr:     var(--stone);
+
+  --flag-outdated: var(--clay-deep);   /* "possibly outdated", paired with text */
+
+  /* ------------------------------------------------------------------------
+     Type families
+     ------------------------------------------------------------------------ */
+  --font-serif: 'Tiempos', ui-serif, Georgia, Cambria, 'Times New Roman', serif;
+  --font-sans:  'Styrene', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-mono:  ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* ------------------------------------------------------------------------
+     Type scale — major third from a 12px base.
+     Serif carries the voice. Sans is interface chrome only.
+     ------------------------------------------------------------------------ */
+  --text-caption:     12px;  --leading-caption:     1.4;  --tracking-caption:    -0.24px;
+  --text-body-sm:     16px;  --leading-body-sm:     1.5;  --tracking-body-sm:    -0.08px;
+  --text-body:        20px;  --leading-body:        1.4;  --tracking-body:        0;
+  --text-subheading:  24px;  --leading-subheading:  1.3;  --tracking-subheading: -0.05px;
+  --text-heading:     61px;  --leading-heading:     1.1;  --tracking-heading:    -0.12px;
+  --text-display:     68px;  --leading-display:     1.1;  --tracking-display:     0;
+
+  --weight-regular:  400;
+  --weight-medium:   500;
+  --weight-semibold: 600;
+  --weight-bold:     700;
+
+  /* ------------------------------------------------------------------------
+     Spacing — 4px base. Nothing outside this scale.
+     ------------------------------------------------------------------------ */
+  --space-4:   4px;
+  --space-8:   8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-48: 48px;
+  --space-76: 76px;
+  --space-100: 100px;
+
+  /* ------------------------------------------------------------------------
+     Layout
+     ------------------------------------------------------------------------ */
+  --page-max-width: 1280px;
+  --measure: 68ch;          /* longest a line of body text may run */
+  --section-gap: var(--space-100);
+  --card-padding: var(--space-24);
+  --element-gap: var(--space-8);
+
+  /* ------------------------------------------------------------------------
+     Radius — the bottom-only 8px on filled buttons is the signature.
+     Do not round it evenly.
+     ------------------------------------------------------------------------ */
+  --radius-card:    24px;
+  --radius-outline: 12px;
+  --radius-filled:  0 0 8px 8px;
+  --radius-nav:      0;
+  --radius-badge:    0;
+  --radius-link:     0;
+
+  /* ------------------------------------------------------------------------
+     Motion — used by the fillable level and time icons, and by filter changes.
+     ------------------------------------------------------------------------ */
+  --dur-fast: 120ms;
+  --dur-base: 220ms;
+  --dur-slow: 550ms;
+  --ease-out: cubic-bezier(.4, 0, .2, 1);
+
+  /* ------------------------------------------------------------------------
+     Focus — must be visible everywhere. 2px, never removed.
+     ------------------------------------------------------------------------ */
+  --focus-ring: 2px solid var(--slate-dark);
+  --focus-offset: 2px;
+}
+
+/* Smaller display type on phones. Everything else scales by itself. */
+@media (max-width: 768px) {
+  :root {
+    --text-display: 40px;
+    --text-heading: 36px;
+    --text-subheading: 20px;
+    --text-body: 18px;
+    --section-gap: var(--space-48);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 0ms;
+    --dur-base: 0ms;
+    --dur-slow: 0ms;
+  }
+}

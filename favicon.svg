@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Learn Claude">
+  <!-- The site's own mark, not Anthropic's: an open book on the ivory page colour,
+       drawn with the same thick uneven marker line as the role icons. -->
+  <rect width="64" height="64" fill="#f0eee6"/>
+  <g fill="none" stroke="#141413" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M32 18c-5-3.5-11-4.5-17-3.5v27c6-1 12 0 17 3.5 5-3.5 11-4.5 17-3.5v-27c-6-1-12 0-17 3.5z" fill="#faf9f5"/>
+    <path d="M32 18v27"/>
+  </g>
+  <path d="M40 24c3-.6 5.5-.8 8-.7v4c-2.5-.1-5 .1-8 .7z" fill="#e3dacc"/>
+</svg>

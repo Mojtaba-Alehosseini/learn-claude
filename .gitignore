@@ -1,0 +1,26 @@
+# secrets — the Gemini API keys live here. Never commit this.
+.env
+*.key
+
+# python
+__pycache__/
+*.pyc
+.venv/
+
+# os
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Icon working files. The generated 2048px JPEGs and rejected takes are worth keeping
+# locally but they are ~29 MB and nothing on the site loads them — only the finished
+# PNGs under assets/icons/ ship.
+docs/design/reference/icon-drafts/
+docs/design/*.pdf
+
+# Generated from data/*.json by scripts/build-data-js.py. Committing both means every
+# data change shows up as two diffs, one of them unreadable minified JSON.
+# Run ./build.sh after cloning.
+data/items.js
+data/paths.js
+data/search-keywords.js

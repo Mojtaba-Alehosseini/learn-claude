@@ -1,0 +1,672 @@
+[
+  {
+    "title": "AI Fluency for Small Businesses",
+    "url": "https://anthropic.skilljar.com/ai-fluency-for-small-businesses",
+    "author": "Anthropic + PayPal",
+    "roles": [
+      "business-founder"
+    ],
+    "level": "basic",
+    "topics": [
+      "chat-prompting",
+      "safety"
+    ],
+    "format": "course",
+    "time": "under-1hr",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "A 9-lesson course, taught by real small-business owners, on choosing which tasks to hand to AI, handling customer data responsibly, and writing an AI use policy, built on the 4D framework.",
+    "who_for": "Founders and staff new to AI who want a structured, vetted foundation before subscribing to or rolling out Claude.",
+    "skip_if": "You are already AI-fluent and want product mechanics rather than a decision framework.",
+    "published": "2026-05-13",
+    "checked": "2026-08-20",
+    "status": "live",
+    "notes": "Official and free; certificate on completion. Examples use Claude.ai but any chatbot works. No upsell."
+  },
+  {
+    "title": "AI Fluency: Framework & Foundations",
+    "url": "https://anthropic.skilljar.com/ai-fluency-framework-foundations",
+    "author": "Anthropic / Profs. Rick Dakan & Joseph Feller",
+    "roles": [
+      "business-founder"
+    ],
+    "level": "basic",
+    "topics": [
+      "chat-prompting",
+      "safety"
+    ],
+    "format": "course",
+    "time": "half-day",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "The foundational course teaching the 4D framework (Delegation, Description, Discernment, Diligence) for effective, ethical, and safe AI collaboration.",
+    "who_for": "Anyone who wants the conceptual backbone before diving into product-specific workflows.",
+    "skip_if": "You only want quick, copy-paste task recipes.",
+    "published": "2025-06-01",
+    "checked": "2026-08-20",
+    "status": "live",
+    "notes": "Prerequisite for the SMB and nonprofit variants. Certificate on completion."
+  },
+  {
+    "title": "Claude 101",
+    "url": "https://anthropic.skilljar.com/claude-101",
+    "author": "Anthropic",
+    "roles": [
+      "business-founder"
+    ],
+    "level": "never-used",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "course",
+    "time": "under-1hr",
+    "cost": "free-account",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "The shortest official on-ramp: core chat, Projects, files, and connectors for everyday work.",
+    "who_for": "People who have never opened Claude and want the basics fast.",
+    "skip_if": "You have used Claude regularly for months.",
+    "published": "2026-03-01",
+    "checked": "2026-08-20",
+    "status": "live",
+    "notes": "Free; no coding. Also mirrored on DataCamp and Coursera."
+  },
+  {
+    "title": "Introduction to Claude Cowork",
+    "url": "https://anthropic.skilljar.com/introduction-to-claude-cowork",
+    "author": "Anthropic",
+    "roles": [
+      "business-founder"
+    ],
+    "level": "basic",
+    "topics": [
+      "cowork",
+      "skills"
+    ],
+    "format": "course",
+    "time": "under-1hr",
+    "cost": "free-account",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "Hands-on course covering the Cowork task loop, plugins and skills, file/research workflows, and steering multi-step work.",
+    "who_for": "Owners and ops people who want Claude to do real multi-step work, not just chat.",
+    "skip_if": "You have no paid plan to practice on (Cowork needs Pro/Max/Team).",
+    "published": "2026-03-01",
+    "checked": "2026-08-20",
+    "status": "live",
+    "notes": "The single most relevant course for running a business. Free course; requires a paid plan to actually practice."
+  },
+  {
+    "title": "Using Claude Cowork for your small business",
+    "url": "https://claude.com/resources/tutorials/using-claude-for-your-small-business",
+    "author": "Anthropic",
+    "roles": [
+      "business-founder"
+    ],
+    "level": "basic",
+    "topics": [
+      "cowork",
+      "skills"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "ai-reviewed",
+    "summary": "Walks four real workflows step-by-step: plan payroll, close the month, get a Monday brief, and run a campaign.",
+    "who_for": "Owners who have installed the plugin and want concrete first workflows.",
+    "skip_if": "You have not installed the plugin yet (read the install guide first).",
+    "published": "2026-05-13",
+    "checked": "2026-08-20",
+    "status": "live",
+    "notes": "Official; honest about approval gates and permission inheritance. No upsell."
+  },
+  {
+    "title": "How to install and use the Claude for Small Business plugin",
+    "url": "https://claude.com/resources/tutorials/how-to-install-the-claude-for-small-business-plugin",
+    "author": "Anthropic",
+    "roles": [
+      "business-founder"
+    ],
+    "level": "basic",
+    "topics": [
+      "cowork",
+      "skills",
+      "mcp"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "ai-reviewed",
+    "summary": "The exact click-path to install the plugin, connect tools (QuickBooks, PayPal, HubSpot and more), and customize skills to your business.",
+    "who_for": "Anyone setting up the plugin for the first time.",
+    "skip_if": "You are not on the desktop app with a Pro/Max/Team plan.",
+    "published": "2026-05-13",
+    "checked": "2026-08-20",
+    "status": "live",
+    "notes": "Explains that connectors inherit each user's existing permissions."
+  },
+  {
+    "title": "Small Business plugin (skill inventory)",
+    "url": "https://claude.com/plugins/small-business",
+    "author": "Anthropic",
+    "roles": [
+      "business-founder"
+    ],
+    "level": "basic",
+    "topics": [
+      "cowork",
+      "skills"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "ai-reviewed",
+    "summary": "The authoritative inventory of 15 commands and 15 building-block skills (cash-flow forecasting, invoice chasing, lead triage, contract review, tax prep, hiring packet) and the connectors they use.",
+    "who_for": "Owners deciding which workflows are worth turning on first.",
+    "skip_if": "You want a tutorial rather than a catalog.",
+    "published": "2026-05-13",
+    "checked": "2026-08-20",
+    "status": "live",
+    "notes": "Lists /plan-payroll, /close-month, /run-campaign, /monday-brief. Notes workflows 'degrade gracefully' when a connector is missing."
+  },
+  {
+    "title": "knowledge-work-plugins/small-business (source repo)",
+    "url": "https://github.com/anthropics/knowledge-work-plugins/tree/main/small-business",
+    "author": "Anthropic",
+    "roles": [
+      "business-founder",
+      "developer"
+    ],
+    "level": "confident",
+    "topics": [
+      "skills",
+      "cowork",
+      "mcp"
+    ],
+    "format": "repo",
+    "time": "under-1hr",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "The open-source definitions of every SMB skill and command, so you can read and modify exactly what each one does.",
+    "who_for": "More technical owners or consultants who want to customize or audit the skills.",
+    "skip_if": "You don't want to look under the hood.",
+    "published": "2026-05-13",
+    "checked": "2026-08-20",
+    "status": "live",
+    "notes": "Official Anthropic repo. Install via claude.com/plugins."
+  },
+  {
+    "title": "Introducing Claude for Small Business (launch post)",
+    "url": "https://www.anthropic.com/news/claude-for-small-business",
+    "author": "Anthropic",
+    "roles": [
+      "business-founder"
+    ],
+    "level": "basic",
+    "topics": [
+      "cowork",
+      "skills",
+      "agents"
+    ],
+    "format": "article",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "ai-reviewed",
+    "summary": "The primary announcement: what the package is, the 8 connectors, the 15 workflows/skills, and the free training and tour.",
+    "who_for": "Anyone wanting the authoritative overview and the 'you approve before it sends, posts, or pays' safety model.",
+    "skip_if": "You already understand the offering.",
+    "published": "2026-05-13",
+    "checked": "2026-08-20",
+    "status": "live",
+    "notes": "Primary source; states Anthropic does not train on business data on Team/Enterprise by default."
+  },
+  {
+    "title": "How people are using Claude Cowork (usage data)",
+    "url": "https://claude.com/blog/how-people-are-using-claude-cowork",
+    "author": "Anthropic",
+    "roles": [
+      "business-founder"
+    ],
+    "level": "basic",
+    "topics": [
+      "cowork",
+      "agents"
+    ],
+    "format": "article",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "ai-reviewed",
+    "summary": "Anthropic's own data showing business-process/operations is the #1 Cowork use at 33.4% of 1.2 million sampled sessions, ahead of content creation (16.4%) and coding (8.7%).",
+    "who_for": "Owners calibrating realistic expectations of what Cowork is actually good for.",
+    "skip_if": "You just want how-to steps.",
+    "published": "2026-07-07",
+    "checked": "2026-08-20",
+    "status": "live",
+    "notes": "Data sampled May 11–31, 2026 across 600,000+ organizations."
+  },
+  {
+    "title": "Get started with Claude Cowork (Help Center)",
+    "url": "https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork",
+    "author": "Anthropic",
+    "roles": [
+      "business-founder"
+    ],
+    "level": "basic",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "ai-reviewed",
+    "summary": "Canonical reference for permission modes, scheduled tasks, projects, browser actions, and current limits.",
+    "who_for": "Anyone who wants the definitive, always-current feature reference.",
+    "skip_if": "You want guided workflows, not reference material.",
+    "published": "2026-01-13",
+    "checked": "2026-08-20",
+    "status": "live",
+    "notes": "Kept current as Cowork changes; covers what Cowork cannot do."
+  },
+  {
+    "title": "Plans & Pricing",
+    "url": "https://claude.com/pricing",
+    "author": "Anthropic",
+    "roles": [
+      "business-founder"
+    ],
+    "level": "never-used",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "ai-reviewed",
+    "summary": "The live, authoritative price/seat/usage-limit table for Free, Pro, Max, Team, and Enterprise.",
+    "who_for": "Anyone comparing plans before buying.",
+    "skip_if": "N/A — always verify pricing here rather than in third-party posts.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-20",
+    "status": "live",
+    "notes": "The only source that won't drift; Anthropic notes prices are subject to change."
+  },
+  {
+    "title": "What is the Team plan? (Help Center)",
+    "url": "https://support.claude.com/en/articles/9266767-what-is-the-team-plan",
+    "author": "Anthropic",
+    "roles": [
+      "business-founder"
+    ],
+    "level": "basic",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "ai-reviewed",
+    "summary": "What Team Standard and Premium seats include versus Pro, plus usage credits and centralized admin/billing.",
+    "who_for": "Owners deciding whether a team of 5+ should move from Pro to Team.",
+    "skip_if": "You're a solo user — Pro is fine.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-20",
+    "status": "live",
+    "notes": "Pairs with the pricing page. Team has a 5-seat minimum; usage limits are per-member, not pooled."
+  },
+  {
+    "title": "Is my data used for model training? (Privacy Center)",
+    "url": "https://privacy.claude.com/en/articles/10023580-is-my-data-used-for-model-training",
+    "author": "Anthropic",
+    "roles": [
+      "business-founder"
+    ],
+    "level": "never-used",
+    "topics": [
+      "safety"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "ai-reviewed",
+    "summary": "The authoritative statement of what is and isn't used for training, including that raw connector data (e.g., Google Drive, MCP servers) is excluded.",
+    "who_for": "Anyone worried about data privacy — the #1 SMB hesitation.",
+    "skip_if": "N/A.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-20",
+    "status": "live",
+    "notes": "On consumer plans you must toggle 'Help Improve Claude' off; commercial plans exclude training by default."
+  },
+  {
+    "title": "Claude Team pricing for a small business",
+    "url": "https://www.ssdnodes.com/learn/claude-team-plans-small-business",
+    "author": "SSD Nodes",
+    "roles": [
+      "business-founder"
+    ],
+    "level": "basic",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "article",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "Seat math for 3–15 person teams, when an API key beats a seat, and worked examples at 5 and 12 people.",
+    "who_for": "Owners doing the buy-vs-not math for a small team.",
+    "skip_if": "You prefer the official pricing page (this adds interpretation, not authority).",
+    "published": "2026-07-01",
+    "checked": "2026-08-20",
+    "status": "live",
+    "notes": "Contains an affiliate-style 15%-off code (LEARN15) — ignore it; verify all numbers against claude.com/pricing."
+  },
+  {
+    "title": "How To Use Claude Cowork To Run Your Business With AI",
+    "url": "https://www.forbes.com/sites/jodiecook/2026/02/24/how-to-use-claude-cowork-to-run-your-business-with-ai/",
+    "author": "Forbes / Jodie Cook (featuring Allie K. Miller)",
+    "roles": [
+      "business-founder"
+    ],
+    "level": "basic",
+    "topics": [
+      "cowork",
+      "agents"
+    ],
+    "format": "article",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "ai-reviewed",
+    "summary": "A founder-level walkthrough of Cowork with honest caveats, including that the 'last mile' of a task can take as long as the first half.",
+    "who_for": "Founders wanting a credible, no-hype overview from a named expert.",
+    "skip_if": "A Forbes paywall blocks you.",
+    "published": "2026-02-24",
+    "checked": "2026-08-20",
+    "status": "live",
+    "notes": "No income promises; realistic about limits. Written before Cowork went GA, so some access details are dated."
+  },
+  {
+    "title": "Claude Cowork in 5 Minutes",
+    "url": "https://www.alliekmiller.com/claude-cowork-in-5-minutes",
+    "author": "Allie K. Miller",
+    "roles": [
+      "business-founder"
+    ],
+    "level": "basic",
+    "topics": [
+      "cowork"
+    ],
+    "format": "hands-on",
+    "time": "under-15min",
+    "cost": "free-account",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "A non-technical quick-start guide from first task to scheduled workflows that run on autopilot.",
+    "who_for": "Busy owners who want to be productive in Cowork in one sitting.",
+    "skip_if": "You want depth rather than a fast start.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-20",
+    "status": "live",
+    "notes": "From a genuine Fortune-500 AI advisor; email opt-in for the guide but no paid course funnel."
+  },
+  {
+    "title": "Claude for Small Business setup (decision tree + 15 workflows)",
+    "url": "https://wotai.co/blog/claude-for-small-business",
+    "author": "WotAI",
+    "roles": [
+      "business-founder"
+    ],
+    "level": "basic",
+    "topics": [
+      "cowork",
+      "skills"
+    ],
+    "format": "article",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "ai-reviewed",
+    "summary": "A decision tree for whether to install the plugin, an honest comparison to ChatGPT Team, and a note that the plugin adds nothing to your bill.",
+    "who_for": "Owners weighing whether the plugin is worth setting up.",
+    "skip_if": "You want official steps — use Anthropic's tutorials.",
+    "published": "2026-05-13",
+    "checked": "2026-08-20",
+    "status": "live",
+    "notes": "Balanced; explicitly names when to skip it (browser-only teams, Linux, <3 integrations)."
+  },
+  {
+    "title": "Claude for Small Business plugin: 31 skills that run your operations",
+    "url": "https://www.wrightmode.com/blog/claude-cowork-small-business-plugin",
+    "author": "Wright Mode",
+    "roles": [
+      "business-founder"
+    ],
+    "level": "basic",
+    "topics": [
+      "cowork",
+      "skills"
+    ],
+    "format": "article",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "Explains the skills-vs-plugins distinction, the customization step most people skip, and how to remap US-centric defaults to your country.",
+    "who_for": "Non-US owners and anyone who found the plugin 'too generic' before customizing it.",
+    "skip_if": "You only need the official install steps.",
+    "published": "2026-06-01",
+    "checked": "2026-08-20",
+    "status": "live",
+    "notes": "Honest about US/QuickBooks defaults; no income claims."
+  },
+  {
+    "title": "AI for Small Business: Getting Started with Claude (SBA event)",
+    "url": "https://www.sba.gov/event/85201",
+    "author": "U.S. Small Business Administration",
+    "roles": [
+      "business-founder"
+    ],
+    "level": "never-used",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "course",
+    "time": "under-1hr",
+    "cost": "free",
+    "language": "en",
+    "tier": "listed",
+    "summary": "A live introductory webinar on navigating Claude's interface, writing effective prompts, uploading your own business documents, and building a repeatable process.",
+    "who_for": "Owners who prefer a live, vendor-neutral government session.",
+    "skip_if": "The listed date has passed — check sba.gov for the next scheduled session.",
+    "published": "2026-08-05",
+    "checked": "2026-08-20",
+    "status": "live",
+    "notes": "One-off event listing, not evergreen content; SBA district offices run these recurringly with no upsell."
+  },
+  {
+    "title": "A Comprehensive Guide to AI Training for Small Businesses",
+    "url": "https://www.uschamber.com/co/start/strategy/ai-training-guide-small-business",
+    "author": "US Chamber of Commerce (CO—)",
+    "roles": [
+      "business-founder"
+    ],
+    "level": "never-used",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "article",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "A regularly-updated directory of free and low-cost AI courses, books, and tools for small businesses, including resources that cover Claude.",
+    "who_for": "Owners who want a trustworthy, curated map of options.",
+    "skip_if": "You want to learn Claude directly rather than browse a list.",
+    "published": "2026-03-19",
+    "checked": "2026-08-20",
+    "status": "live",
+    "notes": "One SCORE link in this guide is stale (see Dead links); otherwise a reputable aggregator."
+  },
+  {
+    "title": "AI for Small Business: Explore Tools and Build Systems",
+    "url": "https://academy.score.org/course/ai-for-small-business-identify-opportunities-and-explore-tools",
+    "author": "SCORE (SBA resource partner)",
+    "roles": [
+      "business-founder"
+    ],
+    "level": "basic",
+    "topics": [
+      "chat-prompting",
+      "safety"
+    ],
+    "format": "course",
+    "time": "under-1hr",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "A self-paced course that helps owners spot automatable admin time-drains and compare AI tools including Claude, ChatGPT, NotebookLM, and Perplexity.",
+    "who_for": "Owners wanting a vendor-neutral, SBA-backed intro to choosing AI tools.",
+    "skip_if": "You only want Claude context — stop after the free Part 1; Part 2 (the 'AI Business Manifesto') is a $99 upgrade.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-20",
+    "status": "live",
+    "notes": "Only Part 1 is free; the 'free course' framing in third-party write-ups overstates what's included. Instructor: Robyn Anderson."
+  },
+  {
+    "title": "AI Fluency for Nonprofits",
+    "url": "https://anthropic.skilljar.com/ai-fluency-for-nonprofits",
+    "author": "Anthropic + GivingTuesday",
+    "roles": [
+      "business-founder"
+    ],
+    "level": "basic",
+    "topics": [
+      "chat-prompting",
+      "safety"
+    ],
+    "format": "course",
+    "time": "under-1hr",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "The 4D framework adapted for mission-driven work: research, grant proposals, donor communications, and program data analysis.",
+    "who_for": "Nonprofit staff across fundraising, communications, program delivery, operations, and leadership.",
+    "skip_if": "You run a for-profit business — use the small-business version.",
+    "published": "2025-12-02",
+    "checked": "2026-08-20",
+    "status": "live",
+    "notes": "Free; certificate on completion. Nonprofits also qualify for up to 75% off Team/Enterprise plans."
+  },
+  {
+    "title": "Introduction to Model Context Protocol",
+    "url": "https://anthropic.skilljar.com/introduction-to-model-context-protocol",
+    "author": "Anthropic",
+    "roles": [
+      "developer",
+      "business-founder"
+    ],
+    "level": "builder",
+    "topics": [
+      "mcp"
+    ],
+    "format": "course",
+    "time": "half-day",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "Teaches you to build MCP servers and clients from scratch in Python to connect Claude to external tools and data.",
+    "who_for": "Technical owners, consultants, or in-house devs who need custom integrations beyond the built-in connectors.",
+    "skip_if": "You're non-technical — use the one-click built-in connectors instead.",
+    "published": "2026-03-01",
+    "checked": "2026-08-20",
+    "status": "live",
+    "notes": "Official, from the team that created MCP. Requires Python/CLI comfort."
+  },
+  {
+    "title": "Remote MCP Servers directory",
+    "url": "https://mcpservers.org/remote-mcp-servers",
+    "author": "mcpservers.org",
+    "roles": [
+      "developer",
+      "business-founder"
+    ],
+    "level": "confident",
+    "topics": [
+      "mcp"
+    ],
+    "format": "repo",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "A curated list of official one-click remote MCP servers (HubSpot, Stripe, Notion, Linear, Mercury, Attio, and more) that work with Claude.",
+    "who_for": "Owners/consultants connecting Claude to business tools beyond the built-in SMB connectors.",
+    "skip_if": "The built-in SMB connectors already cover your stack.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-20",
+    "status": "live",
+    "notes": "Curated to official/first-party servers, which are the lower-security-risk choice."
+  },
+  {
+    "title": "awesome-mcp-enterprise",
+    "url": "https://github.com/bh-rat/awesome-mcp-enterprise",
+    "author": "bh-rat (community)",
+    "roles": [
+      "developer",
+      "business-founder"
+    ],
+    "level": "builder",
+    "topics": [
+      "mcp"
+    ],
+    "format": "repo",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "A curated list of enterprise-grade MCP tools, including unified handlers that connect to hundreds of CRM/accounting/HRIS tools (Merge, Pipedream) and security/governance layers.",
+    "who_for": "Teams that need governed, security-reviewed integrations.",
+    "skip_if": "You want simple consumer one-click tools.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-20",
+    "status": "live",
+    "notes": "Community-maintained; filters for governance/security rather than popularity."
+  },
+  {
+    "title": "Claude for Small Business (Back-Office AI, honest review)",
+    "url": "https://www.eigent.ai/blog/claude-for-small-business",
+    "author": "Eigent AI",
+    "roles": [
+      "business-founder"
+    ],
+    "level": "basic",
+    "topics": [
+      "cowork",
+      "skills"
+    ],
+    "format": "article",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "A review that spells out who the plugin is for and who should skip it (regulated shops, no-AI-on-customer-data policies, Microsoft-only teams, owners uncomfortable approving AI actions).",
+    "who_for": "Owners deciding whether the plugin fits their business and risk profile.",
+    "skip_if": "You've already decided to adopt it.",
+    "published": "2026-05-01",
+    "checked": "2026-08-20",
+    "status": "live",
+    "notes": "Vendor blog but even-handed; explicit 'skip if' list. Verify pricing against claude.com/pricing."
+  }
+]

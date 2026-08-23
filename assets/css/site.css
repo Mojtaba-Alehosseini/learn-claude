@@ -1,0 +1,558 @@
+/* Learn Claude — the stylesheet.
+ *
+ * Every value here comes from tokens.css. Nothing hardcodes a colour, size or radius;
+ * if a value is needed that is not a token, the token file is what should change.
+ *
+ * The design rules this file exists to hold, from docs/design/design-brief.md:
+ *   - No box-shadow anywhere. Elevation is tone plus a 1px hairline.
+ *   - Body copy is serif at 20px. Sans-serif is chrome only: nav, buttons, badges, meta.
+ *   - Clay appears once per page, on one filled button.
+ *   - Filled buttons are square on top, rounded at the bottom. That is the signature.
+ *   - Inline links keep their underline at rest. Print convention, not hover-to-discover.
+ */
+
+/* ---------------------------------------------------------------- reset ---- */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--surface-canvas);
+  color: var(--text-primary);
+  font: var(--weight-regular) var(--text-body)/var(--leading-body) var(--font-serif);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, p, ul, ol, figure { margin: 0; }
+ul, ol { padding: 0; list-style: none; }
+img { max-width: 100%; display: block; }
+input, select, button, textarea { font: inherit; color: inherit; }
+
+a {
+  color: var(--text-primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+a:hover { color: var(--bark); }
+
+:focus-visible { outline: var(--focus-ring); outline-offset: var(--focus-offset); }
+
+::placeholder { color: var(--bark); opacity: 1; }
+
+/* Every control is at least 44px tall. Not a suggestion — it is the difference
+   between usable and unusable on a phone. */
+button, .btn, .nav-link, .filter-option { min-height: 44px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* --------------------------------------------------------------- layout ---- */
+
+.wrap {
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  padding-left: var(--space-24);
+  padding-right: var(--space-24);
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: var(--space-8);
+  z-index: 99;
+  background: var(--surface-card);
+  color: var(--text-primary);
+  padding: var(--space-12) var(--space-16);
+  border: 1px solid var(--slate-dark);
+  font: var(--weight-medium) var(--text-body-sm) var(--font-sans);
+  text-decoration: none;
+}
+.skip-link:focus { left: var(--space-8); }
+
+.site-header { border-bottom: 1px solid var(--border); }
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-24);
+  flex-wrap: wrap;
+  padding-top: var(--space-12);
+  padding-bottom: var(--space-12);
+}
+
+.wordmark {
+  font: var(--weight-semibold) var(--text-subheading)/1.2 var(--font-serif);
+  letter-spacing: var(--tracking-subheading);
+  text-decoration: none;
+  padding: var(--space-8) 0;
+}
+
+.nav { display: flex; gap: var(--space-32);
+  font: var(--weight-medium) var(--text-body-sm)/var(--leading-body-sm) var(--font-sans); }
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text-secondary);
+  border-bottom: 2px solid transparent;
+}
+.nav-link:hover { color: var(--text-primary); }
+.nav-link[aria-current="page"] {
+  color: var(--text-primary);
+  border-bottom-color: var(--slate-dark);
+}
+
+.page { padding-top: var(--space-48); padding-bottom: var(--space-100); }
+
+.site-footer {
+  background: var(--surface-invert);
+  color: var(--text-on-invert);
+  margin-top: var(--space-100);
+}
+.site-footer .wrap {
+  display: flex; flex-wrap: wrap; gap: var(--space-48);
+  align-items: flex-start;
+  padding-top: var(--space-48); padding-bottom: var(--space-48);
+}
+.site-footer a { color: var(--text-on-invert); }
+.site-footer :focus-visible { outline-color: var(--ivory-light); }
+.footer-col { display: flex; flex-direction: column; gap: var(--space-8); min-width: 140px; }
+.footer-note {
+  font: var(--weight-regular) var(--text-caption)/var(--leading-caption) var(--font-sans);
+  color: var(--cloud-medium);
+  max-width: 46ch;
+}
+
+/* ------------------------------------------------------------ typography ---- */
+
+.display {
+  font: var(--weight-regular) var(--text-display)/var(--leading-display) var(--font-serif);
+  letter-spacing: var(--tracking-display);
+  text-wrap: pretty;
+}
+.h1 {
+  font: var(--weight-bold) var(--text-heading)/var(--leading-heading) var(--font-sans);
+  letter-spacing: var(--tracking-heading);
+}
+.h2 {
+  font: var(--weight-semibold) var(--text-subheading)/var(--leading-subheading) var(--font-serif);
+  letter-spacing: var(--tracking-subheading);
+  text-wrap: balance;
+}
+.h3 {
+  font: var(--weight-medium) var(--text-body-sm)/var(--leading-body-sm) var(--font-sans);
+}
+.prose {
+  max-width: var(--measure);
+  font: var(--weight-regular) var(--text-body)/var(--leading-body) var(--font-serif);
+  text-wrap: pretty;
+}
+.prose + .prose { margin-top: var(--space-16); }
+
+/* Sans, small, quiet. Dates, counts, authors, helper text. */
+.meta {
+  font: var(--weight-regular) var(--text-body-sm)/var(--leading-body-sm) var(--font-sans);
+  color: var(--text-secondary);
+}
+.caption {
+  font: var(--weight-medium) var(--text-caption)/var(--leading-caption) var(--font-sans);
+  letter-spacing: var(--tracking-caption);
+  color: var(--text-secondary);
+}
+.lede {
+  font: var(--weight-regular) var(--text-subheading)/var(--leading-subheading) var(--font-serif);
+  max-width: var(--measure);
+  text-wrap: pretty;
+}
+
+/* -------------------------------------------------------------- buttons ---- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-8);
+  padding: 0 var(--space-32);
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  font: var(--weight-medium) var(--text-body-sm)/var(--leading-body-sm) var(--font-sans);
+  transition: background var(--dur-fast) var(--ease-out),
+              color var(--dur-fast) var(--ease-out);
+}
+
+/* The one clay element on a page. Square on top, rounded below — and dark text,
+   because white on clay measures 3.12:1 and fails. */
+.btn-primary {
+  background: var(--clay);
+  color: var(--text-on-clay);
+  border-radius: var(--radius-filled);
+  min-height: 52px;
+}
+.btn-primary:hover { background: var(--clay-deep); color: var(--text-on-clay); }
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text-primary);
+  border-color: var(--border-strong);
+  border-radius: var(--radius-outline);
+}
+.btn-secondary:hover { background: var(--surface-card); color: var(--text-primary); }
+
+.btn-quiet {
+  background: transparent;
+  border: 0;
+  padding: var(--space-8) 0;
+  color: var(--text-secondary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+  font: var(--weight-regular) var(--text-caption)/var(--leading-caption) var(--font-sans);
+}
+.btn-quiet:hover { color: var(--text-primary); }
+
+/* ---------------------------------------------------------------- forms ---- */
+
+.field { display: flex; flex-direction: column; gap: var(--space-4); }
+.field label {
+  font: var(--weight-medium) var(--text-caption)/var(--leading-caption) var(--font-sans);
+  color: var(--text-secondary);
+}
+.input, .select {
+  width: 100%;
+  min-height: 48px;
+  padding: 0 var(--space-16);
+  background: var(--surface-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-outline);
+  font: var(--weight-regular) var(--text-body-sm)/var(--leading-body-sm) var(--font-sans);
+}
+.input:hover, .select:hover { border-color: var(--border-strong); }
+
+/* --------------------------------------------------------------- badges ---- */
+
+/* How thoroughly we checked something. Colour never carries this alone — the word is
+   always present, because a colour-blind reader must get the same information. */
+.badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-badge);
+  font: var(--weight-medium) var(--text-caption)/var(--leading-caption) var(--font-sans);
+  letter-spacing: var(--tracking-caption);
+  white-space: nowrap;
+}
+.badge-reviewed    { background: var(--tier-reviewed-bg); color: var(--tier-reviewed-text); }
+.badge-ai-reviewed { background: var(--tier-ai-bg);       color: var(--tier-ai-text); }
+.badge-previewed   { background: transparent; color: var(--tier-previewed-text);
+                     border-color: var(--tier-previewed-brdr); }
+.badge-listed      { background: transparent; color: var(--tier-listed-text);
+                     border-color: var(--tier-listed-brdr); }
+
+/* Publisher. Quiet by design: who made it matters less than how well we checked it. */
+.publisher-official {
+  display: inline-block;
+  padding: 2px 8px;
+  background: var(--surface-feature);
+  border-radius: var(--radius-badge);
+  font: var(--weight-medium) var(--text-caption)/var(--leading-caption) var(--font-sans);
+  color: var(--text-primary);
+}
+
+.chip {
+  display: inline-block;
+  padding: 3px 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-badge);
+  font: var(--weight-regular) var(--text-caption)/var(--leading-caption) var(--font-sans);
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+.chip-row { display: flex; flex-wrap: wrap; gap: var(--space-8); align-items: center; }
+
+/* A removable applied filter. */
+.chip-applied {
+  display: inline-flex; align-items: center; gap: var(--space-8);
+  padding: 4px 6px 4px 10px;
+  background: var(--surface-card);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-badge);
+  font: var(--weight-regular) var(--text-caption)/var(--leading-caption) var(--font-sans);
+  cursor: pointer;
+}
+.chip-applied:hover { background: var(--surface-feature); }
+
+/* Choice chips on the home screen. */
+.chip-choice {
+  padding: var(--space-8) var(--space-16);
+  background: var(--surface-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-outline);
+  cursor: pointer;
+  font: var(--weight-regular) var(--text-body-sm)/var(--leading-body-sm) var(--font-sans);
+  text-align: left;
+}
+.chip-choice:hover { border-color: var(--slate-dark); }
+.chip-choice[aria-pressed="true"] {
+  background: var(--surface-invert);
+  color: var(--text-on-invert);
+  border-color: var(--slate-dark);
+}
+
+/* ----------------------------------------------------------------- card ---- */
+
+.card {
+  display: block;
+  background: var(--surface-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: var(--card-padding);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color var(--dur-fast) var(--ease-out),
+              background var(--dur-fast) var(--ease-out);
+}
+.card:hover { border-color: var(--border-strong); background: var(--surface-feature); color: inherit; }
+
+.card-list { display: flex; flex-direction: column; gap: var(--space-16); }
+
+.card-top { display: flex; align-items: flex-start; gap: var(--space-16);
+            justify-content: space-between; }
+.card-title {
+  font: var(--weight-semibold) var(--text-subheading)/var(--leading-subheading) var(--font-serif);
+  letter-spacing: var(--tracking-subheading);
+  margin-top: var(--space-8);
+  text-wrap: balance;
+}
+.card-source { margin-top: var(--space-4); }
+.card-icon { width: 32px; height: 32px; flex: 0 0 auto; }
+
+.card-for {
+  margin-top: var(--space-12);
+  font: var(--weight-regular) var(--text-body-sm)/var(--leading-body-sm) var(--font-sans);
+  color: var(--text-secondary);
+  max-width: var(--measure);
+}
+
+/* The reason the site exists. Serif, full size, heavier than everything above it.
+   If this ever reads as a footnote, the card is wrong. */
+.card-skip {
+  margin-top: var(--space-12);
+  padding-top: var(--space-12);
+  border-top: 1px solid var(--line-quiet);
+  font: var(--weight-regular) var(--text-body)/var(--leading-body) var(--font-serif);
+  color: var(--text-primary);
+  max-width: var(--measure);
+  text-wrap: pretty;
+}
+.card-skip .label { font-weight: var(--weight-semibold); }
+
+.card-foot {
+  margin-top: var(--space-16);
+  display: flex; flex-wrap: wrap; gap: var(--space-12); align-items: center;
+  font: var(--weight-regular) var(--text-caption)/var(--leading-caption) var(--font-sans);
+  color: var(--text-secondary);
+}
+.flag-outdated { color: var(--flag-outdated); }
+.flag-dead { color: var(--flag-outdated); font-weight: var(--weight-medium); }
+
+/* "Step 2 of 6 in Your first week with Claude" */
+.card-path {
+  display: inline-block;
+  margin-top: var(--space-12);
+  padding: 2px 10px;
+  background: var(--surface-feature);
+  border-radius: var(--radius-badge);
+  font: var(--weight-medium) var(--text-caption)/var(--leading-caption) var(--font-sans);
+}
+
+/* -------------------------------------------------------------- browse ---- */
+
+.browse-grid {
+  display: grid;
+  grid-template-columns: 264px minmax(0, 1fr);
+  gap: var(--space-48);
+  align-items: start;
+  margin-top: var(--space-32);
+}
+
+.filter-rail {
+  position: sticky;
+  top: var(--space-24);
+  max-height: calc(100vh - var(--space-48));
+  overflow: auto;
+}
+.filter-head {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: var(--space-16); min-height: 44px;
+}
+.filter-group { margin: var(--space-16) 0 var(--space-24); }
+.filter-group h3 { margin-bottom: var(--space-8); }
+.filter-option {
+  display: flex; align-items: center; gap: var(--space-12);
+  width: 100%;
+  padding: var(--space-4) var(--space-8);
+  background: transparent; border: 0; border-radius: 0;
+  cursor: pointer; text-align: left;
+  font: var(--weight-regular) var(--text-body-sm)/var(--leading-body-sm) var(--font-sans);
+}
+.filter-option:hover { background: var(--surface-card); }
+.filter-box {
+  flex: 0 0 auto; width: 16px; height: 16px;
+  display: inline-flex; align-items: center; justify-content: center;
+  font: var(--weight-bold) 11px/1 var(--font-sans);
+  border: 1px solid var(--border-strong);
+  background: transparent;
+  color: var(--ivory-light);
+}
+.filter-option[aria-checked="true"] .filter-box {
+  background: var(--slate-dark); border-color: var(--slate-dark);
+}
+.filter-icon { width: 28px; height: 28px; flex: 0 0 auto;
+               background-position: center; background-size: contain;
+               background-repeat: no-repeat; }
+.filter-more {
+  display: flex; justify-content: space-between; align-items: center;
+  gap: var(--space-16); width: 100%;
+  padding: var(--space-12) var(--space-8);
+  background: transparent; border: 0; border-top: 1px solid var(--border);
+  border-radius: 0; cursor: pointer; text-align: left;
+  font: var(--weight-medium) var(--text-body-sm)/var(--leading-body-sm) var(--font-sans);
+}
+.filter-more:hover { background: var(--surface-card); }
+
+.results-bar {
+  display: flex; flex-wrap: wrap; gap: var(--space-16);
+  align-items: flex-end; margin-bottom: var(--space-24);
+}
+.result-count {
+  font: var(--weight-medium) var(--text-body-sm)/var(--leading-body-sm) var(--font-sans);
+  color: var(--text-primary);
+}
+
+.empty {
+  padding: var(--space-48) 0;
+  max-width: var(--measure);
+}
+.empty strong { display: block; margin-bottom: var(--space-8);
+  font: var(--weight-semibold) var(--text-subheading)/var(--leading-subheading) var(--font-serif); }
+
+/* --------------------------------------------------------------- paths ---- */
+
+/* A path is a route, so it reads as a numbered line rather than a grid of cards. */
+.path-list { display: flex; flex-direction: column; gap: var(--space-48); }
+
+.path-header { max-width: var(--measure); }
+.path-stats {
+  margin-top: var(--space-8);
+  font: var(--weight-regular) var(--text-caption)/var(--leading-caption) var(--font-sans);
+  color: var(--text-secondary);
+}
+
+.step-list { display: flex; flex-direction: column; gap: 0; margin-top: var(--space-32); }
+
+.step {
+  display: grid;
+  grid-template-columns: 56px minmax(0, 1fr);
+  gap: var(--space-24);
+  padding-bottom: var(--space-32);
+  position: relative;
+}
+/* The spine. Makes the order unmistakable when you land halfway down. */
+.step::before {
+  content: "";
+  position: absolute;
+  left: 27px; top: 40px; bottom: 0;
+  width: 1px; background: var(--border);
+}
+.step:last-child::before { display: none; }
+
+.step-num {
+  width: 40px; height: 40px;
+  display: flex; align-items: center; justify-content: center;
+  border: 1px solid var(--border-strong);
+  border-radius: 50%;
+  background: var(--surface-canvas);
+  position: relative; z-index: 1;
+  font: var(--weight-medium) var(--text-caption)/1 var(--font-sans);
+}
+
+/* Ours, not the resource's — same weight `Skip if:` carries on a card. */
+.step-why {
+  margin-top: var(--space-12);
+  font: var(--weight-regular) var(--text-body)/var(--leading-body) var(--font-serif);
+  max-width: var(--measure);
+  text-wrap: pretty;
+}
+
+/* ------------------------------------------------------------- resource ---- */
+
+.resource-head { max-width: var(--measure); }
+.resource-actions {
+  display: flex; flex-wrap: wrap; gap: var(--space-12);
+  margin-top: var(--space-32);
+}
+.section { margin-top: var(--space-48); max-width: var(--measure); }
+.section h2 { margin-bottom: var(--space-12); }
+.provenance {
+  margin-top: var(--space-48);
+  padding-top: var(--space-16);
+  border-top: 1px solid var(--border);
+  font: var(--weight-regular) var(--text-caption)/var(--leading-caption) var(--font-sans);
+  color: var(--text-secondary);
+}
+
+/* ---------------------------------------------------------------- mobile ---- */
+
+.mobile-filter-bar { display: none; }
+
+@media (max-width: 768px) {
+  .wrap { padding-left: var(--space-16); padding-right: var(--space-16); }
+  .browse-grid { grid-template-columns: 1fr; gap: var(--space-24); }
+  .filter-rail { display: none; }
+  .page { padding-bottom: var(--space-100); }
+
+  /* A bar pinned to the bottom, because that is where a thumb is. */
+  .mobile-filter-bar {
+    display: block;
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 40;
+    padding: var(--space-12) var(--space-16);
+    background: var(--surface-card);
+    border-top: 1px solid var(--border);
+  }
+  .mobile-filter-bar .btn { width: 100%; }
+
+  .sheet {
+    position: fixed; inset: 0; z-index: 50;
+    background: var(--surface-canvas);
+    display: flex; flex-direction: column;
+  }
+  .sheet-head {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: var(--space-16);
+    padding: var(--space-16);
+    border-bottom: 1px solid var(--border);
+  }
+  .sheet-body { flex: 1; overflow: auto; padding: var(--space-16); }
+  .sheet-foot { padding: var(--space-16); border-top: 1px solid var(--border); }
+  .sheet-foot .btn { width: 100%; }
+
+  .step { grid-template-columns: 40px minmax(0, 1fr); gap: var(--space-16); }
+  .step::before { left: 19px; }
+  .step-num { width: 32px; height: 32px; }
+}
+
+.hidden { display: none !important; }
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}

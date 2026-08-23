@@ -1,0 +1,668 @@
+[
+  {
+    "title": "Claude 101",
+    "url": "https://anthropic.skilljar.com/claude-101",
+    "author": "Anthropic",
+    "roles": [
+      "non-technical"
+    ],
+    "level": "never-used",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "course",
+    "time": "under-1hr",
+    "cost": "free-account",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "Anthropic's own flagship intro course covering the Claude interface, how to write prompts, and everyday work tasks, taught through 12 short video lessons.",
+    "who_for": "Someone who has never opened Claude and wants the official starting point.",
+    "skip_if": "You've already used Claude for a few weeks — this stays at 'what is a prompt' level and won't teach you anything new.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-18",
+    "status": "live",
+    "notes": "Anthropic updates this continuously as the interface changes, so there is no fixed release date to check against. Hosted on Anthropic's Skilljar platform; the claude.com/courses/ page is the official landing page. | URL corrected 2026-08-19: claude.com/courses path was wrong, real course lives on Anthropic Academy (Skilljar)."
+  },
+  {
+    "title": "Introduction to Claude Cowork",
+    "url": "https://anthropic.skilljar.com/introduction-to-claude-cowork",
+    "author": "Anthropic",
+    "roles": [
+      "non-technical"
+    ],
+    "level": "basic",
+    "topics": [
+      "cowork",
+      "skills"
+    ],
+    "format": "course",
+    "time": "under-1hr",
+    "cost": "free-account",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "Covers the Cowork task loop, setting up plugins and skills, and steering a multi-step task — the closest thing Anthropic has to an official Cowork manual.",
+    "who_for": "Anyone with Cowork access (Pro plan or higher) who wants a guided first week instead of exploring alone.",
+    "skip_if": "You're on the free Claude plan — Cowork isn't included there, so you can't do the hands-on parts.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-18",
+    "status": "live",
+    "notes": "Cowork itself is still rolling out (cloud beta, and availability differs by desktop/web/mobile), so a few screens shown in the course may not match what you see yet. | URL corrected 2026-08-19: claude.com/courses path was wrong, real course lives on Anthropic Academy (Skilljar)."
+  },
+  {
+    "title": "AI Fluency: Framework and Foundations",
+    "url": "https://anthropic.skilljar.com/ai-fluency-framework-foundations",
+    "author": "Anthropic, with Prof. Joseph Feller (University College Cork) and Prof. Rick Dakan (Ringling College)",
+    "roles": [
+      "non-technical"
+    ],
+    "level": "never-used",
+    "topics": [
+      "chat-prompting",
+      "safety"
+    ],
+    "format": "course",
+    "time": "under-1hr",
+    "cost": "free-account",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "An academic-flavored intro to a '4E' framework (Effective, Efficient, Ethical, Safe) for deciding when and how to use AI at all, not just how to phrase a prompt.",
+    "who_for": "Someone who wants the reasoning behind good AI use, not just click-by-click instructions.",
+    "skip_if": "You just want a quick 'how do I use Claude today' answer — this is more conceptual than hands-on.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-18",
+    "status": "live",
+    "notes": "Co-developed with academic partners; includes a quiz and completion certificate. | URL corrected 2026-08-19: claude.com/courses path was wrong, real course lives on Anthropic Academy (Skilljar)."
+  },
+  {
+    "title": "AI Fluency for Small Businesses",
+    "url": "https://anthropic.skilljar.com/ai-fluency-for-small-businesses",
+    "author": "Anthropic",
+    "roles": [
+      "non-technical"
+    ],
+    "level": "basic",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "course",
+    "time": "under-1hr",
+    "cost": "free-account",
+    "language": "en",
+    "tier": "listed",
+    "summary": "The AI Fluency framework applied to small-business situations — likely the best-targeted official course for a solo shop owner.",
+    "who_for": "Small business owners and solo operators.",
+    "skip_if": "You work at a larger organization — AI Fluency for Builders or Claude 101 fit better.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-18",
+    "status": "live",
+    "notes": "Only lecture count (9) and length (~54 min) could be confirmed from the catalog listing; individual lesson content wasn't checked. | URL corrected 2026-08-19: claude.com/courses path was wrong, real course lives on Anthropic Academy (Skilljar)."
+  },
+  {
+    "title": "AI capabilities and limitations",
+    "url": "https://anthropic.skilljar.com/ai-capabilities-and-limitations",
+    "author": "Anthropic",
+    "roles": [
+      "non-technical"
+    ],
+    "level": "never-used",
+    "topics": [
+      "safety"
+    ],
+    "format": "course",
+    "time": "under-15min",
+    "cost": "free-account",
+    "language": "en",
+    "tier": "listed",
+    "summary": "A short, quiz-backed course specifically about what Claude can and can't reliably do — directly answers 'what should I not trust it with.'",
+    "who_for": "Anyone who wants the honest limitations conversation before relying on Claude for real work.",
+    "skip_if": "You want depth — at 15 minutes across 13 short lectures, this is a primer, not a deep dive.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-18",
+    "status": "live",
+    "notes": "Shortest course in Anthropic's own catalog by video time; a good first stop. | URL corrected 2026-08-19: claude.com/courses path was wrong, real course lives on Anthropic Academy (Skilljar)."
+  },
+  {
+    "title": "Get started with Claude Cowork",
+    "url": "https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork",
+    "author": "Anthropic Help Center",
+    "roles": [
+      "non-technical"
+    ],
+    "level": "basic",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "ai-reviewed",
+    "summary": "The official reference for what Cowork is, how to start a session from chat, and how it behaves across desktop, web, and mobile.",
+    "who_for": "Anyone who just got Cowork access and wants the plain facts before diving in.",
+    "skip_if": "You've already run a few Cowork sessions — this is orientation, not troubleshooting.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-18",
+    "status": "live",
+    "notes": "Was last updated within about two weeks of the check date. Cowork's cloud beta keeps changing, so re-check this page rather than relying on memory of it."
+  },
+  {
+    "title": "Use Claude Cowork safely",
+    "url": "https://support.claude.com/en/articles/13364135-use-claude-cowork-safely",
+    "author": "Anthropic Help Center",
+    "roles": [
+      "non-technical"
+    ],
+    "level": "basic",
+    "topics": [
+      "cowork",
+      "safety"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "ai-reviewed",
+    "summary": "Explains the actual safety model behind Cowork — isolated cloud execution, content classifiers, action screening — and gives concrete advice like blocking sensitive apps from folder access.",
+    "who_for": "Anyone about to give Cowork access to real files, especially sensitive ones (financial, health, client data).",
+    "skip_if": "Nothing — worth reading before your first real Cowork task regardless of experience level.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-18",
+    "status": "live",
+    "notes": "Directly addresses the 'is this safe to point at my files' worry a nurse, HR manager, or lawyer would reasonably have."
+  },
+  {
+    "title": "Get started with Claude",
+    "url": "https://support.claude.com/en/articles/8114491-get-started-with-claude",
+    "author": "Anthropic Help Center",
+    "roles": [
+      "non-technical"
+    ],
+    "level": "never-used",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "ai-reviewed",
+    "summary": "The absolute basics — what Claude is, how to access it, what a prompt is — written in plain language with simple examples like 'how do I hang a picture frame.'",
+    "who_for": "Someone who has literally never used Claude before.",
+    "skip_if": "You've sent Claude more than a handful of messages already — nothing new here.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-18",
+    "status": "live",
+    "notes": "The same article also exists at the older support.anthropic.com domain under a slightly different URL slug — both resolved when checked; support.claude.com is the current branded one."
+  },
+  {
+    "title": "Delegating your first task in Claude Cowork",
+    "url": "https://claude.com/resources/tutorials/delegating-your-first-task-in-claude-cowork",
+    "author": "Anthropic",
+    "roles": [
+      "non-technical"
+    ],
+    "level": "basic",
+    "topics": [
+      "cowork"
+    ],
+    "format": "article",
+    "time": "under-15min",
+    "cost": "free-account",
+    "language": "en",
+    "tier": "listed",
+    "summary": "A short, doing-focused tutorial that walks through handing Cowork one real task, rather than exploring its features abstractly.",
+    "who_for": "Someone who's read the Cowork docs and now wants to actually try something.",
+    "skip_if": "You've already delegated a task or two in Cowork — this covers only setup basics, not advanced workflows.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-18",
+    "status": "live",
+    "notes": "Listed with both a reading time and a watch time, so it likely pairs a short write-up with an embedded video."
+  },
+  {
+    "title": "Why do AI models hallucinate?",
+    "url": "https://claude.com/resources/tutorials/why-do-ai-models-hallucinate",
+    "author": "Anthropic (AI Fluency tutorial series)",
+    "roles": [
+      "non-technical"
+    ],
+    "level": "never-used",
+    "topics": [
+      "safety"
+    ],
+    "format": "article",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "listed",
+    "summary": "A plain-language explanation of why Claude sometimes states wrong things confidently — core 'what can and can't I trust it for' material.",
+    "who_for": "Anyone forming a mental model of Claude's limitations, especially before using it for anything factual.",
+    "skip_if": "You already know why LLMs hallucinate — this is a 5-minute conceptual intro, not deep technical detail.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-18",
+    "status": "live",
+    "notes": "Part of the same short AI Fluency tutorial series as 'What is sycophancy in AI models?' — worth reading together."
+  },
+  {
+    "title": "Getting started with Claude in Excel",
+    "url": "https://claude.com/resources/tutorials/getting-started-with-claude-in-excel",
+    "author": "Anthropic",
+    "roles": [
+      "non-technical"
+    ],
+    "level": "basic",
+    "topics": [
+      "chat-prompting",
+      "skills"
+    ],
+    "format": "article",
+    "time": "under-15min",
+    "cost": "subscription",
+    "language": "en",
+    "tier": "listed",
+    "summary": "Official walkthrough for the Excel add-in: asking Claude about a cell, updating assumptions, and building simple models without leaving the spreadsheet.",
+    "who_for": "Office workers who live in Excel and want AI help without switching to a separate chat window.",
+    "skip_if": "You're on a free Claude plan or don't use Microsoft 365 — the add-in needs a paid Claude plan plus Microsoft 365.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-18",
+    "status": "live",
+    "notes": "The Excel add-in has changed quickly through 2026 (pivot tables, shared context with PowerPoint), so confirm current capabilities in the app itself rather than trusting a screenshot's age."
+  },
+  {
+    "title": "Working smarter with Claude in PowerPoint",
+    "url": "https://claude.com/resources/tutorials/working-smarter-with-claude-in-powerpoint",
+    "author": "Anthropic",
+    "roles": [
+      "non-technical"
+    ],
+    "level": "basic",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "video",
+    "time": "under-15min",
+    "cost": "subscription",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "Short video on pulling outside data into a deck and having Claude surface insights directly inside PowerPoint.",
+    "who_for": "Anyone who regularly turns data into slides and wants to skip the copy-paste relay between apps.",
+    "skip_if": "You don't have the PowerPoint add-in (needs Pro/Max/Team/Enterprise plus Microsoft 365).",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-18",
+    "status": "live",
+    "notes": ""
+  },
+  {
+    "title": "Best practices for getting started with Claude Cowork",
+    "url": "https://claude.com/blog/best-practices-for-getting-started-with-claude-cowork",
+    "author": "Austin Lau, Anthropic (growth team)",
+    "roles": [
+      "non-technical"
+    ],
+    "level": "basic",
+    "topics": [
+      "cowork"
+    ],
+    "format": "article",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "A practical 'start with one repetitive weekly task' framing for Cowork, plus a clear rule of thumb for when to use Chat versus Cowork.",
+    "who_for": "Someone who has Cowork access but doesn't know what to point it at first.",
+    "skip_if": "You already know which tasks to delegate to Cowork — this repeats the same framework with one marketer's examples.",
+    "published": "2026-06-21",
+    "checked": "2026-08-18",
+    "status": "live",
+    "notes": "The post itself notes it reflects one Anthropic employee's personal opinions and usage patterns, not official policy.",
+    "review_note": "Opens with a webinar-registration pitch; still has real substance (checklist, comparison table, setup steps)."
+  },
+  {
+    "title": "Real-World AI for Everyone (Specialization)",
+    "url": "https://www.coursera.org/specializations/real-world-ai-for-everyone",
+    "author": "Advancing Women in Tech (AWIT), sponsored by Anthropic and 1Password; lead instructor Dan Mellott",
+    "roles": [
+      "non-technical"
+    ],
+    "level": "never-used",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "course",
+    "time": "multi-day",
+    "cost": "subscription",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "A 3-course specialization (AI Fundamentals, AI Collaboration, AI Automation with Claude) built specifically for non-technical learners, starting with things like editing an email and ending with simulating a job interview. Several Anthropic staff, including its Head of People, appear directly in the videos.",
+    "who_for": "A true beginner who wants a structured multi-week path rather than a single video, and doesn't mind a Coursera subscription.",
+    "skip_if": "You want something free and fast, or you've already used Claude for months — the pacing targets first-time users.",
+    "published": "2025-11-18",
+    "checked": "2026-08-18",
+    "status": "live",
+    "notes": "Launched before Claude Cowork existed (Cowork shipped January 2026), so it does not cover Cowork — it focuses on chat, Claude Projects, and prompting technique."
+  },
+  {
+    "title": "Claude Cowork 7-Day Challenge: Find Practical AI Use Cases That Deliver",
+    "url": "https://www.linkedin.com/learning/claude-cowork-7-day-challenge-find-practical-ai-use-cases-that-deliver",
+    "author": "Justin Shaifer, LinkedIn Learning",
+    "roles": [
+      "non-technical"
+    ],
+    "level": "basic",
+    "topics": [
+      "cowork"
+    ],
+    "format": "course",
+    "time": "under-1hr",
+    "cost": "subscription",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "Seven short lessons that build one practical habit at a time: setting up a safe practice environment, organizing files, creating documents, speeding up presentations.",
+    "who_for": "Someone who learns best from a short daily structure rather than one long sitting.",
+    "skip_if": "You don't already have a LinkedIn Learning subscription through work or school.",
+    "published": "2026-03-16",
+    "checked": "2026-08-18",
+    "status": "live",
+    "notes": "LinkedIn Learning's own description explicitly frames this as built for non-technical users and emphasizes protecting your files."
+  },
+  {
+    "title": "Everyday Productivity with Claude Cowork",
+    "url": "https://www.linkedin.com/learning/everyday-productivity-with-claude-cowork",
+    "author": "LinkedIn Learning",
+    "roles": [
+      "non-technical"
+    ],
+    "level": "basic",
+    "topics": [
+      "cowork"
+    ],
+    "format": "course",
+    "time": "under-1hr",
+    "cost": "subscription",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "A 23-minute course on everyday Cowork productivity tasks.",
+    "who_for": "Someone who wants a quicker alternative to the 7-Day Challenge.",
+    "skip_if": "You want hands-on practice with your own files — this is a 23-minute demo tour using pre-built sample documents.",
+    "published": "2026-01-26",
+    "checked": "2026-08-18",
+    "status": "live",
+    "notes": "Only the title, length, and viewer count could be confirmed from search results — lesson content wasn't checked.",
+    "review_note": "LinkedIn Learning page is login-walled. Outline taken from a public course mirror, not a direct read. Lower confidence."
+  },
+  {
+    "title": "Claude 101 (DataCamp)",
+    "url": "https://www.datacamp.com/courses/claude-101",
+    "author": "Created by Anthropic, adapted for the DataCamp platform",
+    "roles": [
+      "non-technical"
+    ],
+    "level": "never-used",
+    "topics": [
+      "chat-prompting",
+      "skills"
+    ],
+    "format": "course",
+    "time": "half-day",
+    "cost": "free-account",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "Explicitly built for people who've never used an AI chat tool before, moving from a first conversation up to Skills and connectors, plus role-based use cases (sales, marketing, project management) and a tour of Claude in Excel, Chrome, and Slack.",
+    "who_for": "Someone who wants one structured course covering both the basics and a tour of Claude's other surfaces.",
+    "skip_if": "You already use Projects, Skills, and connectors — this is a beginner tour covering material you already know.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-18",
+    "status": "live",
+    "notes": "DataCamp states this specific course can be completed without a paid subscription, unlike most of their catalog. Estimated 3-4 hours total."
+  },
+  {
+    "title": "Anthropic Claude for Absolute Beginners",
+    "url": "https://www.udemy.com/course/anthropic-claude-for-absolute-beginners/",
+    "author": "School of AI (Udemy instructor account)",
+    "roles": [
+      "non-technical"
+    ],
+    "level": "never-used",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "course",
+    "time": "under-1hr",
+    "cost": "paid-once",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "A 'bestseller'-tagged beginner course covering chat basics, everyday productivity (emails, summaries, scheduling), document upload/analysis, and career tasks like resumes and interview practice.",
+    "who_for": "Someone who wants one course covering everyday personal uses too (studying, career prep), not just office work.",
+    "skip_if": "You specifically want Cowork or file-automation content — this course is chat-focused.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-18",
+    "status": "live",
+    "notes": "Listed as last updated April 2026. 'School of AI' is a generic Udemy instructor brand with no individual credentials visible in what was checked — verify ratings on the page before buying. | time was UNVERIFIED, set to under-1hr pending check."
+  },
+  {
+    "title": "Claude, Claude Code, Claude Cowork, and Claude in MS Office",
+    "url": "https://www.udemy.com/course/claude-ai/",
+    "author": "Udemy instructor (individual credentials not confirmed)",
+    "roles": [
+      "non-technical"
+    ],
+    "level": "basic",
+    "topics": [
+      "chat-prompting",
+      "cowork"
+    ],
+    "format": "course",
+    "time": "half-day",
+    "cost": "paid-once",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "A tour across Claude's surfaces (chat interface, Free vs Pro, Cowork, and MS Office) explicitly aimed at people who 'want to use AI without becoming technical.'",
+    "who_for": "Someone who wants one course mapping out all of Claude's different surfaces rather than going deep on one.",
+    "skip_if": "The title bundles in a 'Claude Code' section, which needs a terminal — skip that part and the rest still delivers full value.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-18",
+    "status": "live",
+    "notes": "Listed as last updated July 2026. 3h 40m, 22 lectures."
+  },
+  {
+    "title": "Mastering Claude Cowork & AI Agents in 5 hours",
+    "url": "https://www.udemy.com/course/mastering-claude-cowork-ai-agents/",
+    "author": "Prof. Ryan Ahmed, PhD, MBA",
+    "roles": [
+      "non-technical"
+    ],
+    "level": "confident",
+    "topics": [
+      "cowork",
+      "skills",
+      "mcp",
+      "agents"
+    ],
+    "format": "course",
+    "time": "half-day",
+    "cost": "paid-once",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "Goes further than a first-timer course: plugins, custom slash commands, connecting Cowork to Gmail via MCP, and business use cases like a multi-agent research task with an Excel report output.",
+    "who_for": "Someone already comfortable with basic Cowork who wants to build repeatable workflows and plugins next.",
+    "skip_if": "You're brand new to Cowork — start with something shorter; this assumes basics and jumps into MCP connectors and multi-agent setups.",
+    "published": "2026-04-03",
+    "checked": "2026-08-18",
+    "status": "live",
+    "notes": "Marketed as 'zero coding required,' which is accurate, but the MCP/connector material is conceptually denser than a true beginner course. 2,001 reviews, 4.4/5 rating at time of check."
+  },
+  {
+    "title": "I tested Claude Cowork — Anthropic's new AI feels more like a coworker than a chatbot",
+    "url": "https://www.tomsguide.com/ai/i-tested-claude-cowork-anthropics-new-ai-feels-more-like-a-coworker-than-a-chatbot",
+    "author": "Tom's Guide",
+    "roles": [
+      "non-technical"
+    ],
+    "level": "never-used",
+    "topics": [
+      "cowork"
+    ],
+    "format": "article",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "A hands-on, first-person test of Cowork by a non-developer journalist, explaining what it actually feels like to hand it a task instead of prompting normally.",
+    "who_for": "Someone deciding whether Cowork is worth trying before committing to a paid plan.",
+    "skip_if": "You've already tried Cowork or want a hands-on tutorial — this is one reporter's first-impressions review.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-18",
+    "status": "live",
+    "notes": "Appears to have been written shortly after Cowork's January 12, 2026 launch, based on content.",
+    "review_note": "Published Mar 2026. Its claim that Cowork is 'in research preview' may now be stale."
+  },
+  {
+    "title": "Stop using Claude like ChatGPT — 10 prompts that unlock its real potential",
+    "url": "https://www.tomsguide.com/ai/stop-using-claude-like-chatgpt-10-prompts-that-unlock-its-real-potential",
+    "author": "Tom's Guide",
+    "roles": [
+      "non-technical"
+    ],
+    "level": "basic",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "article",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "Ten concrete, copyable prompt techniques — starting with 'be specific' and how Claude behaves differently from ChatGPT — rather than abstract prompting theory.",
+    "who_for": "Someone who already uses Claude a little but keeps getting generic or underwhelming answers.",
+    "skip_if": "You already write prompts with role, context, and constraints — these are the same basic techniques you use.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-18",
+    "status": "live",
+    "notes": "",
+    "review_note": "Published Mar 2026. Cites free-tier limits and names Sonnet 4.6 — version details go stale fast."
+  },
+  {
+    "title": "I Took 20+ Free Claude Courses. These Are the Best",
+    "url": "https://artificialcorner.com/p/free-claude",
+    "author": "The PyCoach, Artificial Corner",
+    "roles": [
+      "non-technical"
+    ],
+    "level": "never-used",
+    "topics": [
+      "chat-prompting",
+      "cowork"
+    ],
+    "format": "article",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "A curated meta-list pointing to three specific free YouTube courses (including a Cowork walkthrough and a Claude Design walkthrough), sorted by learning style rather than a generic 'top 10.'",
+    "who_for": "Someone overwhelmed by the sheer number of Claude tutorials who wants one trusted person's shortlist.",
+    "skip_if": "You want original instructional content rather than a list of links to other people's videos.",
+    "published": "2026-07-01",
+    "checked": "2026-08-18",
+    "status": "live",
+    "notes": "A similarly-titled Medium version by the same author exists but is member-paywalled; this Substack version is free. Some linked videos continue into Claude Code (needs a terminal) — the Cowork and Design sections are the non-technical fit."
+  },
+  {
+    "title": "Claude Cowork for Beginners - Complete Step-by-Step Tutorial",
+    "url": "https://www.youtube.com/watch?v=vv09DHej6gg",
+    "author": "YouTube creator (channel identity not independently confirmed)",
+    "roles": [
+      "non-technical"
+    ],
+    "level": "never-used",
+    "topics": [
+      "cowork"
+    ],
+    "format": "video",
+    "time": "under-1hr",
+    "cost": "free",
+    "language": "en",
+    "tier": "listed",
+    "summary": "A step-by-step walkthrough setting up the Claude desktop app and running through several real Cowork use cases live.",
+    "who_for": "Someone who wants to watch the whole setup-to-finished-task process once before trying it themselves.",
+    "skip_if": "This creator's other videos sometimes lead with paid-offer promotion before the content — skip ahead if that shows up here too.",
+    "published": "2026-03-02",
+    "checked": "2026-08-18",
+    "status": "live",
+    "notes": "Exact channel/instructor identity wasn't independently confirmed from what was checked — treat as a useful walkthrough, not an authoritative source."
+  },
+  {
+    "title": "Claude is not one tool. It's six.",
+    "url": "https://ruben.substack.com/p/claude",
+    "author": "Ruben Hassid",
+    "roles": [
+      "non-technical"
+    ],
+    "level": "basic",
+    "topics": [
+      "chat-prompting",
+      "cowork",
+      "skills"
+    ],
+    "format": "article",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "ai-reviewed",
+    "summary": "A practical breakdown of Claude's six surfaces (Cowork, model choice, Excel, Plugins, Artifacts, Projects) ranked by what matters most, with install steps and a first-prompt template for Cowork.",
+    "who_for": "Someone confused about which 'Claude thing' they should even be using.",
+    "skip_if": "The author writes in a promotional, personal-brand newsletter style with frequent subscribe prompts — if that tone bothers you, get the same information from Anthropic's own Cowork docs instead.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-18",
+    "status": "live",
+    "notes": "This is the kind of creator-newsletter content the research brief specifically warned about — genuinely useful structure and steps, wrapped in heavy personal-brand framing rather than a slow personal-story intro."
+  },
+  {
+    "title": "My Claude AI Review (2026): Is It Worth the Hype?",
+    "url": "https://learn.g2.com/claude-ai-review",
+    "author": "G2",
+    "roles": [
+      "non-technical"
+    ],
+    "level": "never-used",
+    "topics": [
+      "chat-prompting",
+      "cowork"
+    ],
+    "format": "article",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "A self-described 'fresh convert' review from a non-developer explaining Cowork, extended thinking, and Claude Code (briefly, as context) in plain terms, informed by aggregated G2 user reviews.",
+    "who_for": "Someone deciding whether to pay for Claude Pro at all.",
+    "skip_if": "You want a feature comparison table rather than one person's experience report.",
+    "published": "2026-02-24",
+    "checked": "2026-08-18",
+    "status": "live",
+    "notes": ""
+  },
+  {
+    "title": "Claude, Claude Projects and Claude Code for Non-Coders",
+    "url": "https://www.coursera.org/learn/packt-claude-claude-projects-and-claude-code-for-non-coders-9rpmp",
+    "author": "Packt",
+    "roles": [
+      "non-technical"
+    ],
+    "level": "basic",
+    "topics": [
+      "chat-prompting",
+      "cowork"
+    ],
+    "format": "course",
+    "time": "half-day",
+    "cost": "subscription",
+    "language": "en",
+    "tier": "previewed",
+    "summary": "Starts with AI for office productivity and prompt/context engineering, then moves through Claude Projects and a 'Claude Code for non-coders' module on code-free automation.",
+    "who_for": "Someone who wants Claude covered alongside other tools (CustomGPTs, Google NotebookLM) in one office-productivity course rather than Claude alone.",
+    "skip_if": "The final module covers Claude Code, which the rest of this list excludes — skip that section if a terminal-free experience matters to you.",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-18",
+    "status": "live",
+    "notes": "Coursera Coach interactive feature included. Listed as updated roughly a month before the check date."
+  }
+]
