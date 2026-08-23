@@ -299,8 +299,20 @@ button, .btn, .nav-link, .filter-option { min-height: 44px; }
   cursor: pointer;
   font: var(--weight-regular) var(--text-body-sm)/var(--leading-body-sm) var(--font-sans);
   text-align: left;
+  transition: background-color var(--dur-base) var(--ease-out);
 }
 .chip-choice:hover { border-color: var(--slate-dark); }
+
+/* The drawing is showing this one.
+   Before anything is chosen the picture changes by itself every 2.6 seconds, and until
+   now nothing on the page said which option it was drawing. --surface-panel is the tone
+   the icons are drawn against, so the chip and the picture agree.
+   Background only. The border stays with :hover and [aria-pressed], which keeps three
+   steps apart: being drawn, being pointed at, being chosen. The duration is the one the
+   drawing fades with, so the chip and the picture move together — and reduced motion
+   sets it to 0ms with everything else. */
+.chip-choice[data-showing] { background: var(--surface-panel); }
+
 .chip-choice[aria-pressed="true"] {
   background: var(--surface-invert);
   color: var(--text-on-invert);

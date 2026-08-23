@@ -15,12 +15,18 @@
   var LC = window.LC;
   var items = LC.items();
 
-  var state = { role: null, level: null, open: "role", showB: false };
+  var state = { role: null, level: null, open: "role", showB: false,
+                artRole: null, artLevel: null };
   var fading = false, target = null, attract = null;
+
+  /* Set while the pointer or the keyboard is resting on a chip. A preview moves the
+     drawing and nothing else — it is not a choice, and it is undone on the way out. */
+  var previewing = null;
 
   var el = {};
   ["roleBlank", "levelBlank", "roleText", "levelText", "roleSet", "levelSet",
-   "roleOptions", "levelOptions", "q", "go", "artA", "artB", "tally"].forEach(function (id) {
+   "roleOptions", "levelOptions", "chooser", "q", "go", "artA", "artB",
+   "tally"].forEach(function (id) {
     el[id] = document.getElementById(id);
   });
 
@@ -52,16 +58,44 @@
     }, FADE_MS);
   }
 
+  /* Move the drawing, and mark the chip it is drawing.
+     Everything that changes the picture goes through here, so the mark can never fall
+     out of step with what is on screen. */
+  function showArt(role, level) {
+    state.artRole = role || "non-technical";
+    state.artLevel = level || "never-used";
+    fadeTo(art(state.artRole, state.artLevel));
+    markShowing();
+  }
+
+  function mark(row, value) {
+    Array.prototype.forEach.call(row.children, function (b) {
+      if (value && b.dataset.value === value) b.setAttribute("data-showing", "");
+      else b.removeAttribute("data-showing");
+    });
+  }
+
+  function markShowing() {
+    mark(el.roleOptions, state.artRole);
+    /* The level row is marked only when a level was really asked for. Every drawing
+       needs some level, so it falls back to never-used; marking that chip on a fallback
+       would show a choice nobody made. */
+    var levelAsked = state.level || (previewing && previewing.kind === "level");
+    mark(el.levelOptions, levelAsked ? state.artLevel : null);
+  }
+
   /* Before anyone has chosen, the drawing cycles slowly. It is the only hint that the
      underlined words are buttons. It stops the moment a choice is made, and never runs
      for someone who asked for reduced motion. */
   function startAttract() {
     if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    var keys = Object.keys(LC.ROLE), i = 0;
+    stopAttract();   /* hovering pauses and leaving restarts, so never stack two */
+    var keys = Object.keys(LC.ROLE);
+    var i = keys.indexOf(state.artRole);
     attract = setInterval(function () {
       if (state.role) { stopAttract(); return; }
       i = (i + 1) % keys.length;
-      fadeTo(art(keys[i], "never-used"));
+      showArt(keys[i], "never-used");
     }, 2600);
   }
   function stopAttract() { if (attract) { clearInterval(attract); attract = null; } }
@@ -93,24 +127,81 @@
     el.tally.textContent = (state.role || state.level)
       ? LC.countText(n) + " match so far."
       : LC.countText(items.length) + ", checked by hand.";
+
+    /* render() replaces both rows wholesale, so the mark has to go back on afterwards. */
+    markShowing();
   }
 
   el.roleOptions.addEventListener("click", function (e) {
     var b = e.target.closest("[data-value]"); if (!b) return;
     stopAttract();
+    previewing = null;
     state.role = b.dataset.value;
     state.open = "level";
-    fadeTo(art(state.role));
+    showArt(state.role, state.level);
     render();
   });
 
   el.levelOptions.addEventListener("click", function (e) {
     var b = e.target.closest("[data-value]"); if (!b) return;
     stopAttract();
+    previewing = null;
     state.level = b.dataset.value;
     state.open = "";
-    fadeTo(art(state.role || "non-technical", state.level));
+    showArt(state.role, state.level);
     render();
+  });
+
+  /* Point at an option and the drawing shows it.
+     A preview changes the picture and nothing else. The sentence keeps its blanks, no
+     chip becomes pressed, and leaving puts the drawing back where it was. The attract
+     cycle only pauses, because it is the one hint that the underlined words are buttons
+     and brushing past a chip should not take that away for good.
+
+     Guarded on (hover: hover). A touch screen fires mouseover on the tap that is already
+     a click, so on a phone the preview would only fight the choice. focusin does the
+     same work for a keyboard, which has no hover at all. */
+  var CAN_HOVER = matchMedia("(hover: hover)").matches;
+
+  function preview(kind, value) {
+    stopAttract();
+    previewing = { kind: kind, value: value };
+    if (kind === "role") showArt(value, state.level);
+    else showArt(state.role, value);
+  }
+
+  function endPreview() {
+    if (!previewing) return;
+    previewing = null;
+    /* With a choice made there is something to go back to. With nothing chosen there is
+       not, so the drawing stays where the pointer left it and the cycle picks up from
+       there. Snapping back to the first role would be a jump that answers nothing. */
+    if (state.role || state.level) showArt(state.role, state.level);
+    else markShowing();
+    if (!state.role) startAttract();
+  }
+
+  function chipIn(row, node) {
+    var b = node && node.closest ? node.closest("[data-value]") : null;
+    return b && row.contains(b) ? b : null;
+  }
+
+  [["mouseover", "mouseout"], ["focusin", "focusout"]].forEach(function (pair) {
+    var pointer = pair[0] === "mouseover";
+    el.chooser.addEventListener(pair[0], function (e) {
+      if (pointer && !CAN_HOVER) return;
+      var b = chipIn(el.roleOptions, e.target);
+      if (b) return preview("role", b.dataset.value);
+      b = chipIn(el.levelOptions, e.target);
+      if (b) preview("level", b.dataset.value);
+    });
+    el.chooser.addEventListener(pair[1], function (e) {
+      if (pointer && !CAN_HOVER) return;
+      /* Moving from one chip to the next stays inside the chooser. Only a real exit
+         ends the preview, or the drawing would flicker back between every two chips. */
+      if (e.relatedTarget && el.chooser.contains(e.relatedTarget)) return;
+      endPreview();
+    });
   });
 
   el.roleBlank.addEventListener("click", function () {
@@ -132,7 +223,9 @@
     location.href = "browse.html" + (p.toString() ? "?" + p.toString() : "");
   });
 
-  el.artA.src = art("non-technical", "never-used");
+  state.artRole = "non-technical";
+  state.artLevel = "never-used";
+  el.artA.src = art(state.artRole, state.artLevel);
   render();
   startAttract();
 })();
