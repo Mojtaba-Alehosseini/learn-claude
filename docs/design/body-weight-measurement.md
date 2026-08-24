@@ -44,15 +44,63 @@ more of them per line, same ink. That is a good trade at a 20px reading size.
 Keep `Tiempos Fine Light`. The premise that started this — that Light is too thin
 against what shipped before — does not survive being measured in the browser.
 
-One thing to know before deciding, because it is the strongest argument on the other
-side. `assets/css/site.css` sets `-webkit-font-smoothing: antialiased` on `body`. On
-Windows that does nothing. On macOS it switches text from subpixel to greyscale
-antialiasing and makes it visibly lighter. So a Mac reader sees Light thinner than these
-numbers, which were taken on Windows. If Light ever does look weak, that line is the
-lever to pull first, not the typeface — it is one declaration and it changes nothing else.
-
 Georgia deliberately remains a defensible choice, but on grounds of licensing and weight
 of download, not on grounds of colour on the page. Typographically it is the plainer of
 the two and it is no darker.
 
 Side by side at real size: `docs/design/font-weight-check.html`.
+
+## The macOS question — `-webkit-font-smoothing`, measured 2026-08-24
+
+`assets/css/site.css:25` sets `-webkit-font-smoothing: antialiased` on `body`. Every
+number above was taken on Windows, where that declaration is inert, so the worry was
+that a Mac reader sees the body copy thinner than anyone here has seen it — and Light is
+already the lightest cut in the family.
+
+### What it does on Windows: nothing
+
+Measured on the live site. The same sentence set three times at 20px in Tiempos Fine
+Light, with `antialiased`, with `auto`, and with `subpixel-antialiased`:
+
+- All three report a different `getComputedStyle` value, so Chrome parses the property.
+- All three lay out at exactly 1448.8 x 28 px. It never touches layout, only rasterising.
+- At 4x zoom the three lines are indistinguishable.
+
+That is the expected result. Chrome on Windows rasterises text through DirectWrite, and
+`-webkit-font-smoothing` is a Blink property implemented against CoreGraphics — it is
+parsed everywhere and acted on only on macOS. Deleting it changes nothing on Windows, and
+nothing on Linux or Android either.
+
+### What it does on macOS: only ever lightens
+
+`antialiased` asks for greyscale antialiasing instead of the platform default. Its
+effect, when it has one, is to make text thinner and lighter. It has no setting that
+makes text heavier. How much it still matters is genuinely uncertain from here: macOS
+disabled subpixel antialiasing system-wide in Mojave, so the default moved towards
+greyscale on its own and the gap narrowed. Without a Mac that cannot be settled, and it
+does not need to be.
+
+### The answer
+
+**Delete it.** The argument does not depend on the uncertain part.
+
+The declaration can only push in one direction — lighter. On Windows it is measurably
+inert. So removing it either changes nothing, or makes text on macOS slightly heavier
+than it is today. There is no platform where removing it makes anything thinner.
+
+The whole worry was that the body copy might be too light on a Mac. This one line is the
+only thing in the stylesheet arguing for lighter, and it buys nothing anywhere. Keeping
+it means carrying an unmeasurable risk in exchange for no measurable benefit.
+
+Not a zero-change edit, and it should not be described as one: Mac readers will see
+slightly heavier body copy afterwards. That is the direction we want.
+
+Nothing was changed. This is the measurement, the decision is Morteza's.
+
+### One thing noticed next door, not acted on
+
+`site.css:26` sets `text-rendering: optimizeLegibility` on the same rule. Chrome enables
+kerning and common ligatures by default now, so it mostly asks for what is already
+happening, and historically it has been a source of rendering oddities on long documents.
+Worth looking at on its own some time. It is not part of this question and was not
+touched.
