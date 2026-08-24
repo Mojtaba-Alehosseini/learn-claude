@@ -97,10 +97,22 @@
     '</p>';
 
   var copy = document.getElementById("copy");
+  var copyTimer = null;
+
+  /* One timer, always cleared before the next. Two faults lived here: a second click
+     1.5s after the first was cut short by the first click's timer, and the branch where
+     the clipboard is refused set "Press Ctrl+C" with no timer at all, so the button
+     never said "Copy link" again for the life of the page. Both messages now clear
+     themselves, and only the most recent one is counting. */
+  function say(text) {
+    copy.textContent = text;
+    clearTimeout(copyTimer);
+    copyTimer = setTimeout(function () { copy.textContent = "Copy link"; }, 1600);
+  }
+
   copy.addEventListener("click", function () {
-    navigator.clipboard.writeText(location.href).then(function () {
-      copy.textContent = "Copied";
-      setTimeout(function () { copy.textContent = "Copy link"; }, 1600);
-    }).catch(function () { copy.textContent = "Press Ctrl+C"; });
+    navigator.clipboard.writeText(location.href)
+      .then(function () { say("Copied"); })
+      .catch(function () { say("Press Ctrl+C"); });
   });
 })();
