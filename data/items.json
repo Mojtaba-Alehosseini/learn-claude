@@ -812,7 +812,7 @@
     "tier": "ai-reviewed",
     "summary": "The authoritative statement of what is and isn't used for training, including that raw connector data (e.g., Google Drive, MCP servers) is excluded.",
     "who_for": "Anyone worried about data privacy — the #1 SMB hesitation.",
-    "skip_if": "N/A.",
+    "skip_if": "You have nobody to satisfy about data handling. This is the policy to quote in a review, not a settings guide — it states what Anthropic does with your data, not how to change what you send.",
     "published": "UNVERIFIED",
     "checked": "2026-08-20",
     "status": "live",
