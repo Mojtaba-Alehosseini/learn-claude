@@ -62,10 +62,15 @@
   var MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
                 "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
+  /* The apostrophe matters as much as the double quote. Not every value written through
+     here lands between double quotes: the format icon below is interpolated into
+     style="background:url('…')", where a single quote is the delimiter. Nothing in the
+     catalogue contains one today, but an escaper that only covers the quote it happens
+     to meet is the wrong escaper. */
   LC.esc = function (s) {
     return String(s == null ? "" : s)
       .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
-      .replace(/"/g, "&quot;");
+      .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
   };
 
   /* "2026-03-04" -> "4 Mar 2026". Returns "" for UNVERIFIED, never a guess. */
