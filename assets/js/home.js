@@ -129,8 +129,8 @@
     mark(el.levelOptions, levelAsked ? p[p.length - 1].replace(".png", "") : null);
   }
 
-  /* Re-mark whatever is on screen. render() replaces both rows, which throws the marks
-     away with the old buttons. */
+  /* Re-mark whatever is on screen. Needed on the first render, which builds the rows,
+     and harmless afterwards, when the buttons survive and keep their marks. */
   function markShowing() {
     var img = state.showB ? el.artB : el.artA;
     markFromSrc(img.getAttribute("src") || art("non-technical", "never-used"));
@@ -157,11 +157,26 @@
            'aria-pressed="' + (chosen === value) + '">' + LC.esc(map[value]) + '</button>';
   }
 
+  /* Build a row once, then only change what differs.
+     Replacing innerHTML on every render put the new button and its `data-showing` into
+     the same style resolution, so there was no value to move from and the 220ms fade
+     this file and the stylesheet both promise never ran on a click — only on hover,
+     which is the one path that does not call render(). The buttons themselves never
+     change. Only which one is pressed does. */
+  function fillRow(row, map, chosen) {
+    if (!row.children.length) {
+      row.innerHTML = Object.keys(map)
+        .map(function (v) { return chipHTML(map, chosen, v); }).join("");
+      return;
+    }
+    Array.prototype.forEach.call(row.children, function (b) {
+      b.setAttribute("aria-pressed", String(b.dataset.value === chosen));
+    });
+  }
+
   function render() {
-    el.roleOptions.innerHTML = Object.keys(LC.ROLE)
-      .map(function (v) { return chipHTML(LC.ROLE, state.role, v); }).join("");
-    el.levelOptions.innerHTML = Object.keys(LC.LEVEL)
-      .map(function (v) { return chipHTML(LC.LEVEL, state.level, v); }).join("");
+    fillRow(el.roleOptions, LC.ROLE, state.role);
+    fillRow(el.levelOptions, LC.LEVEL, state.level);
 
     el.roleText.textContent = state.role ? LC.ROLE[state.role] : "a [role]";
     el.levelText.textContent = state.level ? LC.LEVEL[state.level] : "[level]";
@@ -180,7 +195,8 @@
       ? LC.countText(n) + " match so far."
       : LC.countText(items.length) + ", checked by hand.";
 
-    /* render() replaces both rows wholesale, so the mark has to go back on afterwards. */
+    /* Only does work on the first render, when fillRow builds the buttons. After that
+       the same nodes stay in place and keep the mark they already have. */
     markShowing();
   }
 
