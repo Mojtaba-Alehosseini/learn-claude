@@ -184,7 +184,11 @@
     if (n) { el.empty.innerHTML = ""; return; }
     var msg;
     if (q.trim()) {
-      msg = "<strong>No match for “" + LC.esc(q) + "”.</strong>" +
+      /* <bdi> around the query. It is the reader's text, not ours, and it can be
+         right-to-left: a Persian search sat inside our left-to-right sentence and put
+         its punctuation on the wrong side. bdi isolates it without guessing a
+         direction. */
+      msg = "<strong>No match for “<bdi>" + LC.esc(q) + "</bdi>”.</strong>" +
             "Try fewer words, or browse by role instead.";
     } else if (sel.roles.length && !anyOtherThanRole()) {
       msg = "<strong>We have not covered this role yet.</strong>" +
@@ -235,15 +239,32 @@
   });
 
   var searchAsked = false;
+
+  /* Wait for a gap in the typing before redrawing.
+     A redraw is not cheap: it re-filters 353 items, rebuilds both filter panels and
+     every card, rewrites the title, and calls history.replaceState. Doing all of that
+     per keystroke had three costs beyond the work itself. The result count lives in an
+     aria-live region, so every letter announced a new number over the last one. Safari
+     throttles replaceState at roughly 100 calls in 30 seconds, which a long query
+     reaches. And on mobile with the sheet open, rebuilding the sheet body dropped focus
+     to the document until the next Tab.
+     150ms is below the point where a redraw reads as delayed, and no CSS transition is
+     paired with this, so there is no duration it has to match. */
+  var TYPING_PAUSE = 150;
+  var typingTimer = null;
+
   el.q.addEventListener("input", function (e) {
     q = e.target.value;
-    render();
-    /* Fetch the ranked index on the first keystroke, then redraw when it lands so the
-       very first thing typed still gets a ranked answer. */
-    if (q && window.LCSearch && !window.LCSearch.ready() && !searchAsked) {
-      searchAsked = true;
-      window.LCSearch.load().then(render).catch(function () {});
-    }
+    clearTimeout(typingTimer);
+    typingTimer = setTimeout(function () {
+      render();
+      /* Fetch the ranked index on the first keystroke, then redraw when it lands so the
+         very first thing typed still gets a ranked answer. */
+      if (q && window.LCSearch && !window.LCSearch.ready() && !searchAsked) {
+        searchAsked = true;
+        window.LCSearch.load().then(render).catch(function () {});
+      }
+    }, TYPING_PAUSE);
   });
 
   el.sort.addEventListener("change", function (e) { sort = e.target.value; render(); });
