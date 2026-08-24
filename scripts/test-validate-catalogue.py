@@ -30,13 +30,21 @@ ITEMS = os.path.join(ROOT, "data", "items.json")
 PATHS = os.path.join(ROOT, "data", "paths.json")
 
 
-def run(items, paths, tmp):
-    """Write the two structures out and run the validator over them."""
+def run(items, paths, tmp, allowance=0):
+    """Write the three inputs out and run the validator over them.
+
+    The allowance goes to a temporary file too. Testing it against the committed one
+    could only ever prove that `reviewed` is rejected; passing our own proves the other
+    half — that raising the number by hand is what lets it through.
+    """
     ip = os.path.join(tmp, "items.json")
     pp = os.path.join(tmp, "paths.json")
+    ap = os.path.join(tmp, "allowance.txt")
     json.dump(items, open(ip, "w", encoding="utf-8"), ensure_ascii=False)
     json.dump(paths, open(pp, "w", encoding="utf-8"), ensure_ascii=False)
-    r = subprocess.run([sys.executable, VALIDATOR, ip, pp],
+    open(ap, "w", encoding="utf-8").write("# written by the tests" + os.linesep
+                                          + str(allowance) + os.linesep)
+    r = subprocess.run([sys.executable, VALIDATOR, ip, pp, ap],
                        capture_output=True, text=True, encoding="utf-8", errors="replace")
     return r.returncode, (r.stdout or "") + (r.stderr or "")
 
@@ -107,6 +115,26 @@ CASES = [
     ("path step points at a missing id",
      lambda i, p: p[0]["steps"][0].update({"item": "r-deadbeef00"}),
      "which is not in items.json"),
+
+    # The rule the README singles out. It cannot be checked directly — no file shows who
+    # did what — so what is checked is the appearance of a claim nobody has authorised.
+    ("an entry claims tier: reviewed when none is allowed",
+     lambda i, p: i[0].update({"tier": "reviewed"}),
+     "claim `tier: reviewed`"),
+
+    ("two claim it when none is allowed",
+     lambda i, p: [i[0].update({"tier": "reviewed"}), i[1].update({"tier": "reviewed"})],
+     "2 entries claim"),
+
+    # And the other half: the check must not simply forbid `reviewed` forever, or the
+    # first genuine review would be unshippable and the check would be deleted.
+    ("one claims it and the allowance says one — must pass",
+     lambda i, p: i[0].update({"tier": "reviewed"}),
+     None, 1),
+
+    ("two claim it and the allowance says only one",
+     lambda i, p: [i[0].update({"tier": "reviewed"}), i[1].update({"tier": "reviewed"})],
+     "2 entries claim", 1),
 ]
 
 
@@ -124,11 +152,13 @@ def main():
         else:
             print("ok    untouched catalogue passes")
 
-        for name, break_it, phrase in CASES:
+        for case in CASES:
+            name, break_it, phrase = case[0], case[1], case[2]
+            allowance = case[3] if len(case) > 3 else 0   # reviewed cases set their own
             items = copy.deepcopy(good_items)
             paths = copy.deepcopy(good_paths)
             break_it(items, paths)
-            code, out = run(items, paths, tmp)
+            code, out = run(items, paths, tmp, allowance)
 
             if phrase is None:
                 if code == 0:

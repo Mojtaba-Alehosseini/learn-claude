@@ -1,0 +1,23 @@
+# How many entries are allowed to claim `tier: reviewed`.
+#
+# `reviewed` means a person read the thing end to end. Nothing inside a JSON file can
+# prove that a person did anything, so provenance cannot be validated directly and this
+# file does not pretend to. What it does instead is make the claim cost something: the
+# number below only moves when Morteza moves it, by hand, after actually finishing
+# something.
+#
+# scripts/validate-catalogue.py fails the build when more entries claim `reviewed` than
+# this allows. The point is not the counting. The point is that the first automated
+# stage that quietly writes `reviewed` — an enrichment script, a merge, a model asked to
+# fill in tiers — stops the build instead of shipping a claim nobody made. That is the
+# rule the README singles out, and until now nothing enforced it.
+#
+# Raise this only after finishing a resource yourself. Never to turn a red build green.
+# If a build is red because of this, the honest fix is almost always to change the entry
+# back, not to change this number.
+#
+# One thing to know when this goes above 0: the check counts, it does not name. With an
+# allowance of 3, swapping which three entries claim `reviewed` still passes. That is
+# harmless while the number is 0 and worth remembering when it is not.
+
+0

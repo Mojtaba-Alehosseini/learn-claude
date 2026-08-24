@@ -23,6 +23,12 @@ everything.
 The id rule is imported from scripts/stable-ids.py for the same reason. An id is a hash
 of the normalised URL. Re-implementing either half here would let this file bless ids
 that stable-ids.py would not produce.
+
+One rule here is not really a data check. "Only a person may write tier: reviewed" is a
+statement about who did something, and a file cannot show that. So this does not test
+provenance — it tests for the event. Nothing is `reviewed` today, so any appearance of
+it is news, and news should stop the build until a person says otherwise. See
+data/reviewed-allowance.txt.
 """
 
 import importlib.util
@@ -41,6 +47,7 @@ ITEMS = os.path.join(ROOT, "data", "items.json")
 PATHS = os.path.join(ROOT, "data", "paths.json")
 UI_JS = os.path.join(ROOT, "assets", "js", "ui.js")
 STABLE_IDS = os.path.join(ROOT, "scripts", "stable-ids.py")
+ALLOWANCE = os.path.join(ROOT, "data", "reviewed-allowance.txt")
 
 # Every field that must be present and must not be empty. roles and topics are lists,
 # so "not empty" means at least one entry, not merely that the key exists.
@@ -147,6 +154,29 @@ def load_vocabularies():
     }
 
 
+def load_allowance(path):
+    """The number of entries permitted to claim `tier: reviewed`.
+
+    Read as the last line that is not blank and not a comment, so the file can carry the
+    explanation of why it exists next to the number it holds. A missing or unreadable
+    file is a hard stop rather than a default of zero: silently assuming the strictest
+    value would turn a deleted file into a mysterious build failure somewhere else.
+    """
+    if not os.path.exists(path):
+        raise SystemExit(
+            "%s is missing. It records how many entries may claim `tier: reviewed`. "
+            "Restore it from git rather than guessing a number." % path)
+    value = None
+    for line in open(path, encoding="utf-8"):
+        line = line.strip()
+        if line and not line.startswith("#"):
+            value = line
+    try:
+        return int(value)
+    except (TypeError, ValueError):
+        raise SystemExit("%s must end with a plain number. It ends with %r." % (path, value))
+
+
 def load_id_rule():
     spec = importlib.util.spec_from_file_location("stable_ids", STABLE_IDS)
     mod = importlib.util.module_from_spec(spec)
@@ -163,6 +193,7 @@ def main(argv=None):
     argv = argv if argv is not None else sys.argv[1:]
     items_path = argv[0] if len(argv) > 0 else ITEMS
     paths_path = argv[1] if len(argv) > 1 else PATHS
+    allowance_path = argv[2] if len(argv) > 2 else ALLOWANCE
 
     vocab = load_vocabularies()
     make_id, norm = load_id_rule()
@@ -253,12 +284,39 @@ def main(argv=None):
                         "  path %-22s step %-3s points at %r, which is not in items.json"
                         % (path.get("id"), step.get("step"), ref))
 
+    # 8. `tier: reviewed` says a person read the whole thing. No file can show that a
+    #    person did anything, so this does not try to check provenance. It checks for
+    #    the event instead. Nothing is reviewed today, so the appearance of one is news,
+    #    and news stops the build until a person raises the number by hand.
+    allowance = load_allowance(allowance_path)
+    claimed = [(n, it) for n, it in enumerate(items) if it.get("tier") == "reviewed"]
+    tier_errors = []
+    if len(claimed) > allowance:
+        tier_errors.append(
+            "%d entr%s claim `tier: reviewed`. %s allowed by %s."
+            % (len(claimed), "y" if len(claimed) == 1 else "ies", allowance, allowance_path))
+        tier_errors.append("")
+        for n, it in claimed:
+            tier_errors.append("  row %-4d %s" % (n, str(it.get("title", ""))[:60]))
+        tier_errors.append("")
+        tier_errors.append(
+            "  `reviewed` means a person read all of it. If an automated stage wrote "
+            "this, take it back out.")
+        tier_errors.append(
+            "  If a person really did finish %s, confirm each one and raise the number "
+            "in that file by hand." % ("it" if len(claimed) == 1 else "them"))
+
     # ------------------------------------------------------------ report ----
 
-    if not errors and not path_errors:
+    if not errors and not path_errors and not tier_errors:
         n_paths = (len(json.load(open(paths_path, encoding="utf-8")))
                    if os.path.exists(paths_path) else 0)
         print("%d resources, %d paths — catalogue is valid." % (len(items), n_paths))
+        # A stale allowance is not a fault, but it does leave room nobody is using, so
+        # say it out loud rather than let the headroom sit there unnoticed.
+        if len(claimed) < allowance:
+            print("Note: %s allows %d reviewed, %d claim it. Lower it when convenient."
+                  % (allowance_path, allowance, len(claimed)))
         return 0
 
     if errors:
@@ -271,6 +329,11 @@ def main(argv=None):
         print("%d broken path step%s in %s:"
               % (len(path_errors), "" if len(path_errors) == 1 else "s", paths_path))
         for e in path_errors:
+            print(e)
+    if tier_errors:
+        if errors or path_errors:
+            print()
+        for e in tier_errors:
             print(e)
     print()
     print("Nothing was changed. Fix the data and run this again.")
