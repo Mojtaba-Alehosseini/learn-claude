@@ -454,6 +454,12 @@ button, .btn, .nav-link, .filter-option { min-height: 44px; }
 .empty {
   padding: var(--space-48) 0;
   max-width: var(--measure);
+  /* The empty state quotes back what was searched for, and a pasted URL is one word
+     with nowhere to break. Without this it painted 4673px wide against a 1536px
+     viewport and gave the whole page a horizontal scrollbar. `anywhere` rather than
+     `break-word` because only `anywhere` lets the grid track shrink too, and the
+     overflow ran out through the grid. */
+  overflow-wrap: anywhere;
 }
 .empty strong { display: block; margin-bottom: var(--space-8);
   font: var(--weight-semibold) var(--text-subheading)/var(--leading-subheading) var(--font-serif); }
@@ -542,6 +548,17 @@ button, .btn, .nav-link, .filter-option { min-height: 44px; }
     border-top: 1px solid var(--border);
   }
   .mobile-filter-bar .btn { width: 100%; }
+
+  /* The bar is fixed to the bottom of the viewport, so whatever ends the page sits
+     underneath it. The footer note lost its last line that way — not clipped, but
+     covered at the point where scrolling stops, so it could never be read at all.
+     --space-100 clears the bar's 69px with room to spare. :has() keeps this on the one
+     page that has a bar; where :has() is missing the page behaves as it does today. */
+  body:has(.mobile-filter-bar) .site-footer .wrap { padding-bottom: var(--space-100); }
+
+  /* The site's own rule, stated at the top of this file, is 44px for anything you
+     press. These were 25px — the only controls on the site below the line. */
+  .footer-col a { min-height: 44px; display: flex; align-items: center; }
 
   .sheet {
     position: fixed; inset: 0; z-index: 50;
