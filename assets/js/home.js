@@ -40,6 +40,38 @@
      number is shorter than the CSS transition, the next fade starts before the last one
      finished and both drawings show at once. */
   var FADE_MS = 220;
+  var REDUCED = matchMedia("(prefers-reduced-motion: reduce)");
+
+  /* The stylesheet drops every duration to nothing under reduced motion. This constant
+     did not, so the lock outlived the transition it was matching: the drawing still
+     arrived up to 220ms after the click, now as a hard cut, for exactly the people who
+     asked for no motion. Read at call time rather than once, so changing the system
+     setting takes effect without a reload. */
+  function fadeMs() { return REDUCED.matches ? 0 : FADE_MS; }
+
+  /* Run fn once the image can paint, exactly once, whatever happens.
+     `load` and `error`, not decode(). decode() reads like the honest signal and was
+     tried here first: on an <img> that has just been given its first src it returns a
+     promise that never settles at all — not resolved, not rejected, still pending after
+     2.5 seconds. That left `fading` true for good and froze the whole attract cycle on
+     the first tick. The timeout is the backstop for the same reason: `fading` gates
+     every later swap, so a drawing that never arrives must never hold the lock. */
+  function whenPainted(img, fn) {
+    if (img.complete && img.naturalWidth) { fn(); return; }
+    var done = false, timer = null;
+    function once() {
+      if (done) return;
+      done = true;
+      clearTimeout(timer);
+      img.removeEventListener("load", once);
+      img.removeEventListener("error", once);
+      fn();
+    }
+    img.addEventListener("load", once);
+    img.addEventListener("error", once);
+    timer = setTimeout(once, 2000);
+  }
+
   function fadeTo(src) {
     target = src;
     if (fading) return;
@@ -48,15 +80,24 @@
     fading = true;
     var next = state.showB ? el.artA : el.artB;
     next.src = src;
-    next.style.opacity = "1";
-    showing.style.opacity = "0";
-    markFromSrc(src);
-    state.showB = !state.showB;
-    setTimeout(function () {
-      fading = false;
-      var now = (state.showB ? el.artB : el.artA).getAttribute("src");
-      if (target && target !== now) fadeTo(target);
-    }, FADE_MS);
+
+    /* Wait for the file before raising it. Setting src and opacity in the same breath
+       assumes the drawing is already there; on a cold cache it is not, so the incoming
+       element was brought to full opacity still holding the previous generation's
+       picture, or nothing at all. There are 40 of these, about a megabyte, and only the
+       fonts are preloaded. A cached image is ready immediately, so every swap after the
+       first costs nothing. */
+    whenPainted(next, function () {
+      next.style.opacity = "1";
+      showing.style.opacity = "0";
+      markFromSrc(src);
+      state.showB = !state.showB;
+      setTimeout(function () {
+        fading = false;
+        var now = (state.showB ? el.artB : el.artA).getAttribute("src");
+        if (target && target !== now) fadeTo(target);
+      }, fadeMs());
+    });
   }
 
   /* Ask for a drawing. fadeTo does the marking, at the moment the picture changes. */
