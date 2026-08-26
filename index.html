@@ -45,8 +45,37 @@
   .search-row {
     margin-top: var(--space-48); display: flex; gap: var(--space-12);
     flex-wrap: wrap; align-items: stretch;
+    transition: gap var(--dur-base) var(--ease-out);
   }
-  .search-row .input { flex: 1 1 260px; min-height: 52px; }
+  .search-row .input {
+    flex: 1 1 260px; min-height: 52px;
+    max-width: 100%; overflow: hidden;
+    /* visibility is in this list on purpose. It flips at the end of the duration
+       rather than partway, so the field stays visible for the whole collapse and is
+       then genuinely gone — out of the tab order and out of the accessibility tree,
+       which opacity alone would not do. */
+    transition: visibility var(--dur-base) var(--ease-out),
+                opacity var(--dur-base) var(--ease-out),
+                max-width var(--dur-base) var(--ease-out),
+                padding var(--dur-base) var(--ease-out),
+                border-width var(--dur-base) var(--ease-out),
+                min-height var(--dur-base) var(--ease-out);
+  }
+
+  /* Both questions answered, so the "or describe it instead" way in has nothing left
+     to offer: it collapses sideways and "Show me" takes the width. Done in CSS alone
+     so there is no JS timer to keep equal to a transition — and so reduced motion,
+     which zeroes every duration token, gets the same end state with no wait. */
+  .search-row.answered .input {
+    visibility: hidden;
+    opacity: 0;
+    max-width: 0;
+    min-height: 0;
+    padding-left: 0; padding-right: 0;
+    border-width: 0;
+    flex-basis: 0;
+  }
+  .search-row.answered { gap: 0; }
   .why { margin-top: var(--space-100); display: grid;
          grid-template-columns: repeat(3, minmax(0,1fr)); gap: var(--space-48); }
   @media (max-width: 768px) {

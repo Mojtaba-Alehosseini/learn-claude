@@ -186,6 +186,20 @@
     el.roleBlank.setAttribute("aria-expanded", String(state.open === "role"));
     el.levelBlank.setAttribute("aria-expanded", String(state.open === "level"));
 
+    /* The search field is the other way in — "or describe what you want to do". Once
+       both blanks are filled it is offering an alternative to a question already
+       answered, so it collapses and leaves "Show me" alone.
+       Unless something has been typed into it. Hiding a field while still submitting
+       what it holds would send a query the reader can no longer see, so anything typed
+       keeps it on screen.
+       Only re-checked here, on a chip click, and deliberately not on every keystroke:
+       deleting your last character would otherwise collapse the field under your own
+       cursor. It goes away when you answer the second question, which is a decision you
+       just made, and never while you are typing. The stylesheet does the moving; this
+       only says when. */
+    el.go.classList.toggle("answered",
+      !!(state.role && state.level) && !el.q.value.trim());
+
     /* Say the real number before they click, so "Show me" is never a disappointment. */
     var n = items.filter(function (it) {
       return (!state.role || it.roles.indexOf(state.role) !== -1) &&
