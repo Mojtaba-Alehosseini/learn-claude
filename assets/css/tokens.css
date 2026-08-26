@@ -197,6 +197,11 @@
      Radius — the bottom-only 8px on filled buttons is the signature.
      Do not round it evenly.
      ------------------------------------------------------------------------ */
+  /* The scrolling filter rail. A real number because Chrome ignores the standard
+     scrollbar properties as soon as a ::-webkit-scrollbar rule exists, and that
+     route only takes lengths. Thinner than the 10px Chrome gives for `thin`. */
+  --scrollbar-w:    8px;
+
   --radius-card:    24px;
   --radius-outline: 12px;
   --radius-filled:  0 0 8px 8px;

@@ -417,7 +417,46 @@ button, .btn, .nav-link, .filter-option { min-height: 44px; }
   max-height: calc(100vh - var(--space-48));
   overflow-y: auto;
   overscroll-behavior: contain;
+
+  /* The bar has to look like it belongs to this page. Left alone it is the operating
+     system's: a wide grey trough with arrow buttons on the ends, which is the one piece
+     of borrowed chrome on a site otherwise made of cream and hairlines.
+     Two properties do it, and they are `scrollbar-width` and `scrollbar-color` rather
+     than ::-webkit-scrollbar because that route needs pixel widths and radii that exist
+     in no token. The track is transparent, so nothing is drawn until there is something
+     to say.
+     At rest the thumb is --stone, the hairline colour. It then reads as the same 1px
+     rule the rest of the page uses to separate things, rather than as a dark bar parked
+     in the gap between the two columns. It darkens to --bark while the pointer is in the
+     rail or something inside it has focus, which is exactly when knowing your position
+     is worth anything. Both are tokens, and the change rides --dur-fast so it matches
+     every other hover on the site.
+     A browser too old for these falls back to the system bar, which is where this
+     started, and still scrolls. */
+  scrollbar-width: thin;
+  scrollbar-color: var(--stone) transparent;
+  transition: scrollbar-color var(--dur-fast) var(--ease-out);
 }
+.filter-rail:hover,
+.filter-rail:focus-within { scrollbar-color: var(--bark) transparent; }
+
+/* The same bar again, for engines without the two properties above: Chrome before 121
+   and Safari before 18.2. Where both are understood the standard properties win —
+   measured, the rail's gutter stays at the 10px `thin` gives rather than the 8px here —
+   so this is a fallback and not the main path. It has to restate everything because
+   ::-webkit-scrollbar styling is all or nothing.
+   It does buy one thing the standard properties cannot: dropping the two arrow buttons
+   that Chrome still draws on the ends of a `thin` bar on Windows. They are small and
+   they take the thumb's colour, so on a current browser they stay. */
+.filter-rail::-webkit-scrollbar { width: var(--scrollbar-w); }
+.filter-rail::-webkit-scrollbar-track { background: transparent; }
+.filter-rail::-webkit-scrollbar-button { display: none; }
+.filter-rail::-webkit-scrollbar-thumb {
+  background: var(--stone);
+  border-radius: var(--radius-outline);
+}
+.filter-rail:hover::-webkit-scrollbar-thumb,
+.filter-rail:focus-within::-webkit-scrollbar-thumb { background: var(--bark); }
 .filter-head {
   display: flex; align-items: center; justify-content: space-between;
   gap: var(--space-16); min-height: 44px;
