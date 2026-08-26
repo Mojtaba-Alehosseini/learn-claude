@@ -151,8 +151,7 @@ domain slugs and one is a top-level domain `[10 §9.9]`. This breaks a rule stat
 ### 2.1 An unsourced allegation against a named, real academic — the most urgent item here
 `[03 §9.2]`
 
-A catalogue entry carries an integrity allegation against a named individual — *"he has
-promoted AI-'humanizer' tricks to defeat AI detection"* — on an entry tiered `listed`,
+A catalogue entry carries an integrity allegation against a named individual — [allegation redacted 2026-08-27: an unsourced claim about a named individual. The cited source contains no support for it and no other source was ever given. Removed from data/items.json and from every file that repeated it.] — on an entry tiered `listed`,
 meaning nobody has opened the source. The same page simultaneously prints "What it
 teaches" bullets and "Nobody has looked at the content yet."
 

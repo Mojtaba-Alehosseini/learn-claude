@@ -64,7 +64,7 @@ _Checked: 2026-08-18_
 - **Any "analysis tool" tutorial** (Codecademy, LinkedIn, third-party blogs) — the JavaScript-in-browser analysis tool was superseded by server-side code execution ("upgraded file creation and analysis") in Sep 2025; screenshots and toggles may not match.
 
 ### Avoid
-- **AI-"humanizer" / "make AI text 100% human" tricks** (promoted in some social threads, incl. by Mushtaq Bilal, and tools like the "humanizer" skill) — these exist to defeat AI-detection and enable *undisclosed* AI use, which conflicts with Nature/Springer, Elsevier, IEEE, and ICMJE disclosure requirements. Dangerous for this audience.
+- **AI-"humanizer" / "make AI text 100% human" tricks** (promoted by some tools marketed as "humanizer" skills; the named-individual claim that stood here was unsourced and was removed 2026-08-27) — these exist to defeat AI-detection and enable *undisclosed* AI use, which conflicts with Nature/Springer, Elsevier, IEEE, and ICMJE disclosure requirements. Dangerous for this audience.
 - **Fully-automated "complete research paper" pipelines** (e.g. the academic-research-skills Claude Code suite's 10-stage "one instruction → finished paper" pipeline, https://tosea.ai/blog/academic-research-skills-claude-code-suite-guide-2026) — high risk of undisclosed AI authorship and citation fabrication at scale. Use component skills, not the end-to-end auto-paper.
 - **Gumroad reseller "21-part Claude AI course" (£135)** (https://thekitmarket.gumroad.com/l/jkats) — resell-license SEO product, not a trustworthy learning resource.
 - **Generic "beginnersinai.org", "perplexityaimagazine.com", "claudelab.net", "aionx.co" SEO explainers** — some are decent and *do* warn about fabricated citations (credit where due), but they are aggregated/SEO content; prefer the primary sources they summarize.
@@ -576,7 +576,7 @@ _Checked: 2026-08-18_
     "tier": "listed",
     "summary": "Webinars, threads and a newsletter aimed at non-technical academics learning Claude/Claude Code for writing and research (e.g. automating systematic-review screening).",
     "who_for": "Non-technical academics wanting approachable, research-focused guidance.",
-    "skip_if": "You want to avoid disclosure-evasion tactics — he has promoted AI-'humanizer' tricks to defeat AI detection.",
+    "skip_if": "[allegation redacted 2026-08-27: an unsourced claim about a named individual. The cited source contains no support for it and no other source was ever given.]",
     "published": "UNVERIFIED",
     "checked": "2026-08-18",
     "status": "live",

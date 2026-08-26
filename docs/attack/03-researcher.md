@@ -302,8 +302,7 @@ close the tab. The full rendered page text, pulled from the live DOM:
 > — apply claude code to academic writing tasks
 >
 > **Skip it if**
-> You want to avoid disclosure-evasion tactics — he has promoted AI-'humanizer' tricks
-> to defeat AI detection.
+> [allegation redacted 2026-08-27: an unsourced claim about a named individual. The cited source contains no support for it and no other source was ever given. Removed from data/items.json and from every file that repeated it.]
 >
 > **How we checked this one**
 > Found only. We found it and sorted it. **Nobody has looked at the content yet.**
@@ -467,8 +466,7 @@ way to collapse anything and no tier filter to cut it down.
 `listed`, `paid-once`, `published: UNVERIFIED`, source "Kit"). Verbatim from the live
 resource page:
 
-> **Skip it if** — You want to avoid disclosure-evasion tactics — he has promoted
-> AI-'humanizer' tricks to defeat AI detection.
+> **Skip it if** — [allegation redacted 2026-08-27: an unsourced claim about a named individual. The cited source contains no support for it and no other source was ever given. Removed from data/items.json and from every file that repeated it.]
 
 and, on the same page:
 
