@@ -396,12 +396,27 @@ button, .btn, .nav-link, .filter-option { min-height: 44px; }
   margin-top: var(--space-32);
 }
 
-/* Sticky, but it does not scroll inside itself. A capped, overflowing rail puts a
-   second scrollbar next to the page's own, and a reader then has to work out which one
-   moves what. The filters are short enough to simply be as tall as they are. */
+/* Sticky, and it scrolls inside itself once it has to.
+   It used to not. The note here said a capped rail puts a second scrollbar next to the
+   page's own and leaves a reader working out which one moves what — a fair worry — and
+   rested it on the filters being short enough to simply be as tall as they are. They
+   are not. Measured against a 694px viewport: the rail is 1047px with "More filters"
+   closed and 2046px with it open, so the last Level option sat 205px below the fold in
+   both states. A sticky element pins its own top, so that overflow could only be reached
+   by scrolling past all 353 cards to the end of the page, where the rail finally lets
+   go. Options nobody can reach are worse than a scrollbar.
+   `auto`, not `scroll`, so the second bar appears only in the case that would otherwise
+   hide a control. overscroll-behavior stops a flick inside the rail from carrying on
+   into the page, which is the confusion the original note was guarding against. The cap
+   is --space-48 because --space-24 sits above the rail and the same gap belongs below.
+   The rail is display:none on mobile, where the sheet does this job, so none of this
+   reaches a phone. */
 .filter-rail {
   position: sticky;
   top: var(--space-24);
+  max-height: calc(100vh - var(--space-48));
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 .filter-head {
   display: flex; align-items: center; justify-content: space-between;
