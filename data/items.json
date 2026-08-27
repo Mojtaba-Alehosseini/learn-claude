@@ -872,7 +872,7 @@
     "checked": "2026-08-20",
     "status": "live",
     "notes": "Contains an affiliate-style 15%-off code (LEARN15) — ignore it; verify all numbers against claude.com/pricing.",
-    "source": "Ssdnodes",
+    "source": "SSD Nodes",
     "official": false,
     "id": "r-0927578f60",
     "keywords": [
@@ -981,7 +981,7 @@
     "checked": "2026-08-20",
     "status": "live",
     "notes": "From a genuine Fortune-500 AI advisor; email opt-in for the guide but no paid course funnel.",
-    "source": "Alliekmiller",
+    "source": "Allie K. Miller",
     "official": false,
     "id": "r-4e238f0eb6",
     "keywords": [
@@ -1041,7 +1041,7 @@
     "checked": "2026-08-20",
     "status": "live",
     "notes": "Balanced; explicitly names when to skip it (browser-only teams, Linux, <3 integrations).",
-    "source": "Wotai",
+    "source": "WotAI",
     "official": false,
     "id": "r-0bf3998d24",
     "keywords": [
@@ -1100,7 +1100,7 @@
     "checked": "2026-08-20",
     "status": "live",
     "notes": "Honest about US/QuickBooks defaults; no income claims.",
-    "source": "Wrightmode",
+    "source": "Wright Mode",
     "official": false,
     "id": "r-adbe9bfc96",
     "keywords": [
@@ -1212,7 +1212,7 @@
     "checked": "2026-08-20",
     "status": "live",
     "notes": "One SCORE link in this guide is stale (see Dead links); otherwise a reputable aggregator.",
-    "source": "Uschamber",
+    "source": "US Chamber of Commerce",
     "official": false,
     "id": "r-a95c4aacae",
     "keywords": [
@@ -1265,7 +1265,7 @@
     "checked": "2026-08-20",
     "status": "live",
     "notes": "Only Part 1 is free; the 'free course' framing in third-party write-ups overstates what's included. Instructor: Robyn Anderson.",
-    "source": "Score",
+    "source": "SCORE",
     "official": false,
     "id": "r-c61a03881b",
     "keywords": [
@@ -1435,7 +1435,7 @@
     "checked": "2026-08-20",
     "status": "live",
     "notes": "Curated to official/first-party servers, which are the lower-security-risk choice.",
-    "source": "Mcpservers",
+    "source": "mcpservers.org",
     "official": false,
     "id": "r-23979203c3",
     "keywords": [
@@ -1556,7 +1556,7 @@
     "checked": "2026-08-20",
     "status": "live",
     "notes": "Vendor blog but even-handed; explicit 'skip if' list. Verify pricing against claude.com/pricing.",
-    "source": "Eigent",
+    "source": "Eigent AI",
     "official": false,
     "id": "r-941099b02f",
     "keywords": [
@@ -2254,7 +2254,7 @@
     "checked": "2026-08-19",
     "status": "live",
     "notes": "Finance-focused academic author; strong on reproducibility and grounding. Tools assumed: Claude Code, Python, MCP.",
-    "source": "Codes",
+    "source": "Vincent Gregoire",
     "official": false,
     "id": "r-9694bcc1eb",
     "keywords": [
@@ -2311,7 +2311,7 @@
     "checked": "2026-08-19",
     "status": "live",
     "notes": "Mentions the tools used (Claude Code, Lazygit, Cursor, Jupyter). Honest about caveats. Tools assumed: Claude Code, Python, git.",
-    "source": "Substack",
+    "source": "Kai-Cheng Yang",
     "official": false,
     "id": "r-e334d38f4e",
     "keywords": [
@@ -2481,7 +2481,7 @@
     "checked": "2026-08-19",
     "status": "live",
     "notes": "Medium member-only for some; approachable framing. Tools assumed: Claude Code.",
-    "source": "Medium",
+    "source": "Alan Jones",
     "official": false,
     "id": "r-8db161ffa1",
     "keywords": [
@@ -2534,7 +2534,7 @@
     "checked": "2026-08-19",
     "status": "live",
     "notes": "Cites Raymond Panko's spreadsheet-error research ('94% of spreadsheets have errors') to justify human checking. Notes Claude for Excel GA on May 7, 2026. Tools assumed: Claude Code, CSV.",
-    "source": "Ccforeveryone",
+    "source": "CC for Everyone",
     "official": false,
     "id": "r-f772cf9bea",
     "keywords": [
@@ -3368,7 +3368,7 @@
     "checked": "2026-08-20",
     "status": "live",
     "notes": "Assumes Claude Code + Figma. Single-author opinion; verify commands against official docs.",
-    "source": "Medium",
+    "source": "Katherine Yeh",
     "official": false,
     "id": "r-af950788ba",
     "keywords": [
@@ -3484,7 +3484,7 @@
     "checked": "2026-08-20",
     "status": "live",
     "notes": "Links out to related Figma-CLI and Miro case-study articles.",
-    "source": "Intodesignsystems",
+    "source": "Into Design Systems",
     "official": false,
     "id": "r-8e4939c735",
     "keywords": [
@@ -3541,7 +3541,7 @@
     "checked": "2026-08-20",
     "status": "live",
     "notes": "Includes an explicit security warning about giving Claude browser control.",
-    "source": "Cianfrani",
+    "source": "Louis Cianfrani",
     "official": false,
     "id": "r-70d0d98ee3",
     "keywords": [
@@ -3598,7 +3598,7 @@
     "checked": "2026-08-20",
     "status": "live",
     "notes": "Written near Claude Design's April 2026 launch; some usage-limit details may have changed.",
-    "source": "Designerup",
+    "source": "DesignerUp",
     "official": false,
     "id": "r-c2cf93c798",
     "keywords": [
@@ -3708,7 +3708,7 @@
     "checked": "2026-08-20",
     "status": "live",
     "notes": "Flags hallucinated pixel values and AI shipping 3:1 contrast as 'fine'.",
-    "source": "Artofstyleframe",
+    "source": "Art of Styleframe",
     "official": false,
     "id": "r-493d22de63",
     "keywords": [
@@ -3769,7 +3769,7 @@
     "checked": "2026-08-20",
     "status": "live",
     "notes": "Contains an upsell to the site's paid Claude Code course.",
-    "source": "Uxwritinghub",
+    "source": "UX Writing Hub",
     "official": false,
     "id": "r-519bc88a91",
     "keywords": [
@@ -3885,7 +3885,7 @@
     "checked": "2026-08-20",
     "status": "live",
     "notes": "Companion: App Store id6751764862 and his CLAUDE.md iOS rules thread on X.",
-    "source": "Krispuckett",
+    "source": "Kris Puckett",
     "official": false,
     "id": "r-8cf07e773d",
     "keywords": [
@@ -4069,7 +4069,7 @@
     "checked": "2026-08-20",
     "status": "live",
     "notes": "Honest that it's not one-shot magic; still a full design process.",
-    "source": "Medium",
+    "source": "Zhiyang",
     "official": false,
     "id": "r-e0f2160e55",
     "keywords": [
@@ -4179,7 +4179,7 @@
     "checked": "2026-08-20",
     "status": "live",
     "notes": "Also on YouTube and Spotify. Previewed via episode notes.",
-    "source": "Apple",
+    "source": "Dive Club / Ridd",
     "official": false,
     "id": "r-68ffabe46c",
     "keywords": [
@@ -5833,7 +5833,7 @@
     "checked": "2026-08-21",
     "status": "live",
     "notes": "Vendor-neutral primary source rather than an aggregator, which matters because MCP now has many competing tutorial sites. Spec and docs are maintained at modelcontextprotocol/modelcontextprotocol on GitHub: 9,010 stars, last push 2026-08-20 (checked 2026-08-21). No publish date on the page; the docs are versioned and updated.",
-    "source": "Modelcontextprotocol",
+    "source": "Model Context Protocol",
     "official": false,
     "id": "r-97df5a7a7d",
     "keywords": [
@@ -7033,7 +7033,7 @@
     "title": "How to use Claude Code for non-engineering use cases",
     "url": "https://departmentofproduct.substack.com/p/how-to-use-claude-code-for-non-engineering",
     "author": "Rich Holmes",
-    "source": "Substack",
+    "source": "Rich Holmes",
     "official": false,
     "roles": [
       "pm",
@@ -7195,7 +7195,7 @@
     "title": "How to Use Claude Code: Complete Tutorial for Product Managers",
     "url": "https://www.aakashg.com/cloud-code-tutorial-for-pm",
     "author": "Aakash Gupta, with Carl Vellotti",
-    "source": "Aakashg",
+    "source": "Aakash Gupta",
     "official": false,
     "roles": [
       "pm",
@@ -7297,7 +7297,7 @@
     "title": "Complete Guide to Claude Cowork (Claude Code for Everyone)",
     "url": "https://ccforeveryone.com/cowork",
     "author": "Carl Vellotti",
-    "source": "Ccforeveryone",
+    "source": "CC for Everyone",
     "official": false,
     "roles": [
       "non-technical",
@@ -7572,7 +7572,7 @@
     "title": "A Guide to Claude Code 2.0 and getting better at using coding agents",
     "url": "https://sankalp.bearblog.dev/my-experience-with-claude-code-20-and-how-to-get-better-at-using-coding-agents",
     "author": "sankalp",
-    "source": "Bearblog",
+    "source": "sankalp",
     "official": false,
     "roles": [
       "developer"
@@ -7631,7 +7631,7 @@
     "title": "Claude for K-12 Teachers: context steering, Projects and Skills",
     "url": "https://phillipalcock.substack.com/p/claude-for-teachers",
     "author": "Phillip Alcock",
-    "source": "Substack",
+    "source": "Phillip Alcock",
     "official": false,
     "roles": [
       "teacher"
@@ -8709,7 +8709,7 @@
     "checked": "2026-08-18",
     "status": "live",
     "notes": "A similarly-titled Medium version by the same author exists but is member-paywalled; this Substack version is free. Some linked videos continue into Claude Code (needs a terminal) — the Cowork and Design sections are the non-technical fit.",
-    "source": "Artificialcorner",
+    "source": "Artificial Corner",
     "official": false,
     "id": "r-2e4a3a2cf9",
     "keywords": [
@@ -8767,7 +8767,7 @@
     "checked": "2026-08-18",
     "status": "live",
     "notes": "This is the kind of creator-newsletter content the research brief specifically warned about — genuinely useful structure and steps, wrapped in heavy personal-brand framing rather than a slow personal-story intro.",
-    "source": "Substack",
+    "source": "Ruben Hassid",
     "official": false,
     "id": "r-fc4a37f0dd",
     "keywords": [
@@ -9390,7 +9390,7 @@
     "checked": "2026-08-21",
     "status": "live",
     "notes": "Paywalled with a 7-day trial. Explicitly a promotion for his Reforge AI Productivity course, which he discloses up front. Companion video at youtube.com/watch?v=zsAAaY8a63Q.",
-    "source": "Sachinrekhi",
+    "source": "Sachin Rekhi",
     "official": false,
     "id": "r-b15037bbf5",
     "keywords": [
@@ -9568,7 +9568,7 @@
     "checked": "2026-08-21",
     "status": "live",
     "notes": "The author states the piece was generated with Claude and checked against Anthropic references, and tells you not to treat it as authoritative. Verify the platform claims yourself. Current as of May 2026 by the author's own statement.",
-    "source": "Substack",
+    "source": "Stuart Miller",
     "official": false,
     "id": "r-fb4eb9411b",
     "keywords": [
@@ -9684,7 +9684,7 @@
     "checked": "2026-08-21",
     "status": "live",
     "notes": "Originally published December 2025, updated 2026-04-24. Treat the original date as a warning: check any command syntax against current Claude Code docs.",
-    "source": "Prodmgmt",
+    "source": "prodmgmt.world",
     "official": false,
     "id": "r-feff6f0299",
     "keywords": [
@@ -9918,7 +9918,7 @@
     "checked": "2026-08-21",
     "status": "live",
     "notes": "Cohort-free product. $49 one-time on Gumroad (growthpioneer.gumroad.com/l/pmos), or bundled in a $250/year Founders plan. Price checked 2026-08-21.",
-    "source": "Aakashg",
+    "source": "Aakash Gupta",
     "official": false,
     "id": "r-1336e553a1",
     "keywords": [
@@ -10193,7 +10193,7 @@
     "checked": "2026-08-21",
     "status": "live",
     "notes": "Price on 2026-08-21: $2,999 single certification; $3,999/year Pro (2 courses); $4,999/year Unlimited (10 courses). Start dates are not listed on the page. Instructor described as a practitioner from Intuit.",
-    "source": "Productschool",
+    "source": "Product School",
     "official": false,
     "id": "r-fc837da72d",
     "keywords": [
@@ -11132,7 +11132,7 @@
     "status": "live",
     "field": "medicine",
     "notes": "Individual clinician-researcher; strongest honest treatment of the fabrication problem found.",
-    "source": "Lszabo",
+    "source": "Laszlo Szabo",
     "official": false,
     "id": "r-3f8ff6f3f3",
     "keywords": [
@@ -11187,7 +11187,7 @@
     "checked": "2026-08-18",
     "status": "live",
     "notes": "Explicitly states it is not affiliated with Anthropic; strong on citation verification.",
-    "source": "Clauderesearcher",
+    "source": "Claude Researcher",
     "official": false,
     "id": "r-2546202143",
     "keywords": [
@@ -11294,7 +11294,7 @@
     "checked": "2026-08-18",
     "status": "live",
     "notes": "Landing page and post excerpts read 2026-08-27; full posts are gated behind an email subscription. Recent posts are registration pages for his own webinars and products (Silvi AI, Chat Academia) and one titled 'How to Make $100,000 on Social Media as Academic'. Webinars are paid, many threads free.",
-    "source": "Kit",
+    "source": "Mushtaq Bilal",
     "official": false,
     "id": "r-0ccfc4f72a",
     "keywords": [
@@ -12276,7 +12276,7 @@
     "alt_skip_if": [
       "Your assignment bans AI outright. The page states plainly that disclosure does not make prohibited use acceptable."
     ],
-    "source": "Tulane",
+    "source": "Tulane University Libraries",
     "official": false,
     "id": "r-8ba6552609",
     "keywords": [
@@ -12375,7 +12375,7 @@
     "checked": "2026-08-21",
     "status": "live",
     "notes": "Created August 2025, last updated 30 June 2026. Several citation links go to Cite Them Right, which needs an institutional subscription. The guide itself warns that departmental policies may have changed since publication.",
-    "source": "Libguides",
+    "source": "University of Warwick Library",
     "official": false,
     "id": "r-bc9341d0f4",
     "keywords": [
@@ -12425,7 +12425,7 @@
     "checked": "2026-08-21",
     "status": "live",
     "notes": "Updated four days before I checked, so this is the freshest integrity page in this list. Good explicit warning against letting AI generate your citations. Creative Commons licensed, so your library can reuse it.",
-    "source": "Stkate",
+    "source": "St. Catherine University Library",
     "official": false,
     "id": "r-57225bbae4",
     "keywords": [
@@ -12476,7 +12476,7 @@
     "checked": "2026-08-21",
     "status": "live",
     "notes": "Created 2023 and last updated 16 July 2026. I confirmed it is live and read the headings, not the full page, so this is metadata-level only.",
-    "source": "Princeton",
+    "source": "Princeton University Library",
     "official": false,
     "id": "r-960acd1524",
     "keywords": [
@@ -12572,7 +12572,7 @@
     "checked": "2026-08-21",
     "status": "live",
     "notes": "Page metadata gives 29 June 2026. Monash provides Copilot and Gemini, not Claude, so the tool-specific advice will not transfer.",
-    "source": "Monash",
+    "source": "Monash University",
     "official": false,
     "id": "r-504ad565db",
     "keywords": [
@@ -12623,7 +12623,7 @@
     "checked": "2026-08-21",
     "status": "live",
     "notes": "Creative Commons licensed. The guide itself is a large PDF at https://studentguidetoai.org/wp-content/uploads/2026/04/2026-Student-Guide-to-AI.pdf, which I confirmed downloads but did not read end to end. Earlier 2024 and 2025 editions are still on the site and are now outdated.",
-    "source": "Studentguidetoai",
+    "source": "Elon University",
     "official": false,
     "id": "r-25cc7a8b0d",
     "keywords": [
@@ -12672,7 +12672,7 @@
     "checked": "2026-08-21",
     "status": "live",
     "notes": "Last updated 6 July 2026. Generic to all chatbots, with no Claude-specific advice. One outbound link goes to the OpenAI API best-practices page, which is developer material and off-target for most students.",
-    "source": "Libguides",
+    "source": "Westmoreland County Community College Library",
     "official": false,
     "id": "r-9d1939cf1e",
     "keywords": [
@@ -12777,7 +12777,7 @@
     "checked": "2026-08-21",
     "status": "live",
     "notes": "Substack, so expect subscription prompts. The prompts are tool-agnostic and were not tuned for Claude specifically. Metadata date is the last modification, 28 January 2026.",
-    "source": "Substack",
+    "source": "Anna Mills",
     "official": false,
     "id": "r-44f5f08b9e",
     "keywords": [
@@ -12827,7 +12827,7 @@
     "checked": "2026-08-21",
     "status": "live",
     "notes": "Almost 12 months old but the argument is not tied to any product version. Audio only, transcript availability not verified. Also listed on Apple Podcasts and Spotify; this is the original publisher link.",
-    "source": "Buzzsprout",
+    "source": "Derek Bruff",
     "official": false,
     "id": "r-521c6b7dca",
     "keywords": [
@@ -13083,7 +13083,7 @@
     "checked": "2026-08-21",
     "status": "live",
     "notes": "The only place that states the actual course lengths, which the Skilljar pages omit. Everything is CC BY-NC-SA. Page copyright reads 2025, so check the course list is still complete before you quote it.",
-    "source": "Aifluencyframework",
+    "source": "AI Fluency Framework",
     "official": false,
     "id": "r-d26fb9ba53",
     "keywords": [
@@ -13432,7 +13432,7 @@
     "checked": "2026-08-21",
     "status": "live",
     "notes": "Juliani sells courses and cohorts and the page pushes his newsletter hard, so treat it as marketing-adjacent - but the embedded decision matrix is free, concrete and stands on its own. Screenshots are from February 2026, so the interface has already moved.",
-    "source": "Ajjuliani",
+    "source": "A.J. Juliani",
     "official": false,
     "id": "r-fccfc16f07",
     "keywords": [
@@ -13479,7 +13479,7 @@
     "checked": "2026-08-21",
     "status": "live",
     "notes": "Written by a practising head of department and honest about its own AI use. The model names and prices quoted (Sonnet 4.6, Opus 4.6, Pro at US$20 a month) were right in April 2026 and will go stale fast - check claude.com/pricing instead.",
-    "source": "Substack",
+    "source": "Paul Matthews",
     "official": false,
     "id": "r-a6467110a1",
     "keywords": [
@@ -13578,7 +13578,7 @@
     "checked": "2026-08-21",
     "status": "live",
     "notes": "Substack with a paid tier, so part of the list may sit behind the paywall. I read the preview and metadata only, not all 43 entries. Treat any grading-time claim with care - LLM grading is inconsistent between identical submissions.",
-    "source": "Substack",
+    "source": "Doan Winkel",
     "official": false,
     "id": "r-6cee334566",
     "keywords": [
@@ -13628,7 +13628,7 @@
     "checked": "2026-08-21",
     "status": "live",
     "notes": "Riley runs a think tank that is openly sceptical of generative AI in schools, so the framing is adversarial by design. His specific claims - the single pre-baked prompt, the Fable cut-off, the FERPA quiz item, the Learning Commons standards graph - are all checkable, which is why this is worth reading.",
-    "source": "Substack",
+    "source": "Benjamin Riley",
     "official": false,
     "id": "r-edbff45289",
     "keywords": [
@@ -13674,7 +13674,7 @@
     "checked": "2026-08-21",
     "status": "live",
     "notes": "One district's legal reading, not a ruling, and other districts have reached the opposite conclusion. I found it through Benjamin Riley's 27 July update and have not read it end to end - metadata and summaries only.",
-    "source": "Substack",
+    "source": "Dr. Joe Phillips",
     "official": false,
     "id": "r-76de44b7a7",
     "keywords": [
@@ -13780,7 +13780,7 @@
     "checked": "2026-08-21",
     "status": "live",
     "notes": "Independent academics with published papers behind the scale, revised twice (version 2 and 2.1) since 2023. I checked the site listing and the papers through search results, not the full site. Undated on the landing page, so confirm which version you are looking at.",
-    "source": "Aiassessmentscale",
+    "source": "AI Assessment Scale",
     "official": false,
     "id": "r-3ef5584cd6",
     "keywords": [
@@ -13829,7 +13829,7 @@
     "checked": "2026-08-21",
     "status": "live",
     "notes": "Nearly three years old, so treat the specifics as history - but it remains the most-cited institutional decision on AI detection, and Cornell, Pittsburgh and others followed. Included here mainly as the counterweight to vendor content that sells detectors as the answer to AI in assignments.",
-    "source": "Vanderbilt",
+    "source": "Vanderbilt University",
     "official": false,
     "id": "r-1b663b7646",
     "keywords": [
@@ -13980,7 +13980,7 @@
     "checked": "2026-08-21",
     "status": "live",
     "notes": "Published 2024. The page returned no content when I fetched it on 2026-08-21, so the framework details here come from search results and secondary summaries only - open it yourself before citing. It is the reference point that most other national frameworks cite.",
-    "source": "Unesco",
+    "source": "UNESCO",
     "official": false,
     "id": "r-b19d02a867",
     "keywords": [
@@ -14081,7 +14081,7 @@
     "checked": "2026-08-21",
     "status": "live",
     "notes": "MIT RAISE, non-commercial, aligned to the UNESCO student competency framework. Registration is needed for some materials. I checked the site listing and its own descriptions, not the lesson files, and no publication or revision date is shown per unit.",
-    "source": "Dayofai",
+    "source": "MIT RAISE",
     "official": false,
     "id": "r-11991cab3c",
     "keywords": [
@@ -14428,7 +14428,7 @@
     "checked": "2026-08-18",
     "status": "live",
     "notes": "Flagged as possibly outdated — more than 12 months old and written before most newsroom AI policies existed.",
-    "source": "Ethicscentral",
+    "source": "SPJ Ethics Central",
     "official": false,
     "id": "r-3edab99ecf",
     "keywords": [
@@ -14531,7 +14531,7 @@
     "checked": "2026-08-18",
     "status": "live",
     "notes": "Aimed at science/specialist journalism outlets, but the framework generalizes to most newsrooms.",
-    "source": "Theopennotebook",
+    "source": "The Open Notebook",
     "official": false,
     "id": "r-f0efbc24c6",
     "keywords": [
@@ -14579,7 +14579,7 @@
     "checked": "2026-08-18",
     "status": "live",
     "notes": "Secondary reporting; a standalone public URL for the Guardian's own editorial code text was not independently located during this research.",
-    "source": "Journalism",
+    "source": "Journalism.co.uk",
     "official": false,
     "id": "r-5c65e32476",
     "keywords": [
@@ -14627,7 +14627,7 @@
     "checked": "2026-08-18",
     "status": "live",
     "notes": "Written by academic media researchers and published via Nieman Lab and The Conversation; well-sourced against public policy documents and BBC/EBU research.",
-    "source": "Niemanlab",
+    "source": "Nieman Lab",
     "official": false,
     "id": "r-df4ca9e8a9",
     "keywords": [
@@ -14722,7 +14722,7 @@
     "checked": "2026-08-18",
     "status": "live",
     "notes": "Named individual author with a stated methodology (Wikipedia + GPTZero + Grammarly + personal use); reads as genuine practitioner writing, not content-farm output.",
-    "source": "Willfrancis",
+    "source": "Will Francis",
     "official": false,
     "id": "r-da0e8aedbc",
     "keywords": [
@@ -14784,7 +14784,7 @@
     "checked": "2026-08-18",
     "status": "live",
     "notes": "Named author at an established PR/Wikipedia-strategy agency; explicitly credits Wikipedia as the source rather than presenting the analysis as original.",
-    "source": "Beutlerink",
+    "source": "Beutler Ink",
     "official": false,
     "id": "r-0d49487f31",
     "keywords": [
@@ -14944,7 +14944,7 @@
     "checked": "2026-08-18",
     "status": "live",
     "notes": "Author runs paid training sessions on this exact topic, so the post is a soft pitch too — the free content itself is still specific and practical.",
-    "source": "Localizelikeapro",
+    "source": "Localize Like A Pro",
     "official": false,
     "id": "r-a03d9d3031",
     "keywords": [
@@ -14996,7 +14996,7 @@
     "checked": "2026-08-18",
     "status": "live",
     "notes": "Author's identity/credentials weren't confirmed beyond the Substack byline; treat as one writer's anecdote, not an authoritative source.",
-    "source": "Substack",
+    "source": "Restructured",
     "official": false,
     "id": "r-020cf5d9f6",
     "keywords": [
@@ -15106,7 +15106,7 @@
     "checked": "2026-08-18",
     "status": "live",
     "notes": "Author discloses 20 years as a journalist and credits Joe Amditis (see the claude-skills-journalism entry) for guidance, which corroborates that source.",
-    "source": "Medium",
+    "source": "Stephen Stirling",
     "official": false,
     "id": "r-3b623d0e24",
     "keywords": [
@@ -15158,7 +15158,7 @@
     "checked": "2026-08-18",
     "status": "live",
     "notes": "Author's primary audience is developers; the writing-voice content is a secondary application of a coding workflow, so parts may be more elaborate than a non-technical writer needs.",
-    "source": "Ranthebuilder",
+    "source": "ranthebuilder.cloud",
     "official": false,
     "id": "r-7f8fb0cc8e",
     "keywords": [

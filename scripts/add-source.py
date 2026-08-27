@@ -50,6 +50,75 @@ NAMES = [
     ("towardsdatascience.com", "Towards Data Science", False),
     ("uxdesign.cc", "UX Collective", False),
     ("productimpactpod.com", "Product Impact", False),
+
+    # ---------------------------------------------------------------------------
+    # Written out 2026-08-27, from each entry's own `author` field. Before this, 60
+    # hosts fell through to prettify() and the publisher line on 51 cards read a
+    # squashed domain fragment - "Ccforeveryone", "Artificialcorner", "Uxwritinghub",
+    # "Aifluencyframework" - or, worse, named the wrong organisation entirely:
+    # "Libguides" for two different university libraries, "Codes" for
+    # vincent.codes.finance, "Stkate" for St. Catherine University.
+    #
+    # prettify() is not at fault and is not being replaced: it is the last resort, and
+    # a last resort that reads badly is doing its job, because it makes the gap
+    # visible. The gap is what was never closed.
+    # ---------------------------------------------------------------------------
+    ("aakashg.com", "Aakash Gupta", False),
+    # These four happen to come out right in prettify(), which is exactly why they are
+    # written down: nobody should have to re-derive whether a correct-looking name was
+    # chosen or guessed.
+    ("every.to", "Every", False),
+    ("learn.g2.com", "G2", False),
+    ("gov.uk", "GOV.UK", False),
+    ("kenny-kane.com", "Kenny Kane", False),
+    ("academy.score.org", "SCORE", False),
+    ("aiassessmentscale.com", "AI Assessment Scale", False),
+    ("aifluencyframework.org", "AI Fluency Framework", False),
+    ("airtree.vc", "Airtree", False),
+    ("ajjuliani.com", "A.J. Juliani", False),
+    ("alliekmiller.com", "Allie K. Miller", False),
+    ("artificialcorner.com", "Artificial Corner", False),
+    ("artofstyleframe.com", "Art of Styleframe", False),
+    ("beutlerink.com", "Beutler Ink", False),
+    ("ccforeveryone.com", "CC for Everyone", False),
+    ("cianfrani.dev", "Louis Cianfrani", False),
+    ("clauderesearcher.com", "Claude Researcher", False),
+    ("codecademy.com", "Codecademy", False),
+    ("dayofai.org", "MIT RAISE", False),
+    ("designerup.co", "DesignerUp", False),
+    ("eigent.ai", "Eigent AI", False),
+    ("enterpret.com", "Enterpret", False),
+    ("ethicscentral.org", "SPJ Ethics Central", False),
+    ("intodesignsystems.com", "Into Design Systems", False),
+    ("journalism.co.uk", "Journalism.co.uk", False),
+    ("learning-claude.com", "Learning Claude", False),
+    ("libguides.princeton.edu", "Princeton University Library", False),
+    ("libguides.stkate.edu", "St. Catherine University Library", False),
+    ("libguides.tulane.edu", "Tulane University Libraries", False),
+    ("localizelikeapro.com", "Localize Like A Pro", False),
+    ("lszabo.me", "Laszlo Szabo", False),
+    ("mcpservers.org", "mcpservers.org", False),
+    ("modelcontextprotocol.io", "Model Context Protocol", False),
+    ("monash.edu", "Monash University", False),
+    ("niemanlab.org", "Nieman Lab", False),
+    ("permissionless.krispuckett.com", "Kris Puckett", False),
+    ("prodmgmt.world", "prodmgmt.world", False),
+    ("productschool.com", "Product School", False),
+    ("ranthebuilder.cloud", "ranthebuilder.cloud", False),
+    ("reforge.com", "Reforge", False),
+    ("sachinrekhi.com", "Sachin Rekhi", False),
+    ("snyk.io", "Snyk", False),
+    ("ssdnodes.com", "SSD Nodes", False),
+    ("studentguidetoai.org", "Elon University", False),
+    ("theopennotebook.com", "The Open Notebook", False),
+    ("unesco.org", "UNESCO", False),
+    ("uschamber.com", "US Chamber of Commerce", False),
+    ("uxwritinghub.com", "UX Writing Hub", False),
+    ("vanderbilt.edu", "Vanderbilt University", False),
+    ("vincent.codes.finance", "Vincent Gregoire", False),
+    ("willfrancis.com", "Will Francis", False),
+    ("wotai.co", "WotAI", False),
+    ("wrightmode.com", "Wright Mode", False),
     ("dev.to", "DEV", False),
     ("reddit.com", "Reddit", False),
     ("news.ycombinator.com", "Hacker News", False),
@@ -145,17 +214,50 @@ def prettify(host):
 # Hosts that publish nothing themselves — the channel or account is the real publisher.
 # Naming the platform here would put "YouTube" on 72 cards and hide the fact that 20 of
 # them are Anthropic's own videos.
-PLATFORMS = ("youtube.com", "youtu.be")
+PLATFORMS = ("youtube.com", "youtu.be",
+             # Added 2026-08-27. The same argument as YouTube, and it had the same
+             # effect: "Substack" was the publisher on 11 cards and "Medium" on 4,
+             # while every one of those entries already recorded a real author.
+             # "Libguides" was the publisher on two different university libraries -
+             # one name for two institutions, which is worse than ugly.
+             #
+             # A Medium *publication* is not on this list. UX Collective and Design
+             # Systems Collective have their own editors and their own standards, and
+             # they stay mapped by name above. The test is whether the host chooses
+             # what appears on it.
+             "substack.com", "medium.com", "libguides.com", "buzzsprout.com",
+             "kit.com", "bearblog.dev", "podcasts.apple.com")
 
 # Channels that are Anthropic speaking in their own voice.
 OFFICIAL_AUTHORS = {"anthropic", "claude", "anthropic ai", "claude by anthropic"}
+
+
+def publisher_from_author(author):
+    """A byline is not a publisher line. Trim one into the other.
+
+    Reached only for hosts in PLATFORMS, where the account is the publisher and the
+    `author` field is all we have. YouTube channel names arrive clean and pass straight
+    through; a Substack or LibGuides author does not:
+
+        "Anna Mills, College of Marin, with the PAIRR project team (UC Davis)"
+                                                              -> "Anna Mills"
+        "Doan Winkel (How to Teach With AI)"                  -> "Doan Winkel"
+        "Derek Bruff, Intentional Teaching podcast"           -> "Derek Bruff"
+        "University of Warwick Library"                       -> unchanged
+
+    Cut at the first comma or opening bracket and nowhere else. Anything cleverer
+    starts guessing which half of "Firstname Lastname (Publication)" the reader wanted,
+    and both answers are defensible, so the rule stays boring and predictable.
+    """
+    name = re.split(r",| \(", (author or "").strip(), maxsplit=1)[0].strip()
+    return name or (author or "").strip()
 
 
 def source_for(url, author=""):
     host = re.split(r"/+", url)[1].lower()
 
     if any(host == d or host.endswith("." + d) for d in PLATFORMS):
-        name = (author or "").strip()
+        name = publisher_from_author(author)
         if not name:
             return "YouTube", False
         return name, name.lower() in OFFICIAL_AUTHORS
@@ -170,17 +272,34 @@ def main():
     items = json.load(open(ITEMS, encoding="utf-8"))
     unmapped = collections.Counter()
 
+    # This used to count every host missing from NAMES, and print prettify(host) beside
+    # it. Both were wrong once PLATFORMS existed: a Substack post is handled by the
+    # platform branch and never touches prettify, so the report was naming hosts that
+    # were fine and showing a name the reader would never see. Count only the items that
+    # really came out of the fallback, and show the name actually written.
+    guessed = []
     for x in items:
+        before = x.get("source", "")
         name, official = source_for(x["url"], x.get("author", ""))
         x["source"] = name
         x["official"] = official
         host = re.split(r"/+", x["url"])[1].lower()
-        if not any(host == d or host.endswith("." + d) for d, _, _ in NAMES):
+        mapped = any(host == d or host.endswith("." + d) for d, _, _ in NAMES)
+        platform = any(host == d or host.endswith("." + d) for d in PLATFORMS)
+        if not mapped and not platform:
             unmapped[host] += 1
+            guessed.append((host, name, x["title"]))
+            # The failure that mangled "Product Impact" into "Productimpactpod" was
+            # silent because only a total was printed. A guess that overwrites something
+            # somebody wrote by hand says so, by name, every run.
+            if before and before != name:
+                print("  guessed %r over the %r that was already there -- %s"
+                      % (name, before, x["title"][:52]))
 
     if "--check" in sys.argv:
-        print(f"{len(unmapped)} unmapped hosts, {sum(unmapped.values())} items:")
-        for h, n in unmapped.most_common(30):
+        print(f"{len(unmapped)} hosts fall through to prettify(), "
+              f"{sum(unmapped.values())} items:")
+        for h, n in unmapped.most_common(40):
             print(f"   {n:3}  {h:38} -> {prettify(h)}")
         return
 
