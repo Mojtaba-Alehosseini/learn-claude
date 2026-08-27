@@ -19175,5 +19175,219 @@
       "eliminate the default flat ai writing register",
       "create reusable brand voice instructions for team content"
     ]
+  },
+  {
+    "title": "Upload files to Claude (Help Center)",
+    "url": "https://support.claude.com/en/articles/8241126-upload-files-to-claude",
+    "author": "Anthropic",
+    "source": "Claude Help Center",
+    "official": true,
+    "roles": [
+      "data-analyst",
+      "non-technical",
+      "business-founder",
+      "researcher"
+    ],
+    "level": "never-used",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "2026-07-23",
+    "checked": "2026-08-27",
+    "summary": "The five clicks that put your own data in front of Claude: the plus button, add files or photos, choose, open - or drag the file onto the window. Lists what it will actually accept, including CSV and XLSX, and the ceilings on each.",
+    "who_for": "Anyone with a spreadsheet on their laptop and no idea how to get Claude to look at it. The step every data guide assumes you have already done.",
+    "skip_if": "Two ceilings here are different and easy to trip over: a chat takes 500MB per file, a Project takes 30MB, and twenty files is the limit either way. XLSX also needs code execution switched on first, which the page mentions once. Nothing in it tells you to check the answers Claude gives back, and you should.",
+    "notes": "Dated 2026-07-23 on the page. Read via fetch on 2026-08-27, not opened by a person. Says nothing about what happens to an uploaded file afterwards - for that, see Anthropic's retention page, also in this catalogue.",
+    "prerequisites": [],
+    "teaches": [
+      "get a file from your computer in front of Claude",
+      "know which file types and sizes Claude will accept",
+      "tell the difference between a chat upload and a Project upload"
+    ],
+    "keywords": [
+      "upload file",
+      "attach spreadsheet",
+      "csv upload",
+      "xlsx",
+      "drag and drop",
+      "file size limit",
+      "add data to claude",
+      "how do i give claude my file"
+    ],
+    "questions": [
+      "how do i upload a spreadsheet to claude",
+      "what file types can claude read",
+      "why won't my excel file upload to claude"
+    ],
+    "id": "r-5a7be113ab"
+  },
+  {
+    "title": "How long do you store my data?",
+    "url": "https://privacy.claude.com/en/articles/10023548-how-long-do-you-store-my-data",
+    "author": "Anthropic",
+    "source": "Claude Privacy Center",
+    "official": true,
+    "roles": [
+      "data-analyst",
+      "non-technical",
+      "business-founder",
+      "researcher",
+      "teacher"
+    ],
+    "level": "never-used",
+    "topics": [
+      "safety"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "2026-07-01",
+    "checked": "2026-08-27",
+    "summary": "Anthropic's own numbers on how long it keeps what you send: a deleted chat leaves your history at once and the back end within 30 days, but if you allowed your chats to improve Claude, they can be held de-identified for five years. Usage-policy violations are kept two years, the safety scores behind them seven.",
+    "who_for": "Anyone about to paste work data into Claude and wanting the retention figures from the company itself rather than from a blog that read the terms once.",
+    "skip_if": "It covers Free, Pro and Max only. If your data sits on Team, Enterprise or the API the answers are different and this is the wrong page. It also never once says the word attachment, so the file you upload is exactly the thing it does not address.",
+    "notes": "Dated 2026-07-01 on the page. Read via fetch on 2026-08-27, not opened by a person. It links onward to the setting that decides which retention you get. Chosen over a well-written independent guide that stated Pro excludes training by default - Anthropic's own 2025-08-28 consumer terms update makes it a required choice for Free, Pro and Max, so that guide is wrong on the sentence that matters most.",
+    "prerequisites": [],
+    "teaches": [
+      "know how long Claude keeps a deleted conversation",
+      "know what allowing model improvement costs you in retention",
+      "know that consumer and commercial plans answer this differently"
+    ],
+    "keywords": [
+      "data retention",
+      "how long kept",
+      "delete chat",
+      "five years",
+      "30 days",
+      "privacy",
+      "confidential data",
+      "is my data safe",
+      "training data"
+    ],
+    "questions": [
+      "how long does anthropic keep my chats",
+      "is my company data used to train claude",
+      "what happens when i delete a claude conversation"
+    ],
+    "id": "r-9021f6f590"
+  },
+  {
+    "title": "Analyze patterns in user feedback (use case)",
+    "url": "https://academy.claude.com/use-cases/analyze-patterns-in-user-feedback",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "designer",
+      "pm",
+      "data-analyst"
+    ],
+    "level": "basic",
+    "topics": [
+      "chat-prompting",
+      "mcp"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free-account",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-27",
+    "summary": "Fifteen minutes on pulling support tickets, NPS answers and interview transcripts into one place and having Claude name the themes across all of them. Ends with a classification tab you can audit, so you can see which piece of feedback got tagged with which theme rather than taking the summary on trust.",
+    "who_for": "Designers and product managers holding more research than they can read, who want the patterns without losing the ability to check them.",
+    "skip_if": "It starts from feedback you already have gathered and connected - Intercom, an NPS export, transcripts - so there is nothing here about running the research in the first place. Its own caution is the one to keep: Claude will tell you what is in the data, and whether that data represents your users is still your judgment.",
+    "notes": "Read via fetch on 2026-08-27, not opened by a person. No publication date shown on the page; the site footer reads 2026. No terminal and no paid plan; connectors are optional.",
+    "prerequisites": [
+      "feedback already collected in one or more sources"
+    ],
+    "teaches": [
+      "find themes across support tickets, surveys and transcripts at once",
+      "audit which feedback Claude put under which theme",
+      "separate a real pattern from a loud minority"
+    ],
+    "keywords": [
+      "user feedback",
+      "research synthesis",
+      "themes",
+      "nps",
+      "support tickets",
+      "interview transcripts",
+      "affinity mapping",
+      "what are users saying"
+    ],
+    "questions": [
+      "how do i find themes across lots of user feedback",
+      "can claude summarise interview transcripts",
+      "how do i check what claude tagged"
+    ],
+    "id": "r-b6899b89d9"
+  },
+  {
+    "title": "The UX Researcher's Guide to Claude, Claude Cowork, and Claude Code",
+    "url": "https://productimpactpod.com/news/ux-researcher-guide-claude-tools/",
+    "author": "Brittany Hobbs",
+    "source": "Productimpactpod",
+    "official": false,
+    "roles": [
+      "designer",
+      "pm"
+    ],
+    "level": "confident",
+    "topics": [
+      "cowork",
+      "claude-code",
+      "chat-prompting",
+      "safety"
+    ],
+    "format": "article",
+    "time": "under-1hr",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "2026-04-27",
+    "checked": "2026-08-27",
+    "summary": "Seven and a half thousand words separating which of the three Claude surfaces suits which research job: claude.ai for desk research and interview guides, Cowork for holding one coding taxonomy across sessions, Claude Code for forty transcripts at once with a verbatim quote and a confidence rating behind every code.",
+    "who_for": "A researcher already using Claude for single transcripts who has hit the point where the synthesis has to hold across a whole study.",
+    "skip_if": "Its sharpest line is also its warning: statistical coherence is not research validity, and a synthesis that smooths over an edge case has failed at the finding level. If you want a tool that hands you themes to present, this guide will spend most of its length arguing you out of that.",
+    "notes": "Read via fetch on 2026-08-27, not opened by a person. Named author, 20 years in UX research; she promotes her own consultancies on the page but nothing is gated and there is no course funnel. Updated 2026-07-27. Says plainly that Cowork has no BAA coverage in any configuration and that Claude Code needs zero-data-retention set explicitly, and tells you to pseudonymise before pasting because a face and a voice identify someone as surely as a name.",
+    "prerequisites": [
+      "experience running and analysing qualitative research",
+      "some familiarity with claude.ai"
+    ],
+    "teaches": [
+      "choose between claude.ai, Cowork and Claude Code for a research task",
+      "hold one coding taxonomy consistent across many sessions",
+      "build a disconfirmation request into every synthesis prompt",
+      "pseudonymise participant data before it reaches a model"
+    ],
+    "keywords": [
+      "ux research",
+      "qualitative coding",
+      "transcripts",
+      "synthesis",
+      "taxonomy",
+      "cowork",
+      "claude code",
+      "pseudonymise",
+      "disconfirming evidence"
+    ],
+    "questions": [
+      "how do i code forty interview transcripts consistently",
+      "should i use cowork or claude code for research",
+      "how do i stop claude smoothing over the outliers"
+    ],
+    "id": "r-47ee07d20b"
   }
 ]
