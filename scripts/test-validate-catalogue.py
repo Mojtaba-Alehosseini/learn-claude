@@ -69,6 +69,33 @@ CASES = [
      lambda i, p: i[0].update({"skip_if": "N/A."}),
      "skip_if says nothing"),
 
+    # The one that got through. "Plans & Pricing" carried this exact shape for months:
+    # `n/a` was already in PLACEHOLDERS and the entry still passed, because the match was
+    # on the whole string and anything after the placeholder made it unequal.
+    ("skip_if is a placeholder with an excuse after it",
+     lambda i, p: i[0].update(
+         {"skip_if": "N/A - always verify pricing here rather than in third-party posts."}),
+     "skip_if says nothing"),
+
+    ("skip_if opens with TBD",
+     lambda i, p: i[0].update({"skip_if": "TBD: nobody has written this one yet."}),
+     "skip_if says nothing"),
+
+    # And the other half, which matters more than the two above. The opener rule must not
+    # reject a real sentence that happens to start with a word from the placeholder list.
+    # A rule that rejects this is a rule somebody switches off the first time it is in
+    # the way, and then the two cases above stop being caught as well.
+    ("skip_if legitimately opens with None",
+     lambda i, p: i[0].update(
+         {"skip_if": "None of the examples are in Python, so you are translating as you "
+                     "read if that is your language."}),
+     None),                                   # None = this one must PASS
+
+    ("skip_if legitimately opens with Anyone",
+     lambda i, p: i[0].update(
+         {"skip_if": "Anyone who has already built a server will find the first half slow."}),
+     None),
+
     ("role outside the vocabulary",
      lambda i, p: i[0].update({"roles": ["astronaut"]}),
      "is not in the vocabulary"),

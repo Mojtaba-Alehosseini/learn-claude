@@ -66,8 +66,22 @@ DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 
 # Ways of writing "I did not fill this in". They pass an empty check and fail the
 # reader, which is worse than an empty field because nothing flags them.
-PLACEHOLDERS = {"n/a", "na", "none", "nobody", "no one", "no-one", "nil", "tbd",
-                "todo", "unknown", "unclear", "everyone", "anyone", ""}
+PLACEHOLDERS = {"n/a", "n\a", "n.a.", "not applicable", "na", "none", "nobody",
+                "no one", "no-one", "nil", "tbd", "todo", "unknown", "unclear",
+                "everyone", "anyone", ""}
+
+# A placeholder with an excuse after it. "Plans & Pricing" carried
+#   "N/A - always verify pricing here rather than in third-party posts."
+# for months. `n/a` was already in the set above and the entry still passed, because the
+# match was on the whole string: put anything after the placeholder and it is no longer
+# equal to it. The line is still an empty line wearing a sentence.
+#
+# Only the forms that cannot begin a real sentence are listed here. "none", "everyone",
+# "anyone", "unknown" and "nobody" are deliberately NOT in this set - "None of the
+# examples are in Python" is a perfectly good skip_if, and a rule that rejects it is a
+# rule somebody switches off the first time it is in the way.
+PLACEHOLDER_OPENERS = ("n/a", "n\a", "n.a.", "na", "nil", "tbd", "todo",
+                       "not applicable")
 
 
 # ------------------------------------------------------------------ ui.js ----
@@ -247,7 +261,11 @@ def main(argv=None):
         #    catalogue is "You don't use R.", and a rule that rejects that is a rule
         #    that will be switched off the first time it is in the way.
         skip = str(item.get("skip_if", "")).strip()
-        if skip and (skip.lower().strip(" .!-—") in PLACEHOLDERS or len(skip) < 8):
+        low = skip.lower().strip(" .!-—")
+        opener = any(low == o or low.startswith(o + " ") or low.startswith(o + ",")
+                     or low.startswith(o + ":") or low.startswith(o + ";")
+                     for o in PLACEHOLDER_OPENERS)
+        if skip and (low in PLACEHOLDERS or opener or len(skip) < 8):
             bad(n, item, "skip_if says nothing: %r. Every entry has to name someone "
                          "this is wrong for." % skip)
 
