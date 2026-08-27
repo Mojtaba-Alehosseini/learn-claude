@@ -351,6 +351,27 @@ def main(argv=None):
                                                claim.get("step"), claim.get("of"),
                                                claim.get("path")))
 
+    # 9b. and the third way this relationship can lie. Rule 7 catches a step that shares
+    #     no role with its path. It does not catch the reverse: a path declaring a role
+    #     that not one of its steps serves. Both paths naming a student contained zero
+    #     steps tagged student, and the page said "For a student" anyway - a promise made
+    #     on the index and broken by every step underneath it.
+    if os.path.exists(paths_path):
+        by_id = {i.get("id"): i for i in items}
+        for path in json.load(open(paths_path, encoding="utf-8")):
+            served = set()
+            for step in path.get("steps", []):
+                it = by_id.get(step.get("item"))
+                if it:
+                    served |= set(it.get("roles") or [])
+            for role in path.get("roles") or []:
+                if role not in served:
+                    path_errors.append(
+                        "  path %-22s declares role %r and not one of its %d steps is "
+                        "tagged with it. Tag the steps that really serve that reader, or "
+                        "drop the role from the path in scripts/build-paths.py."
+                        % (path.get("id"), role, len(path.get("steps", []))))
+
     # 10. one course, harvested from two hosts, becomes two cards. The URL de-dupe
     #     cannot see it: two different URLs are two different resources as far as
     #     stable-ids.py is concerned, and correctly so. What it cost: the only developer

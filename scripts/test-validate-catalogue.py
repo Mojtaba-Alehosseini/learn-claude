@@ -132,6 +132,23 @@ CASES = [
               paths=[{"path": p[0]["id"], "step": 99, "of": len(p[0]["steps"])}])),
      "does not list it there"),
 
+    # The reverse of the step-role rule above. A path may promise "For a teacher" on the
+    # index while not one step underneath it is tagged teacher - which is exactly what
+    # both student-facing paths did.
+    # Real role names throughout, so this fails only for the reason under test. An
+    # invented name like "astronaut" would trip the vocabulary rule first and the case
+    # would pass without ever exercising this one.
+    ("a path declares a role no step serves",
+     lambda i, p: p[0].__setitem__("roles", ["designer"]),
+     "and not one of its"),
+
+    ("a path declares a role that exactly one step serves - must pass",
+     lambda i, p: (
+         p[0].__setitem__("roles", ["designer"]),
+         next(x for x in i if x["id"] == p[0]["steps"][0]["item"])["roles"].append("designer")
+     ),
+     None),
+
     # One course harvested from two hosts is two cards, and the URL de-dupe cannot see
     # it - two URLs really are two resources to stable-ids.py. This is the check that
     # notices, and the allowance file is what stops it becoming a nuisance.

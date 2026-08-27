@@ -130,6 +130,8 @@
       "data-analyst",
       "non-technical",
       "researcher",
+      "student",
+      "teacher",
       "writer-marketer"
     ],
     "level": "never-used",
@@ -619,7 +621,8 @@
     "author": "Anthropic",
     "roles": [
       "business-founder",
-      "non-technical"
+      "non-technical",
+      "teacher"
     ],
     "level": "basic",
     "topics": [
@@ -1647,7 +1650,8 @@
     "author": "Anthropic Platform Docs",
     "roles": [
       "data-analyst",
-      "researcher"
+      "researcher",
+      "student"
     ],
     "level": "confident",
     "topics": [
@@ -7948,7 +7952,10 @@
     "url": "https://support.claude.com/en/articles/8114491-get-started-with-claude",
     "author": "Anthropic Help Center",
     "roles": [
-      "non-technical"
+      "business-founder",
+      "non-technical",
+      "student",
+      "teacher"
     ],
     "level": "never-used",
     "topics": [
@@ -8055,7 +8062,10 @@
     "url": "https://claude.com/resources/tutorials/why-do-ai-models-hallucinate",
     "author": "Anthropic (AI Fluency tutorial series)",
     "roles": [
-      "non-technical"
+      "business-founder",
+      "non-technical",
+      "student",
+      "teacher"
     ],
     "level": "never-used",
     "topics": [
@@ -8782,7 +8792,10 @@
     "url": "https://ruben.substack.com/p/claude",
     "author": "Ruben Hassid",
     "roles": [
-      "non-technical"
+      "business-founder",
+      "non-technical",
+      "student",
+      "teacher"
     ],
     "level": "basic",
     "topics": [
@@ -10727,8 +10740,11 @@
     "url": "https://support.claude.com/en/articles/9517075-what-are-projects",
     "author": "Anthropic",
     "roles": [
+      "business-founder",
       "non-technical",
-      "researcher"
+      "researcher",
+      "student",
+      "teacher"
     ],
     "level": "basic",
     "topics": [
