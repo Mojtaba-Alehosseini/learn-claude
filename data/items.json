@@ -1651,7 +1651,8 @@
     "url": "https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/reduce-hallucinations",
     "author": "Anthropic Platform Docs",
     "roles": [
-      "data-analyst"
+      "data-analyst",
+      "researcher"
     ],
     "level": "confident",
     "topics": [
@@ -10859,6 +10860,7 @@
     "url": "https://support.claude.com/en/articles/9517075-what-are-projects",
     "author": "Anthropic",
     "roles": [
+      "non-technical",
       "researcher"
     ],
     "level": "basic",
