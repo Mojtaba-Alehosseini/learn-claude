@@ -24,3 +24,19 @@ docs/design/*.pdf
 data/items.js
 data/paths.js
 data/search-keywords.js
+
+# --- Deliberately NOT ignored, so nobody adds them later --------------------
+#
+# docs/FIX-THESE*.md and docs/attack/FIX-*.md are the briefs Morteza wrote for each
+# round of work. They are tracked on purpose: docs/attack/RUN-LOG.md records what was
+# done and these record what was asked, and one without the other is half a record.
+# They arrived in git by accident - a `git add -A` in commit 87a7c24 swept up nine
+# untracked files under a commit message about something else - and were then reviewed
+# and kept rather than removed, because rewriting pushed history costs more than the
+# tidiness is worth.
+#
+# .claude/launch.json is tracked for the same kind of reason: it is how anyone cloning
+# this starts the dev server, and it holds nothing private.
+#
+# The real fix was not a gitignore entry. It was to stop staging with `git add -A` and
+# name the paths instead, which is what every commit since does.
