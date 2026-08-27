@@ -5150,7 +5150,8 @@
     "url": "https://academy.claude.com/courses/claude-code-101",
     "author": "Anthropic (Claude Academy)",
     "roles": [
-      "developer"
+      "developer",
+      "pm"
     ],
     "level": "basic",
     "topics": [
@@ -5167,7 +5168,7 @@
     "published": "UNVERIFIED",
     "checked": "2026-08-21",
     "status": "live",
-    "notes": "Anthropic's courses moved from anthropic.skilljar.com to academy.claude.com; old links redirect, so prefer this URL. The course page is client-rendered, so lesson count and runtime could not be read directly and the time given here is an estimate. Free with an email signup; certificate on completion.",
+    "notes": "Anthropic's courses moved from anthropic.skilljar.com to academy.claude.com; old links redirect, so prefer this URL. The course page is client-rendered, so lesson count and runtime could not be read directly and the time given here is an estimate. Free with an email signup; certificate on completion. Merged 2026-08-27 with the anthropic.skilljar.com row for the same course, which the migration note above already marked as the old URL. That row estimated the length as a half day and said so; this one records under-1hr and the page states no duration, so the length is unverified either way.",
     "source": "Anthropic Academy",
     "official": true,
     "id": "r-7340ad4c33",
@@ -5191,6 +5192,13 @@
       "install and configure claude code across terminal, IDE, and desktop",
       "navigate the explore-plan-code-commit loop",
       "use context commands and permission modes effectively"
+    ],
+    "paths": [
+      {
+        "path": "claude-code-start",
+        "step": 1,
+        "of": 6
+      }
     ]
   },
   {
@@ -9094,71 +9102,6 @@
     ],
     "prerequisites": [
       "basic understanding of git or github repos"
-    ]
-  },
-  {
-    "title": "Claude Code 101 (Anthropic Academy)",
-    "url": "https://anthropic.skilljar.com/claude-code-101",
-    "author": "Anthropic",
-    "roles": [
-      "pm",
-      "developer"
-    ],
-    "level": "basic",
-    "topics": [
-      "claude-code",
-      "skills",
-      "mcp",
-      "agents"
-    ],
-    "format": "course",
-    "time": "half-day",
-    "cost": "free-account",
-    "language": "en",
-    "tier": "previewed",
-    "summary": "Anthropic's free self-paced course on Claude Code: installation across terminal, VS Code, JetBrains and Desktop, the explore-plan-code-commit loop, context management with /compact and /clear, CLAUDE.md project memory, subagents, skills, MCP and hooks. Ends with a quiz and certificate.",
-    "who_for": "A PM who has decided to learn Claude Code properly and wants the mechanics from the source rather than from a newsletter.",
-    "skip_if": "You are not comfortable with a code editor and command line — the stated prerequisites assume both, and the course is written for developers, so every example is a coding example with no PM framing.",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-21",
-    "status": "live",
-    "notes": "Free, hosted on Skilljar. Only needs an email, not an Anthropic account. Course length is not stated on the page; half-day is an estimate from the curriculum size.",
-    "source": "Anthropic Academy",
-    "official": true,
-    "id": "r-530cb03364",
-    "keywords": [
-      "claude code 101",
-      "anthropic academy claude code",
-      "install claude code terminal",
-      "vscode claude code extension",
-      "jetbrains claude plugin",
-      "explore plan code commit loop",
-      "compact clear context claude code",
-      "claude md project memory",
-      "subagents in claude code",
-      "claude code hooks"
-    ],
-    "questions": [
-      "how do i install claude code in my terminal",
-      "how does the explore plan code commit loop work",
-      "how do i manage context in claude code with compact and clear"
-    ],
-    "teaches": [
-      "install claude code across terminal and ide environments",
-      "manage context limits using compact and clear commands",
-      "configure project memory using claudemdfiles",
-      "set up subagents and hooks"
-    ],
-    "prerequisites": [
-      "comfort with a code editor",
-      "command line basics"
-    ],
-    "paths": [
-      {
-        "path": "claude-code-start",
-        "step": 1,
-        "of": 6
-      }
     ]
   },
   {

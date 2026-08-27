@@ -89,17 +89,17 @@
     "level": "basic",
     "intro": "The gap between installing Claude Code and being fast with it is configuration and habits, not model quality. Six steps, roughly a day of reading spread over a week of practice.",
     "step_count": 6,
-    "total_minutes": 336,
-    "total_time_label": "about 6 hours",
+    "total_minutes": 171,
+    "total_time_label": "about 3 hours",
     "cost": "free",
     "weakest_tier": "previewed",
     "steps": [
       {
         "step": 1,
-        "item": "r-530cb03364",
-        "title": "Claude Code 101 (Anthropic Academy)",
-        "url": "https://anthropic.skilljar.com/claude-code-101",
-        "time": "half-day",
+        "item": "r-7340ad4c33",
+        "title": "Claude Code 101",
+        "url": "https://academy.claude.com/courses/claude-code-101",
+        "time": "under-1hr",
         "cost": "free-account",
         "tier": "previewed",
         "why": "Anthropic's own course. Do this before reading anyone's tips, so you know which behaviours are the tool and which are the person writing about it."

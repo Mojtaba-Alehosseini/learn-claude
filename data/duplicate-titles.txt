@@ -1,0 +1,41 @@
+# Titles that are allowed to appear more than once, across different hosts.
+#
+# De-duplication happens on the normalised URL, and that cannot see a course harvested
+# from two hosts: two URLs, two ids, two cards, one course. It cost something real. The
+# only developer path advertised "about 6 hours" because the build picked the
+# anthropic.skilljar.com row for step 1; the academy.claude.com row for the same course
+# says under-1hr, and after the two were merged on 2026-08-27 the same path reads "about
+# 3 hours". Which row the harvester reached first was setting the headline duration.
+#
+# So scripts/validate-catalogue.py now fails when one normalised title appears on more
+# than one host, unless the title is listed below. One title per line. Anything after a
+# `#` on the line is the reason, and the reason is the point: a bare allowance list
+# becomes a place to silence the check.
+#
+# Add a line here only when the two entries really are different resources. If they are
+# the same thing on two hosts, merge them instead and delete nothing from this file.
+
+# --- recorded, NOT resolved. Morteza to rule on each. -------------------------
+# These four are listed so the build stays green and they stay visible. Listing is not
+# agreement: nobody has decided whether each pair is one resource or two.
+
+ai fluency for students          # coursera vs anthropic.skilljar. Same course name, two
+                                 # platforms, both free-account. Different role sets:
+                                 # researcher on one, student+teacher on the other.
+
+ai fluency framework foundations # three rows: anthropic.skilljar (free), coursera
+                                 # (free-account), anthropic.com/ai-fluency (free). The
+                                 # third is the topic hub rather than the course itself,
+                                 # which is a different kind of problem from the other two.
+
+getting started with claude in excel  # claude.com tutorial vs a YouTube video on the same
+                                 # subject. Genuinely two resources, but they disagree on
+                                 # cost - one chipped `subscription`, one `free` - and a
+                                 # reader filtering on cost sees only one of them.
+
+model context protocol advanced topics  # academy.claude.com vs anthropic.skilljar. Same
+                                 # host migration as Claude Code 101, so probably the same
+                                 # merge - but the academy row is tier `listed` and the
+                                 # skilljar row is `previewed`, so merging loses the better
+                                 # tier or keeps the stale URL. Needs a decision, not a
+                                 # script.

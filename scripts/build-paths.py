@@ -77,7 +77,11 @@ PATHS = [
                  "configuration and habits, not model quality. Six steps, roughly a day "
                  "of reading spread over a week of practice.",
         "steps": [
-            {"url": "https://anthropic.skilljar.com/claude-code-101",
+            # academy.claude.com, not anthropic.skilljar.com. The two rows were the same course
+            # harvested from both hosts; the skilljar one was merged away on 2026-08-27
+            # because the catalogue's own note said that host is the old one and
+            # redirects. This list is where a path really lives, so it has to change here.
+            {"url": "https://academy.claude.com/courses/claude-code-101",
              "why": "Anthropic's own course. Do this before reading anyone's tips, so you "
              "know which behaviours are the tool and which are the person writing about it."},
             {"url": "https://code.claude.com/docs/en/best-practices",

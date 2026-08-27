@@ -36,6 +36,7 @@ import json
 import os
 import re
 import sys
+from urllib.parse import urlparse
 
 # This prints em dashes. A Windows console defaults to cp1252 and raises on them, so a
 # real fault would be reported as a UnicodeEncodeError instead of as the fault.
@@ -48,6 +49,7 @@ PATHS = os.path.join(ROOT, "data", "paths.json")
 UI_JS = os.path.join(ROOT, "assets", "js", "ui.js")
 STABLE_IDS = os.path.join(ROOT, "scripts", "stable-ids.py")
 ALLOWANCE = os.path.join(ROOT, "data", "reviewed-allowance.txt")
+DUPE_TITLES = os.path.join(ROOT, "data", "duplicate-titles.txt")
 
 # Every field that must be present and must not be empty. roles and topics are lists,
 # so "not empty" means at least one entry, not merely that the key exists.
@@ -175,6 +177,27 @@ def load_allowance(path):
         return int(value)
     except (TypeError, ValueError):
         raise SystemExit("%s must end with a plain number. It ends with %r." % (path, value))
+
+
+def load_allowed_titles(path):
+    """Normalised titles permitted to appear on more than one host.
+
+    Read the same way as the reviewed allowance: last-word-wins on each line, everything
+    after a # is the reason. Missing file means nothing is allowed, which is the strict
+    direction and is safe - it fails loudly rather than passing silently.
+    """
+    out = set()
+    if not os.path.exists(path):
+        return out
+    for line in open(path, encoding="utf-8"):
+        line = line.split("#", 1)[0].strip()
+        if line:
+            out.add(line)
+    return out
+
+
+def norm_title(t):
+    return re.sub(r"[^a-z0-9]+", " ", str(t or "").lower()).strip()
 
 
 def load_id_rule():
@@ -327,6 +350,30 @@ def main(argv=None):
                         "not list it there" % (n, str(item.get("title", ""))[:40],
                                                claim.get("step"), claim.get("of"),
                                                claim.get("path")))
+
+    # 10. one course, harvested from two hosts, becomes two cards. The URL de-dupe
+    #     cannot see it: two different URLs are two different resources as far as
+    #     stable-ids.py is concerned, and correctly so. What it cost: the only developer
+    #     path advertised "about 6 hours" purely because the build reached the
+    #     anthropic.skilljar.com row for step 1 before the academy.claude.com row for the
+    #     same course, which records a shorter time. Merged 2026-08-27, and the same path
+    #     now reads "about 3 hours". A headline number should not depend on harvest order.
+    allowed_titles = load_allowed_titles(DUPE_TITLES)
+    by_title = {}
+    for n, item in enumerate(items):
+        by_title.setdefault(norm_title(item.get("title")), []).append((n, item))
+    for title, rows in sorted(by_title.items()):
+        if len(rows) < 2 or title in allowed_titles:
+            continue
+        hosts = {urlparse(str(it.get("url", ""))).netloc.lower().lstrip("www.")
+                 for _, it in rows}
+        if len(hosts) < 2:
+            continue                      # same host twice is caught by the URL rules
+        errors.append(
+            "  %-4s %-46s the same title on %d hosts (%s). If they are one resource, "
+            "merge them; if they are two, add the title to %s with the reason."
+            % ("", str(rows[0][1].get("title", ""))[:46], len(hosts),
+               ", ".join(sorted(hosts)), DUPE_TITLES))
 
     # ------------------------------------------------------------ report ----
 

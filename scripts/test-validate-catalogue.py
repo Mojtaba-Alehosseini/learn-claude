@@ -132,6 +132,25 @@ CASES = [
               paths=[{"path": p[0]["id"], "step": 99, "of": len(p[0]["steps"])}])),
      "does not list it there"),
 
+    # One course harvested from two hosts is two cards, and the URL de-dupe cannot see
+    # it - two URLs really are two resources to stable-ids.py. This is the check that
+    # notices, and the allowance file is what stops it becoming a nuisance.
+    ("the same title on two different hosts",
+     lambda i, p: i[1].update({"title": i[0]["title"],
+                               "url": "https://example.org/" + i[1]["id"],
+                               "id": i[1]["id"]}),
+     "the same title on 2 hosts"),
+
+    # The same title twice on one host is a URL problem, not a harvest problem, and the
+    # rules above already cover it. This must not double-report.
+    ("the same title twice on one host - not this rule's business",
+     lambda i, p: i[1].update({"title": i[0]["title"]}) if
+                  __import__("urllib.parse", fromlist=["urlparse"]).urlparse(i[1]["url"]).netloc
+                  == __import__("urllib.parse", fromlist=["urlparse"]).urlparse(i[0]["url"]).netloc
+                  else i[1].update({"title": i[0]["title"],
+                                    "url": i[0]["url"].rsplit("/", 1)[0] + "/other-thing"}),
+     None),
+
     # The rule the README singles out. It cannot be checked directly — no file shows who
     # did what — so what is checked is the appearance of a claim nobody has authorised.
     ("an entry claims tier: reviewed when none is allowed",
