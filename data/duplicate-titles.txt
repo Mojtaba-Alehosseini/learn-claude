@@ -15,27 +15,81 @@
 # Add a line here only when the two entries really are different resources. If they are
 # the same thing on two hosts, merge them instead and delete nothing from this file.
 
-# --- recorded, NOT resolved. Morteza to rule on each. -------------------------
-# These four are listed so the build stays green and they stay visible. Listing is not
-# agreement: nobody has decided whether each pair is one resource or two.
+getting started with claude in excel  # RULED 2026-08-27: genuinely two resources. Both
+                                 # are Anthropic's own and both really carry this exact
+                                 # title - the YouTube page title was read on 2026-08-27
+                                 # to confirm it, rather than assumed from our own row.
+                                 # One is a written walkthrough at claude.com, the other
+                                 # is 7:10 of video on the @claude channel. An article
+                                 # and a video are two resources.
+                                 #
+                                 # The open complaint about this pair was that they
+                                 # disagreed on cost: `subscription` on the article,
+                                 # `free` on the video, so a reader filtering on cost saw
+                                 # one of a matched pair. The article is now `free`.
+                                 # Reading a claude.com tutorial costs nothing; what
+                                 # costs money is the Excel add-in, and that is in
+                                 # skip_if on both rows, where it belongs.
 
-ai fluency for students          # coursera vs anthropic.skilljar. Same course name, two
-                                 # platforms, both free-account. Different role sets:
-                                 # researcher on one, student+teacher on the other.
+# --- the other three groups, now resolved ------------------------------------------
+#
+# All three were merged on 2026-08-27 and no longer appear more than once, so they need
+# no allowance. Kept here as the record of what was decided and why, so that nobody
+# re-adds a row and nobody re-opens the question.
+#
+# ai fluency for students          MERGED 3 -> 1, kept anthropic.skilljar.com.
+#                                  The Coursera row is the same five lectures on another
+#                                  platform; its URL is recorded in the surviving row's
+#                                  notes so the alternative is not lost. That row carried
+#                                  the role `researcher`, dropped on merge: the course is
+#                                  about studying and career planning, not research.
+#
+# ai fluency framework foundations MERGED 3 -> 1, kept anthropic.skilljar.com.
+#                                  This one was settled by the server, not by judgment:
+#                                  www.anthropic.com/ai-fluency REDIRECTS to the skilljar
+#                                  course (verified 2026-08-27). It was never a third
+#                                  resource, or even a topic hub - it is the same page
+#                                  reached by another name. The Coursera row is the same
+#                                  course elsewhere and its URL is in the notes. The three
+#                                  rows disagreed on level, basic against never-used;
+#                                  never-used won, because the course assumes nothing.
+#
+# model context protocol advanced topics
+#                                  MERGED 2 -> 1, kept academy.claude.com.
+#                                  Checked properly rather than assumed. Both pages were
+#                                  opened on 2026-08-27: identical course description,
+#                                  identical prerequisites, identical audience line,
+#                                  identical section blurbs. One course, two Anthropic
+#                                  surfaces. They disagree on shape - academy says 11
+#                                  lessons, 1 quiz, 1.5 hours; skilljar says 15 lectures,
+#                                  2 quizzes, 1.1 hours of video - which is how two
+#                                  platforms count the same material.
+#
+#                                  Two things this turned up. The academy row was tier
+#                                  `listed` because an earlier attempt could not read a
+#                                  client-rendered page; it reads fine in a browser, so
+#                                  the tier is now `previewed` and the checked date moved,
+#                                  because the page really was read. And the migration
+#                                  note this catalogue has been repeating - "old links
+#                                  redirect" - is not true. skilljar URLs answered 200
+#                                  with no redirect, and anthropic.com redirects INTO
+#                                  skilljar. Both surfaces are live; academy.claude.com is
+#                                  kept because it is the Claude-branded front door and
+#                                  states its own runtime.
 
-ai fluency framework foundations # three rows: anthropic.skilljar (free), coursera
-                                 # (free-account), anthropic.com/ai-fluency (free). The
-                                 # third is the topic hub rather than the course itself,
-                                 # which is a different kind of problem from the other two.
-
-getting started with claude in excel  # claude.com tutorial vs a YouTube video on the same
-                                 # subject. Genuinely two resources, but they disagree on
-                                 # cost - one chipped `subscription`, one `free` - and a
-                                 # reader filtering on cost sees only one of them.
-
-model context protocol advanced topics  # academy.claude.com vs anthropic.skilljar. Same
-                                 # host migration as Claude Code 101, so probably the same
-                                 # merge - but the academy row is tier `listed` and the
-                                 # skilljar row is `previewed`, so merging loses the better
-                                 # tier or keeps the stale URL. Needs a decision, not a
-                                 # script.
+# --- what this check still cannot see ------------------------------------------------
+#
+# The rule is "same title on more than one host". A duplicate on ONE host slips through,
+# deliberately, because that is a URL fault the other rules already report and
+# double-reporting trains people to skim. On 2026-08-27 that gap hid a real fault:
+#
+#   "15 Claude Tips for Everyday Data Analysis" existed twice, both on linkedin.com. One
+#   pointed at the course. The other pointed at linkedin.com/learning/topics/claude,
+#   which was opened on 2026-08-27 and is LinkedIn's topic browse page - "Claude Online
+#   Training Courses", with filters for level and type. It is not a 21-minute course and
+#   never was. That row was deleted rather than merged: it was not a second copy of the
+#   resource, it was a row describing a course while pointing at a search results page.
+#
+# Neither the cross-host rule nor URL de-duplication could catch that, because the two
+# URLs genuinely differ and the host is the same. What would have caught it is a check
+# nobody has written: a row whose URL is a listing or search page rather than a resource.

@@ -294,7 +294,7 @@
   });
 
   /* Whatever they answered becomes the Browse URL, so the second screen opens already
-     filtered instead of showing all 353 and making them start again. */
+     filtered instead of showing everything and making them start again. */
   el.go.addEventListener("submit", function (e) {
     e.preventDefault();
     var p = new URLSearchParams();

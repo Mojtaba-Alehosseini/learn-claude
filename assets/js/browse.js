@@ -260,7 +260,7 @@
   var searchAsked = false;
 
   /* Wait for a gap in the typing before redrawing.
-     A redraw is not cheap: it re-filters 353 items, rebuilds both filter panels and
+     A redraw is not cheap: it re-filters every item, rebuilds both filter panels and
      every card, rewrites the title, and calls history.replaceState. Doing all of that
      per keystroke had three costs beyond the work itself. The result count lives in an
      aria-live region, so every letter announced a new number over the last one. Safari

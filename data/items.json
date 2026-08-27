@@ -67,25 +67,28 @@
     "author": "Anthropic / Profs. Rick Dakan & Joseph Feller",
     "roles": [
       "business-founder",
-      "non-technical"
+      "non-technical",
+      "teacher",
+      "student",
+      "researcher"
     ],
-    "level": "basic",
+    "level": "never-used",
     "topics": [
       "chat-prompting",
       "safety"
     ],
     "format": "course",
     "time": "half-day",
-    "cost": "free",
+    "cost": "free-account",
     "language": "en",
     "tier": "previewed",
-    "summary": "The foundational course teaching the 4D framework (Delegation, Description, Discernment, Diligence) for effective, ethical, and safe AI collaboration.",
+    "summary": "Anthropic's foundational course on the 4D framework - Delegation, Description, Discernment, Diligence - across twelve lessons and about three hours, including when not to hand a task to AI at all.",
     "who_for": "Anyone who wants the conceptual backbone before diving into product-specific workflows.",
     "skip_if": "Three to four hours, and not one of them is about Claude's interface. It is the strongest official material on where AI stops being reliable, which is worth the time, but you will finish it without having learned a single click.",
     "published": "2025-06-01",
     "checked": "2026-08-20",
     "status": "live",
-    "notes": "Prerequisite for the SMB and nonprofit variants. Certificate on completion.",
+    "notes": "Co-developed with academic partners. Prerequisite for the small-business, nonprofit and educator variants. Certificate on completion. The strongest official material on where AI stops being reliable. Merged 2026-08-27 from three rows for one course: www.anthropic.com/ai-fluency redirects here (verified 2026-08-27, so it was the same page, not a second resource), and the Coursera listing at www.coursera.org/learn/ai-fluency-framework-foundations is the same course on another platform - use it if you would rather enrol there. Enrolment needs a Skilljar account separate from your Claude account, which is why the cost reads free-account and not free. The three rows disagreed on level (basic against never-used); never-used is the honest one, because the course assumes nothing.",
     "alt_skip_if": [
       "You only want quick, copy-paste task recipes."
     ],
@@ -5271,22 +5274,22 @@
     ],
     "level": "builder",
     "topics": [
-      "mcp",
+      "agents",
       "api",
-      "agents"
+      "mcp"
     ],
     "format": "course",
     "time": "under-1hr",
     "cost": "free-account",
     "language": "en",
-    "tier": "listed",
-    "summary": "The follow-on to Anthropic's introductory MCP course, going past the tools, resources and prompts primitives into the harder parts of building and shipping MCP servers.",
+    "tier": "previewed",
+    "summary": "The follow-on to Anthropic's introductory MCP course, for people already shipping servers: sampling, which lets a server ask the client for a model call and moves cost and complexity to the client; progress notifications and logging for long-running work; roots, which grant a server access to named directories; and the transport choice between stdio, streamable HTTP and stateless HTTP behind a load balancer.",
     "who_for": "Developers who already built a basic MCP server and have run into transport, authentication or scale questions.",
-    "skip_if": "Skip if you have not built an MCP server at all; do the introductory course first. Skip if you only install other people's servers rather than writing your own.",
+    "skip_if": "It assumes you have already built a basic MCP server and picks up at sampling, roots and transports, taking Python async, JSON-RPC and server-sent events as read. Nothing here covers the primitives; the introductory course is where those live.",
     "published": "UNVERIFIED",
-    "checked": "2026-08-21",
+    "checked": "2026-08-27",
     "status": "live",
-    "notes": "Listed on academy.claude.com as 11 lessons and 1 quiz; no runtime shown, so the time here is an estimate. Content not previewed because the course page is client-rendered and behind a signup. One of the very few 'advanced MCP' offerings from a first-party source.",
+    "notes": "Read in full 2026-08-27, which is why the tier moved from listed to previewed - the page is client-rendered and an earlier attempt could not read it. The page states 11 lessons, 1 quiz and 1.5 hours; the anthropic.skilljar.com copy of the same course states 15 lectures, 2 quizzes and 1.1 hours of video. The time field here reads under-1hr because the vocabulary has no bucket between one hour and a half day; the real figure is about 90 minutes. Merged 2026-08-27 with that skilljar row: identical course description, prerequisites, audience line and section blurbs, so it is one course on two Anthropic surfaces. Correcting an earlier note in this catalogue - anthropic.skilljar.com URLs do NOT redirect to academy.claude.com; both answered 200 on 2026-08-27 and www.anthropic.com/ai-fluency redirects INTO skilljar. The migration is partial. academy.claude.com is kept because it is the Claude-branded front door and states its own runtime.",
     "source": "Anthropic Academy",
     "official": true,
     "id": "r-c1f2ae6b68",
@@ -6513,67 +6516,6 @@
     ]
   },
   {
-    "title": "Model Context Protocol: Advanced Topics",
-    "url": "https://anthropic.skilljar.com/model-context-protocol-advanced-topics",
-    "author": "Anthropic Academy",
-    "source": "Anthropic Academy",
-    "official": true,
-    "roles": [
-      "developer"
-    ],
-    "level": "builder",
-    "topics": [
-      "mcp"
-    ],
-    "format": "course",
-    "time": "under-1hr",
-    "cost": "free-account",
-    "language": "en",
-    "tier": "previewed",
-    "summary": "The second MCP course, aimed at people who already ship servers. It covers sampling (letting the server ask the client for a model call, which moves cost and complexity to the client), progress and logging notifications for long operations, roots-based directory permissions, the full JSON message taxonomy of requests versus notifications, the stdio handshake, StreamableHTTP with server-sent events and session management, and when to run stateless HTTP so you can scale horizontally behind a load balancer. Each concept has a code walkthrough lesson and there is an assessment at the end.",
-    "who_for": "Developers taking an MCP server from a local demo to something deployed, who need to choose a transport and understand the trade-offs.",
-    "skip_if": "Skip it if you have not built a basic MCP server yet - it assumes Python async, JSON-RPC and server-sent events, and never covers the basics.",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-21",
-    "status": "live",
-    "id": "r-8e9aab2f3a",
-    "keywords": [
-      "mcp",
-      "model context protocol",
-      "mcp sampling",
-      "stdio handshake",
-      "streamablehttp",
-      "sse",
-      "server sent events",
-      "mcp notifications",
-      "json rpc",
-      "mcp permissions",
-      "roots based permissions",
-      "stateless http mcp",
-      "mcp load balancing",
-      "mcp advanced",
-      "anthropic mcp"
-    ],
-    "questions": [
-      "how does mcp sampling work",
-      "how do i handle progress notifications in mcp",
-      "how to scale mcp server behind load balancer",
-      "what is the difference between stdio and streamablehttp in mcp",
-      "how to configure roots directory permissions in mcp"
-    ],
-    "prerequisites": [
-      "experience building basic mcp servers",
-      "python async programming",
-      "understanding of json-rpc and server-sent events"
-    ],
-    "teaches": [
-      "implement sampling to let an mcp server request completions from the client",
-      "add progress and logging notifications to long running mcp tools",
-      "configure roots-based directory permissions on an mcp server",
-      "choose and deploy the right transport between stdio and streamablehttp for production scaling"
-    ]
-  },
-  {
     "title": "AI Fluency for pK-12 Educators (learning path)",
     "url": "https://anthropic.skilljar.com/path/ai-fluency-for-pk-12-educators",
     "author": "Anthropic Academy",
@@ -6624,62 +6566,6 @@
       "apply the 4d ai framework to k12 teaching workflows",
       "facilitate an ai literacy workshop for fellow educators using a ready-to-run kit",
       "evaluate ai outputs for classroom suitability and safety"
-    ]
-  },
-  {
-    "title": "AI Fluency: Framework & Foundations",
-    "url": "https://www.coursera.org/learn/ai-fluency-framework-foundations",
-    "author": "Anthropic Academy, with Rick Dakan and Joseph Feller",
-    "source": "Coursera",
-    "official": false,
-    "roles": [
-      "non-technical",
-      "teacher",
-      "student",
-      "business-founder"
-    ],
-    "level": "never-used",
-    "topics": [
-      "chat-prompting",
-      "safety"
-    ],
-    "format": "course",
-    "time": "half-day",
-    "cost": "free-account",
-    "language": "en",
-    "tier": "previewed",
-    "summary": "Anthropic's own beginner course on Coursera, ten modules and about three hours, teaching the 4D framework: pick the right tasks to hand to AI, describe them clearly, judge the output with discernment, and apply diligence about responsible use. It is written to survive tool changes, so the skills carry across models rather than teaching Claude's buttons. Rated 4.7 from 105 reviews and refreshed in May 2026.",
-    "who_for": "Someone who has typed a few prompts and got mediocre results, and wants a mental model for what to delegate before learning any specific product.",
-    "skip_if": "Three to four hours, and not one of them is about Claude's interface. It is the strongest official material on where AI stops being reliable, which is worth the time, but you will finish it without having learned a single click.",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-21",
-    "status": "live",
-    "id": "r-74b6ca831a",
-    "keywords": [
-      "ai fluency",
-      "4d framework",
-      "delegation description discernment diligence",
-      "anthropic coursera",
-      "beginner prompt mental model",
-      "ai thinking framework",
-      "how to use ai",
-      "responsible ai use",
-      "ai basics",
-      "ai problem framing",
-      "evaluating ai output",
-      "prompt fundamentals"
-    ],
-    "questions": [
-      "what tasks should i give to ai",
-      "how do i know if an ai answer is good",
-      "what is the 4d ai framework",
-      "how do i think about using generative ai effectively"
-    ],
-    "prerequisites": [],
-    "teaches": [
-      "identify which tasks to delegate to ai and which to keep human",
-      "write clear task descriptions that produce reliable model output",
-      "evaluate ai generated answers critically for accuracy and safety"
     ]
   },
   {
@@ -8155,7 +8041,7 @@
     ],
     "format": "article",
     "time": "under-15min",
-    "cost": "subscription",
+    "cost": "free",
     "language": "en",
     "tier": "listed",
     "summary": "Official walkthrough for the Excel add-in: asking Claude about a cell, updating assumptions, and building simple models without leaving the spreadsheet.",
@@ -8164,7 +8050,7 @@
     "published": "UNVERIFIED",
     "checked": "2026-08-18",
     "status": "live",
-    "notes": "The Excel add-in has changed quickly through 2026 (pivot tables, shared context with PowerPoint), so confirm current capabilities in the app itself rather than trusting a screenshot's age.",
+    "notes": "The Excel add-in has changed quickly through 2026 (pivot tables, shared context with PowerPoint), so confirm current capabilities in the app itself rather than trusting a screenshot's age. Kept alongside the YouTube video of the same name (verified 2026-08-27 that the video really is titled this) - an article and a seven-minute video are two resources, not one. The cost chip read `subscription` while the video read `free`, so a reader filtering on cost saw only one of a matched pair; both are free to read or watch and the paid-plan requirement for the add-in itself is in skip_if, where it belongs.",
     "source": "Anthropic",
     "official": true,
     "id": "r-cad79dfdc9",
@@ -10618,108 +10504,6 @@
     ]
   },
   {
-    "title": "AI Fluency: Framework & Foundations",
-    "url": "https://www.anthropic.com/ai-fluency",
-    "author": "Anthropic (Prof. Joseph Feller, UCC; Prof. Rick Dakan, Ringling)",
-    "roles": [
-      "researcher"
-    ],
-    "level": "never-used",
-    "topics": [
-      "chat-prompting",
-      "safety"
-    ],
-    "format": "course",
-    "time": "half-day",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "summary": "12-lesson (3-4 hr) course teaching the 4D framework (Delegation, Description, Discernment, Diligence) for effective, ethical, safe AI collaboration — including when NOT to trust AI.",
-    "who_for": "Researchers who want a durable mental model and judgment, not just feature tips.",
-    "skip_if": "Three to four hours, and not one of them is about Claude's interface. It is the strongest official material on where AI stops being reliable, which is worth the time, but you will finish it without having learned a single click.",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-18",
-    "status": "live",
-    "notes": "Co-developed with academic partners; also on Coursera. Strongest official content on AI limits.",
-    "source": "Anthropic",
-    "official": true,
-    "id": "r-225ab27b7b",
-    "keywords": [
-      "ai fluency framework",
-      "4d framework ai",
-      "delegation description discernment diligence",
-      "ethical ai collaboration",
-      "when not to trust ai",
-      "safe ai use",
-      "ai judgment course",
-      "ai partnership training",
-      "researcher ai guide"
-    ],
-    "questions": [
-      "how to know when not to trust ai",
-      "what is the 4d framework for ai",
-      "how to collaborate safely and ethically with ai"
-    ],
-    "teaches": [
-      "apply the 4d framework to ai collaboration",
-      "exercise discernment when deciding whether to trust ai outputs",
-      "practice safe and ethical ai usage habits"
-    ]
-  },
-  {
-    "title": "AI Fluency for Students",
-    "url": "https://www.coursera.org/learn/ai-fluency-for-students",
-    "author": "Anthropic",
-    "roles": [
-      "researcher"
-    ],
-    "level": "never-used",
-    "topics": [
-      "chat-prompting",
-      "safety"
-    ],
-    "format": "course",
-    "time": "under-1hr",
-    "cost": "free-account",
-    "language": "en",
-    "tier": "previewed",
-    "summary": "Short course (5 lectures, ~30 min) applying the 4D framework to student work, emphasizing learning-with-AI vs outsourcing.",
-    "who_for": "PhD/grad students wanting responsible AI habits.",
-    "skip_if": "Thirty minutes on how to study with AI without outsourcing the studying, so it is closer to a stance than a skill. Free to enrol on Coursera, and the same course sits on Anthropic's own site if you would rather not open a Coursera account.",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-18",
-    "status": "live",
-    "notes": "Also on anthropic.skilljar.com/ai-fluency-for-students; enroll-free on Coursera.",
-    "source": "Coursera",
-    "official": false,
-    "id": "r-0152a5001d",
-    "keywords": [
-      "ai fluency for students",
-      "phd student ai use",
-      "grad student ai habits",
-      "learning with ai vs outsourcing",
-      "4d framework",
-      "responsible ai use in school",
-      "student ai course",
-      "how to use ai ethically as a student",
-      "ai chat thing for homework",
-      "anthropic",
-      "claude",
-      "safety"
-    ],
-    "questions": [
-      "how should grad students use ai responsibly",
-      "is it cheating to use claude for school work",
-      "how do i use ai to help me learn instead of doing my work",
-      "what is the 4d framework for student ai use"
-    ],
-    "teaches": [
-      "apply the 4d framework to student work",
-      "balance learning with ai versus outsourcing thinking",
-      "build responsible ai habits for graduate studies"
-    ]
-  },
-  {
     "title": "Plan your literature review (use-case)",
     "url": "https://claude.com/resources/use-cases/plan-your-literature-review",
     "author": "Anthropic",
@@ -11487,59 +11271,6 @@
     ]
   },
   {
-    "title": "15 Claude Tips for Everyday Data Analysis",
-    "url": "https://www.linkedin.com/learning/topics/claude",
-    "author": "LinkedIn Learning",
-    "roles": [
-      "researcher"
-    ],
-    "level": "basic",
-    "topics": [
-      "chat-prompting"
-    ],
-    "format": "video",
-    "time": "under-1hr",
-    "cost": "subscription",
-    "language": "en",
-    "tier": "listed",
-    "summary": "Short (21 min) practical course of everyday data-analysis tips with Claude.",
-    "who_for": "Researchers with LinkedIn Learning access wanting quick data tips.",
-    "skip_if": "You have no LinkedIn Learning subscription.",
-    "published": "2026-04-14",
-    "checked": "2026-08-18",
-    "status": "live",
-    "notes": "Metadata only (course behind subscription); release date from LinkedIn Learning listing.",
-    "source": "LinkedIn Learning",
-    "official": false,
-    "id": "r-a38414af15",
-    "keywords": [
-      "data analysis",
-      "claude tips",
-      "everyday data analysis",
-      "anthropic",
-      "ai data analysis",
-      "research data",
-      "linkedin learning",
-      "quick data tips",
-      "chat prompting",
-      "claude tutorial",
-      "how to analyze data with claude",
-      "ai chat thing"
-    ],
-    "questions": [
-      "how do i use claude for data analysis",
-      "quick tips for analyzing data with ai",
-      "can claude help me with everyday data tasks"
-    ],
-    "teaches": [
-      "apply quick data analysis tips using claude",
-      "handle everyday research data tasks with ai"
-    ],
-    "prerequisites": [
-      "linkedin learning access"
-    ]
-  },
-  {
     "title": "Mushtaq Bilal — Claude for Academic Writing & Research",
     "url": "https://mushtaqbilalphd.kit.com/",
     "author": "Mushtaq Bilal, PhD",
@@ -11811,11 +11542,11 @@
     "tier": "previewed",
     "summary": "Anthropic's own short course that applies its 4D AI Fluency framework to student life: using AI as a learning partner, using it for career planning, and staying the human in the loop. Free, self-paced, with a certificate at the end.",
     "who_for": "A student who has never used Claude seriously and wants the official framing of what good AI use looks like before touching an assignment.",
-    "skip_if": "Skip if your students are under 18 and you need age-appropriate classroom activities - this is written for adult learners and Claude is 18-plus. Skip if you want graded worksheets and a scheme of work.",
+    "skip_if": "It assumes you have already done the core 4D Fluency course, which the title does not say. Written for adult learners, and Claude is 18-plus, so it is not a source of classroom activities for younger students. Nothing in it is graded.",
     "published": "UNVERIFIED",
     "checked": "2026-08-21",
     "status": "live",
-    "notes": "The course page says it assumes you already did the core 4D AI Fluency Framework course, so start there. Needs a separate Skilljar account, not your Claude account. No publication date is shown anywhere on the page. A Coursera version of the same course also exists.",
+    "notes": "The course page says it assumes you already did the core 4D AI Fluency Framework course, so start there. Needs a separate Skilljar account, not your Claude account. No publication date is shown anywhere on the page. A Coursera version of the same course also exists. Merged 2026-08-27 with the Coursera row for the same course; www.coursera.org/learn/ai-fluency-for-students is the same five lectures on another platform. That row carried the role `researcher`, which is dropped here: this course is about studying and career planning, not about research.",
     "alt_skip_if": [
       "You want click-by-click Claude instructions. This is a way of thinking, not a feature tutorial, and it never shows you the actual Claude interface."
     ],

@@ -403,7 +403,7 @@ button, .btn, .nav-link, .filter-option { min-height: 44px; }
    are not. Measured against a 694px viewport: the rail is 1047px with "More filters"
    closed and 2046px with it open, so the last Level option sat 205px below the fold in
    both states. A sticky element pins its own top, so that overflow could only be reached
-   by scrolling past all 353 cards to the end of the page, where the rail finally lets
+   by scrolling past all the cards to the end of the page, where the rail finally lets
    go. Options nobody can reach are worse than a scrollbar.
    `auto`, not `scroll`, so the second bar appears only in the case that would otherwise
    hide a control. overscroll-behavior stops a flick inside the rail from carrying on
