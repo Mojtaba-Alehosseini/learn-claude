@@ -123,6 +123,17 @@
       It needs a GitHub account, which is a real barrier and we know it.
     </p>
   </section>
+
+  <!-- This page's one clay element, and the only one it has ever had.
+       The page argues for the method and then stopped. A reader who accepted the
+       argument had nowhere to go, which is the classic place for a single call to
+       action and the only page on the site with exactly one sensible destination.
+       The number is written by the script at the foot from window.LC.items().length,
+       never typed here - this page's whole claim is that its counts are read from the
+       data, and the call to action must not be the line that rots. -->
+  <section class="section" style="margin-top:var(--space-48)">
+    <a class="btn btn-primary" href="browse.html" id="browseCta">Browse the resources</a>
+  </section>
 </main>
 
 <footer class="site-footer">
@@ -161,6 +172,10 @@
     s += " Nothing is " + none.join(" or ") + " yet, and the cards say so.";
   }
   document.getElementById("tally").textContent = s;
+
+  /* Same source as the tally above, for the same reason. */
+  document.getElementById("browseCta").textContent =
+    "Browse the " + items.length + " resources";
 })();
 </script>
 </body>

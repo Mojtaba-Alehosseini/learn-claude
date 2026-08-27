@@ -138,6 +138,19 @@
             LC.badge(it.tier) + LC.chips(it) + '</div>' +
           /* Ours, and the reason the path exists. Serif, full size. */
           '<p class="step-why">' + LC.esc(r.step.why) + '</p>' +
+          /* This view's one clay element, on step 1 only.
+             A path is a sequence with a first step, so unlike Browse or the path index
+             there genuinely is one thing to press, and the page had no verb on it at
+             all. It is deliberately NOT on the path index: five cards exist there so
+             the reader can choose between them, and colouring one is an argument that
+             page is not making. Points at our own resource page rather than straight
+             out, because that page carries the Skip if line and the report link, and
+             sending someone past those is the whole thing this site exists to prevent. */
+          (i === 0
+            ? '<p style="margin-top:var(--space-16)">' +
+              '<a class="btn btn-primary" href="' + LC.esc(LC.href(it)) + '">' +
+              'Start with this</a></p>'
+            : '') +
           '<p class="card-foot"><span>' + LC.esc(fresh.checked) + '</span>' +
             (fresh.note ? '<span class="' + fresh.cls + '">' + LC.esc(fresh.note) +
                           '</span>' : '') + '</p>' +

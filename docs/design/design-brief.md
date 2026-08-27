@@ -54,7 +54,7 @@ All eleven values are in `tokens.css`. The ones that carry meaning:
 | `--bark` | `#6c6b66` | Dates, source, all secondary text. **Ours, not Anthropic's — see below.** |
 | `--cloud-medium` | `#b0aea5` | Decorative only: placeholders, inactive nav, dividers. Never readable text. |
 | `--stone` | `#cccbc8` | Hairline borders. |
-| `--clay` | `#d97757` | **One filled button per page. Nothing else, ever.** Text on it is `--slate-dark`, not white. |
+| `--clay` | `#d97757` | **At most one filled button per page, and none where there is no single action.** Text on it is `--slate-dark`, not white. See section 4a. |
 
 **One deliberate departure from Anthropic.** Measured against the `#f0eee6` page:
 `--cloud-medium` is 1.91:1 and `--cloud-dark` is 3.15:1. Both fail WCAG AA at the sizes we
@@ -72,6 +72,7 @@ White on clay is 3.12:1 and also fails. Clay buttons take `--slate-dark` text (5
 - No gradient, glow, blur, or glass.
 - Never pure white `#ffffff`. It reads clinical and breaks the paper.
 - Clay is not for icons, decoration, hover states, or links. Filled primary buttons only.
+- At most one per page. **Zero is a valid answer** and section 4a says when.
 
 No dark mode in v1.
 
@@ -114,6 +115,51 @@ Text is acquired later, drop the files into `assets/fonts/tiempos/` and update t
 - **Page max width:** 1280px.
 
 ---
+
+
+---
+
+## 4a. Clay: at most one per page, and none where there is no single action
+
+The rule used to read *exactly one filled button per page*. It was failing on the
+*exactly* half, and measurement on 2026-08-27 showed why. Counting only elements a reader
+can actually see at 1440px:
+
+| page | visible clay | where |
+|---|---|---|
+| index.html | 1 | the **Show me** submit, plus the 2px clay underline on the two blanks |
+| resource.html | 1 | the outward link to the resource itself |
+| how-we-check.html | 1 | **Browse the N resources**, at the foot |
+| paths.html?p=… | 1 | **Start with this**, on step 1 only |
+| paths.html (index) | **0** | deliberate |
+| browse.html | **0** | deliberate, and it was already 0 by accident |
+
+### Why zero is right on those two
+
+**The path index and Browse both exist so the reader can choose.** Five path cards sit on
+one page and 351 resource cards on the other, and every one of them is a candidate.
+Painting one clay is an argument about which one matters, and neither page is in a
+position to make that argument. On a single path there are no alternatives to weigh, so
+"begin" is a real action and it gets the button.
+
+**Browse has no action at all.** Every control on it is a filter, and a filter is a
+continuous adjustment rather than a thing you press once. The nearest candidate is *Clear
+all filters*, which is destructive; clay on this site means **go**, not **undo**.
+
+Browse was already at zero before this was written down, which is the point. The site had
+been doing the honest thing and the brief was calling it a failure.
+
+### What "exactly one" would have cost
+
+A rule that demands a button produces a button. On Browse that means colouring either one
+arbitrary card or an undo control, and a manufactured call to action is a worse fault
+than a missing accent colour — it tells the reader something the page does not believe.
+
+### If you are reading this because a page has no clay
+
+That is not automatically a bug. Ask first whether the page has one action. If it does
+and there is no button, add it. If it does not, leave it, and do not restore the word
+*exactly* to the rule above.
 
 ## 5. Screens
 
@@ -258,7 +304,8 @@ Not optional, and not a later pass.
 - Drop shadows, gradients, glass, blur, glow
 - Cool grays, blue, green, or any colour outside ivory / oat / clay
 - Pure white surfaces
-- Clay on anything except one filled button per page
+- Clay on anything except a filled primary button
+- A clay button manufactured onto a page that has no single action, to satisfy a count
 - Evenly rounded filled buttons — the bottom-only radius is the signature
 - Body copy in sans-serif
 - Thumbnails on cards
