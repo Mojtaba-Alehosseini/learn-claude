@@ -50,13 +50,6 @@ jobs:
       - name: Check the validator still catches its faults
         run: python3 scripts/test-validate-catalogue.py
 
-      # A visitor arriving from the home page with ?q=<a sentence> must get an answer.
-      # This runs the real browse.js against a DOM stub, because the fault it guards was
-      # never in the ranking function that test-search.py covers - it was in the trigger,
-      # and the ranking test passed happily throughout.
-      - name: Check a question asked on the home page is answered on Browse
-        run: node scripts/test-browse-query.js
-
       # Every build script uses the standard library only, and --keywords keeps
       # build-search-index.py off the network. There is nothing to install.
       - name: Build ids, sources, paths, search index and the js mirrors
@@ -67,6 +60,15 @@ jobs:
           for f in data/items.js data/paths.js data/search-keywords.js; do
             test -s "$f" || { echo "missing or empty: $f"; exit 1; }
           done
+
+      # A visitor arriving from the home page with ?q=<a sentence> must get an answer.
+      # Runs after build.sh because it loads the generated data/*.js the browser loads -
+      # those are gitignored, so before the build they do not exist. It runs the real
+      # browse.js against a DOM stub, because the fault it guards was never in the
+      # ranking function scripts/test-search.py covers; it was in the trigger, and the
+      # ranking test passed happily throughout.
+      - name: Check a question asked on the home page is answered on Browse
+        run: node scripts/test-browse-query.js
 
       # Copy only what the browser asks for. scripts/, docs/, research/ and prompts/
       # stay in the repo but do not need to be served.
