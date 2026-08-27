@@ -169,11 +169,23 @@
   /* The count is exact and never rounded. When it gets low it also offers the way out,
      because a dead end with no suggestion is the most common way a filter UI fails. */
   function renderCount(n) {
-    var onlyRole = sel.roles.length && !sel.levels.length && !sel.times.length &&
+    /* A search narrows the list as much as any filter does, so it has to be part of
+       this sentence. Leaving it out produced a confident falsehood: with a role chosen
+       and a query that matched nothing, the line read "0 resources for a product
+       manager" while the catalogue held 56 of them. The zero came from the search, and
+       the sentence blamed the role. */
+    var searching = !!q.trim();
+    var onlyRole = !searching &&
+                   sel.roles.length && !sel.levels.length && !sel.times.length &&
                    !sel.topics.length && !sel.formats.length && !sel.costs.length;
     var text = LC.countText(n);
     if (onlyRole && sel.roles.length === 1) {
       text = n + " resources for " + LC.ROLE[sel.roles[0]];
+    } else if (searching) {
+      /* The applied-filter chips already show which role is on, so naming it again here
+         only makes a live-region announcement longer. Attribute the count to the query
+         and let the chips speak for the filters. */
+      text = LC.countText(n) + " for “" + q.trim() + "”";
     }
     if (n > 0 && n <= 6 && anyFilters()) text += ". Remove a filter to see more.";
     el.count.textContent = text;
@@ -188,8 +200,15 @@
          right-to-left: a Persian search sat inside our left-to-right sentence and put
          its punctuation on the wrong side. bdi isolates it without guessing a
          direction. */
+      /* Two different dead ends, and they need two different ways out. Telling someone
+         who arrived with a role already applied to "browse by role instead" sends them
+         back to what they were doing when they got stuck; the useful move there is to
+         drop the role and search everything. */
       msg = "<strong>No match for “<bdi>" + LC.esc(q) + "</bdi>”.</strong>" +
-            "Try fewer words, or browse by role instead.";
+            (sel.roles.length
+              ? "Try fewer words, or clear the role filter to search all " +
+                items.length + "."
+              : "Try fewer words, or browse by role instead.");
     } else if (sel.roles.length && !anyOtherThanRole()) {
       msg = "<strong>We have not covered this role yet.</strong>" +
             "It's on the list. Browse everything instead.";
@@ -339,5 +358,23 @@
     return;
   }
   readURL();
-  render();
+
+  /* A visitor can arrive here with the question already asked — the home page field
+     builds browse.html?q=<a sentence> and sends them straight in. Until now nothing on
+     that route loaded the ranked index, so the first render fell through to the
+     AND-substring match at the top of this file, which no English sentence survives.
+     Measured before this line existed: 7 of the 9 benchmark sentences in
+     scripts/test-search.py returned 0 that way, and the same query typed into the box
+     one keystroke later returned the right answer.
+     So: when there is a query, fetch the index before the first render rather than
+     after it. Rendering first and correcting afterwards would only replace a wrong
+     answer with a flicker. If the index cannot be fetched, render anyway — the
+     substring fallback is poor but it is better than a blank page. */
+  if (q.trim() && window.LCSearch && !window.LCSearch.ready()) {
+    searchAsked = true;
+    el.count.textContent = "Searching…";
+    window.LCSearch.load().then(render).catch(render);
+  } else {
+    render();
+  }
 })();
