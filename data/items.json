@@ -7851,7 +7851,14 @@
     "url": "https://anthropic.skilljar.com/ai-capabilities-and-limitations",
     "author": "Anthropic",
     "roles": [
-      "non-technical"
+      "business-founder",
+      "data-analyst",
+      "designer",
+      "non-technical",
+      "pm",
+      "student",
+      "teacher",
+      "writer-marketer"
     ],
     "level": "never-used",
     "topics": [
@@ -7901,7 +7908,13 @@
     "url": "https://support.claude.com/en/articles/13364135-use-claude-cowork-safely",
     "author": "Anthropic Help Center",
     "roles": [
-      "non-technical"
+      "business-founder",
+      "data-analyst",
+      "non-technical",
+      "pm",
+      "researcher",
+      "teacher",
+      "writer-marketer"
     ],
     "level": "basic",
     "topics": [
@@ -8012,7 +8025,10 @@
     "url": "https://claude.com/resources/tutorials/delegating-your-first-task-in-claude-cowork",
     "author": "Anthropic",
     "roles": [
-      "non-technical"
+      "business-founder",
+      "non-technical",
+      "pm",
+      "writer-marketer"
     ],
     "level": "basic",
     "topics": [
@@ -8120,7 +8136,10 @@
     "url": "https://claude.com/resources/tutorials/getting-started-with-claude-in-excel",
     "author": "Anthropic",
     "roles": [
-      "non-technical"
+      "business-founder",
+      "data-analyst",
+      "non-technical",
+      "pm"
     ],
     "level": "basic",
     "topics": [
@@ -8175,7 +8194,11 @@
     "url": "https://claude.com/resources/tutorials/working-smarter-with-claude-in-powerpoint",
     "author": "Anthropic",
     "roles": [
-      "non-technical"
+      "business-founder",
+      "data-analyst",
+      "non-technical",
+      "pm",
+      "teacher"
     ],
     "level": "basic",
     "topics": [
@@ -8227,7 +8250,10 @@
     "url": "https://claude.com/blog/best-practices-for-getting-started-with-claude-cowork",
     "author": "Austin Lau, Anthropic (growth team)",
     "roles": [
-      "non-technical"
+      "business-founder",
+      "non-technical",
+      "pm",
+      "writer-marketer"
     ],
     "level": "basic",
     "topics": [
@@ -8337,7 +8363,10 @@
     "url": "https://www.linkedin.com/learning/claude-cowork-7-day-challenge-find-practical-ai-use-cases-that-deliver",
     "author": "Justin Shaifer, LinkedIn Learning",
     "roles": [
-      "non-technical"
+      "business-founder",
+      "non-technical",
+      "pm",
+      "writer-marketer"
     ],
     "level": "basic",
     "topics": [
@@ -8388,7 +8417,10 @@
     "url": "https://www.linkedin.com/learning/everyday-productivity-with-claude-cowork",
     "author": "LinkedIn Learning",
     "roles": [
-      "non-technical"
+      "business-founder",
+      "non-technical",
+      "pm",
+      "writer-marketer"
     ],
     "level": "basic",
     "topics": [
@@ -8433,7 +8465,12 @@
     "url": "https://www.datacamp.com/courses/claude-101",
     "author": "Created by Anthropic, adapted for the DataCamp platform",
     "roles": [
-      "non-technical"
+      "business-founder",
+      "data-analyst",
+      "non-technical",
+      "pm",
+      "student",
+      "writer-marketer"
     ],
     "level": "never-used",
     "topics": [
@@ -8485,7 +8522,11 @@
     "url": "https://www.udemy.com/course/anthropic-claude-for-absolute-beginners/",
     "author": "School of AI (Udemy instructor account)",
     "roles": [
-      "non-technical"
+      "business-founder",
+      "non-technical",
+      "pm",
+      "student",
+      "writer-marketer"
     ],
     "level": "never-used",
     "topics": [
@@ -8534,7 +8575,11 @@
     "url": "https://www.udemy.com/course/claude-ai/",
     "author": "Udemy instructor (individual credentials not confirmed)",
     "roles": [
-      "non-technical"
+      "business-founder",
+      "non-technical",
+      "pm",
+      "teacher",
+      "writer-marketer"
     ],
     "level": "basic",
     "topics": [
@@ -8583,7 +8628,9 @@
     "url": "https://www.udemy.com/course/mastering-claude-cowork-ai-agents/",
     "author": "Prof. Ryan Ahmed, PhD, MBA",
     "roles": [
-      "non-technical"
+      "business-founder",
+      "non-technical",
+      "pm"
     ],
     "level": "confident",
     "topics": [
@@ -8640,7 +8687,10 @@
     "url": "https://www.tomsguide.com/ai/i-tested-claude-cowork-anthropics-new-ai-feels-more-like-a-coworker-than-a-chatbot",
     "author": "Tom's Guide",
     "roles": [
-      "non-technical"
+      "business-founder",
+      "non-technical",
+      "pm",
+      "writer-marketer"
     ],
     "level": "never-used",
     "topics": [
@@ -8686,7 +8736,12 @@
     "url": "https://www.tomsguide.com/ai/stop-using-claude-like-chatgpt-10-prompts-that-unlock-its-real-potential",
     "author": "Tom's Guide",
     "roles": [
-      "non-technical"
+      "business-founder",
+      "non-technical",
+      "pm",
+      "student",
+      "teacher",
+      "writer-marketer"
     ],
     "level": "basic",
     "topics": [
@@ -8738,7 +8793,11 @@
     "url": "https://artificialcorner.com/p/free-claude",
     "author": "The PyCoach, Artificial Corner",
     "roles": [
-      "non-technical"
+      "business-founder",
+      "designer",
+      "non-technical",
+      "student",
+      "writer-marketer"
     ],
     "level": "never-used",
     "topics": [
@@ -8858,7 +8917,10 @@
     "url": "https://learn.g2.com/claude-ai-review",
     "author": "G2",
     "roles": [
-      "non-technical"
+      "business-founder",
+      "non-technical",
+      "student",
+      "writer-marketer"
     ],
     "level": "never-used",
     "topics": [
@@ -15686,8 +15748,8 @@
     "source": "Anthropic",
     "official": true,
     "roles": [
-      "data-analyst",
       "business-founder",
+      "data-analyst",
       "pm"
     ],
     "level": "basic",
