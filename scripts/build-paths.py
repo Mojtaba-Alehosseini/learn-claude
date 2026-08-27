@@ -199,12 +199,19 @@ def main():
             "steps": steps,
         })
 
+    # `paths` on an item is a projection of the paths above, so it has to be rebuilt
+    # from nothing every run. It used to be appended to and never cleared, which meant a
+    # step removed from a path kept its claim forever: eight cards ended up printing
+    # "This is step 1 of 6 in first-week" for paths whose six steps did not include them,
+    # and two items carried a stale step count from when a path was three steps long. A
+    # field derived from other data must be derived, not accumulated.
+    for it in items:
+        it.pop("paths", None)
+
     for p in out:
         for s in p["steps"]:
-            by_id[s["item"]].setdefault("paths", [])
             entry = {"path": p["id"], "step": s["step"], "of": p["step_count"]}
-            if entry not in by_id[s["item"]]["paths"]:
-                by_id[s["item"]]["paths"].append(entry)
+            by_id[s["item"]].setdefault("paths", []).append(entry)
 
     json.dump(out, open(OUT, "w", encoding="utf-8"), indent=2, ensure_ascii=False)
     json.dump(items, open(ITEMS, "w", encoding="utf-8"), indent=2, ensure_ascii=False)

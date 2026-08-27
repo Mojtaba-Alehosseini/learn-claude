@@ -643,18 +643,6 @@
     "source": "Claude Help Center",
     "official": true,
     "id": "r-f86a3e8189",
-    "paths": [
-      {
-        "path": "first-week",
-        "step": 2,
-        "of": 6
-      },
-      {
-        "path": "first-week",
-        "step": 6,
-        "of": 6
-      }
-    ],
     "keywords": [
       "claude cowork",
       "cowork docs",
@@ -683,6 +671,13 @@
       "configure permission modes and safety controls in claude cowork",
       "set up projects and scheduled tasks",
       "navigate browser actions and understand current platform limits"
+    ],
+    "paths": [
+      {
+        "path": "first-week",
+        "step": 6,
+        "of": 6
+      }
     ]
   },
   {
@@ -1707,11 +1702,6 @@
       "basic prompting experience with claude"
     ],
     "paths": [
-      {
-        "path": "research-with-claude",
-        "step": 1,
-        "of": 3
-      },
       {
         "path": "research-with-claude",
         "step": 1,
@@ -4251,13 +4241,6 @@
     "source": "Claude Code docs",
     "official": true,
     "id": "r-fb8dc53be9",
-    "paths": [
-      {
-        "path": "claude-code-start",
-        "step": 2,
-        "of": 6
-      }
-    ],
     "keywords": [
       "claude code",
       "claudecode",
@@ -4292,6 +4275,13 @@
     "prerequisites": [
       "claude code installed and running",
       "basic terminal and git knowledge"
+    ],
+    "paths": [
+      {
+        "path": "claude-code-start",
+        "step": 2,
+        "of": 6
+      }
     ]
   },
   {
@@ -4727,13 +4717,6 @@
     "source": "Anthropic",
     "official": true,
     "id": "r-42516bb950",
-    "paths": [
-      {
-        "path": "claude-code-start",
-        "step": 5,
-        "of": 6
-      }
-    ],
     "keywords": [
       "context engineering",
       "ai agents",
@@ -4760,6 +4743,13 @@
     "prerequisites": [
       "experience building multi-turn ai agents",
       "basic prompt engineering skills"
+    ],
+    "paths": [
+      {
+        "path": "claude-code-start",
+        "step": 5,
+        "of": 6
+      }
     ]
   },
   {
@@ -5006,13 +4996,6 @@
     "source": "Anthropic",
     "official": true,
     "id": "r-81e43f0350",
-    "paths": [
-      {
-        "path": "claude-code-start",
-        "step": 3,
-        "of": 6
-      }
-    ],
     "keywords": [
       "claude 5 context engineering",
       "claude code system prompt",
@@ -5034,6 +5017,13 @@
     ],
     "prerequisites": [
       "experience maintaining a large claudemd or custom agent harness"
+    ],
+    "paths": [
+      {
+        "path": "claude-code-start",
+        "step": 3,
+        "of": 6
+      }
     ]
   },
   {
@@ -5062,13 +5052,6 @@
     "source": "Anthropic",
     "official": true,
     "id": "r-9f1cc05b1c",
-    "paths": [
-      {
-        "path": "claude-code-start",
-        "step": 4,
-        "of": 6
-      }
-    ],
     "keywords": [
       "claude code token cost",
       "prompt caching claude code",
@@ -5092,6 +5075,13 @@
     ],
     "prerequisites": [
       "regular use of claude code terminal interface"
+    ],
+    "paths": [
+      {
+        "path": "claude-code-start",
+        "step": 4,
+        "of": 6
+      }
     ]
   },
   {
@@ -5121,13 +5111,6 @@
     "source": "Anthropic",
     "official": true,
     "id": "r-756c6a8e02",
-    "paths": [
-      {
-        "path": "claude-code-start",
-        "step": 6,
-        "of": 6
-      }
-    ],
     "keywords": [
       "dynamic workflows claude code",
       "claude writes javascript orchestration",
@@ -5153,6 +5136,13 @@
     "prerequisites": [
       "advanced proficiency with claude code",
       "javascript programming skills"
+    ],
+    "paths": [
+      {
+        "path": "claude-code-start",
+        "step": 6,
+        "of": 6
+      }
     ]
   },
   {
@@ -5181,13 +5171,6 @@
     "source": "Anthropic Academy",
     "official": true,
     "id": "r-7340ad4c33",
-    "paths": [
-      {
-        "path": "claude-code-start",
-        "step": 1,
-        "of": 6
-      }
-    ],
     "keywords": [
       "claude code 101",
       "installing claude code",
@@ -6017,13 +6000,6 @@
     "checked": "2026-08-21",
     "status": "live",
     "id": "r-5780f44af0",
-    "paths": [
-      {
-        "path": "first-week",
-        "step": 6,
-        "of": 6
-      }
-    ],
     "keywords": [
       "claude code",
       "claudecode",
@@ -6202,13 +6178,6 @@
     "checked": "2026-08-21",
     "status": "live",
     "id": "r-77ae700ce1",
-    "paths": [
-      {
-        "path": "first-week",
-        "step": 5,
-        "of": 6
-      }
-    ],
     "keywords": [
       "agent skills",
       "skill md",
@@ -6836,13 +6805,6 @@
     "checked": "2026-08-21",
     "status": "live",
     "id": "r-011e20ba3e",
-    "paths": [
-      {
-        "path": "first-week",
-        "step": 3,
-        "of": 6
-      }
-    ],
     "keywords": [
       "mcp",
       "model context protocol",
@@ -6958,13 +6920,6 @@
     "checked": "2026-08-21",
     "status": "live",
     "id": "r-3b409df1d4",
-    "paths": [
-      {
-        "path": "first-week",
-        "step": 1,
-        "of": 6
-      }
-    ],
     "keywords": [
       "mcp docker",
       "fastmcp",
@@ -8842,18 +8797,6 @@
     "source": "Substack",
     "official": false,
     "id": "r-fc4a37f0dd",
-    "paths": [
-      {
-        "path": "research-with-claude",
-        "step": 3,
-        "of": 5
-      },
-      {
-        "path": "first-week",
-        "step": 1,
-        "of": 6
-      }
-    ],
     "keywords": [
       "claude surfaces",
       "claude features explained",
@@ -8880,6 +8823,13 @@
       "differentiate between claude's six core surfaces",
       "write your first prompt for cowork",
       "install and navigate claude features"
+    ],
+    "paths": [
+      {
+        "path": "first-week",
+        "step": 1,
+        "of": 6
+      }
     ]
   },
   {
@@ -8958,18 +8908,6 @@
     "source": "Coursera",
     "official": false,
     "id": "r-136c8e0f7b",
-    "paths": [
-      {
-        "path": "first-week",
-        "step": 4,
-        "of": 6
-      },
-      {
-        "path": "research-with-claude",
-        "step": 2,
-        "of": 5
-      }
-    ],
     "keywords": [
       "claude for non coders",
       "claude projects guide",
@@ -9422,13 +9360,6 @@
     "source": "The Product Compass",
     "official": false,
     "id": "r-2f768ad716",
-    "paths": [
-      {
-        "path": "research-with-claude",
-        "step": 1,
-        "of": 5
-      }
-    ],
     "keywords": [
       "claude code",
       "claudecode",
@@ -9776,13 +9707,6 @@
     "source": "Builder.io",
     "official": false,
     "id": "r-89cab5ac58",
-    "paths": [
-      {
-        "path": "research-with-claude",
-        "step": 5,
-        "of": 5
-      }
-    ],
     "keywords": [
       "claude code",
       "claudecode",
@@ -10905,11 +10829,6 @@
     ],
     "paths": [
       {
-        "path": "research-with-claude",
-        "step": 2,
-        "of": 3
-      },
-      {
         "path": "first-week",
         "step": 4,
         "of": 6
@@ -11347,11 +11266,6 @@
       "identify common AI failure modes like weak synthesis and hallucinated citations"
     ],
     "paths": [
-      {
-        "path": "research-with-claude",
-        "step": 3,
-        "of": 3
-      },
       {
         "path": "research-with-claude",
         "step": 3,

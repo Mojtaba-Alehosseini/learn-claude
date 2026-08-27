@@ -209,7 +209,12 @@
     });
     return raw.map(function (x) {
       var c = Object.create(x);
-      c.paths = byId[x.id] || x.paths || [];
+      /* byId is built from the live paths.json, so it is the whole truth about which
+         steps exist. The `|| x.paths` fallback that used to sit here read a stored field
+         instead whenever byId had no entry - which is precisely when the item is in no
+         path at all, so the fallback only ever fired when it was wrong. Eight cards
+         printed a step number for a path they were not in, with the raw slug on screen. */
+      c.paths = byId[x.id] || [];
       c.tierRank = (LC.TIER[x.tier] || LC.TIER.listed).rank;
       c.timeRank = LC.TIME_RANK[x.time] != null ? LC.TIME_RANK[x.time] : 9;
       c.sortDate = x.published && x.published !== "UNVERIFIED" ? x.published : "0000";

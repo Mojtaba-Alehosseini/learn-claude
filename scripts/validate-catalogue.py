@@ -306,6 +306,28 @@ def main(argv=None):
             "  If a person really did finish %s, confirm each one and raise the number "
             "in that file by hand." % ("it" if len(claimed) == 1 else "them"))
 
+    # 9. and the same check in the other direction. An item carries a `paths` field
+    #    saying which step of which path it is, and the card prints it. Checking only
+    #    path -> item let the reverse rot: build-paths.py appended to that field and
+    #    never cleared it, so a step removed from a path kept its claim, and eight cards
+    #    printed "This is step 1 of 6 in first-week" for a path whose six steps did not
+    #    include them. Both directions have to agree or one of them is lying.
+    if os.path.exists(paths_path):
+        truth = {}
+        for path in json.load(open(paths_path, encoding="utf-8")):
+            for step in path.get("steps", []):
+                truth.setdefault(step.get("item"), set()).add(
+                    (path.get("id"), step.get("step"), len(path.get("steps", []))))
+        for n, item in enumerate(items):
+            for claim in item.get("paths") or []:
+                key = (claim.get("path"), claim.get("step"), claim.get("of"))
+                if key not in truth.get(item.get("id"), set()):
+                    path_errors.append(
+                        "  row %-4d %-40s claims step %s of %s in %r, and that path does "
+                        "not list it there" % (n, str(item.get("title", ""))[:40],
+                                               claim.get("step"), claim.get("of"),
+                                               claim.get("path")))
+
     # ------------------------------------------------------------ report ----
 
     if not errors and not path_errors and not tier_errors:

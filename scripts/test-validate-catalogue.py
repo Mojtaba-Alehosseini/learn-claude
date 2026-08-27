@@ -116,6 +116,22 @@ CASES = [
      lambda i, p: p[0]["steps"][0].update({"item": "r-deadbeef00"}),
      "which is not in items.json"),
 
+    # The same relationship read the other way. Checking only path -> item let the
+    # reverse rot for weeks: build-paths.py appended to each item's `paths` field and
+    # never cleared it, so a step removed from a path kept its claim and eight cards
+    # printed a step number for a path that did not contain them.
+    ("an item claims a step in a path that does not list it",
+     lambda i, p: i[0].update({"paths": [{"path": p[0]["id"], "step": 1,
+                                          "of": len(p[0]["steps"])}]}),
+     "does not list it there"),
+
+    ("an item claims the right path but the wrong step number",
+     lambda i, p: i.__setitem__(
+         next(n for n, x in enumerate(i) if x["id"] == p[0]["steps"][0]["item"]),
+         dict(i[next(n for n, x in enumerate(i) if x["id"] == p[0]["steps"][0]["item"])],
+              paths=[{"path": p[0]["id"], "step": 99, "of": len(p[0]["steps"])}])),
+     "does not list it there"),
+
     # The rule the README singles out. It cannot be checked directly — no file shows who
     # did what — so what is checked is the appearance of a claim nobody has authorised.
     ("an entry claims tier: reviewed when none is allowed",
