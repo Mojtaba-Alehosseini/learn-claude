@@ -53,7 +53,7 @@
         "title": "What are Projects?",
         "url": "https://support.claude.com/en/articles/9517075-what-are-projects",
         "time": "under-15min",
-        "cost": "free-account",
+        "cost": "free",
         "tier": "ai-reviewed",
         "why": "Once you repeat a task twice, you need somewhere to keep the context. Projects is that place. Learning this earlier would have been abstract."
       },
@@ -322,7 +322,7 @@
         "title": "What are Projects?",
         "url": "https://support.claude.com/en/articles/9517075-what-are-projects",
         "time": "under-15min",
-        "cost": "free-account",
+        "cost": "free",
         "tier": "ai-reviewed",
         "why": "Projects is where a literature review actually lives. Set it up before you have forty loose chats."
       },
