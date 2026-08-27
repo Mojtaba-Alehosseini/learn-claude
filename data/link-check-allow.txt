@@ -13,14 +13,23 @@
 # Add a host only after opening the URL in a real browser and seeing it work. An entry
 # here permanently suppresses a real signal for that host, so each one is a small
 # promise that somebody looked.
+
+education.gov.au   # Times out from a GitHub Actions runner, every time. Verified alive in
+                   # a browser 2026-08-22 and again by the resource's own notes. See below.
+
+# ## The same check, two places, two answers
 #
-# ## Currently: no entries needed
+# Run over all 352 URLs twice on 2026-08-27:
 #
-# Measured 2026-08-27 over all 352 URLs: 333 ok, 0 gone, 19 blocked, 0 wobbly.
+#     from a home connection      333 ok · 0 gone · 19 blocked · 0 wobbly
+#     from a GitHub Actions runner 314 ok · 0 gone · 37 blocked · 1 wobbly
 #
-# The 19 blocked came from 10 hosts, all clean 403s, all handled automatically and none
-# needing a line here. Recorded so the next person knows they are expected rather than
-# new:
+# Same script, same minute, nearly double the blocking. Datacentre IP ranges are refused
+# by hosts that will happily serve a laptop. This is the single most important number in
+# this file: a checker developed against a home connection and shipped to CI would have
+# filed 37 dead links on its first run, and the catalogue has none.
+#
+# The 19 seen locally were ten hosts, all clean 403s, all handled automatically:
 #
 #     datacamp.com                 4      medium.com                   4
 #     udemy.com                    4      uxdesign.cc                  1
@@ -31,12 +40,15 @@
 # uxdesign.cc and designsystemscollective.com are Medium publications, so that is really
 # one host wearing three names.
 #
-# ## One prediction that did not survive contact
+# ## The one entry above, and why it took two runs to earn
 #
 # The Australian Framework for Generative AI in Schools carries this in its own `notes`:
-# "Blocks automated requests, so link checkers report it dead." It does not — it answered
-# 200. The difference is the User-Agent: check-links.py identifies as a current Chrome
-# and sends the Accept headers a browser sends, and education.gov.au is satisfied by
-# that where a bare Python default would not be. The note was written about a different
-# checker. It is left alone here because rewriting other people's notes is not this
-# file's job, but do not add that host on the strength of it.
+# "Blocks automated requests, so link checkers report it dead."
+#
+# From a home connection it answered 200, and that was written up as a prediction that
+# had not survived contact. It had. From the runner — which is the only place this check
+# actually runs — it timed out, exactly as the note said, and became the single `wobbly`
+# of the run. The note was right and the first test was in the wrong place.
+#
+# Worth remembering the next time a host looks fine: the question is never "does it
+# answer me", it is "does it answer the runner".
