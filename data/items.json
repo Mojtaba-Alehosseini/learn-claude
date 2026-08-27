@@ -7958,6 +7958,13 @@
       "understand the security model behind claude cowork",
       "block sensitive applications from folder access",
       "safely delegate file tasks without exposing private data"
+    ],
+    "paths": [
+      {
+        "path": "pm-without-engineering",
+        "step": 4,
+        "of": 5
+      }
     ]
   },
   {
@@ -9405,6 +9412,13 @@
       "install the claude code extension in vs code",
       "configure mcp connectors from claude.ai",
       "create your first skill in claude code"
+    ],
+    "paths": [
+      {
+        "path": "pm-without-engineering",
+        "step": 5,
+        "of": 5
+      }
     ]
   },
   {
@@ -9696,6 +9710,13 @@
       "apply folder hygiene for better cowork results",
       "write a synthesized research skill file with anti-fabrication rules",
       "identify and avoid cowork failure modes and silent connector failures"
+    ],
+    "paths": [
+      {
+        "path": "pm-without-engineering",
+        "step": 3,
+        "of": 5
+      }
     ]
   },
   {
@@ -9869,6 +9890,13 @@
     "prerequisites": [
       "5 to 10 user interview transcripts",
       "basic familiarity with chat prompting"
+    ],
+    "paths": [
+      {
+        "path": "pm-without-engineering",
+        "step": 1,
+        "of": 5
+      }
     ]
   },
   {
@@ -14637,6 +14665,13 @@
     "teaches": [
       "identify common vocabulary and sentence patterns of ai-generated text",
       "remove telltale formatting habits from ai drafts"
+    ],
+    "paths": [
+      {
+        "path": "writing-you-sign",
+        "step": 3,
+        "of": 5
+      }
     ]
   },
   {
@@ -14684,6 +14719,13 @@
     "teaches": [
       "evaluate case-by-case ethical use of ai in professional writing",
       "understand early journalistic guidelines regarding ai bylines"
+    ],
+    "paths": [
+      {
+        "path": "writing-you-sign",
+        "step": 5,
+        "of": 5
+      }
     ]
   },
   {
@@ -14979,6 +15021,13 @@
       "apply custom instructions to stop robotic writing",
       "use a banned words list for claude",
       "set up a starting voice guide"
+    ],
+    "paths": [
+      {
+        "path": "writing-you-sign",
+        "step": 4,
+        "of": 5
+      }
     ]
   },
   {
@@ -15238,6 +15287,13 @@
     "teaches": [
       "use claude for developmental editing on long documents",
       "evaluate clarity, cohesion, and flow of written drafts"
+    ],
+    "paths": [
+      {
+        "path": "writing-you-sign",
+        "step": 1,
+        "of": 5
+      }
     ]
   },
   {
@@ -15286,6 +15342,13 @@
       "structure a manuscript using claude",
       "prevent the ai from over-smoothing your natural writing voice",
       "apply real author workflows to long-form projects"
+    ],
+    "paths": [
+      {
+        "path": "writing-you-sign",
+        "step": 2,
+        "of": 5
+      }
     ]
   },
   {
@@ -15567,6 +15630,13 @@
       "upload files into a project knowledge base",
       "write custom project instructions",
       "share a project with team members"
+    ],
+    "paths": [
+      {
+        "path": "pm-without-engineering",
+        "step": 2,
+        "of": 5
+      }
     ]
   },
   {

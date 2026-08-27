@@ -103,6 +103,75 @@ PATHS = [
         ],
     },
     {
+        "id": "writing-you-sign",
+        "title": "Using Claude on work you put your name to",
+        "for": "Writers and marketers whose byline goes on it, and who would rather not "
+               "explain themselves later.",
+        "roles": ["writer-marketer"],
+        "level": "basic",
+        "intro": "Five steps, all free, about two hours. The order runs from what job "
+                 "Claude has, through the tells everyone else is trained to spot, to "
+                 "what you owe the reader. The last step is the one people skip and it "
+                 "is the one with consequences.",
+        "steps": [
+            {"url": "https://restructurednews.substack.com/p/claude-editor",
+             "why": "First, decide what job it has. This is a writer using Claude as an "
+             "editor rather than a ghostwriter, and settling that question now is what "
+             "makes every later step a craft problem instead of an ethics problem."},
+            {"url": "https://kenny-kane.com/blog/claude-ai-for-writing",
+             "why": "Now the craft, at length, with that relationship already fixed. Read "
+             "this second and it reads as technique; read it first and it reads as "
+             "permission to hand over the keyboard."},
+            {"url": "https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing",
+             "why": "Third, learn the symptoms before trying to treat them. Wikipedia's "
+             "editors have catalogued what AI prose actually looks like, and you cannot "
+             "prompt your way out of a tell you cannot name."},
+            {"url": "https://willfrancis.com/how-to-stop-claude-writing-like-an-ai/",
+             "why": "Only now is this useful. It is the treatment for the symptoms in step "
+             "3 — read in the other order it is a list of fixes for problems you have not "
+             "learned to see yet."},
+            {"url": "https://ethicscentral.org/the-ethics-of-using-ai/",
+             "why": "Last, and last on purpose: everything above makes the work harder to "
+             "detect, which is exactly why disclosure has to be the step you finish on. "
+             "Craft is what you owe the page. This is what you owe the reader."},
+        ],
+    },
+    {
+        "id": "pm-without-engineering",
+        "title": "Product work without waiting for engineering",
+        "for": "Product managers who have the question, the users and the context, and "
+               "keep having to queue for someone else's sprint.",
+        "roles": ["pm"],
+        "level": "basic",
+        "intro": "Five steps, all free, about two hours. Steps 1 to 4 need nothing but a "
+                 "browser — stop after step 4 and you can already synthesise research, "
+                 "keep it somewhere, delegate the repeatable parts and know what is safe "
+                 "to paste in. Step 5 needs a terminal, and it is fair to decide that is "
+                 "not your job.",
+        "steps": [
+            {"url": "https://www.enterpret.com/guides/claude-for-product-managers-synthesizing-user-research",
+             "why": "Start with the work only you do. Synthesising research is where "
+             "Claude pays for itself fastest and it needs no setup at all — a chat window "
+             "and the interviews you already have."},
+            {"url": "https://www.youtube.com/watch?v=GJ5jTgcbRHA",
+             "why": "Second, because one good synthesis is a party trick and a repeatable "
+             "one is a habit. Projects is where a product area stops being forty loose "
+             "chats you cannot find again."},
+            {"url": "https://haverin.substack.com/p/claude-cowork-for-product-managers",
+             "why": "Third: hand over the parts that repeat. This comes after Projects "
+             "because delegation without somewhere to put the output just moves the mess."},
+            {"url": "https://support.claude.com/en/articles/13364135-use-claude-cowork-safely",
+             "why": "Fourth, and deliberately not first. Safety guidance is abstract until "
+             "you know what you would actually delegate — which step 3 just taught you. "
+             "Read it before the first time you point Cowork at real customer data."},
+            {"url": "https://www.productcompass.pm/p/claude-code-beginners-guide",
+             "why": "This step needs a terminal, and if that is a no then stop here — the "
+             "four above stand on their own. It is last because it is the only one that "
+             "asks you to change how you work rather than what you work on, and because "
+             "the PM shelf leans heavily on Claude Code; this is the gentlest way in."},
+        ],
+    },
+    {
         "id": "research-with-claude",
         "title": "Using Claude for research without embarrassing yourself",
         "for": "Researchers and academics who want the speed without the retraction.",
@@ -132,8 +201,28 @@ PATHS = [
 ]
 
 
-def norm(url):
-    return url.rstrip("/").split("?")[0].lower()
+# Imported, not reimplemented. The version that used to live here was
+#     url.rstrip("/").split("?")[0].lower()
+# which throws the query string away — and a YouTube video's identity is its ?v=. Every
+# one of the 71 youtube.com/watch resources in the catalogue collapsed to a single key,
+# so a path step given a video URL silently resolved to whichever video happened to be
+# last in items.json. The three original paths never referenced a video, so nothing
+# caught it until one did: step 2 of the product-manager path asked for "Getting started
+# with projects in Claude.ai" and was handed "Master Claude for Excel in 10 Minutes".
+#
+# This is the same fault the README warns about for ids, in a second place nobody had
+# looked. stable-ids.py already normalises correctly — it keeps the query and drops only
+# tracking parameters — so use that one and stop maintaining two answers to one question.
+def _load_norm():
+    import importlib.util, os
+    path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "stable-ids.py")
+    spec = importlib.util.spec_from_file_location("stable_ids", path)
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod.norm
+
+
+norm = _load_norm()
 
 
 def main():

@@ -157,6 +157,140 @@
     ]
   },
   {
+    "id": "writing-you-sign",
+    "title": "Using Claude on work you put your name to",
+    "for": "Writers and marketers whose byline goes on it, and who would rather not explain themselves later.",
+    "roles": [
+      "writer-marketer"
+    ],
+    "level": "basic",
+    "intro": "Five steps, all free, about two hours. The order runs from what job Claude has, through the tells everyone else is trained to spot, to what you owe the reader. The last step is the one people skip and it is the one with consequences.",
+    "step_count": 5,
+    "total_minutes": 126,
+    "total_time_label": "about 2 hours",
+    "cost": "free",
+    "weakest_tier": "previewed",
+    "steps": [
+      {
+        "step": 1,
+        "item": "r-020cf5d9f6",
+        "title": "Claude, Editor",
+        "url": "https://restructurednews.substack.com/p/claude-editor",
+        "time": "under-15min",
+        "cost": "free",
+        "tier": "previewed",
+        "why": "First, decide what job it has. This is a writer using Claude as an editor rather than a ghostwriter, and settling that question now is what makes every later step a craft problem instead of an ethics problem."
+      },
+      {
+        "step": 2,
+        "item": "r-febccc2bee",
+        "title": "Claude AI for Writing: The Complete Guide for Authors and Content Creators",
+        "url": "https://kenny-kane.com/blog/claude-ai-for-writing",
+        "time": "under-1hr",
+        "cost": "free",
+        "tier": "previewed",
+        "why": "Now the craft, at length, with that relationship already fixed. Read this second and it reads as technique; read it first and it reads as permission to hand over the keyboard."
+      },
+      {
+        "step": 3,
+        "item": "r-d84a7c8cbe",
+        "title": "Wikipedia:Signs of AI writing",
+        "url": "https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing",
+        "time": "under-1hr",
+        "cost": "free",
+        "tier": "ai-reviewed",
+        "why": "Third, learn the symptoms before trying to treat them. Wikipedia's editors have catalogued what AI prose actually looks like, and you cannot prompt your way out of a tell you cannot name."
+      },
+      {
+        "step": 4,
+        "item": "r-da0e8aedbc",
+        "title": "How to Stop Claude Writing Like an AI",
+        "url": "https://willfrancis.com/how-to-stop-claude-writing-like-an-ai/",
+        "time": "under-15min",
+        "cost": "free",
+        "tier": "ai-reviewed",
+        "why": "Only now is this useful. It is the treatment for the symptoms in step 3 — read in the other order it is a list of fixes for problems you have not learned to see yet."
+      },
+      {
+        "step": 5,
+        "item": "r-3edab99ecf",
+        "title": "The Ethics of Using AI",
+        "url": "https://ethicscentral.org/the-ethics-of-using-ai/",
+        "time": "under-15min",
+        "cost": "free",
+        "tier": "ai-reviewed",
+        "why": "Last, and last on purpose: everything above makes the work harder to detect, which is exactly why disclosure has to be the step you finish on. Craft is what you owe the page. This is what you owe the reader."
+      }
+    ]
+  },
+  {
+    "id": "pm-without-engineering",
+    "title": "Product work without waiting for engineering",
+    "for": "Product managers who have the question, the users and the context, and keep having to queue for someone else's sprint.",
+    "roles": [
+      "pm"
+    ],
+    "level": "basic",
+    "intro": "Five steps, all free, about two hours. Steps 1 to 4 need nothing but a browser — stop after step 4 and you can already synthesise research, keep it somewhere, delegate the repeatable parts and know what is safe to paste in. Step 5 needs a terminal, and it is fair to decide that is not your job.",
+    "step_count": 5,
+    "total_minutes": 93,
+    "total_time_label": "about 2 hours",
+    "cost": "free",
+    "weakest_tier": "previewed",
+    "steps": [
+      {
+        "step": 1,
+        "item": "r-32ae8cb5c9",
+        "title": "Claude for Product Managers: Synthesizing User Research",
+        "url": "https://www.enterpret.com/guides/claude-for-product-managers-synthesizing-user-research",
+        "time": "under-15min",
+        "cost": "free",
+        "tier": "ai-reviewed",
+        "why": "Start with the work only you do. Synthesising research is where Claude pays for itself fastest and it needs no setup at all — a chat window and the interviews you already have."
+      },
+      {
+        "step": 2,
+        "item": "r-5a3db6848c",
+        "title": "Getting started with projects in Claude.ai",
+        "url": "https://www.youtube.com/watch?v=GJ5jTgcbRHA",
+        "time": "under-15min",
+        "cost": "free",
+        "tier": "previewed",
+        "why": "Second, because one good synthesis is a party trick and a repeatable one is a habit. Projects is where a product area stops being forty loose chats you cannot find again."
+      },
+      {
+        "step": 3,
+        "item": "r-fb4eb9411b",
+        "title": "Claude Cowork for Product Managers: A Working Guide",
+        "url": "https://haverin.substack.com/p/claude-cowork-for-product-managers",
+        "time": "under-15min",
+        "cost": "free",
+        "tier": "ai-reviewed",
+        "why": "Third: hand over the parts that repeat. This comes after Projects because delegation without somewhere to put the output just moves the mess."
+      },
+      {
+        "step": 4,
+        "item": "r-e686e58ab4",
+        "title": "Use Claude Cowork safely",
+        "url": "https://support.claude.com/en/articles/13364135-use-claude-cowork-safely",
+        "time": "under-15min",
+        "cost": "free",
+        "tier": "ai-reviewed",
+        "why": "Fourth, and deliberately not first. Safety guidance is abstract until you know what you would actually delegate — which step 3 just taught you. Read it before the first time you point Cowork at real customer data."
+      },
+      {
+        "step": 5,
+        "item": "r-2f768ad716",
+        "title": "Claude Code for PMs: The Beginner's Guide",
+        "url": "https://www.productcompass.pm/p/claude-code-beginners-guide",
+        "time": "under-1hr",
+        "cost": "free",
+        "tier": "ai-reviewed",
+        "why": "This step needs a terminal, and if that is a no then stop here — the four above stand on their own. It is last because it is the only one that asks you to change how you work rather than what you work on, and because the PM shelf leans heavily on Claude Code; this is the gentlest way in."
+      }
+    ]
+  },
+  {
     "id": "research-with-claude",
     "title": "Using Claude for research without embarrassing yourself",
     "for": "Researchers and academics who want the speed without the retraction.",
