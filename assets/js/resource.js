@@ -94,7 +94,14 @@
         ? ' · Published ' + LC.esc(LC.fmtDate(item.published))
         : ' · No publish date given') +
       ' · Found through ' + LC.esc(item.source) +
-    '</p>';
+    '</p>' +
+
+    /* The escape hatch. Sits under the provenance line, in the same quiet type, because
+       it belongs to the same conversation: here is what we know about this and when we
+       last looked, and here is what to do if we got it wrong. */
+    '<p class="report"><a href="' + LC.esc(LC.reportUrl(item)) + '" ' +
+      'target="_blank" rel="noopener noreferrer">Something wrong with this one? Tell us' +
+      '</a> — opens a GitHub issue with the details already filled in.</p>';
 
   var copy = document.getElementById("copy");
   var copyTimer = null;

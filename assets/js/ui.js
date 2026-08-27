@@ -185,6 +185,51 @@
 
   LC.href = function (item) { return "resource.html?id=" + encodeURIComponent(item.id); };
 
+  /* Where a reader tells us something is wrong.
+     how-we-check.html has said "Found something wrong? Tell us." since the site went up,
+     and offered no way to tell anyone: zero mailto: and zero issue links across all five
+     pages. The person who finds a dead link is looking at the dead link, so the report
+     starts from there with the details already filled in. Sending them somewhere else to
+     describe which of 352 resources they meant loses most reports before they are made.
+     Quiet by design. This is not a call to action, it is an escape hatch for the one
+     reader in a hundred who spots something. */
+  var REPO = "https://github.com/Mojtaba-Alehosseini/learn-claude";
+  var SITE = "https://mojtaba-alehosseini.github.io/learn-claude/";
+  var NL = "\n";
+
+  LC.reportUrl = function (item) {
+    var title, lines;
+    if (item) {
+      title = "Problem with: " + item.title;
+      lines = [
+        "Resource: " + item.title,
+        "Link:     " + item.url,
+        "Our page: " + SITE + "resource.html?id=" + item.id,
+        "",
+        "What is wrong? A dead link, a description that does not match, something out of",
+        "date, or written for someone else. A sentence is plenty.",
+        "",
+        "",
+        "---",
+        "Reported from the resource page, so the three lines above filled themselves in."
+      ];
+    } else {
+      title = "Something is wrong on Learn Claude";
+      lines = [
+        "Which page or resource is this about?",
+        "",
+        "",
+        "What is wrong?",
+        "",
+        "",
+        "---",
+        "Reported from " + SITE + "how-we-check.html"
+      ];
+    }
+    return REPO + "/issues/new?title=" + encodeURIComponent(title) +
+           "&body=" + encodeURIComponent(lines.join(NL));
+  };
+
   /* --------------------------------------------------------------- card ---- */
 
   /* Fixed order, and it is not arbitrary: how well we checked it, what it is, what it

@@ -583,6 +583,17 @@ button, .btn, .nav-link, .filter-option { min-height: 44px; }
   color: var(--text-secondary);
 }
 
+/* The report link. Same quiet type as the provenance line above it and no rule of its
+   own, because the two belong to one thought: here is what we know and when we looked,
+   and here is what to do if we got it wrong. Deliberately not a button and deliberately
+   not clay - one reader in a hundred needs this, and the other ninety-nine should be
+   able to ignore it without effort. */
+.report {
+  margin-top: var(--space-8);
+  font: var(--weight-regular) var(--text-caption)/var(--leading-caption) var(--font-sans);
+  color: var(--text-secondary);
+}
+
 /* ---------------------------------------------------------------- mobile ---- */
 
 .mobile-filter-bar { display: none; }
