@@ -83,7 +83,11 @@
 
   /* Three date states, and the third is the common one.
    *
-   * 176 of 353 resources publish no date at all — mostly documentation, which is
+   * 170 of 352 resources publish no date at all, measured 2026-08-27 with
+   *   python3 -c "import json;d=json.load(open('data/items.json',encoding='utf-8'));print(sum(1 for i in d if i.get('published')=='UNVERIFIED'),'of',len(d))"
+   * The figure that stood here said 176 of 353 and had been wrong for some time; a bare
+   * number in a comment rots silently, so this one carries the date it was taken and the
+   * command that takes it again. Mostly documentation, which is
    * maintained continuously and simply does not print one. Saying nothing would let a
    * reader assume it is current; inventing a date would be worse. So we say we do not
    * know, and lean on `checked`, which we always know because we did it ourselves. */
