@@ -49,6 +49,7 @@ NAMES = [
     ("medium.com", "Medium", False),
     ("towardsdatascience.com", "Towards Data Science", False),
     ("uxdesign.cc", "UX Collective", False),
+    ("productimpactpod.com", "Product Impact", False),
     ("dev.to", "DEV", False),
     ("reddit.com", "Reddit", False),
     ("news.ycombinator.com", "Hacker News", False),
