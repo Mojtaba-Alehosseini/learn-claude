@@ -1,0 +1,55 @@
+# Ask every link in the catalogue, once a week, whether it is still there.
+#
+# `checked` is the site's premise. README.md: "When something drifts out of date, the
+# date says so before we do." Nothing had ever re-asked - every checked date is August
+# 2026 and no process would ever move one.
+#
+# This job reports and stops. It does not edit data/items.json, it does not commit, and
+# it has no write access to the repository contents. A job that silently flipped
+# `status: dead` would let one misconfigured user-agent quietly delete good resources,
+# and the failure would look exactly like success.
+
+name: Weekly link check
+
+on:
+  schedule:
+    # 07:00 UTC on Mondays. Early enough that a dead link is found before the week's
+    # readers arrive, late enough that a failure is not discovered on a Sunday night.
+    - cron: '0 7 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read      # deliberately not write. This job never commits.
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # Standard library only, like every other script here. Nothing to install.
+      - name: Ask every URL
+        run: python3 scripts/check-links.py --json link-check.json
+
+      - name: Report what is gone, and only what is gone
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: python3 scripts/report-dead-links.py link-check.json
+
+      # Kept whatever the outcome, so a week with nothing gone still leaves evidence the
+      # check ran and what it saw. Fourteen weeks of these is how you tell a host that
+      # blocks us from a host that has started dying.
+      - name: Keep the full result
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: link-check-${{ github.run_id }}
+          path: link-check.json
+          retention-days: 90

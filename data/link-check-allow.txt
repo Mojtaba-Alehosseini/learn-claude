@@ -1,0 +1,42 @@
+# Hosts the weekly link check must treat as `blocked` no matter what they return.
+#
+# One host per line. Anything after a `#` is the reason, and the reason is the point.
+#
+# ## What this is for, and what it is NOT for
+#
+# scripts/check-links.py already reads 401, 403, 429 and 451 as "blocked us" rather than
+# "gone", so a host that answers with a clean 403 needs no entry here. This file is for
+# the harder case: a host that is alive but answers automation with silence — a timeout,
+# a reset connection, an empty body — which the classifier would otherwise call `wobbly`
+# every week for ever.
+#
+# Add a host only after opening the URL in a real browser and seeing it work. An entry
+# here permanently suppresses a real signal for that host, so each one is a small
+# promise that somebody looked.
+#
+# ## Currently: no entries needed
+#
+# Measured 2026-08-27 over all 352 URLs: 333 ok, 0 gone, 19 blocked, 0 wobbly.
+#
+# The 19 blocked came from 10 hosts, all clean 403s, all handled automatically and none
+# needing a line here. Recorded so the next person knows they are expected rather than
+# new:
+#
+#     datacamp.com                 4      medium.com                   4
+#     udemy.com                    4      uxdesign.cc                  1
+#     designsystemscollective.com  1      students.unimelb.edu.au      1
+#     monash.edu                   1      ethicscentral.org            1
+#     spj.org                      1      niemanlab.org                1
+#
+# uxdesign.cc and designsystemscollective.com are Medium publications, so that is really
+# one host wearing three names.
+#
+# ## One prediction that did not survive contact
+#
+# The Australian Framework for Generative AI in Schools carries this in its own `notes`:
+# "Blocks automated requests, so link checkers report it dead." It does not — it answered
+# 200. The difference is the User-Agent: check-links.py identifies as a current Chrome
+# and sends the Accept headers a browser sends, and education.gov.au is satisfied by
+# that where a bare Python default would not be. The note was written about a different
+# checker. It is left alone here because rewriting other people's notes is not this
+# file's job, but do not add that host on the strength of it.
