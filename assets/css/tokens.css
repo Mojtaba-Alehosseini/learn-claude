@@ -188,10 +188,65 @@
      Layout
      ------------------------------------------------------------------------ */
   --page-max-width: 1280px;
-  --measure: 68ch;          /* longest a line of body text may run */
+  /* Longest a line of body text may run. 50, not 68, and the unit is the reason.
+     `ch` is the advance width of the digit 0, which is far wider than an average
+     lowercase character. Measured in Chrome on 2026-08-27:
+
+       Tiempos 20px   0 = 12.00px   average prose character = 8.52px   ratio 1.41
+       Styrene 16px   0 = 11.07px   average prose character = 7.97px   ratio 1.39
+
+     So `ch` buys about 1.4 characters, and 68ch was setting 96 characters per
+     line - measured at 816px on how-we-check. 50ch lands at 70 in the serif and
+     69 in the sans, both inside the 66-75 that the brief asks for.
+
+     Keep the unit. It scales with font size and with the face, which px would
+     not; only the number was wrong. Re-measure with the ratio above before
+     changing it. */
+  --measure: 50ch;
   --section-gap: var(--space-100);
   --card-padding: var(--space-24);
   --element-gap: var(--space-8);
+
+  --rail-width:     264px;  /* the browse filter rail */
+  --footer-col-min: 140px;  /* below this the four footer columns start wrapping */
+
+  /* The numbered-step gutter on Paths. The spine is centred on this, so the two
+     are derived with calc() rather than written out — 27px and 19px used to sit
+     in the stylesheet as bare numbers and neither said what it was half of. */
+  --step-col:     56px;
+  --step-col-sm:  40px;     /* the same column on a phone */
+  --step-num:     40px;     /* the circle inside it; --space-32 on a phone */
+
+  /* ------------------------------------------------------------------------
+     Line weights. The system has exactly two: a hairline, and the thicker rule
+     that marks the current page in the nav.
+     ------------------------------------------------------------------------ */
+  --hairline:    1px;
+  --rule-active: 2px;
+
+  /* ------------------------------------------------------------------------
+     Values that are neither spacing nor type, and had been written as bare
+     numbers because no scale would take them.
+     ------------------------------------------------------------------------ */
+
+  /* Link underlines. 4px would put this on the spacing scale and detach the
+     rule from 12px caption text, which is where most links on this site are. */
+  --underline-offset: 3px;
+
+  /* WCAG 2.5.5. site.css has carried this as a comment since the beginning —
+     "Every control is at least 44px tall. Not a suggestion." A number that
+     states a rule belongs in the scale, not in prose beside it. */
+  --tap-min:     44px;
+  /* The one clay button is deliberately taller than the 44px floor and than the
+     48px inputs. That four pixels is the emphasis; it is not an accident. */
+  --tap-primary: 52px;
+
+  /* Small pills: badges, chips, the publisher mark, the path marker. Five
+     components that look identical were each choosing their own pair — 3/10,
+     3/10, 2/10, 2/8 and 4/6/4/10. None of those numbers is on the 4px grid.
+     One pair now, and it is. */
+  --pill-pad-y: var(--space-4);
+  --pill-pad-x: var(--space-8);
 
   /* ------------------------------------------------------------------------
      Radius — the bottom-only 8px on filled buttons is the signature.

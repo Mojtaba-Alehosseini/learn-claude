@@ -34,8 +34,8 @@ input, select, button, textarea { font: inherit; color: inherit; }
 a {
   color: var(--text-primary);
   text-decoration: underline;
-  text-underline-offset: 3px;
-  text-decoration-thickness: 1px;
+  text-underline-offset: var(--underline-offset);
+  text-decoration-thickness: var(--hairline);
 }
 a:hover { color: var(--bark); }
 
@@ -45,7 +45,7 @@ a:hover { color: var(--bark); }
 
 /* Every control is at least 44px tall. Not a suggestion — it is the difference
    between usable and unusable on a phone. */
-button, .btn, .nav-link, .filter-option { min-height: 44px; }
+button, .btn, .nav-link, .filter-option { min-height: var(--tap-min); }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
@@ -71,13 +71,13 @@ button, .btn, .nav-link, .filter-option { min-height: 44px; }
   background: var(--surface-card);
   color: var(--text-primary);
   padding: var(--space-12) var(--space-16);
-  border: 1px solid var(--slate-dark);
+  border: var(--hairline) solid var(--slate-dark);
   font: var(--weight-medium) var(--text-body-sm) var(--font-sans);
   text-decoration: none;
 }
 .skip-link:focus { left: var(--space-8); }
 
-.site-header { border-bottom: 1px solid var(--border); }
+.site-header { border-bottom: var(--hairline) solid var(--border); }
 .site-header .wrap {
   display: flex;
   align-items: center;
@@ -102,7 +102,7 @@ button, .btn, .nav-link, .filter-option { min-height: 44px; }
   align-items: center;
   text-decoration: none;
   color: var(--text-secondary);
-  border-bottom: 2px solid transparent;
+  border-bottom: var(--rule-active) solid transparent;
 }
 .nav-link:hover { color: var(--text-primary); }
 .nav-link[aria-current="page"] {
@@ -124,7 +124,7 @@ button, .btn, .nav-link, .filter-option { min-height: 44px; }
 }
 .site-footer a { color: var(--text-on-invert); }
 .site-footer :focus-visible { outline-color: var(--ivory-light); }
-.footer-col { display: flex; flex-direction: column; gap: var(--space-8); min-width: 140px; }
+.footer-col { display: flex; flex-direction: column; gap: var(--space-8); min-width: var(--footer-col-min); }
 .footer-note {
   font: var(--weight-regular) var(--text-caption)/var(--leading-caption) var(--font-sans);
   color: var(--cloud-medium);
@@ -181,7 +181,7 @@ button, .btn, .nav-link, .filter-option { min-height: 44px; }
   justify-content: center;
   gap: var(--space-8);
   padding: 0 var(--space-32);
-  border: 1px solid transparent;
+  border: var(--hairline) solid transparent;
   cursor: pointer;
   text-decoration: none;
   font: var(--weight-medium) var(--text-body-sm)/var(--leading-body-sm) var(--font-sans);
@@ -195,7 +195,7 @@ button, .btn, .nav-link, .filter-option { min-height: 44px; }
   background: var(--clay);
   color: var(--text-on-clay);
   border-radius: var(--radius-filled);
-  min-height: 52px;
+  min-height: var(--tap-primary);
 }
 .btn-primary:hover { background: var(--clay-deep); color: var(--text-on-clay); }
 
@@ -213,7 +213,7 @@ button, .btn, .nav-link, .filter-option { min-height: 44px; }
   padding: var(--space-8) 0;
   color: var(--text-secondary);
   text-decoration: underline;
-  text-underline-offset: 3px;
+  text-underline-offset: var(--underline-offset);
   cursor: pointer;
   font: var(--weight-regular) var(--text-caption)/var(--leading-caption) var(--font-sans);
 }
@@ -228,10 +228,10 @@ button, .btn, .nav-link, .filter-option { min-height: 44px; }
 }
 .input, .select {
   width: 100%;
-  min-height: 48px;
+  min-height: var(--space-48);
   padding: 0 var(--space-16);
   background: var(--surface-card);
-  border: 1px solid var(--border);
+  border: var(--hairline) solid var(--border);
   border-radius: var(--radius-outline);
   font: var(--weight-regular) var(--text-body-sm)/var(--leading-body-sm) var(--font-sans);
 }
@@ -243,8 +243,8 @@ button, .btn, .nav-link, .filter-option { min-height: 44px; }
    always present, because a colour-blind reader must get the same information. */
 .badge {
   display: inline-block;
-  padding: 3px 10px;
-  border: 1px solid transparent;
+  padding: var(--pill-pad-y) var(--pill-pad-x);
+  border: var(--hairline) solid transparent;
   border-radius: var(--radius-badge);
   font: var(--weight-medium) var(--text-caption)/var(--leading-caption) var(--font-sans);
   letter-spacing: var(--tracking-caption);
@@ -260,7 +260,7 @@ button, .btn, .nav-link, .filter-option { min-height: 44px; }
 /* Publisher. Quiet by design: who made it matters less than how well we checked it. */
 .publisher-official {
   display: inline-block;
-  padding: 2px 8px;
+  padding: var(--pill-pad-y) var(--pill-pad-x);
   background: var(--surface-feature);
   border-radius: var(--radius-badge);
   font: var(--weight-medium) var(--text-caption)/var(--leading-caption) var(--font-sans);
@@ -269,8 +269,8 @@ button, .btn, .nav-link, .filter-option { min-height: 44px; }
 
 .chip {
   display: inline-block;
-  padding: 3px 10px;
-  border: 1px solid var(--border);
+  padding: var(--pill-pad-y) var(--pill-pad-x);
+  border: var(--hairline) solid var(--border);
   border-radius: var(--radius-badge);
   font: var(--weight-regular) var(--text-caption)/var(--leading-caption) var(--font-sans);
   color: var(--text-secondary);
@@ -281,9 +281,9 @@ button, .btn, .nav-link, .filter-option { min-height: 44px; }
 /* A removable applied filter. */
 .chip-applied {
   display: inline-flex; align-items: center; gap: var(--space-8);
-  padding: 4px 6px 4px 10px;
+  padding: var(--pill-pad-y) var(--pill-pad-y) var(--pill-pad-y) var(--pill-pad-x);
   background: var(--surface-card);
-  border: 1px solid var(--border-strong);
+  border: var(--hairline) solid var(--border-strong);
   border-radius: var(--radius-badge);
   font: var(--weight-regular) var(--text-caption)/var(--leading-caption) var(--font-sans);
   cursor: pointer;
@@ -294,7 +294,7 @@ button, .btn, .nav-link, .filter-option { min-height: 44px; }
 .chip-choice {
   padding: var(--space-8) var(--space-16);
   background: var(--surface-card);
-  border: 1px solid var(--border);
+  border: var(--hairline) solid var(--border);
   border-radius: var(--radius-outline);
   cursor: pointer;
   font: var(--weight-regular) var(--text-body-sm)/var(--leading-body-sm) var(--font-sans);
@@ -324,7 +324,7 @@ button, .btn, .nav-link, .filter-option { min-height: 44px; }
 .card {
   display: block;
   background: var(--surface-card);
-  border: 1px solid var(--border);
+  border: var(--hairline) solid var(--border);
   border-radius: var(--radius-card);
   padding: var(--card-padding);
   text-decoration: none;
@@ -345,7 +345,7 @@ button, .btn, .nav-link, .filter-option { min-height: 44px; }
   text-wrap: balance;
 }
 .card-source { margin-top: var(--space-4); }
-.card-icon { width: 32px; height: 32px; flex: 0 0 auto; }
+.card-icon { width: var(--space-32); height: var(--space-32); flex: 0 0 auto; }
 
 .card-for {
   margin-top: var(--space-12);
@@ -359,7 +359,7 @@ button, .btn, .nav-link, .filter-option { min-height: 44px; }
 .card-skip {
   margin-top: var(--space-12);
   padding-top: var(--space-12);
-  border-top: 1px solid var(--line-quiet);
+  border-top: var(--hairline) solid var(--line-quiet);
   font: var(--weight-regular) var(--text-body)/var(--leading-body) var(--font-serif);
   color: var(--text-primary);
   max-width: var(--measure);
@@ -380,7 +380,7 @@ button, .btn, .nav-link, .filter-option { min-height: 44px; }
 .card-path {
   display: inline-block;
   margin-top: var(--space-12);
-  padding: 2px 10px;
+  padding: var(--pill-pad-y) var(--pill-pad-x);
   background: var(--surface-feature);
   border-radius: var(--radius-badge);
   font: var(--weight-medium) var(--text-caption)/var(--leading-caption) var(--font-sans);
@@ -390,7 +390,7 @@ button, .btn, .nav-link, .filter-option { min-height: 44px; }
 
 .browse-grid {
   display: grid;
-  grid-template-columns: 264px minmax(0, 1fr);
+  grid-template-columns: var(--rail-width) minmax(0, 1fr);
   gap: var(--space-48);
   align-items: start;
   margin-top: var(--space-32);
@@ -459,7 +459,7 @@ button, .btn, .nav-link, .filter-option { min-height: 44px; }
 .filter-rail:focus-within::-webkit-scrollbar-thumb { background: var(--bark); }
 .filter-head {
   display: flex; align-items: center; justify-content: space-between;
-  gap: var(--space-16); min-height: 44px;
+  gap: var(--space-16); min-height: var(--tap-min);
 }
 .filter-group { margin: var(--space-16) 0 var(--space-24); }
 .filter-group h3 { margin-bottom: var(--space-8); }
@@ -473,24 +473,24 @@ button, .btn, .nav-link, .filter-option { min-height: 44px; }
 }
 .filter-option:hover { background: var(--surface-card); }
 .filter-box {
-  flex: 0 0 auto; width: 16px; height: 16px;
+  flex: 0 0 auto; width: var(--space-16); height: var(--space-16);
   display: inline-flex; align-items: center; justify-content: center;
-  font: var(--weight-bold) 11px/1 var(--font-sans);
-  border: 1px solid var(--border-strong);
+  font: var(--weight-bold) var(--text-caption)/1 var(--font-sans);
+  border: var(--hairline) solid var(--border-strong);
   background: transparent;
   color: var(--ivory-light);
 }
 .filter-option[aria-checked="true"] .filter-box {
   background: var(--slate-dark); border-color: var(--slate-dark);
 }
-.filter-icon { width: 28px; height: 28px; flex: 0 0 auto;
+.filter-icon { width: var(--space-32); height: var(--space-32); flex: 0 0 auto;
                background-position: center; background-size: contain;
                background-repeat: no-repeat; }
 .filter-more {
   display: flex; justify-content: space-between; align-items: center;
   gap: var(--space-16); width: 100%;
   padding: var(--space-12) var(--space-8);
-  background: transparent; border: 0; border-top: 1px solid var(--border);
+  background: transparent; border: 0; border-top: var(--hairline) solid var(--border);
   border-radius: 0; cursor: pointer; text-align: left;
   font: var(--weight-medium) var(--text-body-sm)/var(--leading-body-sm) var(--font-sans);
 }
@@ -534,7 +534,7 @@ button, .btn, .nav-link, .filter-option { min-height: 44px; }
 
 .step {
   display: grid;
-  grid-template-columns: 56px minmax(0, 1fr);
+  grid-template-columns: var(--step-col) minmax(0, 1fr);
   gap: var(--space-24);
   padding-bottom: var(--space-32);
   position: relative;
@@ -543,15 +543,15 @@ button, .btn, .nav-link, .filter-option { min-height: 44px; }
 .step::before {
   content: "";
   position: absolute;
-  left: 27px; top: 40px; bottom: 0;
-  width: 1px; background: var(--border);
+  left: calc(var(--step-col) / 2 - var(--hairline)); top: var(--step-num); bottom: 0;
+  width: var(--hairline); background: var(--border);
 }
 .step:last-child::before { display: none; }
 
 .step-num {
-  width: 40px; height: 40px;
+  width: var(--step-num); height: var(--step-num);
   display: flex; align-items: center; justify-content: center;
-  border: 1px solid var(--border-strong);
+  border: var(--hairline) solid var(--border-strong);
   border-radius: 50%;
   background: var(--surface-canvas);
   position: relative; z-index: 1;
@@ -578,7 +578,7 @@ button, .btn, .nav-link, .filter-option { min-height: 44px; }
 .provenance {
   margin-top: var(--space-48);
   padding-top: var(--space-16);
-  border-top: 1px solid var(--border);
+  border-top: var(--hairline) solid var(--border);
   font: var(--weight-regular) var(--text-caption)/var(--leading-caption) var(--font-sans);
   color: var(--text-secondary);
 }
@@ -598,6 +598,10 @@ button, .btn, .nav-link, .filter-option { min-height: 44px; }
 
 .mobile-filter-bar { display: none; }
 
+/* 768px is the one size on this page that cannot be a token. A media query is
+   evaluated before custom properties resolve, so `@media (max-width: var(--x))`
+   is not valid CSS in any browser. The same number is repeated in tokens.css,
+   which is unavoidable; change one and change the other. */
 @media (max-width: 768px) {
   .wrap { padding-left: var(--space-16); padding-right: var(--space-16); }
   .browse-grid { grid-template-columns: 1fr; gap: var(--space-24); }
@@ -610,7 +614,7 @@ button, .btn, .nav-link, .filter-option { min-height: 44px; }
     position: fixed; left: 0; right: 0; bottom: 0; z-index: 40;
     padding: var(--space-12) var(--space-16);
     background: var(--surface-card);
-    border-top: 1px solid var(--border);
+    border-top: var(--hairline) solid var(--border);
   }
   .mobile-filter-bar .btn { width: 100%; }
 
@@ -623,7 +627,7 @@ button, .btn, .nav-link, .filter-option { min-height: 44px; }
 
   /* The site's own rule, stated at the top of this file, is 44px for anything you
      press. These were 25px — the only controls on the site below the line. */
-  .footer-col a { min-height: 44px; display: flex; align-items: center; }
+  .footer-col a { min-height: var(--tap-min); display: flex; align-items: center; }
 
   .sheet {
     position: fixed; inset: 0; z-index: 50;
@@ -634,18 +638,21 @@ button, .btn, .nav-link, .filter-option { min-height: 44px; }
     display: flex; align-items: center; justify-content: space-between;
     gap: var(--space-16);
     padding: var(--space-16);
-    border-bottom: 1px solid var(--border);
+    border-bottom: var(--hairline) solid var(--border);
   }
   .sheet-body { flex: 1; overflow: auto; padding: var(--space-16); }
-  .sheet-foot { padding: var(--space-16); border-top: 1px solid var(--border); }
+  .sheet-foot { padding: var(--space-16); border-top: var(--hairline) solid var(--border); }
   .sheet-foot .btn { width: 100%; }
 
-  .step { grid-template-columns: 40px minmax(0, 1fr); gap: var(--space-16); }
-  .step::before { left: 19px; }
-  .step-num { width: 32px; height: 32px; }
+  .step { grid-template-columns: var(--step-col-sm) minmax(0, 1fr); gap: var(--space-16); }
+  .step::before { left: calc(var(--step-col-sm) / 2 - var(--hairline)); }
+  .step-num { width: var(--space-32); height: var(--space-32); }
 }
 
 .hidden { display: none !important; }
+/* The 1px here is not a hairline and must not become one: it is the standard
+   visually-hidden idiom, a one-pixel clip box that keeps the text reachable by a
+   screen reader while taking it off the screen. It is a technique, not a size. */
 .visually-hidden {
   position: absolute; width: 1px; height: 1px;
   padding: 0; margin: -1px; overflow: hidden;
