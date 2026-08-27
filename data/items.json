@@ -2247,7 +2247,7 @@
     "checked": "2026-08-19",
     "status": "live",
     "notes": "Finance-focused academic author; strong on reproducibility and grounding. Tools assumed: Claude Code, Python, MCP.",
-    "source": "Finance",
+    "source": "Codes",
     "official": false,
     "id": "r-9694bcc1eb",
     "keywords": [
@@ -2584,7 +2584,7 @@
     "checked": "2026-08-19",
     "status": "live",
     "notes": "Lesser-known source but technically accurate on the two-modes trap — the core correctness risk. Tools assumed: Claude.ai, CSV.",
-    "source": "Pl",
+    "source": "qwe.edu.pl",
     "official": false,
     "id": "r-e638b25bdd",
     "keywords": [
@@ -7087,7 +7087,7 @@
     "title": "Claude Code for Product Managers",
     "url": "https://every.to/source-code/claude-code-for-product-managers",
     "author": "Marcus Moretti",
-    "source": "To",
+    "source": "Every",
     "official": false,
     "roles": [
       "pm"
@@ -7357,7 +7357,7 @@
     "title": "Getting started with Claude Cowork (Airtree course)",
     "url": "https://www.airtree.vc/open-source-vc/claude-cowork-course",
     "author": "Marnix Denys, Airtree",
-    "source": "Vc",
+    "source": "Airtree",
     "official": false,
     "roles": [
       "non-technical",
@@ -9473,7 +9473,7 @@
     "checked": "2026-08-21",
     "status": "live",
     "notes": "Free to read in full, unlike the companion essay at every.to/source-code/claude-code-for-product-managers which is paywalled. Honest 'What's not included' section names prioritisation and pulse comparison as gaps.",
-    "source": "To",
+    "source": "Every",
     "official": false,
     "id": "r-ef99edbbfd",
     "keywords": [
@@ -9702,7 +9702,7 @@
     "checked": "2026-08-21",
     "status": "live",
     "notes": "Originally published December 2025, updated 2026-04-24. Treat the original date as a warning: check any command syntax against current Claude Code docs.",
-    "source": "World",
+    "source": "Prodmgmt",
     "official": false,
     "id": "r-feff6f0299",
     "keywords": [
@@ -11182,7 +11182,7 @@
     "status": "live",
     "field": "library and information science",
     "notes": "DOI 10.1353/lib.2025.a961199. The ONLY peer-reviewed study that actually tested Claude on a lit review; reports fabrication qualitatively, not as a rate. Open-access copy: knightscholar.geneseo.edu/library-research/22/.",
-    "source": "Jhu",
+    "source": "Johns Hopkins University Press",
     "official": false,
     "id": "r-69ee3c03e3",
     "keywords": [
@@ -12279,7 +12279,7 @@
     "checked": "2026-08-21",
     "status": "live",
     "notes": "The style list (Learning, Formal, Explanatory, Concise, Normal) and the Search-and-tools click path were accurate as of December 2025; verify against your own screen. Written when Pitt student access was still 'coming soon'.",
-    "source": "Pitt",
+    "source": "University of Pittsburgh",
     "official": false,
     "id": "r-6bdd922cd9",
     "keywords": [
@@ -12335,7 +12335,7 @@
     "checked": "2026-08-21",
     "status": "live",
     "notes": "No date anywhere on the page, so freshness cannot be checked. The claim that Claude 'promotes good academic practice' is institutional optimism, not a guarantee.",
-    "source": "Ac",
+    "source": "Northumbria University",
     "official": false,
     "id": "r-f5fd0dec58",
     "keywords": [
@@ -12383,7 +12383,7 @@
     "checked": "2026-08-21",
     "status": "live",
     "notes": "No date shown. The prompting examples are work-flavoured (emails, presentations) rather than coursework-flavoured. Nothing on academic integrity.",
-    "source": "Syr",
+    "source": "Syracuse University",
     "official": false,
     "id": "r-8b7a1fe21d",
     "keywords": [
@@ -12489,7 +12489,7 @@
     "checked": "2026-08-21",
     "status": "live",
     "notes": "Page metadata gives 1 May 2026 as the last modification, so it is current. Melbourne-specific in places (Re:cite, subject coordinators), but the template travels.",
-    "source": "Au",
+    "source": "University of Melbourne",
     "official": false,
     "id": "r-cb8b07b3f1",
     "keywords": [
@@ -12687,7 +12687,7 @@
     "checked": "2026-08-21",
     "status": "live",
     "notes": "No publication or update date on the page. Recommends Microsoft Copilot, not Claude, as the privacy-safe option at UNSW. Read partially, so listed rather than reviewed.",
-    "source": "Au",
+    "source": "UNSW Sydney",
     "official": false,
     "id": "r-19d3c9dd56",
     "keywords": [
@@ -12887,7 +12887,7 @@
     "checked": "2026-08-21",
     "status": "live",
     "notes": "Created February 2024, last updated 19 August 2026. I confirmed the page is live and read the headings only. Local CSUN policy links will not apply elsewhere.",
-    "source": "Csun",
+    "source": "California State University, Northridge",
     "official": false,
     "id": "r-0723e82a39",
     "keywords": [
@@ -14047,7 +14047,7 @@
     "checked": "2026-08-21",
     "status": "live",
     "notes": "First published 10 June 2025 and updated 19 May 2026 for the 2026/27 academic year, so it is current - I confirmed both dates on the page. Module 3 (safe use) is the one everyone should do regardless of experience. A free certified assessment carrying Chartered Teacher Status credits is available from the Chartered College.",
-    "source": "Gov",
+    "source": "GOV.UK",
     "official": false,
     "id": "r-71c0227d56",
     "keywords": [
@@ -14097,7 +14097,7 @@
     "checked": "2026-08-21",
     "status": "live",
     "notes": "Approved by education ministers on 5 October 2023, reviewed in 2024, and the review endorsed in June 2025 - so make sure you are reading the reviewed version, not the original. I saw the page in search results and did not open it, so the exact date on the current file is unconfirmed.  Verified in a browser 2026-08-22: live. Blocks automated requests, so link checkers report it dead.",
-    "source": "Au",
+    "source": "Australian Department of Education",
     "official": false,
     "id": "r-6b4b766e56",
     "keywords": [
@@ -14194,7 +14194,7 @@
     "checked": "2026-08-21",
     "status": "live",
     "notes": "First issued in 2022 and updated since to cover generative AI. I could not confirm the date of the current version from the landing page, so check which edition you are downloading - the 2022 text predates almost everything teachers now use.",
-    "source": "Eu",
+    "source": "European Commission",
     "official": false,
     "id": "r-6a15e8b9c3",
     "keywords": [
@@ -14296,7 +14296,7 @@
     "checked": "2026-08-21",
     "status": "live",
     "notes": "Possibly outdated - nearly two years old and tied to a 2023 executive order. The original page at tech.ed.gov/education-leaders-ai-toolkit returned no content when I fetched it on 2026-08-21, so this is the ERIC full-text copy of the same document. Metadata and summaries only; I did not read all 74 pages.",
-    "source": "Ed",
+    "source": "ERIC",
     "official": false,
     "id": "r-6da5a506f4",
     "keywords": [
@@ -15286,7 +15286,7 @@
     "checked": "2026-08-18",
     "status": "live",
     "notes": "Author's primary audience is developers; the writing-voice content is a secondary application of a coding workflow, so parts may be more elaborate than a non-technical writer needs.",
-    "source": "Cloud",
+    "source": "Ranthebuilder",
     "official": false,
     "id": "r-7f8fb0cc8e",
     "keywords": [

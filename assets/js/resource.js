@@ -32,7 +32,7 @@
     if (!arr || !arr.length) return "";
     return '<section class="section"><h2 class="h2">' + title + '</h2><ul class="prose">' +
       arr.map(function (s) {
-        return '<li style="margin-top:var(--space-8)">— ' + LC.esc(s) + '</li>';
+        return '<li style="margin-top:var(--space-8)">— ' + LC.esc(LC.sentence(s)) + '</li>';
       }).join("") + '</ul></section>';
   }
 

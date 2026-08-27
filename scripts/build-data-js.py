@@ -20,6 +20,25 @@ Run it after anything that edits data/*.json. build-all.sh does this for you.
 import json
 import os
 
+# Fields no JavaScript on the site reads. Measured 2026-08-27 by grepping assets/js for
+# every key in items.json: these seven are 192 KB of the 610 KB every visitor downloads,
+# and nothing renders one of them.
+#
+# They are stripped from the mirror, not from data/items.json. The question was "render
+# `notes` or stop shipping it", and the answer is stop shipping it, because `notes` is an
+# editorial working field written in an internal voice - "CAUTION:", "Merged 2026-08-27
+# with the anthropic.skilljar.com row". Putting that on the page would publish our
+# workings. It is also how an unsourced allegation about a named person reached the live
+# site: it sat in `notes` and `skip_if` and was shipped to every browser while nobody
+# considered it published. Reader-facing facts that are currently buried in `notes` -
+# prices above all - deserve real fields of their own, deliberately, and that is a
+# content decision rather than a dump.
+#
+# `keywords` and `questions` are the search index's raw material and already ship,
+# built, in data/search-keywords.js. They were being sent twice.
+STRIP_FROM_MIRROR = ("notes", "keywords", "questions", "alt_skip_if",
+                     "language", "review_note", "field")
+
 PAIRS = [
     ("data/items.json",           "data/items.js",           "LC_ITEMS"),
     ("data/paths.json",           "data/paths.js",           "LC_PATHS"),
@@ -36,6 +55,9 @@ def main():
             print(f"  {src} missing — skipped")
             continue
         data = json.load(open(src, encoding="utf-8"))
+        if src.endswith("items.json"):
+            data = [{k: v for k, v in row.items() if k not in STRIP_FROM_MIRROR}
+                    for row in data]
         with open(dst, "w", encoding="utf-8") as f:
             f.write(HEADER.format(src=src))
             f.write(f"window.{var} = ")

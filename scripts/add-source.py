@@ -75,24 +75,69 @@ NAMES = [
     ("mediacopilot.ai", "Media Copilot", False),
     ("spj.org", "Society of Professional Journalists", False),
     ("cornell.edu", "Cornell University", False),
+    # Institutions whose registrable name is an abbreviation nobody reads as a
+    # publisher. prettify() gets these right in the sense that Jhu really is the
+    # registrable name of jhu.edu - it is just not what the organisation is called.
+    ("jhu.edu", "Johns Hopkins University Press", False),
+    ("csun.edu", "California State University, Northridge", False),
+    ("syr.edu", "Syracuse University", False),
+    ("unsw.edu.au", "UNSW Sydney", False),
+    ("unimelb.edu.au", "University of Melbourne", False),
+    ("northumbria.ac.uk", "Northumbria University", False),
+    ("pitt.edu", "University of Pittsburgh", False),
+    ("eric.ed.gov", "ERIC", False),
+    ("europa.eu", "European Commission", False),
+    ("education.gov.au", "Australian Department of Education", False),
+    ("qwe.edu.pl", "qwe.edu.pl", False),
     ("harvard.edu", "Harvard University", False),
     ("mit.edu", "MIT", False),
     ("stanford.edu", "Stanford University", False),
 ]
 
-# TLDs we strip before making a name. Anything ending in one of these loses it.
-TLDS = ("com", "org", "net", "io", "ai", "co", "dev", "edu", "gov", "me", "so", "cc",
-        "pm", "sh", "app", "tech", "xyz", "info", "news", "blog", "uk", "de", "fr")
+# Two-label public suffixes. These have to be known, because the label to their left is
+# the name and the label to their right is not.
+MULTI_SUFFIXES = {
+    "ac.uk", "co.uk", "gov.uk", "org.uk", "sch.uk", "nhs.uk",
+    "edu.au", "gov.au", "com.au", "org.au", "net.au",
+    "ac.nz", "co.nz", "govt.nz", "edu.pl", "edu.sg", "edu.hk", "ac.jp", "co.jp",
+    "ac.za", "co.za", "gov.in", "ac.in", "edu.in", "com.br", "com.mx", "ed.gov",
+}
+
+# Labels that are plumbing, never a publisher. Only used for the last-resort guard
+# below, where nothing meaningful survived the suffix strip.
+SUBDOMAIN_NOISE = ("www", "blog", "docs", "help", "learn", "support", "academy",
+                   "guide", "guides", "gov", "edu", "ac", "co")
 
 
 def prettify(host):
-    """Fallback for an unmapped host. Take the registrable name, not the suffix —
-    productcompass.pm must not come out as 'Pm'."""
-    h = re.sub(r"^(www|blog|docs|help|learn|support|academy|guides?)\.", "", host)
+    """Fallback for an unmapped host: the registrable name, never a suffix.
+
+    This used to work off a hardcoded tuple of TLDs and return whatever label was left,
+    so any suffix missing from that tuple became the publisher. Live on the site, that
+    produced "Open on Pl" for qwe.edu.pl, "Open on Vc" for airtree.vc, "Found through
+    To" for every.to, plus "Ac", "Au", "Eu", "Ed" and "Gov" - 20 cards naming a
+    top-level domain as the publisher. A blocklist of suffixes fails open on every
+    suffix nobody thought of, which is all of them eventually.
+
+    So take the label immediately left of the public suffix instead. Unknown suffixes
+    are then handled correctly by default rather than incorrectly.
+    """
+    h = host.lower().strip(".")
     parts = [p for p in h.split(".") if p]
-    while len(parts) > 1 and parts[-1] in TLDS:
-        parts.pop()
-    name = parts[-1] if parts else host
+
+    # Drop a known two-label suffix, else a single trailing label.
+    if len(parts) >= 3 and ".".join(parts[-2:]) in MULTI_SUFFIXES:
+        parts = parts[:-2]
+    elif len(parts) >= 2:
+        parts = parts[:-1]
+
+    # The registrable name is now the rightmost label left standing; subdomains sit to
+    # its left and take care of themselves. An earlier version stripped them explicitly
+    # and that broke education.gov.au, whose name really is "education".
+    name = parts[-1] if parts else h
+    if not name or name in SUBDOMAIN_NOISE:
+        # Nothing meaningful survived - gov.uk is the whole name, not "gov".
+        return host.replace("www.", "").upper() if len(host) <= 12 else host
     return name.replace("-", " ").title()
 
 

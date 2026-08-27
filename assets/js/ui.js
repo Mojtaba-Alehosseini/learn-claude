@@ -110,6 +110,35 @@
     return out;
   };
 
+  /* "What it teaches" is the first block on a resource page, and all 970 of its bullets
+     came out of a model in lower case: "— start and organize conversations in claude".
+     It reads as unfinished, and it is the first thing anyone sees.
+     Fixed on the way to the screen rather than in the data. The bullets are generated,
+     so rewriting 970 of them in items.json would only need doing again the next time
+     they are regenerated, and it would bury a mechanical change inside 970 content
+     diffs. The proper nouns are listed rather than guessed: capitalising every word
+     would give Title Case, and capitalising none leaves "claude" in a sentence about
+     Claude. Anything not on the list is left exactly as written. */
+  var PROPER = {
+    claude: "Claude", anthropic: "Anthropic", mcp: "MCP", github: "GitHub",
+    api: "API", apis: "APIs", pdf: "PDF", pdfs: "PDFs", csv: "CSV", csvs: "CSVs",
+    sql: "SQL", json: "JSON", ai: "AI", llm: "LLM", llms: "LLMs", excel: "Excel",
+    slack: "Slack", figma: "Figma", zotero: "Zotero", youtube: "YouTube",
+    obsidian: "Obsidian", notion: "Notion", jetbrains: "JetBrains", docker: "Docker",
+    python: "Python", javascript: "JavaScript", jupyter: "Jupyter", cowork: "Cowork",
+    "claude.md": "CLAUDE.md", ide: "IDE", cli: "CLI", ui: "UI", ux: "UX",
+    seo: "SEO", pdfs: "PDFs", rag: "RAG", vscode: "VS Code"
+  };
+
+  LC.sentence = function (s) {
+    var t = String(s == null ? "" : s);
+    t = t.replace(/[A-Za-z][A-Za-z.]*/g, function (w) {
+      var hit = PROPER[w.toLowerCase()];
+      return hit && w === w.toLowerCase() ? hit : w;
+    });
+    return t.charAt(0).toUpperCase() + t.slice(1);
+  };
+
   LC.countText = function (n) {
     return n === 1 ? "1 resource" : n + " resources";
   };
