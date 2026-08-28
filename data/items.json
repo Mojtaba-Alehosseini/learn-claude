@@ -19424,5 +19424,154 @@
       "how do i stop claude smoothing over the outliers"
     ],
     "id": "r-47ee07d20b"
+  },
+  {
+    "title": "Good from Afar, But Far from Good: AI Prototyping in Real Design Contexts",
+    "url": "https://www.nngroup.com/articles/ai-prototyping/",
+    "author": "Huei-Hsin Wang and Megan Brown",
+    "source": "Nielsen Norman Group",
+    "official": false,
+    "roles": [
+      "designer"
+    ],
+    "level": "never-used",
+    "topics": [
+      "chat-prompting",
+      "safety"
+    ],
+    "format": "article",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "2025-10-24",
+    "checked": "2026-08-28",
+    "summary": "NN/g ran a heuristic evaluation of AI-generated designs against a human designer's work on a real project, across ten tools including Claude and three grades of prompt. The finding: the tools hit the brief and miss the craft - matching layouts with broken hierarchy, inconsistent margins, and patterns borrowed from the wrong kind of product.",
+    "who_for": "A designer deciding how much of the prototyping to hand over, who would rather read somebody's evidence than somebody's opinion.",
+    "skip_if": "It will not teach you to drive any of the tools, and it is a year old - re-reviewed 2026-08-19, but the tools move faster than that. Read it for one thing: prompts got much better results when they carried real design artefacts, so the finding cuts against the reader hoping to skip the design work rather than direct it.",
+    "notes": "Read via fetch 2026-08-28, not opened by a person. Original research with a documented method: three prompt variations - broad text, detailed text, and text plus sketches, mockups or a Figma link - on an NN/G training profile page. Tools named: Claude, Figma Make, v0, Stitch, Bolt, UX Pilot, Lovable, Replit, Relume, Figma First Draft. NN/g sells courses in the page sidebar; the article itself is ungated.",
+    "prerequisites": [],
+    "teaches": [
+      "judge what AI prototyping is and is not good for, from evidence",
+      "recognise the specific failures - hierarchy, spacing, borrowed patterns",
+      "get better output by giving a tool real design artefacts rather than prose"
+    ],
+    "keywords": [
+      "ai prototyping",
+      "heuristic evaluation",
+      "nielsen norman",
+      "figma make",
+      "v0",
+      "lovable",
+      "visual hierarchy",
+      "does ai design actually work"
+    ],
+    "questions": [
+      "is ai good enough to prototype my designs",
+      "what does ai get wrong in ui design",
+      "why do ai mockups look right but feel wrong"
+    ],
+    "id": "r-50ce9b31c6"
+  },
+  {
+    "title": "Testing AI with Real Design Scenarios: Evaluation Methodology and Prompts",
+    "url": "https://www.nngroup.com/articles/testing-ai-methodology/",
+    "author": "Huei-Hsin Wang, Megan Brown and Amy Zhang",
+    "source": "Nielsen Norman Group",
+    "official": false,
+    "roles": [
+      "designer"
+    ],
+    "level": "basic",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "article",
+    "time": "under-1hr",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "2025-10-24",
+    "checked": "2026-08-28",
+    "summary": "The method behind NN/g's AI design study, published so you can run it yourself: six complete prompts you can copy - four for a profile page, two for a bulk-purchase flow - and the four criteria they judged every output against, which are goal alignment, visual design, accessibility and usability.",
+    "who_for": "A designer who wants to test a tool against their own work rather than trust a review, and needs somebody else's criteria to start from.",
+    "skip_if": "This is the scaffolding and the findings are in the companion article, so read that one first or you are running a test without knowing what the last people found. It is written as research method rather than as a critique checklist, so turning it on your own mockup takes some adapting.",
+    "notes": "Read via fetch 2026-08-28, not opened by a person. Companion to 'Good from Afar, But Far from Good', same study and same date. The prompts carry full specifications for colour, typography and components. NN/g sells courses in the page sidebar; the article is ungated - an automated check flags 'enroll in course' from that sidebar and it is not a paywall.",
+    "prerequisites": [
+      "some experience running a design evaluation or critique"
+    ],
+    "teaches": [
+      "test an AI tool against a real design task rather than a demo",
+      "judge output on goal alignment, visual design, accessibility and usability",
+      "write a design prompt that carries specifications rather than adjectives"
+    ],
+    "keywords": [
+      "evaluation methodology",
+      "design prompts",
+      "nielsen norman",
+      "criteria",
+      "test an ai tool",
+      "accessibility",
+      "how do i evaluate ai design output"
+    ],
+    "questions": [
+      "how do i test whether an ai design tool is any good",
+      "what criteria should i judge ai design output against",
+      "what should a design prompt actually contain"
+    ],
+    "id": "r-e321fd52f6"
+  },
+  {
+    "title": "AI Can't Replace Real Research in Empathy Mapping",
+    "url": "https://www.nngroup.com/articles/ai-empathy-mapping/",
+    "author": "Rachel Krause",
+    "source": "Nielsen Norman Group",
+    "official": false,
+    "roles": [
+      "designer",
+      "pm"
+    ],
+    "level": "never-used",
+    "topics": [
+      "chat-prompting",
+      "safety"
+    ],
+    "format": "article",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "2026-08-28",
+    "checked": "2026-08-28",
+    "summary": "Draws the line under AI in research synthesis: it can cluster and summarise notes you actually collected, and it cannot manufacture a user you never spoke to. The question it leaves you with is the whole article - am I giving AI real data to organise, or asking it to generate data I do not have?",
+    "who_for": "Anyone about to paste interview notes into a chat window and let it find the themes.",
+    "skip_if": "It assumes you know what an empathy map is and it will not teach you one. There is also no tool in it - no Claude, no prompts, no screenshots - so pair it with something that shows the mechanics. What it gives you is the question to ask before you start, which the mechanics never do.",
+    "notes": "Read via fetch 2026-08-28, not opened by a person; published the same day. Names no AI tool at all, which is why it sits beside the Academy use case rather than replacing it. NN/g sells courses in the page sidebar; the article is ungated.",
+    "prerequisites": [
+      "familiarity with empathy mapping or research synthesis"
+    ],
+    "teaches": [
+      "tell organising real research from inventing research that does not exist",
+      "know what AI can safely do with notes you already have",
+      "spot a plausible-sounding user who was never interviewed"
+    ],
+    "keywords": [
+      "empathy mapping",
+      "research synthesis",
+      "user research",
+      "nielsen norman",
+      "invented users",
+      "fabricated quotes",
+      "can ai do my user research"
+    ],
+    "questions": [
+      "can i use ai to synthesise my user research",
+      "is it ok to let ai fill gaps in my research",
+      "what can ai actually do with interview notes"
+    ],
+    "id": "r-7dd355965b"
   }
 ]

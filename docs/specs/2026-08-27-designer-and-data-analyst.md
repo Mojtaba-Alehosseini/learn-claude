@@ -85,3 +85,79 @@ The 2026 search space for all three is genuinely poor: Claude Design articles, G
 skills, and skill-directory aggregator sites that list the same skills with generated
 blurbs. If these do not exist, the honest position is that designer stays a browse role
 without a path, and the site says so rather than shipping a path that misleads.
+
+---
+
+# Re-measured 2026-08-28, after searching the three named gaps
+
+**data-analyst: path built** (`numbers-you-can-defend`, 5 steps, ~2 hours, free).
+
+**designer: still no — but the gap is now small and specific, and it is not "more
+content".**
+
+## What the search found, and the mistake it exposed
+
+Last round I searched *Claude + design critique* and got GitHub skills and skill-directory
+aggregators, and concluded the material did not exist. It does. **Nielsen Norman Group has
+a whole AI topic area** and I never saw it, because NN/g does not write about Claude — it
+writes about design. Searching for the tool hid the work.
+
+Three added, all NN/g, all free, all named authors, all `previewed`:
+
+| level | resource | what it is |
+|---|---|---|
+| never-used | Good from Afar, But Far from Good | original research: heuristic evaluation of AI-generated designs vs a human designer's, ten tools including Claude, three grades of prompt |
+| basic | Testing AI with Real Design Scenarios | the method behind it — six copyable prompts and four judging criteria |
+| never-used | AI Can't Replace Real Research in Empathy Mapping | the line: it can organise research you collected, it cannot invent a user |
+
+One rejected after reading it twice: **The Core Skill of Design in the AI Era: Critique**.
+The title is the gap and the article is not — it is about designing AI-*powered products*
+and evaluating model outputs, with a worked example of a "repetitiveness judge" for a
+calendar assistant. Right word in the title, wrong job.
+
+## The count, and why it still is not enough
+
+Categorising every designer entry by what it is actually about:
+
+| level | Claude Design | Claude Code | the work |
+|---|---|---|---|
+| never-used | 2 | 0 | **2** (was 0) |
+| basic | 4 | 2 | **4** (was 3) |
+| confident | 1 | 13 | 4 |
+
+A path is now constructible and I got as far as writing it out:
+
+1. Good from Afar — what AI prototyping actually does and does not do
+2. Claude for Designers in 2026 — where it helps
+3. Analyze patterns in user feedback — do one real piece of synthesis
+4. AI Can't Replace Real Research — the boundary on that work
+5. Testing AI with Real Design Scenarios — judge what comes back
+
+Five steps, about two hours, free, not one Claude Design tutorial. It passes the stated
+test: every step teaches design work.
+
+**It still fails the test that matters.** Ask what a designer could do differently on
+Monday: two real skills — synthesise feedback, test a tool against a real task — and three
+judgements. Compare the writing path, which is four skills in five steps. Every other path
+on the site has a *making* spine and this one has research synthesis and nothing else.
+
+It would be a path about **judging AI's design output**. That is a real and useful thing.
+It is not a designer's path; it is one fifth of one, and shipping it under the role's name
+would tell a designer this is what Claude is for them.
+
+## What would change the answer
+
+Two resources, and they are the same two named a day ago:
+
+1. **Design critique of your own work at `basic`.** Give Claude a screenshot or a Figma
+   frame and get feedback worth having. The new step 4 is evaluation criteria for testing
+   a *tool*; it is not a method for critiquing a *mockup*. Still nothing.
+2. **Design systems below `confident`.** Both current entries assume you already maintain
+   one and can write a SKILL.md.
+
+Accessibility review is a third, and it is the closest to solved — `accessibility-review`
+inside the official design plugin runs a full WCAG 2.1 AA audit, but it sits at `builder`
+in a source repo.
+
+Two more like the three added today and the answer flips. That is a shopping list, not a
+hope.

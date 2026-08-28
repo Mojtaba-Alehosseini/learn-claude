@@ -63,6 +63,7 @@ NAMES = [
     # a last resort that reads badly is doing its job, because it makes the gap
     # visible. The gap is what was never closed.
     # ---------------------------------------------------------------------------
+    ("nngroup.com", "Nielsen Norman Group", False),
     ("aakashg.com", "Aakash Gupta", False),
     # These four happen to come out right in prettify(), which is exactly why they are
     # written down: nobody should have to re-derive whether a correct-looking name was
