@@ -226,8 +226,9 @@ PATHS = [
             {"url": "https://anthropic.com/news/analysis-tool",
              "why": "Now the idea the rest of the path rests on: Claude can run real code "
              "against your file instead of reasoning about the numbers in prose. Here for "
-             "the concept and not the click-path — it predates Excel and Cowork and its "
-             "screens have moved."},
+             "the concept and not the click-path — it is nearly two years old and the "
+             "feature has since been renamed to Code execution and file creation, which "
+             "lives under Settings then Capabilities and can be switched off."},
             {"url": "https://www.qwe.edu.pl/tutorial/claude-csv-data-analysis/",
              "why": "Fourth, because step 3 is only half of it: Claude has that "
              "code-running mode and does not always reach for it. This is where a "

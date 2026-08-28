@@ -401,7 +401,7 @@
         "time": "under-15min",
         "cost": "free",
         "tier": "ai-reviewed",
-        "why": "Now the idea the rest of the path rests on: Claude can run real code against your file instead of reasoning about the numbers in prose. Here for the concept and not the click-path — it predates Excel and Cowork and its screens have moved."
+        "why": "Now the idea the rest of the path rests on: Claude can run real code against your file instead of reasoning about the numbers in prose. Here for the concept and not the click-path — it is nearly two years old and the feature has since been renamed to Code execution and file creation, which lives under Settings then Capabilities and can be switched off."
       },
       {
         "step": 4,
