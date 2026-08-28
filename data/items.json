@@ -1948,6 +1948,13 @@
       "understand how claude executes code to avoid math hallucinations",
       "evaluate when to use the analysis tool instead of text-only prompting for numbers",
       "leverage code execution for reproducible calculations on csv files"
+    ],
+    "paths": [
+      {
+        "path": "numbers-you-can-defend",
+        "step": 3,
+        "of": 5
+      }
     ]
   },
   {
@@ -2566,6 +2573,13 @@
     "prerequisites": [
       "basic terminal familiarity",
       "understanding of csv files and spreadsheet operations"
+    ],
+    "paths": [
+      {
+        "path": "numbers-you-can-defend",
+        "step": 5,
+        "of": 5
+      }
     ]
   },
   {
@@ -2618,6 +2632,13 @@
       "trigger claude's code execution tool instead of text-based estimation for numbers",
       "work within claude upload size and context window boundaries for csv files",
       "verify mathematical accuracy in claude data summaries"
+    ],
+    "paths": [
+      {
+        "path": "numbers-you-can-defend",
+        "step": 4,
+        "of": 5
+      }
     ]
   },
   {
@@ -19225,7 +19246,14 @@
       "what file types can claude read",
       "why won't my excel file upload to claude"
     ],
-    "id": "r-5a7be113ab"
+    "id": "r-5a7be113ab",
+    "paths": [
+      {
+        "path": "numbers-you-can-defend",
+        "step": 1,
+        "of": 5
+      }
+    ]
   },
   {
     "title": "How long do you store my data?",
@@ -19278,7 +19306,14 @@
       "is my company data used to train claude",
       "what happens when i delete a claude conversation"
     ],
-    "id": "r-9021f6f590"
+    "id": "r-9021f6f590",
+    "paths": [
+      {
+        "path": "numbers-you-can-defend",
+        "step": 2,
+        "of": 5
+      }
+    ]
   },
   {
     "title": "Analyze patterns in user feedback (use case)",

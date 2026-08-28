@@ -136,7 +136,7 @@ can actually see at 1440px:
 
 ### Why zero is right on those two
 
-**The path index and Browse both exist so the reader can choose.** Five path cards sit on
+**The path index and Browse both exist so the reader can choose.** Every path sits on
 one page and 351 resource cards on the other, and every one of them is a candidate.
 Painting one clay is an argument about which one matters, and neither page is in a
 position to make that argument. On a single path there are no alternatives to weigh, so

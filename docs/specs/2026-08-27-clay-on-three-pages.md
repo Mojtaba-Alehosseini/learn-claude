@@ -1,6 +1,17 @@
 # The three pages with no clay
 
-**Status: a proposal. Nothing was changed.** The design brief says one clay element per
+**Status: SUPERSEDED — the proposal was accepted and built on 2026-08-27, commit
+`b77cbcb`. The live rule is section 4a of `docs/design/design-brief.md`; this file stays
+as the record of what was proposed and why.**
+
+Two things below are wrong and are left uncorrected, because a proposal edited after the
+fact stops being a record. The single-path URL is `paths.html?id=…`, not `?p=…`. And the
+catalogue held 347 resources the day this was written; the call to action that shipped
+reads the count from the data and never hardcodes it.
+
+---
+
+**Originally: a proposal. Nothing was changed.** The design brief says one clay element per
 page, and three of five pages have none, so the rule fails on the "exactly" half. This is
 a design decision and it belongs to Morteza. Written 2026-08-27.
 

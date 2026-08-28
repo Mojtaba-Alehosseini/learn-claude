@@ -198,6 +198,49 @@ PATHS = [
              "declare. This is not optional and most people learn it too late."},
         ],
     },
+    {
+        "id": "numbers-you-can-defend",
+        "title": "Analysing your own data without getting the numbers wrong",
+        "for": "Analysts with a spreadsheet, a deadline, and somebody who will ask where "
+               "the number came from.",
+        "roles": ["data-analyst"],
+        "level": "never-used",
+        "intro": "Five steps, all free, about two hours. The arc is your data rather "
+                 "than Claude: get it in front of the model, know what happens to it, "
+                 "then learn the difference between Claude reading your numbers and "
+                 "Claude actually running them. Only the last step needs a terminal, and "
+                 "you can stop before it.",
+        "steps": [
+            {"url": "https://support.claude.com/en/articles/8241126-upload-files-to-claude",
+             "why": "Nothing below works until your data is in front of Claude, and every "
+             "other guide in this catalogue assumes you did this already. It is also the "
+             "only step that tells you what will be refused — the size ceilings differ "
+             "between a chat and a Project — before you find out the slow way."},
+            {"url": "https://privacy.claude.com/en/articles/10023548-how-long-do-you-store-my-data",
+             "why": "Second, and second on purpose. The writing path puts disclosure last "
+             "because a writer discloses at publication, after the craft. An analyst "
+             "decides at upload, before anything: once somebody else's data is pasted, "
+             "reading the retention terms afterwards changes nothing. Anthropic's own "
+             "numbers, and narrow ones — consumer plans only, and the page never once "
+             "says the word attachment."},
+            {"url": "https://anthropic.com/news/analysis-tool",
+             "why": "Now the idea the rest of the path rests on: Claude can run real code "
+             "against your file instead of reasoning about the numbers in prose. Here for "
+             "the concept and not the click-path — it predates Excel and Cowork and its "
+             "screens have moved."},
+            {"url": "https://www.qwe.edu.pl/tutorial/claude-csv-data-analysis/",
+             "why": "Fourth, because step 3 is only half of it: Claude has that "
+             "code-running mode and does not always reach for it. This is where a "
+             "capability becomes a habit, and it is the step that explains every total "
+             "that has ever come back confidently wrong."},
+            {"url": "https://ccforeveryone.com/guides/claude-code-for-data-analysts",
+             "why": "This one needs a terminal, so stop here if that is not your working "
+             "day — the four steps above stand on their own and an analyst who lives in "
+             "Excel has already got the whole point. If it is, this is where checking "
+             "becomes reproducible: rerunnable scripts over silent cell edits, argued "
+             "from Panko's finding that 94% of spreadsheets already contain errors."},
+        ],
+    },
 ]
 
 
