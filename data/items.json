@@ -19206,7 +19206,14 @@
       "can claude summarise interview transcripts",
       "how do i check what claude tagged"
     ],
-    "id": "r-b6899b89d9"
+    "id": "r-b6899b89d9",
+    "paths": [
+      {
+        "path": "judging-ai-design-work",
+        "step": 4,
+        "of": 5
+      }
+    ]
   },
   {
     "title": "The UX Researcher's Guide to Claude, Claude Cowork, and Claude Code",
@@ -19263,7 +19270,14 @@
       "should i use cowork or claude code for research",
       "how do i stop claude smoothing over the outliers"
     ],
-    "id": "r-47ee07d20b"
+    "id": "r-47ee07d20b",
+    "paths": [
+      {
+        "path": "judging-ai-design-work",
+        "step": 5,
+        "of": 5
+      }
+    ]
   },
   {
     "title": "Good from Afar, But Far from Good: AI Prototyping in Real Design Contexts",
@@ -19312,7 +19326,14 @@
       "what does ai get wrong in ui design",
       "why do ai mockups look right but feel wrong"
     ],
-    "id": "r-50ce9b31c6"
+    "id": "r-50ce9b31c6",
+    "paths": [
+      {
+        "path": "judging-ai-design-work",
+        "step": 1,
+        "of": 5
+      }
+    ]
   },
   {
     "title": "Testing AI with Real Design Scenarios: Evaluation Methodology and Prompts",
@@ -19361,7 +19382,14 @@
       "what criteria should i judge ai design output against",
       "what should a design prompt actually contain"
     ],
-    "id": "r-e321fd52f6"
+    "id": "r-e321fd52f6",
+    "paths": [
+      {
+        "path": "judging-ai-design-work",
+        "step": 3,
+        "of": 5
+      }
+    ]
   },
   {
     "title": "AI Can't Replace Real Research in Empathy Mapping",
@@ -19412,7 +19440,14 @@
       "is it ok to let ai fill gaps in my research",
       "what can ai actually do with interview notes"
     ],
-    "id": "r-7dd355965b"
+    "id": "r-7dd355965b",
+    "paths": [
+      {
+        "path": "judging-ai-design-work",
+        "step": 2,
+        "of": 5
+      }
+    ]
   },
   {
     "title": "AI Fluency for Builders",

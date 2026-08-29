@@ -424,5 +424,72 @@
         "why": "This one needs a terminal, so stop here if that is not your working day — the four steps above stand on their own and an analyst who lives in Excel has already got the whole point. If it is, this is where checking becomes reproducible: rerunnable scripts over silent cell edits, argued from Panko's finding that 94% of spreadsheets already contain errors."
       }
     ]
+  },
+  {
+    "id": "judging-ai-design-work",
+    "title": "Judging AI's design output",
+    "for": "Designers deciding whether to trust what Claude just handed them — not the rest of the job, just this slice of it.",
+    "roles": [
+      "designer"
+    ],
+    "level": "never-used",
+    "intro": "Five steps, all free, about two hours. The arc is judgment, not craft: two honest critiques of what AI prototyping and AI research actually get wrong, the method to test it yourself, one real task to try it on, then the line that ties it together. This covers about a fifth of a designer's job — deciding whether to trust what Claude just produced — and says nothing about the other four fifths.",
+    "step_count": 5,
+    "total_minutes": 126,
+    "total_time_label": "about 2 hours",
+    "cost": "free",
+    "weakest_tier": "previewed",
+    "steps": [
+      {
+        "step": 1,
+        "item": "r-50ce9b31c6",
+        "title": "Good from Afar, But Far from Good: AI Prototyping in Real Design Contexts",
+        "url": "https://www.nngroup.com/articles/ai-prototyping/",
+        "time": "under-15min",
+        "cost": "free",
+        "tier": "previewed",
+        "why": "Start here because the temptation is to assume a slick AI-generated screen is finished work. NN/g ran the actual comparison — AI against a human designer on the same brief — and the finding holds the whole path together: it hits the brief and misses the craft."
+      },
+      {
+        "step": 2,
+        "item": "r-7dd355965b",
+        "title": "AI Can't Replace Real Research in Empathy Mapping",
+        "url": "https://www.nngroup.com/articles/ai-empathy-mapping/",
+        "time": "under-15min",
+        "cost": "free",
+        "tier": "previewed",
+        "why": "Second, because the same trap shows up in research, not just visuals — Claude can cluster notes you actually collected, and it cannot manufacture a user you never spoke to. Read this while step 1's skepticism is still fresh, before you drift back to trusting output by default."
+      },
+      {
+        "step": 3,
+        "item": "r-e321fd52f6",
+        "title": "Testing AI with Real Design Scenarios: Evaluation Methodology and Prompts",
+        "url": "https://www.nngroup.com/articles/testing-ai-methodology/",
+        "time": "under-1hr",
+        "cost": "free",
+        "tier": "previewed",
+        "why": "Third: now the method, not just the finding. This is deliberately the companion piece to step 1 — six real prompts and the four criteria NN/g judged every output against — and its own skip_if says to read the findings first, which by now you have."
+      },
+      {
+        "step": 4,
+        "item": "r-b6899b89d9",
+        "title": "Analyze patterns in user feedback (use case)",
+        "url": "https://academy.claude.com/use-cases/analyze-patterns-in-user-feedback",
+        "time": "under-15min",
+        "cost": "free",
+        "tier": "previewed",
+        "why": "Fourth, on a live task instead of someone else's write-up. Synthesizing real feedback is where the empathy-mapping trap from step 2 shows up in your own inbox — the tension between a real pattern and an echo chamber stops being theoretical here."
+      },
+      {
+        "step": 5,
+        "item": "r-47ee07d20b",
+        "title": "The UX Researcher's Guide to Claude, Claude Cowork, and Claude Code",
+        "url": "https://productimpactpod.com/news/ux-researcher-guide-claude-tools/",
+        "time": "under-1hr",
+        "cost": "free",
+        "tier": "previewed",
+        "why": "Last, to widen the lens from one task to daily practice — which Claude surface actually fits which research job — and to end on the sharpest line in this path: statistical coherence is not research validity. A synthesis that smooths over an edge case has failed at the finding level, no matter how confident it reads."
+      }
+    ]
   }
 ]

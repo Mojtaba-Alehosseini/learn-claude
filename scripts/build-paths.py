@@ -245,6 +245,49 @@ PATHS = [
              "from Panko's finding that 94% of spreadsheets already contain errors."},
         ],
     },
+    {
+        "id": "judging-ai-design-work",
+        "title": "Judging AI's design output",
+        "for": "Designers deciding whether to trust what Claude just handed them — not "
+               "the rest of the job, just this slice of it.",
+        "roles": ["designer"],
+        "level": "never-used",
+        "intro": "Five steps, all free, about two hours. The arc is judgment, not "
+                 "craft: two honest critiques of what AI prototyping and AI research "
+                 "actually get wrong, the method to test it yourself, one real task to "
+                 "try it on, then the line that ties it together. This covers about a "
+                 "fifth of a designer's job — deciding whether to trust what Claude "
+                 "just produced — and says nothing about the other four fifths.",
+        "steps": [
+            {"url": "https://www.nngroup.com/articles/ai-prototyping/",
+             "why": "Start here because the temptation is to assume a slick AI-"
+             "generated screen is finished work. NN/g ran the actual comparison — AI "
+             "against a human designer on the same brief — and the finding holds the "
+             "whole path together: it hits the brief and misses the craft."},
+            {"url": "https://www.nngroup.com/articles/ai-empathy-mapping/",
+             "why": "Second, because the same trap shows up in research, not just "
+             "visuals — Claude can cluster notes you actually collected, and it cannot "
+             "manufacture a user you never spoke to. Read this while step 1's "
+             "skepticism is still fresh, before you drift back to trusting output by "
+             "default."},
+            {"url": "https://www.nngroup.com/articles/testing-ai-methodology/",
+             "why": "Third: now the method, not just the finding. This is "
+             "deliberately the companion piece to step 1 — six real prompts and the "
+             "four criteria NN/g judged every output against — and its own skip_if "
+             "says to read the findings first, which by now you have."},
+            {"url": "https://academy.claude.com/use-cases/analyze-patterns-in-user-feedback",
+             "why": "Fourth, on a live task instead of someone else's write-up. "
+             "Synthesizing real feedback is where the empathy-mapping trap from step 2 "
+             "shows up in your own inbox — the tension between a real pattern and an "
+             "echo chamber stops being theoretical here."},
+            {"url": "https://productimpactpod.com/news/ux-researcher-guide-claude-tools/",
+             "why": "Last, to widen the lens from one task to daily practice — which "
+             "Claude surface actually fits which research job — and to end on the "
+             "sharpest line in this path: statistical coherence is not research "
+             "validity. A synthesis that smooths over an edge case has failed at the "
+             "finding level, no matter how confident it reads."},
+        ],
+    },
 ]
 
 
