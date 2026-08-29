@@ -7989,7 +7989,7 @@
   },
   {
     "title": "Why do AI models hallucinate?",
-    "url": "https://claude.com/resources/tutorials/why-do-ai-models-hallucinate",
+    "url": "https://academy.claude.com/tutorials/why-do-ai-models-hallucinate",
     "author": "Anthropic (AI Fluency tutorial series)",
     "roles": [
       "business-founder",
@@ -8012,10 +8012,10 @@
     "published": "UNVERIFIED",
     "checked": "2026-08-18",
     "status": "live",
-    "notes": "Part of the same short AI Fluency tutorial series as 'What is sycophancy in AI models?' — worth reading together. Verified 2026-08-22: page states 'Watch time 5 min' and embeds youtube.com/watch?v=005JLRt3gXI. Was wrongly catalogued as an article.",
-    "source": "Anthropic",
+    "notes": "Part of the same short AI Fluency tutorial series as 'What is sycophancy in AI models?' — worth reading together. Verified 2026-08-22: page states 'Watch time 5 min' and embeds youtube.com/watch?v=005JLRt3gXI. Was wrongly catalogued as an article. Verified 2026-08-29: the old claude.com/resources/tutorials/... URL now 301-redirects to this academy.claude.com URL, identical page (same byte count, matching canonical link tag) — not a second resource, so this row was repointed to the canonical address rather than duplicated.",
+    "source": "Anthropic Academy",
     "official": true,
-    "id": "r-42c17da63f",
+    "id": "r-247e259c83",
     "keywords": [
       "why does ai lie",
       "ai hallucinations",
@@ -8105,7 +8105,7 @@
   },
   {
     "title": "Working smarter with Claude in PowerPoint",
-    "url": "https://claude.com/resources/tutorials/working-smarter-with-claude-in-powerpoint",
+    "url": "https://academy.claude.com/tutorials/working-smarter-with-claude-in-powerpoint",
     "author": "Anthropic",
     "roles": [
       "business-founder",
@@ -8127,12 +8127,12 @@
     "who_for": "Anyone who regularly turns data into slides and wants to skip the copy-paste relay between apps.",
     "skip_if": "You don't have the PowerPoint add-in (needs Pro/Max/Team/Enterprise plus Microsoft 365).",
     "published": "UNVERIFIED",
-    "checked": "2026-08-18",
+    "checked": "2026-08-29",
     "status": "live",
-    "notes": "",
-    "source": "Anthropic",
+    "notes": "Verified 2026-08-29: same slug now lives at academy.claude.com/tutorials/working-smarter-with-claude-in-powerpoint (2 min, player only, no article text) - same pattern as other claude.com/resources/tutorials/ pages migrated to Academy, so this row was repointed rather than duplicated.",
+    "source": "Anthropic Academy",
     "official": true,
-    "id": "r-d99ffc876e",
+    "id": "r-a8a79d9da3",
     "keywords": [
       "claude in powerpoint",
       "powerpoint ai add in",
@@ -21249,5 +21249,1273 @@
       "does claude know the fhir standard"
     ],
     "id": "r-f25d1080e9"
+  },
+  {
+    "title": "Scaling workflows with Claude Cowork at your organization",
+    "url": "https://academy.claude.com/tutorials/scaling-workflows-with-claude-cowork-at-your-organization",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder",
+      "pm"
+    ],
+    "level": "builder",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "A rollout playbook for admins, AI CoE leads and transformation teams taking Claude Cowork from one team to the whole organization.",
+    "who_for": "Admins and rollout leads planning how Cowork governance, connectors and adoption scale past a pilot team.",
+    "skip_if": "Names a real product gap rather than glossing over it: governance posture does not currently control connector access - connectors are org-wide on or off today, and cannot yet be scoped per team.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min read. Assumes org-admin rights over Connectors and governance settings.",
+    "prerequisites": [
+      "Claude Cowork access",
+      "org-admin rights"
+    ],
+    "teaches": [
+      "plan a Cowork rollout past a single pilot team",
+      "know the current limit on scoping connector access per team"
+    ],
+    "keywords": [
+      "scale claude cowork",
+      "cowork rollout playbook",
+      "cowork governance"
+    ],
+    "questions": [
+      "how do we roll out claude cowork across the company",
+      "can we limit which teams get which connectors"
+    ],
+    "id": "r-529b6c65e3"
+  },
+  {
+    "title": "Sharing skills",
+    "url": "https://academy.claude.com/tutorials/sharing-skills",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "developer"
+    ],
+    "level": "confident",
+    "topics": [
+      "claude-code",
+      "skills"
+    ],
+    "format": "video",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "A four-minute video on the different ways to distribute a Claude Code skill to teammates and the community.",
+    "who_for": "A Claude Code user who has built a skill and wants to share it beyond their own machine.",
+    "skip_if": "No written content at all beyond the one-line description - the video only covers distribution methods, not how to build the skill in the first place.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. YouTube id OCBi3eScNLk, published 2026-02-19, real runtime 3:53 against a page label of 4 min.",
+    "prerequisites": [
+      "a Claude Code skill already built"
+    ],
+    "teaches": [
+      "distribute a Claude Code skill to teammates or the community"
+    ],
+    "keywords": [
+      "share claude code skill",
+      "distribute skills",
+      "claude code skill sharing"
+    ],
+    "questions": [
+      "how do i share a claude code skill with my team"
+    ],
+    "id": "r-24db16a5ae"
+  },
+  {
+    "title": "Simplify your browsing experience with Claude in Chrome",
+    "url": "https://academy.claude.com/tutorials/simplify-your-browsing-experience-with-claude-for-chrome",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "non-technical",
+      "business-founder"
+    ],
+    "level": "basic",
+    "topics": [
+      "agents"
+    ],
+    "format": "article",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "How Claude in Chrome works alongside you in the browser with visual understanding of the page, plus four ways to build a reusable shortcut for a repeated browser task.",
+    "who_for": "A paid-plan user deciding whether Claude in Chrome fits browser tasks they currently do by hand.",
+    "skip_if": "Claude in Chrome is 'pure Claude' without Projects, MCP connections, or memory between sessions, and it flatly refuses financial-services, adult, or pirated-content sites - not a drop-in replacement for full claude.ai.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Needs a paid plan and the Chrome extension; page also points to a separate 'Using Claude for Chrome Safely' article.",
+    "prerequisites": [
+      "a paid Claude plan",
+      "Claude in Chrome extension installed"
+    ],
+    "teaches": [
+      "use Claude in Chrome for page-aware browsing help",
+      "record a repeatable browser workflow by demonstration, conversion, saved prompt, or schedule"
+    ],
+    "keywords": [
+      "claude in chrome",
+      "claude browser extension",
+      "claude for chrome"
+    ],
+    "questions": [
+      "what can claude in chrome do",
+      "is claude in chrome the same as claude.ai"
+    ],
+    "id": "r-1319f9201d"
+  },
+  {
+    "title": "Tasks to try with Claude Tag in your workspace",
+    "url": "https://academy.claude.com/tutorials/tasks-to-try-with-claude-tag-in-your-workspace",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "pm",
+      "developer"
+    ],
+    "level": "confident",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "A catalogue of task recipes for Claude Tag in Slack, each with the literal prompt that starts it, from opening pull requests in an engineering channel to querying a data warehouse.",
+    "who_for": "A workspace member who already has Claude Tag installed and wants concrete tasks to hand it, not just a chat partner.",
+    "skip_if": "Several recipes need an admin to have connected a specific system first - codebase, CRM, data warehouse, or issue tracker - so about half the catalogue is unusable until that setup exists.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 9 min read. Claude Tag's proactive-vs-tagged-only behavior is set per channel by an admin.",
+    "prerequisites": [
+      "Claude Tag installed in the workspace",
+      "relevant systems connected for some recipes"
+    ],
+    "teaches": [
+      "find concrete tasks to hand Claude Tag beyond chat",
+      "understand per-channel proactive vs tagged-only behavior"
+    ],
+    "keywords": [
+      "claude tag tasks",
+      "claude in slack examples",
+      "claude tag use cases"
+    ],
+    "questions": [
+      "what can i ask claude tag to do in slack",
+      "can claude tag open pull requests"
+    ],
+    "id": "r-0fcc607c0b"
+  },
+  {
+    "title": "Teach Claude your way of working using skills",
+    "url": "https://academy.claude.com/tutorials/teach-claude-your-way-of-working-using-skills",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "non-technical",
+      "business-founder",
+      "pm"
+    ],
+    "level": "confident",
+    "topics": [
+      "skills"
+    ],
+    "format": "article",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "How Claude Skills package a proven work approach so Claude applies it automatically across future conversations, instead of you re-explaining it each time.",
+    "who_for": "Someone who keeps giving Claude the same instructions and wants those instructions to stick.",
+    "skip_if": "Skills need a paid plan (Pro, Max, Team or Enterprise) AND a separate setting, Code execution and file creation, switched on first - on the free plan, or with that setting off, nothing here works yet.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min read plus an embedded video of unstated runtime.",
+    "prerequisites": [
+      "a paid Claude plan",
+      "code execution and file creation enabled"
+    ],
+    "teaches": [
+      "package a repeated work approach as a reusable Skill"
+    ],
+    "keywords": [
+      "claude skills",
+      "teach claude your workflow",
+      "reusable claude skill"
+    ],
+    "questions": [
+      "how do i stop re-explaining the same instructions to claude",
+      "what do i need to use claude skills"
+    ],
+    "id": "r-1911b456d5"
+  },
+  {
+    "title": "The 4 Ds of AI Fluency — Behavioral Indicators",
+    "url": "https://academy.claude.com/tutorials/the-4-ds-of-ai-fluency-behavioral-indicators",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "non-technical"
+    ],
+    "level": "basic",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "A reference card of the 24 behavioral indicators behind Anthropic's AI Fluency framework - Description, Delegation, Discernment, Diligence - each with sample phrasings and things to try.",
+    "who_for": "Someone who read the AI Fluency Index report and wants the concrete, day-to-day version of what each behavior looks like.",
+    "skip_if": "A reference card, not a course - 24 indicators (8/7/5/4 split across the four Ds) with example phrasings, and its own closing self-assessment carries the warning 'treat it as exploratory, not a formal assessment.'",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 5 min read. Companion piece to 'Anthropic Education Report: The AI Fluency Index'.",
+    "prerequisites": [],
+    "teaches": [
+      "recognize the 24 behavioral indicators across Description, Delegation, Discernment and Diligence",
+      "self-assess informally against them"
+    ],
+    "keywords": [
+      "ai fluency 4 ds",
+      "ai fluency behavioral indicators",
+      "description delegation discernment diligence"
+    ],
+    "questions": [
+      "what are the 4 ds of ai fluency",
+      "how do i know if i'm ai fluent"
+    ],
+    "id": "r-e7a56d404e"
+  },
+  {
+    "title": "The 4 Properties of AI",
+    "url": "https://academy.claude.com/tutorials/the-4-properties-of-ai",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "non-technical"
+    ],
+    "level": "never-used",
+    "topics": [
+      "safety"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "A reference overview of four properties that make AI capable in some situations and limited in others: next-token prediction, frozen knowledge, working memory, and steerability.",
+    "who_for": "Someone building a first mental model of why AI is good at some things and bad at others.",
+    "skip_if": "Frames all four properties as limits, not capabilities - if you want what AI can do rather than why it's constrained, the linked fuller 'AI Capabilities & Limitations' course is the better fit.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 7 min read with embedded widgets.",
+    "prerequisites": [],
+    "teaches": [
+      "name the four properties that limit AI: next-token prediction, frozen knowledge, working memory, steerability"
+    ],
+    "keywords": [
+      "4 properties of ai",
+      "ai limitations explained",
+      "why ai has limits"
+    ],
+    "questions": [
+      "what are the limitations of ai models",
+      "why does ai forget things mid-conversation"
+    ],
+    "id": "r-985113a138"
+  },
+  {
+    "title": "Anthropic Education Report: The AI Fluency Index",
+    "url": "https://academy.claude.com/tutorials/the-ai-fluency-index",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "non-technical"
+    ],
+    "level": "basic",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "article",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Anthropic's own research report measuring 11 observable AI-fluency behaviors across 9,830 real Claude.ai conversations from one week in January 2026.",
+    "who_for": "Someone who wants the data behind the AI Fluency framework, not just the framework itself.",
+    "skip_if": "It's a research report, not a how-to - built from one 7-day window and scored on only 11 of the 24 behaviors in the larger framework, because the rest can't be observed from conversation logs alone.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min read. Headline finding: iterative conversations averaged 2.67 fluency behaviors vs 1.33 in non-iterative ones.",
+    "prerequisites": [],
+    "teaches": [
+      "understand what the AI Fluency Index actually measured and its scope limits"
+    ],
+    "keywords": [
+      "ai fluency index",
+      "anthropic education report",
+      "ai fluency research"
+    ],
+    "questions": [
+      "what is the ai fluency index",
+      "how does anthropic measure ai fluency"
+    ],
+    "id": "r-38cfb64943"
+  },
+  {
+    "title": "Tokens: why some inputs cost more than others",
+    "url": "https://academy.claude.com/tutorials/tokens-and-embeddings",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "developer",
+      "data-analyst",
+      "non-technical"
+    ],
+    "level": "never-used",
+    "topics": [
+      "api"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "An interactive walkthrough of what a token is, built around watching a usage bill or a rate limit rather than ML theory - includes live widgets for tokenizing text and comparing vocabularies.",
+    "who_for": "Anyone trying to predict how many tokens a piece of text will use, or understand why a bill or rate limit moved the way it did.",
+    "skip_if": "Framed entirely around cost and rate limits, not embeddings for semantic search or RAG - it teaches byte-pair encoding for pricing intuition, despite the URL slug's mention of embeddings.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. URL slug (tokens-and-embeddings) no longer matches the live title - a stale slug with no redirect.",
+    "prerequisites": [],
+    "teaches": [
+      "predict roughly how many tokens a piece of text will use",
+      "understand byte-pair encoding at a conceptual level"
+    ],
+    "keywords": [
+      "what is a token",
+      "claude tokens explained",
+      "why do tokens cost more"
+    ],
+    "questions": [
+      "how many tokens does my text use",
+      "why did my claude usage bill go up"
+    ],
+    "id": "r-a49a4c4aa6"
+  },
+  {
+    "title": "Troubleshooting skills",
+    "url": "https://academy.claude.com/tutorials/troubleshooting-skills",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "developer"
+    ],
+    "level": "confident",
+    "topics": [
+      "claude-code",
+      "skills"
+    ],
+    "format": "video",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "A four-minute video on debugging Claude Code skills across four failure categories: doesn't trigger, doesn't load, has conflicts, or fails at runtime.",
+    "who_for": "A Claude Code user whose skill isn't behaving as expected.",
+    "skip_if": "No written troubleshooting content on the page itself - the four failure categories are named only in the YouTube description, not narrated step by step in an article.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. YouTube id YBa1cwaG7is, published 2026-02-19, real runtime 3:37 against a page label of 4 min.",
+    "prerequisites": [
+      "a Claude Code skill already built"
+    ],
+    "teaches": [
+      "diagnose a skill that doesn't trigger, doesn't load, has conflicts, or fails at runtime"
+    ],
+    "keywords": [
+      "claude code skill not working",
+      "debug claude code skill",
+      "troubleshoot claude skill"
+    ],
+    "questions": [
+      "why isn't my claude code skill triggering",
+      "how do i debug a claude skill"
+    ],
+    "id": "r-007962aad0"
+  },
+  {
+    "title": "Use artifacts to visualize and create AI apps without ever writing a line of code",
+    "url": "https://academy.claude.com/tutorials/use-artifacts-to-visualize-and-create-ai-apps-without-ever-writing-a-line-of-code",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "non-technical",
+      "business-founder"
+    ],
+    "level": "basic",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "article",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "How Artifacts work as mini-apps you build inside a Claude conversation, then customize and share, aimed at non-coders like a parent or small business owner.",
+    "who_for": "Someone who wants to build a small interactive tool without writing code.",
+    "skip_if": "The Artifacts tab itself only exists on Free, Pro and Max plans and has no mobile surface at all - Team and Enterprise users don't get the browsing tab even though they can view individual artifacts.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 9 min read plus an embedded video.",
+    "prerequisites": [
+      "a Claude.ai account"
+    ],
+    "teaches": [
+      "build, customize and share a Claude Artifact with no code"
+    ],
+    "keywords": [
+      "claude artifacts no code",
+      "build ai app without coding",
+      "claude artifacts tutorial"
+    ],
+    "questions": [
+      "can i build an app with claude without coding",
+      "what plans have access to artifacts"
+    ],
+    "id": "r-a1951936c4"
+  },
+  {
+    "title": "Using Aiera for earnings intelligence and market analysis",
+    "url": "https://academy.claude.com/tutorials/using-aiera-for-earnings-intelligence-and-market-analysis",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "data-analyst",
+      "business-founder"
+    ],
+    "level": "builder",
+    "topics": [
+      "mcp"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Setting up the Aiera connector for earnings call transcripts, SEC filings, and Third Bridge expert interview transcripts, for both org owners and individual users.",
+    "who_for": "Financial analysts who want earnings and filings data reachable inside a Claude conversation.",
+    "skip_if": "Needs your own Aiera account and API credentials obtained by contacting Aiera directly - the page names the data available but states no pricing or coverage numbers anywhere.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Setup split into an Organization Owner path and an Individual User path.",
+    "prerequisites": [
+      "an Aiera account and API credentials from Aiera"
+    ],
+    "teaches": [
+      "connect Aiera to Claude for earnings calls, SEC filings and expert interviews"
+    ],
+    "keywords": [
+      "aiera connector claude",
+      "earnings call transcripts claude",
+      "aiera mcp"
+    ],
+    "questions": [
+      "how do i connect aiera to claude",
+      "can claude read earnings call transcripts"
+    ],
+    "id": "r-d3a0d18ea7"
+  },
+  {
+    "title": "Using Chronograph for portfolio monitoring",
+    "url": "https://academy.claude.com/tutorials/using-chronograph-for-portfolio-monitoring",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "data-analyst",
+      "business-founder"
+    ],
+    "level": "builder",
+    "topics": [
+      "mcp"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Setting up the Chronograph connector for private-equity portfolio monitoring - tracking exposures, performance metrics, and portfolio data inside Claude.",
+    "who_for": "Private equity portfolio and investment teams who already use Chronograph and want it reachable from Claude.",
+    "skip_if": "Needs your own Chronograph account arranged directly with Chronograph, not Anthropic - and even then, Claude 'cannot access documents, custom fields, or metrics that require a Primary Metric Type label,' so parts of your own data stay invisible.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Setup split into an Organization Owner path and an Individual User path.",
+    "prerequisites": [
+      "a Chronograph account",
+      "MCP server access arranged with Chronograph"
+    ],
+    "teaches": [
+      "connect Chronograph to Claude for PE portfolio monitoring"
+    ],
+    "keywords": [
+      "chronograph connector claude",
+      "portfolio monitoring claude",
+      "chronograph mcp"
+    ],
+    "questions": [
+      "how do i connect chronograph to claude",
+      "can claude access all my chronograph data"
+    ],
+    "id": "r-34b80958cf"
+  },
+  {
+    "title": "Using Claude Code Remote Control",
+    "url": "https://academy.claude.com/tutorials/using-claude-code-remote-control",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "developer"
+    ],
+    "level": "confident",
+    "topics": [
+      "claude-code"
+    ],
+    "format": "video",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Connecting claude.ai/code or the Claude mobile app to a Claude Code session still running on your own machine, so you can start work at a desk and continue it from a phone.",
+    "who_for": "A Claude Code user who wants to check on or steer a running session away from their desk.",
+    "skip_if": "The Academy page itself is just a title and an embed with almost no on-page text - the real requirements (Pro/Max/Team/Enterprise plan, CLI v2.1.51+) are only documented separately at code.claude.com, not stated here.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. YouTube id Ko7_tC1fMMM, published 2026-03-17, real runtime 2:40 against a page label of 3 min. Requirements cross-checked against code.claude.com/docs/en/remote-control.",
+    "prerequisites": [
+      "Claude Code CLI v2.1.51+",
+      "Pro, Max, Team or Enterprise plan"
+    ],
+    "teaches": [
+      "connect a mobile or web session to a running local Claude Code session"
+    ],
+    "keywords": [
+      "claude code remote control",
+      "claude code from phone",
+      "claude code mobile"
+    ],
+    "questions": [
+      "can i control claude code from my phone",
+      "what is claude code remote control"
+    ],
+    "id": "r-70137913bd"
+  },
+  {
+    "title": "Using Claude Cowork for legal: answer fast questions on past decisions",
+    "url": "https://academy.claude.com/tutorials/using-claude-cowork-for-legal-question-briefing",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder",
+      "pm"
+    ],
+    "level": "builder",
+    "topics": [
+      "cowork"
+    ],
+    "format": "article",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Cowork answers a question about a past decision from your own history of reviews, with a citation for every claim you can check yourself before replying.",
+    "who_for": "Legal or adjacent teams (the page also names support, compliance, finance and engineering) who keep getting the same 'what did we decide on X' questions.",
+    "skip_if": "Needs Cowork connected to your inbox, calendar, task tracker, chat and document storage all at once - Gmail, Slack, and an issue tracker like Jira, Linear or Asana are named - so setup is heavier than the 'quick answer' framing suggests.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min read plus an embedded video. Claude asks before it sends or changes anything - read-and-draft, not autonomous.",
+    "prerequisites": [
+      "Claude Cowork",
+      "a legal plugin with the /brief skill",
+      "inbox/calendar/tracker/chat/storage connectors"
+    ],
+    "teaches": [
+      "answer a question from your own past decisions with a citation for every claim"
+    ],
+    "keywords": [
+      "cowork legal briefing",
+      "claude cowork past decisions",
+      "legal question answering claude"
+    ],
+    "questions": [
+      "can claude answer questions from our past legal reviews",
+      "how does cowork cite its sources"
+    ],
+    "id": "r-e11187754a"
+  },
+  {
+    "title": "Using the Medidata Connector in Claude",
+    "url": "https://academy.claude.com/tutorials/using-the-medidata-connector-in-claude",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "researcher"
+    ],
+    "level": "builder",
+    "topics": [
+      "mcp"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Connecting Medidata, a commercial clinical-trial platform, to Claude for platform support and predicting site enrollment rates for trial planning.",
+    "who_for": "Clinical feasibility leads, study managers, and site selection specialists on a Medidata platform account.",
+    "skip_if": "Site Ranking, the predictive half of this connector, needs a separate Intelligent Trials/Study Feasibility subscription beyond a regular Medidata account - and the page's own MCP documentation link is a literal unresolved placeholder, printed as '[link]' twice.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 3 min read. Installs from the anthropics/life-sciences plugin marketplace.",
+    "prerequisites": [
+      "a Medidata platform account",
+      "Intelligent Trials/Study Feasibility subscription for Site Ranking"
+    ],
+    "teaches": [
+      "use Medidata platform help and site-ranking predictions from inside Claude"
+    ],
+    "keywords": [
+      "medidata connector claude",
+      "clinical trial site selection",
+      "medidata mcp"
+    ],
+    "questions": [
+      "can claude connect to medidata",
+      "how do i predict clinical trial site enrollment"
+    ],
+    "id": "r-0db119275a"
+  },
+  {
+    "title": "Using the NPI Registry Connector in Claude",
+    "url": "https://academy.claude.com/tutorials/using-the-npi-registry-connector-in-claude",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "researcher",
+      "non-technical"
+    ],
+    "level": "never-used",
+    "topics": [
+      "mcp"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Connecting the free US government NPI Registry (CMS NPPES) to Claude to validate, look up, and search healthcare provider credentials.",
+    "who_for": "Healthcare administrators, credentialing staff, and healthcare recruiters who need to verify a provider's National Provider Identifier.",
+    "skip_if": "Free public registry, no account needed - skip only if you don't work with US healthcare provider identifiers; it validates and looks up NPI numbers, nothing else.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Names three tools: npi_validate (runs a Luhn check-digit test locally), npi_lookup, npi_search. Installs from the anthropics/healthcare plugin marketplace.",
+    "prerequisites": [],
+    "teaches": [
+      "validate and look up US healthcare provider NPI numbers from inside Claude"
+    ],
+    "keywords": [
+      "npi registry connector",
+      "validate npi number claude",
+      "healthcare provider lookup"
+    ],
+    "questions": [
+      "can claude validate an npi number",
+      "how do i look up a healthcare provider's npi"
+    ],
+    "id": "r-1ddea3148e"
+  },
+  {
+    "title": "Using the Open Targets Connector in Claude",
+    "url": "https://academy.claude.com/tutorials/using-the-open-targets-connector-in-claude",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "researcher"
+    ],
+    "level": "never-used",
+    "topics": [
+      "mcp"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Connecting Open Targets, a free open-science platform that scores gene targets against diseases, to Claude for target discovery and disease-association research.",
+    "who_for": "Target discovery scientists, bioinformaticians, and academic researchers assessing drug targets.",
+    "skip_if": "Fully open (CC0 data, Apache 2.0 connector code, no account needed) - skip only if target-disease association scoring for drug discovery isn't your work.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Exposes the Open Targets GraphQL API as read-only.",
+    "prerequisites": [],
+    "teaches": [
+      "query gene-target to disease association evidence from inside Claude"
+    ],
+    "keywords": [
+      "open targets connector claude",
+      "drug target discovery",
+      "gene disease association"
+    ],
+    "questions": [
+      "can claude access open targets data",
+      "how do i research drug targets with claude"
+    ],
+    "id": "r-715c68215e"
+  },
+  {
+    "title": "Using the Owkin Connector in Claude",
+    "url": "https://academy.claude.com/tutorials/using-the-owkin-connector-in-claude",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "researcher"
+    ],
+    "level": "builder",
+    "topics": [
+      "mcp"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Connecting Owkin's Pathology Explorer to Claude, an AI agent that turns H&E pathology slide images into queryable cell-level measurements across named TCGA cohorts.",
+    "who_for": "Translational and immuno-oncology researchers working with tumor pathology slides.",
+    "skip_if": "Needs a paid K Pro platform account from Owkin, and the connector is explicitly 'Research Use Only' - it doesn't retrieve documents, it returns computed slide measurements (cell counts, densities across 6 cell types), a narrow fit even within life sciences.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. The only image/computer-vision connector in this set of 8; can plot a whole-slide image inline.",
+    "prerequisites": [
+      "an Owkin K Pro platform account"
+    ],
+    "teaches": [
+      "query computed pathology-slide measurements from Claude"
+    ],
+    "keywords": [
+      "owkin connector claude",
+      "pathology slide analysis ai",
+      "owkin pathology explorer"
+    ],
+    "questions": [
+      "can claude analyze pathology slides",
+      "what is owkin pathology explorer"
+    ],
+    "id": "r-7810311517"
+  },
+  {
+    "title": "Using the PubMed Connector in Claude",
+    "url": "https://academy.claude.com/tutorials/using-the-pubmed-connector-in-claude",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "researcher"
+    ],
+    "level": "never-used",
+    "topics": [
+      "mcp"
+    ],
+    "format": "docs",
+    "time": "under-1hr",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Connecting PubMed, the US National Library of Medicine's free biomedical literature index, to Claude — free for chat use, with a documented API path too.",
+    "who_for": "Anyone doing biomedical literature search or review who wants results reachable inside a Claude conversation.",
+    "skip_if": "Free for chat use with no account needed - but PubMed indexes 36M+ citations while only about 8M have full text in PMC, so a search will often surface abstracts only, not full papers.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 25 min, the longest of this batch. Includes a working Python API sample and a public MCP endpoint; has its own FAQ and Privacy and Data Usage section.",
+    "prerequisites": [],
+    "teaches": [
+      "search PubMed's biomedical literature index from Claude chat or the API"
+    ],
+    "keywords": [
+      "pubmed connector claude",
+      "biomedical literature search ai",
+      "pubmed mcp"
+    ],
+    "questions": [
+      "can claude search pubmed",
+      "how do i connect pubmed to claude"
+    ],
+    "id": "r-8501c33670"
+  },
+  {
+    "title": "Using the Scholar Gateway Connector in Claude",
+    "url": "https://academy.claude.com/tutorials/using-the-scholar-gateway-connector-in-claude",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "researcher"
+    ],
+    "level": "builder",
+    "topics": [
+      "mcp"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Connecting Wiley's Scholar Gateway, a paywalled publisher archive of 3M+ peer-reviewed articles, to Claude in beta.",
+    "who_for": "Researchers with an active Wiley journal subscription who want its content searchable from Claude.",
+    "skip_if": "Needs a Wiley journal subscription, and AI access is a separate paid upgrade even for existing subscribers - it's Beta, returns snippets rather than whole papers, and covers only Wiley's own ~900,000 life-sciences articles.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 2 min, the shortest connector in this batch.",
+    "prerequisites": [
+      "a Wiley journal subscription with the AI-access upgrade"
+    ],
+    "teaches": [
+      "search Wiley's paywalled journal archive from Claude"
+    ],
+    "keywords": [
+      "scholar gateway connector claude",
+      "wiley connector claude",
+      "wiley journals ai search"
+    ],
+    "questions": [
+      "can claude search wiley journals",
+      "what is scholar gateway"
+    ],
+    "id": "r-dbea376d20"
+  },
+  {
+    "title": "Using the Synapse.org Connector in Claude",
+    "url": "https://academy.claude.com/tutorials/using-the-synapse-org-connector-in-claude",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "researcher"
+    ],
+    "level": "builder",
+    "topics": [
+      "mcp"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Connecting Synapse.org, a nonprofit biomedical data-sharing platform, to Claude to discover datasets, project structure, and data lineage.",
+    "who_for": "Researchers looking for biomedical datasets deposited by research consortia, including provenance and processing history.",
+    "skip_if": "A free account gets you search, but most individual datasets need separate human approval from Synapse's own governance team before you can actually access them.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. The only connector in this batch exposing data lineage/provenance and file-tree structure by Synapse ID.",
+    "prerequisites": [
+      "a free Synapse account",
+      "governance approval for restricted datasets"
+    ],
+    "teaches": [
+      "discover biomedical datasets and their provenance on Synapse from Claude"
+    ],
+    "keywords": [
+      "synapse.org connector claude",
+      "biomedical dataset search",
+      "synapse mcp"
+    ],
+    "questions": [
+      "can claude search synapse datasets",
+      "how do i get access to a synapse dataset"
+    ],
+    "id": "r-e17473d97f"
+  },
+  {
+    "title": "Using the ToolUniverse Extension in Claude",
+    "url": "https://academy.claude.com/tutorials/using-the-tooluniverse-extension-in-claude",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "researcher",
+      "developer"
+    ],
+    "level": "builder",
+    "topics": [
+      "mcp"
+    ],
+    "format": "docs",
+    "time": "under-1hr",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Installing ToolUniverse, an open-source desktop extension bundling 600+ scientific tools and databases (UniProt, ChEMBL, PubChem, ClinicalTrials.gov, PubMed and more) behind one interface.",
+    "who_for": "Research scientists and engineers who want one local extension instead of connecting many individual scientific data sources.",
+    "skip_if": "This is a local Claude Desktop extension, not a remote connector like its seven neighbors in this set - it already wraps PubMed and Open Targets itself, so installing it alongside those two connectors is redundant.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 20 min. Apache 2.0 open source. Carries a third-party disclaimer that ToolUniverse 'bears no responsibility for the accuracy, completeness, or continued availability' of the wrapped resources.",
+    "prerequisites": [
+      "Claude Desktop app"
+    ],
+    "teaches": [
+      "install a single extension covering 600+ scientific tools and databases"
+    ],
+    "keywords": [
+      "tooluniverse extension claude",
+      "scientific tools claude desktop",
+      "600 scientific databases claude"
+    ],
+    "questions": [
+      "what is tooluniverse",
+      "how do i access many scientific databases from claude at once"
+    ],
+    "id": "r-d31580a24c"
+  },
+  {
+    "title": "What are skills?",
+    "url": "https://academy.claude.com/tutorials/what-are-skills",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "developer"
+    ],
+    "level": "never-used",
+    "topics": [
+      "claude-code",
+      "skills"
+    ],
+    "format": "video",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "A short video on what skills are in Claude Code specifically and how they extend Claude's capabilities with specialized knowledge and workflows.",
+    "who_for": "A Claude Code user encountering skills for the first time.",
+    "skip_if": "Scoped to Claude Code specifically, not Claude Skills generally, despite the generic-sounding title - if you use Skills in claude.ai chat rather than Claude Code, this isn't about your surface.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 3 min. Unlike sibling AI-fluency videos, carries no 'Learn more: AI Fluency' link, suggesting it sits with product content instead.",
+    "prerequisites": [],
+    "teaches": [
+      "understand what a Claude Code skill is at a conceptual level"
+    ],
+    "keywords": [
+      "what are claude code skills",
+      "claude code skills intro",
+      "claude code skills explained"
+    ],
+    "questions": [
+      "what is a claude code skill",
+      "how do skills extend claude code"
+    ],
+    "id": "r-75ecc00e1f"
+  },
+  {
+    "title": "What does AI know about me?",
+    "url": "https://academy.claude.com/tutorials/what-does-ai-know-about-me",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "non-technical"
+    ],
+    "level": "never-used",
+    "topics": [
+      "safety"
+    ],
+    "format": "video",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "A short video on 'the four places' your information can end up when you share personal details with Claude, and that a user setting exists at each one.",
+    "who_for": "Someone forming a mental model of what happens to sensitive things they type into Claude.",
+    "skip_if": "A 5-minute conceptual video on where information can go, not a walkthrough of Claude's actual privacy settings - it names that a setting exists at each point without showing you where to click.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 5 min.",
+    "prerequisites": [],
+    "teaches": [
+      "understand the four places personal information shared with Claude can end up"
+    ],
+    "keywords": [
+      "what does claude know about me",
+      "ai privacy explained",
+      "claude data privacy"
+    ],
+    "questions": [
+      "does claude remember what i tell it",
+      "is it safe to share personal information with claude"
+    ],
+    "id": "r-f7577363a3"
+  },
+  {
+    "title": "What happens when you talk to AI?",
+    "url": "https://academy.claude.com/tutorials/what-happens-when-you-talk-to-ai",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "non-technical"
+    ],
+    "level": "never-used",
+    "topics": [
+      "safety"
+    ],
+    "format": "video",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "A short video arguing that Claude 'doesn't think one word at a time' even though it writes one word at a time, walking through what's happening during the 'thinking' pause.",
+    "who_for": "Someone curious what's actually happening when Claude appears to pause and think.",
+    "skip_if": "Purely conceptual, arguing against a naive next-token reading rather than explaining architecture - skip if you already understand next-token generation and want technical depth instead.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 5 min.",
+    "prerequisites": [],
+    "teaches": [
+      "build an intuition for what happens when Claude generates a response"
+    ],
+    "keywords": [
+      "how does ai think",
+      "what happens when ai generates text",
+      "claude thinking explained"
+    ],
+    "questions": [
+      "is ai actually thinking",
+      "how does claude generate its answers"
+    ],
+    "id": "r-5ebc2ddd4c"
+  },
+  {
+    "title": "What is Claude Managed Agents?",
+    "url": "https://academy.claude.com/tutorials/what-is-claude-managed-agents",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "developer"
+    ],
+    "level": "builder",
+    "topics": [
+      "agents",
+      "api"
+    ],
+    "format": "video",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "A product demo of Claude Managed Agents, a suite of APIs for building production agents where you define the tools, environments, and success criteria, shown through three concrete builds.",
+    "who_for": "A developer evaluating Anthropic's managed-agents APIs for a production system.",
+    "skip_if": "A product-announcement demo for an API beta, not a tutorial - two features shown (MCP tunnels and 'dreaming') are still in limited research preview behind a separate early-access form, so you can't necessarily follow along.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 4 min. Outcomes, multi-agent orchestration and memory are enabled by default for all API accounts per the page. Likely to go stale fastest of this batch.",
+    "prerequisites": [
+      "an Anthropic API account"
+    ],
+    "teaches": [
+      "understand what Claude Managed Agents offers for production agent building"
+    ],
+    "keywords": [
+      "claude managed agents",
+      "anthropic agent api",
+      "production ai agents api"
+    ],
+    "questions": [
+      "what is claude managed agents",
+      "how do i build a production ai agent with claude"
+    ],
+    "id": "r-cc98d69c68"
+  },
+  {
+    "title": "What is sycophancy in AI models?",
+    "url": "https://academy.claude.com/tutorials/what-is-sycophancy-in-ai-models",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "non-technical"
+    ],
+    "level": "never-used",
+    "topics": [
+      "safety"
+    ],
+    "format": "video",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "A short video on what AI researchers mean by sycophancy, when it's more likely to appear, and tactics to steer a conversation toward truth over agreement.",
+    "who_for": "Someone who wants to recognize when Claude is agreeing with them instead of being accurate.",
+    "skip_if": "No body text at all beyond the description - pure video, and it sits in a matched set of three near-identical videos (hallucination, bias, sycophancy) that are easy to mistake for each other.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 6 min, the longest of the three matched AI-fluency videos.",
+    "prerequisites": [],
+    "teaches": [
+      "recognize sycophantic AI responses and steer toward truth"
+    ],
+    "keywords": [
+      "what is ai sycophancy",
+      "ai agreeing too much",
+      "sycophancy in language models"
+    ],
+    "questions": [
+      "why does ai just agree with me",
+      "what is sycophancy in ai"
+    ],
+    "id": "r-264c06cbe5"
+  },
+  {
+    "title": "Why does bias exist in AI models?",
+    "url": "https://academy.claude.com/tutorials/why-does-bias-exist-in-ai-models",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "non-technical"
+    ],
+    "level": "never-used",
+    "topics": [
+      "safety"
+    ],
+    "format": "video",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "A short video on what bias is in AI models, why it may occur, and tactics to spot it in your own conversations.",
+    "who_for": "Someone who wants a plain definition of AI bias and how to notice it, not a research-level treatment.",
+    "skip_if": "Same matched-set caveat as its sibling videos - no body text beyond the description, and at 4 minutes it's the shortest and least detailed of the three (hallucination, bias, sycophancy).",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 4 min, shortest of the three matched AI-fluency videos.",
+    "prerequisites": [],
+    "teaches": [
+      "define AI bias plainly and spot it in a conversation"
+    ],
+    "keywords": [
+      "why is ai biased",
+      "ai bias explained",
+      "bias in language models"
+    ],
+    "questions": [
+      "why does ai have bias",
+      "how do i spot bias in an ai response"
+    ],
+    "id": "r-3338d6177f"
+  },
+  {
+    "title": "Writing an AI diligence statement",
+    "url": "https://academy.claude.com/tutorials/writing-an-ai-diligence-statement",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "non-technical",
+      "business-founder",
+      "pm"
+    ],
+    "level": "basic",
+    "topics": [
+      "safety"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "How to write a transparent, specific disclosure of AI use in your work - five required elements, three copyable prompts, and a step to verify the diligence statement itself.",
+    "who_for": "Professionals in regulated industries, or team leads setting AI-use norms, who need to disclose how AI assisted their work.",
+    "skip_if": "Written for regulated-industry and team-lead disclosure practices - the five required elements and the 'verify your own diligence statement' step are more process than a casual personal user needs.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min, the longest text lesson in this batch. Prints a real diligence statement for the tutorial itself as its own worked example.",
+    "prerequisites": [],
+    "teaches": [
+      "write an AI diligence statement with what assisted, which tool, what was reviewed, what changed, and who is responsible",
+      "verify the diligence statement itself before relying on it"
+    ],
+    "keywords": [
+      "ai diligence statement",
+      "disclose ai use",
+      "ai transparency statement"
+    ],
+    "questions": [
+      "how do i disclose that i used ai for this work",
+      "what should an ai diligence statement include"
+    ],
+    "id": "r-749e37612b"
   }
 ]

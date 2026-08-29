@@ -15,6 +15,20 @@
 # Add a line here only when the two entries really are different resources. If they are
 # the same thing on two hosts, merge them instead and delete nothing from this file.
 
+what are skills                  # RULED 2026-08-29: genuinely two resources. One is
+                                 # academy.claude.com/tutorials/what-are-skills, a 3-min
+                                 # video with no article text, chipped "Claude Code" and
+                                 # scoped to Claude Code skills specifically - the research
+                                 # agent that read it found no "Learn more: AI Fluency"
+                                 # link, unlike its sibling AI-fluency videos, suggesting
+                                 # it sits with product docs, not the fluency curriculum.
+                                 # The other is the existing youtube.com/watch?v=bjdBVZa66oU
+                                 # row: 2:54, 1.5M+ views, channel @claude, scoped to Agent
+                                 # Skills generally (not Claude-Code-specific). Same title,
+                                 # different scope and different host; no evidence found
+                                 # that the Academy page embeds the same YouTube video, so
+                                 # they were kept as two rows rather than guessed into one.
+
 getting started with claude in excel  # RULED 2026-08-27: genuinely two resources. Both
                                  # are Anthropic's own and both really carry this exact
                                  # title - the YouTube page title was read on 2026-08-27

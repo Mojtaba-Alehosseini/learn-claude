@@ -62,7 +62,7 @@ PATHS = [
             {"url": "https://support.claude.com/en/articles/9517075-what-are-projects",
              "why": "Once you repeat a task twice, you need somewhere to keep the context. "
              "Projects is that place. Learning this earlier would have been abstract."},
-            {"url": "https://claude.com/resources/tutorials/why-do-ai-models-hallucinate",
+            {"url": "https://academy.claude.com/tutorials/why-do-ai-models-hallucinate",
              "why": "Before you trust Claude with anything that matters, understand exactly "
              "how it fails. This is the step people skip and later regret."},
             {"url": "https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork",
