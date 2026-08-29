@@ -15,16 +15,20 @@
   var LC = window.LC;
 
   var AXES = [
-    { key: "roles",   param: "role",   label: "Role",   labels: LC.ROLE,   icons: true,  primary: true },
-    { key: "levels",  param: "level",  label: "Level",  labels: LC.LEVEL,  primary: true },
-    { key: "times",   param: "time",   label: "Time",   labels: LC.TIME,   primary: true },
-    { key: "topics",  param: "topic",  label: "Topic",  labels: LC.TOPIC },
-    { key: "formats", param: "format", label: "Format", labels: LC.FORMAT },
-    { key: "costs",   param: "cost",   label: "Cost",   labels: LC.COST }
+    { key: "roles",     param: "role",     label: "Role",   labels: LC.ROLE,   icons: true,  primary: true },
+    { key: "levels",    param: "level",    label: "Level",  labels: LC.LEVEL,  primary: true },
+    { key: "times",     param: "time",     label: "Time",   labels: LC.TIME,   primary: true },
+    { key: "topics",    param: "topic",    label: "Topic",  labels: LC.TOPIC },
+    { key: "formats",   param: "format",   label: "Format", labels: LC.FORMAT },
+    { key: "costs",     param: "cost",     label: "Cost",   labels: LC.COST },
+    /* Single checkbox, not a picklist — "official" only has one meaningful state to
+       filter on. It reuses the same axis machinery (matches/toggle/URL/chip) rather
+       than a one-off branch, so it behaves like every other filter for free. */
+    { key: "officials", param: "official", label: "Source", labels: { yes: "Official Anthropic only" } }
   ];
 
   var items = [];
-  var sel = { roles: [], levels: [], times: [], topics: [], formats: [], costs: [] };
+  var sel = { roles: [], levels: [], times: [], topics: [], formats: [], costs: [], officials: [] };
   var q = "";
   var sort = "best";
   var moreOpen = false;
@@ -76,6 +80,7 @@
               : a.key === "levels" ? [it.level]
               : a.key === "times" ? [it.time]
               : a.key === "formats" ? [it.format]
+              : a.key === "officials" ? [it.official ? "yes" : "no"]
               : [it.cost];
       var hit = false;
       for (var j = 0; j < val.length; j++) if (chosen.indexOf(val[j]) !== -1) hit = true;
@@ -177,7 +182,8 @@
     var searching = !!q.trim();
     var onlyRole = !searching &&
                    sel.roles.length && !sel.levels.length && !sel.times.length &&
-                   !sel.topics.length && !sel.formats.length && !sel.costs.length;
+                   !sel.topics.length && !sel.formats.length && !sel.costs.length &&
+                   !sel.officials.length;
     var text = LC.countText(n);
     if (onlyRole && sel.roles.length === 1) {
       text = n + " resources for " + LC.ROLE[sel.roles[0]];
@@ -221,7 +227,7 @@
 
   function anyOtherThanRole() {
     return sel.levels.length || sel.times.length || sel.topics.length ||
-           sel.formats.length || sel.costs.length;
+           sel.formats.length || sel.costs.length || sel.officials.length;
   }
 
   function render() {

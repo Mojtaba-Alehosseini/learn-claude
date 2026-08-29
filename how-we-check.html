@@ -85,6 +85,7 @@
     </div>
 
     <p class="prose" style="margin-top:var(--space-24)" id="tally"></p>
+    <p class="prose" style="margin-top:var(--space-8)" id="officialTally"></p>
   </section>
 
   <section class="section">
@@ -173,6 +174,17 @@
     s += " Nothing is " + none.join(" or ") + " yet, and the cards say so.";
   }
   document.getElementById("tally").textContent = s;
+
+  /* Same source as the tally above, computed the same way for the same reason: the
+     claim is only honest if the number can't drift from the data it describes.
+     "Official" is not a quality mark here — it just means Anthropic published it
+     themselves, which is why the sentence has to say why the rest still belongs. */
+  var officialCount = items.filter(function (x) { return x.official; }).length;
+  var officialPct = Math.round(100 * officialCount / items.length);
+  document.getElementById("officialTally").textContent =
+    officialCount + " of those " + items.length + " (" + officialPct + "%) are " +
+    "Anthropic's own — official just means who published it, not how good it is, " +
+    "so the rest are here because they passed the same check, not a lower one.";
 
   /* Same source as the tally above, for the same reason. */
   document.getElementById("browseCta").textContent =
