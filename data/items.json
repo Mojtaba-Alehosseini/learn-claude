@@ -26320,5 +26320,1368 @@
       "how do i build a competitive positioning matrix"
     ],
     "id": "r-85a2dc1b9e"
+  },
+  {
+    "title": "Build the competitive comparison doc",
+    "url": "https://academy.claude.com/use-cases/competitor-comparison",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "pm",
+      "business-founder"
+    ],
+    "level": "builder",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Cowork reads a competitor's public materials against your own positioning, writes a win/lose/draw breakdown, and outputs a sales deck plus an Excel feature matrix.",
+    "who_for": "Product marketing or sales enablement building a competitive comparison from scratch.",
+    "skip_if": "Needs the Marketing plugin plus Google Drive, Slack and optionally HubSpot connected - and it schedules itself to re-run monthly against competitor public pages, so it's built for ongoing tracking, not a one-time comparison.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min.",
+    "prerequisites": [
+      "Claude Cowork",
+      "Google Drive connector",
+      "Marketing plugin (optional)"
+    ],
+    "teaches": [
+      "build a win/lose/draw competitive comparison as a deck and feature matrix",
+      "keep a competitive comparison current with a scheduled monthly re-run"
+    ],
+    "keywords": [
+      "competitive comparison doc claude",
+      "cowork competitor analysis",
+      "win loss competitive matrix"
+    ],
+    "questions": [
+      "can cowork build a competitive comparison doc",
+      "how do i keep a competitor comparison up to date"
+    ],
+    "id": "r-dbad74772b"
+  },
+  {
+    "title": "Contract redlining",
+    "url": "https://academy.claude.com/use-cases/contract-playbook-review",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder",
+      "pm"
+    ],
+    "level": "builder",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Reviews a vendor agreement, NDA or SaaS contract clause-by-clause against your own contract playbook and produces a redlined version to send back to opposing counsel.",
+    "who_for": "In-house counsel or contract managers doing high-volume commercial contract review.",
+    "skip_if": "The Commercial Legal plugin has to be enabled once by a workspace admin on Team/Enterprise before you can use it - and the green/yellow/red rating only means something if you already have your own contract playbook document to compare against.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Slug and page title differ - the slug says 'playbook review', the page says 'redlining'.",
+    "prerequisites": [
+      "Claude Cowork",
+      "Commercial Legal plugin (admin-enabled)",
+      "your own contract playbook document"
+    ],
+    "teaches": [
+      "redline a contract clause-by-clause against your own playbook"
+    ],
+    "keywords": [
+      "contract redlining claude",
+      "cowork contract playbook review",
+      "claude for legal contract review"
+    ],
+    "questions": [
+      "can cowork redline a contract against our playbook",
+      "how do i enable the commercial legal plugin"
+    ],
+    "id": "r-55e622988a"
+  },
+  {
+    "title": "Contract redlining and negotiation",
+    "url": "https://academy.claude.com/use-cases/contract-redlining-and-negotiation",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder",
+      "pm"
+    ],
+    "level": "confident",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Uploads a vendor service agreement and gets the terms that affect you flagged, with suggested redlines and negotiation talking points, in plain claude.ai chat.",
+    "who_for": "A founder or ops person reviewing a vendor agreement without a dedicated legal team.",
+    "skip_if": "This is the claude.ai consumer-grade twin of the Cowork contract-redlining page - same subject, lighter setup (just Google Drive), but without Cowork's scheduling or playbook-matching structure.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Recommends storing your contract standards in a Project so they're reused on every future review.",
+    "prerequisites": [
+      "Google Drive integration",
+      "a contract document"
+    ],
+    "teaches": [
+      "get a contract's affecting terms flagged with suggested redlines and talking points"
+    ],
+    "keywords": [
+      "contract redlining claude.ai",
+      "review vendor contract claude",
+      "negotiation talking points claude"
+    ],
+    "questions": [
+      "can claude review a vendor contract for me",
+      "how do i get negotiation talking points from a contract"
+    ],
+    "id": "r-fe08131b56"
+  },
+  {
+    "title": "Contract to ledger extraction",
+    "url": "https://academy.claude.com/use-cases/contract-to-ledger",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "data-analyst",
+      "business-founder"
+    ],
+    "level": "builder",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Pulls ASC 606 revenue-recognition fields out of executed contract PDFs into an intake sheet, flagging non-standard terms before anything posts to the general ledger.",
+    "who_for": "Revenue operations or accounting teams processing executed contracts into the GL.",
+    "skip_if": "Needs the Finance plugin plus Ironclad and NetSuite connected - it's built to catch exceptions before they hit the general ledger via a weekday-5pm scheduled job, so it's overbuilt for reviewing a single contract.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min.",
+    "prerequisites": [
+      "Claude Cowork",
+      "Ironclad and NetSuite connectors",
+      "Finance plugin (optional)"
+    ],
+    "teaches": [
+      "extract ASC 606 revenue-recognition fields from contracts and flag exceptions before GL posting"
+    ],
+    "keywords": [
+      "contract to ledger extraction claude",
+      "asc 606 automation cowork",
+      "revenue recognition contract extraction"
+    ],
+    "questions": [
+      "can cowork extract revenue recognition fields from contracts",
+      "how do i catch contract exceptions before they post to the gl"
+    ],
+    "id": "r-291b16de6a"
+  },
+  {
+    "title": "Create a company newsletter",
+    "url": "https://academy.claude.com/use-cases/create-a-company-newsletter",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder",
+      "pm"
+    ],
+    "level": "confident",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Pulls the week's company news from Slack, Gmail and Google Drive into a publication-style HTML digest, with a deliberately strict visual style (no gradients, no shadows).",
+    "who_for": "Internal communications or a chief of staff who owns the weekly all-hands update.",
+    "skip_if": "Needs Slack, Google Drive and Gmail all connected - and the real lesson is that publication-quality output comes from spelling out a hard visual style, not from asking for 'a nice newsletter.'",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Output is an interactive HTML artifact styled after British newspaper design conventions.",
+    "prerequisites": [
+      "Slack, Google Drive and Gmail connectors"
+    ],
+    "teaches": [
+      "synthesize company news from multiple channels into a styled digest",
+      "specify a hard visual style instead of a vague aesthetic request"
+    ],
+    "keywords": [
+      "company newsletter claude",
+      "internal comms digest ai",
+      "claude synthesize slack gmail drive"
+    ],
+    "questions": [
+      "can claude write our weekly company newsletter",
+      "how do i get claude to avoid generic ai-looking design"
+    ],
+    "id": "r-c4ed22158a"
+  },
+  {
+    "title": "Create a custom webpage",
+    "url": "https://academy.claude.com/use-cases/create-a-custom-webpage",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "non-technical",
+      "business-founder"
+    ],
+    "level": "basic",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Builds a personal portfolio site from a resume and project write-ups, deployed live via Netlify without writing code.",
+    "who_for": "Job seekers or creatives who want a live portfolio site without learning web development.",
+    "skip_if": "A Netlify account is needed only for the actual deploy step - and it explicitly warns against 'AI-looking gradients,' suggesting you package your own aesthetic preferences into a reusable Skill so later pages stay consistent.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min.",
+    "prerequisites": [
+      "a resume and project write-ups",
+      "a Netlify account for deployment"
+    ],
+    "teaches": [
+      "build and deploy a portfolio webpage from a resume with no code"
+    ],
+    "keywords": [
+      "build portfolio site claude",
+      "no code webpage builder claude",
+      "deploy claude artifact netlify"
+    ],
+    "questions": [
+      "can claude build me a portfolio website",
+      "how do i deploy a claude artifact live"
+    ],
+    "id": "r-b45c8d342b"
+  },
+  {
+    "title": "Create a daily travel itinerary",
+    "url": "https://academy.claude.com/use-cases/create-a-daily-travel-itinerary",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "non-technical"
+    ],
+    "level": "basic",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Builds a day-by-day trip itinerary with realistic timing, walking routes, restaurant picks and backup options, formatted to read on a phone while traveling.",
+    "who_for": "Anyone planning a personal trip who wants a phone-readable, realistic day plan.",
+    "skip_if": "Needs Web Search turned on for current hours and reviews - without it you're getting an itinerary built from Claude's training data, which can be stale for a live trip.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Asks for 160x120px thumbnail photos next to clickable gallery links.",
+    "prerequisites": [
+      "Web Search enabled"
+    ],
+    "teaches": [
+      "build a realistic, phone-readable daily travel itinerary with backup options"
+    ],
+    "keywords": [
+      "travel itinerary claude",
+      "build trip plan ai",
+      "claude daily travel schedule"
+    ],
+    "questions": [
+      "can claude plan my trip itinerary",
+      "how do i get a phone-friendly travel schedule from claude"
+    ],
+    "id": "r-f91c15b7b5"
+  },
+  {
+    "title": "Create a process flowchart",
+    "url": "https://academy.claude.com/use-cases/create-a-process-flowchart",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "pm",
+      "business-founder"
+    ],
+    "level": "confident",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Turns a long written procedure document into an interactive visual flow diagram - specifically a Sankey diagram where line width encodes volume across paths.",
+    "who_for": "Operations or customer success staff turning a written playbook into a visual process map.",
+    "skip_if": "The output is a Sankey diagram where line width encodes volume across paths, not a simple box-and-arrow flowchart - a different deliverable than the title suggests if you just want a basic process diagram.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Worked example turns a 42-page onboarding playbook into a diagram with clickable phase cards.",
+    "prerequisites": [
+      "a written procedure document"
+    ],
+    "teaches": [
+      "convert a written procedure into an interactive volume-weighted flow diagram"
+    ],
+    "keywords": [
+      "process flowchart claude",
+      "convert procedure to diagram",
+      "sankey diagram claude"
+    ],
+    "questions": [
+      "can claude turn my process document into a flowchart",
+      "does claude build sankey diagrams"
+    ],
+    "id": "r-7a7389177b"
+  },
+  {
+    "title": "Create a sales proposal presentation",
+    "url": "https://academy.claude.com/use-cases/create-a-sales-proposal-presentation",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder",
+      "pm"
+    ],
+    "level": "confident",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Turns discovery notes, RFPs, competitive analysis and past proposals into a client proposal deck, refined over rounds of feedback while keeping earlier decisions in context.",
+    "who_for": "Account executives or business development staff building a client-facing proposal deck.",
+    "skip_if": "Needs Google Drive connected plus Extended Thinking turned on, and your company logo uploaded for color extraction - without those the deck won't match your existing proposals or brand.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Worked example is a 7-slide healthcare-prospect deck.",
+    "prerequisites": [
+      "Google Drive integration",
+      "Extended Thinking enabled",
+      "your company logo"
+    ],
+    "teaches": [
+      "synthesize scattered documents into a branded, iteratively-refined proposal deck"
+    ],
+    "keywords": [
+      "sales proposal deck claude",
+      "client proposal presentation ai",
+      "claude sales deck from rfp"
+    ],
+    "questions": [
+      "can claude build a sales proposal deck for me",
+      "how do i get claude to match my company's branding"
+    ],
+    "id": "r-c338e819ef"
+  },
+  {
+    "title": "Create a volunteer management system",
+    "url": "https://academy.claude.com/use-cases/create-a-volunteer-management-system",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder"
+    ],
+    "level": "confident",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Builds a full volunteer program paperwork stack - role descriptions, onboarding, communication templates, tracking spreadsheet - for a nonprofit's volunteer program.",
+    "who_for": "Nonprofit staff professionalizing volunteer management as the program scales.",
+    "skip_if": "The two referenced PDFs are example inputs from the page's own worked example, not downloadable templates - you supply your organization's actual program details, or the ~15-page handbook it drafts will be generic.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Worked example is a tutoring nonprofit with 45 volunteers across 3 schools.",
+    "prerequisites": [
+      "your organization's program structure and existing materials"
+    ],
+    "teaches": [
+      "build a complete volunteer program documentation stack including a tracking workbook"
+    ],
+    "keywords": [
+      "volunteer management system claude",
+      "nonprofit volunteer handbook ai",
+      "volunteer tracking spreadsheet claude"
+    ],
+    "questions": [
+      "can claude build our volunteer management documentation",
+      "how do i create a volunteer tracking spreadsheet"
+    ],
+    "id": "r-3f9f3aede3"
+  },
+  {
+    "title": "Create brand assets",
+    "url": "https://academy.claude.com/use-cases/create-brand-assets",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder",
+      "designer"
+    ],
+    "level": "confident",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Designs print-ready business cards and flyers that follow an existing brand guideline document, including a QR code redesigned to match an organic brand look.",
+    "who_for": "Small business owners or marketers producing print materials that match an existing brand identity.",
+    "skip_if": "Needs your actual brand or style guidelines uploaded as a PDF plus print specs and dimensions - without a real guideline document to match, there's no 'exact visual identity' for it to follow.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Claude is asked to grade its own output and iterate until it meets the brand standard.",
+    "prerequisites": [
+      "a brand/style guideline document (PDF)",
+      "print specs and dimensions"
+    ],
+    "teaches": [
+      "generate print-ready brand assets that follow an existing style guide"
+    ],
+    "keywords": [
+      "create brand assets claude",
+      "business card flyer design ai",
+      "claude match brand guidelines"
+    ],
+    "questions": [
+      "can claude design business cards matching our brand",
+      "how do i get claude to follow our style guide exactly"
+    ],
+    "id": "r-70cdf38f94"
+  },
+  {
+    "title": "Create custom course materials",
+    "url": "https://academy.claude.com/use-cases/create-custom-course-materials",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "teacher"
+    ],
+    "level": "confident",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Photographs of handwritten equations and lecture notes become a typeset LaTeX chapter with a compiled PDF, using the tcolorbox package for boxed theorems.",
+    "who_for": "University math instructors converting handwritten notes into publisher-quality course materials.",
+    "skip_if": "Built specifically around university mathematics and the tcolorbox LaTeX package for boxed theorems - a strong fit for math notes, a weaker one for other subjects that don't need LaTeX typesetting.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Outputs both .tex source and a compiled .pdf.",
+    "prerequisites": [
+      "photos of handwritten notes or equations",
+      "a PDF syllabus"
+    ],
+    "teaches": [
+      "convert handwritten math notes into typeset LaTeX course materials"
+    ],
+    "keywords": [
+      "handwritten notes to latex claude",
+      "typeset math notes ai",
+      "claude latex course materials"
+    ],
+    "questions": [
+      "can claude convert my handwritten math notes to latex",
+      "how do i typeset lecture notes with claude"
+    ],
+    "id": "r-6231c957c6"
+  },
+  {
+    "title": "Create digital recipe cards",
+    "url": "https://academy.claude.com/use-cases/create-digital-recipe-cards",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "non-technical"
+    ],
+    "level": "basic",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Photographs a handwritten family recipe card and produces a clean digital recipe with decoded handwriting, standardized measurements, and a serving-size adjuster.",
+    "who_for": "Someone preserving and digitizing a handwritten family recipe.",
+    "skip_if": "Needs a photo of the actual handwritten recipe card to digitize - there's nothing to build without one, since the whole point is decoding real handwriting and preserving the original image.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. The artifact keeps the original card displayed in a 'museum-quality frame' at the bottom.",
+    "prerequisites": [
+      "a photo of a handwritten recipe card"
+    ],
+    "teaches": [
+      "digitize a handwritten recipe card with a serving-size adjuster"
+    ],
+    "keywords": [
+      "digitize handwritten recipe claude",
+      "recipe card ai converter",
+      "claude decode handwriting recipe"
+    ],
+    "questions": [
+      "can claude read my handwritten recipe card",
+      "how do i digitize a family recipe with claude"
+    ],
+    "id": "r-79d6b064b5"
+  },
+  {
+    "title": "Create health and exercise notes",
+    "url": "https://academy.claude.com/use-cases/create-health-and-exercise-notes",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "non-technical"
+    ],
+    "level": "builder",
+    "topics": [
+      "mcp"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Researches specific exercises (e.g. knee-strengthening after physical therapy) and writes the routine directly into Apple Notes, synced to your iPhone via iCloud.",
+    "who_for": "Someone doing injury recovery who wants notes readable mid-workout on a phone.",
+    "skip_if": "The heaviest platform requirement in its batch - the Notes connector is a Mac-only desktop extension in the Claude desktop app, so it doesn't work in a browser or on Windows at all.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Uses HTML <br> tags in the prompt to force readable line breaks in Apple Notes.",
+    "prerequisites": [
+      "Claude desktop app on Mac",
+      "Read and Write Apple Notes extension"
+    ],
+    "teaches": [
+      "research an exercise routine and write it directly into Apple Notes for phone reading"
+    ],
+    "keywords": [
+      "claude apple notes exercise",
+      "health notes claude mac",
+      "claude notes connector"
+    ],
+    "questions": [
+      "can claude write directly to my apple notes",
+      "does claude's notes connector work on windows"
+    ],
+    "id": "r-cf6eb80195"
+  },
+  {
+    "title": "Create interactive PDF forms",
+    "url": "https://academy.claude.com/use-cases/create-interactive-pdf-forms",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "non-technical",
+      "business-founder"
+    ],
+    "level": "confident",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Turns a static document into a fillable PDF with real form fields - dropdowns, checkboxes, text fields - that people can fill out in any PDF reader.",
+    "who_for": "Event and administration staff producing registration or intake forms.",
+    "skip_if": "The chat preview only renders the visual design, not the working form behavior - you have to download the PDF and open it in a real reader to confirm the fields are actually fillable.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Worked example is a multi-page conference registration form.",
+    "prerequisites": [
+      "a static form document",
+      "optional brand materials for styling"
+    ],
+    "teaches": [
+      "turn a static document into a fillable interactive PDF form"
+    ],
+    "keywords": [
+      "interactive pdf form claude",
+      "fillable pdf ai",
+      "claude create registration form"
+    ],
+    "questions": [
+      "can claude make my pdf form fillable",
+      "how do i test that a claude-made pdf form actually works"
+    ],
+    "id": "r-fc3679573c"
+  },
+  {
+    "title": "Create new hire onboarding guides",
+    "url": "https://academy.claude.com/use-cases/create-new-hire-onboarding-guides",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder",
+      "non-technical"
+    ],
+    "level": "confident",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Combines standard company handbook material with one new hire's personal details into a personalized first-week welcome guide.",
+    "who_for": "HR or people-ops staff personalizing onboarding for each new hire instead of sending a generic packet.",
+    "skip_if": "Needs Google Calendar and Google Drive connected, plus your own handbook and logistics docs uploaded - the prompt explicitly asks for design taste ('a senior designer should look at this and think they have great taste'), so a bare-bones upload gets a bare-bones guide.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min.",
+    "prerequisites": [
+      "Google Calendar and Google Drive connectors",
+      "company handbook and role-specific materials"
+    ],
+    "teaches": [
+      "personalize a new hire's first-week welcome guide from standard handbook material"
+    ],
+    "keywords": [
+      "new hire onboarding guide claude",
+      "personalized onboarding ai",
+      "claude welcome guide new employee"
+    ],
+    "questions": [
+      "can claude create a personalized onboarding guide",
+      "how do i automate new hire welcome documents"
+    ],
+    "id": "r-b6d113b051"
+  },
+  {
+    "title": "Create sales reports",
+    "url": "https://academy.claude.com/use-cases/create-sales-reports",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder",
+      "pm"
+    ],
+    "level": "confident",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Pulls Q4 CRM metrics, analyzes segment breakdown/win rates/sales cycle trends, and produces an executive-ready report with embedded chart images.",
+    "who_for": "Sales leadership or revenue operations producing an executive-facing performance report.",
+    "skip_if": "Needs the HubSpot connector enabled plus a sales goals document as reference context - without the goals doc, the report has no target to measure performance against.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Charts render as embedded PNGs built into the layout rather than looking pasted in.",
+    "prerequisites": [
+      "HubSpot connector",
+      "a sales goals document"
+    ],
+    "teaches": [
+      "build an executive-ready sales report with trend analysis and embedded charts"
+    ],
+    "keywords": [
+      "sales report claude",
+      "executive sales report ai",
+      "claude hubspot sales analysis"
+    ],
+    "questions": [
+      "can claude build a sales performance report from hubspot",
+      "how do i analyze crm trends with claude"
+    ],
+    "id": "r-0c1d71e757"
+  },
+  {
+    "title": "M&A diligence",
+    "url": "https://academy.claude.com/use-cases/data-room-diligence",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder",
+      "pm"
+    ],
+    "level": "builder",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Reviews a virtual data room for an acquisition - extracts material contract provisions, flags issues, and drafts a diligence summary with every line cited to its source document.",
+    "who_for": "Corporate counsel or M&A deal teams running diligence on an acquisition.",
+    "skip_if": "Needs the Corporate Legal plugin, which a Team/Enterprise admin must enable once - and it's built as a recurring scheduled job re-running daily during a diligence window, so it's overbuilt for a single quick check.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Slug reads 'data-room-diligence' but the page title is 'M&A diligence.'",
+    "prerequisites": [
+      "Claude Cowork",
+      "Corporate Legal plugin (admin-enabled)",
+      "a data room and diligence request list"
+    ],
+    "teaches": [
+      "extract material contract provisions from a data room with source-cited diligence findings"
+    ],
+    "keywords": [
+      "m&a diligence claude",
+      "data room review ai",
+      "cowork acquisition diligence"
+    ],
+    "questions": [
+      "can cowork help with m&a due diligence",
+      "how do i cite sources automatically in a diligence summary"
+    ],
+    "id": "r-a742871628"
+  },
+  {
+    "title": "Debate practice with feedback",
+    "url": "https://academy.claude.com/use-cases/debate-practice-with-feedback",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "student",
+      "non-technical"
+    ],
+    "level": "basic",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "An interactive debate simulator with three phases (research, practice, analysis) that pushes back on your position in real time and scores your responses.",
+    "who_for": "Students or anyone preparing to defend a position who wants live pushback to practice against.",
+    "skip_if": "Needs AI-powered Artifacts enabled in Settings > Capabilities - the artifact itself calls the Claude API live to generate counterarguments, so it won't work with that setting off.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Adapts difficulty, 'pressing harder on dodges and acknowledging strong points.'",
+    "prerequisites": [
+      "AI-powered Artifacts enabled"
+    ],
+    "teaches": [
+      "build and use a live debate-practice artifact that argues back and scores your responses"
+    ],
+    "keywords": [
+      "debate practice claude",
+      "argue with ai artifact",
+      "claude debate simulator"
+    ],
+    "questions": [
+      "can claude help me practice debating a position",
+      "how do i build an ai artifact that argues back"
+    ],
+    "id": "r-e2c0e9a061"
+  },
+  {
+    "title": "Design a local foraging guide",
+    "url": "https://academy.claude.com/use-cases/design-a-local-foraging-guide",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "non-technical"
+    ],
+    "level": "basic",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "An interactive artifact where you pick a US state on a map, browse wild edible plants by category and season, and export a printable field reference.",
+    "who_for": "A hobbyist wanting a personal example of the map-as-navigation-UI artifact pattern.",
+    "skip_if": "The plant data only covers the Pacific Northwest and Northeast US - it's a real, useful map-as-navigation pattern to learn from, but treat the foraging content itself as a starting point to verify, not a field guide.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Pulls map geometry from an external CDN (us-atlas TopoJSON) rendered with D3 geoAlbersUsa.",
+    "prerequisites": [
+      "Artifacts enabled"
+    ],
+    "teaches": [
+      "build an interactive map-based navigation artifact with exportable content"
+    ],
+    "keywords": [
+      "foraging guide claude",
+      "interactive map artifact claude",
+      "claude build state map tool"
+    ],
+    "questions": [
+      "can claude build an interactive map artifact",
+      "is claude's foraging guide accurate for my region"
+    ],
+    "id": "r-474c132da1"
+  },
+  {
+    "title": "Write the design doc or RFC",
+    "url": "https://academy.claude.com/use-cases/design-doc",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "developer",
+      "pm"
+    ],
+    "level": "builder",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Turns scattered notes into a complete engineering design doc or RFC with prior art and trade-offs filled in - worked example is migrating an event pipeline from batch to streaming.",
+    "who_for": "Tech leads or architects turning rough notes into a structured RFC.",
+    "skip_if": "Needs a working folder with your own RFC template, past RFCs and architecture diagrams - without real prior art to draw on, the 'prior art and trade-offs' section has nothing to pull from.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Scheduled version checks an RFCs/inbox folder weekdays at 9am and converts new one-pagers into structured drafts.",
+    "prerequisites": [
+      "Claude Cowork",
+      "your RFC template and past RFCs",
+      "Engineering plugin (optional)"
+    ],
+    "teaches": [
+      "turn scattered notes into a structured RFC with prior art and trade-offs"
+    ],
+    "keywords": [
+      "write rfc with claude",
+      "engineering design doc ai",
+      "cowork rfc generator"
+    ],
+    "questions": [
+      "can cowork write an rfc from my notes",
+      "how do i automate design doc drafting"
+    ],
+    "id": "r-fc22940afb"
+  },
+  {
+    "title": "Competitive teardown and heuristic audit",
+    "url": "https://academy.claude.com/use-cases/design-heuristic-audit",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "designer",
+      "pm"
+    ],
+    "level": "builder",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Scores competitor product screens against a heuristic rubric you already own, compares each against your current screens, and lists patterns to copy or avoid.",
+    "who_for": "UX/product design teams who already have a heuristic rubric and want it applied consistently across competitors.",
+    "skip_if": "Operational, not a design-critique lesson - the page never explains the heuristics or what good looks like, it assumes you already own a rubric and only shows how to make Claude apply it. You bring the judgment; Claude does the scoring.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Can be scheduled weekly as a live competitive-heuristic monitor.",
+    "prerequisites": [
+      "Claude Cowork",
+      "your own heuristic rubric",
+      "Design plugin (optional)",
+      "Figma/Miro connectors (optional)"
+    ],
+    "teaches": [
+      "apply an existing heuristic rubric consistently across competitor screens"
+    ],
+    "keywords": [
+      "heuristic audit claude",
+      "competitive teardown design",
+      "cowork design critique"
+    ],
+    "questions": [
+      "can cowork run a heuristic audit against our own rubric",
+      "does claude teach design heuristics or just apply mine"
+    ],
+    "id": "r-b58008a116"
+  },
+  {
+    "title": "Design system drift review",
+    "url": "https://academy.claude.com/use-cases/design-police",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "designer",
+      "developer"
+    ],
+    "level": "builder",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Checks shipped screens and open PR diffs against your design system, listing every deviation from tokens, components, spacing and interaction with a severity rating.",
+    "who_for": "Design-system maintainers and design QA checking for drift between the design system and what actually shipped.",
+    "skip_if": "Pure compliance checking against your existing tokens.json, not design judgment at all - it deliberately omits anything that already matches, so it's a triage list of deviations, not a design review.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Slug says 'police' but that word never appears on the page - actual title is 'Design system drift review'.",
+    "prerequisites": [
+      "Claude Cowork",
+      "your tokens.json and component inventory",
+      "GitHub/Figma connectors (optional)"
+    ],
+    "teaches": [
+      "check shipped screens and PRs for design-system token/component drift with severity ratings"
+    ],
+    "keywords": [
+      "design system drift claude",
+      "design qa cowork",
+      "check design token compliance"
+    ],
+    "questions": [
+      "can cowork check our shipped ui against the design system",
+      "how do i catch design system drift in prs"
+    ],
+    "id": "r-60ea446379"
+  },
+  {
+    "title": "Design spec from scattered threads",
+    "url": "https://academy.claude.com/use-cases/design-spec-from-threads",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "designer",
+      "pm"
+    ],
+    "level": "builder",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Assembles Slack threads, meeting notes and screenshots into one review-ready design spec, with sources quoted and contradictions flagged.",
+    "who_for": "Product designers assembling a review-ready spec from scattered decision threads.",
+    "skip_if": "Needs Slack, Notion and Figma connectors plus a working folder of exported threads and screenshots - without real scattered source material to assemble, there's nothing for it to consolidate.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Scheduled version adds a 'decisions changed since last version' section for overnight thread activity.",
+    "prerequisites": [
+      "Claude Cowork",
+      "Slack/Notion/Figma connectors",
+      "Design plugin (optional)"
+    ],
+    "teaches": [
+      "assemble a design spec from scattered Slack threads and meeting notes with sources quoted"
+    ],
+    "keywords": [
+      "design spec from slack threads",
+      "cowork design handoff",
+      "assemble scattered design decisions"
+    ],
+    "questions": [
+      "can cowork build a design spec from our slack threads",
+      "how do i track design decisions made across scattered conversations"
+    ],
+    "id": "r-946ecd5ab4"
+  },
+  {
+    "title": "Develop a program toolkit",
+    "url": "https://academy.claude.com/use-cases/develop-a-program-toolkit",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder"
+    ],
+    "level": "confident",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Generates a complete program-design package - logic model, evaluation plan, resource guides - as a multi-sheet Excel workbook with conditional formatting and live formulas.",
+    "who_for": "Nonprofit program designers or grant writers building a new initiative's design framework.",
+    "skip_if": "The output workbook's conditional formatting, dropdowns and live formulas don't render in the chat preview - the page warns you have to download the file to see them.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Worked example is a tech workforce program for 120 young adults a year in Detroit.",
+    "prerequisites": [],
+    "teaches": [
+      "generate a program-design package with a logic model, evaluation plan and resource guides"
+    ],
+    "keywords": [
+      "program design toolkit claude",
+      "logic model workbook ai",
+      "nonprofit program planning claude"
+    ],
+    "questions": [
+      "can claude build a program logic model",
+      "how do i design a new nonprofit program with claude"
+    ],
+    "id": "r-e1b6f315a5"
+  },
+  {
+    "title": "Draft a credit memo from spreads and statements with Claude for Excel",
+    "url": "https://academy.claude.com/use-cases/draft-a-credit-memo-from-spreads-and-statements-with-claude-for-excel",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "data-analyst",
+      "business-founder"
+    ],
+    "level": "builder",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Underwrites a loan renewal by chaining Cowork (pulls filings via the S&P Global connector), Claude for Excel (updates the model), and Claude for Word (drafts the memo).",
+    "who_for": "Commercial credit analysts or relationship managers underwriting a loan renewal.",
+    "skip_if": "Chains three separate surfaces - Cowork, Claude for Excel, and Claude for Word - plus the S&P Global connector, so it's a bigger commitment than a single-tool workflow.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Conversation context carries across the three surfaces, so the Word memo already knows which Excel ratios changed.",
+    "prerequisites": [
+      "S&P Global connector",
+      "Claude for Excel and Claude for Word add-ins",
+      "an underwriting workbook"
+    ],
+    "teaches": [
+      "chain Cowork, Claude for Excel and Claude for Word to draft a credit memo from updated financials"
+    ],
+    "keywords": [
+      "credit memo claude",
+      "claude for excel underwriting",
+      "loan renewal analysis claude"
+    ],
+    "questions": [
+      "can claude draft a credit memo from my underwriting model",
+      "how do i chain cowork excel and word together"
+    ],
+    "id": "r-b7629ae885"
+  },
+  {
+    "title": "Draft investment memos",
+    "url": "https://academy.claude.com/use-cases/draft-investment-memos",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "data-analyst",
+      "business-founder"
+    ],
+    "level": "builder",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Queries Daloopa, S&P Global and Kensho for company and competitor metrics, then produces an investment-committee memo formatted to a firm's house structure.",
+    "who_for": "Equity analysts or investment professionals producing IC-ready memos.",
+    "skip_if": "The heaviest prerequisite stack in its batch - Claude for Enterprise plus your own paid Daloopa, S&P Global and Kensho subscriptions, all configured as connectors first.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Recommends downloading the finished document rather than judging it in the chat preview.",
+    "prerequisites": [
+      "Claude for Enterprise",
+      "Daloopa, S&P Global and Kensho connectors"
+    ],
+    "teaches": [
+      "draft a house-formatted investment memo from connected financial data platforms"
+    ],
+    "keywords": [
+      "investment memo claude",
+      "ic memo ai draft",
+      "claude equity research memo"
+    ],
+    "questions": [
+      "can claude draft an investment committee memo",
+      "what connectors does claude need for investment memos"
+    ],
+    "id": "r-419e3b3529"
+  },
+  {
+    "title": "Elevate Claude's design using skills",
+    "url": "https://academy.claude.com/use-cases/elevate-claudes-design-using-skills",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "non-technical",
+      "business-founder"
+    ],
+    "level": "confident",
+    "topics": [
+      "skills"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Builds a reusable 'design-elevation' Skill (one SKILL.md plus five reference files, loaded by progressive disclosure) that raises the visual quality of anything Claude produces.",
+    "who_for": "Anyone who produces visual output with Claude - dashboards, decks, reports - and is tired of re-specifying design requirements each time.",
+    "skip_if": "Not about your own design work at all - it builds a Skill that makes Claude's own dashboards, decks and reports look better by default, so it teaches nothing you could apply outside a Claude conversation.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. States: 'you'll receive elevated outputs without needing to specify design requirements each time.'",
+    "prerequisites": [
+      "Skills enabled in Settings > Capabilities",
+      "code execution and file creation on"
+    ],
+    "teaches": [
+      "build a Skill that automatically raises the visual quality of Claude's own generated output"
+    ],
+    "keywords": [
+      "elevate claude design skill",
+      "design elevation skill claude",
+      "make claude output look better"
+    ],
+    "questions": [
+      "can i make claude's dashboards and decks look better by default",
+      "how do i build a design-elevation skill"
+    ],
+    "id": "r-c902b3cd33"
+  },
+  {
+    "title": "Draft your reports' performance reviews",
+    "url": "https://academy.claude.com/use-cases/eng-performance-reviews",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "developer",
+      "pm"
+    ],
+    "level": "builder",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Drafts quarterly performance reviews for each direct report in your company's career framework, with a linked evidence citation behind every claim, but not the rating itself.",
+    "who_for": "Engineering managers writing structured, evidence-linked performance reviews.",
+    "skip_if": "Needs GitHub, Slack and Linear connected plus your company's career framework document - and the prompt deliberately withholds the rating itself, so you still have to make the actual call.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Prompt instructs: 'Flag where I need to add your own judgment; do not write the rating.'",
+    "prerequisites": [
+      "Claude Cowork",
+      "GitHub/Slack/Linear connectors",
+      "your career framework document"
+    ],
+    "teaches": [
+      "draft evidence-cited performance review content while leaving the rating decision to you"
+    ],
+    "keywords": [
+      "performance review draft claude",
+      "cowork engineering reviews",
+      "evidence-based performance review ai"
+    ],
+    "questions": [
+      "can cowork help draft performance reviews for my team",
+      "does claude decide the performance rating for me"
+    ],
+    "id": "r-d1b9252ab8"
+  },
+  {
+    "title": "Engagement survey to action plan",
+    "url": "https://academy.claude.com/use-cases/engagement-survey-themes",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder",
+      "pm"
+    ],
+    "level": "builder",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Turns raw open-text employee survey responses into a one-page People brief - top themes, anonymized supporting quotes, and a 30-day action plan per theme.",
+    "who_for": "HR or people-ops staff turning a raw survey export into an action plan.",
+    "skip_if": "Needs a raw survey CSV export plus an org roster, and it builds in an absolute rule to never attribute a quote to an individual - so it won't work from a summary someone already wrote up.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Separates 'loud-minority comments from broad signal' as a built-in safeguard.",
+    "prerequisites": [
+      "Claude Cowork",
+      "a raw survey CSV export",
+      "an org roster",
+      "Human Resources plugin (optional)"
+    ],
+    "teaches": [
+      "turn a raw employee survey export into anonymized themes with a 30-day action plan"
+    ],
+    "keywords": [
+      "engagement survey analysis claude",
+      "employee survey themes ai",
+      "cowork survey action plan"
+    ],
+    "questions": [
+      "can cowork analyze our employee engagement survey",
+      "how do i turn survey responses into an action plan anonymously"
+    ],
+    "id": "r-24a8ad4539"
+  },
+  {
+    "title": "Evaluate a company from the science to the balance sheet",
+    "url": "https://academy.claude.com/use-cases/evaluate-a-company-from-the-science-to-the-balance-sheet",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "data-analyst",
+      "researcher"
+    ],
+    "level": "confident",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Claude Opus 4.6 runs due diligence across SEC filings, clinical trial data and patent documents at once, judging the science, modeling the financials, and finding contradictions between them.",
+    "who_for": "Biotech equity research or VC/PE due diligence analysts who need both science and financial literacy.",
+    "skip_if": "Needs five separate documents uploaded yourself - 10-K, 10-Q, proxy, trial protocol, patent filings - and real science literacy to judge the output, the most demanding page in its batch.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Worked example finds an undisclosed FDA safety request cross-referenced against an unexplained R&D guidance increase, implying a hidden 12-18 month delay.",
+    "prerequisites": [
+      "10-K, 10-Q, proxy, trial protocol and patent filing documents",
+      "Extended Thinking (recommended)"
+    ],
+    "teaches": [
+      "cross-reference scientific and financial documents to find contradictions a single document wouldn't reveal"
+    ],
+    "keywords": [
+      "biotech due diligence claude",
+      "evaluate biotech company claude",
+      "cross-document financial science analysis"
+    ],
+    "questions": [
+      "can claude do biotech investment due diligence",
+      "how does claude find contradictions across filings and trial data"
+    ],
+    "id": "r-573da45bcf"
   }
 ]
