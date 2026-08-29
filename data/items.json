@@ -30281,5 +30281,1199 @@
       "how do i build a risk and control matrix with claude"
     ],
     "id": "r-fce9525592"
+  },
+  {
+    "title": "Write the sprint retro and on-call handoff",
+    "url": "https://academy.claude.com/use-cases/sprint-retro-handoff",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "developer"
+    ],
+    "level": "builder",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Turns a just-closed Linear cycle plus two weeks of team Slack into a sprint retrospective and a separate on-call handoff doc.",
+    "who_for": "Engineering teams closing a sprint who want the retro and handoff drafted before the meeting.",
+    "skip_if": "Needs Linear and Slack connected plus a retro template and previous sprint docs already in a working folder - the real payload is scheduling /tech-debt and /standup to run automatically on cycle close, so it's overbuilt for writing one retro by hand.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Scheduled to run every Friday at 3pm on cycle close.",
+    "prerequisites": [
+      "Claude Cowork",
+      "Linear and Slack connectors",
+      "a retro template",
+      "Engineering plugin (optional)"
+    ],
+    "teaches": [
+      "draft a sprint retro and on-call handoff from Linear and Slack activity"
+    ],
+    "keywords": [
+      "sprint retro claude",
+      "on-call handoff doc ai",
+      "cowork sprint retrospective"
+    ],
+    "questions": [
+      "can cowork write our sprint retro automatically",
+      "how do i draft an on-call handoff from slack and linear"
+    ],
+    "id": "r-77822f4ef0"
+  },
+  {
+    "title": "Stress-test your financial plan across scenarios",
+    "url": "https://academy.claude.com/use-cases/stress-test-your-financial-plan-across-scenarios",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "non-technical",
+      "data-analyst"
+    ],
+    "level": "confident",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Claude Opus 5 tests an early-retirement plan against many downside scenarios using your tax returns, investment statements, Social Security estimates and budget, tracing how each risk cascades.",
+    "who_for": "Someone testing their own retirement or financial plan against real downside risk.",
+    "skip_if": "Needs your actual tax returns, investment statements, Social Security estimates and budget uploaded - names Claude Opus 5 specifically and suggests raising the effort level for complex scenarios, so it's not a quick generic retirement calculator.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Demonstrated insight: a timing overlap between mortgage payoff, peak earnings, and a Roth conversion window that a single-purpose calculator would miss.",
+    "prerequisites": [
+      "your own financial documents",
+      "Claude Opus 5"
+    ],
+    "teaches": [
+      "stress-test a personal financial plan against multiple downside scenarios"
+    ],
+    "keywords": [
+      "stress test financial plan claude",
+      "retirement scenario planning ai",
+      "claude opus 5 financial model"
+    ],
+    "questions": [
+      "can claude stress-test my retirement plan",
+      "how do i model financial risk scenarios with claude"
+    ],
+    "id": "r-6a195715f1"
+  },
+  {
+    "title": "Support incident postmortem",
+    "url": "https://academy.claude.com/use-cases/support-incident-postmortem",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "developer"
+    ],
+    "level": "builder",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Drafts the customer-facing incident review straight from the war-room thread, support tickets and deploy history - timeline, customer impact, quotes, remediation owners.",
+    "who_for": "SRE/on-call/support leadership drafting a customer-facing incident postmortem.",
+    "skip_if": "Needs Slack, Zendesk and GitHub connected plus an existing customer-postmortem template - the scheduled version watches for closed war rooms daily at 9am, so it's built for teams running incidents repeatedly.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Framed as pre-emptive - the first draft exists before a CSM asks for it.",
+    "prerequisites": [
+      "Claude Cowork",
+      "Slack/Zendesk/GitHub connectors",
+      "an existing postmortem template",
+      "Operations plugin (optional)"
+    ],
+    "teaches": [
+      "draft a customer-facing incident postmortem from the war-room thread and support tickets"
+    ],
+    "keywords": [
+      "customer incident postmortem claude",
+      "support incident review ai",
+      "cowork war room summary"
+    ],
+    "questions": [
+      "can cowork draft a customer-facing incident postmortem",
+      "how do i automate incident review writing"
+    ],
+    "id": "r-fbc979c557"
+  },
+  {
+    "title": "Surface themes from all your feedback channels",
+    "url": "https://academy.claude.com/use-cases/surface-themes-from-all-your-feedback-channels",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "pm"
+    ],
+    "level": "builder",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Pulls customer feedback from call transcripts, Slack, CRM notes and Linear issues at once, finds cross-platform patterns, and turns them into ranked product ideas.",
+    "who_for": "Product managers synthesizing feedback that's scattered across four different systems.",
+    "skip_if": "Needs Claude Desktop plus Slack, Salesforce and Linear connectors, along with call transcripts sitting in a local folder - it shows which source it's querying live, so you can steer it mid-run if one source comes back thin.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Run in Claude Desktop specifically.",
+    "prerequisites": [
+      "Claude Desktop",
+      "Slack/Salesforce/Linear connectors",
+      "call transcripts in a local folder"
+    ],
+    "teaches": [
+      "find cross-platform feedback patterns across transcripts, Slack, CRM and issue tracker"
+    ],
+    "keywords": [
+      "cross-platform feedback synthesis claude",
+      "surface product feedback themes",
+      "cowork feedback across tools"
+    ],
+    "questions": [
+      "can claude synthesize feedback across all our tools at once",
+      "how do i find patterns across scattered customer feedback"
+    ],
+    "id": "r-174f2d7fa0"
+  },
+  {
+    "title": "Thoughtful gift giving with Claude",
+    "url": "https://academy.claude.com/use-cases/thoughtful-gift-giving-with-claude",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "non-technical"
+    ],
+    "level": "basic",
+    "topics": [
+      "mcp"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Suggests personalized gifts for specific people, including searching your own notes and messages for hints they dropped, organized into a shopping list grouped by store.",
+    "who_for": "Someone planning personalized gifts for several people at once.",
+    "skip_if": "The best version needs Claude for Desktop with the iOS Notes and iMessages connectors to search your own message history for hints - without those, it's a much more generic gift-suggestion exercise.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Teaches a gift heuristic: 'impossible to buy for' often means someone who just buys what they need, so consumables work.",
+    "prerequisites": [
+      "Web Search (optional)",
+      "Claude for Desktop with iOS Notes/iMessages connectors (optional)"
+    ],
+    "teaches": [
+      "generate personalized gift ideas by mining your own notes and messages for hints"
+    ],
+    "keywords": [
+      "gift ideas claude",
+      "personalized gift suggestions ai",
+      "claude search notes for gift hints"
+    ],
+    "questions": [
+      "can claude suggest personalized gifts",
+      "how do i use claude to find gift hints from my own messages"
+    ],
+    "id": "r-c5d6f6f281"
+  },
+  {
+    "title": "Thread to decision doc",
+    "url": "https://academy.claude.com/use-cases/thread-to-decision",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "pm",
+      "business-founder"
+    ],
+    "level": "builder",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Compresses a long Slack or email thread into a decision record - what was decided, who owns each next step by what date, and what's still open or contested.",
+    "who_for": "Anyone in distributed knowledge work who needs decisions extracted from long threads.",
+    "skip_if": "Needs a 'Decisions/' working folder plus Slack/Gmail connectors - the scheduled version is triggered by a `:decided:` emoji reaction, so it needs your team to actually use that reaction convention for the automation to catch anything.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Scheduled weekdays at 5pm over every thread marked with the :decided: reaction.",
+    "prerequisites": [
+      "Claude Cowork",
+      "Slack/Gmail connectors",
+      "a Decisions/ working folder",
+      "Productivity plugin (optional)"
+    ],
+    "teaches": [
+      "compress a long thread into a decision record with owners and open items"
+    ],
+    "keywords": [
+      "thread to decision doc claude",
+      "extract decisions from slack thread",
+      "cowork decision log"
+    ],
+    "questions": [
+      "can cowork turn a slack thread into a decision record",
+      "how do i automatically log decisions from threads"
+    ],
+    "id": "r-a22aa59497"
+  },
+  {
+    "title": "Track discovery timelines and analyze patterns",
+    "url": "https://academy.claude.com/use-cases/track-discovery-timelines-and-analyze-patterns",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder",
+      "pm"
+    ],
+    "level": "confident",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Works through discovery documents in a software contract dispute, builds a chronology, and spots patterns across the production - undocumented scope changes, response-time breaches.",
+    "who_for": "Litigation attorneys and paralegals reviewing a large discovery production.",
+    "skip_if": "Needs your own discovery documents uploaded (PDF/Word/Excel/email) - the worked example is a ~40-document software contract dispute, so it's built for real litigation volume, not a handful of files.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Worked example finds vendor invoices running 40% over contract amount and a missing formal change order.",
+    "prerequisites": [
+      "discovery documents (PDF/Word/Excel/email)",
+      "Gmail/Google Drive connectors (optional)"
+    ],
+    "teaches": [
+      "build a chronology and spot patterns across a large discovery production"
+    ],
+    "keywords": [
+      "discovery review claude",
+      "litigation document chronology ai",
+      "claude legal discovery patterns"
+    ],
+    "questions": [
+      "can claude help me review discovery documents",
+      "how do i build a chronology from a large document production"
+    ],
+    "id": "r-d07866943a"
+  },
+  {
+    "title": "Transcript theme extractor",
+    "url": "https://academy.claude.com/use-cases/transcript-themes",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder",
+      "pm"
+    ],
+    "level": "builder",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Reads every call transcript in a folder, clusters what customers said into themes, and reports each with a count, best quote, and which accounts said it.",
+    "who_for": "Sales/CS teams feeding product and marketing voice-of-customer input.",
+    "skip_if": "Needs a working folder of transcript files, and its scheduled version specifically reports the delta against the prior quarter's themes - so a single run misses the comparison that makes it useful over time.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Scheduled every Monday 9am when a new quarterly folder appears.",
+    "prerequisites": [
+      "Claude Cowork",
+      "a folder of call transcripts",
+      "Sales plugin (optional)",
+      "Salesforce/Google Drive connectors (optional)"
+    ],
+    "teaches": [
+      "cluster call transcript content into counted, quoted, attributed themes"
+    ],
+    "keywords": [
+      "transcript theme extraction claude",
+      "voice of customer from calls",
+      "cowork call transcript analysis"
+    ],
+    "questions": [
+      "can cowork extract themes from our call transcripts",
+      "how do i track voice of customer themes over time"
+    ],
+    "id": "r-0806ea63e9"
+  },
+  {
+    "title": "Turn emails into an event tracker",
+    "url": "https://academy.claude.com/use-cases/turn-emails-into-an-event-tracker",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder",
+      "non-technical"
+    ],
+    "level": "confident",
+    "topics": [
+      "mcp"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Mines scattered email replies from invited conference speakers for names, topics, time preferences and A/V needs, assembling a tracker that also flags logistically complex sessions.",
+    "who_for": "Event coordinators or program chairs tracking speaker logistics from email replies.",
+    "skip_if": "Needs the Gmail integration enabled and toggled on in the chat bar, and it's built around mining scattered email replies - so it needs the relevant emails to actually already be sitting in that inbox.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Worked example flags panels with multiple presenters and sessions needing rehearsal for live demos.",
+    "prerequisites": [
+      "Gmail integration enabled"
+    ],
+    "teaches": [
+      "build an event logistics tracker by mining scattered email replies"
+    ],
+    "keywords": [
+      "event tracker from emails claude",
+      "conference speaker logistics ai",
+      "claude gmail event planning"
+    ],
+    "questions": [
+      "can claude build an event tracker from our email replies",
+      "how do i track conference speaker logistics automatically"
+    ],
+    "id": "r-cb2f394169"
+  },
+  {
+    "title": "Turn inspiration into design plans",
+    "url": "https://academy.claude.com/use-cases/turn-inspiration-to-design-plans",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "non-technical"
+    ],
+    "level": "basic",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Takes saved kitchen inspiration images, names the style, and researches countertops/cabinets/flooring/hardware at three price points into a budget workbook with ROI recovery estimates.",
+    "who_for": "Homeowners planning a renovation and talking to contractors.",
+    "skip_if": "Operational, not a design lesson - Claude names the design style and prices the renovation, but never explains what defines the style, so you don't learn design judgment you could reuse without Claude.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Worked example produces three budget packages ($8,540/$24,313/$37,748) each with a stated ROI recovery percentage.",
+    "prerequisites": [
+      "saved inspiration images",
+      "Web Search (optional)"
+    ],
+    "teaches": [
+      "turn saved design inspiration images into a priced renovation budget"
+    ],
+    "keywords": [
+      "renovation budget from inspiration images claude",
+      "kitchen design plan ai",
+      "claude home renovation planning"
+    ],
+    "questions": [
+      "can claude turn my inspiration photos into a renovation budget",
+      "does claude teach design style or just apply it"
+    ],
+    "id": "r-305fb7e2b1"
+  },
+  {
+    "title": "Turn research into presentations",
+    "url": "https://academy.claude.com/use-cases/turn-research-into-presentations",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "student",
+      "researcher",
+      "teacher"
+    ],
+    "level": "confident",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Converts a research paper plus data files and an assignment rubric into a 12-minute group presentation - slide outline, speaker notes, and suggested visuals.",
+    "who_for": "Students or academic researchers preparing a group presentation from a research paper.",
+    "skip_if": "Needs the actual research paper, data files and assignment rubric uploaded - the Canva connector it names is worth double-checking yourself since it's the only appearance of a non-Anthropic design tool in this whole harvest.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Guidance goes to visual specifics: a split workspace/reference layout, muted palette, functional modernist aesthetic.",
+    "prerequisites": [
+      "a research paper, data files, and assignment rubric",
+      "Canva connector (optional)"
+    ],
+    "teaches": [
+      "turn a research paper into a structured presentation with speaker notes and suggested visuals"
+    ],
+    "keywords": [
+      "research paper to presentation claude",
+      "academic presentation from paper ai",
+      "claude slide outline from research"
+    ],
+    "questions": [
+      "can claude turn my research paper into a presentation",
+      "how do i get speaker notes from a research paper with claude"
+    ],
+    "id": "r-a15745c97b"
+  },
+  {
+    "title": "Turn text threads to researched notes",
+    "url": "https://academy.claude.com/use-cases/turn-text-threads-to-researched-notes",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "non-technical"
+    ],
+    "level": "builder",
+    "topics": [
+      "mcp"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Reads a family text thread about dessert plans, researches recipe options on the web, and writes the chosen recipe plus a shopping list into Apple Notes.",
+    "who_for": "Someone using iMessage and Apple Notes together for personal planning.",
+    "skip_if": "Needs Claude for Desktop specifically with the iMessages and Apple Notes extensions enabled - effectively macOS/Apple-ecosystem only, so it won't work on Windows or without those two desktop extensions.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Uses HTML <br> tags to force line breaks in Apple Notes; syncs via iCloud with no phone-side setup.",
+    "prerequisites": [
+      "Claude for Desktop",
+      "iMessages and Apple Notes extensions",
+      "Web Search enabled"
+    ],
+    "teaches": [
+      "research an answer from a text thread and write organized notes directly into Apple Notes"
+    ],
+    "keywords": [
+      "text thread to apple notes claude",
+      "claude imessage research",
+      "claude desktop notes extension"
+    ],
+    "questions": [
+      "can claude read my imessage thread and research an answer",
+      "how do i write claude's research into apple notes"
+    ],
+    "id": "r-4275c6e31c"
+  },
+  {
+    "title": "Turn transit time into research time",
+    "url": "https://academy.claude.com/use-cases/turn-transit-time-into-research-time",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "pm",
+      "business-founder"
+    ],
+    "level": "confident",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-1hr",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Dictates rough meeting-prep thoughts by voice while commuting, then Claude researches competitor practices and an internal planning doc to produce a one-page prep summary at your desk.",
+    "who_for": "Product or business staff prepping for a meeting during a commute.",
+    "skip_if": "Needs Web Search enabled plus your own internal planning documents uploaded - the payoff is research grounded in an internal doc (naming a colleague's specific objection), not generic competitor research.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 20 min, the longest in its batch. Starts by voice on mobile, finishes on desktop.",
+    "prerequisites": [
+      "Web Search enabled",
+      "internal planning documents",
+      "Claude mobile app for voice input"
+    ],
+    "teaches": [
+      "turn voice notes captured on mobile into a researched prep summary grounded in internal documents"
+    ],
+    "keywords": [
+      "voice notes to research claude",
+      "commute meeting prep claude",
+      "claude mobile to desktop workflow"
+    ],
+    "questions": [
+      "can i dictate meeting prep notes and have claude research them",
+      "how do i continue a claude mobile conversation on desktop"
+    ],
+    "id": "r-a40582eae8"
+  },
+  {
+    "title": "Understand and extend an inherited spreadsheet",
+    "url": "https://academy.claude.com/use-cases/understand-and-extend-an-inherited-spreadsheet",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "data-analyst",
+      "business-founder"
+    ],
+    "level": "confident",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Works out what an inherited SaaS revenue model's undocumented cross-tab formulas actually do, then extends projections without breaking the original logic.",
+    "who_for": "Someone who inherited a spreadsheet model from a departed colleague and needs to trust and extend it.",
+    "skip_if": "This is plain claude.ai chat with file upload, not the Claude for Excel add-in - so you're asking Claude to explain and extend the spreadsheet's logic in conversation, not editing the live file directly.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Decodes a specific formula showing it normalizes prior-quarter seasonality to avoid double-counting.",
+    "prerequisites": [
+      "the inherited spreadsheet file",
+      "file creation enabled"
+    ],
+    "teaches": [
+      "decode undocumented spreadsheet formula logic and extend it without breaking it"
+    ],
+    "keywords": [
+      "understand inherited spreadsheet claude",
+      "decode excel formula logic ai",
+      "extend spreadsheet model claude"
+    ],
+    "questions": [
+      "can claude explain formulas in a spreadsheet i didn't build",
+      "how do i extend an inherited model without breaking it"
+    ],
+    "id": "r-4e18a04113"
+  },
+  {
+    "title": "Update your financial model after earnings",
+    "url": "https://academy.claude.com/use-cases/update-your-financial-model-after-earnings",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "data-analyst",
+      "business-founder"
+    ],
+    "level": "builder",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "After a portfolio company reports earnings, checks the release and transcript against your model, corrects the model cells, and builds the update slide - chaining Cowork, Excel and PowerPoint.",
+    "who_for": "Buy-side equity research analysts maintaining a model after each earnings release.",
+    "skip_if": "Chains three surfaces - Cowork with the S&P Global connector, then Claude for Excel, then Claude for PowerPoint - so it's a bigger commitment than updating the model in one tool.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Session context carries across the Excel-to-PowerPoint handoff so the deck already knows which cells changed.",
+    "prerequisites": [
+      "Claude Cowork with S&P Global connector",
+      "Claude for Excel and PowerPoint add-ins",
+      "a portfolio model"
+    ],
+    "teaches": [
+      "update a financial model after an earnings release and build the update slide, chaining three Claude surfaces"
+    ],
+    "keywords": [
+      "update financial model after earnings claude",
+      "claude for excel powerpoint chain",
+      "equity research earnings update"
+    ],
+    "questions": [
+      "can claude update my financial model after an earnings release",
+      "how do i chain cowork excel and powerpoint together"
+    ],
+    "id": "r-3c278f0ed4"
+  },
+  {
+    "title": "Synthesize user interviews into findings",
+    "url": "https://academy.claude.com/use-cases/uxr-synthesis",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "designer",
+      "researcher"
+    ],
+    "level": "builder",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Turns a stack of raw interview transcripts into a themed findings document with attributed participant quotes, genuine synthesis of data you already collected.",
+    "who_for": "UX researchers synthesizing already-collected interview transcripts into findings.",
+    "skip_if": "Needs the raw transcripts, discussion guide and participant roster already collected in one folder - and it has no step that checks quotes back against the transcripts, so quote-fidelity verification is left entirely to you.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Can be scheduled to re-run after every interview day. Tip: add 'flag anything you're not confident about.'",
+    "prerequisites": [
+      "Claude Cowork",
+      "raw transcripts, discussion guide, participant roster",
+      "Design plugin (optional)"
+    ],
+    "teaches": [
+      "synthesize raw interview transcripts into themed, attributed findings"
+    ],
+    "keywords": [
+      "uxr synthesis claude",
+      "user interview findings ai",
+      "cowork research synthesis"
+    ],
+    "questions": [
+      "can cowork synthesize our user interview transcripts",
+      "does claude verify quotes against the original transcripts"
+    ],
+    "id": "r-a898e7f400"
+  },
+  {
+    "title": "Validate reserves and draft filing narrative with Claude for Excel",
+    "url": "https://academy.claude.com/use-cases/validate-reserves-and-draft-filing-narrative-with-claude-for-excel",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "data-analyst",
+      "business-founder"
+    ],
+    "level": "builder",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Runs a quarterly insurance reserve review - validates reserve workbook formulas, compares to the prior period, flags anomalies, then drafts the regulatory filing memo.",
+    "who_for": "Insurance actuarial staff preparing a quarterly reserve filing.",
+    "skip_if": "Needs a self-hosted NAIC custom MCP connector your organization sets up, plus Claude for Excel and Word add-ins - a narrow, heavily regulated insurance-actuarial workflow, not a general spreadsheet-review pattern.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Worked example names three concrete formula defects with dollar impact, e.g. a hard-coded development factor worth about $2.1M.",
+    "prerequisites": [
+      "Claude for Excel and Word add-ins",
+      "a self-hosted NAIC MCP connector",
+      "a reserve workbook and prior filing memo"
+    ],
+    "teaches": [
+      "validate insurance reserve workbook formulas and draft the regulatory filing narrative"
+    ],
+    "keywords": [
+      "insurance reserve validation claude",
+      "claude for excel actuarial",
+      "regulatory filing memo ai"
+    ],
+    "questions": [
+      "can claude validate our insurance reserve workbook",
+      "how do i draft a regulatory filing narrative with claude"
+    ],
+    "id": "r-a5a90e6d20"
+  },
+  {
+    "title": "Variance to exec slides",
+    "url": "https://academy.claude.com/use-cases/variance-exec-slides",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "data-analyst",
+      "business-founder"
+    ],
+    "level": "builder",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Builds three board-ready slides - headline, drivers, outlook - straight from the monthly or quarterly variance workbook.",
+    "who_for": "FP&A staff preparing CFO or board-level variance reporting.",
+    "skip_if": "Needs the Microsoft 365 connector plus a variance workbook, a prior-quarter deck template, and a materiality threshold already defined in the project instructions - the threshold is meant to be set once, not restated every month.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Materiality lives in project instructions so 'above our threshold' always means your number.",
+    "prerequisites": [
+      "Claude Cowork",
+      "Microsoft 365 connector",
+      "a variance workbook and prior-quarter deck",
+      "Finance plugin (optional)"
+    ],
+    "teaches": [
+      "build three board-ready variance slides directly from the variance workbook"
+    ],
+    "keywords": [
+      "variance to exec slides claude",
+      "board variance reporting ai",
+      "cowork cfo slides"
+    ],
+    "questions": [
+      "can cowork build our board variance slides",
+      "how do i automate cfo-level variance reporting"
+    ],
+    "id": "r-112311cb83"
+  },
+  {
+    "title": "Prep the vendor negotiation",
+    "url": "https://academy.claude.com/use-cases/vendor-negotiation",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder",
+      "pm"
+    ],
+    "level": "builder",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Before a contract renewal call, diffs the current agreement against the renewal proposal and produces a one-page negotiation brief with a pre-committed walk-away line.",
+    "who_for": "Operations or procurement staff prepping for a vendor renewal negotiation.",
+    "skip_if": "Needs a working folder with the current agreement, renewal proposal, usage export and comparable quotes - the prompt specifically demands a pre-committed walk-away line, so it needs you to actually decide that threshold, not just supply documents.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Also asks for 'three asks ranked by value' and the vendor's likely pushback.",
+    "prerequisites": [
+      "Claude Cowork",
+      "current agreement, renewal proposal, usage export, comparable quotes",
+      "Operations plugin (optional)"
+    ],
+    "teaches": [
+      "build a vendor negotiation brief with a pre-committed walk-away line and ranked asks"
+    ],
+    "keywords": [
+      "vendor negotiation prep claude",
+      "contract renewal negotiation brief",
+      "cowork procurement negotiation"
+    ],
+    "questions": [
+      "can cowork prep me for a vendor renewal negotiation",
+      "how do i build negotiation talking points from a contract diff"
+    ],
+    "id": "r-832eb694a1"
+  },
+  {
+    "title": "Vendor risk review",
+    "url": "https://academy.claude.com/use-cases/vendor-risk-review",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder",
+      "pm"
+    ],
+    "level": "builder",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Scores a vendor's security documents against your own risk framework and produces a go/no-go memo with required mitigations, citing the source for every finding.",
+    "who_for": "Operations, procurement or security/GRC staff reviewing a new vendor.",
+    "skip_if": "Needs your own risk framework PDF plus the vendor's SOC 2 report, security questionnaire, DPA and MSA all in one folder - the go/no-go memo only means something if your risk framework is already written down.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Can be scheduled weekdays at 9am to pick up new risk-review folders automatically.",
+    "prerequisites": [
+      "Claude Cowork",
+      "your risk framework document",
+      "vendor's SOC 2/questionnaire/DPA/MSA",
+      "Operations plugin (optional)"
+    ],
+    "teaches": [
+      "score a vendor's security posture against your risk framework with a cited go/no-go memo"
+    ],
+    "keywords": [
+      "vendor risk review claude",
+      "soc 2 vendor assessment ai",
+      "cowork security risk memo"
+    ],
+    "questions": [
+      "can cowork score a vendor's security risk for us",
+      "how do i get a go/no-go memo from vendor security documents"
+    ],
+    "id": "r-3efdd4d39e"
+  },
+  {
+    "title": "Verify statistics from raw data",
+    "url": "https://academy.claude.com/use-cases/verify-statistics-from-raw-data",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "researcher",
+      "student"
+    ],
+    "level": "confident",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Before citing a paper heavily, re-runs its statistics from the authors' own supplementary raw data and checks every reported number against what's recomputed.",
+    "who_for": "Academic researchers checking the reproducibility of a paper's statistics before relying on it.",
+    "skip_if": "Needs both the published manuscript PDF and the authors' own raw data XLSX uploaded together - it recomputes statistics to check them, so it can't verify a paper's numbers from the paper's text alone.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Worked example finds a real unit-conversion error (cm treated as meters, off by 100x) in a mouse sleep-deprivation paper.",
+    "prerequisites": [
+      "the published manuscript PDF",
+      "the authors' raw data (XLSX)"
+    ],
+    "teaches": [
+      "recompute a paper's statistics from its own raw data to verify reported numbers"
+    ],
+    "keywords": [
+      "verify published statistics claude",
+      "reproduce paper statistics ai",
+      "check research data claude"
+    ],
+    "questions": [
+      "can claude verify statistics from a paper's raw data",
+      "how do i check reproducibility before citing a paper"
+    ],
+    "id": "r-b3444cdb4e"
+  },
+  {
+    "title": "Visualize program data",
+    "url": "https://academy.claude.com/use-cases/visualize-program-data",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder"
+    ],
+    "level": "confident",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Turns a spreadsheet of quarterly program statistics into an Excel dashboard and an 8-10 slide board-meeting deck, with cross-tab analysis by demographic and location.",
+    "who_for": "Nonprofit program evaluation staff producing board-ready reporting.",
+    "skip_if": "Needs an XLSX or CSV with columns for metrics, time periods and program names, plus code execution and file creation enabled in settings - built for nonprofit program/board reporting specifically.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Follow-up prompt cross-tabs satisfaction and completion rates by age group and zip code.",
+    "prerequisites": [
+      "an XLSX/CSV of program statistics",
+      "code execution and file creation enabled"
+    ],
+    "teaches": [
+      "build a dashboard and board deck from program statistics with cross-tab analysis"
+    ],
+    "keywords": [
+      "visualize nonprofit program data claude",
+      "board deck from spreadsheet ai",
+      "claude program dashboard"
+    ],
+    "questions": [
+      "can claude build a dashboard from our program data",
+      "how do i cross-tab program outcomes by demographic"
+    ],
+    "id": "r-1c7d361b6f"
+  },
+  {
+    "title": "Visualize the mechanism behind an explanation mid-chat",
+    "url": "https://academy.claude.com/use-cases/visualize-the-mechanism-behind-an-explanation-mid-chat",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "student",
+      "non-technical"
+    ],
+    "level": "basic",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Builds an interactive visual inline as you talk through a problem, shaped to your specific question - the worked example is three linked views of orbital mechanics tied to one slider.",
+    "who_for": "Someone who wants to see a mechanism, not just read a description of it, while learning.",
+    "skip_if": "No files needed, but the payoff is asking for the mechanism specifically - the worked example builds three linked views tied to one slider, so a vague 'explain this' prompt won't produce the same interactive depth.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Worked example is why a planet speeds up near the sun, with energy conservation and speed-distance trade-off moving together.",
+    "prerequisites": [],
+    "teaches": [
+      "ask for an interactive multi-view visualization of a mechanism mid-conversation"
+    ],
+    "keywords": [
+      "visualize mechanism claude",
+      "interactive explanation artifact",
+      "claude linked-view visualization"
+    ],
+    "questions": [
+      "can claude visualize how something works while explaining it",
+      "how do i get claude to build an interactive diagram of a mechanism"
+    ],
+    "id": "r-11034e1480"
+  },
+  {
+    "title": "Prep call look-ahead",
+    "url": "https://academy.claude.com/use-cases/week-ahead-prep",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "pm",
+      "business-founder"
+    ],
+    "level": "builder",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "On Sunday night, walks next week's calendar and produces one document with context and a drafted agenda for every meeting, flagging the three you most need to prep for.",
+    "who_for": "Executive assistants, chiefs of staff, or any manager with a heavy meeting load.",
+    "skip_if": "Needs the Google Calendar connector required, plus Slack/Drive/Gmail optional, and a Week-of-<date> output folder set up - designed to accumulate through the week into a Friday retro, so a single Sunday run only shows part of its value.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. The Week-of-<date> folder accumulates the brief, per-meeting agendas and notes into one Friday retro.",
+    "prerequisites": [
+      "Claude Cowork",
+      "Google Calendar connector (required)",
+      "Slack/Drive/Gmail (optional)",
+      "Productivity plugin (optional)"
+    ],
+    "teaches": [
+      "build a week-ahead meeting prep document that accumulates into a Friday retro"
+    ],
+    "keywords": [
+      "week ahead meeting prep claude",
+      "cowork weekly calendar look-ahead",
+      "prep for every meeting this week"
+    ],
+    "questions": [
+      "can cowork prep me for every meeting next week",
+      "how do i build a weekly meeting agenda document"
+    ],
+    "id": "r-74b4aa5e10"
+  },
+  {
+    "title": "Work through grant options in chat",
+    "url": "https://academy.claude.com/use-cases/work-through-grant-options-in-chat-with-claude",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "researcher",
+      "non-technical"
+    ],
+    "level": "never-used",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Decides which grant funders to pursue by plotting award size, win probability, effort and deadline together in one interactive, filterable view.",
+    "who_for": "Grant administrators or proposal writers deciding which funders are worth pursuing.",
+    "skip_if": "A spreadsheet of real award amounts and deadlines is optional, not required - if you supply nothing, Claude populates the chart from its own knowledge, so an unverified run can show funder figures that aren't actually current.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. The expected-value card shows how much of a funder list is 'lottery tickets' versus realistic odds.",
+    "prerequisites": [
+      "optional: a spreadsheet of award amounts, success rates and deadlines"
+    ],
+    "teaches": [
+      "compare grant funders on an interactive, filterable expected-value view"
+    ],
+    "keywords": [
+      "compare grant funders claude",
+      "grant prioritization tool ai",
+      "claude interactive grant chart"
+    ],
+    "questions": [
+      "can claude help me decide which grants to pursue",
+      "how do i weigh grant odds against award size"
+    ],
+    "id": "r-029e31b97b"
+  },
+  {
+    "title": "Workflow improvement planner",
+    "url": "https://academy.claude.com/use-cases/workflow-improvement-planner",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder"
+    ],
+    "level": "basic",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Interviews you about a broken internal process through a 10-section form Claude builds - identification, current state, challenges, constraints, decision points - and outputs a structured brief.",
+    "who_for": "Nonprofit operations staff defining a workflow problem before designing an AI-powered fix.",
+    "skip_if": "The deliverable is a 10-section questionnaire artifact for you to fill in, not a finished improvement plan - Claude builds the form that interviews you, it doesn't answer the questions itself.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Sample input files are a donor report PDF and a volunteer intake form PDF.",
+    "prerequisites": [
+      "optional: relevant process documents to upload"
+    ],
+    "teaches": [
+      "use a Claude-built interview form to define a workflow problem before designing a fix"
+    ],
+    "keywords": [
+      "workflow improvement planner claude",
+      "process improvement questionnaire ai",
+      "nonprofit workflow diagnosis claude"
+    ],
+    "questions": [
+      "can claude help me diagnose a broken workflow",
+      "does claude build a form to interview me about a process problem"
+    ],
+    "id": "r-7388a2be11"
+  },
+  {
+    "title": "Write an impact report",
+    "url": "https://academy.claude.com/use-cases/write-an-impact-report",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder"
+    ],
+    "level": "confident",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Turns a year of raw program data and participant outcomes into a full annual impact report in several audience-specific versions - foundation, donor, and board cuts.",
+    "who_for": "Nonprofit program directors or fundraising staff writing an annual impact report.",
+    "skip_if": "The page explicitly tells you to upload raw program data, not pre-summarized reports - patterns visible across a complete dataset disappear in a summary, so a tidy pre-made summary defeats the point.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Worked example is an after-school tutoring nonprofit, 347 students across 3 Seattle sites.",
+    "prerequisites": [
+      "raw program data: enrollment, attendance, assessments, hours, financials"
+    ],
+    "teaches": [
+      "write an annual impact report in multiple audience-specific versions from raw program data"
+    ],
+    "keywords": [
+      "nonprofit impact report claude",
+      "annual report from raw data ai",
+      "claude program impact narrative"
+    ],
+    "questions": [
+      "can claude write our annual impact report",
+      "how do i get different audience versions of an impact report"
+    ],
+    "id": "r-8657bce390"
   }
 ]
