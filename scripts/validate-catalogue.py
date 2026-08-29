@@ -50,6 +50,7 @@ UI_JS = os.path.join(ROOT, "assets", "js", "ui.js")
 STABLE_IDS = os.path.join(ROOT, "scripts", "stable-ids.py")
 ALLOWANCE = os.path.join(ROOT, "data", "reviewed-allowance.txt")
 DUPE_TITLES = os.path.join(ROOT, "data", "duplicate-titles.txt")
+DUPE_SLUGS = os.path.join(ROOT, "data", "duplicate-slugs.txt")
 
 # Every field that must be present and must not be empty. roles and topics are lists,
 # so "not empty" means at least one entry, not merely that the key exists.
@@ -413,6 +414,54 @@ def main(argv=None):
             "merge them; if they are two, add the title to %s with the reason."
             % ("", str(rows[0][1].get("title", ""))[:46], len(hosts),
                ", ".join(sorted(hosts)), DUPE_TITLES))
+
+    # 11. the same resource reachable at two different-looking URLs on two different
+    #     hosts, with titles that happen to differ by a word or a dash. Rule 10 catches
+    #     a collision in the reader-facing title; it cannot catch one in the URL, and
+    #     that is exactly where four migrated-to-Academy duplicates hid on 2026-08-29 -
+    #     one had "(Academy)" appended to its title, another an extra "- two classroom
+    #     workflows", past the exact-title check three times before a person looking by
+    #     hand found them.
+    #
+    #     The trailing path segment is usually the real identity of a resource - a slug
+    #     is meant to be unique to the thing it names. youtube.com and youtu.be are the
+    #     common exception: every video on those hosts ends in the literal word "watch",
+    #     with the real identity in the query string (?v=<id>), so comparing bare
+    #     trailing segments there would collide every video in the catalogue into one
+    #     false group. Compare the full normalised URL instead for those two hosts -
+    #     which already distinguishes by query string, and which rule 4 above already
+    #     trusts for the same reason.
+    GENERIC_PATH_HOSTS = {"youtube.com", "youtu.be"}
+
+    def url_host(u):
+        h = urlparse(str(u or "")).netloc.lower()
+        return h[4:] if h.startswith("www.") else h
+
+    def url_slug(u, host):
+        if host in GENERIC_PATH_HOSTS:
+            return norm(u)
+        seg = urlparse(str(u or "")).path.rstrip("/").rsplit("/", 1)[-1].lower()
+        return seg or None
+
+    allowed_slugs = load_allowed_titles(DUPE_SLUGS)   # same read, a different file
+    by_slug = {}
+    for n, item in enumerate(items):
+        host = url_host(item.get("url"))
+        slug = url_slug(item.get("url"), host)
+        if not host or not slug:
+            continue
+        by_slug.setdefault(slug, []).append((n, item, host))
+    for slug, slug_rows in sorted(by_slug.items()):
+        if len(slug_rows) < 2 or slug in allowed_slugs:
+            continue
+        slug_hosts = {h for _, _, h in slug_rows}
+        if len(slug_hosts) < 2:
+            continue                      # same host twice is a different fault, not this one
+        errors.append(
+            "  %-4s %-46s URL ending %r on %d hosts (%s). If they are one resource, "
+            "merge them; if they are two, add the ending to %s with the reason."
+            % ("", str(slug_rows[0][1].get("title", ""))[:46], slug, len(slug_hosts),
+               ", ".join(sorted(slug_hosts)), DUPE_SLUGS))
 
     # ------------------------------------------------------------ report ----
 

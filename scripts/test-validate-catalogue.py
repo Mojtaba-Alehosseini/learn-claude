@@ -12,6 +12,7 @@ Exit 1 if any rule fails to catch its fault, or if the untouched catalogue is re
 """
 
 import copy
+import importlib.util
 import json
 import os
 import shutil
@@ -28,6 +29,17 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 VALIDATOR = os.path.join(ROOT, "scripts", "validate-catalogue.py")
 ITEMS = os.path.join(ROOT, "data", "items.json")
 PATHS = os.path.join(ROOT, "data", "paths.json")
+
+# A case that changes `url` without also correcting `id` fails for id-mismatch (rule 4)
+# regardless of what the case is actually testing. That's harmless for a case that
+# expects a fault anyway, but it breaks a "must pass" case for the wrong reason - so the
+# few cases below that invent a URL use this to keep `id` honest, the same way
+# scripts/stable-ids.py itself would.
+_spec = importlib.util.spec_from_file_location(
+    "stable_ids", os.path.join(ROOT, "scripts", "stable-ids.py"))
+_stable_ids = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(_stable_ids)
+make_id = _stable_ids.make_id
 
 
 def run(items, paths, tmp, allowance=0):
@@ -193,6 +205,38 @@ CASES = [
                   == __import__("urllib.parse", fromlist=["urlparse"]).urlparse(i[0]["url"]).netloc
                   else i[1].update({"title": i[0]["title"],
                                     "url": i[0]["url"].rsplit("/", 1)[0] + "/other-thing"}),
+     None),
+
+    # The title check above cannot see a URL collision hiding behind two different-
+    # looking titles, which is exactly how four migrated-to-Academy duplicates sat in
+    # the real catalogue past it on 2026-08-29 - one had "(Academy)" appended to its
+    # title, nothing else different. This is the check that should have caught them.
+    ("the same URL ending on two different hosts",
+     lambda i, p: (i[0].update({"url": "https://example.org/a/shared-slug-xyz",
+                                "id": make_id("https://example.org/a/shared-slug-xyz")}),
+                   i[1].update({"url": "https://example.net/b/shared-slug-xyz",
+                                "id": make_id("https://example.net/b/shared-slug-xyz")})),
+     "URL ending"),
+
+    # Same trailing segment, same host: a URL problem the rules above already cover, not
+    # this one's business. Must not double-report.
+    ("the same URL ending twice on one host - not this rule's business",
+     lambda i, p: (i[0].update({"url": "https://example.org/a/shared-slug-xyz",
+                                "id": make_id("https://example.org/a/shared-slug-xyz")}),
+                   i[1].update({"url": "https://example.org/b/shared-slug-xyz",
+                                "id": make_id("https://example.org/b/shared-slug-xyz")})),
+     None),
+
+    # The case the rule exists to get right without also getting this wrong. Every video
+    # on youtube.com ends its path in the literal word "watch" - the real identity is in
+    # the query string. Comparing bare trailing segments would make this URL collide
+    # with any other host's page that happens to end in "/watch" too, for a reason that
+    # has nothing to do with either resource. Must not fire.
+    ("a youtube.com video does not falsely collide with an unrelated /watch page",
+     lambda i, p: (i[0].update({"url": "https://www.youtube.com/watch?v=AAAAAAAAAAA",
+                                "id": make_id("https://www.youtube.com/watch?v=AAAAAAAAAAA")}),
+                   i[1].update({"url": "https://example.org/some/path/watch",
+                                "id": make_id("https://example.org/some/path/watch")})),
      None),
 
     # The rule the README singles out. It cannot be checked directly — no file shows who

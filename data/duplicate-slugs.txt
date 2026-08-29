@@ -1,0 +1,146 @@
+# URL endings that are allowed to appear on more than one host.
+#
+# scripts/validate-catalogue.py's title check (data/duplicate-titles.txt) missed four
+# migrated-to-Academy duplicates on 2026-08-29 because their titles differed by a word or
+# a dash - "(Academy)" appended, an extra "- two classroom workflows" on the older row, a
+# stray "tutorial" in one title but not the other. The URL did not lie: all four carried
+# the identical trailing path segment on claude.com/resources/tutorials/ and
+# academy.claude.com/tutorials/, because one page is Anthropic's own copy of the other. A
+# slug is meant to be unique to the resource it names, so two hosts sharing one is the
+# stronger signal - it catches what a title collision cannot, and it does not care what
+# either row happens to be titled.
+#
+# One title per... no: one URL ENDING per line here, same shape as duplicate-titles.txt.
+# Everything after a `#` is the reason, and the reason is the point, for the same reason
+# it is the point over there: a bare allowance list becomes a place to silence the check.
+#
+# Add a line here only when the two entries really are different resources. If they are
+# the same thing on two hosts, merge them instead and delete nothing from this file.
+#
+# youtube.com and youtu.be are compared by full normalised URL instead of by trailing
+# path segment, because every video on that host ends in the literal word "watch" with
+# the real identity in the query string - comparing bare segments there would collide
+# every video in the catalogue into one false group. See url_slug() in
+# scripts/validate-catalogue.py.
+#
+# First run, 2026-08-29: 16 hits. One was a real duplicate (see duplicate-titles.txt's
+# resolved section - "plan your literature review", merged into one row). These 15 are
+# not. Checked individually rather than assumed, because "checked, kept as a separate
+# entry" without checking is exactly the mistake that let four migrated duplicates sit
+# in this catalogue past the title check for two rounds before a person found them.
+
+ai                                # RULED 2026-08-29: nature.com/nature-portfolio/
+                                 # editorial-policies/ai vs unsw.edu.au/.../toolkit/ai.
+                                 # A publisher's AI editorial policy and a university's
+                                 # student AI-use toolkit. "ai" as a bare final segment
+                                 # is about as generic as a slug gets; coincidence.
+
+best-practices                    # RULED 2026-08-29: code.claude.com/docs/en/best-
+                                 # practices vs platform.claude.com/.../agent-skills/
+                                 # best-practices. Both Anthropic's own docs, but
+                                 # different subjects - general Claude Code practice
+                                 # against specifically writing a SKILL.md well. Every
+                                 # docs section on both hosts ends its own overview page
+                                 # in a word like this one.
+
+claude                            # RULED 2026-08-29: ruben.substack.com/p/claude vs
+                                 # its.syr.edu/claude. A personal blog post on Claude's
+                                 # six surfaces against a Syracuse University campus
+                                 # landing page for enterprise access. Coincidence - a
+                                 # bare product name is a predictable slug on any site.
+
+claude-101                        # RULED 2026-08-29: academy.claude.com/courses/
+                                 # claude-101 vs datacamp.com/courses/claude-101.
+                                 # Checked both: Anthropic's own is "the shortest
+                                 # official on-ramp"; DataCamp's is its own produced
+                                 # course with role-specific tracks. Two different
+                                 # organisations independently numbering their own
+                                 # beginner course 101, which is exactly what "101"
+                                 # courses do everywhere.
+
+claude-code                       # RULED 2026-08-29: frontendmasters.com/courses/
+                                 # claude-code, coursera.org/learn/claude-code,
+                                 # productschool.com/certifications/claude-code. Three
+                                 # different platforms, three different instructors,
+                                 # three genuinely different courses (a workshop, a
+                                 # 6-module Coursera course, a live certification) that
+                                 # all independently chose the product's own name as
+                                 # their course slug.
+
+claude-code-for-designers         # RULED 2026-08-29: builder.io/blog/... vs
+                                 # intodesignsystems.com/... Checked both: Builder.io's
+                                 # angle is honest about where the workflow breaks for
+                                 # designers (git, PRs); intodesignsystems covers Figma
+                                 # workflows and design-system-as-context. Same
+                                 # predictable phrase, different authors, different
+                                 # guides.
+
+claude-code-for-product-managers  # RULED 2026-08-29: five hosts (every.to,
+                                 # lennysnewsletter.com, sachinrekhi.com, builder.io,
+                                 # maven.com), five different pieces by five different
+                                 # people - a GM's essay, a Lenny's Newsletter interview
+                                 # with Teresa Torres, Sachin Rekhi's own five-skills
+                                 # post, Builder.io's setup guide, and a live Maven
+                                 # cohort. This is just a popular, predictable phrase.
+
+claude-for-small-business         # RULED 2026-08-29: anthropic.com/news/... (the
+                                 # official launch post) vs wotai.co and eigent.ai
+                                 # (two independent third-party reviews). The source and
+                                 # its commentary are not the same resource.
+
+claude-for-teachers                # RULED 2026-08-29: anthropic.com/news/... (the
+                                 # official launch post) vs phillipalcock.substack.com
+                                 # (a teacher's own independent setup guide, built
+                                 # around a steering.md file the launch post never
+                                 # mentions). Source and independent commentary again.
+
+courses                           # RULED 2026-08-29: github.com/anthropics/courses (5
+                                 # specific notebook courses) vs claude.com/resources/
+                                 # courses (Anthropic's browsable hub linking to many
+                                 # different course tracks). A repo of notebooks and an
+                                 # index page are not the same resource, even both being
+                                 # Anthropic's own.
+
+cowork                            # RULED 2026-08-29: ccforeveryone.com/cowork vs
+                                 # ccforpms.com/cowork. Close call, checked both live:
+                                 # same author-brand family ("Claude Code for X"), same
+                                 # page-title template, and both use a "Done framework"
+                                 # by name. But the actual module lists differ for real -
+                                 # ccforpms.com adds a PM-specific "Module 2: Advanced PM
+                                 # Work" (write a PRD, analyze data, product strategy)
+                                 # that ccforeveryone.com does not have, and body text
+                                 # length differs by about 1,300 characters. A shared
+                                 # template adapted per audience, not one guide mirrored
+                                 # twice - kept both, but this is the pair worth
+                                 # re-checking first if it ever comes up again.
+
+overview                           # RULED 2026-08-29: code.claude.com/docs/en/agent-sdk/
+                                 # overview, code.claude.com/docs/en/overview, and
+                                 # platform.claude.com/docs/en/managed-agents/overview.
+                                 # Three different documentation sections (Agent SDK,
+                                 # Claude Code install, Managed Agents), each ending its
+                                 # own front page in the word every docs section uses for
+                                 # its front page.
+
+product-management                 # RULED 2026-08-29: claude.com/plugins/product-
+                                 # management (the install page, with its slash-command
+                                 # list) vs github.com/anthropics/knowledge-work-plugins/
+                                 # tree/main/product-management (the source and README
+                                 # behind it). An install page and its own source repo
+                                 # are companions, not duplicates - same relationship as
+                                 # the financial-services overview/skills pair already
+                                 # resolved this way.
+
+small-business                     # RULED 2026-08-29: claude.com/plugins/small-business
+                                 # (the install page) vs the matching knowledge-work-
+                                 # plugins GitHub source. Same reasoning as product-
+                                 # management above.
+
+teachers                           # RULED 2026-08-29: claude.com/solutions/teachers
+                                 # (Anthropic's sales page with worked prompts),
+                                 # learning-claude.com/teachers/ (a special-ed teacher's
+                                 # independent working stack), and dayofai.org/teachers/
+                                 # (MIT RAISE's free K-12 AI-literacy curriculum - a
+                                 # different organisation, a different subject, not even
+                                 # about Claude specifically). Three real, different
+                                 # resources.
