@@ -19573,5 +19573,467 @@
       "what can ai actually do with interview notes"
     ],
     "id": "r-7dd355965b"
+  },
+  {
+    "title": "AI Fluency for Builders",
+    "url": "https://academy.claude.com/courses/ai-fluency-for-builders",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "developer",
+      "pm"
+    ],
+    "level": "confident",
+    "topics": [
+      "chat-prompting",
+      "safety"
+    ],
+    "format": "course",
+    "time": "half-day",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Applies the 4D AI Fluency framework - Delegation, Description, Discernment, Diligence - to people who ship: nine lessons on deciding what role AI plays at each stage of a build and judging what comes back against five criteria - correctness, quality, fit, experience, responsibility.",
+    "who_for": "Product people, engineers and makers who already use AI day to day and want a framework for deciding what to ship, fix, or stop rather than more prompting tricks.",
+    "skip_if": "It lightly covers the 4D framework and expects you already did AI Fluency: Framework & Foundations first. Three hours, and the destination is judging what Claude ships against five criteria, not writing better prompts to get there.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 9 lessons, 1 quiz, stated 3 hours. Content free to read; only progress-tracking sits behind sign-in, matching every other Academy course checked this round.",
+    "prerequisites": [
+      "AI Fluency: Framework & Foundations (recommended)",
+      "access to an AI tool for hands-on practice"
+    ],
+    "teaches": [
+      "apply the 4D framework to a builder's own work",
+      "decompose a problem across a toolkit and decide where AI belongs",
+      "evaluate AI-generated work on correctness, quality, fit, experience and responsibility",
+      "take ownership of a shipping decision: ship it, fix it, or stop it"
+    ],
+    "keywords": [
+      "ai fluency",
+      "4d framework",
+      "builders",
+      "shipping ai work",
+      "code review criteria",
+      "when to trust ai output"
+    ],
+    "questions": [
+      "how do i judge whether ai-generated work is good enough to ship",
+      "what is the 4d framework for builders",
+      "how much should i trust ai output before shipping it"
+    ],
+    "id": "r-041707c67d"
+  },
+  {
+    "title": "AI Fluency for Creative Work",
+    "url": "https://academy.claude.com/courses/ai-fluency-for-creative-work",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "designer",
+      "writer-marketer"
+    ],
+    "level": "confident",
+    "topics": [
+      "chat-prompting",
+      "safety"
+    ],
+    "format": "course",
+    "time": "half-day",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "The 4D framework built around a Creative Value Lens and a Time/Effort/Resources cost analysis, aimed at creators deciding project by project when AI use protects a creative practice and when it erodes what makes the work theirs.",
+    "who_for": "Creators, writers, illustrators, designers and musicians who want a repeatable way to decide when to delegate creative work to AI rather than a one-off opinion.",
+    "skip_if": "Five hours, the longest of the AI Fluency courses, and it is not a tool tutorial - it is a method for deciding when AI use protects a creative practice and when it erodes it, applied project by project through a Creative Value Lens.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 8 lessons, 1 quiz, stated 5 hours - the longest AI Fluency variant found in this harvest. Free to read; sign-in only tracks progress.",
+    "prerequisites": [
+      "AI Fluency: Framework & Foundations (recommended)",
+      "access to an AI tool for hands-on practice"
+    ],
+    "teaches": [
+      "analyse creative work with the Creative Value Lens",
+      "weigh production cost across time, effort and resources",
+      "apply delegation decisions to real creative projects with multiple outcomes",
+      "run the full workflow from articulating a practice to a documented decision"
+    ],
+    "keywords": [
+      "ai fluency",
+      "creative work",
+      "creative value lens",
+      "when to use ai for creative projects",
+      "protecting creative work"
+    ],
+    "questions": [
+      "how do i decide when to use ai for creative work",
+      "how do i protect what makes my creative work mine",
+      "is there a framework for judging ai use in creative projects"
+    ],
+    "id": "r-cefb7cc98d"
+  },
+  {
+    "title": "The AI-Native SDLC Playbook",
+    "url": "https://academy.claude.com/courses/ai-native-sdlc-playbook",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "developer"
+    ],
+    "level": "builder",
+    "topics": [
+      "claude-code",
+      "agents"
+    ],
+    "format": "course",
+    "time": "under-1hr",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Fourteen numbered plays for rebuilding a software development lifecycle around AI-speed code generation: intent.md files to capture requirements, versioned CLAUDE.md and organisational skills for institutional knowledge, continuous evaluation layers, and governance approval gates.",
+    "who_for": "Engineering, platform and security leads whose organisation already runs Claude Code daily and needs review, testing and deployment to keep up with how fast it now generates code.",
+    "skip_if": "Fourteen numbered plays, not lessons, and each assumes you already run Claude Code daily with a Git repository and CI pipeline you can actually modify. Written for leads rethinking review and deployment across a team, not for one developer's own workflow.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 14 lessons structured as numbered 'plays' rather than a sequential video course, stated 1 hour - fast for the lesson count, consistent with a reference playbook rather than a watched course. Quiz count not stated on the page.",
+    "prerequisites": [
+      "comfort working in Claude Code daily",
+      "a Git repository and CI pipeline you can modify"
+    ],
+    "teaches": [
+      "identify where planning, review, testing and deployment bottleneck once AI writes most of the code",
+      "capture requirements in intent.md files",
+      "maintain institutional knowledge in versioned CLAUDE.md files and skills",
+      "add continuous evaluation and governance approval gates around AI-generated code"
+    ],
+    "keywords": [
+      "sdlc",
+      "software development lifecycle",
+      "claude code enterprise",
+      "intent.md",
+      "governance",
+      "ai-native engineering"
+    ],
+    "questions": [
+      "how do we change our development process now that ai writes most of our code",
+      "how do we govern ai-generated code at an enterprise",
+      "what is intent.md"
+    ],
+    "id": "r-6545a74859"
+  },
+  {
+    "title": "Claude Code in Action",
+    "url": "https://academy.claude.com/courses/claude-code-in-action",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "developer"
+    ],
+    "level": "confident",
+    "topics": [
+      "claude-code",
+      "agents"
+    ],
+    "format": "course",
+    "time": "under-1hr",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Nine lessons moving from single Claude Code prompts to long, unsupervised sessions: plan mode, rewind, hooks as non-negotiable safeguards, skills for repeated processes, scheduled prompts, headless pipelines, GitHub review integration, and distributable team plugins.",
+    "who_for": "Developers already running Claude Code for one-off prompts who want longer, less-supervised, team-wide workflows instead.",
+    "skip_if": "Assumes you already run Claude Code for one-off prompts and takes you to unsupervised, team-wide sessions - hooks, scheduled runs, GitHub integration, distributable plugins. If you have never used Claude Code, Claude Code 101 is the one you want first.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 9 lessons, 1 quiz, stated 1 hour. Free to read; sign-in only tracks progress.",
+    "prerequisites": [
+      "already use Claude Code for single prompts",
+      "basic familiarity with Git and the command line"
+    ],
+    "teaches": [
+      "steer extended Claude Code sessions with plan mode and rewind",
+      "write instructions Claude follows and enforce safeguards through hooks",
+      "schedule recurring prompts and run Claude Code headless in a pipeline",
+      "distribute trusted configurations to a team as installable plugins"
+    ],
+    "keywords": [
+      "claude code",
+      "hooks",
+      "plan mode",
+      "headless claude code",
+      "scheduled prompts",
+      "team plugins",
+      "github integration"
+    ],
+    "questions": [
+      "how do i run claude code unsupervised safely",
+      "how do i schedule claude code to run automatically",
+      "how do i share my claude code setup with my team"
+    ],
+    "id": "r-29a30e0346"
+  },
+  {
+    "title": "Claude Platform 101",
+    "url": "https://academy.claude.com/courses/claude-platform-101",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "developer"
+    ],
+    "level": "basic",
+    "topics": [
+      "api",
+      "agents"
+    ],
+    "format": "course",
+    "time": "under-1hr",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Thirteen lessons taking a chat-interface user into the developer API: messages.create and structured responses, model selection on cost and latency, building an agent loop by hand and then with the SDK's Tool Runner, tool use, extended thinking, and deploying managed agents.",
+    "who_for": "Developers who have used Claude in a chat window and want to build it into their own application for the first time.",
+    "skip_if": "This is the developer API, not the chat app, and it costs money beyond the course itself - a Claude Console account, an API key, and a small amount of prepaid credit before lesson one. Coming from the chat interface is fine; the course assumes exactly that and nothing more.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 13 lessons, 1 quiz, stated 1.5 hours. The course itself is free to read; the prepaid API credit it requires for the exercises is a real cost, recorded in skip_if rather than in the cost field, which reflects the price of reading this entry, not of doing what it teaches.",
+    "prerequisites": [
+      "comfort reading and writing code in at least one language",
+      "basic command-line familiarity",
+      "a Claude Console account, an API key, and prepaid credit"
+    ],
+    "teaches": [
+      "send API requests and interpret structured responses",
+      "choose a model on cost and latency tradeoffs",
+      "build and extend an agent loop with tool use and extended thinking",
+      "deploy a managed agent and review Claude Code's own generated code"
+    ],
+    "keywords": [
+      "claude api",
+      "messages.create",
+      "agent loop",
+      "tool runner",
+      "sdk",
+      "developer platform",
+      "api key"
+    ],
+    "questions": [
+      "how do i start using the claude api instead of the chat app",
+      "how do i build an agent with the claude sdk",
+      "what does the claude api cost to try"
+    ],
+    "id": "r-e1c0040b36"
+  },
+  {
+    "title": "Claude with Amazon Bedrock",
+    "url": "https://academy.claude.com/courses/claude-with-amazon-bedrock",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "developer"
+    ],
+    "level": "builder",
+    "topics": [
+      "api",
+      "agents"
+    ],
+    "format": "course",
+    "time": "half-day",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "The full Claude platform curriculum re-taught through Amazon Bedrock: 65 lessons and 8 quizzes covering prompting, tool use, RAG pipelines with chunking and contextual retrieval, agents, and production deployment on AWS.",
+    "who_for": "Developers whose infrastructure already lives on AWS and who want the same Claude platform skills without leaving Bedrock.",
+    "skip_if": "Sixty-five lessons and eight quizzes over roughly a working day, and every one assumes an AWS account with Bedrock access already provisioned and working Python. This is the AWS route to what Claude Platform 101 teaches directly - pick it only because your infrastructure already lives on Bedrock, not because it teaches Claude any differently.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 65 lessons, 8 quizzes, stated 8 hours - the largest course found in this harvest alongside its Vertex AI counterpart. Free to read; the AWS account and Bedrock access it requires is a real cost outside this catalogue's scope.",
+    "prerequisites": [
+      "Python programming proficiency",
+      "basic JSON handling",
+      "an AWS account with Bedrock access"
+    ],
+    "teaches": [
+      "call Anthropic models on Bedrock for multi-turn conversations",
+      "build and evaluate prompts with structured testing",
+      "design custom tools with JSON Schema for function calling",
+      "build RAG pipelines with chunking, embeddings and contextual retrieval on AWS"
+    ],
+    "keywords": [
+      "amazon bedrock",
+      "aws",
+      "claude on bedrock",
+      "rag pipeline",
+      "tool use",
+      "production deployment"
+    ],
+    "questions": [
+      "how do i use claude through amazon bedrock",
+      "how do i build a rag pipeline with claude on aws",
+      "is there a claude course specifically for bedrock"
+    ],
+    "id": "r-26b3942151"
+  },
+  {
+    "title": "Claude with Google Cloud's Vertex AI",
+    "url": "https://academy.claude.com/courses/claude-with-google-cloud-s-vertex-ai",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "developer"
+    ],
+    "level": "builder",
+    "topics": [
+      "api",
+      "agents"
+    ],
+    "format": "course",
+    "time": "half-day",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "The same platform curriculum as the Bedrock course, taught on Google Cloud instead: 66 lessons and 9 quizzes on authentication, systematic prompt evaluation, tool use, hybrid-search RAG, and agent patterns for parallelization, chaining and routing.",
+    "who_for": "Developers whose infrastructure already lives on Google Cloud and want Claude platform skills without leaving Vertex AI.",
+    "skip_if": "The same scale and shape as the Bedrock course - over eight hours, Python assumed - built around a Google Cloud account with Vertex AI access instead. Choosing between the two is a question of where your infrastructure already lives, not which teaches Claude better; they teach the same platform through two different clouds.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 66 lessons, 9 quizzes, stated 8.5 hours. Free to read; the Google Cloud account and Vertex AI access it requires is a real cost outside this catalogue's scope.",
+    "prerequisites": [
+      "Python programming proficiency",
+      "basic JSON handling",
+      "a Google Cloud account with Vertex AI access"
+    ],
+    "teaches": [
+      "configure Claude models through Vertex AI including authentication",
+      "design and evaluate prompts with model-based and code-based grading",
+      "build tool-use implementations across external functions and APIs",
+      "design agent workflows using parallelization, chaining and routing"
+    ],
+    "keywords": [
+      "vertex ai",
+      "google cloud",
+      "claude on gcp",
+      "rag pipeline",
+      "agent patterns",
+      "production deployment"
+    ],
+    "questions": [
+      "how do i use claude through google cloud vertex ai",
+      "how do i build agents on claude with vertex ai",
+      "is there a claude course specifically for google cloud"
+    ],
+    "id": "r-e78a8c3d0a"
+  },
+  {
+    "title": "Introduction to agent skills",
+    "url": "https://academy.claude.com/courses/introduction-to-agent-skills",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "developer"
+    ],
+    "level": "confident",
+    "topics": [
+      "claude-code",
+      "skills"
+    ],
+    "format": "course",
+    "time": "under-1hr",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Six lessons on building, configuring and sharing Claude Code skills - reusable SKILL.md instructions Claude applies automatically to matching tasks - covering frontmatter, tool-access permissions, progressive disclosure, reference files, and how skills differ from CLAUDE.md, subagents, hooks and MCP servers.",
+    "who_for": "Claude Code users who keep re-explaining the same task and want to encode it once as a skill Claude finds on its own.",
+    "skip_if": "Every example is a Claude Code skill - a SKILL.md file - so nothing here transfers to Claude.ai's browser Skills or to Cowork. An hour, and the destination is writing one from scratch: frontmatter, tool permissions, and enough structure that Claude finds it unprompted.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 6 lessons, quiz count not stated, stated 1 hour. No prerequisites stated on the page, though every lesson assumes Claude Code is already installed and running.",
+    "prerequisites": [
+      "Claude Code installed and working"
+    ],
+    "teaches": [
+      "understand where skills live and how Claude Code matches them to a task",
+      "build a skill from scratch with valid SKILL.md frontmatter",
+      "write a precise skill description and set allowed-tools permissions",
+      "structure a complex skill with progressive disclosure and reference files"
+    ],
+    "keywords": [
+      "agent skills",
+      "skill.md",
+      "claude code skills",
+      "frontmatter",
+      "progressive disclosure"
+    ],
+    "questions": [
+      "how do i write a skill for claude code",
+      "what goes in a skill.md file",
+      "how is a skill different from claude.md"
+    ],
+    "id": "r-b23d0f42c9"
+  },
+  {
+    "title": "Introduction to subagents",
+    "url": "https://academy.claude.com/courses/introduction-to-subagents",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "developer"
+    ],
+    "level": "confident",
+    "topics": [
+      "claude-code",
+      "agents"
+    ],
+    "format": "course",
+    "time": "under-1hr",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Four lessons on decomposing a task across parallel Claude Code subagents, each with its own context window: building custom subagents with the /agents command, structured outputs and restricted tool permissions, and when a subagent helps versus when it just adds overhead.",
+    "who_for": "Claude Code users whose sessions have grown long enough that context management has become a real, recurring problem.",
+    "skip_if": "The /agents command and separate context windows it teaches are Claude Code features with no equivalent in Claude.ai chat or Cowork. Forty-five minutes, and it assumes context management is already a problem for you, not a hypothetical one.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 4 lessons, quiz count not stated, stated 45 minutes. No prerequisites stated on the page, though every lesson assumes Claude Code is already installed and running.",
+    "prerequisites": [
+      "Claude Code installed and working",
+      "sessions long enough that context management is a recurring problem"
+    ],
+    "teaches": [
+      "understand how Claude Code subagents get their own context window",
+      "build a custom subagent with the /agents command",
+      "add structured outputs, error reporting and restricted permissions to a subagent",
+      "recognise which tasks suit a subagent and which do not"
+    ],
+    "keywords": [
+      "subagents",
+      "/agents command",
+      "claude code context",
+      "parallel agents",
+      "context window management"
+    ],
+    "questions": [
+      "how do i use subagents in claude code",
+      "how do i manage context in a long claude code session",
+      "what is the /agents command"
+    ],
+    "id": "r-185e71d34e"
   }
 ]
