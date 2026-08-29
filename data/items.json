@@ -27683,5 +27683,1377 @@
       "how does claude find contradictions across filings and trial data"
     ],
     "id": "r-573da45bcf"
+  },
+  {
+    "title": "Explain a variance",
+    "url": "https://academy.claude.com/use-cases/explain-a-variance",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "data-analyst",
+      "business-founder"
+    ],
+    "level": "builder",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Compares actuals against prior period and budget, and writes the variance explanation for each material line item.",
+    "who_for": "Finance/accounting staff drafting monthly variance commentary for close.",
+    "skip_if": "Needs the Finance plugin plus NetSuite connected, along with actuals/prior-period/budget files already in a working folder - and it's built to end as a recurring Monday job, so it's overbuilt for explaining one number once.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min.",
+    "prerequisites": [
+      "Claude Cowork",
+      "NetSuite connector",
+      "actuals/prior period/budget files",
+      "Finance plugin (optional)"
+    ],
+    "teaches": [
+      "draft monthly variance commentary comparing actuals to prior period and budget"
+    ],
+    "keywords": [
+      "variance commentary claude",
+      "monthly close variance explanation",
+      "cowork finance variance"
+    ],
+    "questions": [
+      "can cowork write our monthly variance commentary",
+      "how do i automate variance analysis at close"
+    ],
+    "id": "r-6636e79be0"
+  },
+  {
+    "title": "Explore what Claude can do for you",
+    "url": "https://academy.claude.com/use-cases/explore-what-claude-can-do-for-you",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "non-technical"
+    ],
+    "level": "never-used",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Tell Claude your job role and get a personalized guide to the capabilities most worth using for your work - the only page in this harvest with a genuinely zero-prerequisite start.",
+    "who_for": "Someone brand new to Claude who wants a starting point tailored to their actual job.",
+    "skip_if": "The only page in this whole harvest with a genuinely zero-prerequisite start - just describe your role - so there's nothing to skip unless you already know Claude's capabilities well enough not to need a personalized map.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Worked example is a B2B SaaS product manager; Google Drive connection is optional.",
+    "prerequisites": [],
+    "teaches": [
+      "get a personalized map of which Claude capabilities matter for your specific role"
+    ],
+    "keywords": [
+      "what can claude do for my job",
+      "personalized claude onboarding",
+      "claude capabilities by role"
+    ],
+    "questions": [
+      "what can claude do for my specific job",
+      "where do i start with claude as a beginner"
+    ],
+    "id": "r-434e205e76"
+  },
+  {
+    "title": "Feedback synthesis to prioritized themes",
+    "url": "https://academy.claude.com/use-cases/feedback-synthesis",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "pm"
+    ],
+    "level": "builder",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Turns scattered customer feedback (NPS, tickets, sales calls, interviews, Slack) into a one-page prioritized Voice-of-Customer brief with a count and quote per theme.",
+    "who_for": "Product managers turning scattered feedback into a roadmap-ready brief.",
+    "skip_if": "Needs a working folder of feedback files plus Slack/Linear/Intercom/Zendesk connectors for the live scheduled version - each theme has to carry a count and a verbatim quote, so it needs real feedback volume to be worth running.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Scheduled version runs Fridays at 4pm against the quarter's VoC folder plus live Slack/Zendesk.",
+    "prerequisites": [
+      "Claude Cowork",
+      "a folder of feedback files",
+      "Product Management plugin (optional)"
+    ],
+    "teaches": [
+      "synthesize scattered customer feedback into quantified, quoted themes"
+    ],
+    "keywords": [
+      "feedback synthesis claude",
+      "voice of customer brief ai",
+      "cowork prioritize feedback themes"
+    ],
+    "questions": [
+      "can cowork synthesize our scattered customer feedback",
+      "how do i build a voice of customer brief"
+    ],
+    "id": "r-3fab06e739"
+  },
+  {
+    "title": "Forecast & scenario modeling",
+    "url": "https://academy.claude.com/use-cases/forecast-scenarios",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "data-analyst",
+      "business-founder"
+    ],
+    "level": "builder",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Rolls an existing driver model forward four quarters into base/upside/downside scenarios with a written assumptions memo for leadership.",
+    "who_for": "FP&A staff producing a scenario forecast for leadership review.",
+    "skip_if": "Needs a driver model, headcount plan and assumptions doc already built - it rolls an existing model forward into three scenarios, it doesn't build the underlying driver model from scratch.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Recommends promoting the working folder to a Cowork project so the model and scheduled runs stay attached.",
+    "prerequisites": [
+      "Claude Cowork",
+      "an existing driver model, headcount plan and assumptions doc",
+      "Finance plugin (optional)"
+    ],
+    "teaches": [
+      "roll a driver model into base/upside/downside scenarios with an assumptions memo"
+    ],
+    "keywords": [
+      "scenario forecasting claude",
+      "base upside downside model",
+      "cowork fp&a forecast"
+    ],
+    "questions": [
+      "can cowork build scenario forecasts from our driver model",
+      "how do i produce a base upside downside forecast"
+    ],
+    "id": "r-da4dd886f8"
+  },
+  {
+    "title": "Generate an AI policy",
+    "url": "https://academy.claude.com/use-cases/generate-an-ai-policy",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder"
+    ],
+    "level": "confident",
+    "topics": [
+      "safety"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Writes an organization-specific AI usage policy for a nonprofit - data privacy, approved/prohibited uses, staff guidelines - plus a full implementation workbook.",
+    "who_for": "Nonprofit leadership drafting AI governance for the first time.",
+    "skip_if": "Best with your existing policies (privacy policy, code of ethics) uploaded as a starting point - and the real output beyond the policy text is a full implementation workbook (intake workflow, risk matrix, training tracker), more than a one-page AI policy.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Worked example is a 75-staff, 200-volunteer youth mental health organization.",
+    "prerequisites": [
+      "existing policy documents to upload (optional)",
+      "code execution/file creation enabled"
+    ],
+    "teaches": [
+      "draft an organization-specific AI usage policy with a full implementation workbook"
+    ],
+    "keywords": [
+      "ai usage policy claude",
+      "nonprofit ai governance policy",
+      "generate ai policy document"
+    ],
+    "questions": [
+      "can claude write our ai usage policy",
+      "how do i create an ai governance workbook"
+    ],
+    "id": "r-13ab6fa70b"
+  },
+  {
+    "title": "Generate project status reports",
+    "url": "https://academy.claude.com/use-cases/generate-project-status-reports",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "pm"
+    ],
+    "level": "confident",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Pulls project status from email, Slack, meeting notes and calendar into one tracker, reconciling conflicting self-reported status against what other sources actually show.",
+    "who_for": "Project leads tracking status across scattered sources who need a reality check, not just a summary.",
+    "skip_if": "Needs Google Drive, Gmail, Google Calendar and Slack all connected and toggled on - and its real value is reconciling conflicting status reports against each other, so it needs genuinely inconsistent sources to show what it's for.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Worked example shows a teammate's self-reported '80% done' corrected to 45% based on separate 1-on-1 notes.",
+    "prerequisites": [
+      "Google Drive, Gmail, Google Calendar and Slack connectors"
+    ],
+    "teaches": [
+      "build a project status tracker that reconciles conflicting status sources"
+    ],
+    "keywords": [
+      "project status report claude",
+      "reconcile conflicting status updates",
+      "claude pull status from multiple tools"
+    ],
+    "questions": [
+      "can claude build a project status tracker from scattered sources",
+      "how do i catch conflicting status reports"
+    ],
+    "id": "r-1be9a1bc53"
+  },
+  {
+    "title": "Genomic data analysis",
+    "url": "https://academy.claude.com/use-cases/genomic-data-analysis",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "researcher"
+    ],
+    "level": "confident",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Compares cell populations, finds differentially expressed genes, and runs pathway enrichment on gene expression data to form testable hypotheses.",
+    "who_for": "Bioinformatics or computational biology researchers analyzing gene expression data.",
+    "skip_if": "Needs differential expression or normalized count data already in CSV/TSV form - and some named connectors (like PubMed for validation) are Claude for Desktop only, not available in browser chat.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Worked example compares adult vs. pediatric liver cell populations with real fold-change numbers.",
+    "prerequisites": [
+      "CSV/TSV gene expression data",
+      "PubMed connector (optional, Desktop only)"
+    ],
+    "teaches": [
+      "analyze gene expression data for differential expression and pathway enrichment"
+    ],
+    "keywords": [
+      "genomic data analysis claude",
+      "differential gene expression claude",
+      "pathway enrichment ai"
+    ],
+    "questions": [
+      "can claude analyze my gene expression data",
+      "how do i find differentially expressed genes with claude"
+    ],
+    "id": "r-19efb1ffa0"
+  },
+  {
+    "title": "Grant proposal assembly line",
+    "url": "https://academy.claude.com/use-cases/grant-proposal-assembly-line",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder"
+    ],
+    "level": "confident",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-1hr",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Builds a modular content library from past winning proposals, then assembles funder-ready submissions from those modules instead of writing each one from scratch.",
+    "who_for": "Nonprofit grant writers handling 20+ applications a year.",
+    "skip_if": "Needs 2-3 of your own successful past proposals uploaded, plus Google Drive, Gmail and code execution enabled - the time savings it claims (40 hours to 16) assume you already have a track record of winning proposals to build the module library from.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 20 min, the longest in its batch. Worked example claims a 3-day-to-1-day cut for one foundation's proposal.",
+    "prerequisites": [
+      "2-3 past winning proposals",
+      "Google Drive and Gmail integration",
+      "code execution/file creation"
+    ],
+    "teaches": [
+      "build a reusable modular content library from past proposals to speed up future submissions"
+    ],
+    "keywords": [
+      "grant proposal assembly claude",
+      "reuse grant proposal content",
+      "nonprofit grant writing ai"
+    ],
+    "questions": [
+      "can claude speed up writing grant proposals",
+      "how do i reuse content across grant applications"
+    ],
+    "id": "r-3308a32410"
+  },
+  {
+    "title": "Handle a request while away from your keyboard",
+    "url": "https://academy.claude.com/use-cases/handle-a-request-while-away-from-your-keyboard",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "non-technical",
+      "business-founder"
+    ],
+    "level": "builder",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Uses Cowork Dispatch from the mobile app to find a file on your desktop, draft a reply, and post it to Slack after your approval - while your desktop machine stays the one doing the work.",
+    "who_for": "Someone who needs to respond to a request from their phone using files and tools only their computer can reach.",
+    "skip_if": "Real setup burden for what sounds simple: the Claude desktop app must stay running with a keep-awake toggle set, send access set to needs-approval, and computer use switched on in Dispatch settings, none of which is on by default.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. The privacy claim: files stay local, read on your own machine and pushed out through the connector rather than uploaded to the cloud first.",
+    "prerequisites": [
+      "Claude desktop app running with keep-awake set",
+      "Dispatch settings configured",
+      "Slack/Gmail connectors"
+    ],
+    "teaches": [
+      "respond to a request from mobile using files and tools that live on your desktop machine"
+    ],
+    "keywords": [
+      "cowork dispatch mobile",
+      "claude mobile access desktop files",
+      "respond from phone claude cowork"
+    ],
+    "questions": [
+      "can i use cowork from my phone to access my computer's files",
+      "how does cowork dispatch keep files local"
+    ],
+    "id": "r-bee34f76e6"
+  },
+  {
+    "title": "Reconcile headcount",
+    "url": "https://academy.claude.com/use-cases/headcount-reconciliation",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "data-analyst",
+      "business-founder"
+    ],
+    "level": "builder",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Makes the HRIS roster, budget headcount plan, and payroll/GL agree on who is actually on the books, classifying every discrepancy by type.",
+    "who_for": "Finance or accounting staff reconciling headcount across HR and payroll systems.",
+    "skip_if": "Needs a Workday roster export, headcount plan, payroll register and cost-center map all in one folder - the output is a categorized discrepancy list, so it's only useful if those four sources genuinely disagree with each other.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Categories include unplanned hires, open-but-budgeted requisitions, and contractors miscoded as FTEs.",
+    "prerequisites": [
+      "Claude Cowork",
+      "Workday roster, headcount plan, payroll register, cost-center map",
+      "Gusto/NetSuite connectors (optional)"
+    ],
+    "teaches": [
+      "reconcile headcount across HRIS, budget and payroll with discrepancies categorized by type"
+    ],
+    "keywords": [
+      "headcount reconciliation claude",
+      "hris payroll reconciliation ai",
+      "cowork headcount discrepancy"
+    ],
+    "questions": [
+      "can cowork reconcile our headcount across systems",
+      "how do i categorize headcount discrepancies"
+    ],
+    "id": "r-8b7ac094da"
+  },
+  {
+    "title": "Draft the incident postmortem",
+    "url": "https://academy.claude.com/use-cases/incident-postmortem",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "developer"
+    ],
+    "level": "builder",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Rebuilds an incident timeline from the Slack incident channel and alerting, identifies root cause and contributing factors, and drafts the postmortem with owned action items.",
+    "who_for": "Engineering/SRE teams writing postmortems after an incident.",
+    "skip_if": "Needs Slack, PagerDuty and optionally Datadog connected plus your own postmortem template - the scheduled version watches PagerDuty daily for resolved incidents, so it's built for teams running postmortems repeatedly, not a one-off.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min.",
+    "prerequisites": [
+      "Claude Cowork",
+      "Slack and PagerDuty connectors",
+      "your postmortem template",
+      "Engineering plugin (optional)"
+    ],
+    "teaches": [
+      "reconstruct an incident timeline and draft a postmortem with owned action items"
+    ],
+    "keywords": [
+      "incident postmortem claude",
+      "cowork postmortem draft",
+      "reconstruct incident timeline ai"
+    ],
+    "questions": [
+      "can cowork draft an incident postmortem for me",
+      "how do i automate postmortem writing"
+    ],
+    "id": "r-7719f04e57"
+  },
+  {
+    "title": "Interview debrief synthesis",
+    "url": "https://academy.claude.com/use-cases/interview-debrief",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "pm",
+      "business-founder"
+    ],
+    "level": "builder",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Turns a panel's interview scorecards into a debrief showing where interviewers agreed, where they split, and what still needs resolving - deliberately never recommending hire or no-hire.",
+    "who_for": "Hiring teams preparing for a hiring discussion after a panel interview.",
+    "skip_if": "Needs a scorecard export, competency rubric PDF and interview plan in a working folder - and the prompt explicitly forbids Claude from recommending hire or no-hire, so it organizes evidence but never makes the call.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. The only page in its batch with a built-in refusal of its own obvious output.",
+    "prerequisites": [
+      "Claude Cowork",
+      "scorecard export, competency rubric, interview plan",
+      "Human Resources plugin (optional)"
+    ],
+    "teaches": [
+      "synthesize panel interview scorecards into agreement/disagreement/gaps without making the hire decision"
+    ],
+    "keywords": [
+      "interview debrief synthesis claude",
+      "panel interview scorecard analysis",
+      "cowork hiring debrief"
+    ],
+    "questions": [
+      "can cowork synthesize our panel interview scorecards",
+      "does claude decide who to hire"
+    ],
+    "id": "r-9782588d4d"
+  },
+  {
+    "title": "Launch readiness sweep",
+    "url": "https://academy.claude.com/use-cases/launch-readiness",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "pm"
+    ],
+    "level": "builder",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Sweeps the PRD, Linear epic, Slack threads and GTM brief into one red/yellow/green readiness checklist with named blockers and owners for a go/no-go call.",
+    "who_for": "Product managers running launch-week readiness checks.",
+    "skip_if": "Needs Linear, Slack and Google Drive connected plus the retros from your last two launches - the point is surfacing your team's specific repeat failure modes, so it's weaker without real launch history to draw on.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Run daily during launch week, each checklist shows a one-line color change versus the day before.",
+    "prerequisites": [
+      "Claude Cowork",
+      "PRD, GTM brief, launch checklist template",
+      "past launch retros",
+      "Linear/Slack/Google Drive connectors"
+    ],
+    "teaches": [
+      "build a red/yellow/green launch readiness checklist that surfaces your team's repeat failure modes"
+    ],
+    "keywords": [
+      "launch readiness checklist claude",
+      "go no-go launch sweep",
+      "cowork launch readiness"
+    ],
+    "questions": [
+      "can cowork build a launch readiness checklist",
+      "how do i track launch blockers automatically"
+    ],
+    "id": "r-334f360edc"
+  },
+  {
+    "title": "Legal research",
+    "url": "https://academy.claude.com/use-cases/legal-research-memo",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder",
+      "pm"
+    ],
+    "level": "builder",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Produces a structured research memo - question presented, short answer, discussion by authority, open issues - with verified citations rather than a pile of links.",
+    "who_for": "Litigation or research attorneys drafting a structured legal research memo.",
+    "skip_if": "The Litigation Legal plugin's source has to be enabled once by a workspace admin on Team/Enterprise plans - and real payoff is saving your customized version as your own reusable skill, so a single one-off run undersells it.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. The heaviest gating in its batch - Litigation Legal source, CoCounsel Legal connector, admin enablement.",
+    "prerequisites": [
+      "Claude Cowork",
+      "Litigation Legal plugin (admin-enabled)",
+      "CoCounsel Legal connector"
+    ],
+    "teaches": [
+      "draft a structured legal research memo with verified citations by authority"
+    ],
+    "keywords": [
+      "legal research memo claude",
+      "cowork legal research",
+      "structured research memo ai"
+    ],
+    "questions": [
+      "can cowork draft a legal research memo",
+      "how do i get verified citations in a legal memo"
+    ],
+    "id": "r-58b57b367e"
+  },
+  {
+    "title": "Log sales calls to your CRM",
+    "url": "https://academy.claude.com/use-cases/log-sales-calls-to-your-crm",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder",
+      "pm"
+    ],
+    "level": "builder",
+    "topics": [
+      "agents"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Claude in Chrome reads your calendar, matches attendees to Salesforce contacts, and drafts activity logs for each call for you to approve before anything is created.",
+    "who_for": "Sales reps keeping CRM activity logs up to date after a day of calls.",
+    "skip_if": "Claude in Chrome needs a paid plan, and it works by borrowing your existing logged-in Calendar and Salesforce browser sessions rather than any API integration - so it needs you already logged into both in Chrome.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Nothing is written to Salesforce until you approve.",
+    "prerequisites": [
+      "Claude in Chrome (paid plan)",
+      "logged into Google Calendar and Salesforce"
+    ],
+    "teaches": [
+      "draft CRM activity logs from calendar and Salesforce data, approved before creation"
+    ],
+    "keywords": [
+      "log sales calls to crm claude",
+      "claude in chrome salesforce",
+      "automate crm activity logging"
+    ],
+    "questions": [
+      "can claude log my sales calls to salesforce automatically",
+      "does claude in chrome need a salesforce api key"
+    ],
+    "id": "r-79adf355e3"
+  },
+  {
+    "title": "Map your lit review mid-conversation to surface the underlying debate",
+    "url": "https://academy.claude.com/use-cases/map-your-lit-review-mid-conversation",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "researcher",
+      "student"
+    ],
+    "level": "confident",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Reads a stack of papers and draws the argument structure inline - which papers cluster on which claim, where camps disagree, and what each camp is blind to.",
+    "who_for": "Graduate students or researchers trying to see the actual debate structure across a pile of papers.",
+    "skip_if": "The output shape depends entirely on how you phrase the request - 'who's agreeing with who' produces an argument map, 'organize these papers' produces a plain topic tree - so the wrong wording gets you a different deliverable than you wanted.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Worked example is a graduate student with 20 papers on AI in K-12 education.",
+    "prerequisites": [
+      "papers or a consolidated notes file"
+    ],
+    "teaches": [
+      "draw an inline argument map showing where research camps agree, disagree, and have blind spots"
+    ],
+    "keywords": [
+      "literature review argument map claude",
+      "map research debate claude",
+      "claude lit review visualization"
+    ],
+    "questions": [
+      "can claude map the debate structure across my papers",
+      "how do i visualize disagreement in a literature review"
+    ],
+    "id": "r-e31096ecec"
+  },
+  {
+    "title": "Map your understanding and build lessons from the gaps",
+    "url": "https://academy.claude.com/use-cases/map-your-understanding-and-build-lessons-from-the-gaps",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "non-technical"
+    ],
+    "level": "confident",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Claude Opus 4.6 traces confused reasoning to its source misconception, then builds a personalized lesson around that specific gap - demonstrated on Bayesian reasoning applied to hiring data.",
+    "who_for": "Self-directed learners who want lessons targeted at their actual misconception, not a generic review.",
+    "skip_if": "Names Claude Opus 4.6 with Extended Thinking specifically for the diagnostic precision it needs - the worked example is hiring/recruiting data, but the technique itself is general self-directed learning.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 20 min. Optional CSV/XLSX screening data; produces a concept-map Artifact and an Excel workbook.",
+    "prerequisites": [
+      "Claude Opus 4.6 with Extended Thinking",
+      "optional screening/pipeline data"
+    ],
+    "teaches": [
+      "find the specific misconception behind confused reasoning and build a lesson targeted at it"
+    ],
+    "keywords": [
+      "personalized lesson from misconception claude",
+      "trace confusion to source claude",
+      "claude opus learning diagnosis"
+    ],
+    "questions": [
+      "can claude find exactly where my understanding breaks down",
+      "how do i get a lesson targeted at my specific misconception"
+    ],
+    "id": "r-ea04f3c0ad"
+  },
+  {
+    "title": "Slack and Teams message sweep",
+    "url": "https://academy.claude.com/use-cases/message-sweep",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "non-technical",
+      "business-founder"
+    ],
+    "level": "builder",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Consolidates 24 hours of unread Slack DMs/mentions, Teams activity and Gmail into one topic-grouped list sorted by needs-reply/needs-reading/FYI, with replies drafted.",
+    "who_for": "Anyone with cross-platform inbox overload who wants one sweep instead of three separate checks.",
+    "skip_if": "Needs Slack, Microsoft 365 and Gmail all connected via Cowork's Customize > Connectors settings - reads live, unread state, so it reflects what's sitting unread right now rather than working from an export.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Grouping is deliberately by topic, not by app.",
+    "prerequisites": [
+      "Claude Cowork",
+      "Slack, Microsoft 365 and Gmail connectors",
+      "Productivity plugin (optional)"
+    ],
+    "teaches": [
+      "sweep unread Slack, Teams and Gmail into one topic-grouped, reply-drafted list"
+    ],
+    "keywords": [
+      "slack teams message sweep claude",
+      "cowork inbox sweep",
+      "consolidate unread messages ai"
+    ],
+    "questions": [
+      "can cowork sweep my unread slack and teams messages",
+      "how do i consolidate messages across platforms"
+    ],
+    "id": "r-714dbe1d4e"
+  },
+  {
+    "title": "Metrics deep-dive to narrative",
+    "url": "https://academy.claude.com/use-cases/metrics-narrative",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "pm",
+      "data-analyst"
+    ],
+    "level": "builder",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Finds the anomaly in a weekly activation funnel, segments until the driver is isolated, cross-checks it against what shipped that week, and writes the 'what happened and why' narrative.",
+    "who_for": "Product analysts writing the weekly metrics narrative for stakeholders.",
+    "skip_if": "Needs CSV exports from Amplitude/Mixpanel plus a changelog file to correlate metric moves against - the whole point is naming which ship caused a change, so without a changelog it can't do that part.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Outputs a narrative plus exactly two charts that prove the causal claim.",
+    "prerequisites": [
+      "Claude Cowork",
+      "Amplitude/Mixpanel CSV exports",
+      "a changelog file",
+      "Product Management plugin (optional)"
+    ],
+    "teaches": [
+      "diagnose a metric anomaly and correlate it against a product changelog to name the cause"
+    ],
+    "keywords": [
+      "metrics narrative claude",
+      "diagnose activation funnel drop",
+      "correlate metric change to product ship"
+    ],
+    "questions": [
+      "can cowork explain why our activation funnel changed",
+      "how do i correlate a metric drop with a specific release"
+    ],
+    "id": "r-1bc3b6ab4f"
+  },
+  {
+    "title": "Daily bookends",
+    "url": "https://academy.claude.com/use-cases/morning-evening",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "non-technical",
+      "business-founder"
+    ],
+    "level": "builder",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "A paired stateful loop: a morning briefing (what's on fire, what's due, top three tasks) and a matching evening wrap that logs what landed and queues tomorrow's opener.",
+    "who_for": "Anyone managing calendar, inbox and task priority who wants a consistent daily rhythm.",
+    "skip_if": "Needs a designated 'Daily' folder in a Cowork project plus at least one of Google Calendar/Slack/Gmail connected - the morning and evening halves are stateful and depend on each other, so running just one loses the carry-over effect.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. The evening /update carries into the next morning's /start automatically.",
+    "prerequisites": [
+      "Claude Cowork",
+      "a 'Daily' folder in a Cowork project",
+      "Productivity plugin (optional)"
+    ],
+    "teaches": [
+      "build a paired morning-briefing and evening-wrap loop that carries state day to day"
+    ],
+    "keywords": [
+      "daily briefing and wrap claude",
+      "cowork morning evening routine",
+      "stateful daily loop cowork"
+    ],
+    "questions": [
+      "can cowork run a morning briefing and evening wrap for me",
+      "how do i carry tasks from yesterday into today automatically"
+    ],
+    "id": "r-c8aa1b2ccc"
+  },
+  {
+    "title": "Write in my voice",
+    "url": "https://academy.claude.com/use-cases/my-voice",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "non-technical",
+      "business-founder",
+      "pm"
+    ],
+    "level": "builder",
+    "topics": [
+      "cowork",
+      "skills"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Analyzes your own sent mail and messages to extract tone and style rules, saved as a reusable /my-voice skill that improves as you correct its drafts over time.",
+    "who_for": "Anyone who writes a lot of internal communication and is tired of editing Claude's generic drafting voice.",
+    "skip_if": "Needs access to your own sent mail or messages (Gmail/Slack/Notion) to analyze - the skill improves by accumulating your corrections over time, so a single run without follow-up correction won't sound convincingly like you yet.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. A scheduled Sunday 6pm task re-reads 90 days of sent mail while preserving every hand-added rule.",
+    "prerequisites": [
+      "Claude Cowork",
+      "access to sent mail/messages or a writing-samples folder",
+      "Productivity plugin (optional)"
+    ],
+    "teaches": [
+      "build a personal writing-voice skill from your own sent messages that improves with correction"
+    ],
+    "keywords": [
+      "write in my voice claude",
+      "claude writing style skill",
+      "personal voice profile ai"
+    ],
+    "questions": [
+      "can claude learn to write in my voice",
+      "how do i build a personal writing style skill"
+    ],
+    "id": "r-0f870cfd55"
+  },
+  {
+    "title": "NDA triage at scale",
+    "url": "https://academy.claude.com/use-cases/nda-review",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder",
+      "pm"
+    ],
+    "level": "builder",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Screens an incoming NDA against your own playbook criterion by criterion - if it passes, routes it for signature; if not, lists only the exceptions so counsel reviews just those.",
+    "who_for": "In-house counsel or legal ops triaging a high volume of standard NDAs.",
+    "skip_if": "The Commercial Legal plugin's source has to be enabled once by a workspace admin - and it needs your own NDA playbook document to compare against, since a clean/exception routing decision has no meaning without one.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. A clean NDA produces a routing action, not a report - only deviations generate text.",
+    "prerequisites": [
+      "Claude Cowork",
+      "Commercial Legal plugin (admin-enabled)",
+      "an NDA playbook document",
+      "DocuSign connector (optional)"
+    ],
+    "teaches": [
+      "triage NDAs against a playbook, routing clean ones for signature and flagging only real exceptions"
+    ],
+    "keywords": [
+      "nda triage claude",
+      "nda review at scale",
+      "cowork legal contract triage"
+    ],
+    "questions": [
+      "can cowork triage our incoming ndas automatically",
+      "how do i route clean contracts for signature without a full review"
+    ],
+    "id": "r-6965832870"
+  },
+  {
+    "title": "Offer process",
+    "url": "https://academy.claude.com/use-cases/offer-process",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder",
+      "pm"
+    ],
+    "level": "builder",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Assembles a full offer package for a finalist in one pass - populates the offer letter, drafts the candidate email, and builds a short screenshare-ready HTML deck.",
+    "who_for": "Recruiters or hiring managers assembling an offer package for a finalist candidate.",
+    "skip_if": "Needs four specific files already prepared - the offer-letter template, candidate summary, comp approval sheet, and benefits overview - across four different formats (docx/pdf/xlsx/pdf), so there's real prep before the prompt does anything.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Produces three different artifact types from one prompt across four mixed input formats.",
+    "prerequisites": [
+      "Claude Cowork",
+      "offer-letter template, candidate summary, comp approval, benefits overview files",
+      "Human Resources plugin (optional)"
+    ],
+    "teaches": [
+      "assemble a full offer package - letter fields, candidate email, and a screenshare deck - in one pass"
+    ],
+    "keywords": [
+      "offer process automation claude",
+      "assemble job offer package",
+      "cowork recruiting offer"
+    ],
+    "questions": [
+      "can cowork assemble a job offer package for me",
+      "how do i draft an offer letter and candidate email together"
+    ],
+    "id": "r-c4fdca0423"
+  },
+  {
+    "title": "On-call handoff brief",
+    "url": "https://academy.claude.com/use-cases/oncall-handoff-brief",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "developer"
+    ],
+    "level": "builder",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Writes the end-of-shift on-call handoff before you log off - pages, incident channels, CS escalations and deploys from the last 7 days, each with status and what to watch.",
+    "who_for": "On-call engineers writing their shift handoff.",
+    "skip_if": "Needs PagerDuty, Slack and GitHub connected plus the prior week's handoff file already saved - each brief is written against the last one, so the first run without history is weaker than the second.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. The repeatable version schedules the brief to generate and post automatically every Monday 9am.",
+    "prerequisites": [
+      "Claude Cowork",
+      "PagerDuty, Slack and GitHub connectors",
+      "prior handoff file",
+      "Engineering plugin (optional)"
+    ],
+    "teaches": [
+      "write an on-call shift handoff brief that builds on the previous one"
+    ],
+    "keywords": [
+      "on-call handoff brief claude",
+      "cowork shift handoff",
+      "automate on-call handoff"
+    ],
+    "questions": [
+      "can cowork write my on-call handoff brief",
+      "how do i automate on-call shift handoffs"
+    ],
+    "id": "r-a2f1ea505c"
+  },
+  {
+    "title": "Open a new role",
+    "url": "https://academy.claude.com/use-cases/open-new-role",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder",
+      "pm"
+    ],
+    "level": "builder",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Replaces the hiring kickoff meeting with a structured intake interview - Claude questions you on ownership, skills, level and 90-day success, pushes back where vague, then writes the role spec.",
+    "who_for": "Hiring managers opening a new role who want a consistent spec without a kickoff meeting.",
+    "skip_if": "Needs a role spec template, leveling guide and team charter document in the working folder - the prompt is written to interrogate and push back on vague answers, so a rushed conversation won't get a tight role spec.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Deliverable includes a hand-off list of items still unresolved for the recruiter.",
+    "prerequisites": [
+      "Claude Cowork",
+      "role spec template, leveling guide, team charter",
+      "Human Resources plugin (optional)"
+    ],
+    "teaches": [
+      "run a structured intake interview to produce a consistent role spec without a kickoff meeting"
+    ],
+    "keywords": [
+      "open a new role claude",
+      "hiring intake interview ai",
+      "cowork role spec generator"
+    ],
+    "questions": [
+      "can cowork interview me to write a role spec",
+      "how do i skip the hiring kickoff meeting"
+    ],
+    "id": "r-4b9338b108"
+  },
+  {
+    "title": "Organize files across your desktop",
+    "url": "https://academy.claude.com/use-cases/organize-files-by-whats-in-them",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "non-technical"
+    ],
+    "level": "never-used",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Points Claude at a cluttered desktop and walks away - it opens and reads the files, works out what each one actually is, and sorts them into folders based on contents.",
+    "who_for": "Someone with a genuinely messy desktop who wants files sorted by what's actually in them, not their filename.",
+    "skip_if": "Runs on your own machine through the Claude Desktop app, reading and sorting files locally by content rather than filename - you have to grant desktop or folder access and name any folders to exclude up front.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min.",
+    "prerequisites": [
+      "Claude Desktop app",
+      "desktop or folder access granted"
+    ],
+    "teaches": [
+      "sort a cluttered folder of files by their actual contents rather than filename"
+    ],
+    "keywords": [
+      "organize desktop files claude",
+      "sort files by content claude desktop",
+      "cowork clean up desktop"
+    ],
+    "questions": [
+      "can claude organize my messy desktop",
+      "does claude sort files by filename or content"
+    ],
+    "id": "r-50bc05e424"
+  },
+  {
+    "title": "Organize files in Google Drive",
+    "url": "https://academy.claude.com/use-cases/organize-files-in-google-drive",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "non-technical"
+    ],
+    "level": "basic",
+    "topics": [
+      "agents"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Claude in Chrome scans a messy Google Drive, proposes a folder structure, moves files into it, and flags duplicates and stale files for review before finalizing.",
+    "who_for": "Someone with a disorganized Google Drive who wants it sorted with a review step before anything moves.",
+    "skip_if": "Claude in Chrome must be a paid subscriber feature, and it drives the Drive web UI under your own logged-in session rather than an API connector - it shows you the proposed folder structure and uncertain files before moving anything, so it's not fully autonomous.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Scope includes Downloads, Shared with me, and root level.",
+    "prerequisites": [
+      "Claude in Chrome extension (paid)",
+      "logged into Google Drive"
+    ],
+    "teaches": [
+      "propose and apply a folder structure to a messy Google Drive with a review step first"
+    ],
+    "keywords": [
+      "organize google drive claude",
+      "claude in chrome google drive",
+      "clean up google drive ai"
+    ],
+    "questions": [
+      "can claude organize my google drive",
+      "does claude move files automatically or ask first"
+    ],
+    "id": "r-4254d1c2f5"
+  },
+  {
+    "title": "Organize your business finances",
+    "url": "https://academy.claude.com/use-cases/organize-your-business-finances",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder"
+    ],
+    "level": "confident",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Turns a year of inconsistently formatted freelance invoices into a filterable financial dashboard spreadsheet showing income, monthly breakdown, and clients ranked by revenue.",
+    "who_for": "Solo or freelance business owners wanting clarity on their own invoicing data.",
+    "skip_if": "Needs your own invoice file (spreadsheet or CSV) with date, client, project and amount columns - built specifically for a solo/freelance business owner, not corporate finance.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Prompt asks for a specific 'quiet luxury' aesthetic with a muted sage green accent.",
+    "prerequisites": [
+      "an invoice file (spreadsheet or CSV)"
+    ],
+    "teaches": [
+      "build a filterable financial dashboard from inconsistently formatted invoice data"
+    ],
+    "keywords": [
+      "freelance finances dashboard claude",
+      "organize invoices spreadsheet ai",
+      "claude financial dashboard"
+    ],
+    "questions": [
+      "can claude organize my freelance invoices into a dashboard",
+      "how do i turn messy invoice data into a report"
+    ],
+    "id": "r-dde2b36a8c"
+  },
+  {
+    "title": "Organize your legal workflows using Projects",
+    "url": "https://academy.claude.com/use-cases/organize-your-legal-workflows-using-projects",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder",
+      "pm"
+    ],
+    "level": "confident",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Sets up a Claude Project for high-volume contract review so your playbook, template and standard terms are uploaded once and referenced automatically on every review.",
+    "who_for": "Contract review teams doing high volume (worked example: about 30 NDAs a week) who re-explain standards every time.",
+    "skip_if": "Worth it mainly at volume - the worked example is about 30 NDAs a week - so for occasional one-off contract review the setup overhead (uploading a playbook, template and term lists once) outweighs the benefit.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Claude generates the Project's own standards guide and custom instructions from your uploaded materials.",
+    "prerequisites": [
+      "a Claude account with Projects",
+      "your playbook, template and term lists"
+    ],
+    "teaches": [
+      "set up a Claude Project that auto-references your review standards on every contract"
+    ],
+    "keywords": [
+      "claude projects for legal review",
+      "reuse contract playbook claude",
+      "organize legal workflows claude"
+    ],
+    "questions": [
+      "can claude remember our contract review standards automatically",
+      "how do i set up a claude project for high-volume contract review"
+    ],
+    "id": "r-b0a4f9e6dd"
+  },
+  {
+    "title": "Outside counsel management",
+    "url": "https://academy.claude.com/use-cases/outside-counsel-review",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder",
+      "pm"
+    ],
+    "level": "builder",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Reviews a law firm's billing against your billing guidelines, flags off-pattern time entries and matters drifting from budget, and drafts talking points for the relationship-partner call.",
+    "who_for": "Legal operations managing outside counsel spend - the buyer side of legal, not the practicing lawyer.",
+    "skip_if": "Needs your own billing guidelines document and a matter budget tracker in a local folder - it's written for the buyer side of legal (managing outside counsel spend), not for a practicing lawyer's own casework.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Connects to iManage/NetDocuments by name; deliverable is a negotiation aid, not just a variance report.",
+    "prerequisites": [
+      "billing guidelines document",
+      "matter budget tracker",
+      "iManage/NetDocuments connector (optional)"
+    ],
+    "teaches": [
+      "review outside counsel billing against your guidelines and prep talking points for a spend conversation"
+    ],
+    "keywords": [
+      "outside counsel spend review claude",
+      "legal billing guideline compliance",
+      "cowork legal ops spend"
+    ],
+    "questions": [
+      "can cowork review our outside counsel's billing",
+      "how do i flag budget drift on legal matters"
+    ],
+    "id": "r-c412347e82"
+  },
+  {
+    "title": "Package your brand guidelines in a skill",
+    "url": "https://academy.claude.com/use-cases/package-your-brand-guidelines-in-a-skill",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder",
+      "designer"
+    ],
+    "level": "builder",
+    "topics": [
+      "skills"
+    ],
+    "format": "docs",
+    "time": "under-1hr",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Converts brand guidelines (colors, fonts, spacing, application rules) into a reusable Claude Skill so every deck, doc or spreadsheet Claude makes comes out on-brand.",
+    "who_for": "Marketing or brand ops teams wanting brand-consistent output without re-specifying it each time.",
+    "skip_if": "Needs Skills and file creation enabled in claude.ai settings plus your own real brand guidelines to encode - the finished skill ships as a ZIP with Python utility modules, more engineering than a simple style prompt.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 20 min. Uses Anthropic's own brand (hex codes, Poppins/Lora typography) as its worked example.",
+    "prerequisites": [
+      "file creation and Skills capabilities enabled",
+      "your own brand guidelines"
+    ],
+    "teaches": [
+      "package brand guidelines into a reusable Skill that keeps generated output on-brand"
+    ],
+    "keywords": [
+      "package brand guidelines as skill",
+      "claude brand skill",
+      "on-brand output skill claude"
+    ],
+    "questions": [
+      "can claude keep every output on-brand automatically",
+      "how do i turn brand guidelines into a reusable claude skill"
+    ],
+    "id": "r-14a4f7d474"
   }
 ]
