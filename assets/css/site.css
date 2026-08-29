@@ -530,41 +530,252 @@ button, .btn, .nav-link, .filter-option { min-height: var(--tap-min); }
   color: var(--text-secondary);
 }
 
-.step-list { display: flex; flex-direction: column; gap: 0; margin-top: var(--space-32); }
+/* ------------------------------------------------------------- path step card ----
+   A single path used to render as a numbered list of paragraphs. Nobody scans that;
+   they read it in full or they leave. Design worked out and checked in a browser at
+   docs/design/sample-path-card.html and docs/design/path-card-spec.md — this is that
+   design, not a reinterpretation of it.
 
-.step {
-  display: grid;
-  grid-template-columns: var(--step-col) minmax(0, 1fr);
+   Three rules shape all of it:
+
+   1. The tint goes on the tile, never behind text. --bark is 4.60:1 on the page
+      canvas and has no headroom left; put it on a tint and it fails AA. Anthropic's
+      own cards do the same — colour on the image area, words on white. That is not
+      a style choice, it is the only version that passes.
+
+   2. One click. The whole card is pressable, and it points at our resource page,
+      not at the resource. Our page carries the Skip if line and the report link,
+      and sending someone past those is the thing this site exists to prevent.
+
+   3. Badge the exception, not the rule. Most of the catalogue is free, so a "Free"
+      badge on nine cards in ten is decoration. A "Sign-up needed" badge on the
+      tenth is information.
+   ---------------------------------------------------------------------------- */
+
+/* Capped. At the full 1280px page width the card would run 1250px, the prose still
+   stops at --measure, and the arrow ends up marooned 400px from the nearest thing it
+   relates to. 880 = 200 tile + 24 gap + ~600 text, and 600px is what 50ch of 20px
+   Tiempos measures — the card ends where the sentence ends. */
+.sp-list {
+  display: flex; flex-direction: column;
   gap: var(--space-24);
-  padding-bottom: var(--space-32);
+  margin-top: var(--space-32);
+  max-width: 880px;
+}
+
+/* A path is an order, and that is the entire product. Cards on their own read as a
+   set; a hairline in the gap says sequence. Browse's cards get no such line — they
+   are not ordered, and this site does not use a device that is not earning its
+   keep. */
+.sp-item { position: relative; }
+.sp-item + .sp-item::before {
+  content: ""; position: absolute;
+  left: calc(var(--hairline) + var(--card-padding) + 100px);  /* centre of the tile */
+  top: calc(var(--space-24) * -1);
+  width: var(--hairline); height: var(--space-24);
+  background: var(--stone);
+}
+
+.sp-card {
   position: relative;
+  display: grid;
+  grid-template-columns: 200px minmax(0, 1fr);
+  gap: var(--space-24);
+  background: var(--surface-card);
+  border: var(--hairline) solid var(--border);
+  border-radius: var(--radius-card);
+  padding: var(--card-padding);
+  /* Named properties, never `all` — `all` animates border-radius and background
+     position too, and those are layout-adjacent. */
+  transition: border-color 200ms var(--ease-card),
+              transform    200ms var(--ease-card);
 }
-/* The spine. Makes the order unmistakable when you land halfway down. */
-.step::before {
-  content: "";
+
+/* Touch devices fire :hover on tap, so an ungated hover lift would stick after the
+   press. */
+@media (hover: hover) and (pointer: fine) {
+  .sp-item:hover .sp-card { border-color: var(--border-strong); transform: translateY(-2px); }
+  .sp-item:hover .sp-go   { transform: translateX(2px); border-color: var(--border-strong); }
+  .sp-item:hover .sp-title a { text-decoration: underline; text-underline-offset: var(--underline-offset); }
+}
+/* Press feedback. 0.995, not 0.97 — an 880px card scaling by 3% reads as a glitch;
+   the same percentage on a 120px button reads as a press. */
+.sp-item:active .sp-card { transform: scale(0.995); transition-duration: 120ms; }
+
+/* ------------------------------------------------------------- one click ----
+   The stretched-link pattern. The <a> stays on the title, so a screen reader
+   announces one link named by the title rather than a link named "card". The
+   ::after spreads that same link over the whole card. */
+.sp-title a::after {
+  content: ""; position: absolute; inset: 0;
+  border-radius: var(--radius-card);
+}
+/* Focus must ring the card, not the four words of the title. */
+.sp-title a:focus-visible { outline: none; }
+.sp-card:has(a:focus-visible) {
+  outline: var(--focus-ring); outline-offset: var(--focus-offset);
+}
+/* Anything that must stay separately clickable sits above the overlay. */
+.sp-cta { position: relative; z-index: 1; }
+
+/* ----------------------------------------------------------------- tile ---- */
+/* align-self:start, or the grid stretches the tile to the height of the text
+   column and six steps render as six tall coloured slabs. */
+.sp-tile {
+  position: relative;
+  align-self: start;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-outline);
+  background: var(--surface-panel);
+  display: grid; place-items: center;
+  overflow: hidden;
+}
+.sp-tile img {
+  width: 76px; height: 76px;
+  transition: transform 260ms var(--ease-card);
+}
+@media (hover: hover) and (pointer: fine) {
+  .sp-item:hover .sp-tile img { transform: scale(1.04); }
+}
+
+/* One chip language across the whole tile: ivory, hairline, 12px, square. The chips
+   are self-contained, so whatever tint sits underneath cannot affect their
+   contrast — which is the reason the tint is allowed to exist at all. */
+.sp-chip {
   position: absolute;
-  left: calc(var(--step-col) / 2 - var(--hairline)); top: var(--step-num); bottom: 0;
-  width: var(--hairline); background: var(--border);
+  display: inline-flex; align-items: center; gap: var(--space-4);
+  padding: var(--pill-pad-y) var(--pill-pad-x);
+  background: var(--ivory-light);
+  border: var(--hairline) solid var(--border);
+  font: var(--weight-medium) var(--text-caption)/var(--leading-caption) var(--font-sans);
+  letter-spacing: var(--tracking-caption);
+  color: var(--text-primary);
+  white-space: nowrap;
 }
-.step:last-child::before { display: none; }
+.sp-time { top: var(--space-12); right: var(--space-12); }
+/* Only rendered when the resource is not simply free. Bottom right, not top left:
+   at 200px the tile cannot hold "Sign-up needed" and "1 hour" on the same row, and
+   one corner each keeps every chip in a fixed, scannable place. */
+.sp-cost { bottom: var(--space-12); right: var(--space-12); color: var(--clay-text); }
 
-.step-num {
-  width: var(--step-num); height: var(--step-num);
-  display: flex; align-items: center; justify-content: center;
-  border: var(--hairline) solid var(--border-strong);
-  border-radius: 50%;
-  background: var(--surface-canvas);
-  position: relative; z-index: 1;
-  font: var(--weight-medium) var(--text-caption)/1 var(--font-sans);
+/* The publisher mark: the real logo, or nothing. See LC.publisherMark in ui.js and
+   docs/design/path-card-spec.md — initials were tried and rejected, because a
+   lettered square is not a mark, it is an apology for not having one. */
+.sp-mark {
+  bottom: var(--space-12); left: var(--space-12);
+  width: 28px; height: 28px;
+  padding: 0;
+  justify-content: center;
+}
+.sp-mark img { width: 16px; height: 16px; transform: none !important; }
+
+/* ----------------------------------------------------------------- text ---- */
+/* "Step 1 · Article" on one line. Two lines here would push the title down and buy
+   nothing. */
+.sp-kicker {
+  font: var(--weight-medium) var(--text-caption)/var(--leading-caption) var(--font-sans);
+  letter-spacing: var(--tracking-caption);
+  color: var(--text-secondary);
+}
+.sp-num { color: var(--text-primary); font-weight: var(--weight-semibold); }
+
+.sp-head { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--space-16); }
+
+.sp-title {
+  margin-top: var(--space-4);
+  font: var(--weight-semibold) var(--text-subheading)/var(--leading-subheading) var(--font-serif);
+  letter-spacing: var(--tracking-subheading);
+  text-wrap: balance;
+}
+.sp-title a { color: inherit; text-decoration: none; }
+
+.sp-source {
+  margin-top: var(--space-4);
+  font: var(--weight-regular) var(--text-caption)/var(--leading-caption) var(--font-sans);
+  color: var(--text-secondary);
 }
 
-/* Ours, not the resource's — same weight `Skip if:` carries on a card. */
-.step-why {
-  margin-top: var(--space-12);
+/* The affordance. It moves 2px on hover — enough to register, not enough to notice.
+   Decorative, and the card is seen once, so it earns its place. */
+.sp-go {
+  flex: 0 0 auto;
+  width: 32px; height: 32px; border-radius: 50%;
+  border: var(--hairline) solid var(--border);
+  display: grid; place-items: center;
+  color: var(--text-secondary);
+  transition: transform 200ms var(--ease-card), border-color 200ms var(--ease-card);
+}
+
+/* Ours, and the reason the path exists — the same weight Skip if carries on a
+   browse card. If this ever reads as a caption, the page got worse. */
+.sp-why {
+  margin-top: var(--space-16);
+  padding-top: var(--space-12);
+  border-top: var(--hairline) solid var(--line-quiet);
   font: var(--weight-regular) var(--text-body)/var(--leading-body) var(--font-serif);
+  color: var(--text-primary);
   max-width: var(--measure);
   text-wrap: pretty;
 }
+
+.sp-foot {
+  margin-top: var(--space-16);
+  display: flex; flex-wrap: wrap; gap: var(--space-12); align-items: center;
+  font: var(--weight-regular) var(--text-caption)/var(--leading-caption) var(--font-sans);
+  color: var(--text-secondary);
+}
+
+/* --------------------------------------------------------------- motion ---- */
+/* Six cards arriving at once looks like a page load. Staggered, it looks like a
+   list. 40ms apart — six items at 80ms apart would take half a second to finish,
+   longer than the page takes to become useful. */
+.sp-item {
+  opacity: 0;
+  transform: translateY(8px);
+  animation: sp-in 320ms var(--ease-card) forwards;
+}
+.sp-item:nth-child(1) { animation-delay:   0ms; }
+.sp-item:nth-child(2) { animation-delay:  40ms; }
+.sp-item:nth-child(3) { animation-delay:  80ms; }
+.sp-item:nth-child(4) { animation-delay: 120ms; }
+.sp-item:nth-child(5) { animation-delay: 160ms; }
+.sp-item:nth-child(6) { animation-delay: 200ms; }
+@keyframes sp-in { to { opacity: 1; transform: translateY(0); } }
+
+/* Reduced motion is fewer and gentler, not none. The fade stays because it aids
+   comprehension. Every movement goes.
+   The `!important` on the duration is load-bearing, not decoration: this file
+   already carries a blanket `*, *::before, *::after { animation-duration: 0.01ms
+   !important }` near the top, and `!important` beats source order and specificity
+   both — without matching it here, "the fade stays" would be false the moment a
+   reader actually turned reduced motion on, collapsed to 0.01ms same as everything
+   else. `.sp-item`'s specificity beats the universal selector's on its own once
+   the two are both important, so this is the one line doing the work. */
+@media (prefers-reduced-motion: reduce) {
+  .sp-item { transform: none; animation: sp-fade 200ms ease forwards !important; }
+  @keyframes sp-fade { to { opacity: 1; } }
+  .sp-card, .sp-tile img, .sp-go { transition-property: border-color, color; }
+  .sp-item:hover .sp-card,
+  .sp-item:active .sp-card,
+  .sp-item:hover .sp-tile img,
+  .sp-item:hover .sp-go { transform: none; }
+}
+
+/* --------------------------------------------------------------- tints ----
+   Three warm tints rotating by position. Decorative, and honest about it — they
+   break the wall, they do not encode anything. Keyed to format was tried and
+   rejected: the palette is warm-only by rule (line 74 above), so seven distinct
+   tints inside it do not exist — docs and repo landed three hex points apart.
+   No sage, no lavender, no blue.
+   Nothing here is a token. Three hex values used in one place do not earn a name,
+   and naming them would invite their use somewhere the contrast has not been
+   checked. */
+.sp-item:nth-child(3n+1) .sp-tile { background: #e3dacc; }
+.sp-item:nth-child(3n+2) .sp-tile { background: #f0ddd3; }
+/* Was #e9e4d3, which sat three points from the oat and read as the same colour
+   when two tiles landed next to each other. Pushed yellower — that it needed the
+   push is the evidence that three is the ceiling. */
+.sp-item:nth-child(3n+3) .sp-tile { background: #eee6cf; }
 
 /* ------------------------------------------------------------- resource ---- */
 
@@ -644,9 +855,13 @@ button, .btn, .nav-link, .filter-option { min-height: var(--tap-min); }
   .sheet-foot { padding: var(--space-16); border-top: var(--hairline) solid var(--border); }
   .sheet-foot .btn { width: 100%; }
 
-  .step { grid-template-columns: var(--step-col-sm) minmax(0, 1fr); gap: var(--space-16); }
-  .step::before { left: calc(var(--step-col-sm) / 2 - var(--hairline)); }
-  .step-num { width: var(--space-32); height: var(--space-32); }
+  /* Full width now, so the 4:3 tile would be a 256px slab on a 390px phone. A band
+     keeps the drawing and the chips without pushing the title below the fold. */
+  .sp-card { grid-template-columns: minmax(0, 1fr); gap: var(--space-16); }
+  .sp-tile { aspect-ratio: 16 / 7; }
+  .sp-tile img { width: 60px; height: 60px; }
+  .sp-item + .sp-item::before { left: 50%; }
+  .sp-go { display: none; }   /* nothing hovers on a phone */
 }
 
 .hidden { display: none !important; }

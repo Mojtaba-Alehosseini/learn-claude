@@ -25,12 +25,23 @@
     "never-used": "never used Claude", "basic": "used it a little",
     "confident": "used it a lot", "builder": "built things with it"
   };
+  /* Short. A path step card puts this in a 200px tile corner next to a cost chip —
+     "Sign-up needed" and "one hour" do not fit the same row, and they collided when
+     tried. One vocabulary, not a chip variant: this same object drives the Browse
+     filter rail and every card's chip row, so the words must read in all three
+     places or they drift, which is the fault this file exists to prevent. */
   LC.TIME = {
-    "under-15min": "15 minutes", "under-1hr": "one hour",
-    "half-day": "a half day", "multi-day": "several days"
+    "under-15min": "15 min", "under-1hr": "1 hour",
+    "half-day": "half a day", "multi-day": "several days"
   };
+  /* "free, sign-up needed" was fine as a filter-panel label and too long for a path
+     step tile: at 200px the tile cannot hold "free, sign-up needed" and "1 hour" on
+     the same row, and it collided when tried. "Free" is also redundant on this one —
+     every cost value in this catalogue that is not `free` is `free-account`,
+     `paid-once` or `subscription`, so pairing it with the plain word "free" answers
+     a question nobody who reads the chip is asking. */
   LC.COST = {
-    "free": "free", "free-account": "free, sign-up needed",
+    "free": "free", "free-account": "sign-up needed",
     "paid-once": "pay once", "subscription": "subscription"
   };
   LC.FORMAT = {
@@ -163,6 +174,29 @@
       return '<span class="publisher-official">' + s + '</span>';
     }
     return s;
+  };
+
+  /* The publisher's own mark, on a path step card, or nothing.
+     The host-to-slug map is data/publisher-marks.json, built once by
+     scripts/fetch-publisher-marks.py and mirrored here like every other data file — see
+     scripts/build-data-js.py. Real means a file we hold: fetched at build time into
+     assets/icons/publishers/<slug>.png, committed, never requested at render. A favicon
+     service called per card would send every reader's browsing to a third party each
+     time the page loads.
+     Nine marks cover 61% of the catalogue, measured 2026-08-28. Every other host
+     returns "" here and the corner stays empty. Initials in a lettered square were
+     built and rejected — a lettered square is not a mark, it is an apology for not
+     having one, and it would make 129 unrelated publishers look like they share a
+     house style they do not share. */
+  LC.publisherMark = function (item) {
+    var marks = window.LC_PUBLISHER_MARKS || {};
+    var host;
+    try { host = new URL(item.url).hostname.replace(/^www\./, ""); }
+    catch (e) { return ""; }
+    var slug = marks[host];
+    if (!slug) return "";
+    return '<span class="sp-chip sp-mark"><img src="assets/icons/publishers/' +
+           LC.esc(slug) + '.png" alt="" width="16" height="16"></span>';
   };
 
   /* "Anthropic Academy · Anthropic" says the same thing twice. Only show the author

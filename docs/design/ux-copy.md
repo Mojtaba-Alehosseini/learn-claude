@@ -134,10 +134,17 @@ Prompt: **How much Claude do you know?**
 
 | Value | Label |
 |---|---|
-| `under-15min` | 15 minutes |
-| `under-1hr` | one hour |
-| `half-day` | a half day |
+| `under-15min` | 15 min |
+| `under-1hr` | 1 hour |
+| `half-day` | half a day |
 | `multi-day` | several days |
+
+Shortened 2026-08-29 for the path step card, where the time chip shares a 200px tile
+corner with a cost chip — "Sign-up needed" and "one hour" do not fit one row. Checked in
+all three places this drives: the Browse filter rail heading ("Time" above "15 min", "1
+hour", "half a day", "several days" — reads as a list, not a sentence, so the shorter
+forms are fine unparsed), the chip row on every card, and the new tile corner on a path
+step.
 
 ### Below the fold — what this is
 
@@ -203,9 +210,14 @@ Time stays visible in the panel — it is a useful filter, just not a good openi
 | Value | Label |
 |---|---|
 | `free` | free |
-| `free-account` | free, sign-up needed |
+| `free-account` | sign-up needed |
 | `paid-once` | pay once |
 | `subscription` | subscription |
+
+Shortened 2026-08-29 for the same reason as Time above: the path step card's tile
+cannot hold "free, sign-up needed" and "1 hour" in the same 200px corner. "Free" was
+also redundant — every value in this row that is not `free` is a sign-up or a payment,
+so pairing one with the word "free" answers a question the chip was not asked.
 
 **Format labels:** video · course · docs · article · hands-on · podcast · code
 

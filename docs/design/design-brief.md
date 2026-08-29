@@ -237,6 +237,21 @@ Sort order everywhere: Read in full → Read by AI → Skimmed → Found only.
 Note: `data/items.json` currently contains no `reviewed` items, because no person has
 confirmed one yet. The state still has to be designed.
 
+### 5.5 Path
+
+A single path renders as cards, one per step, in order — not the numbered list of
+paragraphs it started as. Full spec, with the reasoning, is
+`docs/design/path-card-spec.md`; the working sample that was checked in a browser before
+any of it shipped is `docs/design/sample-path-card.html`.
+
+The short version: a 4:3 tile carries the format drawing and the time/cost/publisher
+chips, so those never sit in text and compete with `why`, which is ours and gets the same
+weight `Skip if:` carries on a browse card. One clay button, on step 1 only — see §4a.
+
+The publisher mark is the real logo or nothing, which is a different rule from §6 below:
+these are not our drawings, so none of that section's rules about outline weight or the
+four brand colours apply to them. Sourcing and the fetch process are in the spec file.
+
 ---
 
 ## 6. Icons

@@ -57,6 +57,20 @@
       '</ol></article>';
   }
 
+  /* Every section heading on the index used to sit bare. A single path has an
+     `intro` line under its title; these headings had nothing, which is the one
+     inconsistency a reader arriving mid-list would notice first. One line each,
+     saying who the section is for — matching the voice `one()` already uses below
+     when a reader arrives at the wrong path ("it was put together for someone
+     else"), not a new voice invented for this. */
+  function sectionNote(label, isTheirs) {
+    return '<p class="path-stats">' +
+      (isTheirs
+        ? 'Every path below is written with ' + LC.esc(label) + ' in mind.'
+        : 'Not written with ' + LC.esc(label) + ' in mind. Open to you anyway.') +
+      '</p>';
+  }
+
   function index(role) {
     if (!paths.length) {
       out.innerHTML = '<h1 class="h1">Paths</h1>' +
@@ -75,7 +89,8 @@
 
     if (label && mine.length) {
       html += '<h2 class="h2" style="margin-top:var(--space-48)">For ' + LC.esc(label) +
-              '</h2><div class="path-list" style="margin-top:var(--space-24)">' +
+              '</h2>' + sectionNote(label, true) +
+              '<div class="path-list" style="margin-top:var(--space-24)">' +
               mine.map(function (p) { return pathCard(p, role); }).join("") + '</div>';
     } else if (label) {
       /* Say it outright. Showing other people's routes and letting the reader work out
@@ -91,7 +106,8 @@
     if (rest.length) {
       if (label) {
         html += '<h2 class="h2" style="margin-top:var(--space-48)">' +
-                (mine.length ? "Other paths" : "The paths that do exist") + '</h2>';
+                (mine.length ? "Other paths" : "The paths that do exist") + '</h2>' +
+                sectionNote(label, false);
       }
       html += '<div class="path-list" style="margin-top:var(--space-24)">' +
               rest.map(function (p) { return pathCard(p, role); }).join("") + '</div>';
@@ -104,13 +120,79 @@
 
   /* ----------------------------------------------------------- one path ---- */
 
+  /* The right-pointing arrow inside .sp-go. Static markup, not built per step — six
+     identical inline SVGs cost nothing a browser cares about and nothing here is
+     going to be templated further. */
+  var GO_ARROW = '<svg width="14" height="14" viewBox="0 0 16 16" fill="none" ' +
+    'stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4" ' +
+    'stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+  function capitalize(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
+
+  function stepCard(it, why, i) {
+    var fresh = LC.freshness(it);
+    var timeChip = '<span class="sp-chip sp-time">' +
+      LC.esc(LC.TIME[it.time] || it.time) + '</span>';
+    /* Bottom right, and only when the resource is not simply free — most of the
+       catalogue is, and a "Free" badge on nine cards in ten would be decoration.
+       "Sign-up needed" on the tenth is information. */
+    var costChip = it.cost !== "free"
+      ? '<span class="sp-chip sp-cost">' + LC.esc(LC.COST[it.cost] || it.cost) +
+        '</span>'
+      : "";
+    var mark = LC.publisherMark(it);
+    var author = LC.authorLine(it);
+    var href = LC.href(it);
+
+    return '' +
+      '<div class="sp-item"><article class="sp-card">' +
+        '<div class="sp-tile" data-format="' + LC.esc(it.format) + '">' +
+          '<img src="assets/icons/formats/' + LC.esc(it.format) +
+            '-alpha.png" alt="">' +
+          mark + costChip + timeChip +
+        '</div>' +
+        '<div>' +
+          '<div class="sp-head">' +
+            '<div>' +
+              '<p class="sp-kicker"><span class="sp-num">Step ' + (i + 1) +
+                '</span> · ' + LC.esc(capitalize(LC.FORMAT[it.format] || it.format)) +
+                '</p>' +
+              '<h2 class="sp-title"><a href="' + LC.esc(href) + '">' +
+                LC.esc(it.title) + '</a></h2>' +
+              '<p class="sp-source">' + LC.publisher(it) + author + '</p>' +
+            '</div>' +
+            '<span class="sp-go" aria-hidden="true">' + GO_ARROW + '</span>' +
+          '</div>' +
+          '<p class="sp-why">' + LC.esc(why) + '</p>' +
+          /* This card's one clay element, on step 1 only. A path is a sequence with
+             a first step, so unlike Browse or the path index — where every card is
+             an equally valid choice — there genuinely is one thing to press.
+             Points at our own resource page rather than straight out, because that
+             page carries the Skip if line and the report link, and sending someone
+             past those is the whole thing this site exists to prevent. */
+          (i === 0
+            ? '<p class="sp-cta" style="margin-top:var(--space-16)">' +
+              '<a class="btn btn-primary" href="' + LC.esc(href) + '">' +
+              'Start with this</a></p>'
+            : "") +
+          '<p class="sp-foot">' + LC.badge(it.tier) +
+            '<span>' + LC.esc(fresh.checked) + '</span>' +
+            (fresh.note ? '<span class="' + fresh.cls + '">' + LC.esc(fresh.note) +
+                          '</span>' : '') +
+          '</p>' +
+        '</div>' +
+      '</article></div>';
+  }
+
   function one(p, role) {
     var rows = stepsWithItems(p);
     document.title = p.title + " — Learn Claude";
     var label = role && LC.ROLE[role] ? LC.ROLE[role] : null;
+    var qs = role ? "?role=" + encodeURIComponent(role) : "";
 
-    var html = '<p class="meta"><a href="paths.html' +
-      (role ? "?role=" + encodeURIComponent(role) : "") + '">← All paths</a></p>' +
+    /* "← All paths" said how to leave and not where you were. */
+    var html = '<p class="meta"><a href="paths.html' + qs + '">Paths</a> / ' +
+      LC.esc(p.title) + '</p>' +
       '<h1 class="h1" style="margin-top:var(--space-16)">' + LC.esc(p.title) + '</h1>' +
       '<p class="lede" style="margin-top:var(--space-16)">' + LC.esc(p.intro) + '</p>' +
       whoFor(p) +
@@ -123,42 +205,11 @@
         : '') +
       '<p class="path-stats">' + p.step_count + ' steps · ' +
         LC.esc(p.total_time_label) + ' · ' + LC.esc(p.cost) + '</p>' +
-      '<div class="step-list">';
-
-    rows.forEach(function (r, i) {
-      var it = r.item, fresh = LC.freshness(it);
-      html += '<div class="step">' +
-        '<div><span class="step-num">' + (i + 1) + '</span></div>' +
-        '<div>' +
-          '<p class="caption">Step ' + (i + 1) + '</p>' +
-          '<h2 class="h2" style="margin-top:var(--space-4)">' +
-            '<a href="' + LC.esc(LC.href(it)) + '">' + LC.esc(it.title) + '</a></h2>' +
-          '<p class="card-source meta">' + LC.publisher(it) + '</p>' +
-          '<div class="chip-row" style="margin-top:var(--space-12)">' +
-            LC.badge(it.tier) + LC.chips(it) + '</div>' +
-          /* Ours, and the reason the path exists. Serif, full size. */
-          '<p class="step-why">' + LC.esc(r.step.why) + '</p>' +
-          /* This view's one clay element, on step 1 only.
-             A path is a sequence with a first step, so unlike Browse or the path index
-             there genuinely is one thing to press, and the page had no verb on it at
-             all. It is deliberately NOT on the path index: five cards exist there so
-             the reader can choose between them, and colouring one is an argument that
-             page is not making. Points at our own resource page rather than straight
-             out, because that page carries the Skip if line and the report link, and
-             sending someone past those is the whole thing this site exists to prevent. */
-          (i === 0
-            ? '<p style="margin-top:var(--space-16)">' +
-              '<a class="btn btn-primary" href="' + LC.esc(LC.href(it)) + '">' +
-              'Start with this</a></p>'
-            : '') +
-          '<p class="card-foot"><span>' + LC.esc(fresh.checked) + '</span>' +
-            (fresh.note ? '<span class="' + fresh.cls + '">' + LC.esc(fresh.note) +
-                          '</span>' : '') + '</p>' +
-        '</div></div>';
-    });
-
-    html += '</div><p class="meta" style="margin-top:var(--space-32)">' +
-            'We do not track your progress. Nothing here needs an account.</p>';
+      '<div class="sp-list">' +
+      rows.map(function (r, i) { return stepCard(r.item, r.step.why, i); }).join("") +
+      '</div>' +
+      '<p class="meta" style="margin-top:var(--space-32)">' +
+      'We do not track your progress. Nothing here needs an account.</p>';
     out.innerHTML = html;
   }
 

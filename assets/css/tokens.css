@@ -210,13 +210,6 @@
   --rail-width:     264px;  /* the browse filter rail */
   --footer-col-min: 140px;  /* below this the four footer columns start wrapping */
 
-  /* The numbered-step gutter on Paths. The spine is centred on this, so the two
-     are derived with calc() rather than written out — 27px and 19px used to sit
-     in the stylesheet as bare numbers and neither said what it was half of. */
-  --step-col:     56px;
-  --step-col-sm:  40px;     /* the same column on a phone */
-  --step-num:     40px;     /* the circle inside it; --space-32 on a phone */
-
   /* ------------------------------------------------------------------------
      Line weights. The system has exactly two: a hairline, and the thicker rule
      that marks the current page in the nav.
@@ -270,6 +263,14 @@
   --dur-fast: 120ms;
   --dur-base: 220ms;
   --ease-out: cubic-bezier(.4, 0, .2, 1);
+
+  /* Emil Kowalski's point: the built-in curves are too weak, they lack the punch that
+     makes a movement look intended. --ease-out above is Material's standard curve;
+     this is the stronger variant the path step card uses for its hover, press and
+     entry motion. Scoped to that one component rather than swapped globally — --ease-out
+     also drives the filter rail, the icons and the mobile sheet, and moving those is a
+     separate decision from this one. */
+  --ease-card: cubic-bezier(0.23, 1, 0.32, 1);
 
   /* ------------------------------------------------------------------------
      Focus — must be visible everywhere. 2px, never removed.

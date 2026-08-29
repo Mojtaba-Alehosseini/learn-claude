@@ -18,12 +18,19 @@ desktop.ini
 docs/design/reference/icon-drafts/
 docs/design/*.pdf
 
+# Properly keyed and unpremultiplied versions of the seven format icons, made to fix
+# assets/icons/formats/*-alpha.png shipping fully opaque despite the name — see
+# docs/attack/FIX-10.md. The finished result is already copied to assets/icons/formats/;
+# this is the working copy, worth keeping locally but not worth a second copy in git.
+docs/design/scratch-icons/
+
 # Generated from data/*.json by scripts/build-data-js.py. Committing both means every
 # data change shows up as two diffs, one of them unreadable minified JSON.
 # Run ./build.sh after cloning.
 data/items.js
 data/paths.js
 data/search-keywords.js
+data/publisher-marks.js
 
 # --- Deliberately NOT ignored, so nobody adds them later --------------------
 #
