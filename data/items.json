@@ -29055,5 +29055,1231 @@
       "how do i turn brand guidelines into a reusable claude skill"
     ],
     "id": "r-14a4f7d474"
+  },
+  {
+    "title": "Pattern consistency audit",
+    "url": "https://academy.claude.com/use-cases/pattern-consistency-audit",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "designer"
+    ],
+    "level": "builder",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Before designing a new UI pattern, finds every surface in the product that already solves the same problem, so you reuse instead of duplicate.",
+    "who_for": "Product/UX designers or design-system owners checking for existing solutions before building a new pattern.",
+    "skip_if": "Needs a working folder with design system files, screenshots and the product sitemap, plus Figma/GitHub/Amplitude connectors - the real deliverable is converting the audit into a reusable /pattern-audit skill, so a single read-through undersells it.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min.",
+    "prerequisites": [
+      "Claude Cowork",
+      "design system files and product sitemap",
+      "Figma/GitHub/Amplitude connectors (optional)"
+    ],
+    "teaches": [
+      "find existing UI patterns that already solve a problem before designing a new one"
+    ],
+    "keywords": [
+      "pattern consistency audit claude",
+      "find existing ui patterns",
+      "cowork design pattern reuse"
+    ],
+    "questions": [
+      "can cowork find existing patterns before i design a new one",
+      "how do i avoid duplicating ui patterns"
+    ],
+    "id": "r-ee52358653"
+  },
+  {
+    "title": "Performance review administrator",
+    "url": "https://academy.claude.com/use-cases/performance-review-admin",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder",
+      "pm"
+    ],
+    "level": "builder",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Converts a company's written performance framework into one skill every people manager runs to gather input, score competencies, and draft the review.",
+    "who_for": "HR/people-ops teams standardizing how managers write performance reviews.",
+    "skip_if": "Needs your company's written performance framework document, rating definitions and a Gusto connector for roster data - the build prompt hard-constrains the skill to quote your rating definitions verbatim, so it's not generic performance-review advice.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Distributed as a skill every manager runs, not a single review.",
+    "prerequisites": [
+      "Claude Cowork",
+      "your performance framework document and rating definitions",
+      "Gusto connector"
+    ],
+    "teaches": [
+      "distribute a company's performance framework as a skill every manager can run"
+    ],
+    "keywords": [
+      "performance review skill claude",
+      "standardize performance reviews cowork",
+      "hr performance framework skill"
+    ],
+    "questions": [
+      "can cowork standardize how our managers write reviews",
+      "how do i turn our performance framework into a skill"
+    ],
+    "id": "r-a4a27f2135"
+  },
+  {
+    "title": "Pipeline reviews",
+    "url": "https://academy.claude.com/use-cases/pipeline-review",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder",
+      "pm"
+    ],
+    "level": "builder",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Scores each open opportunity against stage exit criteria weekly, flags at-risk deals with a one-line reason, and writes the manager-ready review doc.",
+    "who_for": "Sales managers or reps running a weekly pipeline review.",
+    "skip_if": "Needs Salesforce and Google Drive connected plus a stage exit criteria reference document - scores deals against your own defined stage criteria, so it needs those criteria to already exist and be written down.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Scheduled Monday 8am run so the review exists before the meeting starts.",
+    "prerequisites": [
+      "Claude Cowork",
+      "Salesforce and Google Drive connectors",
+      "stage exit criteria document",
+      "Sales plugin (optional)"
+    ],
+    "teaches": [
+      "score pipeline opportunities against stage exit criteria and flag at-risk deals"
+    ],
+    "keywords": [
+      "pipeline review claude",
+      "sales stage exit criteria scoring",
+      "cowork weekly pipeline review"
+    ],
+    "questions": [
+      "can cowork score our sales pipeline against stage criteria",
+      "how do i automate a weekly pipeline review"
+    ],
+    "id": "r-e2e55589df"
+  },
+  {
+    "title": "Plan your career path",
+    "url": "https://academy.claude.com/use-cases/plan-your-career-path",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "non-technical",
+      "developer"
+    ],
+    "level": "confident",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Compares your resume against the jobs you want and produces skill gaps, a timeline, people to contact, and next steps, as a Career Action Tracker and Skills Portfolio Log.",
+    "who_for": "Someone mapping a career change or advancement plan against real job postings.",
+    "skip_if": "Needs your resume in Google Drive with the connector enabled plus Web Search on for current job-market data - and every worked example in the page is tech-specific (PM, product design, UX research).",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Produces two named files: a DOCX Career Action Tracker and an XLSX Skills Portfolio Log.",
+    "prerequisites": [
+      "resume in Google Drive",
+      "Web Search enabled"
+    ],
+    "teaches": [
+      "build a career plan with skill gaps, a timeline and next steps from real job-market data"
+    ],
+    "keywords": [
+      "career path planning claude",
+      "resume gap analysis ai",
+      "claude job search plan"
+    ],
+    "questions": [
+      "can claude help me plan a career change",
+      "how do i find my skill gaps for a target job"
+    ],
+    "id": "r-6da1df1aac"
+  },
+  {
+    "title": "Plan your literature review",
+    "url": "https://academy.claude.com/use-cases/plan-your-literature-review",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "researcher",
+      "student"
+    ],
+    "level": "confident",
+    "topics": [
+      "mcp"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Searches PubMed for a research question, decides what to read first, and organizes evidence with a three-phase reading plan and a visual landscape of study types.",
+    "who_for": "Academic or biomedical researchers starting a literature review.",
+    "skip_if": "Needs the PubMed connector connected - so it only reaches PubMed's biomedical literature, not a general academic search across other disciplines' databases.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Output is a designed Word document, not a plain citation list. Worked example is mouse chronic sleep deprivation.",
+    "prerequisites": [
+      "PubMed connector",
+      "a research question"
+    ],
+    "teaches": [
+      "build a prioritized literature-review reading plan with a visual study-type landscape"
+    ],
+    "keywords": [
+      "literature review plan claude",
+      "pubmed connector research",
+      "claude organize research evidence"
+    ],
+    "questions": [
+      "can claude help me plan a literature review",
+      "how do i prioritize which papers to read first"
+    ],
+    "id": "r-202ab388df"
+  },
+  {
+    "title": "Plan your syllabus",
+    "url": "https://academy.claude.com/use-cases/plan-your-syllabus-see-which-weeks-are-locked",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "teacher"
+    ],
+    "level": "confident",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Finds which weeks of a course are locked by real prerequisite dependencies and which are freely rearrangeable, checked against major textbook orderings.",
+    "who_for": "University instructors deciding whether they can reorder a course's syllabus.",
+    "skip_if": "Needs your actual syllabus attached as a topic list with week numbers - the dependency mapping is checked against named textbook orderings (Mankiw, Blanchard for the economics example), so results may differ if your course doesn't follow one of those.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Each topic gets tagged locked/moderate/flexible; you can test a specific week move and get the rewritten schedule.",
+    "prerequisites": [
+      "your syllabus attached as a topic list"
+    ],
+    "teaches": [
+      "identify which syllabus weeks are locked by prerequisites and which can be freely reordered"
+    ],
+    "keywords": [
+      "plan syllabus claude",
+      "syllabus dependency mapping",
+      "reorder course weeks claude"
+    ],
+    "questions": [
+      "can claude tell me which weeks of my syllabus i can reorder",
+      "how do i check syllabus prerequisite dependencies"
+    ],
+    "id": "r-e03aab374b"
+  },
+  {
+    "title": "Practice case interviews with feedback",
+    "url": "https://academy.claude.com/use-cases/practice-case-interviews-with-feedback",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "student",
+      "non-technical"
+    ],
+    "level": "basic",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Turns an uploaded consulting case into a live practice session - Claude builds a real spreadsheet model with formulas, frameworks and a dashboard, then reviews your reasoning.",
+    "who_for": "Consulting or strategy job candidates practicing case interviews.",
+    "skip_if": "Needs your own case materials uploaded to start from - the value of storing cases in a Project with Memory (to spot recurring framework gaps) only shows up after multiple practice sessions, not the first one.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Builds a real spreadsheet model, not just a chat quiz - plus a separate practice guide of key questions.",
+    "prerequisites": [
+      "case materials to upload"
+    ],
+    "teaches": [
+      "practice a consulting case with a real spreadsheet model and structured feedback"
+    ],
+    "keywords": [
+      "case interview practice claude",
+      "consulting case prep ai",
+      "claude case interview feedback"
+    ],
+    "questions": [
+      "can claude help me practice case interviews",
+      "does claude build a real model for case practice"
+    ],
+    "id": "r-da2d48528c"
+  },
+  {
+    "title": "PRD from a problem statement",
+    "url": "https://academy.claude.com/use-cases/prd-from-a-one-pager",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "pm"
+    ],
+    "level": "builder",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Turns a rough problem statement into a complete PRD in your own template, interviewing you first on constraints and success metrics, with open questions flagged for design review.",
+    "who_for": "Product managers writing a PRD from an early problem statement.",
+    "skip_if": "Needs a working folder with your PRD template and a bulk export of past PRDs so Claude can match your team's depth and style - Claude interviews you before writing anything, so a rushed answer to its questions produces a thin PRD.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 6 min, the shortest use-case in this harvest. Suggests using dictation for the interview stage.",
+    "prerequisites": [
+      "Claude Cowork",
+      "your PRD template and past PRD exports",
+      "Product Management plugin (optional)"
+    ],
+    "teaches": [
+      "turn a rough problem statement into a PRD through a structured interview with flagged open questions"
+    ],
+    "keywords": [
+      "write prd from problem statement",
+      "cowork prd generator",
+      "claude prd interview"
+    ],
+    "questions": [
+      "can cowork write a prd from a rough problem statement",
+      "does claude interview me before writing a prd"
+    ],
+    "id": "r-e98bafbe7a"
+  },
+  {
+    "title": "Preclinical study analysis",
+    "url": "https://academy.claude.com/use-cases/preclinical-study-analysis",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "researcher"
+    ],
+    "level": "builder",
+    "topics": [
+      "mcp"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Pulls data from several preclinical experiments out of Benchling and compiles it into a cross-study report, down to notebook entry IDs and sample counts.",
+    "who_for": "Preclinical biotech/pharma researchers comparing data across multiple lab notebook studies.",
+    "skip_if": "Needs Claude for Desktop specifically (required for the Benchling connector) plus your lab's own experiments already logged in Benchling - it compiles across studies you already have, it doesn't run new experiments.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Worked example compares two named studies down to notebook entry IDs and sample counts.",
+    "prerequisites": [
+      "Claude for Desktop",
+      "Benchling connector",
+      "existing preclinical study data in Benchling"
+    ],
+    "teaches": [
+      "compile a cross-study report from multiple preclinical experiments in Benchling"
+    ],
+    "keywords": [
+      "preclinical study analysis claude",
+      "benchling connector research",
+      "cross-study report claude"
+    ],
+    "questions": [
+      "can claude compile data across multiple preclinical studies",
+      "how do i connect benchling to claude"
+    ],
+    "id": "r-06f3de8071"
+  },
+  {
+    "title": "Prep scattered documents for a compliance audit",
+    "url": "https://academy.claude.com/use-cases/prep-scattered-documents-for-a-compliance-audit",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder",
+      "pm"
+    ],
+    "level": "confident",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Takes a messy local folder of policies, contracts and records and produces a renamed, categorized, audit-ready collection with missing evidence identified against a named framework.",
+    "who_for": "Legal/compliance/GRC staff prepping documents ahead of an audit.",
+    "skip_if": "Needs Claude Desktop plus you supply the actual audit scope or control framework (SOC 2 in the worked example) - without a named framework to map against, there's nothing to sort the documents by.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Worked example sorts 156 documents and names the specific control gaps found.",
+    "prerequisites": [
+      "Claude Desktop",
+      "a folder of policy/contract/record documents",
+      "a named audit framework (e.g. SOC 2)"
+    ],
+    "teaches": [
+      "sort a messy document folder into an audit-ready collection mapped to a control framework"
+    ],
+    "keywords": [
+      "compliance audit document prep claude",
+      "soc 2 document mapping ai",
+      "cowork audit ready folder"
+    ],
+    "questions": [
+      "can claude prep our documents for a compliance audit",
+      "how do i map documents to soc 2 controls"
+    ],
+    "id": "r-4388a3f2a4"
+  },
+  {
+    "title": "Prepare and plan from your calendar",
+    "url": "https://academy.claude.com/use-cases/prepare-and-plan-from-your-calendar",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "non-technical",
+      "business-founder"
+    ],
+    "level": "basic",
+    "topics": [
+      "agents"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Claude in Chrome reads tomorrow's calendar, pulls context from related email threads, flags which meetings need prep, and books rooms for the ones missing them.",
+    "who_for": "Anyone with a meeting-heavy calendar who wants an evening prep routine.",
+    "skip_if": "Claude in Chrome needs to be logged into both Google Calendar and Gmail in separate tabs - and it takes a real action (booking rooms), not just a summary, so double-check the room and time choices before trusting it unattended.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Worked example books specific named rooms with a floor preference.",
+    "prerequisites": [
+      "Claude in Chrome extension",
+      "logged into Google Calendar and Gmail"
+    ],
+    "teaches": [
+      "flag under-prepared meetings and book missing rooms from tomorrow's calendar"
+    ],
+    "keywords": [
+      "prepare from calendar claude",
+      "claude in chrome calendar",
+      "auto book meeting rooms claude"
+    ],
+    "questions": [
+      "can claude prep me for tomorrow's meetings",
+      "does claude in chrome book meeting rooms automatically"
+    ],
+    "id": "r-6a50113b4f"
+  },
+  {
+    "title": "Prepare for sales deals",
+    "url": "https://academy.claude.com/use-cases/prepare-for-sales-deals",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder",
+      "pm"
+    ],
+    "level": "confident",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Pulls comparable closed deals from the CRM, including free-text call notes, and turns the pattern into talking points for an upcoming sales conversation.",
+    "who_for": "Sales reps prepping for a conversation using pattern-matched past deals.",
+    "skip_if": "Needs the HubSpot connector enabled in Settings > Capabilities - and its real value is mining unstructured call notes for patterns, so it needs your CRM to actually have detailed free-text notes, not just structured fields.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Worked example returns 9 comparable deals with names of reps who handled the same objection.",
+    "prerequisites": [
+      "HubSpot connector enabled"
+    ],
+    "teaches": [
+      "find comparable past deals and objection-handling patterns for an upcoming sales conversation"
+    ],
+    "keywords": [
+      "prepare for sales deal claude",
+      "comparable deals crm analysis",
+      "claude sales talking points"
+    ],
+    "questions": [
+      "can claude find comparable past deals for my sales prep",
+      "how do i mine crm notes for sales patterns"
+    ],
+    "id": "r-044461a722"
+  },
+  {
+    "title": "Process batches of vendors with Cowork",
+    "url": "https://academy.claude.com/use-cases/process-batches-of-vendors-with-cowork",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder",
+      "pm"
+    ],
+    "level": "builder",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Onboards several vendors in one session - adds each to a tracker, generates contracts, and fills procurement portal intake forms in the browser via Claude in Chrome.",
+    "who_for": "Procurement or operations staff onboarding multiple vendors at once.",
+    "skip_if": "Needs Claude Desktop plus the Claude in Chrome extension already logged into your procurement portal - it combines local-file Cowork with live browser form-filling in one run, a heavier setup than either alone.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Produces a reviewable plan in the sidebar before acting, generating an MSA and NDA per vendor.",
+    "prerequisites": [
+      "Claude Desktop",
+      "Claude in Chrome connector",
+      "logged into the procurement portal"
+    ],
+    "teaches": [
+      "onboard multiple vendors in one session across a tracker, generated contracts, and browser intake forms"
+    ],
+    "keywords": [
+      "batch process vendors claude",
+      "cowork vendor onboarding",
+      "claude in chrome procurement forms"
+    ],
+    "questions": [
+      "can cowork onboard multiple vendors at once",
+      "how do i fill procurement portal forms with claude"
+    ],
+    "id": "r-9e54ee6e74"
+  },
+  {
+    "title": "Pull metrics from analytics dashboards",
+    "url": "https://academy.claude.com/use-cases/pull-metrics-from-analytics-dashboards",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "pm",
+      "data-analyst"
+    ],
+    "level": "basic",
+    "topics": [
+      "agents"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Claude in Chrome reads weekly product metrics directly off analytics dashboards in open browser tabs and compiles them into one summary table, with no CSV export.",
+    "who_for": "Product managers or analysts compiling a weekly metrics summary across dashboard tools.",
+    "skip_if": "Claude in Chrome needs a paid plan, and the dashboards (Amplitude, Mixpanel, Stripe) must already be open and logged into in Chrome - it reads what's rendered on screen, so a dashboard you haven't opened won't be included.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. The only page in its batch stating a plan requirement outright: 'available to all paid plan users.'",
+    "prerequisites": [
+      "Claude in Chrome (paid plan)",
+      "analytics dashboards open and logged in"
+    ],
+    "teaches": [
+      "compile metrics from multiple open analytics dashboards into one summary without exporting"
+    ],
+    "keywords": [
+      "pull metrics from dashboards claude",
+      "claude in chrome analytics",
+      "compile analytics without csv export"
+    ],
+    "questions": [
+      "can claude read my analytics dashboards directly",
+      "how do i compile metrics from multiple tools without exporting"
+    ],
+    "id": "r-143e8d5a24"
+  },
+  {
+    "title": "Quickly prep for your week",
+    "url": "https://academy.claude.com/use-cases/quickly-prep-for-your-week",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "pm",
+      "business-founder"
+    ],
+    "level": "confident",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Turns next week's Outlook calendar and inbox into a prioritized prep document, detecting overbooking patterns and finding focus-time blocks.",
+    "who_for": "Managers with a meeting-heavy calendar who want a prioritized weekly prep document.",
+    "skip_if": "Needs the Microsoft 365 connector enabled - it reads your Outlook calendar and inbox specifically, so it won't help if your calendar and mail live somewhere else.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Detects overbooking patterns and triages email into urgent vs. medium priority.",
+    "prerequisites": [
+      "Microsoft 365 connector"
+    ],
+    "teaches": [
+      "build a prioritized weekly prep document from Outlook calendar and inbox"
+    ],
+    "keywords": [
+      "prep for the week claude",
+      "outlook calendar prep ai",
+      "weekly priority document claude"
+    ],
+    "questions": [
+      "can claude prep me for next week from outlook",
+      "how do i find focus time blocks in my calendar"
+    ],
+    "id": "r-c233c18727"
+  },
+  {
+    "title": "Reconcile and draft the journal entries",
+    "url": "https://academy.claude.com/use-cases/recon-journal-entries",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "data-analyst",
+      "business-founder"
+    ],
+    "level": "builder",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Reconciles intercompany balances across two subledgers at month-end close and drafts the correcting journal entries, sorted into timing/rounding/true-break buckets.",
+    "who_for": "Accounting teams doing month-end intercompany reconciliation.",
+    "skip_if": "Needs two subledger exports, an FX rate sheet and a JE template already in a working folder - matching is fuzzy on amount and reference after FX normalization, so it needs genuinely comparable data across both subledgers.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Only 'true breaks' get a drafted Dr/Cr entry with memo and support reference.",
+    "prerequisites": [
+      "Claude Cowork",
+      "two subledger exports, an FX rate sheet, a JE template",
+      "Finance plugin (optional)"
+    ],
+    "teaches": [
+      "reconcile intercompany balances and draft only the journal entries for genuine breaks"
+    ],
+    "keywords": [
+      "reconcile intercompany balances claude",
+      "draft journal entries ai",
+      "cowork month end close"
+    ],
+    "questions": [
+      "can cowork reconcile our intercompany balances",
+      "how do i draft journal entries automatically"
+    ],
+    "id": "r-48b52d65bc"
+  },
+  {
+    "title": "Reconcile transactions across your accounts",
+    "url": "https://academy.claude.com/use-cases/reconcile-transactions-across-your-accounts",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder",
+      "data-analyst"
+    ],
+    "level": "builder",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Matches a bank export against a ledger for one month and outputs an annotated reconciliation report, with export of accepted entries as an importable CSV.",
+    "who_for": "Small-business owners or bookkeepers reconciling accounts by hand.",
+    "skip_if": "Runs through the Claude Desktop app with local folder access to your own bank export and chart of accounts - built for a small-business owner or bookkeeper, not enterprise-scale reconciliation.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Worked example is January 2024; a follow-up asks which expense categories needed the most adjustments.",
+    "prerequisites": [
+      "Claude Desktop app",
+      "a bank statement export and chart of accounts"
+    ],
+    "teaches": [
+      "reconcile a bank export against a ledger and export the accepted entries"
+    ],
+    "keywords": [
+      "reconcile bank transactions claude",
+      "small business bookkeeping ai",
+      "claude desktop reconciliation"
+    ],
+    "questions": [
+      "can claude reconcile my bank statement against my books",
+      "how do i export reconciled entries from claude"
+    ],
+    "id": "r-9fe7f776df"
+  },
+  {
+    "title": "Regulatory and compliance",
+    "url": "https://academy.claude.com/use-cases/regulatory-analysis",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder",
+      "pm"
+    ],
+    "level": "builder",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Reads a new regulation against your own products and policies, and drafts a compliance brief covering what changed, what applies to you, and what to do by when.",
+    "who_for": "Legal/compliance teams assessing the impact of a new regulation.",
+    "skip_if": "The Regulatory Legal plugin needs a Team/Enterprise admin to enable the Claude for Legal source first, and the initial /cold-start-interview indexing pass can take 10+ minutes on its own before you even start.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. /reg-feed-watcher filters regulatory feeds by a materiality threshold you set.",
+    "prerequisites": [
+      "Claude Cowork",
+      "Regulatory Legal plugin (admin-enabled)",
+      "the regulation PDF, product descriptions, current policies"
+    ],
+    "teaches": [
+      "draft a regulatory compliance brief with what changed, what applies, and deadlines"
+    ],
+    "keywords": [
+      "regulatory compliance brief claude",
+      "claude for legal regulatory analysis",
+      "cowork compliance review"
+    ],
+    "questions": [
+      "can cowork assess a new regulation's impact on us",
+      "how do i monitor regulatory feeds with claude"
+    ],
+    "id": "r-52af026126"
+  },
+  {
+    "title": "Renewal risk audit",
+    "url": "https://academy.claude.com/use-cases/renewal-risk-audit",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder",
+      "pm"
+    ],
+    "level": "builder",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Scores every account renewing in the next 90 days for risk on usage trend, sentiment, and open commitments, published as a live filterable artifact.",
+    "who_for": "Customer success or sales teams prioritizing which renewals to work first.",
+    "skip_if": "Needs a renewal book CSV, a product-usage CSV and QBR notes already in a working folder - the red/yellow/green score is only as good as those three inputs being current.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Scheduled to rerun every Monday at 7am.",
+    "prerequisites": [
+      "Claude Cowork",
+      "renewal book CSV, product-usage CSV, QBR notes",
+      "Salesforce connector",
+      "Sales plugin (optional)"
+    ],
+    "teaches": [
+      "score upcoming renewals for risk on usage, sentiment and open commitments"
+    ],
+    "keywords": [
+      "renewal risk audit claude",
+      "score account renewal risk",
+      "cowork customer success renewals"
+    ],
+    "questions": [
+      "can cowork score our renewal risk automatically",
+      "how do i prioritize which renewals to work first"
+    ],
+    "id": "r-62e1be4df3"
+  },
+  {
+    "title": "Repurpose content across channels",
+    "url": "https://academy.claude.com/use-cases/repurpose-content",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder",
+      "pm"
+    ],
+    "level": "builder",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Turns one piece of source content (a webinar or blog post) into a blog post, LinkedIn thread and short social posts in the company's own voice, matched against recent HubSpot posts.",
+    "who_for": "Marketing teams repurposing a webinar or long-form piece across channels.",
+    "skip_if": "Needs the HubSpot connector specifically for voice-matching against your recent posts - without it, the repurposed content won't be checked against your actual published tone.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Prompt instructs leading with the talk's strongest point instead of recapping the agenda.",
+    "prerequisites": [
+      "Claude Cowork",
+      "webinar transcript/slides and brand voice guide",
+      "HubSpot connector"
+    ],
+    "teaches": [
+      "repurpose one piece of source content into multiple channel formats matched to your existing voice"
+    ],
+    "keywords": [
+      "repurpose content claude cowork",
+      "voice matched content repurposing",
+      "webinar to social content claude"
+    ],
+    "questions": [
+      "can cowork repurpose our webinar into social content",
+      "how do i match content to our existing brand voice"
+    ],
+    "id": "r-ff5ed4be6c"
+  },
+  {
+    "title": "Research and compare travel destinations",
+    "url": "https://academy.claude.com/use-cases/research-and-compare-travel-destinations",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "non-technical"
+    ],
+    "level": "basic",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Researches five candidate holiday destinations and builds a visual comparison spreadsheet with images, ratings and insights, using frozen panes, heat maps and data bars.",
+    "who_for": "Someone deciding between multiple vacation destinations.",
+    "skip_if": "Needs Web Search turned on for current pricing and seasonal data - without it you're comparing destinations on stale training-data assumptions about cost and weather.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Tip: add an explicit 'verify everything displays correctly' instruction to catch spreadsheet formatting breakage.",
+    "prerequisites": [
+      "Web Search enabled"
+    ],
+    "teaches": [
+      "build a visual comparison spreadsheet of travel destinations with real current data"
+    ],
+    "keywords": [
+      "compare travel destinations claude",
+      "travel comparison spreadsheet ai",
+      "claude vacation planning"
+    ],
+    "questions": [
+      "can claude compare vacation destinations for me",
+      "how do i build a travel comparison spreadsheet"
+    ],
+    "id": "r-fc0225a17c"
+  },
+  {
+    "title": "See budget futures side by side, in chat with Claude",
+    "url": "https://academy.claude.com/use-cases/see-budget-futures-side-by-side",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder",
+      "non-technical"
+    ],
+    "level": "never-used",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Types a budget split and a scenario that might change, and Claude draws three budget scenarios inline as an interactive artifact you can toggle between dollars and percentages.",
+    "who_for": "Nonprofit executive directors modeling a budget scenario like losing a major funding source.",
+    "skip_if": "No files needed to start, but the worked example is nonprofit-specific ($2.1M budget losing a federal grant) - the pattern generalizes to any budget-scenario question, but you have to bring your own numbers to make it real.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Clicking a scenario returns a one-line plain-language meaning of it.",
+    "prerequisites": [],
+    "teaches": [
+      "model budget scenarios inline as an interactive dollars/percentage artifact"
+    ],
+    "keywords": [
+      "budget scenario modeling claude",
+      "nonprofit budget artifact",
+      "claude interactive budget chart"
+    ],
+    "questions": [
+      "can claude model different budget scenarios for me",
+      "how do i visualize losing a funding source"
+    ],
+    "id": "r-6b298d11c7"
+  },
+  {
+    "title": "See what your campaign goal actually requires",
+    "url": "https://academy.claude.com/use-cases/see-what-your-campaign-goal-actually-requires",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder",
+      "non-technical"
+    ],
+    "level": "never-used",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Turns a capital campaign dollar goal into a gift pyramid inline - how many gifts per tier and how many qualified prospects that realistically takes, with a live-dragging slider.",
+    "who_for": "Nonprofit fundraising staff planning a capital campaign.",
+    "skip_if": "Built specifically around capital-campaign gift-pyramid math (3-to-1 and 4-to-1 prospect ratios) - a narrow nonprofit fundraising pattern, not a general goal-planning tool.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Tiers labeled Thin/Watch/Healthy against a typical pipeline.",
+    "prerequisites": [],
+    "teaches": [
+      "build an interactive gift pyramid showing prospect-to-gift ratios for a campaign goal"
+    ],
+    "keywords": [
+      "gift pyramid claude",
+      "capital campaign planning ai",
+      "nonprofit fundraising prospect math"
+    ],
+    "questions": [
+      "can claude build a gift pyramid for our campaign goal",
+      "how many prospects do i need per gift tier"
+    ],
+    "id": "r-4f799af1e6"
+  },
+  {
+    "title": "See why donor retention beats acquisition, in chat with Claude",
+    "url": "https://academy.claude.com/use-cases/see-why-donor-retention-beats-acquisition",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder",
+      "non-technical"
+    ],
+    "level": "never-used",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Builds a five-year donor projection with sliders for retention and acquisition, showing why a small retention gain beats doubling acquisition spend.",
+    "who_for": "Nonprofit fundraising staff arguing for retention investment over acquisition spend.",
+    "skip_if": "The real lesson is prompt phrasing, not fundraising strategy - wording like 'let me play with the numbers' is what makes Claude build interactive sliders instead of a static chart, and it warns real donor behavior varies by gift size and channel.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. 'Save as Artifact' keeps the sliders live for later use.",
+    "prerequisites": [],
+    "teaches": [
+      "build an interactive five-year donor projection to compare retention vs acquisition investment"
+    ],
+    "keywords": [
+      "donor retention vs acquisition claude",
+      "nonprofit donor projection artifact",
+      "claude interactive slider chart"
+    ],
+    "questions": [
+      "can claude show why donor retention matters more than acquisition",
+      "how do i get claude to build interactive sliders instead of a static chart"
+    ],
+    "id": "r-17c8b75fa5"
+  },
+  {
+    "title": "See your theory of change in chat with Claude",
+    "url": "https://academy.claude.com/use-cases/see-your-theory-of-change-in-chat-with-claude",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder",
+      "non-technical"
+    ],
+    "level": "never-used",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Draws a program's causal chain from inputs through impact inline, with every arrow clickable to show the assumption behind it - amber marks links riding on assumption over data.",
+    "who_for": "Nonprofit program designers who know what their program does but have never mapped out why it works.",
+    "skip_if": "Needs you to describe your program's actual causal chain from inputs to impact - the clickable arrows show which links ride more on assumption than data, but only if you've described the chain honestly in the first place.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Worked example is a youth mentoring program aiming at graduation rates.",
+    "prerequisites": [],
+    "teaches": [
+      "draw an interactive theory-of-change diagram that flags assumption-heavy links"
+    ],
+    "keywords": [
+      "theory of change claude",
+      "program logic model artifact",
+      "claude causal chain diagram"
+    ],
+    "questions": [
+      "can claude draw our program's theory of change",
+      "how do i find the weak links in my program logic"
+    ],
+    "id": "r-50c5cf2a80"
+  },
+  {
+    "title": "Size a market using your research",
+    "url": "https://academy.claude.com/use-cases/size-a-market-using-your-research",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder",
+      "researcher"
+    ],
+    "level": "builder",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Produces a TAM/SAM/SOM market sizing with stated methodology and turns it into three coordinated client-ready deliverables - a deck, an Excel workbook, and a Markdown document.",
+    "who_for": "Consultants, strategists or product marketers producing a market-sizing analysis.",
+    "skip_if": "Needs the Claude Desktop app downloaded for local file access - produces three coordinated deliverables (deck, workbook, doc) from one prompt, so it's more setup than asking for a single market-sizing number.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Worked example cites a $12.4B 2024 TAM growing 11.2%/year.",
+    "prerequisites": [
+      "Claude Desktop app",
+      "Cowork session",
+      "optional existing research files"
+    ],
+    "teaches": [
+      "produce a TAM/SAM/SOM market sizing as a coordinated deck, workbook and document"
+    ],
+    "keywords": [
+      "market sizing claude",
+      "tam sam som analysis ai",
+      "cowork market research deliverables"
+    ],
+    "questions": [
+      "can claude produce a tam sam som market sizing",
+      "how do i get a deck workbook and doc from one prompt"
+    ],
+    "id": "r-d195e90feb"
+  },
+  {
+    "title": "Source insights from your tools to build a deck",
+    "url": "https://academy.claude.com/use-cases/source-insights-from-your-tools-to-build-a-deck",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder",
+      "pm"
+    ],
+    "level": "builder",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Chases leads across scattered tools, surfaces what no single source shows on its own, and builds a board deck around the through-line - assuming sources will disagree and reconciling them.",
+    "who_for": "Chiefs of staff or business operations leads building a board deck from disagreeing internal sources.",
+    "skip_if": "Needs Claude Desktop with Claude Opus 4.6 specifically, at least one connected source (Slack, Drive or email), and Claude in Chrome for live dashboard checks - the prompt assumes your sources will disagree with each other and asks Claude to work out which is current.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Closing instruction: 'Make an argument, not a summary.'",
+    "prerequisites": [
+      "Claude Desktop with Opus 4.6",
+      "at least one connected source (Slack/Drive/email)",
+      "Claude in Chrome"
+    ],
+    "teaches": [
+      "reconcile disagreeing data sources and build a board deck around a single through-line argument"
+    ],
+    "keywords": [
+      "board deck from scattered tools claude",
+      "reconcile conflicting data sources ai",
+      "claude opus 4.6 board deck"
+    ],
+    "questions": [
+      "can claude reconcile data that disagrees across our tools",
+      "how do i build a board deck that argues a position, not just summarizes"
+    ],
+    "id": "r-5f968ae13d"
+  },
+  {
+    "title": "SOX & controls documentation",
+    "url": "https://academy.claude.com/use-cases/sox-controls-doc",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "data-analyst",
+      "business-founder"
+    ],
+    "level": "builder",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-1hr",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Produces a SOX process narrative, a risk and control matrix, and a process flowchart from raw walkthrough notes, flagging any step where a control looks missing.",
+    "who_for": "Internal audit or SOX compliance staff documenting a process for the first time or updating it.",
+    "skip_if": "Needs raw walkthrough notes, an RCM template and the prior-year narrative already in a working folder - the page's own subtitle claims 'under an hour' while its duration chip says 10 minutes, a real internal inconsistency worth knowing before you plan time for it.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. Page chip says 10 min but subtitle says 'under an hour' - both are recorded here rather than silently picking one.",
+    "prerequisites": [
+      "Claude Cowork",
+      "walkthrough notes, RCM template, prior-year narrative",
+      "Finance plugin (optional)"
+    ],
+    "teaches": [
+      "produce a SOX process narrative, risk and control matrix, and flowchart from walkthrough notes"
+    ],
+    "keywords": [
+      "sox controls documentation claude",
+      "risk control matrix ai",
+      "cowork sox compliance"
+    ],
+    "questions": [
+      "can cowork document our sox controls",
+      "how do i build a risk and control matrix with claude"
+    ],
+    "id": "r-fce9525592"
   }
 ]
