@@ -10414,11 +10414,12 @@
     ]
   },
   {
-    "title": "Plan your literature review (use-case)",
-    "url": "https://claude.com/resources/use-cases/plan-your-literature-review",
+    "title": "Plan your literature review",
+    "url": "https://academy.claude.com/use-cases/plan-your-literature-review",
     "author": "Anthropic",
     "roles": [
-      "researcher"
+      "researcher",
+      "student"
     ],
     "level": "basic",
     "topics": [
@@ -10430,16 +10431,16 @@
     "cost": "free",
     "language": "en",
     "tier": "ai-reviewed",
-    "summary": "Official worked example using the PubMed connector and Google Drive integration to build a structured, prioritized reading guide from a research question.",
+    "summary": "Official worked example using the PubMed connector and Google Drive to build a structured, prioritized reading guide from a research question - a three-phase reading plan and a visual landscape of study types, output as a designed Word document.",
     "who_for": "Researchers wanting a vendor-blessed lit-review starting workflow.",
-    "skip_if": "You need explicit citation-verification guidance — the page does not warn about fabricated references, so add that step yourself.",
+    "skip_if": "Needs the PubMed connector connected, so it only reaches PubMed's biomedical literature, not a general academic search across other disciplines. And it needs a citation-verification habit you bring yourself - the page does not warn about fabricated references, so add that check as your own step.",
     "published": "UNVERIFIED",
-    "checked": "2026-08-18",
+    "checked": "2026-08-29",
     "status": "live",
-    "notes": "CITATION RISK: teaches lit-review discovery without a fabricated-citation warning.",
-    "source": "Anthropic",
+    "notes": "CITATION RISK, carried forward: teaches lit-review discovery without a fabricated-citation warning - add that check yourself. Verified 2026-08-29: this claude.com URL now redirects to academy.claude.com/use-cases/plan-your-literature-review (worked example: mouse chronic sleep deprivation; output is a designed Word document, not a plain citation list). Row repointed there rather than duplicated; a second, thinner row this harvest had added at that URL (tier previewed) has been removed in favor of keeping this one's ai-reviewed depth and its citation-risk finding.",
+    "source": "Anthropic Academy",
     "official": true,
-    "id": "r-ecb6b6f0c7",
+    "id": "r-202ab388df",
     "keywords": [
       "plan literature review",
       "pubmed connector",
@@ -10461,10 +10462,13 @@
     ],
     "teaches": [
       "build a structured and prioritized reading guide from a research question",
-      "integrate pubmed and google drive into your research workflow"
+      "integrate PubMed and Google Drive into your research workflow",
+      "build a three-phase reading plan with a visual landscape of study types"
     ],
     "prerequisites": [
-      "basic familiarity with claude chat"
+      "basic familiarity with claude chat",
+      "PubMed connector",
+      "a research question"
     ]
   },
   {
@@ -28982,50 +28986,6 @@
       "how do i find my skill gaps for a target job"
     ],
     "id": "r-6da1df1aac"
-  },
-  {
-    "title": "Plan your literature review",
-    "url": "https://academy.claude.com/use-cases/plan-your-literature-review",
-    "author": "Anthropic",
-    "source": "Anthropic Academy",
-    "official": true,
-    "roles": [
-      "researcher",
-      "student"
-    ],
-    "level": "confident",
-    "topics": [
-      "mcp"
-    ],
-    "format": "docs",
-    "time": "under-15min",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "status": "live",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-29",
-    "summary": "Searches PubMed for a research question, decides what to read first, and organizes evidence with a three-phase reading plan and a visual landscape of study types.",
-    "who_for": "Academic or biomedical researchers starting a literature review.",
-    "skip_if": "Needs the PubMed connector connected - so it only reaches PubMed's biomedical literature, not a general academic search across other disciplines' databases.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Output is a designed Word document, not a plain citation list. Worked example is mouse chronic sleep deprivation.",
-    "prerequisites": [
-      "PubMed connector",
-      "a research question"
-    ],
-    "teaches": [
-      "build a prioritized literature-review reading plan with a visual study-type landscape"
-    ],
-    "keywords": [
-      "literature review plan claude",
-      "pubmed connector research",
-      "claude organize research evidence"
-    ],
-    "questions": [
-      "can claude help me plan a literature review",
-      "how do i prioritize which papers to read first"
-    ],
-    "id": "r-202ab388df"
   },
   {
     "title": "Plan your syllabus",
