@@ -274,7 +274,7 @@
   },
   {
     "title": "Using Claude Cowork for your small business",
-    "url": "https://claude.com/resources/tutorials/using-claude-for-your-small-business",
+    "url": "https://academy.claude.com/tutorials/using-claude-for-your-small-business",
     "author": "Anthropic",
     "roles": [
       "business-founder"
@@ -293,12 +293,12 @@
     "who_for": "Owners who have installed the plugin and want concrete first workflows.",
     "skip_if": "Four workflows end to end - payroll, month close, Monday brief, campaign - with the approval gates left in rather than edited out. That is the useful part: it shows you where Cowork stops and asks.",
     "published": "2026-05-13",
-    "checked": "2026-08-20",
+    "checked": "2026-08-29",
     "status": "live",
-    "notes": "Official; honest about approval gates and permission inheritance. No upsell.",
-    "source": "Anthropic",
+    "notes": "Official; honest about approval gates and permission inheritance. No upsell. Verified 2026-08-29: same slug now lives at academy.claude.com/tutorials/using-claude-for-your-small-business (15 min, needs the Small Business plugin plus your own QuickBooks/PayPal/HubSpot/Canva accounts connected in Cowork.) - same migration pattern as other claude.com/resources/tutorials/ pages moved to Academy, so this row was repointed rather than duplicated.",
+    "source": "Anthropic Academy",
     "official": true,
-    "id": "r-cae7c03c4f",
+    "id": "r-3927f8ff43",
     "keywords": [
       "small business workflows",
       "claude cowork recipes",
@@ -3010,7 +3010,7 @@
   },
   {
     "title": "Using Claude Design for prototypes and UX",
-    "url": "https://claude.com/resources/tutorials/using-claude-design-for-prototypes-and-ux",
+    "url": "https://academy.claude.com/tutorials/using-claude-design-for-prototypes-and-ux",
     "author": "Anthropic",
     "roles": [
       "designer"
@@ -3029,12 +3029,12 @@
     "who_for": "Product and UX designers wanting the official, honest overview of Claude Design's real workflow.",
     "skip_if": "Claude Design is an Anthropic Labs product and lives on the web only, so none of this works from the desktop app. Five minutes covering prototyping and connecting your codebase - enough to decide whether to spend longer, not enough to build with.",
     "published": "UNVERIFIED",
-    "checked": "2026-08-20",
+    "checked": "2026-08-29",
     "status": "live",
-    "notes": "Claude Design is Anthropic Labs; web-only at claude.ai/design; Opus 4.7.",
-    "source": "Anthropic",
+    "notes": "Claude Design is Anthropic Labs; web-only at claude.ai/design; Opus 4.7. Verified 2026-08-29: same slug now lives at academy.claude.com/tutorials/using-claude-design-for-prototypes-and-ux (15 min, product-operation not design skill - presupposes the reader is already a designer or PM.) - same migration pattern as other claude.com/resources/tutorials/ pages moved to Academy, so this row was repointed rather than duplicated.",
+    "source": "Anthropic Academy",
     "official": true,
-    "id": "r-bebad04816",
+    "id": "r-3104499980",
     "keywords": [
       "claude design",
       "prototyping",
@@ -22517,5 +22517,2527 @@
       "what should an ai diligence statement include"
     ],
     "id": "r-749e37612b"
+  },
+  {
+    "title": "A discussion guide for the AI Fluency Index",
+    "url": "https://academy.claude.com/tutorials/a-discussion-guide-for-the-ai-fluency-index",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "pm",
+      "teacher"
+    ],
+    "level": "basic",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "A facilitator's meeting script for discussing Anthropic's AI Fluency Index research with a team - leadership group, faculty, or professional learning community.",
+    "who_for": "Someone running a 45-60 minute team discussion about how their group collaborates with AI.",
+    "skip_if": "A meeting script built on the AI Fluency Index report's own statistics, not a product tutorial - needs 45-60 minutes of group time and works best when participants have already read the report it's built on.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min read. Cites the report's 'artifact effect': polished outputs raise directive behaviors but drop discernment behaviors (e.g. -3.7pp fact-checking).",
+    "prerequisites": [
+      "a group willing to spend 45-60 minutes",
+      "ideally having read the AI Fluency Index report first"
+    ],
+    "teaches": [
+      "run a structured team discussion on AI collaboration habits using Anthropic's own research"
+    ],
+    "keywords": [
+      "ai fluency discussion guide",
+      "ai fluency index facilitator guide",
+      "team discussion ai collaboration"
+    ],
+    "questions": [
+      "how do we discuss ai fluency as a team",
+      "is there a facilitator guide for the ai fluency index"
+    ],
+    "id": "r-43c3c12bca"
+  },
+  {
+    "title": "Best practices for using Claude Tag",
+    "url": "https://academy.claude.com/tutorials/best-practices-using-claude-tag",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "pm",
+      "business-founder"
+    ],
+    "level": "confident",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "How to work with Claude Tag across a workspace: where it has context, writing a task that goes well, and the memory boundary between public channels, private channels and DMs.",
+    "who_for": "A workspace member who already has Claude Tag and wants to use it well beyond ad-hoc questions.",
+    "skip_if": "Assumes Claude Tag is already installed with admin-configured tool connections - the real content is a context/memory boundary rule (public-channel memory spreads workspace-wide, private stays put), not general chat tips.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. Longest body text in this batch (~17k chars). Gotcha: 'Editing a message you already sent has no effect; send a new reply instead.'",
+    "prerequisites": [
+      "Claude Tag installed in the workspace"
+    ],
+    "teaches": [
+      "understand Claude Tag's memory boundary between public channels, private channels and DMs",
+      "write a task that goes well"
+    ],
+    "keywords": [
+      "claude tag best practices",
+      "claude tag memory",
+      "claude tag tips"
+    ],
+    "questions": [
+      "how does claude tag's memory work across channels",
+      "what are best practices for claude tag"
+    ],
+    "id": "r-5bb9254c53"
+  },
+  {
+    "title": "Building a PowerPoint with Claude",
+    "url": "https://academy.claude.com/tutorials/building-a-powerpoint-with-claude",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder",
+      "pm"
+    ],
+    "level": "basic",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "video",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "A short video on creating a new deck from a prompt, editing slide content, and keeping everything on-brand with Claude for PowerPoint.",
+    "who_for": "Someone starting a deck from scratch inside Claude for PowerPoint who wants it to stay on-brand from the first slide.",
+    "skip_if": "Zero body text - a bare 4-minute video with no written steps, transcript, or reference material to skim.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 4 min. Only page in its batch tagged 'Claude in PowerPoint' as the product pill.",
+    "prerequisites": [
+      "Claude for PowerPoint add-in"
+    ],
+    "teaches": [
+      "create a new PowerPoint deck from a prompt and keep it on-brand"
+    ],
+    "keywords": [
+      "build powerpoint with claude",
+      "claude powerpoint deck from scratch",
+      "claude in powerpoint video"
+    ],
+    "questions": [
+      "how do i build a powerpoint deck with claude",
+      "can claude keep my slides on-brand"
+    ],
+    "id": "r-9644384def"
+  },
+  {
+    "title": "Can you trust what AI tells you?",
+    "url": "https://academy.claude.com/tutorials/can-you-trust-what-ai-tells-you",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "non-technical"
+    ],
+    "level": "never-used",
+    "topics": [
+      "safety"
+    ],
+    "format": "video",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "A short video on why trusting an AI answer is 'a dial you turn, not a switch you flip,' naming hallucination and sycophancy as the two failure modes to watch for.",
+    "who_for": "Someone building a first mental model of how much to trust an AI's confident-sounding answers.",
+    "skip_if": "Conceptual only, with no Claude product shown - names exactly two failure modes with a medical analogy, not a checklist for spotting either one in practice.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 5 min. No product pill at all - the only page in its batch not tied to a specific Claude surface.",
+    "prerequisites": [],
+    "teaches": [
+      "calibrate trust in an AI answer rather than treating it as all-or-nothing"
+    ],
+    "keywords": [
+      "can i trust ai",
+      "should i trust ai answers",
+      "ai trust calibration"
+    ],
+    "questions": [
+      "how much should i trust what ai tells me",
+      "what is ai sycophancy and hallucination"
+    ],
+    "id": "r-4c75fa41f0"
+  },
+  {
+    "title": "Choosing between Claude Cowork or Chat",
+    "url": "https://academy.claude.com/tutorials/choosing-between-claude-cowork-or-chat",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "non-technical",
+      "business-founder",
+      "pm"
+    ],
+    "level": "basic",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "A four-axis comparison table (goal, work, role, output) for deciding between a steered chat conversation and delegating a task to Cowork.",
+    "who_for": "Someone with both surfaces available who isn't sure which one fits the task in front of them.",
+    "skip_if": "Cowork itself needs a paid plan (Pro/Max/Team/Enterprise) even though this comparison page doesn't say so - and two of the five Cowork-only abilities it lists (browser navigation, desktop control) need Claude in Chrome or computer use connected separately.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 5 min. States Cowork 'runs on the same agentic engine as Claude Code... applied to your files and apps instead of a codebase.'",
+    "prerequisites": [
+      "a Claude.ai account"
+    ],
+    "teaches": [
+      "decide between Chat and Cowork using goal, work, role and output as the axes"
+    ],
+    "keywords": [
+      "claude cowork vs chat",
+      "when to use cowork",
+      "cowork or chat"
+    ],
+    "questions": [
+      "should i use claude chat or cowork for this task",
+      "what can cowork do that chat can't"
+    ],
+    "id": "r-dbe67e576f"
+  },
+  {
+    "title": "Choosing the right Claude model: Haiku, Sonnet, Opus, or Fable",
+    "url": "https://academy.claude.com/tutorials/choosing-the-right-claude-model",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "non-technical",
+      "developer",
+      "business-founder"
+    ],
+    "level": "basic",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "A practical guide to picking Haiku, Sonnet, Opus or Fable to get better results while staying inside a rate limit, with a hands-on same-prompt comparison exercise.",
+    "who_for": "Someone who keeps hitting rate limits or getting weak answers and isn't sure if the model choice is the cause.",
+    "skip_if": "Opus needs a Pro plan or above and Fable needs any paid plan - Free accounts only get Haiku and Sonnet, so part of this guide's model table is aspirational on the free tier.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 5 min. Ranks rate-limit cost: Haiku lightest, then Sonnet, Opus, Fable heaviest.",
+    "prerequisites": [
+      "a Claude.ai account"
+    ],
+    "teaches": [
+      "match a Claude model to a task and rate-limit budget",
+      "run a same-prompt comparison across two models"
+    ],
+    "keywords": [
+      "which claude model should i use",
+      "haiku vs sonnet vs opus vs fable",
+      "choosing a claude model"
+    ],
+    "questions": [
+      "what's the difference between claude models",
+      "which claude model is best for my task"
+    ],
+    "id": "r-b5eb9ca1b3"
+  },
+  {
+    "title": "Choosing the right effort level in Claude Code",
+    "url": "https://academy.claude.com/tutorials/choosing-the-right-effort-level-in-claude-code",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "developer"
+    ],
+    "level": "confident",
+    "topics": [
+      "claude-code"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "When to turn effort down or up in Claude Code, the five ways to set it, and why the same effort-level name does not mean the same amount of work on a different model.",
+    "who_for": "A Claude Code user tuning cost/quality tradeoffs across low, medium, high, xhigh and session-only max effort.",
+    "skip_if": "Enterprise plans may cap the maximum effort level per model, so the 'max' level this teaches - deliberately session-only so it can't be accidentally persisted - may not be reachable on a locked-down org account.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Names five ways to set effort: --effort flag, /effort, /model, effortLevel setting, CLAUDE_CODE_EFFORT_LEVEL env var, plus skill/subagent frontmatter.",
+    "prerequisites": [
+      "Claude Code installed"
+    ],
+    "teaches": [
+      "set Claude Code's effort level via flag, command, setting or env var",
+      "avoid assuming effort levels transfer identically across models"
+    ],
+    "keywords": [
+      "claude code effort level",
+      "claude code low medium high effort",
+      "claude code xhigh max effort"
+    ],
+    "questions": [
+      "what does effort level do in claude code",
+      "how do i set max effort in claude code"
+    ],
+    "id": "r-b86487f3ba"
+  },
+  {
+    "title": "Claude Cowork Enterprise Admin Guide",
+    "url": "https://academy.claude.com/tutorials/claude-cowork-enterprise-administrator-guide",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder",
+      "pm"
+    ],
+    "level": "builder",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-1hr",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "A four-phase Claude Cowork enterprise deployment guide - technical setup, change management, enablement, scaling - written for a rollout team of Primary Owner, DNS admin, IdP admin, connector owners and MDM admin.",
+    "who_for": "An enterprise admin planning a Cowork rollout, not an individual user.",
+    "skip_if": "Written for a rollout team on a paid Enterprise plan - candidly admits real gaps too, like 'Audit Logs do not cover Claude Cowork yet' and no in-product undo on an RBAC migration that can drop every user to zero permissions.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 20 min, ~30k chars. Warns to use the MSIX installer on Windows, not .exe.",
+    "prerequisites": [
+      "Claude Enterprise",
+      "Primary Owner rights",
+      "an IdP",
+      "usually MDM"
+    ],
+    "teaches": [
+      "plan a four-phase Cowork enterprise rollout",
+      "know the current audit-log and RBAC-migration gaps before relying on them"
+    ],
+    "keywords": [
+      "claude cowork enterprise rollout",
+      "cowork admin guide",
+      "deploy claude cowork org-wide"
+    ],
+    "questions": [
+      "how do we roll out claude cowork to our enterprise",
+      "what are the risks of migrating cowork rbac"
+    ],
+    "id": "r-4e09474dae"
+  },
+  {
+    "title": "Claude Enterprise Administrator Guide",
+    "url": "https://academy.claude.com/tutorials/claude-enterprise-administrator-guide",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder",
+      "pm"
+    ],
+    "level": "builder",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-1hr",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "A four-phase Claude Enterprise deployment guide with concrete adoption targets (70% weekly active, 3+ hours saved per user per week) and a 100+ link appendix organized by category.",
+    "who_for": "An Enterprise admin planning SSO/SCIM setup, Claude Code seat allocation, and org-wide adoption targets.",
+    "skip_if": "Needs Claude Enterprise plus Owner/Primary Owner console access - shares nearly the same four-phase rollout template as its Cowork sibling guide, so read one, not both, unless you specifically need the seat-type rules or the link appendix this one adds.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 20 min, the largest page in its batch (~34k chars). States spend limits 'default to $0.'",
+    "prerequisites": [
+      "Claude Enterprise",
+      "Owner or Primary Owner rights",
+      "SAML 2.0 or OIDC for SSO"
+    ],
+    "teaches": [
+      "plan a four-phase Claude Enterprise rollout with concrete adoption targets",
+      "allocate Claude Code seats by seat type"
+    ],
+    "keywords": [
+      "claude enterprise admin guide",
+      "claude enterprise rollout",
+      "claude enterprise sso scim"
+    ],
+    "questions": [
+      "how do we roll out claude enterprise",
+      "what adoption targets should we set for claude"
+    ],
+    "id": "r-94dd4d8b10"
+  },
+  {
+    "title": "Claude for financial services overview",
+    "url": "https://academy.claude.com/tutorials/claude-for-financial-services-overview",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "data-analyst",
+      "business-founder"
+    ],
+    "level": "builder",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "An overview of Claude for financial services - research, analysis and document creation - naming Daloopa and Morningstar as its data connectors and admitting real current limitations.",
+    "who_for": "Investment analysts, corporate finance teams, or portfolio managers evaluating Claude for financial services.",
+    "skip_if": "Real use needs Claude for Financial Services plus your own paid Daloopa and/or Morningstar accounts - the page's own 'Current limitations' section admits PowerPoint output struggles with complex templates and Excel models need manual review.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 4 min. Names DCF, LBO and comparables modeling plus CIM/PIB document types.",
+    "prerequisites": [
+      "Claude for Financial Services",
+      "a Daloopa and/or Morningstar account"
+    ],
+    "teaches": [
+      "understand what Claude for Financial Services covers and where it currently falls short"
+    ],
+    "keywords": [
+      "claude for financial services",
+      "claude financial services overview",
+      "claude finance connectors"
+    ],
+    "questions": [
+      "what can claude do for financial services",
+      "what are claude for financial services' current limitations"
+    ],
+    "id": "r-a37e5e5da8"
+  },
+  {
+    "title": "Six skills for financial service professionals",
+    "url": "https://academy.claude.com/tutorials/claude-for-financial-services-skills",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "data-analyst",
+      "business-founder"
+    ],
+    "level": "builder",
+    "topics": [
+      "skills"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Six research-preview Skills for finance - comps analysis, DCF modeling, coverage initiation research, business overviews, due diligence data packs, and earnings analysis.",
+    "who_for": "A Claude for Financial Services user on the waitlist for these six specialized Skills.",
+    "skip_if": "Gated behind a waitlist and 'research preview' even with the right plan - an admin must also flip two separate toggles (Skills, and Code execution and file creation) before anyone in the org can see it.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 5 min. Comps skill produces tables that 'auto-refresh with live data.'",
+    "prerequisites": [
+      "Claude for Financial Services",
+      "waitlist access",
+      "admin-enabled Skills and code execution"
+    ],
+    "teaches": [
+      "know the six financial-services Skills available in research preview and what each produces"
+    ],
+    "keywords": [
+      "claude financial services skills",
+      "claude comps analysis skill",
+      "claude dcf skill"
+    ],
+    "questions": [
+      "what skills does claude for financial services have",
+      "how do i get access to claude's finance skills"
+    ],
+    "id": "r-a24a171453"
+  },
+  {
+    "title": "Claude for nonprofits partnership guide for all users",
+    "url": "https://academy.claude.com/tutorials/claude-for-nonprofits-partnership-guide-for-all-users",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "non-technical",
+      "business-founder"
+    ],
+    "level": "never-used",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "A three-tier self-paced link hub (Getting acquainted / Getting productive / Reaching new levels) for nonprofit staff building confidence with Claude.",
+    "who_for": "Nonprofit staff new to Claude looking for a starting path through Anthropic's own resources.",
+    "skip_if": "A link hub across three tiers, not a lesson in itself - most of the real content lives in the pages it points to, not on this page.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 2 min, shortest in its batch. Points to a 'Claude train the trainer program' with a certificate.",
+    "prerequisites": [
+      "a Claude.ai account"
+    ],
+    "teaches": [
+      "find a starting path through Anthropic's nonprofit-focused resources"
+    ],
+    "keywords": [
+      "claude for nonprofits guide",
+      "nonprofit claude onboarding",
+      "claude nonprofit partnership"
+    ],
+    "questions": [
+      "where do i start with claude as a nonprofit",
+      "what resources exist for nonprofits using claude"
+    ],
+    "id": "r-50a68c41e4"
+  },
+  {
+    "title": "Claude for nonprofits partnership success guide for admins",
+    "url": "https://academy.claude.com/tutorials/claude-for-nonprofits-partnership-success-guide-for-admins",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder",
+      "pm"
+    ],
+    "level": "builder",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "A four-phase (Foundation/Activation/Acceleration/Expansion) rollout framework for nonprofit admins launching Claude, with concrete champion-recruitment and 30-day retrospective targets.",
+    "who_for": "A nonprofit admin planning an org-wide Claude rollout.",
+    "skip_if": "Needs admin rights for SSO, SCIM, data retention and audit logs even though no plan tier is printed on the page - shares its rollout shape with the enterprise admin guides, just renamed to different phase names.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 4 min. Recommends recruiting 3-5 champion team members and monthly webinars in the third week of each month.",
+    "prerequisites": [
+      "admin rights for SSO/SCIM/data retention/audit logs",
+      "nonprofit partnership enrollment"
+    ],
+    "teaches": [
+      "plan a four-phase nonprofit Claude rollout with champion recruitment and retrospectives"
+    ],
+    "keywords": [
+      "claude nonprofit admin rollout",
+      "nonprofit claude deployment",
+      "claude for nonprofits admin guide"
+    ],
+    "questions": [
+      "how do we roll out claude at our nonprofit",
+      "what does a nonprofit claude admin need to set up"
+    ],
+    "id": "r-5eac4c1ab0"
+  },
+  {
+    "title": "Claude for Teachers in action",
+    "url": "https://academy.claude.com/tutorials/claude-for-teachers-in-action",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "teacher"
+    ],
+    "level": "never-used",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "video",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "An elementary school teacher's scheduled workflow: every school day at four, Claude reads a TeachFX classroom recording, reflects on what worked, and drafts tomorrow's lesson plan.",
+    "who_for": "A verified US K-12 educator curious what a real scheduled Claude workflow looks like.",
+    "skip_if": "Needs verified US K-12 educator status, and the featured scheduled-briefing workflow additionally depends on a TeachFX classroom-recording account, a separate paid third-party product.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. Only page in its batch with no stated duration and no product pill. Inputs are de-identified diagnostics, exit tickets, and the teacher's own notes.",
+    "prerequisites": [
+      "verified US K-12 educator status",
+      "a TeachFX account for the featured workflow"
+    ],
+    "teaches": [
+      "see a real scheduled Claude workflow for daily lesson reflection and planning"
+    ],
+    "keywords": [
+      "claude for teachers example",
+      "claude teacher workflow",
+      "claude lesson planning automation"
+    ],
+    "questions": [
+      "how do teachers actually use claude day to day",
+      "can claude automatically plan tomorrow's lesson"
+    ],
+    "id": "r-b617ba0186"
+  },
+  {
+    "title": "Configuration and multi-file skills",
+    "url": "https://academy.claude.com/tutorials/configuration-and-multi-file-skills",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "developer"
+    ],
+    "level": "confident",
+    "topics": [
+      "claude-code",
+      "skills"
+    ],
+    "format": "video",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "A short video on configuring skills and working with multi-file skill structures in Claude Code.",
+    "who_for": "A Claude Code user building a skill that needs more than one file.",
+    "skip_if": "Zero written content - config options and multi-file directory layout exist only inside the 4-minute video, nothing to skim or search.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 4 min, one of two body-text-free videos in its batch.",
+    "prerequisites": [
+      "Claude Code installed"
+    ],
+    "teaches": [
+      "configure a skill and structure a multi-file skill in Claude Code"
+    ],
+    "keywords": [
+      "claude code multi-file skill",
+      "configure claude code skill",
+      "claude code skill structure"
+    ],
+    "questions": [
+      "how do i structure a multi-file claude code skill",
+      "how do i configure a claude code skill"
+    ],
+    "id": "r-41c2f1dee2"
+  },
+  {
+    "title": "Connect your tools to unlock a smarter, more capable AI companion",
+    "url": "https://academy.claude.com/tutorials/connect-your-tools-to-unlock-a-smarter-more-capable-ai-companion",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "non-technical",
+      "business-founder",
+      "pm"
+    ],
+    "level": "basic",
+    "topics": [
+      "mcp"
+    ],
+    "format": "article",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Connecting third-party tools (Google Drive, Gmail, Asana, Notion, Canva, Linear, Apple Notes) to Claude through Connectors, with three concrete paired workflows across tools.",
+    "who_for": "Someone who wants Claude to reach their existing tools instead of copy-pasting content in and out.",
+    "skip_if": "Each connector needs its own third-party sign-in - Google Drive, Gmail, Asana, Notion, Canva, Linear, Apple Notes all authenticate separately, and desktop extensions additionally need the desktop app.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 6 min. Frames connectors as an MCP wrapper: 'a key to an otherwise locked door.'",
+    "prerequisites": [
+      "a Claude.ai account",
+      "third-party accounts for whichever tools you connect"
+    ],
+    "teaches": [
+      "connect third-party tools to Claude via Connectors",
+      "combine two connected tools in one workflow"
+    ],
+    "keywords": [
+      "claude connectors",
+      "connect claude to google drive",
+      "claude mcp connectors"
+    ],
+    "questions": [
+      "how do i connect my tools to claude",
+      "what connectors does claude support"
+    ],
+    "id": "r-546043d183"
+  },
+  {
+    "title": "How to use the Instrument Data to Allotrope Skill with Claude",
+    "url": "https://academy.claude.com/tutorials/how-to-use-the-instrument-data-to-allotrope-skill-with-claude",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "researcher"
+    ],
+    "level": "builder",
+    "topics": [
+      "skills"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Converting raw lab instrument output (cell counters, plate readers, spectrophotometers) into standardized Allotrope Simple Model JSON using the allotropy library, for LIMS/ELN/data-lake ingestion.",
+    "who_for": "Lab scientists and data managers standardizing disparate instrument output formats.",
+    "skip_if": "Built around one specific standard (Allotrope Simple Model via the allotropy library) - if your lab needs a different schema, the page itself invites you to fork and customize it rather than use it as-is.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 3 min. Also generates exportable Python parser code for production pipelines.",
+    "prerequisites": [
+      "Claude.ai with Skills enabled, or Claude Code with the life-sciences plugin marketplace"
+    ],
+    "teaches": [
+      "convert raw lab instrument files to standardized Allotrope Simple Model JSON"
+    ],
+    "keywords": [
+      "allotrope skill claude",
+      "standardize lab instrument data",
+      "allotropy library claude"
+    ],
+    "questions": [
+      "can claude standardize my lab instrument output",
+      "what is the allotrope simple model"
+    ],
+    "id": "r-f04887acc5"
+  },
+  {
+    "title": "How to use the Nextflow Deployment agent skill with Claude Code",
+    "url": "https://academy.claude.com/tutorials/how-to-use-the-nextflow-deployment-agent-skill-with-claude-code",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "researcher",
+      "developer"
+    ],
+    "level": "builder",
+    "topics": [
+      "claude-code",
+      "skills"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Running nf-core Nextflow pipelines for omics analyses end to end - environment validation, pulling data from GEO/SRA, sample sheets, execution - from a plain-language Claude Code prompt.",
+    "who_for": "Bench scientists who want to run standardized sequencing pipelines without writing the orchestration code by hand.",
+    "skip_if": "Claude Code only, no Claude.ai path at all - and real use needs an existing Nextflow/nf-core environment the page doesn't walk you through setting up.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 3 min, thinnest page in its batch. Note: the install command uses 'nextflow-development', not 'nextflow-deployment' as the slug says.",
+    "prerequisites": [
+      "Claude Code",
+      "an existing Nextflow/nf-core environment"
+    ],
+    "teaches": [
+      "run nf-core Nextflow pipelines end to end from a Claude Code prompt"
+    ],
+    "keywords": [
+      "nextflow claude code skill",
+      "nf-core claude",
+      "run nextflow pipeline with claude"
+    ],
+    "questions": [
+      "can claude code run my nextflow pipeline",
+      "how do i automate nf-core with claude"
+    ],
+    "id": "r-56149c993a"
+  },
+  {
+    "title": "How to use the Prior Auth Review sample skill with Claude",
+    "url": "https://academy.claude.com/tutorials/how-to-use-the-prior-auth-review-sample-skill-with-claude-2ggy8",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "non-technical",
+      "researcher"
+    ],
+    "level": "builder",
+    "topics": [
+      "skills"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "A sample skill for payer clinical reviewers: reads a prior-authorization packet, checks it against NPI Registry, ICD-10, CMS Coverage Database and CPT Codes, and summarizes the medical-necessity argument.",
+    "who_for": "Payer clinical reviewers wanting a starting point to reduce time to initial recommendation.",
+    "skip_if": "A sample skill meant to be customized before real use, not a finished tool - its four reference checks are explicitly 'to be verified by a human reviewer.'",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 3 min. This is the one healthcare/payer page among the life-sciences skill tutorials - installs from the anthropics/healthcare marketplace, not life-sciences.",
+    "prerequisites": [
+      "Claude.ai with Skills enabled, or Claude Code with the healthcare plugin marketplace"
+    ],
+    "teaches": [
+      "run a prior-authorization request through provider, code and coverage checks with human verification"
+    ],
+    "keywords": [
+      "prior auth review skill claude",
+      "prior authorization ai",
+      "payer clinical review skill"
+    ],
+    "questions": [
+      "can claude help review prior authorization requests",
+      "what does the prior auth review skill check"
+    ],
+    "id": "r-1fdd7bd5a5"
+  },
+  {
+    "title": "How to use the Scientific Problem Selection Skill with Claude",
+    "url": "https://academy.claude.com/tutorials/how-to-use-the-scientific-problem-selection-skill-with-claude",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "researcher"
+    ],
+    "level": "builder",
+    "topics": [
+      "skills"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "A structured workflow (based on Fischbach et al., 2024) for deciding which scientific problem to work on - idea generation, risk assessment, metric choice, and pivot decisions.",
+    "who_for": "A researcher at any career stage deliberating on selecting or refining a scientific problem.",
+    "skip_if": "Processes no data at all - it's a structured way to decide which problem to work on, not a computational tool, so skip it if you already have your research question and just need analysis help.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 3 min. The only non-computational skill among its life-sciences siblings; can be used end-to-end or for a single step.",
+    "prerequisites": [
+      "Claude.ai with Skills enabled, or Claude Code with the life-sciences plugin marketplace"
+    ],
+    "teaches": [
+      "work through idea generation, risk assessment and metric choice when selecting a research problem"
+    ],
+    "keywords": [
+      "scientific problem selection skill",
+      "how to choose a research problem",
+      "claude research problem selection"
+    ],
+    "questions": [
+      "can claude help me choose a research problem",
+      "how do i evaluate risk in a research idea"
+    ],
+    "id": "r-9c1c80e704"
+  },
+  {
+    "title": "How to use the scVI-Tools bioinformatics skill bundle with Claude",
+    "url": "https://academy.claude.com/tutorials/how-to-use-the-scvi-tools-bioinformatics-skill-bundle-with-claude",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "researcher"
+    ],
+    "level": "builder",
+    "topics": [
+      "skills"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "A bundle of 11 scvi-tools deep-learning models grouped by task - batch integration, cell-type annotation, spatial deconvolution, chromatin accessibility, multimodal integration, perturbation.",
+    "who_for": "Single-cell researchers who want model and parameter guidance without reading extensive scvi-tools documentation.",
+    "skip_if": "Practical use assumes you already run the scvi-tools/scVerse Python stack - this is a 'which of 11 models and which parameters' guide, not an introduction to single-cell deep learning.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 3 min. Lists Claude Code path before the Claude.ai path, the reverse of its sibling pages.",
+    "prerequisites": [
+      "the scvi-tools/scVerse Python stack",
+      "Claude.ai with Skills enabled, or Claude Code"
+    ],
+    "teaches": [
+      "pick and tune the right scvi-tools model for a single-cell analysis task"
+    ],
+    "keywords": [
+      "scvi-tools skill claude",
+      "single cell deep learning claude",
+      "scvi-tools bundle"
+    ],
+    "questions": [
+      "which scvi-tools model should i use",
+      "can claude help tune single-cell analysis parameters"
+    ],
+    "id": "r-012770a3f2"
+  },
+  {
+    "title": "How to use the single-cell-rna-qc skill with Claude",
+    "url": "https://academy.claude.com/tutorials/how-to-use-the-single-cell-rna-qc-skill-with-claude",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "researcher"
+    ],
+    "level": "builder",
+    "topics": [
+      "skills"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Quality control for single-cell RNA-seq data using scverse best practices and MAD-based filtering, on .h5a/.h5ad AnnData files.",
+    "who_for": "Bioinformaticians who need to quickly assess and filter single-cell RNA-seq data quality.",
+    "skip_if": "Input files must already be AnnData (.h5a/.h5ad) - it's one narrow upstream QC step (MAD-based filtering), not a full single-cell analysis pipeline.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 3 min. The only one of six sibling skill pages with a real, distinct meta description rather than a title copy.",
+    "prerequisites": [
+      "single-cell RNA-seq data as AnnData (.h5a/.h5ad)",
+      "Claude.ai with Skills enabled, or Claude Code"
+    ],
+    "teaches": [
+      "run MAD-based QC filtering on single-cell RNA-seq data and generate standard QC plots"
+    ],
+    "keywords": [
+      "single cell rna qc skill",
+      "scrna-seq quality control claude",
+      "mad filtering single cell"
+    ],
+    "questions": [
+      "can claude qc my single-cell rna-seq data",
+      "what is mad-based filtering for scrna-seq"
+    ],
+    "id": "r-85b3edaa73"
+  },
+  {
+    "title": "Visuals that appear as you study with Claude",
+    "url": "https://academy.claude.com/tutorials/imagine-with-claude-student-guide",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "student",
+      "teacher"
+    ],
+    "level": "basic",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "article",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "A student guide to a lighter, in-conversation version of Artifacts that generates a visual as you study - with save options and a candid warning that the visual can be wrong.",
+    "who_for": "A student who wants a quick visual mid-conversation without the full Artifacts workflow.",
+    "skip_if": "Beta, web and desktop only, not on mobile yet - and the page is candid that a generated visual 'can be wrong in ways a textbook figure usually isn't,' so it's not a substitute for a verified diagram.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min, the longest and most opinionated page in its batch. Save options: Copy as image, Save as artifact, Download (.svg/.html). Title does not match the slug.",
+    "prerequisites": [
+      "a Claude.ai account"
+    ],
+    "teaches": [
+      "generate an in-conversation study visual and know its accuracy limits",
+      "save a generated visual as an image, artifact, or file"
+    ],
+    "keywords": [
+      "claude study visuals",
+      "imagine with claude",
+      "claude visual explanations for students"
+    ],
+    "questions": [
+      "can claude draw a diagram while i study",
+      "how accurate are claude's generated study visuals"
+    ],
+    "id": "r-591713bde9"
+  },
+  {
+    "title": "Install financial services plugins for Claude Cowork",
+    "url": "https://academy.claude.com/tutorials/install-financial-services-plugins-for-cowork",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "data-analyst",
+      "business-founder"
+    ],
+    "level": "builder",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Installing Anthropic's open-source financial services plugins for Cowork - 7 slash-command skills and 11 named MCP data connectors (Daloopa, Morningstar, S&P Global, FactSet, and more).",
+    "who_for": "Financial modeling, equity research, investment banking, private equity or wealth management teams setting up Cowork.",
+    "skip_if": "The plugin install is free, but the 11 data connectors it lists mostly need their own separate paid subscription or API key - installing the plugin alone gets you the slash commands, not live data.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 3 min. Lists /comps, /dcf, /earnings, /one-pager, /ic-memo, /source, /client-review, /ppt-template.",
+    "prerequisites": [
+      "Claude Desktop app with Cowork",
+      "separate paid accounts for the data connectors you use"
+    ],
+    "teaches": [
+      "install Anthropic's financial services plugin marketplace into Cowork"
+    ],
+    "keywords": [
+      "cowork financial services plugin",
+      "install finance plugins cowork",
+      "cowork finance connectors"
+    ],
+    "questions": [
+      "how do i install financial plugins in cowork",
+      "what finance data connectors work with cowork"
+    ],
+    "id": "r-f0a6d1c495"
+  },
+  {
+    "title": "Intro to Projects",
+    "url": "https://academy.claude.com/tutorials/intro-to-projects",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "non-technical",
+      "business-founder",
+      "pm"
+    ],
+    "level": "never-used",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "video",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "A short video introducing Projects for organizing related conversations with shared context.",
+    "who_for": "Someone new to Projects who wants a quick overview before trying it.",
+    "skip_if": "The emptiest page in its batch - title, one description line, and a YouTube embed, nothing else - and it doesn't mention that Projects has historically needed a paid plan.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 7 min.",
+    "prerequisites": [
+      "a Claude.ai account"
+    ],
+    "teaches": [
+      "understand what Projects is for at a conceptual level"
+    ],
+    "keywords": [
+      "claude projects intro",
+      "what are claude projects",
+      "claude projects overview"
+    ],
+    "questions": [
+      "what is claude projects",
+      "how do projects organize my conversations"
+    ],
+    "id": "r-052958c979"
+  },
+  {
+    "title": "Navigating the Claude desktop app: Chat, Claude Cowork, Claude Code",
+    "url": "https://academy.claude.com/tutorials/navigating-the-claude-desktop-app",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "non-technical",
+      "business-founder",
+      "pm",
+      "developer"
+    ],
+    "level": "basic",
+    "topics": [
+      "cowork"
+    ],
+    "format": "article",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "How Chat, Cowork and Code relate inside the Claude desktop app - Cowork and Code run on the same engine, but Cowork is sandboxed to shared folders while Code has full file-system access.",
+    "who_for": "Someone with the desktop app who isn't sure which of the three modes fits a given task.",
+    "skip_if": "Cowork and the Code tab are both excluded from the Free plan, and several features (screenshots/window sharing, dictation, quick entry) are Mac-only - the comparison assumes you can actually reach all three modes.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. States plainly: 'Cowork and Code run on the same engine. Both are Claude Code underneath.'",
+    "prerequisites": [
+      "Claude desktop app",
+      "a paid plan for Cowork and Code"
+    ],
+    "teaches": [
+      "choose between Chat, Cowork and Code based on sandbox scope and task type"
+    ],
+    "keywords": [
+      "claude desktop app modes",
+      "cowork vs code vs chat",
+      "navigating claude desktop"
+    ],
+    "questions": [
+      "what's the difference between cowork and code in claude desktop",
+      "which claude desktop mode should i use"
+    ],
+    "id": "r-df065c404d"
+  },
+  {
+    "title": "How context affects Claude's performance and cost",
+    "url": "https://academy.claude.com/tutorials/parametric-memory-and-context",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "non-technical",
+      "developer",
+      "business-founder"
+    ],
+    "level": "basic",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "article",
+    "time": "under-1hr",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Where Claude's answers come from (training vs. context), an interactive token-budget walkthrough, and the point that most of what you pay for in a long conversation is context you didn't write.",
+    "who_for": "Someone watching a usage bill or a rate limit who wants to understand where the tokens are actually going.",
+    "skip_if": "Long and interactive (about eight embedded widgets, 20 minutes) for what is ultimately one core idea - skip if you just want that one sentence about context cost.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 20 min, the longest page in its batch and the only one with no product chip. Title does not match the slug ('parametric-memory-and-context').",
+    "prerequisites": [],
+    "teaches": [
+      "distinguish parametric (trained-in) knowledge from context-window content",
+      "understand why context, not the question, dominates token cost in long conversations"
+    ],
+    "keywords": [
+      "claude context window explained",
+      "why does claude cost so much",
+      "parametric memory vs context"
+    ],
+    "questions": [
+      "why is my claude conversation using so many tokens",
+      "what is parametric memory in claude"
+    ],
+    "id": "r-8e75d912b0"
+  },
+  {
+    "title": "Prompting strategies for financial analysis",
+    "url": "https://academy.claude.com/tutorials/prompting-strategies-for-financial-analysis",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "data-analyst",
+      "business-founder"
+    ],
+    "level": "confident",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "About eight bad-prompt/good-prompt pairs with real tickers for financial analysis, plus hard numeric limits like capping detailed requests to 3-5 companies at a time.",
+    "who_for": "A financial analyst whose prompts to Claude keep coming back too vague or too broad.",
+    "skip_if": "Assumes Daloopa and Kensho/S&P Global connectors are already available to you - the bad-prompt/good-prompt pairs are the real content, but following along needs those enterprise data products already connected.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min, the most concrete prompting page in its batch. Recommends having Claude plan first and review before proceeding.",
+    "prerequisites": [
+      "Daloopa and/or Kensho/S&P Global connectors"
+    ],
+    "teaches": [
+      "write specific, bounded prompts for financial analysis",
+      "have Claude plan before executing a large analysis"
+    ],
+    "keywords": [
+      "financial analysis prompting",
+      "claude finance prompts",
+      "prompt engineering for finance"
+    ],
+    "questions": [
+      "how do i write better financial analysis prompts",
+      "why are my claude finance prompts too vague"
+    ],
+    "id": "r-63c2fba467"
+  },
+  {
+    "title": "Prototype AI-Powered Apps with Claude artifacts",
+    "url": "https://academy.claude.com/tutorials/prototype-ai-powered-apps-with-claude-artifacts",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "non-technical",
+      "developer",
+      "business-founder"
+    ],
+    "level": "basic",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "article",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Rapidly building, testing and sharing AI-powered apps with Artifacts, with an unusual billing detail: viewers' usage counts against their own plan, not yours.",
+    "who_for": "Someone who wants to test an AI-app idea without managing API keys or deployment.",
+    "skip_if": "Explicit about the ceiling - artifacts are 'best for testing and demonstration' and hit real limits like no interleaved scripts - so it hands you off to Claude Code for anything production-bound rather than teaching that step.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 8 min, video plus full written guide. Links four live public example artifacts. Warns a published link means 'anyone with this link can access' the app.",
+    "prerequisites": [
+      "a Claude.ai account"
+    ],
+    "teaches": [
+      "build and publish an AI-powered app as an Artifact with no API key management",
+      "know when to graduate a prototype to Claude Code"
+    ],
+    "keywords": [
+      "claude artifacts ai app",
+      "build ai app no api key",
+      "prototype with claude artifacts"
+    ],
+    "questions": [
+      "can i build an ai app with claude without an api key",
+      "who pays for usage on a shared claude artifact"
+    ],
+    "id": "r-3c6ee9bbf8"
+  },
+  {
+    "title": "Refining a PowerPoint with Claude",
+    "url": "https://academy.claude.com/tutorials/refining-a-powerpoint-with-claude",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder",
+      "pm"
+    ],
+    "level": "confident",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "video",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "A video on using Claude's built-in chat interface inside PowerPoint to add slides, edit elements, and turn text-heavy slides into native charts and visuals.",
+    "who_for": "Someone with an existing deck who wants to elevate it without leaving PowerPoint.",
+    "skip_if": "Video only, no written steps - and it needs Claude for PowerPoint already installed inside Microsoft PowerPoint, which the page doesn't walk you through.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 7 min. Only page in its batch with no 'Open Claude' CTA, since the feature lives inside PowerPoint itself.",
+    "prerequisites": [
+      "Claude for PowerPoint installed in Microsoft PowerPoint"
+    ],
+    "teaches": [
+      "refine an existing PowerPoint deck and convert text-heavy slides into native charts"
+    ],
+    "keywords": [
+      "refine powerpoint with claude",
+      "claude powerpoint editing",
+      "claude native charts powerpoint"
+    ],
+    "questions": [
+      "can claude turn my text slides into charts",
+      "how do i edit an existing powerpoint with claude"
+    ],
+    "id": "r-86ef6bca39"
+  },
+  {
+    "title": "Using Claude Cowork for marketing ops: run a weekly review that preps itself",
+    "url": "https://academy.claude.com/tutorials/using-claude-cowork-for-marketing-ops-review",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "pm",
+      "business-founder"
+    ],
+    "level": "builder",
+    "topics": [
+      "cowork"
+    ],
+    "format": "article",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "A scheduled Cowork job that gathers weekly metrics on its own and drafts both a detailed team doc and a one-slide leadership summary, improving the underlying skill each week.",
+    "who_for": "A marketing ops person who runs the same weekly metrics review by hand.",
+    "skip_if": "Assumes Cowork is already set up with connectors to your own email, calendar, tracker and warehouse - the real lesson is a scheduled weekly job, not a one-off prompt, so it's less useful if you only need a single report.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min, video plus written steps. Steps are cadence-labelled: 'Set up once' vs 'Every week.'",
+    "prerequisites": [
+      "Claude Cowork set up with connectors"
+    ],
+    "teaches": [
+      "build a scheduled weekly metrics review that improves itself over time"
+    ],
+    "keywords": [
+      "cowork weekly marketing review",
+      "claude cowork marketing ops",
+      "automate marketing metrics review"
+    ],
+    "questions": [
+      "can cowork run my weekly marketing report automatically",
+      "how do i schedule a recurring cowork task"
+    ],
+    "id": "r-9a2a25541c"
+  },
+  {
+    "title": "Using Claude Cowork for sales: research any account before the first call",
+    "url": "https://academy.claude.com/tutorials/using-claude-cowork-for-sales-account-research",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "pm",
+      "business-founder"
+    ],
+    "level": "builder",
+    "topics": [
+      "cowork"
+    ],
+    "format": "article",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Cowork pulls everything worth knowing about an account into one brief before a first sales call, using prebuilt account-research and call-summary skills you customize for your company.",
+    "who_for": "An account executive who wants to walk into a first call already knowing the account.",
+    "skip_if": "Needs the Sales plugin installed plus your own CRM, warehouse and call-recording connectors - the real teaching point is rewriting the prebuilt skill for your company, not using it out of the box.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min, video plus written steps. Recommends validating by running it on an account you already know well.",
+    "prerequisites": [
+      "Claude Cowork",
+      "Sales plugin",
+      "CRM/warehouse/call-recording connectors"
+    ],
+    "teaches": [
+      "build a pre-call account research brief with Cowork and validate it against a known account"
+    ],
+    "keywords": [
+      "cowork sales account research",
+      "claude cowork pre-call brief",
+      "sales call prep cowork"
+    ],
+    "questions": [
+      "can cowork research an account before my sales call",
+      "how do i customize cowork's sales skills"
+    ],
+    "id": "r-7e0d6889fb"
+  },
+  {
+    "title": "Using Claude Design for presentations and slide decks",
+    "url": "https://academy.claude.com/tutorials/using-claude-design-for-presentations-and-slide-decks",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder",
+      "pm",
+      "non-technical"
+    ],
+    "level": "basic",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Building polished presentation decks through conversation with Claude Design (claude.ai/design), including brand-system auto-apply and a group-chat collaboration mode.",
+    "who_for": "Someone who needs a professional-looking deck fast and doesn't have design skills.",
+    "skip_if": "This is Claude Design, a specific Anthropic Labs product, not design skill - the page says outright 'no design skills required,' and for real design judgment it tells you to 'reach out to your Design Team' instead.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Heavily built from internal-Anthropic testimonials; about half the page is copy-paste example prompts.",
+    "prerequisites": [
+      "access to claude.ai/design"
+    ],
+    "teaches": [
+      "generate a presentation deck through conversation with Claude Design"
+    ],
+    "keywords": [
+      "claude design presentations",
+      "claude design slide decks",
+      "claude.ai design tool"
+    ],
+    "questions": [
+      "can claude build a presentation deck for me",
+      "what is claude design"
+    ],
+    "id": "r-291f047540"
+  },
+  {
+    "title": "Using Daloopa for financial analysis",
+    "url": "https://academy.claude.com/tutorials/using-daloopa-for-financial-analysis",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "data-analyst",
+      "business-founder"
+    ],
+    "level": "builder",
+    "topics": [
+      "mcp"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Connecting Daloopa for granular, source-linked line-item financial data across 3,500+ public companies, with 10+ years of history for most.",
+    "who_for": "Analysts who need to verify unusual figures or reconcile discrepancies against the original filing.",
+    "skip_if": "Access is by invitation only - you contact Daloopa directly to get the MCP server, and only an org owner can add the connector afterward.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Source links reference specific filing locations for auditability.",
+    "prerequisites": [
+      "a Daloopa relationship",
+      "Claude org-admin rights"
+    ],
+    "teaches": [
+      "pull source-linked, granular line-item financial data from Daloopa into Claude"
+    ],
+    "keywords": [
+      "daloopa connector claude",
+      "daloopa financial data",
+      "daloopa mcp"
+    ],
+    "questions": [
+      "how do i connect daloopa to claude",
+      "can claude cite the original filing for a financial figure"
+    ],
+    "id": "r-b32e19f042"
+  },
+  {
+    "title": "Using Databricks for Data Analysis",
+    "url": "https://academy.claude.com/tutorials/using-databricks-for-data-analysis",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "data-analyst",
+      "developer"
+    ],
+    "level": "builder",
+    "topics": [
+      "mcp"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Connecting Databricks Unity Catalog to Claude via three separate connectors (Functions, Vector Search, Genie), respecting your org's existing Unity Catalog permissions.",
+    "who_for": "Analysts querying an existing Databricks workspace in natural language without losing Unity Catalog permission boundaries.",
+    "skip_if": "Needs a Databricks workspace with Unity Catalog you already have, plus a Claude org owner to add three separate connectors - not a path into Databricks if you don't already use it.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. The only finance-adjacent connector in its batch that is not invitation-only - self-serve via OAuth or a Personal Access Token.",
+    "prerequisites": [
+      "a Databricks workspace with Unity Catalog",
+      "Claude org-admin rights"
+    ],
+    "teaches": [
+      "query Databricks Unity Catalog data from Claude with your existing permissions enforced"
+    ],
+    "keywords": [
+      "databricks connector claude",
+      "unity catalog claude",
+      "databricks mcp"
+    ],
+    "questions": [
+      "how do i connect databricks to claude",
+      "does claude respect my databricks permissions"
+    ],
+    "id": "r-f14ef0bf7f"
+  },
+  {
+    "title": "Using Egnyte for data room management with Claude",
+    "url": "https://academy.claude.com/tutorials/using-egnyte-for-data-room-management-with-claude",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder",
+      "pm"
+    ],
+    "level": "builder",
+    "topics": [
+      "mcp"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Connecting Egnyte for secure document search, analysis and retrieval across a data room, with four named server tools including ask_document and summarize_document.",
+    "who_for": "M&A and legal teams doing contract review, due diligence or policy compliance over a data room.",
+    "skip_if": "Needs a specific paid Egnyte tier by name - Essential, Elite or Ultimate on Gen 4, or Enterprise with the Co-Pilot add-on on Gen 3 - lower tiers don't qualify at all.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. The only page in its batch written as vendor-neutral MCP documentation that also names ChatGPT as a compatible client.",
+    "prerequisites": [
+      "an Egnyte account on a qualifying tier"
+    ],
+    "teaches": [
+      "search, ask questions of, and summarize documents in an Egnyte data room from Claude"
+    ],
+    "keywords": [
+      "egnyte connector claude",
+      "data room management claude",
+      "egnyte mcp"
+    ],
+    "questions": [
+      "how do i connect egnyte to claude",
+      "what egnyte plan do i need for the claude connector"
+    ],
+    "id": "r-e05d12e007"
+  },
+  {
+    "title": "Using FactSet for comprehensive financial research",
+    "url": "https://academy.claude.com/tutorials/using-factset-for-comprehensive-financial-research",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "data-analyst",
+      "business-founder"
+    ],
+    "level": "builder",
+    "topics": [
+      "mcp"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Connecting FactSet for pricing, fundamentals, analyst estimates, M&A data, supply-chain relationships and ownership data - currently in early access.",
+    "who_for": "Investment professionals who already rely on FactSet's institutional-grade coverage.",
+    "skip_if": "Early access only - there's no public connector URL, you can't even get one without a FactSet representative reaching out to you first.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Unusually honest that ownership data 'typically has a quarterly lag due to filing requirements.'",
+    "prerequisites": [
+      "a FactSet subscription",
+      "an invitation from a FactSet representative"
+    ],
+    "teaches": [
+      "understand FactSet's data coverage available through Claude, and its known staleness limits"
+    ],
+    "keywords": [
+      "factset connector claude",
+      "factset financial research",
+      "factset mcp"
+    ],
+    "questions": [
+      "how do i get access to the factset connector for claude",
+      "what data does the factset connector cover"
+    ],
+    "id": "r-abcd6628cb"
+  },
+  {
+    "title": "Using LSEG for financial market data analysis",
+    "url": "https://academy.claude.com/tutorials/using-lseg-for-financial-market-data-analysis",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "data-analyst",
+      "business-founder"
+    ],
+    "level": "builder",
+    "topics": [
+      "mcp"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Connecting LSEG for real-time FX spot/forward pricing, interest rate curve construction and bond pricing across asset classes.",
+    "who_for": "Analysts who need real-time market pricing and calculation tools rather than research documents.",
+    "skip_if": "Invitation-only, and LSEG's own reference documentation for it isn't published yet ('available soon') - you're contacting LSEG for access to something even they haven't fully documented.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min, the thinnest finance page in its batch (five headings). Calculation-oriented rather than research-oriented, unlike its finance-connector siblings.",
+    "prerequisites": [
+      "an LSEG relationship",
+      "Claude org-admin rights"
+    ],
+    "teaches": [
+      "pull real-time FX and rate pricing calculations from LSEG into Claude"
+    ],
+    "keywords": [
+      "lseg connector claude",
+      "lseg market data claude",
+      "lseg mcp"
+    ],
+    "questions": [
+      "how do i connect lseg to claude",
+      "can claude calculate fx forward rates from lseg data"
+    ],
+    "id": "r-8fd56d4623"
+  },
+  {
+    "title": "Using Moody's for financial analysis",
+    "url": "https://academy.claude.com/tutorials/using-moodys-for-financial-analysis",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "data-analyst",
+      "business-founder"
+    ],
+    "level": "builder",
+    "topics": [
+      "mcp"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Connecting Moody's credit ratings, outlooks and research via OAuth, with named tools for entity ratings, rating drivers, and counterparty risk checks.",
+    "who_for": "Credit and counterparty risk analysts who already have a Moody's subscription.",
+    "skip_if": "What you can see is bounded by your existing Moody's subscription entitlements - the connector doesn't grant new access, it only exposes what your account can already view.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. The only connector in its batch with a public, self-serve OAuth-gated URL rather than a 'contact us' gate.",
+    "prerequisites": [
+      "a Moody's subscription",
+      "Claude org-admin rights"
+    ],
+    "teaches": [
+      "query Moody's credit ratings and rating drivers from Claude via OAuth"
+    ],
+    "keywords": [
+      "moody's connector claude",
+      "moody's credit ratings claude",
+      "moody's mcp"
+    ],
+    "questions": [
+      "how do i connect moody's to claude",
+      "does the moody's connector grant new data access"
+    ],
+    "id": "r-608014bdee"
+  },
+  {
+    "title": "Using Morningstar for investment research",
+    "url": "https://academy.claude.com/tutorials/using-morningstar-for-investment-research",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "data-analyst",
+      "business-founder"
+    ],
+    "level": "builder",
+    "topics": [
+      "mcp"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Connecting Morningstar's proprietary fair value estimates, economic moat ratings, and star ratings, plus editorial content on retirement planning and ESG investing.",
+    "who_for": "Investors who value Morningstar's own analyst ratings over raw market data.",
+    "skip_if": "Data is fetched one security at a time - there's no batch/portfolio-wide query - and you need a Morningstar account already entitled to the MCP server, or a request in to Morningstar.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min, one of the two thinnest finance pages in its batch (four headings).",
+    "prerequisites": [
+      "a Morningstar account with MCP entitlement"
+    ],
+    "teaches": [
+      "pull Morningstar's proprietary ratings and thematic research into Claude, one security at a time"
+    ],
+    "keywords": [
+      "morningstar connector claude",
+      "morningstar investment research",
+      "morningstar mcp"
+    ],
+    "questions": [
+      "how do i connect morningstar to claude",
+      "can claude pull morningstar's star ratings"
+    ],
+    "id": "r-96bbefc7bd"
+  },
+  {
+    "title": "Using MT Newswires for real-time financial news",
+    "url": "https://academy.claude.com/tutorials/using-mt-newswires-for-real-time-financial-news",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "data-analyst",
+      "business-founder"
+    ],
+    "level": "builder",
+    "topics": [
+      "mcp"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Connecting MT Newswires, a premium real-time financial news service covering 45,000+ securities, for portfolio monitoring and breaking-news alerting.",
+    "who_for": "Analysts who need live breaking financial news rather than fundamentals or filings data.",
+    "skip_if": "A paid premium newswire you must be invited to - contact MT Newswires directly - and it's news/alerting, not the fundamentals or filings data the other finance connectors in this set provide.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min, thinnest finance page in its batch (five headings). Page has a capitalization typo: 'real-Time'.",
+    "prerequisites": [
+      "an MT Newswires subscription",
+      "Claude org-admin rights"
+    ],
+    "teaches": [
+      "monitor breaking financial news and portfolio-relevant events via MT Newswires in Claude"
+    ],
+    "keywords": [
+      "mt newswires connector claude",
+      "real-time financial news claude",
+      "mt newswires mcp"
+    ],
+    "questions": [
+      "how do i connect mt newswires to claude",
+      "can claude alert me on breaking financial news"
+    ],
+    "id": "r-bc2c388cda"
+  },
+  {
+    "title": "Using PitchBook for investment research",
+    "url": "https://academy.claude.com/tutorials/using-pitchbook-for-investment-research",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "data-analyst",
+      "business-founder"
+    ],
+    "level": "builder",
+    "topics": [
+      "mcp"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Connecting PitchBook Premium for private capital market data, company profiles, investor information and deal details, via SSO.",
+    "who_for": "Private markets analysts researching funding status, competitive benchmarking, and investor relationships.",
+    "skip_if": "Needs PitchBook Premium specifically with SSO credentials - a standard PitchBook account isn't enough, though a trial license is accepted, the only finance connector in this batch with any free path in.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. The only finance page in its batch focused on private capital markets rather than public markets.",
+    "prerequisites": [
+      "PitchBook Premium (seat-based, unlimited, or trial license) with SSO"
+    ],
+    "teaches": [
+      "research private capital markets, funding status and investor relationships via PitchBook in Claude"
+    ],
+    "keywords": [
+      "pitchbook connector claude",
+      "pitchbook investment research",
+      "pitchbook mcp"
+    ],
+    "questions": [
+      "how do i connect pitchbook to claude",
+      "does a pitchbook trial license work with the claude connector"
+    ],
+    "id": "r-9213856444"
+  },
+  {
+    "title": "Using Research",
+    "url": "https://academy.claude.com/tutorials/using-research",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "non-technical",
+      "business-founder",
+      "pm"
+    ],
+    "level": "confident",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "video",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "A short video on Claude's Research feature for practical planning tasks, available only to paid Claude plans.",
+    "who_for": "A paid-plan user wondering what the Research feature actually does for planning work.",
+    "skip_if": "The only Academy page in this set that states a Claude plan requirement outright - paid plans only (Pro, Max, Team, Enterprise) - and the page itself has almost no text, everything is in the 3-minute video.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 3 min, the shortest page in its batch. Confirmed as a real, distinct page (not a malformed slug) - has its own title tag and no redirect.",
+    "prerequisites": [
+      "a paid Claude plan (Pro, Max, Team, or Enterprise)"
+    ],
+    "teaches": [
+      "use Claude's Research feature for practical planning tasks"
+    ],
+    "keywords": [
+      "claude research feature",
+      "using claude research",
+      "claude research planning"
+    ],
+    "questions": [
+      "what does claude's research feature do",
+      "which claude plans include research"
+    ],
+    "id": "r-e36f2940da"
+  },
+  {
+    "title": "Using S&P global data for financial analysis",
+    "url": "https://academy.claude.com/tutorials/using-s-p-global-data-for-financial-analysis",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "data-analyst",
+      "business-founder"
+    ],
+    "level": "builder",
+    "topics": [
+      "mcp"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Connecting S&P Global's Kensho integration for 200+ financial metrics, business-relationship mapping, and competitor lists pulled from SEC filings.",
+    "who_for": "Analysts who need market and fundamental data plus supplier/customer/partner relationship mapping.",
+    "skip_if": "Access needs a commercial agreement with S&P Global you must arrange directly, and it's set up as a custom connector (not from Claude's connector directory), which needs org-admin rights.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Accepts tickers, ISINs or CUSIPs interchangeably; the only page in its batch with no 'Who should use' section at all.",
+    "prerequisites": [
+      "a commercial S&P Global agreement",
+      "Claude org-admin rights"
+    ],
+    "teaches": [
+      "pull S&P Global market data and business-relationship mapping into Claude via Kensho"
+    ],
+    "keywords": [
+      "s&p global connector claude",
+      "kensho claude",
+      "s&p global mcp"
+    ],
+    "questions": [
+      "how do i connect s&p global data to claude",
+      "what is the kensho integration in claude"
+    ],
+    "id": "r-25738ca991"
+  },
+  {
+    "title": "Using the 10x Genomics Extension in Claude",
+    "url": "https://academy.claude.com/tutorials/using-the-10x-genomics-extension-in-claude",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "researcher"
+    ],
+    "level": "builder",
+    "topics": [
+      "mcp"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "A local Claude Desktop extension that runs 10x Cloud Analysis Cell Ranger pipelines - upload data, launch jobs, monitor status, download results - by natural language instead of the command line.",
+    "who_for": "Computational biologists and core facility managers running single-cell or spatial genomics pipelines.",
+    "skip_if": "A local Claude Desktop extension, not a remote connector - and unlike most connectors here it actually runs compute jobs on your data, so it needs a free 10x Cloud Analysis account plus real sequencing data to be useful.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 3 min, shortest in its batch. Covers gene expression, cell multiplexing and CRISPR screening pipelines.",
+    "prerequisites": [
+      "a free 10x Cloud Analysis account",
+      "Claude Desktop app"
+    ],
+    "teaches": [
+      "launch and monitor 10x Cloud Analysis pipelines from Claude Desktop"
+    ],
+    "keywords": [
+      "10x genomics extension claude",
+      "cell ranger claude",
+      "10x cloud analysis claude"
+    ],
+    "questions": [
+      "can claude run my 10x genomics pipeline",
+      "how do i use the 10x genomics extension"
+    ],
+    "id": "r-5130e96925"
+  },
+  {
+    "title": "Using the Benchling connector in Claude",
+    "url": "https://academy.claude.com/tutorials/using-the-benchling-connector-in-claude",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "researcher"
+    ],
+    "level": "builder",
+    "topics": [
+      "mcp"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Connecting Benchling's private R&D platform (experiments, notebooks, structured records) to Claude, honoring your existing Benchling permissions.",
+    "who_for": "Bench scientists and R&D leaders at an organization with an enterprise Benchling tenant.",
+    "skip_if": "The strictest tenant setup in this batch - needs Benchling AI (Deep Research), V3 API access, and remote MCP all enabled on your organization's tenant - effectively existing enterprise Benchling customers only.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Only connector in its batch reading private internal research records rather than a public database.",
+    "prerequisites": [
+      "an enterprise Benchling tenant with AI, API and MCP features enabled"
+    ],
+    "teaches": [
+      "query your organization's private Benchling R&D records from Claude, permission-aware"
+    ],
+    "keywords": [
+      "benchling connector claude",
+      "benchling ai claude",
+      "benchling mcp"
+    ],
+    "questions": [
+      "how do i connect benchling to claude",
+      "does claude see everything in our benchling tenant"
+    ],
+    "id": "r-de0ea7159d"
+  },
+  {
+    "title": "Using the Benevity connector in Claude",
+    "url": "https://academy.claude.com/tutorials/using-the-benevity-connector-in-claude",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder",
+      "non-technical"
+    ],
+    "level": "never-used",
+    "topics": [
+      "mcp"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Connecting Benevity's database of 2.5M+ nonprofits worldwide for charitable organization discovery and research, no account required.",
+    "who_for": "Anyone researching nonprofits worldwide for corporate giving or donation decisions.",
+    "skip_if": "Research and discovery only - the page's own FAQ confirms you cannot donate through Claude with this connector, so it won't help with an actual giving workflow.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 9 min. Available to all paid Claude plan users, no Benevity account needed.",
+    "prerequisites": [
+      "any paid Claude plan"
+    ],
+    "teaches": [
+      "research charitable organizations worldwide via the Benevity connector"
+    ],
+    "keywords": [
+      "benevity connector claude",
+      "nonprofit database claude",
+      "benevity mcp"
+    ],
+    "questions": [
+      "can claude search for nonprofits worldwide",
+      "can i donate through claude with the benevity connector"
+    ],
+    "id": "r-7443bef42c"
+  },
+  {
+    "title": "Using the BioRender Connector in Claude",
+    "url": "https://academy.claude.com/tutorials/using-the-biorender-connector-in-claude",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "researcher"
+    ],
+    "level": "builder",
+    "topics": [
+      "mcp"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Searching BioRender's 50,000+ verified scientific icons and figure templates for posters, grant applications and graphical abstracts, from inside Claude.",
+    "who_for": "Researchers making scientific figures who already have a BioRender subscription.",
+    "skip_if": "Needs your own active BioRender subscription, and what you can actually reach depends on your tier - Free and Individual plans get a limited icon set, only Premium and Team get the full library.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 9 min. The only connector in its batch about visual assets rather than data retrieval.",
+    "prerequisites": [
+      "an active BioRender account"
+    ],
+    "teaches": [
+      "search BioRender's icon and template library for a scientific figure from Claude"
+    ],
+    "keywords": [
+      "biorender connector claude",
+      "scientific figure icons claude",
+      "biorender mcp"
+    ],
+    "questions": [
+      "can claude search biorender for figure templates",
+      "what biorender tier do i need for the claude connector"
+    ],
+    "id": "r-197aa1a8ce"
+  },
+  {
+    "title": "Using the bioRxiv and medRxiv Connector in Claude",
+    "url": "https://academy.claude.com/tutorials/using-the-biorxiv-and-medrxiv-connector-in-claude",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "researcher"
+    ],
+    "level": "never-used",
+    "topics": [
+      "mcp"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Searching, retrieving and summarizing preprints from bioRxiv and medRxiv - 310,000+ preprints across 27 disciplines - including preprint-to-publication timeline tracking.",
+    "who_for": "Researchers, journal editors and science journalists who need early, not-yet-peer-reviewed findings.",
+    "skip_if": "Preprints only - bioRxiv and medRxiv are not-yet-peer-reviewed manuscripts, so skip if you specifically need published, peer-reviewed literature (the PubMed connector covers that instead).",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. search_by_funder uses ROR IDs; search_published_articles tracks which preprints later reached a journal.",
+    "prerequisites": [],
+    "teaches": [
+      "search bioRxiv and medRxiv preprints and track which ones later reached formal publication"
+    ],
+    "keywords": [
+      "biorxiv connector claude",
+      "medrxiv connector claude",
+      "preprint search claude"
+    ],
+    "questions": [
+      "can claude search biorxiv preprints",
+      "how do i track a preprint to its published version"
+    ],
+    "id": "r-759815db09"
+  },
+  {
+    "title": "Using the Blackbaud connector in Claude",
+    "url": "https://academy.claude.com/tutorials/using-the-blackbaud-connector-in-claude",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder",
+      "non-technical"
+    ],
+    "level": "builder",
+    "topics": [
+      "mcp"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Connecting Raiser's Edge NXT to access donor records and gift history and draft personalized donor communications, with a review-before-sending safeguard.",
+    "who_for": "Fundraising staff who already use Raiser's Edge NXT and want Claude to draft donor communications.",
+    "skip_if": "Needs a Blackbaud marketplace admin to install and approve scopes before an org owner or individual can even connect - not a self-serve setup for one person.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. The only connector in its batch that writes (drafts thank-you notes), with an explicit 'review before sending' tip.",
+    "prerequisites": [
+      "a Blackbaud account",
+      "a marketplace admin install"
+    ],
+    "teaches": [
+      "read donor records and draft personalized donor communications from Raiser's Edge NXT via Claude"
+    ],
+    "keywords": [
+      "blackbaud connector claude",
+      "raiser's edge nxt claude",
+      "blackbaud mcp"
+    ],
+    "questions": [
+      "how do i connect blackbaud to claude",
+      "can claude draft donor thank-you notes"
+    ],
+    "id": "r-37460d60db"
+  },
+  {
+    "title": "Using the Blender Connector in Claude",
+    "url": "https://academy.claude.com/tutorials/using-the-blender-connector-in-claude",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "non-technical",
+      "developer"
+    ],
+    "level": "never-used",
+    "topics": [
+      "mcp"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "A local connector letting Claude read and modify your open Blender scene directly through Blender's Python API - Geometry Nodes, batch changes, cleanup.",
+    "who_for": "Blender users who want Claude to work with their live open scene.",
+    "skip_if": "Blender and Claude must be running on the same machine - it works through a local add-on, not the browser, so claude.ai in a browser tab will not reach it at all.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Only page in its batch tagged 'Claude Cowork' rather than 'Claude.ai'; built by the Blender developers, part of Claude for Creative Work.",
+    "prerequisites": [
+      "Claude Desktop (any plan, including Free)",
+      "Blender 4.2 or later",
+      "a Blender add-on installed"
+    ],
+    "teaches": [
+      "let Claude read and modify an open Blender scene through its Python API"
+    ],
+    "keywords": [
+      "blender connector claude",
+      "claude blender integration",
+      "blender mcp"
+    ],
+    "questions": [
+      "can claude edit my blender scene directly",
+      "does the blender connector work in a browser"
+    ],
+    "id": "r-770dd2351e"
+  },
+  {
+    "title": "Using the Candid connector in Claude",
+    "url": "https://academy.claude.com/tutorials/using-the-candid-connector-in-claude",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder",
+      "non-technical"
+    ],
+    "level": "never-used",
+    "topics": [
+      "mcp"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Connecting Candid's database of 1.9M+ US-weighted nonprofits and foundations, built from IRS filings, for grant discovery and sector analysis.",
+    "who_for": "Grant seekers and researchers focused on US-registered 501(c)(3) organizations.",
+    "skip_if": "Explicitly in beta with 'core functionality available' rather than finished, and its coverage is US-weighted - skip if you need international nonprofit data (Benevity covers that instead).",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Has the Philanthropy Classification System taxonomy and four transparency seal levels (Platinum/Gold/Silver/Bronze).",
+    "prerequisites": [
+      "any paid Claude plan"
+    ],
+    "teaches": [
+      "research US nonprofits and foundations via Candid's IRS-filing-based database in Claude"
+    ],
+    "keywords": [
+      "candid connector claude",
+      "nonprofit database us claude",
+      "candid mcp"
+    ],
+    "questions": [
+      "can claude search candid for us nonprofits",
+      "what is the philanthropy classification system"
+    ],
+    "id": "r-3cfbe8a29c"
+  },
+  {
+    "title": "Using the ChEMBL Connector in Claude",
+    "url": "https://academy.claude.com/tutorials/using-the-chembl-connector-in-claude",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "researcher"
+    ],
+    "level": "never-used",
+    "topics": [
+      "mcp"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Free access to 2M+ bioactive compounds and 15M+ activity measurements from EMBL-EBI's curated database, for drug discovery - compound search, targets, mechanisms, ADMET.",
+    "who_for": "Medicinal chemists and drug discovery scientists researching bioactive compounds.",
+    "skip_if": "Compound and bioactivity data only (IC50, targets, mechanisms) - it's the chemistry layer, not the clinical-trial layer, so pair it with the ClinicalTrials.gov connector if you need trial data too.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Free, no account. Accepts SMILES structures for compound search.",
+    "prerequisites": [],
+    "teaches": [
+      "search bioactive compounds, targets and mechanisms in ChEMBL from Claude"
+    ],
+    "keywords": [
+      "chembl connector claude",
+      "bioactive compound search claude",
+      "chembl mcp"
+    ],
+    "questions": [
+      "can claude search chembl for compounds",
+      "does chembl connector accept smiles structures"
+    ],
+    "id": "r-e0b9410710"
+  },
+  {
+    "title": "Using the ClinicalTrials.gov Connector in Claude",
+    "url": "https://academy.claude.com/tutorials/using-the-clinicaltrials-gov-connector-in-claude",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "researcher"
+    ],
+    "level": "never-used",
+    "topics": [
+      "mcp"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Free access to the NIH/NLM registry of 500,000+ clinical trials across 221 countries - search trials, sponsors, investigators, and benchmark endpoints against similar trials.",
+    "who_for": "Clinical research coordinators, protocol writers and regulatory affairs professionals.",
+    "skip_if": "Free and fully open, no account needed - skip only if trial registry data genuinely isn't what you're researching.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Uses ClinicalTrials.gov API v2; supports phase filters PHASE1-PHASE4 and medical synonym expansion.",
+    "prerequisites": [],
+    "teaches": [
+      "search and benchmark clinical trials, sponsors and investigators via ClinicalTrials.gov in Claude"
+    ],
+    "keywords": [
+      "clinicaltrials.gov connector claude",
+      "clinical trial search claude",
+      "clinicaltrials mcp"
+    ],
+    "questions": [
+      "can claude search clinicaltrials.gov",
+      "how do i benchmark trial endpoints with claude"
+    ],
+    "id": "r-7fba0e936a"
+  },
+  {
+    "title": "Using the CMS Coverage Connector in Claude",
+    "url": "https://academy.claude.com/tutorials/using-the-cms-coverage-connector-in-claude",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "non-technical",
+      "researcher"
+    ],
+    "level": "never-used",
+    "topics": [
+      "mcp"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Searching Medicare Part B coverage policies, National and Local Coverage Determinations, and billing articles from the CMS Coverage Database, free and instant.",
+    "who_for": "Medical coders, billers, and prior authorization specialists checking whether Medicare will pay for a service.",
+    "skip_if": "Covers Medicare Part B only, by the page's own explicit statement - it does not include Part D drug formularies or Part A inpatient hospital coverage, so it can't answer questions about either.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Uses CMS Coverage API v1; get_contractors finds the regional Medicare Administrative Contractor.",
+    "prerequisites": [],
+    "teaches": [
+      "search Medicare Part B coverage policies and billing articles via Claude"
+    ],
+    "keywords": [
+      "cms coverage connector claude",
+      "medicare part b coverage claude",
+      "cms coverage mcp"
+    ],
+    "questions": [
+      "can claude check if medicare covers a service",
+      "does the cms connector cover medicare part d"
+    ],
+    "id": "r-ed49348746"
+  },
+  {
+    "title": "Using the Function Connector in Claude",
+    "url": "https://academy.claude.com/tutorials/using-the-function-connector-in-claude",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "non-technical"
+    ],
+    "level": "never-used",
+    "topics": [
+      "mcp"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Securely viewing your own Function lab test results (160+ tests a year across major body systems) and asking health questions inside Claude, explicitly not for medical advice.",
+    "who_for": "A Function membership holder in the US wanting to ask questions about their own lab results.",
+    "skip_if": "Three simultaneous gates - a paid Function lab-testing membership, a Claude Pro or Max subscription, and a US location - and the page states plainly it's not for medical advice, diagnosis, or treatment recommendations.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Function chats are not used to train models; per-conversation consent required.",
+    "prerequisites": [
+      "a paid Function membership",
+      "Claude Pro or Max",
+      "US location"
+    ],
+    "teaches": [
+      "view your own Function lab results and ask health questions in Claude, without medical advice"
+    ],
+    "keywords": [
+      "function connector claude",
+      "function health claude",
+      "function lab results claude"
+    ],
+    "questions": [
+      "can claude read my function lab results",
+      "does the function connector give medical advice"
+    ],
+    "id": "r-ade17796f6"
+  },
+  {
+    "title": "Using the HealthEx Connector in Claude",
+    "url": "https://academy.claude.com/tutorials/using-the-healthex-connector-in-claude",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "non-technical"
+    ],
+    "level": "never-used",
+    "topics": [
+      "mcp"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Connecting Claude to your own aggregated personal health records from all your care providers, through CLEAR biometric identity verification.",
+    "who_for": "Patients managing a chronic condition or coordinating care across multiple providers.",
+    "skip_if": "The hardest identity gate in this whole batch - Claude Max only, US-based, plus government-ID biometric verification through CLEAR before you can connect your own patient records.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. HIPAA and SOC2 compliant; record retrieval takes 10-30 minutes; consent is explicit, task-scoped and revocable.",
+    "prerequisites": [
+      "Claude Max",
+      "US location",
+      "CLEAR biometric ID verification",
+      "a HealthEx account (currently free)"
+    ],
+    "teaches": [
+      "connect your own aggregated health records from multiple providers to Claude"
+    ],
+    "keywords": [
+      "healthex connector claude",
+      "personal health records claude",
+      "healthex mcp"
+    ],
+    "questions": [
+      "how do i connect my health records to claude",
+      "what identity verification does healthex require"
+    ],
+    "id": "r-6479cdb63b"
+  },
+  {
+    "title": "Using the ICD-10 Connector in Claude",
+    "url": "https://academy.claude.com/tutorials/using-the-icd-10-connector-in-claude",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "non-technical",
+      "developer"
+    ],
+    "level": "never-used",
+    "topics": [
+      "mcp"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "A locally stored 2026 ICD-10-CM/PCS code database for search, validation and hierarchy exploration - over 550 diagnosis code changes for FY2026, effective through Sep 2026.",
+    "who_for": "Medical coders and billing specialists validating diagnosis and procedure codes.",
+    "skip_if": "A fixed local reference database (2026 codes), not a live registry - and it makes one distinction worth knowing before you rely on it: category headers like 'E11' are organizational groupings and are NOT billable, only fully specified codes are.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 5 min. get_hierarchy on 'E11' returns all 117 Type 2 diabetes codes.",
+    "prerequisites": [],
+    "teaches": [
+      "search, validate and explore ICD-10-CM/PCS code hierarchies in Claude",
+      "distinguish a billable fully-specified code from a non-billable category header"
+    ],
+    "keywords": [
+      "icd-10 connector claude",
+      "icd-10 code validation claude",
+      "icd-10 mcp"
+    ],
+    "questions": [
+      "can claude validate an icd-10 code",
+      "is an icd-10 category header billable"
+    ],
+    "id": "r-e1fdecd477"
   }
 ]
