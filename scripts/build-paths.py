@@ -43,8 +43,9 @@ PATHS = [
         "for": "Anyone who has just opened Claude and does not know what to do next.",
         "roles": ["non-technical", "student", "teacher", "business-founder"],
         "level": "never-used",
-        "intro": "Six short steps. Nothing here takes more than an hour, and you can "
-                 "stop after step 3 and still be better off than most people.",
+        "intro": "Five short steps and one real course. Steps 1, 2, 4, 5 and 6 take "
+                 "fifteen minutes each; step 3 is Anthropic's own 2.5-hour Claude 101, "
+                 "and stopping there still leaves you better off than most people.",
         "steps": [
             {"url": "https://ruben.substack.com/p/claude",
              "why": "Start here because most confusion is not about prompting — it is not "
@@ -53,9 +54,11 @@ PATHS = [
             {"url": "https://support.claude.com/en/articles/8114491-get-started-with-claude",
              "why": "Now open the thing itself and do one real task. Reading about it any "
              "longer is procrastination."},
-            {"url": "https://anthropic.skilljar.com/claude-101",
+            {"url": "https://academy.claude.com/courses/claude-101",
              "why": "By now you have had a generic, disappointing answer. Anthropic's own "
-             "beginner course is the fix, and it is the single highest-value hour here."},
+             "beginner course is the fix, and at 2.5 hours it is the one step here that "
+             "is not short — it is the single highest-value stretch of this path, not "
+             "the single highest-value hour, and the two are different promises."},
             {"url": "https://support.claude.com/en/articles/9517075-what-are-projects",
              "why": "Once you repeat a task twice, you need somewhere to keep the context. "
              "Projects is that place. Learning this earlier would have been abstract."},

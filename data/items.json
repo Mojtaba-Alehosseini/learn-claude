@@ -1,7 +1,7 @@
 [
   {
     "title": "AI Fluency for Small Businesses",
-    "url": "https://anthropic.skilljar.com/ai-fluency-for-small-businesses",
+    "url": "https://academy.claude.com/courses/ai-fluency-for-small-businesses",
     "author": "Anthropic + PayPal",
     "roles": [
       "business-founder",
@@ -13,7 +13,7 @@
       "safety"
     ],
     "format": "course",
-    "time": "under-1hr",
+    "time": "half-day",
     "cost": "free",
     "language": "en",
     "tier": "previewed",
@@ -21,15 +21,15 @@
     "who_for": "Founders and staff new to AI who want a structured, vetted foundation before subscribing to or rolling out Claude.",
     "skip_if": "You are already AI-fluent and want product mechanics rather than a decision framework.",
     "published": "2026-05-13",
-    "checked": "2026-08-20",
+    "checked": "2026-08-29",
     "status": "live",
-    "notes": "Official and free; certificate on completion. Examples use Claude.ai but any chatbot works. No upsell.",
+    "notes": "Official and free; certificate on completion. Examples use Claude.ai but any chatbot works. No upsell. Migrated 2026-08-29 from anthropic.skilljar.com to academy.claude.com, the live URL - both were checked 2026-08-29 and the skilljar row still answers, but academy.claude.com is Anthropic's current front door for this course. Read in full on the new page: 9 lessons, 1 quiz, 4 hr. That moves the time bucket from `under-1hr` to `half-day` - the old figure was a guess and this one is read off the page. Content itself is visible without signing in - only progress-tracking sits behind \"Sign in to save progress\" - so cost moves from `free-account` to `free`.",
     "alt_skip_if": [
       "You work at a larger organization — AI Fluency for Builders or Claude 101 fit better."
     ],
     "source": "Anthropic Academy",
     "official": true,
-    "id": "r-af6ef6455e",
+    "id": "r-164e1b7c0c",
     "keywords": [
       "small business ai",
       "smb ai strategy",
@@ -63,7 +63,7 @@
   },
   {
     "title": "AI Fluency: Framework & Foundations",
-    "url": "https://anthropic.skilljar.com/ai-fluency-framework-foundations",
+    "url": "https://academy.claude.com/courses/ai-fluency-framework-foundations",
     "author": "Anthropic / Profs. Rick Dakan & Joseph Feller",
     "roles": [
       "business-founder",
@@ -79,22 +79,22 @@
     ],
     "format": "course",
     "time": "half-day",
-    "cost": "free-account",
+    "cost": "free",
     "language": "en",
     "tier": "previewed",
     "summary": "Anthropic's foundational course on the 4D framework - Delegation, Description, Discernment, Diligence - across twelve lessons and about three hours, including when not to hand a task to AI at all.",
     "who_for": "Anyone who wants the conceptual backbone before diving into product-specific workflows.",
     "skip_if": "Three to four hours, and not one of them is about Claude's interface. It is the strongest official material on where AI stops being reliable, which is worth the time, but you will finish it without having learned a single click.",
     "published": "2025-06-01",
-    "checked": "2026-08-20",
+    "checked": "2026-08-29",
     "status": "live",
-    "notes": "Co-developed with academic partners. Prerequisite for the small-business, nonprofit and educator variants. Certificate on completion. The strongest official material on where AI stops being reliable. Merged 2026-08-27 from three rows for one course: www.anthropic.com/ai-fluency redirects here (verified 2026-08-27, so it was the same page, not a second resource), and the Coursera listing at www.coursera.org/learn/ai-fluency-framework-foundations is the same course on another platform - use it if you would rather enrol there. Enrolment needs a Skilljar account separate from your Claude account, which is why the cost reads free-account and not free. The three rows disagreed on level (basic against never-used); never-used is the honest one, because the course assumes nothing.",
+    "notes": "Co-developed with academic partners. Prerequisite for the small-business, nonprofit and educator variants. Certificate on completion. The strongest official material on where AI stops being reliable. Merged 2026-08-27 from three rows for one course: www.anthropic.com/ai-fluency redirects here (verified 2026-08-27, so it was the same page, not a second resource), and the Coursera listing at www.coursera.org/learn/ai-fluency-framework-foundations is the same course on another platform - use it if you would rather enrol there. Enrolment needs a Skilljar account separate from your Claude account, which is why the cost reads free-account and not free. The three rows disagreed on level (basic against never-used); never-used is the honest one, because the course assumes nothing. Migrated 2026-08-29 from anthropic.skilljar.com to academy.claude.com, the live URL - both were checked 2026-08-29 and the skilljar row still answers, but academy.claude.com is Anthropic's current front door for this course. Read in full on the new page: 14 lessons, 1 quiz, 4 hr. Same time bucket as before (`half-day`), now confirmed from the page rather than estimated. Content itself is visible without signing in - only progress-tracking sits behind \"Sign in to save progress\" - so cost moves from `free-account` to `free`.",
     "alt_skip_if": [
       "You only want quick, copy-paste task recipes."
     ],
     "source": "Anthropic Academy",
     "official": true,
-    "id": "r-c0fa677417",
+    "id": "r-8b91ddf369",
     "keywords": [
       "4d framework",
       "delegation",
@@ -126,7 +126,7 @@
   },
   {
     "title": "Claude 101",
-    "url": "https://anthropic.skilljar.com/claude-101",
+    "url": "https://academy.claude.com/courses/claude-101",
     "author": "Anthropic",
     "roles": [
       "business-founder",
@@ -145,17 +145,17 @@
       "skills"
     ],
     "format": "course",
-    "time": "under-1hr",
-    "cost": "free-account",
+    "time": "half-day",
+    "cost": "free",
     "language": "en",
     "tier": "previewed",
     "summary": "The shortest official on-ramp: core chat, Projects, files, and connectors for everyday work.",
     "who_for": "People who have never opened Claude and want the basics fast.",
     "skip_if": "You've already used Claude for a few weeks — this stays at 'what is a prompt' level and won't teach you anything new.",
     "published": "2026-03-01",
-    "checked": "2026-08-20",
+    "checked": "2026-08-29",
     "status": "live",
-    "notes": "Free; no coding. Also mirrored on DataCamp and Coursera.",
+    "notes": "Free; no coding. Also mirrored on DataCamp and Coursera. Migrated 2026-08-29 from anthropic.skilljar.com to academy.claude.com, the live URL - both were checked 2026-08-29 and the skilljar row still answers, but academy.claude.com is Anthropic's current front door for this course. Read in full on the new page: 13 lessons, 1 quiz, 2.5 hr. That moves the time bucket from `under-1hr` to `half-day` - the old figure was a guess and this one is read off the page. Content itself is visible without signing in - only progress-tracking sits behind \"Sign in to save progress\" - so cost moves from `free-account` to `free`.",
     "alt_skip_if": [
       "You have used Claude regularly for months.",
       "You already use Claude daily and know the analysis tool and Excel add-in.",
@@ -164,7 +164,7 @@
     ],
     "source": "Anthropic Academy",
     "official": true,
-    "id": "r-6b31501da8",
+    "id": "r-06235a836d",
     "keywords": [
       "claude basics",
       "claude 101",
@@ -204,7 +204,7 @@
   },
   {
     "title": "Introduction to Claude Cowork",
-    "url": "https://anthropic.skilljar.com/introduction-to-claude-cowork",
+    "url": "https://academy.claude.com/courses/introduction-to-claude-cowork",
     "author": "Anthropic",
     "roles": [
       "business-founder",
@@ -220,17 +220,17 @@
       "skills"
     ],
     "format": "course",
-    "time": "under-1hr",
-    "cost": "free-account",
+    "time": "half-day",
+    "cost": "free",
     "language": "en",
     "tier": "previewed",
     "summary": "Hands-on course covering the Cowork task loop, plugins and skills, file/research workflows, and steering multi-step work.",
     "who_for": "Owners and ops people who want Claude to do real multi-step work, not just chat.",
     "skip_if": "You do lightweight, single-document writing tasks in regular chat — Cowork's setup overhead likely won't pay off.",
     "published": "2026-03-01",
-    "checked": "2026-08-20",
+    "checked": "2026-08-29",
     "status": "live",
-    "notes": "The single most relevant course for running a business. Free course; requires a paid plan to actually practice.",
+    "notes": "The single most relevant course for running a business. Free course; requires a paid plan to actually practice. Migrated 2026-08-29 from anthropic.skilljar.com to academy.claude.com, the live URL - both were checked 2026-08-29 and the skilljar row still answers, but academy.claude.com is Anthropic's current front door for this course. Read in full on the new page: 14 lessons, 1 quiz, 2.5 hr. That moves the time bucket from `under-1hr` to `half-day` - the old figure was a guess and this one is read off the page. Content itself is visible without signing in - only progress-tracking sits behind \"Sign in to save progress\" - so cost moves from `free-account` to `free`.",
     "alt_skip_if": [
       "You only use the web chat and don't want the desktop Cowork app.",
       "You only use Claude in the browser chat and never touch files.",
@@ -239,7 +239,7 @@
     ],
     "source": "Anthropic Academy",
     "official": true,
-    "id": "r-6226d33c66",
+    "id": "r-39732065d0",
     "keywords": [
       "claude cowork",
       "cowork",
@@ -1297,7 +1297,7 @@
   },
   {
     "title": "AI Fluency for Nonprofits",
-    "url": "https://anthropic.skilljar.com/ai-fluency-for-nonprofits",
+    "url": "https://academy.claude.com/courses/ai-fluency-for-nonprofits",
     "author": "Anthropic + GivingTuesday",
     "roles": [
       "business-founder"
@@ -1308,7 +1308,7 @@
       "safety"
     ],
     "format": "course",
-    "time": "under-1hr",
+    "time": "half-day",
     "cost": "free",
     "language": "en",
     "tier": "previewed",
@@ -1316,12 +1316,12 @@
     "who_for": "Nonprofit staff across fundraising, communications, program delivery, operations, and leadership.",
     "skip_if": "The same 4D framework as the general course with grant proposals and donor communications swapped into the examples, so take one or the other and not both. Separately worth knowing: nonprofits qualify for up to 75% off Team and Enterprise.",
     "published": "2025-12-02",
-    "checked": "2026-08-20",
+    "checked": "2026-08-29",
     "status": "live",
-    "notes": "Free; certificate on completion. Nonprofits also qualify for up to 75% off Team/Enterprise plans.",
+    "notes": "Free; certificate on completion. Nonprofits also qualify for up to 75% off Team/Enterprise plans. Migrated 2026-08-29 from anthropic.skilljar.com to academy.claude.com, the live URL - both were checked 2026-08-29 and the skilljar row still answers, but academy.claude.com is Anthropic's current front door for this course. Read in full on the new page: 9 lessons, 1 quiz, 4 hr. That moves the time bucket from `under-1hr` to `half-day` - the old figure was a guess and this one is read off the page. Content itself is visible without signing in - only progress-tracking sits behind \"Sign in to save progress\" - so cost moves from `free-account` to `free`.",
     "source": "Anthropic Academy",
     "official": true,
-    "id": "r-934a3ec6cd",
+    "id": "r-d75f1ea7a4",
     "keywords": [
       "nonprofit ai",
       "grant writing claude",
@@ -1353,7 +1353,7 @@
   },
   {
     "title": "Introduction to Model Context Protocol",
-    "url": "https://anthropic.skilljar.com/introduction-to-model-context-protocol",
+    "url": "https://academy.claude.com/courses/introduction-to-model-context-protocol",
     "author": "Anthropic",
     "roles": [
       "developer",
@@ -1364,7 +1364,7 @@
       "mcp"
     ],
     "format": "course",
-    "time": "half-day",
+    "time": "under-1hr",
     "cost": "free",
     "language": "en",
     "tier": "previewed",
@@ -1372,12 +1372,12 @@
     "who_for": "Technical owners, consultants, or in-house devs who need custom integrations beyond the built-in connectors.",
     "skip_if": "You build the servers here rather than install them, in Python, from scratch. Half a day well spent if you want to know how MCP works underneath, and entirely skippable if you only want Claude connected to something - the one-click connectors already do that.",
     "published": "2026-03-01",
-    "checked": "2026-08-20",
+    "checked": "2026-08-29",
     "status": "live",
-    "notes": "Official, from the team that created MCP. Requires Python/CLI comfort.",
+    "notes": "Official, from the team that created MCP. Requires Python/CLI comfort. Migrated 2026-08-29 from anthropic.skilljar.com to academy.claude.com, the live URL - both were checked 2026-08-29 and the skilljar row still answers, but academy.claude.com is Anthropic's current front door for this course. Read in full on the new page: 10 lessons, 1 quiz, 1 hr. That moves the time bucket from `half-day` to `under-1hr` - the old figure was a guess and this one is read off the page. Content itself is visible without signing in - only progress-tracking sits behind \"Sign in to save progress\" - so cost moves from `free-account` to `free`.",
     "source": "Anthropic Academy",
     "official": true,
-    "id": "r-21702a1014",
+    "id": "r-2124f4880d",
     "keywords": [
       "model context protocol",
       "mcp",
@@ -7755,7 +7755,7 @@
   },
   {
     "title": "AI capabilities and limitations",
-    "url": "https://anthropic.skilljar.com/ai-capabilities-and-limitations",
+    "url": "https://academy.claude.com/courses/ai-capabilities-and-limitations",
     "author": "Anthropic",
     "roles": [
       "business-founder",
@@ -7772,20 +7772,20 @@
       "safety"
     ],
     "format": "course",
-    "time": "under-15min",
-    "cost": "free-account",
+    "time": "half-day",
+    "cost": "free",
     "language": "en",
-    "tier": "listed",
+    "tier": "previewed",
     "summary": "A short, quiz-backed course specifically about what Claude can and can't reliably do — directly answers 'what should I not trust it with.'",
     "who_for": "Anyone who wants the honest limitations conversation before relying on Claude for real work.",
     "skip_if": "You want depth — at 15 minutes across 13 short lectures, this is a primer, not a deep dive.",
     "published": "UNVERIFIED",
-    "checked": "2026-08-18",
+    "checked": "2026-08-29",
     "status": "live",
-    "notes": "Shortest course in Anthropic's own catalog by video time; a good first stop. | URL corrected 2026-08-19: claude.com/courses path was wrong, real course lives on Anthropic Academy (Skilljar).",
+    "notes": "Shortest course in Anthropic's own catalog by video time; a good first stop. | URL corrected 2026-08-19: claude.com/courses path was wrong, real course lives on Anthropic Academy (Skilljar). Migrated 2026-08-29 from anthropic.skilljar.com to academy.claude.com, the live URL - both were checked 2026-08-29 and the skilljar row still answers, but academy.claude.com is Anthropic's current front door for this course. Read in full on the new page: 13 lessons, 1 quiz, 3.5 hr. That moves the time bucket from `under-15min` to `half-day` - the old figure was a guess and this one is read off the page. Content itself is visible without signing in - only progress-tracking sits behind \"Sign in to save progress\" - so cost moves from `free-account` to `free`.",
     "source": "Anthropic Academy",
     "official": true,
-    "id": "r-14efef50c2",
+    "id": "r-59f8585925",
     "keywords": [
       "what can claude do",
       "ai limitations",
@@ -11545,7 +11545,7 @@
   },
   {
     "title": "AI Fluency for students",
-    "url": "https://anthropic.skilljar.com/ai-fluency-for-students",
+    "url": "https://academy.claude.com/courses/ai-fluency-for-students",
     "author": "Anthropic, with Prof. Joseph Feller (University College Cork) and Prof. Rick Dakan (Ringling College)",
     "roles": [
       "student",
@@ -11557,23 +11557,23 @@
       "safety"
     ],
     "format": "course",
-    "time": "under-1hr",
-    "cost": "free-account",
+    "time": "half-day",
+    "cost": "free",
     "language": "en",
     "tier": "previewed",
     "summary": "Anthropic's own short course that applies its 4D AI Fluency framework to student life: using AI as a learning partner, using it for career planning, and staying the human in the loop. Free, self-paced, with a certificate at the end.",
     "who_for": "A student who has never used Claude seriously and wants the official framing of what good AI use looks like before touching an assignment.",
     "skip_if": "It assumes you have already done the core 4D Fluency course, which the title does not say. Written for adult learners, and Claude is 18-plus, so it is not a source of classroom activities for younger students. Nothing in it is graded.",
     "published": "UNVERIFIED",
-    "checked": "2026-08-21",
+    "checked": "2026-08-29",
     "status": "live",
-    "notes": "The course page says it assumes you already did the core 4D AI Fluency Framework course, so start there. Needs a separate Skilljar account, not your Claude account. No publication date is shown anywhere on the page. A Coursera version of the same course also exists. Merged 2026-08-27 with the Coursera row for the same course; www.coursera.org/learn/ai-fluency-for-students is the same five lectures on another platform. That row carried the role `researcher`, which is dropped here: this course is about studying and career planning, not about research.",
+    "notes": "The course page says it assumes you already did the core 4D AI Fluency Framework course, so start there. Needs a separate Skilljar account, not your Claude account. No publication date is shown anywhere on the page. A Coursera version of the same course also exists. Merged 2026-08-27 with the Coursera row for the same course; www.coursera.org/learn/ai-fluency-for-students is the same five lectures on another platform. That row carried the role `researcher`, which is dropped here: this course is about studying and career planning, not about research. Migrated 2026-08-29 from anthropic.skilljar.com to academy.claude.com, the live URL - both were checked 2026-08-29 and the skilljar row still answers, but academy.claude.com is Anthropic's current front door for this course. Read in full on the new page: 5 lessons, 1 quiz, 3 hr. That moves the time bucket from `under-1hr` to `half-day` - the old figure was a guess and this one is read off the page. Content itself is visible without signing in - only progress-tracking sits behind \"Sign in to save progress\" - so cost moves from `free-account` to `free`.",
     "alt_skip_if": [
       "You want click-by-click Claude instructions. This is a way of thinking, not a feature tutorial, and it never shows you the actual Claude interface."
     ],
     "source": "Anthropic Academy",
     "official": true,
-    "id": "r-5e5f1d8567",
+    "id": "r-1cbd9f78df",
     "keywords": [
       "ai fluency",
       "students",
@@ -12877,7 +12877,7 @@
   },
   {
     "title": "AI Fluency for Educators (Anthropic Academy)",
-    "url": "https://anthropic.skilljar.com/ai-fluency-for-educators",
+    "url": "https://academy.claude.com/courses/ai-fluency-for-educators",
     "author": "Anthropic, with Prof. Rick Dakan (Ringling College) and Prof. Joseph Feller (University College Cork)",
     "roles": [
       "teacher"
@@ -12889,19 +12889,19 @@
     ],
     "format": "course",
     "time": "half-day",
-    "cost": "free-account",
+    "cost": "free",
     "language": "en",
     "tier": "previewed",
     "summary": "Four lessons that apply the 4D framework (Delegation, Description, Discernment, Diligence) to course design, learning outcomes, lesson materials and assignments. It teaches a way of working with any AI chat tool, not a set of Claude buttons.",
     "who_for": "University lecturers and instructional designers, for their own work. Also works for senior-school teachers who plan whole courses rather than single lessons.",
     "skip_if": "Skip if you have never opened an AI chat tool - it assumes the 4D framework from the Framework and Foundations course. Skip if you want Claude-specific, click-by-click steps; this is deliberately model-agnostic.",
     "published": "UNVERIFIED",
-    "checked": "2026-08-21",
+    "checked": "2026-08-29",
     "status": "live",
-    "notes": "Free, but you must make a Skilljar account, which is separate from your Claude login. Runs about 3 hours including roughly 35 minutes of video - that length is stated on aifluencyframework.org, not on the course page itself. Materials are CC BY-NC-SA, so a department can adapt them.",
+    "notes": "Free, but you must make a Skilljar account, which is separate from your Claude login. Runs about 3 hours including roughly 35 minutes of video - that length is stated on aifluencyframework.org, not on the course page itself. Materials are CC BY-NC-SA, so a department can adapt them. Migrated 2026-08-29 from anthropic.skilljar.com to academy.claude.com, the live URL - both were checked 2026-08-29 and the skilljar row still answers, but academy.claude.com is Anthropic's current front door for this course. Read in full on the new page: 4 lessons, 1 quiz, 1.5 hr. Same time bucket as before (`half-day`), now confirmed from the page rather than estimated. Content itself is visible without signing in - only progress-tracking sits behind \"Sign in to save progress\" - so cost moves from `free-account` to `free`.",
     "source": "Anthropic Academy",
     "official": true,
-    "id": "r-3ea3fa5211",
+    "id": "r-5ef57a95ef",
     "keywords": [
       "ai fluency for educators",
       "4d framework",
@@ -12931,7 +12931,7 @@
   },
   {
     "title": "Teaching AI Fluency (Anthropic Academy)",
-    "url": "https://anthropic.skilljar.com/teaching-ai-fluency",
+    "url": "https://academy.claude.com/courses/teaching-ai-fluency",
     "author": "Anthropic, with Prof. Rick Dakan (Ringling College) and Prof. Joseph Feller (University College Cork)",
     "roles": [
       "teacher"
@@ -12943,19 +12943,19 @@
     ],
     "format": "course",
     "time": "half-day",
-    "cost": "free-account",
+    "cost": "free",
     "language": "en",
     "tier": "previewed",
     "summary": "Seven lessons on how to teach and assess AI fluency in your own subject: the Delegation-Diligence and Description-Discernment loops, how to assess the 4Ds, and how to design assignments that still measure student thinking.",
     "who_for": "University lecturers and school teachers whose job is to teach students about AI, not only to use it themselves. The assignment-design and assessment lessons are the strongest part.",
     "skip_if": "Skip if you only want to cut your own marking and planning time - this is curriculum and assessment work, five to six hours of it including about seventy minutes of video. Skip if you have not done Framework and Foundations first; it assumes the 4Ds.",
     "published": "UNVERIFIED",
-    "checked": "2026-08-21",
+    "checked": "2026-08-29",
     "status": "live",
-    "notes": "About 5-6 hours including roughly 70 minutes of video (length taken from aifluencyframework.org). CC BY-NC-SA licensed, so slides and exercises can be re-used for staff training. Needs a Skilljar account.",
+    "notes": "About 5-6 hours including roughly 70 minutes of video (length taken from aifluencyframework.org). CC BY-NC-SA licensed, so slides and exercises can be re-used for staff training. Needs a Skilljar account. Migrated 2026-08-29 from anthropic.skilljar.com to academy.claude.com, the live URL - both were checked 2026-08-29 and the skilljar row still answers, but academy.claude.com is Anthropic's current front door for this course. Read in full on the new page: 7 lessons, 1 quiz, 4.5 hr. Same time bucket as before (`half-day`), now confirmed from the page rather than estimated. Content itself is visible without signing in - only progress-tracking sits behind \"Sign in to save progress\" - so cost moves from `free-account` to `free`.",
     "source": "Anthropic Academy",
     "official": true,
-    "id": "r-fdcdc825cd",
+    "id": "r-f3637f97bc",
     "keywords": [
       "teaching ai fluency",
       "assessing student thinking",
@@ -12982,7 +12982,7 @@
   },
   {
     "title": "AI Fluency for pK-12 Educators",
-    "url": "https://anthropic.skilljar.com/ai-fluency-for-pk12-educators",
+    "url": "https://academy.claude.com/courses/ai-fluency-for-k-12-educators",
     "author": "Anthropic with Teach For America",
     "roles": [
       "teacher"
@@ -12994,19 +12994,19 @@
     ],
     "format": "course",
     "time": "half-day",
-    "cost": "free-account",
+    "cost": "free",
     "language": "en",
     "tier": "previewed",
     "summary": "The school-level version of the AI fluency course: how AI works and where it fails, the 4D framework, getting better outputs, ethics and responsible use, ending with a quiz and a certificate.",
     "who_for": "School (pK-12) teachers and support staff who are new to AI and want their own practice covered first. Built around real school constraints - limited budget, many people to answer to.",
     "skip_if": "Skip if you already use AI daily; the first half is beginner material. Skip if you want ready-made classroom prompts - this teaches judgement, not a prompt pack.",
     "published": "UNVERIFIED",
-    "checked": "2026-08-21",
+    "checked": "2026-08-29",
     "status": "live",
-    "notes": "Model-agnostic; examples use Claude.ai. The page gives no duration - ten short lessons plus a quiz, so half a day is my estimate, not a published figure. Benjamin Riley has publicly criticised one quiz item for putting FERPA compliance on individual teachers rather than on districts.",
+    "notes": "Model-agnostic; examples use Claude.ai. The page gives no duration - ten short lessons plus a quiz, so half a day is my estimate, not a published figure. Benjamin Riley has publicly criticised one quiz item for putting FERPA compliance on individual teachers rather than on districts. Migrated 2026-08-29 from anthropic.skilljar.com to academy.claude.com, the live URL - both were checked 2026-08-29 and the skilljar row still answers, but academy.claude.com is Anthropic's current front door for this course. Read in full on the new page: 10 lessons, 1 quiz, 3 hr. Same time bucket as before (`half-day`), now confirmed from the page rather than estimated. Content itself is visible without signing in - only progress-tracking sits behind \"Sign in to save progress\" - so cost moves from `free-account` to `free`.",
     "source": "Anthropic Academy",
     "official": true,
-    "id": "r-76342d27c0",
+    "id": "r-32b6bdef8a",
     "keywords": [
       "pk 12 educators",
       "school teachers",
@@ -13030,7 +13030,7 @@
   },
   {
     "title": "AI Fluency for pK-12 Train the Trainer",
-    "url": "https://anthropic.skilljar.com/ai-fluency-for-pk-12-train-the-trainer",
+    "url": "https://academy.claude.com/courses/ai-fluency-for-pk-12-train-the-trainer",
     "author": "Anthropic with the American Federation of Teachers",
     "roles": [
       "teacher"
@@ -13042,19 +13042,19 @@
     ],
     "format": "course",
     "time": "under-1hr",
-    "cost": "free-account",
+    "cost": "free",
     "language": "en",
     "tier": "previewed",
     "summary": "A ready-to-run staff workshop kit - slide deck, facilitator guide, grade-band exercises and a learner workbook - so one teacher can lead 4D framework training for colleagues in their own school.",
     "who_for": "School AI leads, instructional coaches and heads of department who must deliver INSET or professional development to other teachers.",
     "skip_if": "Skip if you will never train other adults. Skip if you have not done the pK-12 Educators course first - the kit assumes you can already answer teachers' questions without notes.",
     "published": "UNVERIFIED",
-    "checked": "2026-08-21",
+    "checked": "2026-08-29",
     "status": "live",
-    "notes": "The course itself is short (four items); the value is the downloadable kit, not the lessons. No duration stated on the page. Co-branded with the AFT, so the privacy and policy framing is US-centric.",
+    "notes": "The course itself is short (four items); the value is the downloadable kit, not the lessons. No duration stated on the page. Co-branded with the AFT, so the privacy and policy framing is US-centric. Migrated 2026-08-29 from anthropic.skilljar.com to academy.claude.com, the live URL - both were checked 2026-08-29 and the skilljar row still answers, but academy.claude.com is Anthropic's current front door for this course. Read in full on the new page: 4 lessons, 45 min. Same time bucket as before (`under-1hr`), now confirmed from the page rather than estimated. Content itself is visible without signing in - only progress-tracking sits behind \"Sign in to save progress\" - so cost moves from `free-account` to `free`.",
     "source": "Anthropic Academy",
     "official": true,
-    "id": "r-a1ee73219a",
+    "id": "r-f916cddec9",
     "keywords": [
       "train the trainer",
       "staff workshop kit",

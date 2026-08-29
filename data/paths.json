@@ -10,10 +10,10 @@
       "business-founder"
     ],
     "level": "never-used",
-    "intro": "Six short steps. Nothing here takes more than an hour, and you can stop after step 3 and still be better off than most people.",
+    "intro": "Five short steps and one real course. Steps 1, 2, 4, 5 and 6 take fifteen minutes each; step 3 is Anthropic's own 2.5-hour Claude 101, and stopping there still leaves you better off than most people.",
     "step_count": 6,
-    "total_minutes": 105,
-    "total_time_label": "about 2 hours",
+    "total_minutes": 270,
+    "total_time_label": "about 4 hours",
     "cost": "free",
     "weakest_tier": "previewed",
     "steps": [
@@ -39,13 +39,13 @@
       },
       {
         "step": 3,
-        "item": "r-6b31501da8",
+        "item": "r-06235a836d",
         "title": "Claude 101",
-        "url": "https://anthropic.skilljar.com/claude-101",
-        "time": "under-1hr",
-        "cost": "free-account",
+        "url": "https://academy.claude.com/courses/claude-101",
+        "time": "half-day",
+        "cost": "free",
         "tier": "previewed",
-        "why": "By now you have had a generic, disappointing answer. Anthropic's own beginner course is the fix, and it is the single highest-value hour here."
+        "why": "By now you have had a generic, disappointing answer. Anthropic's own beginner course is the fix, and at 2.5 hours it is the one step here that is not short — it is the single highest-value stretch of this path, not the single highest-value hour, and the two are different promises."
       },
       {
         "step": 4,
