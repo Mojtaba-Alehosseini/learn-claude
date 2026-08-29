@@ -20035,5 +20035,1219 @@
       "what is the /agents command"
     ],
     "id": "r-185e71d34e"
+  },
+  {
+    "title": "Create and edit files with Claude to eliminate hours of busy work",
+    "url": "https://academy.claude.com/tutorials/create-and-edit-files-with-claude-to-eliminate-hours-of-busy-work",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "non-technical",
+      "business-founder",
+      "pm"
+    ],
+    "level": "basic",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "video",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "A ten-minute walkthrough of Claude writing and editing files directly - spreadsheets, documents, presentations, PDFs, plus LaTeX and matplotlib graphs - rather than describing what to paste into another app.",
+    "who_for": "Anyone who spends real time on manual file busywork and has not tried asking Claude to just produce or edit the file itself.",
+    "skip_if": "It names no file size limit and, if you are on a Team or Enterprise plan, code execution and file creation sit behind a separate network-access security setting your admin controls - this page will not tell you whether yours is switched on.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. Unusually for a video page on this site, it also carries a full written article body. 10 min video.",
+    "prerequisites": [],
+    "teaches": [
+      "ask Claude to create or edit a file directly instead of pasting instructions elsewhere",
+      "generate spreadsheets, documents, presentations and PDFs",
+      "generate LaTeX and matplotlib graphs"
+    ],
+    "keywords": [
+      "file creation",
+      "edit files with claude",
+      "claude spreadsheets",
+      "claude pdf",
+      "busy work"
+    ],
+    "questions": [
+      "can claude create a file for me directly",
+      "how do i get claude to edit a spreadsheet"
+    ],
+    "id": "r-f82c83ed82"
+  },
+  {
+    "title": "Creating your first skill (Claude Code)",
+    "url": "https://academy.claude.com/tutorials/creating-your-first-skill",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "developer"
+    ],
+    "level": "confident",
+    "topics": [
+      "claude-code",
+      "skills"
+    ],
+    "format": "video",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "A four-minute walkthrough of building your first Claude Code skill from setup to execution.",
+    "who_for": "Claude Code users ready to write their first skill rather than read about the concept.",
+    "skip_if": "The product tag on this page is Claude Code specifically, not claude.ai - despite the generic title, this is the CLI and filesystem skill-authoring path, and nothing here carries over to browser Skills.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. Video-only page; no transcript or chapter list in the page source, so this entry rests on the page's own title, description and product tag rather than a full content read. 4 min video.",
+    "prerequisites": [
+      "Claude Code installed and working"
+    ],
+    "teaches": [
+      "set up a first Claude Code skill",
+      "run a skill from setup through execution"
+    ],
+    "keywords": [
+      "first claude code skill",
+      "claude code skill tutorial",
+      "skill.md"
+    ],
+    "questions": [
+      "how do i create my first skill in claude code"
+    ],
+    "id": "r-944de6ef3a"
+  },
+  {
+    "title": "Customize Claude Cowork",
+    "url": "https://academy.claude.com/tutorials/customize-claude-cowork",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder",
+      "pm",
+      "non-technical"
+    ],
+    "level": "basic",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "How Cowork instructions work at three separate scopes - global, project, and organization - plus setting connectors to read-only or read-write per admin policy, with four pre-built plugin examples: Sales, Product, Legal, Operations.",
+    "who_for": "Someone who has Cowork running and wants it to reflect their own or their team's way of working rather than the defaults.",
+    "skip_if": "Editing global instructions is recommended from the desktop app, and some of what this covers - like read-only versus read-write connector access - is an admin setting you may not hold yourself.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 7 min read.",
+    "prerequisites": [
+      "Claude Cowork already set up"
+    ],
+    "teaches": [
+      "set instructions at global, project and organization scope",
+      "restrict a connector to read-only access",
+      "customize one of the four pre-built plugins"
+    ],
+    "keywords": [
+      "customize cowork",
+      "cowork instructions",
+      "cowork connectors read-only"
+    ],
+    "questions": [
+      "how do i customize claude cowork for my team",
+      "can i make a cowork connector read-only"
+    ],
+    "id": "r-53a9496388"
+  },
+  {
+    "title": "Delegating and scheduling tasks in Claude Cowork",
+    "url": "https://academy.claude.com/tutorials/delegating-and-scheduling-tasks-in-claude-cowork",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder",
+      "pm",
+      "non-technical"
+    ],
+    "level": "basic",
+    "topics": [
+      "cowork"
+    ],
+    "format": "video",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "A four-minute demo of preparing for a major call by pulling context from calendar, Slack, email and past meeting notes, then setting the same task to run again automatically on a schedule.",
+    "who_for": "Cowork users past their first task who want a recurring prep routine instead of repeating the same request manually.",
+    "skip_if": "The demo needs calendar, Slack and email already connected - without those connectors set up, none of it reproduces. It is also desktop-app only: the launch link is a claude:// handler, not a web address.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. Video-only page, no article body. 4 min video.",
+    "prerequisites": [
+      "Claude Cowork",
+      "calendar, Slack and email connected"
+    ],
+    "teaches": [
+      "pull context from connected tools before a call",
+      "set a Cowork task to run on a recurring schedule"
+    ],
+    "keywords": [
+      "schedule cowork tasks",
+      "recurring claude tasks",
+      "meeting prep with claude"
+    ],
+    "questions": [
+      "how do i schedule a recurring task in claude cowork",
+      "can claude prep me for a meeting automatically"
+    ],
+    "id": "r-b75714f54f"
+  },
+  {
+    "title": "Delegating your first task in Claude Cowork (Academy tutorial)",
+    "url": "https://academy.claude.com/tutorials/delegating-your-first-task-in-claude-cowork",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder",
+      "pm",
+      "non-technical"
+    ],
+    "level": "never-used",
+    "topics": [
+      "cowork"
+    ],
+    "format": "video",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "The entry point for Cowork: granting folder access and connectors, delegating one real task, and reviewing Claude's plan before it changes anything on your machine.",
+    "who_for": "Someone who has just installed Cowork and has not yet handed it a real task.",
+    "skip_if": "Desktop app only, and it works on files on your own machine - review the plan before approving is part of the documented flow, not an optional safety step you can skip past.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. Video-only page, no article body. 4 min video. A second, differently-hosted tutorial with a similar name exists at claude.com/resources/tutorials/delegating-your-first-task-in-claude-cowork, already in this catalogue - checked, these are two different pages on two different Anthropic properties, not a duplicate; kept as a separate entry.",
+    "prerequisites": [
+      "Claude Cowork desktop app installed"
+    ],
+    "teaches": [
+      "grant Cowork access to a local folder and connectors",
+      "delegate one real task",
+      "review Claude's plan before approving changes"
+    ],
+    "keywords": [
+      "first cowork task",
+      "cowork getting started",
+      "cowork folder access"
+    ],
+    "questions": [
+      "how do i give claude cowork my first task",
+      "does cowork ask before changing files"
+    ],
+    "id": "r-cd14de5be4"
+  },
+  {
+    "title": "Financial analysis workflows with Claude",
+    "url": "https://academy.claude.com/tutorials/financial-analysis-workflows-with-claude",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "data-analyst",
+      "business-founder"
+    ],
+    "level": "confident",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "article",
+    "time": "under-1hr",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Three end-to-end financial workflows - equity analysis, competitive research, portfolio review - run through a three-phase approach of retrieving data, analysing it, and producing a deliverable, using real tickers throughout.",
+    "who_for": "Investment professionals who already have Daloopa, S&P Global or FactSet access and want a template for turning that data into a finished deliverable.",
+    "skip_if": "Every workflow needs separately licensed data subscriptions - Daloopa, S&P Global, FactSet - already connected; nothing here works without them. The page also admits its own limit: PowerPoint output needs manual formatting for anything complex or firm-specific.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 20 min read, the longest text tutorial checked in this batch.",
+    "prerequisites": [
+      "a Claude Project",
+      "licensed access to Daloopa, S&P Global or FactSet"
+    ],
+    "teaches": [
+      "run a three-phase workflow: retrieve, analyse, produce a deliverable",
+      "build equity analysis, competitive research and portfolio review workflows"
+    ],
+    "keywords": [
+      "financial analysis with claude",
+      "equity analysis workflow",
+      "investment research workflow"
+    ],
+    "questions": [
+      "how do i build a financial analysis workflow with claude",
+      "can claude do equity research"
+    ],
+    "id": "r-8219431120"
+  },
+  {
+    "title": "Get started in Claude Cowork in three steps",
+    "url": "https://academy.claude.com/tutorials/get-started-in-claude-cowork-in-three-steps",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder",
+      "pm",
+      "non-technical"
+    ],
+    "level": "never-used",
+    "topics": [
+      "cowork"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "The three setup steps before a first Cowork task: open the desktop app, run /setup-cowork for a guided, role-matched plugin install, then point Cowork at the folder or Project where the work actually lives.",
+    "who_for": "Someone who has just installed the Claude desktop app and has not yet run Cowork's own setup.",
+    "skip_if": "Cowork is not reachable from the browser at all - this whole path needs the desktop app, and step 3 deliberately scopes Cowork to one folder or Project rather than open machine access.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 4 min read.",
+    "prerequisites": [
+      "Claude desktop app"
+    ],
+    "teaches": [
+      "run /setup-cowork for a guided, role-matched setup",
+      "point Cowork at a specific working folder or Project"
+    ],
+    "keywords": [
+      "cowork setup",
+      "/setup-cowork",
+      "cowork three steps"
+    ],
+    "questions": [
+      "how do i set up claude cowork",
+      "what does /setup-cowork do"
+    ],
+    "id": "r-f5b662dfb1"
+  },
+  {
+    "title": "Getting good at Claude: A research-backed curriculum",
+    "url": "https://academy.claude.com/tutorials/getting-good-at-claude-a-research-backed-curriculum",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "pm",
+      "business-founder",
+      "teacher"
+    ],
+    "level": "confident",
+    "topics": [
+      "chat-prompting",
+      "safety"
+    ],
+    "format": "article",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "What Anthropic's own AI Fluency Index - over 50,000 conversations scored across 11 behavioural indicators, spanning claude.ai, Claude Code and Cowork - shows about how people actually get better at working with Claude, offered as a curriculum model to adapt for training a team.",
+    "who_for": "Someone responsible for helping a team build fluency with Claude, looking for a curriculum grounded in usage data rather than a hunch.",
+    "skip_if": "This is train-the-trainer material, not an individual how-to guide, and it names its own weak spot: observing conversations misses wrong assumptions, missing context, and plausible-but-false claims - the exact failures that matter most.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 6 min read. The underlying AI Fluency framework and courseware are stated to be freely reusable.",
+    "prerequisites": [
+      "familiarity with claude.ai, Claude Code and Cowork, to make the comparison tables meaningful"
+    ],
+    "teaches": [
+      "read the AI Fluency Index's 11 behavioural indicators",
+      "adapt a curriculum model for training a team",
+      "recognise where observation-based fluency tracking still misses real failures"
+    ],
+    "keywords": [
+      "ai fluency index",
+      "claude training curriculum",
+      "how people learn claude"
+    ],
+    "questions": [
+      "how do i train my team to use claude well",
+      "what does anthropic's usage data say about learning claude"
+    ],
+    "id": "r-fec5b15601"
+  },
+  {
+    "title": "Getting started with Claude.ai (Academy)",
+    "url": "https://academy.claude.com/tutorials/getting-started-with-claude-ai",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "non-technical",
+      "student"
+    ],
+    "level": "never-used",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "video",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "A five-minute tour of claude.ai: effective prompting, document uploads, search, customisation, and a mention of extended thinking and research mode.",
+    "who_for": "Someone who has just opened claude.ai and wants the fastest possible orientation.",
+    "skip_if": "The page states its own expiry date: published December 2025, and the 'Use style' menu it demonstrates has since been deprecated - some of what you see on screen no longer matches the live app.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. Video-only page, no article body. 5 min video. Published December 2025 per the page's own staleness note.",
+    "prerequisites": [],
+    "teaches": [
+      "write an effective first prompt",
+      "upload documents into a conversation",
+      "use search inside claude.ai"
+    ],
+    "keywords": [
+      "getting started with claude",
+      "claude.ai tour",
+      "claude basics video"
+    ],
+    "questions": [
+      "how do i start using claude.ai"
+    ],
+    "id": "r-aafeb276f7"
+  },
+  {
+    "title": "Getting Started with Claude for Financial Services",
+    "url": "https://academy.claude.com/tutorials/getting-started-with-claude-for-financial-services",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "data-analyst",
+      "business-founder"
+    ],
+    "level": "confident",
+    "topics": [
+      "mcp"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "An overview of Claude for Financial Services: MCP connectors to Daloopa (SEC filings, fundamentals, KPIs) and S&P Global (Capital IQ Financials, earnings transcripts), sold as a six-week enterprise implementation with sector-specific training rather than a self-serve feature.",
+    "who_for": "Someone evaluating whether to buy Claude for Financial Services, not someone who already has it.",
+    "skip_if": "This is a sold enterprise engagement - contact Sales or AWS Marketplace, a six-week implementation program - not a feature you switch on. The page also states plainly it is built for research and analysis, not investment advice.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 2 min read, the shortest text page checked in this batch.",
+    "prerequisites": [
+      "a purchased Claude for Financial Services engagement",
+      "licensed access to the connected data providers"
+    ],
+    "teaches": [
+      "understand what Claude for Financial Services connects to",
+      "know the onboarding shape before buying"
+    ],
+    "keywords": [
+      "claude for financial services",
+      "daloopa",
+      "s&p global capital iq"
+    ],
+    "questions": [
+      "what is claude for financial services",
+      "how much does claude for financial services cost"
+    ],
+    "id": "r-37a35b4864"
+  },
+  {
+    "title": "Getting Started with Claude for Life Sciences",
+    "url": "https://academy.claude.com/tutorials/getting-started-with-claude-for-life-sciences",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "researcher"
+    ],
+    "level": "confident",
+    "topics": [
+      "mcp"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Thirteen named life-sciences connectors reachable from a normal Claude Pro or Max account - Benchling, 10x Genomics, PubMed, Synapse.org, BioRender, Scholar Gateway, bioRxiv/medRxiv, ChEMBL, ToolUniverse, Owkin, Open Targets, Medidata, ClinicalTrials.gov - plus a packaged single-cell RNA-seq QC skill.",
+    "who_for": "A life sciences researcher deciding which of Anthropic's domain connectors to set up first.",
+    "skip_if": "Unlike Financial Services, this needs no sales engagement - a standard Pro or Max account reaches it. What the page does not carry is any regulatory, compliance, GxP or clinical-use disclaimer, despite covering clinical operations and regulatory workflows directly.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 4 min read. Some connectors are desktop-app extensions.",
+    "prerequisites": [
+      "a Claude Pro or Max account, or Claude for Work for teams"
+    ],
+    "teaches": [
+      "identify which of the 13 life-sciences connectors fits a given task",
+      "reach the packaged single-cell RNA-seq QC skill"
+    ],
+    "keywords": [
+      "claude for life sciences",
+      "benchling connector",
+      "pubmed connector",
+      "single-cell rna-seq skill"
+    ],
+    "questions": [
+      "what connectors does claude have for life sciences research",
+      "do i need a special plan for claude life sciences tools"
+    ],
+    "id": "r-1aa402df48"
+  },
+  {
+    "title": "Getting started with Claude for nonprofits",
+    "url": "https://academy.claude.com/tutorials/getting-started-with-claude-for-nonprofits",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder"
+    ],
+    "level": "confident",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Nonprofit pricing - Team at $8/user/month, Enterprise at $10/user/month against $20/month individual Pro - verified through Goodstack in about three minutes, plus Benevity, Blackbaud and Candid connectors.",
+    "who_for": "A nonprofit deciding whether and how to buy Claude at the discounted rate.",
+    "skip_if": "The eligibility list has real gaps: government agencies, political campaigns, higher education and healthcare systems are excluded even though 501(c)(3)s, K-12 schools and smaller qualifying healthcare organisations are included - a university nonprofit does not automatically qualify.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 3 min read. States Anthropic does not train on Team or Enterprise data by default.",
+    "prerequisites": [
+      "nonprofit status verifiable through Goodstack"
+    ],
+    "teaches": [
+      "check nonprofit pricing and eligibility",
+      "connect Benevity, Blackbaud or Candid"
+    ],
+    "keywords": [
+      "claude nonprofit pricing",
+      "claude for nonprofits eligibility",
+      "goodstack verification"
+    ],
+    "questions": [
+      "does my nonprofit qualify for discounted claude pricing",
+      "how much does claude cost for nonprofits"
+    ],
+    "id": "r-ade31a7911"
+  },
+  {
+    "title": "Getting started with Claude in Excel (Academy)",
+    "url": "https://academy.claude.com/tutorials/getting-started-with-claude-in-excel",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "data-analyst",
+      "business-founder"
+    ],
+    "level": "never-used",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "video",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "A seven-minute demo of Claude reading an entire workbook - nested formulas, multi-tab dependencies - and answering questions about it.",
+    "who_for": "Someone who has not yet tried Claude in Excel and wants a first look at what it can read.",
+    "skip_if": "This page names no plan tier, no platform, and no install step for what is, in practice, a beta add-in restricted to certain plans - it will not tell you whether you can actually run it.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. Video-only page, no article body. 7 min video. Checked specifically for prerequisites and found none stated - a real gap on the page itself, recorded here rather than invented.",
+    "prerequisites": [],
+    "teaches": [
+      "see Claude read a whole workbook across tabs",
+      "ask questions about an existing spreadsheet"
+    ],
+    "keywords": [
+      "claude in excel demo",
+      "claude excel add-in",
+      "claude reads spreadsheet"
+    ],
+    "questions": [
+      "what can claude in excel actually do",
+      "does claude understand my whole excel workbook"
+    ],
+    "id": "r-164a86a1b0"
+  },
+  {
+    "title": "Getting started with Claude Security",
+    "url": "https://academy.claude.com/tutorials/getting-started-with-claude-security",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "developer"
+    ],
+    "level": "builder",
+    "topics": [
+      "claude-code",
+      "agents"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Setting up and running Claude Security code scans on GitHub repositories: enabling Claude Code on the Web, turning on consumption billing, installing the Anthropic GitHub App, running a scan, and acting on findings that export to CSV or Markdown or route to Slack and Jira.",
+    "who_for": "An enterprise engineering or security lead setting up automated code scanning for the first time.",
+    "skip_if": "The gate list is long and all admin-side: an active Enterprise account, Claude Code on the Web enabled, consumption billing switched on, the GitHub App installed, and a premium seat for every user who runs a scan - a standard seat is blocked outright, and only GitHub.com or GitHub Enterprise Server repos are supported.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 6 min read. Scans run on a model named 'Claude Mythos 5' with Standard and Extended effort levels; dismissed findings do not reappear in future scans.",
+    "prerequisites": [
+      "active Claude Enterprise account",
+      "Claude Code on the Web enabled",
+      "consumption billing enabled",
+      "Anthropic Claude GitHub App installed",
+      "a premium seat"
+    ],
+    "teaches": [
+      "enable and run a Claude Security scan on a GitHub repository",
+      "review and act on findings",
+      "route findings to Slack or Jira"
+    ],
+    "keywords": [
+      "claude security",
+      "code scanning",
+      "github app claude",
+      "claude enterprise security"
+    ],
+    "questions": [
+      "how do i set up claude security code scanning",
+      "what does claude security scan support"
+    ],
+    "id": "r-ce736a694a"
+  },
+  {
+    "title": "Getting started with connectors (Academy)",
+    "url": "https://academy.claude.com/tutorials/getting-started-with-connectors",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "non-technical",
+      "business-founder"
+    ],
+    "level": "never-used",
+    "topics": [
+      "mcp"
+    ],
+    "format": "video",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "A four-minute overview of connecting Claude to tools you already use so it can reach your files, apps and workflows.",
+    "who_for": "Someone who has not yet connected any tool to Claude and wants the general idea before picking a specific connector.",
+    "skip_if": "It names no individual connector, no plan restriction and no admin-approval requirement - connector availability genuinely varies by plan and by admin policy, and this overview will not tell you which applies to you.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. Video-only page, no article body. 4 min video. Checked specifically for concrete detail and found none - a shallow overview, recorded as such rather than oversold.",
+    "prerequisites": [],
+    "teaches": [
+      "understand what a connector does in general terms"
+    ],
+    "keywords": [
+      "claude connectors overview",
+      "connect claude to my tools"
+    ],
+    "questions": [
+      "what is a claude connector",
+      "how do connectors work in claude"
+    ],
+    "id": "r-ac9b1dae2c"
+  },
+  {
+    "title": "How skills compare to other Claude Code features",
+    "url": "https://academy.claude.com/tutorials/how-skills-compare-to-other-claude-code-features",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "developer"
+    ],
+    "level": "confident",
+    "topics": [
+      "claude-code",
+      "skills"
+    ],
+    "format": "video",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "A three-minute comparison of Claude Code skills against the three features they are most often confused with: agents, hooks, and commands.",
+    "who_for": "Claude Code users who already have several of these features available and are not sure which one a given job calls for.",
+    "skip_if": "Video only, with no transcript or written comparison to skim - and the scope is narrower than it sounds: it compares skills against exactly three features, agents, hooks and commands, not against MCP servers or CLAUDE.md.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. Video-only page with almost no scrapable body text - recorded honestly rather than padded.",
+    "prerequisites": [
+      "Claude Code installed",
+      "already familiar with what a skill is"
+    ],
+    "teaches": [
+      "distinguish a skill from an agent, a hook, and a command"
+    ],
+    "keywords": [
+      "claude code skills vs agents",
+      "skills vs hooks",
+      "claude code features comparison"
+    ],
+    "questions": [
+      "what is the difference between a claude code skill and a hook",
+      "when do i use a skill instead of an agent"
+    ],
+    "id": "r-113e782c9f"
+  },
+  {
+    "title": "How to build a plugin from scratch in Claude Cowork",
+    "url": "https://academy.claude.com/tutorials/how-to-build-a-plugin-from-scratch-in-cowork",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "pm",
+      "business-founder"
+    ],
+    "level": "confident",
+    "topics": [
+      "cowork",
+      "skills"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Building a Cowork plugin from three component types - skills, connectors, sub-agents - to encode a team's workflow once and share it, including scheduling a skill as a recurring task and running several sub-agents in parallel with their own context windows.",
+    "who_for": "A team lead who keeps re-explaining the same process to Claude and wants to package it once instead.",
+    "skip_if": "A plugin built locally does not sync to your other devices on its own - sharing it, or using it on a second machine, means hosting it on GitHub first.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min read. No coding prerequisite stated; needs a paid plan (Pro, Max, Team or Enterprise) on macOS or Windows.",
+    "prerequisites": [
+      "Claude Cowork on a paid plan"
+    ],
+    "teaches": [
+      "build a plugin from skills, connectors and sub-agents",
+      "give a skill arguments, e.g. /close-package North America",
+      "schedule a skill as a recurring task",
+      "host a plugin on GitHub so it can be shared and auto-updates"
+    ],
+    "keywords": [
+      "build a cowork plugin",
+      "cowork plugin from scratch",
+      "schedule a cowork skill"
+    ],
+    "questions": [
+      "how do i build my own cowork plugin",
+      "can i share a cowork plugin with my team"
+    ],
+    "id": "r-1809f0478e"
+  },
+  {
+    "title": "How to choose between Claude's Voice Mode and Dictation",
+    "url": "https://academy.claude.com/tutorials/how-to-choose-between-voice-mode-and-dictation",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "non-technical",
+      "business-founder"
+    ],
+    "level": "basic",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "A comparison table settling when to use Voice Mode - which talks back and, on paid plans, can act on connected apps mid-conversation - against Dictation, which only transcribes what you say into a text field.",
+    "who_for": "Anyone unsure whether the microphone icon they are looking at will transcribe their words or hold a spoken conversation.",
+    "skip_if": "Voice Mode does not exist in Cowork at all - only Dictation reaches Cowork - and it does not auto-detect your language; non-English support is still in beta.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 6 min read. Voice mode is on every plan; paid plans add more capable models and the ability to reach connected apps like email, calendar and Slack mid-conversation.",
+    "prerequisites": [],
+    "teaches": [
+      "tell voice mode and dictation apart",
+      "know which surfaces each one reaches"
+    ],
+    "keywords": [
+      "claude voice mode",
+      "claude dictation",
+      "voice mode vs dictation"
+    ],
+    "questions": [
+      "what is the difference between claude voice mode and dictation",
+      "does claude cowork support voice mode"
+    ],
+    "id": "r-e075253cc4"
+  },
+  {
+    "title": "How to create a skill with Claude through conversation",
+    "url": "https://academy.claude.com/tutorials/how-to-create-a-skill-with-claude-through-conversation",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "non-technical",
+      "business-founder",
+      "pm"
+    ],
+    "level": "basic",
+    "topics": [
+      "skills"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Describing a workflow in plain conversation and letting Claude's built-in skill-creator turn it into a skill - a SKILL.md file, reference materials, and scripts - without writing any of the files by hand.",
+    "who_for": "Someone who wants to capture a repeatable workflow as a skill but does not want to write SKILL.md from a spec.",
+    "skip_if": "You do not write the skill files yourself - Claude does, through a built-in meta-skill called skill-creator - so this teaches describing a workflow well, not the file format itself.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 6 min read. Needs Settings > Capabilities > Skills switched on.",
+    "prerequisites": [
+      "a claude.ai account",
+      "Skills enabled in Settings"
+    ],
+    "teaches": [
+      "describe a workflow so Claude can structure it into a skill",
+      "understand the three parts a generated skill has: instructions, reference materials, scripts"
+    ],
+    "keywords": [
+      "create a skill by talking to claude",
+      "skill-creator",
+      "no-code skill creation"
+    ],
+    "questions": [
+      "can claude write a skill for me",
+      "how do i turn a workflow into a claude skill without coding"
+    ],
+    "id": "r-db5f28fc61"
+  },
+  {
+    "title": "How to customize plugins in Claude Cowork",
+    "url": "https://academy.claude.com/tutorials/how-to-customize-plugins-in-cowork",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "pm",
+      "business-founder"
+    ],
+    "level": "confident",
+    "topics": [
+      "cowork",
+      "skills"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Customizing one of Anthropic's pre-built plugins - Sales, Finance, Legal, Marketing - with your own tools and process, including the named skills each ships with, like /call-prep, /forecast, /review-contract, /campaign-plan.",
+    "who_for": "Someone who installed a pre-built Cowork plugin and wants it to reflect their own tools and process rather than the defaults.",
+    "skip_if": "If your organisation provisions a plugin centrally, it re-syncs over your local changes - customizing a centrally-pushed plugin in place does not stick. Customize sessions also need the desktop app; browser and mobile are not supported.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 6 min read. A plugin is described as a folder of plain-text instruction files; customizing produces a packaged .plugin file.",
+    "prerequisites": [
+      "Claude Cowork desktop app",
+      "a pre-built plugin already installed"
+    ],
+    "teaches": [
+      "customize a pre-built plugin's connected tools and process",
+      "package a customized plugin as a distributable .plugin file",
+      "know that admin-provisioned plugins re-sync over local edits"
+    ],
+    "keywords": [
+      "customize cowork plugin",
+      "cowork plugin skills list",
+      "cowork plugin re-sync"
+    ],
+    "questions": [
+      "can i customize a pre-built cowork plugin",
+      "why did my cowork plugin changes disappear"
+    ],
+    "id": "r-cfa5a678ad"
+  },
+  {
+    "title": "How to enable Claude Code for your Enterprise team",
+    "url": "https://academy.claude.com/tutorials/how-to-enable-claude-code-for-your-enterprise-team",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "developer"
+    ],
+    "level": "builder",
+    "topics": [
+      "claude-code"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Adding Claude Code seats to a Claude for Enterprise plan: three seat types - Standard, Premium, Unassigned - where only Premium includes Claude Code access, and the operational gotchas around bulk-assigning one tier at a time and overflow members landing 'unassigned'.",
+    "who_for": "A Claude for Enterprise admin deciding how to allocate Claude Code seats across a team.",
+    "skip_if": "This is seat-gated, not usage-gated, and only primary owners and owners can manage assignments - if you are not one of those two roles this page describes a control panel you cannot reach.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 4 min read. Includes a copy-paste onboarding message for end users; no dollar figures given anywhere on the page.",
+    "prerequisites": [
+      "a Claude for Enterprise plan",
+      "primary owner or owner role"
+    ],
+    "teaches": [
+      "assign Claude Code seats across Standard, Premium and Unassigned tiers",
+      "avoid the single-tier-per-bulk-upload limit",
+      "handle overflow members correctly"
+    ],
+    "keywords": [
+      "claude code enterprise seats",
+      "claude code premium seat",
+      "enable claude code for team"
+    ],
+    "questions": [
+      "how do i give my team access to claude code",
+      "what is the difference between standard and premium claude code seats"
+    ],
+    "id": "r-57efc29207"
+  },
+  {
+    "title": "How to install and use the Claude for Small Business plugin (Academy)",
+    "url": "https://academy.claude.com/tutorials/how-to-install-the-claude-for-small-business-plugin",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder"
+    ],
+    "level": "never-used",
+    "topics": [
+      "cowork",
+      "skills"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Installing the Small Business plugin, seeing its 25+ skills across Money & Finance, Sales & Marketing, Customers & Operations, and Business Intelligence, connecting QuickBooks, PayPal, HubSpot, Canva, Gmail and Docusign, and running a first task.",
+    "who_for": "A small business owner who has not yet installed the plugin and wants the full install-to-first-task path.",
+    "skip_if": "It needs the Claude desktop app on a Pro, Max, Team or Enterprise plan - there is no free-tier route in - and every skill only drafts, proposes or stages; nothing sends, posts or pays without your approval.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min read. The real barrier the page identifies is the list of connected accounts you need, not the install itself.",
+    "prerequisites": [
+      "Claude desktop app on a paid plan",
+      "third-party accounts for whichever skills you use: QuickBooks, PayPal, HubSpot, Canva, Gmail, Docusign"
+    ],
+    "teaches": [
+      "install the Claude for Small Business plugin",
+      "run a first task from its skill set",
+      "know that every action is approved by you before it sends, posts or pays"
+    ],
+    "keywords": [
+      "install claude small business plugin",
+      "small business plugin skills",
+      "quickbooks paypal hubspot claude"
+    ],
+    "questions": [
+      "how do i install the claude for small business plugin",
+      "what does the small business plugin actually do"
+    ],
+    "id": "r-52edcc6d27"
+  },
+  {
+    "title": "How to select the right effort setting for Claude Cowork and Chat",
+    "url": "https://academy.claude.com/tutorials/how-to-select-the-right-effort-setting-for-claude-cowork-and-chat",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "non-technical",
+      "business-founder",
+      "pm"
+    ],
+    "level": "basic",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Why raising effort on a frontier model is often cheaper against your usage limit than switching to a lesser model, argued through symptom-based diagnostics: too little effort means missed instructions, too much means verbose answers with no quality gain.",
+    "who_for": "Someone trying to stretch a usage limit who is about to switch to a cheaper model instead of adjusting effort.",
+    "skip_if": "It never names discrete effort levels or exact token costs - the argument is entirely relative ('medium or low' against 'high or maximum'), so treat this as a way to think about the tradeoff rather than a lookup table of numbers.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 6 min read. No plan tier stated as a requirement.",
+    "prerequisites": [
+      "a claude.ai account"
+    ],
+    "teaches": [
+      "diagnose too-little-effort and too-much-effort symptoms",
+      "understand why effort often beats switching to a cheaper model on cost per task"
+    ],
+    "keywords": [
+      "claude effort setting",
+      "claude cowork effort level",
+      "reduce claude usage limit spend"
+    ],
+    "questions": [
+      "what does the effort setting do in claude",
+      "should i lower effort or switch models to save usage"
+    ],
+    "id": "r-3df0496065"
+  },
+  {
+    "title": "How to use Claude in Excel for accounting: Revenue model validation",
+    "url": "https://academy.claude.com/tutorials/how-to-use-claude-in-excel-for-accounting-revenue-model-validation",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "data-analyst",
+      "business-founder"
+    ],
+    "level": "confident",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "video",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "A twenty-minute, chapter-marked walkthrough of validating an ASC 606 revenue model in an inherited workbook: Claude reads every tab, surfaces reconciliation issues, waits for approval before changing anything, and learns the existing revenue-split pattern to fill new rows.",
+    "who_for": "An accountant handed a multi-tab revenue model they did not build and need to trust before presenting it.",
+    "skip_if": "Despite the title, it does not walk through an itemised list of ASC 606 checks - the video shows the workflow, not a compliance checklist - and it does not state which plan the Claude in Excel add-in needs.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 20 min video with chapters (0:00 to 6:11) and copy-paste prompts on the page. Claude shows the proposed change and waits for a 'yes, go ahead' before editing the workbook.",
+    "prerequisites": [
+      "Claude in Excel add-in installed",
+      "an inherited revenue model workbook"
+    ],
+    "teaches": [
+      "get Claude to read every tab of an unfamiliar workbook before answering",
+      "have Claude surface and fix data issues with your confirmation first",
+      "generate a chart by describing it in conversation"
+    ],
+    "keywords": [
+      "claude in excel revenue model",
+      "asc 606 validation",
+      "claude excel accounting"
+    ],
+    "questions": [
+      "can claude validate my revenue recognition model",
+      "how do i use claude in excel on a model i didn't build"
+    ],
+    "id": "r-eccd1f16c3"
+  },
+  {
+    "title": "How to use Claude in Excel for HR: Headcount planning",
+    "url": "https://academy.claude.com/tutorials/how-to-use-claude-in-excel-for-hr-headcount-planning",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "business-founder",
+      "pm"
+    ],
+    "level": "confident",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "video",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Tracing #REF! errors across a four-tab headcount model, writing cross-sheet formulas, applying conditional logic by department, and building pivot tables and charts from plain-language requests - the sibling to the accounting Excel tutorial, this one states its own plan gate plainly.",
+    "who_for": "HR staff who inherited a headcount or compensation model and need Claude to actually write formulas into it, not just describe them.",
+    "skip_if": "Claude in Excel is beta and restricted to Max, Team and Enterprise - Pro is not enough, unlike its sibling accounting tutorial which does not mention this at all. Salary data is involved and the page gives no privacy guidance for that.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 20 min video with timestamped segments and copy-paste prompts. Sibling entry: How to use Claude in Excel for accounting - same product, different plan-gate disclosure.",
+    "prerequisites": [
+      "Claude in Excel add-in on Max, Team or Enterprise"
+    ],
+    "teaches": [
+      "trace formula errors across multiple sheets",
+      "write cross-sheet formulas from a plain-language request",
+      "build pivot tables and charts by describing them"
+    ],
+    "keywords": [
+      "claude in excel headcount planning",
+      "claude excel hr",
+      "fix #ref error with claude"
+    ],
+    "questions": [
+      "can claude fix formula errors in my excel headcount model",
+      "what plan do i need for claude in excel"
+    ],
+    "id": "r-c54106432e"
+  },
+  {
+    "title": "How to use the Clinical Trial Protocol Draft Generation sample skill with Claude",
+    "url": "https://academy.claude.com/tutorials/how-to-use-the-clinical-trial-protocol-draft-generation-sample-skill-with-claude",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "researcher"
+    ],
+    "level": "builder",
+    "topics": [
+      "skills",
+      "mcp"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "A sample skill that searches FDA guidances to classify a device or drug and its regulatory pathway, queries OpenFDA and ClinicalTrials.gov for predicate devices and comparable trials, calculates sample sizes, and only then drafts a phase 2/3 protocol on the formal FDA/NIH template.",
+    "who_for": "Regulatory affairs staff at a pharma or device company who want a starting draft rather than a blank page.",
+    "skip_if": "This is a sample skill meant to be customised, not a finished tool - the page's own instruction is to read the README before using it, and it carries no regulatory or medical-liability disclaimer beyond that.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 4 min read. Installs from a GitHub release ZIP or via Claude Code plugin marketplace anthropics/life-sciences.",
+    "prerequisites": [
+      "a claude.ai account or Claude Code",
+      "Team/Enterprise ownership for an org-wide install"
+    ],
+    "teaches": [
+      "classify a product's FDA regulatory pathway from initial documentation",
+      "pull predicate devices and comparable trials from OpenFDA and ClinicalTrials.gov",
+      "generate a draft protocol on the formal FDA/NIH template"
+    ],
+    "keywords": [
+      "clinical trial protocol skill",
+      "fda regulatory pathway claude",
+      "phase 2 phase 3 protocol draft"
+    ],
+    "questions": [
+      "can claude draft a clinical trial protocol",
+      "how do i determine an fda regulatory pathway with claude"
+    ],
+    "id": "r-ab8bf64651"
+  },
+  {
+    "title": "How to use the FHIR Developer agent skill with Claude Code",
+    "url": "https://academy.claude.com/tutorials/how-to-use-the-fhir-developer-agent-skill-with-claude-code",
+    "author": "Anthropic",
+    "source": "Anthropic Academy",
+    "official": true,
+    "roles": [
+      "developer"
+    ],
+    "level": "builder",
+    "topics": [
+      "claude-code",
+      "skills"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "published": "UNVERIFIED",
+    "checked": "2026-08-29",
+    "summary": "Loading Claude Code with HL7 FHIR R4 knowledge - resource structures, cardinality rules, coding systems like LOINC and SNOMED CT, RESTful patterns, and validation - to build FHIR-compliant healthcare APIs faster.",
+    "who_for": "A developer building or integrating a FHIR-compliant healthcare API who does not want to look up the standard from scratch.",
+    "skip_if": "It is pinned to FHIR R4 only - no R5, no US Core or other implementation guides - and lives in a separate anthropics/healthcare marketplace from the life-sciences skills. No PHI or HIPAA guidance appears on the page at all.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 3 min read, the shortest in this batch. No FHIR server, sandbox or third-party account required to install the skill itself.",
+    "prerequisites": [
+      "Claude Code installed"
+    ],
+    "teaches": [
+      "apply HL7 FHIR R4 resource structures and cardinality rules",
+      "use LOINC, SNOMED CT and RxNorm coding systems in generated code",
+      "validate FHIR-compliant REST API implementations"
+    ],
+    "keywords": [
+      "fhir developer skill",
+      "hl7 fhir r4 claude code",
+      "healthcare api claude"
+    ],
+    "questions": [
+      "can claude code help me build a fhir api",
+      "does claude know the fhir standard"
+    ],
+    "id": "r-f25d1080e9"
   }
 ]
