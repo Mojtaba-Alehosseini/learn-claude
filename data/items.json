@@ -332,7 +332,7 @@
   },
   {
     "title": "How to install and use the Claude for Small Business plugin",
-    "url": "https://claude.com/resources/tutorials/how-to-install-the-claude-for-small-business-plugin",
+    "url": "https://academy.claude.com/tutorials/how-to-install-the-claude-for-small-business-plugin",
     "author": "Anthropic",
     "roles": [
       "business-founder"
@@ -348,16 +348,16 @@
     "cost": "free",
     "language": "en",
     "tier": "ai-reviewed",
-    "summary": "The exact click-path to install the plugin, connect tools (QuickBooks, PayPal, HubSpot and more), and customize skills to your business.",
+    "summary": "The exact click-path to install the plugin - 25+ skills across Money & Finance, Sales & Marketing, Customers & Operations, and Business Intelligence - connect tools (QuickBooks, PayPal, HubSpot, Canva, Gmail, DocuSign), and customize skills to your business.",
     "who_for": "Anyone setting up the plugin for the first time.",
     "skip_if": "The click-path is the easy half. The part worth reading twice is how connectors handle permissions: each person's connector inherits the access they already have, so installing this gives nobody more than they had, and gives you no less to check.",
     "published": "2026-05-13",
-    "checked": "2026-08-20",
+    "checked": "2026-08-29",
     "status": "live",
-    "notes": "Explains that connectors inherit each user's existing permissions.",
-    "source": "Anthropic",
+    "notes": "Explains that connectors inherit each user's existing permissions. Verified 2026-08-29: this claude.com URL now redirects to academy.claude.com/tutorials/how-to-install-the-claude-for-small-business-plugin, same content (confirmed by reading the live page: install steps, the skill table with /plan-payroll and /month-heads-up, Pro/Max/Team/Enterprise gate). Row repointed there rather than duplicated; a second, thinner row this harvest had added at that URL (tier previewed, titled with a stray \"(Academy)\" suffix) has been removed in favor of keeping this one's ai-reviewed depth.",
+    "source": "Anthropic Academy",
     "official": true,
-    "id": "r-8f805b7cbb",
+    "id": "r-52edcc6d27",
     "keywords": [
       "install small business plugin",
       "quickbooks integration",
@@ -7935,59 +7935,6 @@
     ]
   },
   {
-    "title": "Delegating your first task in Claude Cowork",
-    "url": "https://claude.com/resources/tutorials/delegating-your-first-task-in-claude-cowork",
-    "author": "Anthropic",
-    "roles": [
-      "business-founder",
-      "non-technical",
-      "pm",
-      "writer-marketer"
-    ],
-    "level": "basic",
-    "topics": [
-      "cowork"
-    ],
-    "format": "article",
-    "time": "under-15min",
-    "cost": "free",
-    "language": "en",
-    "tier": "listed",
-    "summary": "A short, doing-focused tutorial that walks through handing Cowork one real task, rather than exploring its features abstractly.",
-    "who_for": "Someone who's read the Cowork docs and now wants to actually try something.",
-    "skip_if": "You've already delegated a task or two in Cowork — this covers only setup basics, not advanced workflows.",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-18",
-    "status": "live",
-    "notes": "Listed with both a reading time and a watch time, so it likely pairs a short write-up with an embedded video.",
-    "source": "Anthropic",
-    "official": true,
-    "id": "r-b6ff2e7890",
-    "keywords": [
-      "claude cowork tutorial",
-      "first cowork task",
-      "how to use cowork",
-      "delegating to cowork",
-      "cowork setup basics",
-      "try cowork",
-      "hands on cowork",
-      "run a task in cowork"
-    ],
-    "questions": [
-      "how do i delegate my first task in claude cowork",
-      "how do i get started using cowork",
-      "how do i give cowork something to do"
-    ],
-    "teaches": [
-      "hand a real task to claude cowork",
-      "set up your first automated workspace workflow",
-      "verify cowork output on a live task"
-    ],
-    "prerequisites": [
-      "read the basic cowork safety docs"
-    ]
-  },
-  {
     "title": "Why do AI models hallucinate?",
     "url": "https://academy.claude.com/tutorials/why-do-ai-models-hallucinate",
     "author": "Anthropic (AI Fluency tutorial series)",
@@ -8043,64 +7990,6 @@
         "step": 5,
         "of": 6
       }
-    ]
-  },
-  {
-    "title": "Getting started with Claude in Excel",
-    "url": "https://claude.com/resources/tutorials/getting-started-with-claude-in-excel",
-    "author": "Anthropic",
-    "roles": [
-      "business-founder",
-      "data-analyst",
-      "non-technical",
-      "pm"
-    ],
-    "level": "basic",
-    "topics": [
-      "chat-prompting",
-      "skills"
-    ],
-    "format": "article",
-    "time": "under-15min",
-    "cost": "free",
-    "language": "en",
-    "tier": "listed",
-    "summary": "Official walkthrough for the Excel add-in: asking Claude about a cell, updating assumptions, and building simple models without leaving the spreadsheet.",
-    "who_for": "Office workers who live in Excel and want AI help without switching to a separate chat window.",
-    "skip_if": "You're on a free Claude plan or don't use Microsoft 365 — the add-in needs a paid Claude plan plus Microsoft 365.",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-18",
-    "status": "live",
-    "notes": "The Excel add-in has changed quickly through 2026 (pivot tables, shared context with PowerPoint), so confirm current capabilities in the app itself rather than trusting a screenshot's age. Kept alongside the YouTube video of the same name (verified 2026-08-27 that the video really is titled this) - an article and a seven-minute video are two resources, not one. The cost chip read `subscription` while the video read `free`, so a reader filtering on cost saw only one of a matched pair; both are free to read or watch and the paid-plan requirement for the add-in itself is in skip_if, where it belongs.",
-    "source": "Anthropic",
-    "official": true,
-    "id": "r-cad79dfdc9",
-    "keywords": [
-      "claude in excel",
-      "excel add in ai",
-      "spreadsheet ai assistant",
-      "ask claude about a cell",
-      "update assumptions excel",
-      "build models in excel",
-      "microsoft 365 claude",
-      "office ai integration",
-      "excel formulas ai"
-    ],
-    "questions": [
-      "how do i use claude inside excel",
-      "how do i connect claude to microsoft 365 spreadsheet",
-      "can claude help me build financial models in excel",
-      "how do i use the claude excel add in"
-    ],
-    "teaches": [
-      "install and use the claude excel add-in",
-      "ask claude questions about specific spreadsheet cells",
-      "build simple models and update assumptions without leaving excel"
-    ],
-    "prerequisites": [
-      "paid claude plan",
-      "microsoft 365 account",
-      "excel installed"
     ]
   },
   {
@@ -13179,59 +13068,6 @@
     ]
   },
   {
-    "title": "Claude for Teachers in action - two classroom workflows",
-    "url": "https://claude.com/resources/tutorials/claude-for-teachers-in-action",
-    "author": "Anthropic",
-    "roles": [
-      "teacher"
-    ],
-    "level": "basic",
-    "topics": [
-      "cowork",
-      "agents"
-    ],
-    "format": "video",
-    "time": "under-15min",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "summary": "Two short films of practising teachers: a high-school teacher turning one folder of scores, attendance and notes into a differentiated lesson, and an elementary teacher who has Claude review each day's recorded lesson at 4pm and draft tomorrow's plan.",
-    "who_for": "School teachers who want to see the workflow end to end before spending time on it. Own work.",
-    "skip_if": "Skip if your school forbids uploading class data - both examples depend on it. Skip if you have no lesson-recording tool; the second workflow is built on a TeachFX recording. Skip if you want step-by-step instructions rather than demos.",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-21",
-    "status": "live",
-    "notes": "Anthropic-produced marketing films, so they show only the version that works. Videos are hosted on YouTube (IDs sMh99UfkvL4 and V-OOEC5RNaQ). No publication date given on the page. I read the page and video descriptions, not the full videos.",
-    "source": "Anthropic",
-    "official": true,
-    "id": "r-3368616113",
-    "keywords": [
-      "claude for teachers",
-      "classroom workflows",
-      "differentiated lessons",
-      "lesson planning with ai",
-      "teachfx recording",
-      "school ai tools",
-      "teacher productivity",
-      "grading and attendance",
-      "anthropic education",
-      "lesson plan generator",
-      "ai in the classroom",
-      "elementary lesson planning",
-      "high school teaching workflows"
-    ],
-    "questions": [
-      "how can teachers use claude for lesson planning",
-      "can ai help me grade and make lesson plans",
-      "claude for teachers classroom examples",
-      "how to use claude to plan lessons from recordings"
-    ],
-    "teaches": [
-      "turn student folders and attendance notes into differentiated lessons",
-      "review recorded lessons to draft next day lesson plans"
-    ]
-  },
-  {
     "title": "Claude for K-12 teachers - product page with worked prompts",
     "url": "https://claude.com/solutions/teachers",
     "author": "Anthropic",
@@ -15587,9 +15423,9 @@
     "who_for": "Analysts and finance people who live in spreadsheets and want Claude to audit or extend a model they did not write.",
     "skip_if": "Skip if you are on the free plan, because Claude in Excel is a research preview for Pro, Max, Team and Enterprise only.",
     "published": "2026-01-30",
-    "checked": "2026-08-22",
+    "checked": "2026-08-29",
     "status": "live",
-    "notes": "50,754 views, 7:10, channel @claude, verified 2026-08-22",
+    "notes": "50,754 views, 7:10, channel @claude, verified 2026-08-22 Verified 2026-08-29: this exact video is also the entire content of two wrapper pages with nothing added beyond the embed - academy.claude.com/tutorials/getting-started-with-claude-in-excel (confirmed via the rendered <iframe src> pointing at this same video id) and the old claude.com/resources/tutorials/getting-started-with-claude-in-excel, which now redirects there. Both were merged into this row rather than kept as separate entries - a title-only duplicate check missed this because the third row's title had \"(Academy)\" appended, which should not have been there; the real page title is identical to this one.",
     "id": "r-2f546497f1",
     "keywords": [
       "claude in excel",
@@ -20218,7 +20054,7 @@
     "id": "r-b75714f54f"
   },
   {
-    "title": "Delegating your first task in Claude Cowork (Academy tutorial)",
+    "title": "Delegating your first task in Claude Cowork",
     "url": "https://academy.claude.com/tutorials/delegating-your-first-task-in-claude-cowork",
     "author": "Anthropic",
     "source": "Anthropic Academy",
@@ -20243,7 +20079,7 @@
     "summary": "The entry point for Cowork: granting folder access and connectors, delegating one real task, and reviewing Claude's plan before it changes anything on your machine.",
     "who_for": "Someone who has just installed Cowork and has not yet handed it a real task.",
     "skip_if": "Desktop app only, and it works on files on your own machine - review the plan before approving is part of the documented flow, not an optional safety step you can skip past.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. Video-only page, no article body. 4 min video. A second, differently-hosted tutorial with a similar name exists at claude.com/resources/tutorials/delegating-your-first-task-in-claude-cowork, already in this catalogue - checked, these are two different pages on two different Anthropic properties, not a duplicate; kept as a separate entry.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. Video-only page, no article body. 4 min video. Corrected 2026-08-29: this row previously claimed claude.com/resources/tutorials/delegating-your-first-task-in-claude-cowork was a different, separately-kept page - that was asserted without checking. It is not: navigating that URL 301-redirects here. The claude.com row (tier listed, never actually opened) has been removed rather than kept alongside this one.",
     "prerequisites": [
       "Claude Cowork desktop app installed"
     ],
@@ -20573,48 +20409,6 @@
       "how much does claude cost for nonprofits"
     ],
     "id": "r-ade31a7911"
-  },
-  {
-    "title": "Getting started with Claude in Excel (Academy)",
-    "url": "https://academy.claude.com/tutorials/getting-started-with-claude-in-excel",
-    "author": "Anthropic",
-    "source": "Anthropic Academy",
-    "official": true,
-    "roles": [
-      "data-analyst",
-      "business-founder"
-    ],
-    "level": "never-used",
-    "topics": [
-      "chat-prompting"
-    ],
-    "format": "video",
-    "time": "under-15min",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "status": "live",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-29",
-    "summary": "A seven-minute demo of Claude reading an entire workbook - nested formulas, multi-tab dependencies - and answering questions about it.",
-    "who_for": "Someone who has not yet tried Claude in Excel and wants a first look at what it can read.",
-    "skip_if": "This page names no plan tier, no platform, and no install step for what is, in practice, a beta add-in restricted to certain plans - it will not tell you whether you can actually run it.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. Video-only page, no article body. 7 min video. Checked specifically for prerequisites and found none stated - a real gap on the page itself, recorded here rather than invented.",
-    "prerequisites": [],
-    "teaches": [
-      "see Claude read a whole workbook across tabs",
-      "ask questions about an existing spreadsheet"
-    ],
-    "keywords": [
-      "claude in excel demo",
-      "claude excel add-in",
-      "claude reads spreadsheet"
-    ],
-    "questions": [
-      "what can claude in excel actually do",
-      "does claude understand my whole excel workbook"
-    ],
-    "id": "r-164a86a1b0"
   },
   {
     "title": "Getting started with Claude Security",
@@ -20976,52 +20770,6 @@
       "what is the difference between standard and premium claude code seats"
     ],
     "id": "r-57efc29207"
-  },
-  {
-    "title": "How to install and use the Claude for Small Business plugin (Academy)",
-    "url": "https://academy.claude.com/tutorials/how-to-install-the-claude-for-small-business-plugin",
-    "author": "Anthropic",
-    "source": "Anthropic Academy",
-    "official": true,
-    "roles": [
-      "business-founder"
-    ],
-    "level": "never-used",
-    "topics": [
-      "cowork",
-      "skills"
-    ],
-    "format": "docs",
-    "time": "under-15min",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "status": "live",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-29",
-    "summary": "Installing the Small Business plugin, seeing its 25+ skills across Money & Finance, Sales & Marketing, Customers & Operations, and Business Intelligence, connecting QuickBooks, PayPal, HubSpot, Canva, Gmail and Docusign, and running a first task.",
-    "who_for": "A small business owner who has not yet installed the plugin and wants the full install-to-first-task path.",
-    "skip_if": "It needs the Claude desktop app on a Pro, Max, Team or Enterprise plan - there is no free-tier route in - and every skill only drafts, proposes or stages; nothing sends, posts or pays without your approval.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min read. The real barrier the page identifies is the list of connected accounts you need, not the install itself.",
-    "prerequisites": [
-      "Claude desktop app on a paid plan",
-      "third-party accounts for whichever skills you use: QuickBooks, PayPal, HubSpot, Canva, Gmail, Docusign"
-    ],
-    "teaches": [
-      "install the Claude for Small Business plugin",
-      "run a first task from its skill set",
-      "know that every action is approved by you before it sends, posts or pays"
-    ],
-    "keywords": [
-      "install claude small business plugin",
-      "small business plugin skills",
-      "quickbooks paypal hubspot claude"
-    ],
-    "questions": [
-      "how do i install the claude for small business plugin",
-      "what does the small business plugin actually do"
-    ],
-    "id": "r-52edcc6d27"
   },
   {
     "title": "How to select the right effort setting for Claude Cowork and Chat",
@@ -23114,7 +22862,7 @@
     "summary": "An elementary school teacher's scheduled workflow: every school day at four, Claude reads a TeachFX classroom recording, reflects on what worked, and drafts tomorrow's lesson plan.",
     "who_for": "A verified US K-12 educator curious what a real scheduled Claude workflow looks like.",
     "skip_if": "Needs verified US K-12 educator status, and the featured scheduled-briefing workflow additionally depends on a TeachFX classroom-recording account, a separate paid third-party product.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. Only page in its batch with no stated duration and no product pill. Inputs are de-identified diagnostics, exit tickets, and the teacher's own notes.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. Only page in its batch with no stated duration and no product pill. Inputs are de-identified diagnostics, exit tickets, and the teacher's own notes. Verified 2026-08-29: the old claude.com/resources/tutorials/claude-for-teachers-in-action URL now redirects here, but this page shows only the elementary-teacher/TeachFX workflow (video V-OOEC5RNaQ). The old row (removed) also described a second, high-school-teacher workflow (video sMh99UfkvL4) that is no longer present at this or any other live URL - Anthropic's own migration appears to have dropped it, not a cataloguing error on either row's part. This entry now describes only what a reader will actually find.",
     "prerequisites": [
       "verified US K-12 educator status",
       "a TeachFX account for the featured workflow"

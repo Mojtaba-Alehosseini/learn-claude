@@ -29,23 +29,7 @@ what are skills                  # RULED 2026-08-29: genuinely two resources. On
                                  # that the Academy page embeds the same YouTube video, so
                                  # they were kept as two rows rather than guessed into one.
 
-getting started with claude in excel  # RULED 2026-08-27: genuinely two resources. Both
-                                 # are Anthropic's own and both really carry this exact
-                                 # title - the YouTube page title was read on 2026-08-27
-                                 # to confirm it, rather than assumed from our own row.
-                                 # One is a written walkthrough at claude.com, the other
-                                 # is 7:10 of video on the @claude channel. An article
-                                 # and a video are two resources.
-                                 #
-                                 # The open complaint about this pair was that they
-                                 # disagreed on cost: `subscription` on the article,
-                                 # `free` on the video, so a reader filtering on cost saw
-                                 # one of a matched pair. The article is now `free`.
-                                 # Reading a claude.com tutorial costs nothing; what
-                                 # costs money is the Excel add-in, and that is in
-                                 # skip_if on both rows, where it belongs.
-
-# --- the other three groups, now resolved ------------------------------------------
+# --- the other four groups, now resolved --------------------------------------------
 #
 # All three were merged on 2026-08-27 and no longer appear more than once, so they need
 # no allowance. Kept here as the record of what was decided and why, so that nobody
@@ -90,6 +74,25 @@ getting started with claude in excel  # RULED 2026-08-27: genuinely two resource
 #                                  skilljar. Both surfaces are live; academy.claude.com is
 #                                  kept because it is the Claude-branded front door and
 #                                  states its own runtime.
+#
+# getting started with claude in excel
+#                                  MERGED 3 -> 1 on 2026-08-29, kept youtube.com.
+#                                  The 2026-08-27 ruling above this one (now removed) was
+#                                  wrong on a fact it stated as checked: it called the
+#                                  claude.com row "a written walkthrough". It is not - it
+#                                  is the same 7:10 video (id 54BdUqMQUMI) with no article
+#                                  text, confirmed by reading the rendered page. So was
+#                                  academy.claude.com/tutorials/getting-started-with-
+#                                  claude-in-excel, added in this harvest: same video,
+#                                  same nothing-else. Three rows, one seven-minute video.
+#                                  The academy row slipped past this file's own check
+#                                  because its title had "(Academy)" appended, which
+#                                  wasn't on the real page - a title edited to get past a
+#                                  validator is the validator failing, not passing. Kept
+#                                  the youtube.com row: real publish date, real view
+#                                  count, the sharpest of the three skip_if lines. Both
+#                                  wrapper pages are recorded in its notes so the
+#                                  alternative routes are not lost.
 
 # --- what this check still cannot see ------------------------------------------------
 #
