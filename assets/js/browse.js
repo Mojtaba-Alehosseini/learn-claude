@@ -35,8 +35,8 @@
 
   var el = {};
   ["clearAll", "filtersPrimary", "filtersMore", "moreToggle", "moreGlyph", "q", "sort",
-   "appliedChips", "count", "results", "empty", "openSheet", "closeSheet", "sheet",
-   "sheetBody", "sheetConfirm"].forEach(function (id) {
+   "appliedChips", "count", "results", "empty", "picks", "openSheet", "closeSheet",
+   "sheet", "sheetBody", "sheetConfirm"].forEach(function (id) {
     el[id] = document.getElementById(id);
   });
 
@@ -218,6 +218,14 @@
     } else if (sel.roles.length && !anyOtherThanRole()) {
       msg = "<strong>We have not covered this role yet.</strong>" +
             "It's on the list. Browse everything instead.";
+    } else if (sel.roles.length === 1 && sel.levels.length === 1 &&
+               !sel.times.length && !sel.topics.length && !sel.formats.length &&
+               !sel.costs.length && !sel.officials.length) {
+      /* The two front-door questions can land on a combination the catalogue does not
+         cover yet - student|builder today. Say so plainly, the way the paths page does
+         for a role with no path, instead of the generic remove-a-filter shrug. */
+      msg = "<strong>We have nothing for this combination yet.</strong>" +
+            "It's on the list. Loosen the level, or browse everything.";
     } else {
       msg = "<strong>Nothing matches all of those.</strong>" +
             "Try removing one filter — time is usually the one to loosen.";
@@ -230,13 +238,65 @@
            sel.formats.length || sel.costs.length || sel.officials.length;
   }
 
+  /* "Start with these three" — only where the two front-door questions land: exactly
+     one role and exactly one level, nothing else narrowing the list. Any further
+     filter or a search could exclude a pick, and a block recommending something the
+     reader just filtered out would be the page contradicting itself. */
+  function picksCell() {
+    if (!window.LC_PICKS || !window.LC_PICKS.cells) return null;
+    if (q.trim()) return null;
+    if (sel.roles.length !== 1 || sel.levels.length !== 1) return null;
+    if (sel.times.length || sel.topics.length || sel.formats.length ||
+        sel.costs.length || sel.officials.length) return null;
+    return window.LC_PICKS.cells[sel.roles[0] + "|" + sel.levels[0]] || null;
+  }
+
+  /* Renders the block and returns the set of picked ids, so the list below can say
+     "everything else" and mean it. Nothing is hidden: picks move to the top, the rest
+     stays, the total on the count line is unchanged. */
+  function renderPicks(out) {
+    var cell = picksCell();
+    if (!cell) { el.picks.innerHTML = ""; return {}; }
+
+    var byUrl = {};
+    out.forEach(function (it) { byUrl[it.url] = it; });
+    var shown = cell.picks.filter(function (p) { return byUrl[p.url]; });
+    /* The validator makes a missing pick unshippable, so this guard is for a stale
+       browser cache, not an expected state. A one-card "start here" is not a set. */
+    if (shown.length < 2) { el.picks.innerHTML = ""; return {}; }
+
+    var heading = shown.length === 2 ? LC.PICKS_UI.heading2 : LC.PICKS_UI.heading3;
+    var picked = {};
+    var cards = shown.map(function (p) {
+      var it = byUrl[p.url];
+      picked[it.id] = true;
+      return '<div class="pick">' + LC.card(it) +
+             '<p class="pick-reason">' + LC.esc(p.reason) + '</p></div>';
+    }).join("");
+
+    el.picks.innerHTML =
+      '<section class="picks" aria-label="' + LC.esc(heading) + '">' +
+        '<div class="picks-head">' +
+          '<h2 class="h2">' + LC.esc(heading) + '</h2>' +
+          '<span class="picks-meta">' + LC.esc(LC.PICKS_UI.by) + ' · ' +
+            LC.esc(LC.fmtDate(cell.picked_on)) + '</span>' +
+        '</div>' +
+        '<div class="card-list">' + cards + '</div>' +
+        '<h2 class="h2 picks-rest">' + LC.esc(LC.PICKS_UI.rest) + ' (' +
+          (out.length - shown.length) + ')</h2>' +
+      '</section>';
+    return picked;
+  }
+
   function render() {
     var out = results();
     renderFilters();
     renderChips();
     renderCount(out.length);
     renderEmpty(out.length);
-    el.results.innerHTML = out.map(function (it) { return LC.card(it); }).join("");
+    var picked = renderPicks(out);
+    var rest = out.filter(function (it) { return !picked[it.id]; });
+    el.results.innerHTML = rest.map(function (it) { return LC.card(it); }).join("");
     document.title = "Browse " + out.length + " Claude resources — Learn Claude";
     writeURL();
   }

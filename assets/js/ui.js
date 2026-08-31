@@ -54,6 +54,19 @@
     "agents": "agents", "api": "API", "safety": "limits and safety"
   };
 
+  /* "Start with these three" on Browse. Every reader-facing string for the picks
+     block lives here and in docs/design/ux-copy.md together, per the no-drift rule.
+     The heading is count-dependent because one cell (a single-publisher pool) holds
+     two picks, and a "three" heading over two cards would be the page miscounting
+     in its own voice. "picked by AI" is the honesty label - same ladder as the tier
+     badges, and nothing may imply a person chose. */
+  LC.PICKS_UI = {
+    heading3: "Start with these three",
+    heading2: "Start with these two",
+    by: "picked by AI",
+    rest: "Everything else for you"
+  };
+
   /* Order is fixed and meaningful: most thoroughly checked first. */
   LC.TIER = {
     "reviewed":    { label: "Read in full", rank: 0, cls: "badge-reviewed",

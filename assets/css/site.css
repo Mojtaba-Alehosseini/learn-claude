@@ -500,6 +500,26 @@ button, .btn, .nav-link, .filter-option { min-height: var(--tap-min); }
   display: flex; flex-wrap: wrap; gap: var(--space-16);
   align-items: flex-end; margin-bottom: var(--space-24);
 }
+/* "Start with these three" on Browse. Quiet framing, no card of its own: the picks
+   are cards already, and a boxed box is how a page starts shouting. The reason line
+   under each card is the block's whole voice - body-small, secondary ink, and indented
+   to hang off the card rather than compete with it. */
+.picks { margin-top: var(--space-24); }
+.picks-head { display: flex; align-items: baseline; gap: var(--space-12);
+              flex-wrap: wrap; margin-bottom: var(--space-16); }
+.picks-meta {
+  font: var(--weight-regular) var(--text-caption)/var(--leading-caption) var(--font-sans);
+  letter-spacing: var(--tracking-caption);
+  color: var(--text-secondary);
+}
+.pick-reason {
+  margin: var(--space-8) 0 0 var(--space-16);
+  font: var(--weight-regular) var(--text-body-sm)/var(--leading-body-sm) var(--font-sans);
+  letter-spacing: var(--tracking-body-sm);
+  color: var(--text-secondary);
+}
+.picks-rest { margin-top: var(--space-32); }
+
 .result-count {
   font: var(--weight-medium) var(--text-body-sm)/var(--leading-body-sm) var(--font-sans);
   color: var(--text-primary);

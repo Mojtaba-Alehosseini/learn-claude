@@ -187,6 +187,34 @@ When the two questions return very few results, say so and offer the way out:
 **Sort control label:** Sort
 Options: **Best checked first** · **Newest first** · **Shortest first**
 
+### Start with these three *(the picks block)*
+
+Shown only when exactly one role and one level are set and nothing else narrows the
+list — the landing state of the home page's two questions. Any further filter or a
+search hides the block: it must never recommend something the reader just excluded.
+
+**Heading:** `Start with these three` — or `Start with these two` when the cell holds
+two picks. One cell does (non-technical + built things with it): its candidate pool has
+a single publisher, and the publisher cap holds that cell at two rather than let three
+same-source picks masquerade as a choice. The heading must always agree with the count;
+a "three" heading over two cards is the page miscounting in its own voice.
+
+**Label:** `picked by AI · 31 Aug 2026` — the honesty label, same ladder as the tier
+badges. Nothing may imply a person chose these. The date is `picked_on` from
+data/picks.json, formatted like every other date on the site.
+
+**Per-card reason** — one sentence under each picked card, saying why it beat the pool
+rather than what it is (the card already says what it is). Held to the same bar as
+`Skip if`: if someone who read the title would already know it, it is not doing work.
+Written by the model at pick time, stored in data/picks.json, validated non-empty.
+
+**Below the block:** `Everything else for you (67)` — the same results as before,
+minus the three picks shown above. Nothing is hidden; the count line above the block
+still counts everything.
+
+These strings live in `LC.PICKS_UI` in assets/js/ui.js. This section and that object
+change together or not at all.
+
 ### Filter panel
 
 **Heading:** Filters
@@ -350,6 +378,7 @@ Provenance line at the bottom:
 | Search found nothing | **No match for "[query]".** Try fewer words, or browse by role instead. |
 | A filter group is empty | Nothing here yet for this. |
 | A role has no resources | **We have not covered this role yet.** It's on the list. Browse everything instead. |
+| A role + level combination has no resources | **We have nothing for this combination yet.** It's on the list. Loosen the level, or browse everything. |
 | A path is not built yet | **This path isn't ready.** We only publish a path once every step in it has been checked. |
 | Data file failed to load | **The directory didn't load.** Reload the page. If it keeps happening, the site is broken and we want to know. |
 | Loading | Loading the directory… |
