@@ -78,8 +78,23 @@ def load_allowlist():
     return hosts
 
 
-def host_of(url):
-    return (urlparse(url).netloc or "").lower().lstrip("www.")
+def _load_host():
+    """Imported, not reimplemented — see the note on host() in scripts/stable-ids.py.
+
+    This line used to be `.lstrip("www.")`, which strips a set of characters rather than
+    a prefix and quietly turned wotai.co into otai.co. The same wrong line existed in
+    validate-catalogue.py. Two copies of a host-normaliser is how norm() ended up with
+    three definitions and a bug in each, so there is now one.
+    """
+    import importlib.util
+    path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "stable-ids.py")
+    spec = importlib.util.spec_from_file_location("stable_ids", path)
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod.host
+
+
+host_of = _load_host()
 
 
 def check(url):

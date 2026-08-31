@@ -216,10 +216,17 @@ def norm_title(t):
 
 
 def load_id_rule():
+    """The URL rules, all three, from the one file that defines them.
+
+    host() joins make_id and norm here for the reason the others are here: this file had
+    its own copy, written as `.lstrip("www.")`, which strips a set of characters rather
+    than a prefix and mapped wotai.co onto otai.co. See the note on host() in
+    scripts/stable-ids.py for why that silenced rules 10 and 11 rather than tripping them.
+    """
     spec = importlib.util.spec_from_file_location("stable_ids", STABLE_IDS)
     mod = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(mod)
-    return mod.make_id, mod.norm
+    return mod.make_id, mod.norm, mod.host
 
 
 # ---------------------------------------------------------------- checks ----
@@ -234,7 +241,7 @@ def main(argv=None):
     allowance_path = argv[2] if len(argv) > 2 else ALLOWANCE
 
     vocab = load_vocabularies()
-    make_id, norm = load_id_rule()
+    make_id, norm, host = load_id_rule()
 
     items = json.load(open(items_path, encoding="utf-8"))
     errors = []
@@ -405,8 +412,7 @@ def main(argv=None):
     for title, rows in sorted(by_title.items()):
         if len(rows) < 2 or title in allowed_titles:
             continue
-        hosts = {urlparse(str(it.get("url", ""))).netloc.lower().lstrip("www.")
-                 for _, it in rows}
+        hosts = {host(it.get("url")) for _, it in rows}
         if len(hosts) < 2:
             continue                      # same host twice is caught by the URL rules
         errors.append(
@@ -433,12 +439,12 @@ def main(argv=None):
     #     trusts for the same reason.
     GENERIC_PATH_HOSTS = {"youtube.com", "youtu.be"}
 
-    def url_host(u):
-        h = urlparse(str(u or "")).netloc.lower()
-        return h[4:] if h.startswith("www.") else h
-
-    def url_slug(u, host):
-        if host in GENERIC_PATH_HOSTS:
+    # This used to carry its own correct copy of the www-stripping logic, written a week
+    # after the two broken copies and never compared against them. Three definitions of
+    # one rule, two of them wrong, is the shape of fault this file exists to catch in the
+    # data - so it uses the shared host() now, like everything else.
+    def url_slug(u, h):
+        if h in GENERIC_PATH_HOSTS:
             return norm(u)
         seg = urlparse(str(u or "")).path.rstrip("/").rsplit("/", 1)[-1].lower()
         return seg or None
@@ -446,11 +452,13 @@ def main(argv=None):
     allowed_slugs = load_allowed_titles(DUPE_SLUGS)   # same read, a different file
     by_slug = {}
     for n, item in enumerate(items):
-        host = url_host(item.get("url"))
-        slug = url_slug(item.get("url"), host)
-        if not host or not slug:
+        # `h`, not `host` - that name is the shared helper now, and rebinding it here
+        # would leave every later row calling a string.
+        h = host(item.get("url"))
+        slug = url_slug(item.get("url"), h)
+        if not h or not slug:
             continue
-        by_slug.setdefault(slug, []).append((n, item, host))
+        by_slug.setdefault(slug, []).append((n, item, h))
     for slug, slug_rows in sorted(by_slug.items()):
         if len(slug_rows) < 2 or slug in allowed_slugs:
             continue

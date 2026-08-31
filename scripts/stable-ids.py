@@ -20,6 +20,7 @@ any order and every reference still resolves.
 import hashlib
 import json
 import sys
+from urllib.parse import urlparse
 
 ITEMS = "data/items.json"
 
@@ -42,6 +43,34 @@ def norm(url):
     keep = [p for p in query.split("&")
             if p and not any(p.startswith(t) for t in TRACKING)]
     return base + ("?" + "&".join(sorted(keep)) if keep else "")
+
+
+def host(url):
+    """The hostname, lowercased, with a leading `www.` removed.
+
+    Lives here, next to norm(), because it answers the same question — what makes two
+    URLs the same thing — and because it had already been written three times elsewhere,
+    wrongly in two of them. This is the third definition of a URL rule in this codebase
+    that turned out to be a bug; norm() was the first. One definition, imported.
+
+    The prefix is removed by hand rather than with `.lstrip("www.")`, which is the bug
+    this replaces. lstrip takes a SET of characters, not a prefix, so it eats any leading
+    run of `w` and `.`:
+
+        weather.com          -> eather.com
+        wotai.co             -> otai.co
+        w3schools.com        -> 3schools.com
+        www.wrightmode.com   -> rightmode.com    (prefix stripped, then the real w too)
+
+    Five hosts in the catalogue were being mis-trimmed this way on 2026-08-29. Nothing
+    had broken yet, and the reason is worth stating because it is the dangerous kind of
+    luck: the duplicate checks in validate-catalogue.py skip a group whose rows all share
+    one host. A mis-trim that maps two *different* hosts onto one string does not raise a
+    false alarm — it silences a real one. The failure mode of this bug is a check that
+    quietly stops checking.
+    """
+    h = (urlparse(str(url or "")).netloc or "").lower()
+    return h[4:] if h.startswith("www.") else h
 
 
 def make_id(url):

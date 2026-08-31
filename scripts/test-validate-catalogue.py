@@ -42,6 +42,31 @@ _spec.loader.exec_module(_stable_ids)
 make_id = _stable_ids.make_id
 
 
+# The shared host normaliser, unit-tested here rather than in a file of its own because
+# two of this validator's rules stand on it and CI already runs this file. It replaced
+# `.lstrip("www.")` in three places on 2026-08-29 - lstrip strips a SET of characters,
+# not a prefix, so it ate the leading w of any host that had one.
+HOST_CASES = [
+    # (url, expected host)
+    ("https://www.example.com/a",        "example.com"),
+    ("https://example.com/a",            "example.com"),
+    ("https://WWW.Example.COM/a",        "example.com"),
+    # The five the catalogue actually holds, plus the one Morteza named. Every one of
+    # these came back short before the fix.
+    ("https://weather.com/forecast",     "weather.com"),
+    ("https://wotai.co/blog/x",          "wotai.co"),
+    ("https://w3schools.com/html",       "w3schools.com"),
+    ("https://willfrancis.com/x/",       "willfrancis.com"),
+    ("https://warwick.libguides.com/x",  "warwick.libguides.com"),
+    # The nastiest one: the prefix strips correctly and then the real name loses its w.
+    ("https://www.wrightmode.com/x",     "wrightmode.com"),
+    # A host that is only the prefix. Stripping leaves nothing, and that is correct -
+    # there is no name here to keep.
+    ("https://www./x",                   ""),
+    ("",                                 ""),
+]
+
+
 def run(items, paths, tmp, allowance=0):
     """Write the three inputs out and run the validator over them.
 
@@ -239,6 +264,22 @@ CASES = [
                                 "id": make_id("https://example.org/some/path/watch")})),
      None),
 
+    # The consequence of the lstrip bug, at catalogue level, which is the half a unit
+    # test cannot show. It never raised a false alarm - it silenced a real one. Both
+    # duplicate rules skip a group whose rows share a single host, so a mis-trim that
+    # maps two DIFFERENT hosts onto one string makes a genuine cross-host duplicate look
+    # like a same-host one and disappear. www.wrightmode.com and rightmode.com are two
+    # different sites; under `.lstrip("www.")` both became "rightmode.com" and this
+    # duplicate went unreported.
+    ("a real cross-host duplicate is not hidden by www-stripping",
+     lambda i, p: (i[0].update({"title": "Shared Title For The W Test",
+                                "url": "https://www.wrightmode.com/a-guide",
+                                "id": make_id("https://www.wrightmode.com/a-guide")}),
+                   i[1].update({"title": "Shared Title For The W Test",
+                                "url": "https://rightmode.com/a-guide",
+                                "id": make_id("https://rightmode.com/a-guide")})),
+     "the same title on 2 hosts"),
+
     # The rule the README singles out. It cannot be checked directly — no file shows who
     # did what — so what is checked is the appearance of a claim nobody has authorised.
     ("an entry claims tier: reviewed when none is allowed",
@@ -268,6 +309,16 @@ def main():
     tmp = tempfile.mkdtemp(prefix="lc-validate-")
     failures = []
     try:
+        host_bad = [(u, want, _stable_ids.host(u))
+                    for u, want in HOST_CASES if _stable_ids.host(u) != want]
+        if host_bad:
+            for u, want, got in host_bad:
+                print("FAIL  host(%r) -> %r, wanted %r" % (u, got, want))
+                failures.append("host(%r) gave %r, wanted %r" % (u, got, want))
+        else:
+            print("ok    host() strips the www. prefix and nothing else (%d urls)"
+                  % len(HOST_CASES))
+
         code, out = run(good_items, good_paths, tmp)
         if code != 0:
             failures.append("the untouched catalogue was rejected:\n" + out)
@@ -304,11 +355,12 @@ def main():
 
     print()
     if failures:
-        print("%d of %d checks did not do their job:" % (len(failures), len(CASES) + 1))
+        print("%d of %d checks did not do their job:" % (len(failures), len(CASES) + 2))
         for f in failures:
             print("  - " + f)
         return 1
-    print("All %d checks caught their fault. data/ was not touched." % (len(CASES) + 1))
+    # +2, not +1: the untouched-catalogue check, and the host() unit phase above it.
+    print("All %d checks caught their fault. data/ was not touched." % (len(CASES) + 2))
     return 0
 
 
