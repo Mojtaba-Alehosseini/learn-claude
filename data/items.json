@@ -3945,10 +3945,7 @@
     "author": "Dive Club / Ridd",
     "roles": [
       "designer",
-      "non-technical",
-      "pm",
-      "student",
-      "teacher"
+      "pm"
     ],
     "level": "confident",
     "topics": [
@@ -3968,7 +3965,7 @@
     "published": "2026-03-02",
     "checked": "2026-08-20",
     "status": "live",
-    "notes": "Also on Apple/Spotify. Previewed via description and secondary write-ups, not watched end-to-end.",
+    "notes": "Also on Apple/Spotify. Previewed via description and secondary write-ups, not watched end-to-end. Roles trimmed 2026-08-31 from designer, non-technical, pm, student, teacher to designer+pm: the who_for names designers only, and a Stripe design-manager interview about building apps with Claude Code has no teacher, student or general-audience content - the extra tags were inflating three Browse cells and would have forced this into teachers' picks.",
     "alt_skip_if": [
       "You have no interest in Claude Code.",
       "You prefer text to a ~1-hour podcast.",
