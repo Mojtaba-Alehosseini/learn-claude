@@ -50,6 +50,15 @@ jobs:
       - name: Check the validator still catches its faults
         run: python3 scripts/test-validate-catalogue.py
 
+      # The picks are a committed model judgment, so they rot two ways: a stale pool
+      # (warned, dated, ships) and a dead or ineligible pick (fails - "open this one
+      # first" about a page nobody can open is the site lying in its own voice).
+      - name: Validate the picks
+        run: python3 scripts/validate-picks.py
+
+      - name: Check the picks validator still catches its faults
+        run: python3 scripts/test-validate-picks.py
+
       # Every build script uses the standard library only, and --keywords keeps
       # build-search-index.py off the network. There is nothing to install.
       - name: Build ids, sources, paths, search index and the js mirrors

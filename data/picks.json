@@ -1,0 +1,1448 @@
+{
+  "cells": {
+    "designer|basic": {
+      "role": "designer",
+      "level": "basic",
+      "picked_by": "ai",
+      "picked_on": "2026-08-31",
+      "pool_size": 10,
+      "fingerprint": "sha1:f40183c30fcd9645",
+      "picks": [
+        {
+          "url": "https://artofstyleframe.com/blog/claude-for-designers-2026/",
+          "reason": "Four of the ten candidates are about Claude Design specifically; this is the only one that maps the whole surface before committing you to any of it, and the only one whose notes name concrete failure modes - invented pixel values, and Claude calling 3:1 contrast acceptable when it is not.",
+          "subject": "an honest map of where Claude helps and hurts design work"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=eXlSgQmz02E",
+          "reason": "Chosen over the two longer written walkthroughs of the same product because our notes say it is a designer's critique of output quality rather than a feature tour - the only candidate that assumes you can already tell good layout from bad.",
+          "subject": "a designer's critique of Claude Design's output quality"
+        },
+        {
+          "url": "https://academy.claude.com/use-cases/analyze-patterns-in-user-feedback",
+          "reason": "The one pick you can run today rather than a product to evaluate - and the only candidate whose notes keep the judgment with you: which feedback went under which theme is auditable, and whether the data represents your users stays your call.",
+          "subject": "a runnable feedback-synthesis task with an audit step"
+        }
+      ],
+      "runners_up": [
+        {
+          "url": "https://support.claude.com/en/articles/14604416-get-started-with-claude-design",
+          "reason": "The strongest single fact in the pool - which plans can open Claude Design at all, and that Enterprise needs an admin switch - but the subject self-check caps Claude Design at one pick, and the UI Collective critique earns that slot by teaching judgment rather than setup."
+        },
+        {
+          "url": "https://www.nngroup.com/articles/testing-ai-methodology/",
+          "reason": "Its own skip_if says to read the companion findings piece first, so it cannot be a first open - it is step 3 of the judging-ai-design-work path for exactly that reason."
+        },
+        {
+          "url": "https://departmentofproduct.substack.com/p/how-to-use-claude-code-for-non-engineering",
+          "reason": "The only paid candidate, and our notes say the free part stops exactly where the agent templates begin."
+        }
+      ],
+      "note": "All three picks share the primary topic chat-prompting, which is the vocabulary's ceiling rather than sameness: the topic axis records surfaces (chat, code, cowork), not subjects, and 7 of 10 candidates in this pool are chat-prompting-primary. The subjects are distinct by the self-check: an orientation essay on where Claude fits design work, a critique of one product's output, and a runnable synthesis task. The swap that produced this set (Help Center out, feedback-synthesis in) was made because two picks about Claude Design was already one too many on subject grounds, whatever the topic field says."
+    },
+    "non-technical|basic": {
+      "role": "non-technical",
+      "level": "basic",
+      "picked_by": "ai",
+      "picked_on": "2026-08-31",
+      "pool_size": 69,
+      "fingerprint": "sha1:1557f35e6707bdbe",
+      "picks": [
+        {
+          "url": "https://claude.com/blog/best-practices-for-prompt-engineering",
+          "reason": "The pool holds two fixes for the same complaint - answers coming out generic - and this is the one we read in full rather than skimmed, ordered as fixes to try today rather than principles to absorb.",
+          "subject": "an ordered list of fixes for generic answers"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=WSPChlfxJyA",
+          "reason": "Five beginner tours in this pool, and this is the only one whose own notes rule out complete beginners - too fast to be a true first video - which is exactly what makes it the right speed for someone who has already poked at Claude.",
+          "subject": "a structured one-sitting map of the whole product"
+        },
+        {
+          "url": "https://support.claude.com/en/articles/9517075-what-are-projects",
+          "reason": "Half this pool teaches one task each; this is the single structural habit that stops you re-pasting the same background forever, and it names the free-tier ceiling of five Projects before you plan around it.",
+          "subject": "the one structural habit: stop re-pasting your context"
+        }
+      ],
+      "runners_up": [
+        {
+          "url": "https://www.tomsguide.com/ai/stop-using-claude-like-chatgpt-10-prompts-that-unlock-its-real-potential",
+          "reason": "The closest who_for match in the whole pool to this exact reader, but it covers the same ground as the prompting pick and we have only skimmed it where the other was read in full."
+        },
+        {
+          "url": "https://ruben.substack.com/p/claude",
+          "reason": "The better map one level down, where it is already step 1 of the first-week path - by basic, most readers have worked out there are several products."
+        },
+        {
+          "url": "https://support.claude.com/en/articles/13364135-use-claude-cowork-safely",
+          "reason": "Its skip_if says nobody should skip it, which nearly carries it alone; it stays out only because it presumes you have already chosen Cowork, which this reader has not."
+        }
+      ],
+      "note": "All three picks are chat-prompting-primary in a pool where most candidates are - the topic axis records the surface, and at this level the surface is chat. The subjects pass the self-check as three different kinds of thing: a fix-list for output quality, a guided tour of the product's breadth, and one structural habit. Spreading the primaries would have meant seating a Cowork or connector item ahead of better-fitting material purely to satisfy the field."
+    },
+    "business-founder|builder": {
+      "role": "business-founder",
+      "level": "builder",
+      "picked_by": "ai",
+      "picked_on": "2026-08-31",
+      "pool_size": 78,
+      "fingerprint": "sha1:5464944ea5de243c",
+      "picks": [
+        {
+          "url": "https://every.to/guides/ai-product-management-guide",
+          "reason": "The only candidate of 78 we have read in full, and the only one that asks a founder to change how they work rather than adding a fifteenth 15-minute workflow - it even refuses readers honestly, telling you to stop and instrument your product first.",
+          "subject": "restructuring how a founder works around agents"
+        },
+        {
+          "url": "https://github.com/bh-rat/awesome-mcp-enterprise",
+          "reason": "The only candidate that helps you choose an integration rather than use or build one, sorted on governance and security rather than popularity - worth reading before spending a day building something already governed.",
+          "subject": "choosing governed, security-reviewed integrations"
+        },
+        {
+          "url": "https://academy.claude.com/courses/introduction-to-model-context-protocol",
+          "reason": "Seventy-six of these 78 are Anthropic's own single-workflow pages; this is the one that goes underneath them to the integration layer itself, and it tells you to skip it if the one-click connectors already cover you.",
+          "subject": "how the integration layer works underneath"
+        }
+      ],
+      "runners_up": [
+        {
+          "url": "https://academy.claude.com/tutorials/scaling-workflows-with-claude-cowork-at-your-organization",
+          "reason": "The strongest of the 76 Academy pages for a founder past the pilot stage, and it names a real product gap instead of glossing it - it loses only because one Academy slot was available and MCP goes deeper."
+        },
+        {
+          "url": "https://academy.claude.com/use-cases/package-your-brand-guidelines-in-a-skill",
+          "reason": "Builds something reusable rather than running one workflow, but it is marketing-ops-shaped where this reader runs the whole business."
+        }
+      ],
+      "note": "Two picks share the primary topic mcp, and the subjects are different halves of the same decision: awesome-mcp-enterprise is about choosing among governed integrations, the MCP course is about understanding and building the protocol underneath them. Publisher-thin pool (3 publishers across 78 candidates, 76 of them Anthropic Academy) - the two non-Academy items are both picked, which is what constraint 2 is for."
+    },
+    "designer|never-used": {
+      "role": "designer",
+      "level": "never-used",
+      "picked_by": "ai",
+      "picked_on": "2026-08-31",
+      "pool_size": 5,
+      "fingerprint": "sha1:4ddb615a7affd23d",
+      "picks": [
+        {
+          "url": "https://www.nngroup.com/articles/ai-prototyping/",
+          "reason": "The only candidate built on a real comparison - AI against a human designer on the same brief - so it answers the question a first-time designer actually has, with evidence instead of opinion, before any tool is opened.",
+          "subject": "evidence on how good AI design output actually is"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=o7HSVPHCX8I",
+          "reason": "The one candidate that shows the product being used, and the reviewer teaches design for a living - an unvarnished first impression beats a polished feature tour when you have never touched the thing.",
+          "subject": "a design teacher's first-look walkthrough of Claude Design"
+        },
+        {
+          "url": "https://academy.claude.com/courses/ai-capabilities-and-limitations",
+          "reason": "The only candidate about limits rather than possibilities, and at 15 minutes across 13 short lectures it is sized for someone who has not yet decided whether to invest at all.",
+          "subject": "what AI can and cannot do, before relying on it"
+        }
+      ],
+      "runners_up": [
+        {
+          "url": "https://www.nngroup.com/articles/ai-empathy-mapping/",
+          "reason": "The deeper NN/g question, but it shows no tool at all and assumes empathy-mapping fluency - its sibling answers what a first-time user actually asks, and one NN/g pick is the cap."
+        },
+        {
+          "url": "https://artificialcorner.com/p/free-claude",
+          "reason": "A shortlist of links to other people's videos is a detour before you have opened the product once."
+        }
+      ]
+    },
+    "designer|builder": {
+      "role": "designer",
+      "level": "builder",
+      "picked_by": "ai",
+      "picked_on": "2026-08-31",
+      "pool_size": 11,
+      "fingerprint": "sha1:48f581d30aad7563",
+      "picks": [
+        {
+          "url": "https://github.com/anthropics/knowledge-work-plugins/tree/main/design/skills",
+          "reason": "The only candidate where you can see exactly what a skill checks before standardising on it - the accessibility-review file is a full WCAG 2.1 AA audit you can read line by line, which no install page in this pool lets you do.",
+          "subject": "reading the design skills' source before trusting them"
+        },
+        {
+          "url": "https://uxdesign.cc/designing-with-claude-code-and-codex-cli-building-ai-driven-workflows-powered-by-code-connect-ui-f10c136ec11f",
+          "reason": "The one candidate written for the senior end of this level, and the only one honest that Code Connect maturity is the gate - without it the workflow produces the same guesses as anything else, which is the fact a builder needs before starting.",
+          "subject": "codebase-accurate prototyping on a mature design system"
+        },
+        {
+          "url": "https://academy.claude.com/use-cases/brand-guidelines-skill",
+          "reason": "Eight of eleven candidates run a workflow once; this is the build that keeps working after you stop - a shared skill that enforces brand rules and refuses off-brand output, rather than another report to read.",
+          "subject": "building an org-wide skill that refuses off-brand output"
+        }
+      ],
+      "runners_up": [
+        {
+          "url": "https://academy.claude.com/use-cases/pattern-consistency-audit",
+          "reason": "The other durable build in the pool - the audit becomes a reusable /pattern-audit skill - edged out because the brand skill enforces while this one only reports."
+        },
+        {
+          "url": "https://cianfrani.dev/posts/a-better-figma-mcp/",
+          "reason": "The only pick-your-own-plumbing piece, but its own notes rule out enterprise-locked setups and anyone uneasy giving an LLM browser access - a narrower door than the three picked."
+        },
+        {
+          "url": "https://academy.claude.com/use-cases/clickable-prototype",
+          "reason": "Operational by its own admission - it emits a prototype file and teaches nothing about what to test once you have it."
+        }
+      ]
+    },
+    "designer|confident": {
+      "role": "designer",
+      "level": "confident",
+      "picked_by": "ai",
+      "picked_on": "2026-08-31",
+      "pool_size": 20,
+      "fingerprint": "sha1:db6f63675c999a0d",
+      "picks": [
+        {
+          "url": "https://www.builder.io/blog/claude-code-for-designers",
+          "reason": "Two candidates cover this exact subject and this is the one read in full rather than skimmed - and the only guide in the pool straight about where designers actually get stuck: git, pull requests, keeping code and Figma in step.",
+          "subject": "a designer's real-world Claude Code and Figma workflow"
+        },
+        {
+          "url": "https://support.claude.com/en/articles/14604397-set-up-your-design-system-in-claude-design",
+          "reason": "Carries the single most consequential fact in the pool - one switch in here publishes your design system to the whole organisation - which is exactly the thing to know before experimenting at this level.",
+          "subject": "publishing a design system inside Claude Design"
+        },
+        {
+          "url": "https://academy.claude.com/courses/ai-fluency-for-creative-work",
+          "reason": "Everything else in the pool teaches operating a tool; this is the only candidate with a repeatable method for deciding when delegation protects a creative practice and when it erodes it - the judgment the tools themselves never teach.",
+          "subject": "a method for deciding when to delegate creative work"
+        }
+      ],
+      "runners_up": [
+        {
+          "url": "https://medium.com/design-bootcamp/a-designers-guide-to-organizing-ai-skills-and-tools-in-claude-code-f87477c35b82",
+          "reason": "Same subject as the Builder.io pick, but one author's opinion with commands worth double-checking against the docs, where Builder.io is read in full and names the failure points."
+        },
+        {
+          "url": "https://help.figma.com/hc/en-us/articles/32132100833559-Guide-to-the-Figma-MCP-server",
+          "reason": "The right pre-wiring read, but it stops before installation by its own admission, and its setup sibling needs a terminal this level does not assume."
+        },
+        {
+          "url": "https://www.designsystemscollective.com/design-systems-in-2026-turn-your-system-into-a-claude-skill-3dd4d8bf5feb",
+          "reason": "The system-as-skill idea one level early - worth the time only if you already have a system worth encoding, and Medium's meter may close it before the end."
+        }
+      ],
+      "note": "Two picks share the primary topic chat-prompting because the vocabulary has no topic for Claude Design the product - the same blindness the designer|basic note records. The subjects are a design-system setup inside one product and a delegation-judgment method spanning all of them; swapping either for a topic-distinct candidate (the ux-writing repo, the Figma MCC docs) would have traded fit for a field."
+    },
+    "non-technical|never-used": {
+      "role": "non-technical",
+      "level": "never-used",
+      "picked_by": "ai",
+      "picked_on": "2026-08-31",
+      "pool_size": 51,
+      "fingerprint": "sha1:00265c707ad5543c",
+      "picks": [
+        {
+          "url": "https://academy.claude.com/use-cases/explore-what-claude-can-do-for-you",
+          "reason": "The only candidate of 51 with a genuinely zero-prerequisite start - you describe your job and it maps the capabilities to you, where everything else orients you to the product in general.",
+          "subject": "a personalized map of what Claude can do for your job"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=r2vYObllqJU",
+          "reason": "Four beginner walkthrough videos in this pool, and this is the calm, current one - recorded April 2026, from outside the building, and honest that it stops at the basics rather than pretending to be a course.",
+          "subject": "a calm first walkthrough of the interface"
+        },
+        {
+          "url": "https://www.datacamp.com/courses/claude-101",
+          "reason": "The structured-course slot could not go to Anthropic's own Claude 101 without doubling a publisher, and this one earns it anyway: built explicitly for people who have never opened an AI chat tool, and it ends where the official course does not - at Skills and connectors.",
+          "subject": "a structured beginner course ending in a tour of the surfaces"
+        }
+      ],
+      "runners_up": [
+        {
+          "url": "https://academy.claude.com/tutorials/why-do-ai-models-hallucinate",
+          "reason": "The failure-mode step first-timers skip, but every safety candidate in this pool is Anthropic Academy's and that slot went to the personalized front door - it waits at step 5 of the first-week path instead."
+        },
+        {
+          "url": "https://support.claude.com/en/articles/8114491-get-started-with-claude",
+          "reason": "The only ai-reviewed candidate, but it orients you to the product in general where Explore orients the product to your job - the rarer thing."
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=0vZ_UVLhSQQ",
+          "reason": "The official walkthrough, recorded December 2025 and never going past what each button does - Stratvert covers the same ground four months more current."
+        }
+      ],
+      "note": "All three picks are chat-prompting-primary in a pool of seven primaries. Every safety-primary candidate is Anthropic Academy's, and the Academy slot went to the personalized front door - spreading topics would have doubled a publisher or dropped the strongest pick in the pool. The subjects are a map, a walkthrough, and a curriculum: three different kinds of first step."
+    },
+    "non-technical|confident": {
+      "role": "non-technical",
+      "level": "confident",
+      "picked_by": "ai",
+      "picked_on": "2026-08-31",
+      "pool_size": 13,
+      "fingerprint": "sha1:e2921374869fb501",
+      "picks": [
+        {
+          "url": "https://academy.claude.com/tutorials/teach-claude-your-way-of-working-using-skills",
+          "reason": "The habit-changer the rest of the pool depends on: someone at this level is re-explaining themselves daily, and this is the only candidate about making instructions permanent rather than running one more task.",
+          "subject": "making your instructions stick as a reusable skill"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=UaJhYp7Tql4",
+          "reason": "Written for exactly this reader - uses Claude daily, suspects the asking is the problem - and its own notes say the calm analytical content outruns the loud title.",
+          "subject": "prompting technique for daily users with mediocre output"
+        },
+        {
+          "url": "https://www.udemy.com/course/mastering-claude-cowork-ai-agents/",
+          "reason": "The only structured path in the pool from comfortable-with-basics to building workflows and plugins - the direction a confident non-coder grows, and the only candidate that goes there.",
+          "subject": "a structured course from Cowork basics into plugins and agents"
+        }
+      ],
+      "runners_up": [
+        {
+          "url": "https://www.youtube.com/watch?v=0_dSWLOHKng",
+          "reason": "Lost the Cowork slot to the Udemy course: his own skip line sends Cowork newcomers elsewhere, and the course goes on to plugins and multi-agent setups where the video stops at one person's system."
+        },
+        {
+          "url": "https://academy.claude.com/use-cases/map-your-understanding-and-build-lessons-from-the-gaps",
+          "reason": "The most original page in the pool, but it needs Opus 4.6 with Extended Thinking, and its Academy slot was taken by the one habit-changer everything else depends on."
+        },
+        {
+          "url": "https://academy.claude.com/tutorials/using-research",
+          "reason": "States its paid-plan gate honestly, but three minutes of video on one feature cannot beat a habit, a technique, or a course."
+        }
+      ]
+    },
+    "non-technical|builder": {
+      "role": "non-technical",
+      "level": "builder",
+      "picked_by": "ai",
+      "picked_on": "2026-08-31",
+      "pool_size": 8,
+      "fingerprint": "sha1:aff8fc3744a86bd7",
+      "picks": [
+        {
+          "url": "https://academy.claude.com/use-cases/my-voice",
+          "reason": "The most durable build in the pool - a skill that accumulates your corrections into a voice profile - where five of the eight candidates run once and keep nothing.",
+          "subject": "building a personal voice skill that improves with correction"
+        },
+        {
+          "url": "https://academy.claude.com/use-cases/morning-evening",
+          "reason": "The only candidate whose two halves feed each other - the evening wrap becomes the next morning's briefing - which is automation as a system rather than another single task.",
+          "subject": "a stateful morning-and-evening briefing loop"
+        }
+      ],
+      "runners_up": [
+        {
+          "url": "https://academy.claude.com/use-cases/message-sweep",
+          "reason": "The third general-purpose candidate, but it reads state where both picks build things that persist - a voice skill and a daily loop."
+        },
+        {
+          "url": "https://academy.claude.com/use-cases/handle-a-request-while-away-from-your-keyboard",
+          "reason": "The most impressive demo in the pool and the heaviest setup - keep-awake, approval gates and computer use all off by default, which its own notes admit."
+        }
+      ],
+      "note": "Two picks, not three: all eight candidates are Anthropic Academy, and three from one publisher is the monoculture the constraint exists to stop, so the single-publisher cap holds the cell at two. Both picks are cowork-primary - the pool's mcp-primary alternatives are each platform-gated niches (Mac-only extensions, an admin-gated fundraising connector, a payer-clinical sample skill) rather than general builds. The subjects are a durable voice profile and a stateful daily loop."
+    },
+    "student|never-used": {
+      "role": "student",
+      "level": "never-used",
+      "picked_by": "ai",
+      "picked_on": "2026-08-31",
+      "pool_size": 21,
+      "fingerprint": "sha1:1d5747864118c71f",
+      "picks": [
+        {
+          "url": "https://www.digital.pitt.edu/news/pantherbytes-blog/claude-education-made-learning",
+          "reason": "The only candidate that covers prompting, Learning Mode, Projects and the hallucination warning in one twenty-minute read written for students in any subject - four first-day needs, one page, read by AI in full.",
+          "subject": "a student-written orientation covering start to hallucination"
+        },
+        {
+          "url": "https://academy.claude.com/courses/claude-101",
+          "reason": "The official course with no hidden prerequisite - its Academy sibling for students assumes the 4D Fluency course first without saying so in the title, and this one assumes nothing.",
+          "subject": "the official basics course, no prerequisites"
+        },
+        {
+          "url": "https://libguides.tulane.edu/c.php?g=1518597",
+          "reason": "The only candidate that answers the question a student has before any tool question - where the line is - and it does it with scenarios rather than a policy PDF, at any university.",
+          "subject": "where the academic-integrity line actually sits"
+        }
+      ],
+      "runners_up": [
+        {
+          "url": "https://www.youtube.com/watch?v=r2vYObllqJU",
+          "reason": "The best generic walkthrough, but Pitt's twenty minutes cover the same start and add Learning Mode and the hallucination warning a student needs on day one."
+        },
+        {
+          "url": "https://students.unimelb.edu.au/academic-skills/academic-integrity/acknowledging-use-of-ai-tools-and-technologies",
+          "reason": "The copyable citation wording, but it answers how to declare before a first-timer knows where the line is - Tulane's scenarios answer that first."
+        },
+        {
+          "url": "https://academy.claude.com/courses/ai-fluency-for-students",
+          "reason": "The official student course, but its own notes say it assumes the core 4D Fluency course first, which the title does not admit - the wrong first open."
+        }
+      ],
+      "note": "Two picks share chat-prompting as primary topic. The pool's only other primaries are safety (taken by the integrity pick) and claude-code, which for a student who has never opened Claude is the wrong door entirely - spreading further would have seated a developer video to satisfy a field. The subjects are an orientation read, a structured course, and the integrity line: three different first-day needs."
+    },
+    "student|basic": {
+      "role": "student",
+      "level": "basic",
+      "picked_by": "ai",
+      "picked_on": "2026-08-31",
+      "pool_size": 15,
+      "fingerprint": "sha1:62c6be1c7c2b1599",
+      "picks": [
+        {
+          "url": "https://academy.claude.com/tutorials/imagine-with-claude-student-guide",
+          "reason": "The one candidate built for studying itself rather than research or admin - and it is candid that a generated visual can be wrong in ways a textbook figure is not, which is the caveat a student needs attached.",
+          "subject": "in-conversation study visuals, and when not to trust them"
+        },
+        {
+          "url": "https://libguides.stkate.edu/generativeai/documentingAI",
+          "reason": "Nothing else in the pool does this job: a fresh, AI-read page on protecting yourself from a false accusation by documenting as you work - the risk a student at this level has started running without noticing.",
+          "subject": "keeping a defensible record of how you used AI"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=QqNXf7DfSpA",
+          "reason": "Four feature-tour candidates, and this is the only one that explains the surfaces in research terms rather than business ones - the translation a student otherwise has to do alone.",
+          "subject": "a tour of the feature set in academic terms"
+        }
+      ],
+      "runners_up": [
+        {
+          "url": "https://support.claude.com/en/articles/9517075-what-are-projects",
+          "reason": "The right structural habit and already step 2 of the research path - the study-native picks beat it here because a student meets visuals and integrity questions before context management."
+        },
+        {
+          "url": "https://www.tomsguide.com/ai/stop-using-claude-like-chatgpt-10-prompts-that-unlock-its-real-potential",
+          "reason": "The closest match for generic-answer frustration, but a second article would have collapsed the format spread, and the Stapleton tour covers prompting inside the study context."
+        },
+        {
+          "url": "https://academy.claude.com/use-cases/debate-practice-with-feedback",
+          "reason": "The most interactive candidate, but it needs AI-powered Artifacts switched on and serves debate prep specifically where the picks serve every course."
+        }
+      ]
+    },
+    "student|confident": {
+      "role": "student",
+      "level": "confident",
+      "picked_by": "ai",
+      "picked_on": "2026-08-31",
+      "pool_size": 8,
+      "fingerprint": "sha1:4697bdee7316eb10",
+      "picks": [
+        {
+          "url": "https://academy.claude.com/use-cases/verify-statistics-from-raw-data",
+          "reason": "The rarest skill in the pool: checking a paper's numbers against its own raw data before leaning on it - the worked example catches a real hundred-fold unit error, which is the argument in one line.",
+          "subject": "recomputing a paper's statistics before citing it"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=GWtx-d3dALQ",
+          "reason": "The only candidate showing a published researcher's real workflow including the boundaries he refuses to cross - at confident level the boundaries are the missing curriculum, not the features.",
+          "subject": "a working academic's Claude stack, boundaries included"
+        },
+        {
+          "url": "https://learning.northeastern.edu/ai-student-guides-using-ai-powered-flashcards-with-claude-projects/",
+          "reason": "The one candidate about learning the material rather than processing it, and its own notes name the cost honestly - card-making is itself retrieval practice, so you should know what you are trading away.",
+          "subject": "revision cards grounded in your own course materials"
+        }
+      ],
+      "runners_up": [
+        {
+          "url": "https://academy.claude.com/use-cases/chart-your-data-before-you-commit",
+          "reason": "The same epistemic muscle as the statistics pick one step earlier - it lost the Academy slot to the rarer thing, recomputation against raw data."
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=ldwjRjx8xIQ",
+          "reason": "The right next surface for file-heavy research, but it needs a paid plan and local-file habits the three picks do not assume."
+        },
+        {
+          "url": "https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/reduce-hallucinations",
+          "reason": "Already step 1 of the research path, where its guardrails come in order - here it would displace something no path carries."
+        }
+      ]
+    },
+    "researcher|never-used": {
+      "role": "researcher",
+      "level": "never-used",
+      "picked_by": "ai",
+      "picked_on": "2026-08-31",
+      "pool_size": 12,
+      "fingerprint": "sha1:165a78e970118603",
+      "picks": [
+        {
+          "url": "https://academy.claude.com/courses/claude-101",
+          "reason": "The actual course in a pool where the other course-shaped candidate is a catalog pointing at it - and the only structured start that assumes nothing.",
+          "subject": "the official basics course"
+        },
+        {
+          "url": "https://support.claude.com/en/articles/8241126-upload-files-to-claude",
+          "reason": "The step every research guide assumes you have already done, and the only candidate that states the ceilings you will actually hit - 500MB in chat versus 30MB in a Project, twenty files either way.",
+          "subject": "getting files in front of Claude, with the real ceilings"
+        },
+        {
+          "url": "https://privacy.claude.com/en/articles/10023548-how-long-do-you-store-my-data",
+          "reason": "A researcher's first question is not what Claude can do but what happens to the data - this is the retention answer from the company itself, and the pool's only candidate that addresses it at all.",
+          "subject": "what happens to data you paste in"
+        }
+      ],
+      "runners_up": [
+        {
+          "url": "https://academy.claude.com/tutorials/using-the-pubmed-connector-in-claude",
+          "reason": "The strongest research-specific candidate, but it would double the Academy slot Claude 101 holds, and connecting literature search comes after a first conversation, not before."
+        },
+        {
+          "url": "https://claude.com/resources/courses",
+          "reason": "A catalog rather than a course - the pick is the course it points to."
+        },
+        {
+          "url": "https://academy.claude.com/tutorials/using-the-clinicaltrials-gov-connector-in-claude",
+          "reason": "Free and fully open, but a connector for one registry is a second step in a cell about the first."
+        }
+      ],
+      "note": "Two picks share chat-prompting as primary topic. The pool splits three ways - chat basics, seven single-source mcp connectors, one safety page - and every connector is both Academy-published (colliding with Claude 101's slot) and a second step by nature. The subjects are a course, a file-handling mechanic, and a data-retention answer."
+    },
+    "researcher|basic": {
+      "role": "researcher",
+      "level": "basic",
+      "picked_by": "ai",
+      "picked_on": "2026-08-31",
+      "pool_size": 18,
+      "fingerprint": "sha1:a024293ce2a2e9f4",
+      "picks": [
+        {
+          "url": "https://academy.claude.com/use-cases/plan-your-literature-review",
+          "reason": "The only candidate read in full that walks a research workflow end to end - and our note adds the caveat the page itself omits, that it never warns about fabricated references.",
+          "subject": "a vendor-blessed lit-review starting workflow"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=cWUifkGd9Ws",
+          "reason": "The one video built around the fear this reader actually has - invented citations - with recipes you can copy rather than principles to absorb.",
+          "subject": "copyable lit-review recipes for the citation-worried"
+        },
+        {
+          "url": "https://www.icmje.org/recommendations/browse/artificial-intelligence/",
+          "reason": "Three journal-policy candidates, and this is the umbrella body the others cite - one policy slot, and it goes to the broadest authority.",
+          "subject": "what you must declare when you publish"
+        }
+      ],
+      "runners_up": [
+        {
+          "url": "https://github.com/anthropics/prompt-eng-interactive-tutorial",
+          "reason": "The most rigorous fundamentals in the pool, but half a day of Jupyter discipline serves any user - the picks serve this reader's actual week."
+        },
+        {
+          "url": "https://support.claude.com/en/articles/13364135-use-claude-cowork-safely",
+          "reason": "Its skip line says nobody should skip it, but it guards a surface this reader has not adopted yet."
+        },
+        {
+          "url": "https://www.elsevier.com/about/policies-and-standards/generative-ai-policies-for-journals",
+          "reason": "Two rules that catch people at other publishers too, but ICMJE is the umbrella the field actually cites."
+        }
+      ],
+      "note": "Two picks share chat-prompting as primary topic in a pool of six primaries. The alternatives under other primaries are a prompting repo, Cowork guides and a showcase article - none research-native. The subjects are a starting workflow, copyable recipes with citation guardrails, and disclosure rules: plan, practice, publish."
+    },
+    "researcher|confident": {
+      "role": "researcher",
+      "level": "confident",
+      "picked_by": "ai",
+      "picked_on": "2026-08-31",
+      "pool_size": 18,
+      "fingerprint": "sha1:6da5780fbb8a2f77",
+      "picks": [
+        {
+          "url": "https://effortlessacademic.com/connect-and-integrate-your-local-zotero-library-with-claude-cowork/",
+          "reason": "The pool's one AI-read walkthrough of connecting Claude to the library you already trust - and honest that working from your own sources reduces the fabrication risk without removing it.",
+          "subject": "grounding Claude in your own reference library"
+        },
+        {
+          "url": "https://academy.claude.com/use-cases/verify-statistics-from-raw-data",
+          "reason": "The rarest habit in the pool - checking a paper's numbers against its own raw data, with a worked example that catches a hundred-fold unit error.",
+          "subject": "recomputing a paper's statistics before citing it"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=ldwjRjx8xIQ",
+          "reason": "The step past uploads: the only candidate showing Claude working across a local document collection, which is where a confident researcher's real corpus lives.",
+          "subject": "working on local research files with Cowork"
+        }
+      ],
+      "runners_up": [
+        {
+          "url": "https://lszabo.me/posts/ai-literature-search/",
+          "reason": "The PMID habit is the best citation guardrail in the pool, but a second article would have collapsed the format spread - and the habit itself is one line you now know."
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=GWtx-d3dALQ",
+          "reason": "The boundaries a published researcher sets are worth the watch, but the video slot went to the workflow you can copy rather than the stack you can admire."
+        },
+        {
+          "url": "https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/reduce-hallucinations",
+          "reason": "Already step 1 of the research path - it would displace a pick no path carries."
+        }
+      ]
+    },
+    "researcher|builder": {
+      "role": "researcher",
+      "level": "builder",
+      "picked_by": "ai",
+      "picked_on": "2026-08-31",
+      "pool_size": 20,
+      "fingerprint": "sha1:f869649372cdd0ce",
+      "picks": [
+        {
+          "url": "https://effortlessacademic.com/claude-skills-for-academics-beginner-tutorial-part-2/",
+          "reason": "The only candidate about building something a researcher keeps - reference-grounded writing skills - and honest that its method reduces fabricated citations rather than ending them.",
+          "subject": "building reusable writing automations for research"
+        },
+        {
+          "url": "https://github.com/54yyyu/zotero-mcp",
+          "reason": "There is no official Zotero connector, and this community project is that ecosystem - the pool's only candidate connecting Claude to the reference manager researchers actually use.",
+          "subject": "deep integration with your own Zotero library"
+        },
+        {
+          "url": "https://academy.claude.com/tutorials/using-the-tooluniverse-extension-in-claude",
+          "reason": "Seventeen Academy candidates each connect one source; this is the one that wraps six hundred, including two of its own neighbours - the widest capability per unit of setup in the pool.",
+          "subject": "one extension covering 600 scientific data sources"
+        }
+      ],
+      "runners_up": [
+        {
+          "url": "https://academy.claude.com/tutorials/how-to-use-the-scientific-problem-selection-skill-with-claude",
+          "reason": "The only candidate about choosing the problem rather than processing data - it lost the Academy slot to the page that widens every other workflow at once."
+        },
+        {
+          "url": "https://academy.claude.com/tutorials/using-the-synapse-org-connector-in-claude",
+          "reason": "Dataset discovery with provenance is rare, but most of what it finds sits behind per-dataset governance approval."
+        },
+        {
+          "url": "https://academy.claude.com/tutorials/how-to-use-the-scvi-tools-bioinformatics-skill-bundle-with-claude",
+          "reason": "Eleven models in one bundle, but only for labs already running the scVerse stack."
+        }
+      ],
+      "note": "Two picks share mcp as primary topic: one is a single reference-manager integration, the other a 600-source access layer - different subjects under one field value. The pool's claude-code and cowork primaries are a single sequencing pipeline and consulting-shaped tasks, not research builds. Publisher spread is the pool's own ceiling: 17 of 20 candidates are Anthropic Academy, so both non-Academy candidates are picked."
+    },
+    "teacher|never-used": {
+      "role": "teacher",
+      "level": "never-used",
+      "picked_by": "ai",
+      "picked_on": "2026-08-31",
+      "pool_size": 18,
+      "fingerprint": "sha1:36931d70ff4ec618",
+      "picks": [
+        {
+          "url": "https://academy.claude.com/courses/ai-fluency-for-k-12-educators",
+          "reason": "Two courses in this pool carry almost this name; this is the one that is actual training rather than a delivery kit, and the only candidate built around the constraints schools actually have - limited budget, many people to answer to.",
+          "subject": "an AI-fluency course built around real school constraints"
+        },
+        {
+          "url": "https://www.ajjuliani.com/blog/practical-ways-to-get-started-using-claude-for-educators",
+          "reason": "The only candidate that pairs getting started with the harder question - which thinking students must still do without help - which is the question a teacher is asked in week one.",
+          "subject": "a zero-start guide that protects what students must still think"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=vP4yIEwO0k8",
+          "reason": "Three beginner walkthrough videos in the pool, and this is the one whose examples come from the reader's own job rather than generic office tasks.",
+          "subject": "a classroom-native walkthrough of the product"
+        }
+      ],
+      "runners_up": [
+        {
+          "url": "https://claude.com/solutions/teachers",
+          "reason": "The finished worked prompts are the fastest way to see what good output looks like, but most of the page is claims and logos, and the US-only free plan narrows who it serves."
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=r2vYObllqJU",
+          "reason": "The calmest generic walkthrough, but Teaching With Intelligence covers the same ground with examples from the reader's own classroom."
+        },
+        {
+          "url": "https://academy.claude.com/tutorials/claude-for-teachers-in-action",
+          "reason": "A real scheduled workflow, but it needs verified US K-12 status plus a paid TeachFX account before any of it reproduces."
+        }
+      ]
+    },
+    "teacher|basic": {
+      "role": "teacher",
+      "level": "basic",
+      "picked_by": "ai",
+      "picked_on": "2026-08-31",
+      "pool_size": 18,
+      "fingerprint": "sha1:bac58aece83b00dc",
+      "picks": [
+        {
+          "url": "https://phillipalcock.substack.com/p/claude-for-teachers",
+          "reason": "The only candidate that builds something that lasts - a steering file, Projects and your own skills - where most of the pool hands out prompts that work once.",
+          "subject": "a durable classroom setup instead of one-off prompts"
+        },
+        {
+          "url": "https://support.claude.com/en/articles/15926041-claude-for-teachers-your-data-and-our-terms",
+          "reason": "The question every teacher is asked before any tool question - is this safe for student data - answered from the actual terms rather than a blog that read them once.",
+          "subject": "whether student data is safe under the free offer"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=LHSt4lhpxf4",
+          "reason": "The one candidate that produces something students touch rather than something the teacher reads - interactive activities with no coding and no edtech budget.",
+          "subject": "building interactive activities without code or budget"
+        }
+      ],
+      "runners_up": [
+        {
+          "url": "https://buildcognitiveresonance.substack.com/p/why-is-claude-for-teachers",
+          "reason": "The counter-argument every school should hold before signing up, but a second article would have collapsed the format spread - and the data-terms page answers the safety half from the terms themselves."
+        },
+        {
+          "url": "https://academy.claude.com/courses/ai-fluency-for-educators",
+          "reason": "The right course for course-planners, but it assumes the Framework and Foundations course first by its own admission - a prerequisite chain this cell cannot assume."
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=w7_yWjYyxjE",
+          "reason": "Projects is the right habit, but the Alcock pick teaches the same habit inside the classroom context, with skills on top."
+        }
+      ],
+      "note": "Two picks share chat-prompting as primary topic in a pool of three primaries. The unpicked primaries are cowork (a surface this reader has not chosen) and safety, which IS picked - the clash is between a setup guide and an activities tutorial, different subjects under the vocabulary's widest label."
+    },
+    "teacher|confident": {
+      "role": "teacher",
+      "level": "confident",
+      "picked_by": "ai",
+      "picked_on": "2026-08-31",
+      "pool_size": 8,
+      "fingerprint": "sha1:ec1ca140304cc92d",
+      "picks": [
+        {
+          "url": "https://howtoteachwithai.substack.com/p/43-claude-skills-that-give-you-the",
+          "reason": "The only candidate written for a teacher who already knows what a Skill is, and the only non-Anthropic voice in the pool - forty-three worked answers to the question this level actually has, which is how to stop repeating yourself.",
+          "subject": "reusable skills for a semester's repetition"
+        },
+        {
+          "url": "https://academy.claude.com/courses/teaching-ai-fluency",
+          "reason": "The one candidate about the job change rather than the tool - designing assignments and assessment for students who have AI - and its strongest lessons are exactly there.",
+          "subject": "teaching and assessing AI itself, not just using it"
+        },
+        {
+          "url": "https://academy.claude.com/use-cases/adapt-a-standard-textbook-page-to-every-reading-level",
+          "reason": "The classroom craft task with the widest reach in the pool - every teacher differentiates, where the alternatives serve one subject's typesetting or one syllabus shape.",
+          "subject": "differentiating one page for every reading level"
+        }
+      ],
+      "runners_up": [
+        {
+          "url": "https://academy.claude.com/courses/ai-fluency-for-pk-12-train-the-trainer",
+          "reason": "The delivery kit, but its own notes require the Educators course first and an audience of adults to train - a narrower door than either Academy pick."
+        },
+        {
+          "url": "https://academy.claude.com/use-cases/plan-your-syllabus-see-which-weeks-are-locked",
+          "reason": "The most original university tool here, edged out because differentiation serves every classroom while dependency-mapping serves those free to reorder."
+        },
+        {
+          "url": "https://academy.claude.com/tutorials/getting-good-at-claude-a-research-backed-curriculum",
+          "reason": "Train-the-trainer material by its own admission, and it names its own blind spot - observing conversations misses the failures that matter most."
+        }
+      ]
+    },
+    "developer|never-used": {
+      "role": "developer",
+      "level": "never-used",
+      "picked_by": "ai",
+      "picked_on": "2026-08-31",
+      "pool_size": 7,
+      "fingerprint": "sha1:ef73c155da402bef",
+      "picks": [
+        {
+          "url": "https://www.youtube.com/watch?v=fl1DSmwQKKY",
+          "reason": "The one candidate that answers what this thing is before asking you to install it - and at fifteen minutes it costs nothing if the answer is not for you.",
+          "subject": "the mental model before the first command"
+        },
+        {
+          "url": "https://code.claude.com/docs/en/overview",
+          "reason": "The only AI-read candidate, and the only one with the exact install command per operating system - the step every other resource assumes already happened.",
+          "subject": "the correct install for your OS, and the map"
+        },
+        {
+          "url": "https://www.freecodecamp.org/news/claude-code-essentials-exampro",
+          "reason": "The pool's one full course and its one non-Anthropic voice - covering billing and permissions, the two topics first-timers hit and official intros skip past.",
+          "subject": "one long guided pass over the whole surface"
+        }
+      ],
+      "runners_up": [
+        {
+          "url": "https://academy.claude.com/tutorials/tokens-and-embeddings",
+          "reason": "The right second read once a bill or rate limit surprises you - a pricing intuition is not a first door."
+        },
+        {
+          "url": "https://academy.claude.com/tutorials/what-are-skills",
+          "reason": "A concept you meet after the tool works, not before - and its own notes say it shows no authoring steps."
+        }
+      ],
+      "note": "All three picks are claude-code-primary. The pool's other primaries are a token-pricing page and two single-purpose connectors (Blender, ICD-10) - none of them a first door for a developer. The subjects are the idea, the install, and the course."
+    },
+    "developer|basic": {
+      "role": "developer",
+      "level": "basic",
+      "picked_by": "ai",
+      "picked_on": "2026-08-31",
+      "pool_size": 19,
+      "fingerprint": "sha1:97a731b7686aa90e",
+      "picks": [
+        {
+          "url": "https://academy.claude.com/courses/claude-code-101",
+          "reason": "The official mental model, and already step 1 of the Claude Code path - eleven of nineteen candidates assume you have what this teaches.",
+          "subject": "the official Claude Code foundation course"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=IuyVVtr1uhY",
+          "reason": "Written for exactly this level's failure - Claude Code installed but treated like a chat box, with messy results - and it stays on core coding work instead of detouring into the extension layer.",
+          "subject": "fixing chat-box habits in real coding work"
+        },
+        {
+          "url": "https://claude.com/blog/best-practices-for-prompt-engineering",
+          "reason": "The only AI-read candidate in the pool, and the craft layer under every tool pick - a short ordered list of fixes rather than another product tour.",
+          "subject": "ordered prompt-craft fixes that apply everywhere"
+        }
+      ],
+      "runners_up": [
+        {
+          "url": "https://www.youtube.com/watch?v=xJQuF02NAK8",
+          "reason": "The highest-leverage fifteen minutes in the pool, lost to the format spread - it is the natural follow-on to the Mosh pick."
+        },
+        {
+          "url": "https://www.freecodecamp.org/news/claude-code-handbook",
+          "reason": "One ordered document instead of thirty tabs, but by its own notes the first eight chapters are background and the depth per topic sits below the official docs."
+        },
+        {
+          "url": "https://www.coursera.org/learn/claude-code",
+          "reason": "A structured, assessed alternative, but its own notes concede Anthropic's best-practices docs go further for free."
+        }
+      ],
+      "note": "Two picks share claude-code as primary topic: a foundation course and a habits fix - the before and after of the same install. The pool's api primaries are a different job entirely (building on the API), and its chat primary is picked."
+    },
+    "developer|confident": {
+      "role": "developer",
+      "level": "confident",
+      "picked_by": "ai",
+      "picked_on": "2026-08-31",
+      "pool_size": 37,
+      "fingerprint": "sha1:ee0488add5dc9cbb",
+      "picks": [
+        {
+          "url": "https://code.claude.com/docs/en/best-practices",
+          "reason": "Written for exactly this cell - installed, daily use, still mediocre - and the densest thing in the pool: half the other candidates cite it, and it is read by AI in full where they are skimmed.",
+          "subject": "the corrective read for daily users with mediocre results"
+        },
+        {
+          "url": "https://frontendmasters.com/courses/claude-code/",
+          "reason": "Taught by an engineer on the Claude Code team, and the only course in the pool that covers the newer features most 2025-era tutorials never mention.",
+          "subject": "the under-the-hood mental model, current features included"
+        },
+        {
+          "url": "https://claude.com/blog/steering-claude-code-skills-hooks-rules-subagents-and-more",
+          "reason": "The decision layer the pool's twelve single-feature intros each lack: when to reach for CLAUDE.md versus a skill versus a hook versus a subagent, written for people whose CLAUDE.md is already a mess.",
+          "subject": "where project conventions should live, across four mechanisms"
+        }
+      ],
+      "runners_up": [
+        {
+          "url": "https://claudelog.com/",
+          "reason": "Community-tested bluntness a vendor doc will never print, but undated pages and no affiliation mean everything needs re-verifying against the docs the picks already are."
+        },
+        {
+          "url": "https://academy.claude.com/courses/claude-code-in-action",
+          "reason": "The official route to team-wide unsupervised sessions, but the official slots went to the corrective doc and the decision layer daily use needs first."
+        },
+        {
+          "url": "https://simonwillison.net/guides/agentic-engineering-patterns/",
+          "reason": "Practice-level and vendor-neutral, but deliberately tool-agnostic and still being written - the picks answer this tool, today."
+        }
+      ],
+      "note": "Two picks share claude-code as primary topic: one corrects working habits, the other settles where conventions live - sequential subjects, not the same one. The best-practices pick is agents-primary in the data, which understates how directly it serves this cell."
+    },
+    "developer|builder": {
+      "role": "developer",
+      "level": "builder",
+      "picked_by": "ai",
+      "picked_on": "2026-08-31",
+      "pool_size": 56,
+      "fingerprint": "sha1:a1609805ded880f8",
+      "picks": [
+        {
+          "url": "https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models",
+          "reason": "The canonical context-engineering piece in this pool says in its own notes that this one reverses several of its recommendations on Claude 5 models - so the follow-up takes the slot the classic would otherwise hold.",
+          "subject": "current-generation context engineering"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=TqC1qOfiVcQ",
+          "reason": "The deepest non-Anthropic material in the pool: a half-day workshop on the design reasoning behind agents in production, by the SDK's own engineer, where the alternatives stop before the hard parts.",
+          "subject": "building agents into your own product with the SDK"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-cookbooks",
+          "reason": "The only candidate you run rather than read - a defensible starting point per capability instead of a blank file, which is worth more to a builder than another explanation.",
+          "subject": "runnable recipes for specific capabilities"
+        }
+      ],
+      "runners_up": [
+        {
+          "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+          "reason": "The canonical piece, but its own notes say the July 2026 follow-up reverses several recommendations on current models - the follow-up took the slot."
+        },
+        {
+          "url": "https://claude.com/blog/a-harness-for-every-task-dynamic-workflows-in-claude-code",
+          "reason": "The right read the week one context window stops being enough, but its own post admits most work does not need it, and the one Anthropic slot was taken."
+        },
+        {
+          "url": "https://www.freecodecamp.org/news/how-to-build-an-mcp-server-with-python-docker-and-claude-code",
+          "reason": "The deployable build-along, lost to the format spread - and the Cookbooks cover the same learn-by-running instinct across every capability rather than one protocol."
+        }
+      ]
+    },
+    "data-analyst|never-used": {
+      "role": "data-analyst",
+      "level": "never-used",
+      "picked_by": "ai",
+      "picked_on": "2026-08-31",
+      "pool_size": 6,
+      "fingerprint": "sha1:b46e1ce351d0b002",
+      "picks": [
+        {
+          "url": "https://support.claude.com/en/articles/8241126-upload-files-to-claude",
+          "reason": "The step every data guide assumes already happened, and the only candidate naming the ceilings you will hit - 500MB in chat versus 30MB in a Project, and code execution needed for XLSX.",
+          "subject": "getting a file in front of Claude, with the real ceilings"
+        },
+        {
+          "url": "https://privacy.claude.com/en/articles/10023548-how-long-do-you-store-my-data",
+          "reason": "An analyst's data is usually somebody else's data, and this is the retention answer from the company itself - the question to settle before the first upload, not after.",
+          "subject": "what happens to pasted work data"
+        },
+        {
+          "url": "https://www.datacamp.com/courses/claude-101",
+          "reason": "The pool's one non-Anthropic voice, and the course that goes on to tour Projects, Skills and connectors where the official twin stays at chat basics.",
+          "subject": "a structured basics course that tours the surfaces"
+        }
+      ],
+      "runners_up": [
+        {
+          "url": "https://academy.claude.com/courses/claude-101",
+          "reason": "The official twin of the picked course - it lost on the surface tour, and on being the third Anthropic property in a three-pick set."
+        },
+        {
+          "url": "https://academy.claude.com/courses/ai-capabilities-and-limitations",
+          "reason": "The honest limitations primer, but its own notes call it fifteen minutes of primer in a course shell - the docs picks carry more per minute."
+        },
+        {
+          "url": "https://academy.claude.com/tutorials/tokens-and-embeddings",
+          "reason": "A pricing intuition is the right second month, not the first day."
+        }
+      ],
+      "note": "Two picks share chat-prompting as primary topic. The pool's api primary is a token-pricing page and the second safety page is the same publisher as the first - at six candidates the spread is what it is. The subjects are a mechanic, a policy answer, and a course."
+    },
+    "data-analyst|basic": {
+      "role": "data-analyst",
+      "level": "basic",
+      "picked_by": "ai",
+      "picked_on": "2026-08-31",
+      "pool_size": 18,
+      "fingerprint": "sha1:0fe72f1e57fdb729",
+      "picks": [
+        {
+          "url": "https://support.claude.com/en/articles/12650343-use-claude-for-excel",
+          "reason": "The surface this reader already lives in, read by AI in full - and the only candidate whose page itself names what not to use it for: audit-critical calculations without verification.",
+          "subject": "Claude inside Excel, with the audit warning"
+        },
+        {
+          "url": "https://medium.com/data-science-collective/data-analysis-with-claude-code-its-not-just-for-programmers-08adb529a70d",
+          "reason": "The bridge nobody else in the pool builds: a non-coder taking 78 years of weather data through Claude Code to a finished report - proof the terminal is not the barrier, with our note carrying the caveat that it stays quiet on checking the numbers.",
+          "subject": "a non-coder's real data analysis through Claude Code"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=PnPsf-hwGtI",
+          "reason": "Four Cowork candidates, and this is the practitioner's take that includes what the tool is not good at - the half a vendor demo never shows.",
+          "subject": "a practitioner's honest overview of Cowork"
+        }
+      ],
+      "runners_up": [
+        {
+          "url": "https://www.datacamp.com/code-along/introduction-to-claude",
+          "reason": "A guided first analysis, but it runs inside DataCamp's environment rather than yours and assumes you already read Python or SQL."
+        },
+        {
+          "url": "https://support.claude.com/en/articles/13364135-use-claude-cowork-safely",
+          "reason": "Nobody should skip it, says its own card - it waits one step later, for the moment you first point Cowork at real files."
+        },
+        {
+          "url": "https://www.linkedin.com/learning/15-claude-tips-for-everyday-data-analysis",
+          "reason": "The right audience and the wrong gate - subscription-only in a pool where everything picked is free."
+        }
+      ]
+    },
+    "data-analyst|confident": {
+      "role": "data-analyst",
+      "level": "confident",
+      "picked_by": "ai",
+      "picked_on": "2026-08-31",
+      "pool_size": 21,
+      "fingerprint": "sha1:74d326f085259985",
+      "picks": [
+        {
+          "url": "https://www.qwe.edu.pl/tutorial/claude-csv-data-analysis/",
+          "reason": "One idea nothing else in the pool carries: Claude handles a CSV two different ways and only one actually runs the arithmetic - the single explanation behind every total that ever came back wrong.",
+          "subject": "why the same prompt can return two different totals"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=XzpgAzLWjmQ",
+          "reason": "The move this level is ready for - out of chat, to where the files live - demonstrated across ten real analyst tasks rather than argued in the abstract.",
+          "subject": "moving analysis to the terminal, shown on real tasks"
+        },
+        {
+          "url": "https://www.datacamp.com/code-along/create-claude-skills-for-data-tasks",
+          "reason": "The one hands-on candidate about building something reusable, and honest in our notes about what transfers - the shape of a Skill, not the soccer-dataset code.",
+          "subject": "packaging analysis workflows as reusable skills"
+        }
+      ],
+      "runners_up": [
+        {
+          "url": "https://ccforeveryone.com/guides/claude-code-for-data-analysts",
+          "reason": "The verification discipline argued from Panko's 94% finding, read by AI in full - lost to the format spread, and it already closes the data path as step 5."
+        },
+        {
+          "url": "https://towardsdatascience.com/4-lines-you-must-include-in-your-claude-skill/",
+          "reason": "The sharpest small fix in the pool - stopping fluent output from overstating the numbers - but it lands only after a first skill, which the DataCamp pick teaches."
+        },
+        {
+          "url": "https://academy.claude.com/tutorials/prompting-strategies-for-financial-analysis",
+          "reason": "The best prompt-pairs here, but they need Daloopa and Kensho connectors already licensed - a gate most analysts at this level cannot open."
+        }
+      ]
+    },
+    "data-analyst|builder": {
+      "role": "data-analyst",
+      "level": "builder",
+      "picked_by": "ai",
+      "picked_on": "2026-08-31",
+      "pool_size": 33,
+      "fingerprint": "sha1:4a18cc7b6fd1c5e7",
+      "picks": [
+        {
+          "url": "https://github.com/anthropics/claude-cookbooks/blob/main/managed_agents/data_analyst_agent.ipynb",
+          "reason": "The one candidate that ends with something reusable for any dataset - hand it data, get a narrative report - where thirty of thirty-three candidates run one predefined workflow.",
+          "subject": "an agent that turns datasets into narrative reports"
+        },
+        {
+          "url": "https://academy.claude.com/use-cases/answer-the-adhoc",
+          "reason": "The only candidate aimed at the job around the analysis - the recurring question queue - down to scheduling Claude to watch the requests channel and draft answers first.",
+          "subject": "automating the ad-hoc stakeholder-question queue"
+        },
+        {
+          "url": "https://academy.claude.com/tutorials/using-databricks-for-data-analysis",
+          "reason": "Fourteen connector pages in this pool, and this is the one self-serve one - no invitation, no sales call - and the only one where existing Unity Catalog permissions survive intact by design.",
+          "subject": "querying the warehouse without losing permission boundaries"
+        }
+      ],
+      "runners_up": [
+        {
+          "url": "https://github.com/anthropics/claude-cookbooks/tree/main/skills",
+          "reason": "The other buildable GitHub candidate, but its worked examples are all financial statements where the data-analyst agent serves any dataset."
+        },
+        {
+          "url": "https://academy.claude.com/use-cases/metrics-narrative",
+          "reason": "The best narrative automation in the pool, lost to the ad-hoc queue - which serves every analyst rather than product analysts specifically."
+        },
+        {
+          "url": "https://academy.claude.com/use-cases/build-financial-models",
+          "reason": "The most ambitious page here, and the heaviest gate in its own batch by its own admission - three paid connectors and a waitlist."
+        }
+      ],
+      "note": "Publisher-thin pool: 30 of 33 candidates are Anthropic Academy and the other three are GitHub, so the cap is two per publisher. The three primaries picked (api, cowork, mcp) are distinct."
+    },
+    "pm|never-used": {
+      "role": "pm",
+      "level": "never-used",
+      "picked_by": "ai",
+      "picked_on": "2026-08-31",
+      "pool_size": 10,
+      "fingerprint": "sha1:d415836562b98c3c",
+      "picks": [
+        {
+          "url": "https://www.youtube.com/watch?v=0vZ_UVLhSQQ",
+          "reason": "The cleanest first fifteen minutes in the pool - every control explained once, from the vendor, with its own honest note that it never goes past that.",
+          "subject": "one pass over every control before real work"
+        },
+        {
+          "url": "https://www.datacamp.com/courses/claude-101",
+          "reason": "The structured option that goes on to tour Projects, Skills and connectors - the map a PM needs one week in, from the pool's strongest non-Anthropic voice.",
+          "subject": "a structured basics course that tours the surfaces"
+        },
+        {
+          "url": "https://www.tomsguide.com/ai/i-tested-claude-cowork-anthropics-new-ai-feels-more-like-a-coworker-than-a-chatbot",
+          "reason": "The one candidate written to answer the question before the paid plan, not after - a first-impressions review from outside the building.",
+          "subject": "a reporter's is-it-worth-it verdict on Cowork"
+        }
+      ],
+      "runners_up": [
+        {
+          "url": "https://academy.claude.com/courses/ai-capabilities-and-limitations",
+          "reason": "The honest limitations primer, but its own card calls it fifteen minutes of primer in a course shell."
+        },
+        {
+          "url": "https://academy.claude.com/tutorials/get-started-in-claude-cowork-in-three-steps",
+          "reason": "The right second door - for after the decision, not while making it."
+        },
+        {
+          "url": "https://www.lennysnewsletter.com/p/everyone-should-be-using-claude-code",
+          "reason": "Inspiration behind a paywall, and it predates Cowork by its own publication date."
+        }
+      ],
+      "note": "Two picks share chat-prompting as primary topic. The pool's safety primary is a half-day course shell around fifteen minutes of content, and its claude-code primary is subscription-gated - the two chat picks are different kinds of first step, a walkthrough and a curriculum."
+    },
+    "pm|basic": {
+      "role": "pm",
+      "level": "basic",
+      "picked_by": "ai",
+      "picked_on": "2026-08-31",
+      "pool_size": 40,
+      "fingerprint": "sha1:dae4de109871f0e0",
+      "picks": [
+        {
+          "url": "https://www.enterpret.com/guides/claude-for-product-managers-synthesizing-user-research",
+          "reason": "The task where Claude pays a PM fastest, read by AI in full, and honest about its ceiling - quality drops past ten interviews and it says so.",
+          "subject": "synthesizing user research without confident misreads"
+        },
+        {
+          "url": "https://claude.com/plugins/product-management",
+          "reason": "The largest capability jump per minute in the pool - six working PM commands instead of prompts to compose - with our note carrying the catch that blocked connectors remove most of the advantage.",
+          "subject": "official PM commands installed in one click"
+        },
+        {
+          "url": "https://ccforpms.com/",
+          "reason": "The most complete free route in the pool from no-terminal to competent, taught inside the tool itself - ten to twelve hours that the shorter candidates only gesture at.",
+          "subject": "a complete learn-by-doing path into Claude Code"
+        }
+      ],
+      "runners_up": [
+        {
+          "url": "https://haverin.substack.com/p/claude-cowork-for-product-managers",
+          "reason": "Already step 3 of the PM path, where its failure-modes reading comes in the right order."
+        },
+        {
+          "url": "https://academy.claude.com/tutorials/choosing-between-claude-cowork-or-chat",
+          "reason": "A clean decision table, but it omits its own paid-plan gate, which our note has to carry for it."
+        },
+        {
+          "url": "https://support.claude.com/en/articles/13364135-use-claude-cowork-safely",
+          "reason": "Nobody should skip it, says its own card - it is step 4 of the PM path, sequenced where it belongs."
+        }
+      ]
+    },
+    "pm|confident": {
+      "role": "pm",
+      "level": "confident",
+      "picked_by": "ai",
+      "picked_on": "2026-08-31",
+      "pool_size": 52,
+      "fingerprint": "sha1:c0adbff928a4c6d0",
+      "picks": [
+        {
+          "url": "https://claude.com/blog/product-management-on-the-ai-exponential",
+          "reason": "The only candidate showing a team's actual operating process rather than one person's setup - read by AI in full, from inside the building, with the honesty that it offers process and no prompts.",
+          "subject": "how a real product team organises around Claude"
+        },
+        {
+          "url": "https://github.com/aakashg/pm-claude-code-setup",
+          "reason": "The only candidate you can be running in a minute - a working CLAUDE.md, six skills and four templates - where half this pool describes systems you would have to rebuild from a video.",
+          "subject": "a copyable working setup, mistakes named"
+        },
+        {
+          "url": "https://www.lennysnewsletter.com/p/claude-code-for-product-managers",
+          "reason": "The proof this level needs: a famous non-developer running her own research system in the terminal, demonstrated rather than claimed - the argument the written candidates make, shown working.",
+          "subject": "a non-developer's live demo of a terminal PM system"
+        }
+      ],
+      "runners_up": [
+        {
+          "url": "https://academy.claude.com/tutorials/teach-claude-your-way-of-working-using-skills",
+          "reason": "The right habit, taught for chat - the picked repo ships six working skills that make the same point by example."
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=0_dSWLOHKng",
+          "reason": "The best Cowork-side candidate, but the pool's centre of gravity at this level is the move to Claude Code, and there were three slots."
+        },
+        {
+          "url": "https://www.prodmgmt.world/blog/how-to-use-claude-code",
+          "reason": "The operating-discipline read, held back by unmeasured cost tables and the $99 product it keeps selling."
+        }
+      ],
+      "note": "All three picks are claude-code-primary in a pool where 17 of 52 candidates are - the PM material's own centre of gravity at this level. The subjects are a team's process, a copyable setup, and a live demonstration: three different kinds of evidence, not three copies. The chat-primary majority is single-workflow pages this reader has outgrown."
+    },
+    "pm|builder": {
+      "role": "pm",
+      "level": "builder",
+      "picked_by": "ai",
+      "picked_on": "2026-08-31",
+      "pool_size": 55,
+      "fingerprint": "sha1:0303cbc9b057bdb4",
+      "picks": [
+        {
+          "url": "https://every.to/guides/ai-product-management-guide",
+          "reason": "The only candidate about changing how the job works rather than doing one task faster - and it refuses readers honestly, telling anyone without instrumentation to stop reading and go fix analytics first.",
+          "subject": "restructuring PM work around agents"
+        },
+        {
+          "url": "https://academy.claude.com/use-cases/ask-the-company",
+          "reason": "Fifty-three single-workflow pages in this pool, and this is the one that builds something the whole team uses daily - with refusal rules you define and a logged gaps file, which is agent-building discipline rather than a recipe.",
+          "subject": "an internal Q&A agent the whole team uses"
+        },
+        {
+          "url": "https://maven.com/mahesh-yadav/genaipm",
+          "reason": "The pool's only structured route into AI product roles - a portfolio project, an eval story, interview prep - and its own card carries the caution to read before the price: the burden of proof is on the course.",
+          "subject": "a certified route into AI product roles"
+        }
+      ],
+      "runners_up": [
+        {
+          "url": "https://academy.claude.com/use-cases/prd-from-a-one-pager",
+          "reason": "The best single workflow here - it interviews you before it writes - but a workflow is not a build, and the Academy slot went to the agent."
+        },
+        {
+          "url": "https://academy.claude.com/tutorials/scaling-workflows-with-claude-cowork-at-your-organization",
+          "reason": "The org-rollout view, edged out because this cell is one PM's own build, not the organisation's."
+        },
+        {
+          "url": "https://academy.claude.com/use-cases/metrics-narrative",
+          "reason": "The weekly narrative automated end to end, but it needs a changelog file and analytics exports the picked agent does not."
+        }
+      ],
+      "note": "Two picks share claude-code as primary topic. The pool's publisher shape - 53 of 55 candidates are Anthropic Academy, one Every article, one Maven course - plus the no-two-from-one-publisher rule means every legal three-pick set must include both non-Academy candidates. Said plainly: the Maven certification holds its slot partly because the constraint requires a third publisher; its card's own caution and its price belong in the same glance."
+    },
+    "business-founder|never-used": {
+      "role": "business-founder",
+      "level": "never-used",
+      "picked_by": "ai",
+      "picked_on": "2026-08-31",
+      "pool_size": 29,
+      "fingerprint": "sha1:7000095a7a7707de",
+      "picks": [
+        {
+          "url": "https://privacy.claude.com/en/articles/10023580-is-my-data-used-for-model-training",
+          "reason": "Our own card calls this the number-one small-business hesitation, and this is the only candidate that answers it from policy - the page to quote to a worried co-owner, read by AI in full.",
+          "subject": "whether business data trains the model"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=EYOKSYe7zC0",
+          "reason": "The shortest path in the pool from decision to working setup, and honest that it does no convincing - which is right, because the data question above does that part.",
+          "subject": "signup to a working business setup in one sitting"
+        },
+        {
+          "url": "https://academy.claude.com/courses/claude-101",
+          "reason": "The official course that assumes nothing, for the owner who wants the foundation before the business-specific layer - the two picks above are the why-safe and the how-fast, this is the what.",
+          "subject": "the official basics course"
+        }
+      ],
+      "runners_up": [
+        {
+          "url": "https://www.datacamp.com/courses/claude-101",
+          "reason": "The same slot from outside the building with a surfaces tour, edged out because the video pick already carries the outside voice."
+        },
+        {
+          "url": "https://www.tomsguide.com/ai/i-tested-claude-cowork-anthropics-new-ai-feels-more-like-a-coworker-than-a-chatbot",
+          "reason": "The is-it-worth-it read, but an owner's first question in this pool is the data one, and that is answered by policy, not by review."
+        },
+        {
+          "url": "https://claude.com/pricing",
+          "reason": "Prices and seat counts with nothing about what any of it does - its own card says it answers cost, not which plan you need."
+        }
+      ]
+    },
+    "business-founder|basic": {
+      "role": "business-founder",
+      "level": "basic",
+      "picked_by": "ai",
+      "picked_on": "2026-08-31",
+      "pool_size": 63,
+      "fingerprint": "sha1:33cca4ed12350e02",
+      "picks": [
+        {
+          "url": "https://wotai.co/blog/claude-for-small-business",
+          "reason": "The only candidate built to be read before installing rather than after - it names the three cases where the plugin adds nothing, and compares itself honestly to the competition, which its own card notes is rare in this genre.",
+          "subject": "whether the Small Business plugin is worth setting up"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=iEh53QLluNw",
+          "reason": "An owner's numbers live in Excel, and this is the pool's shortest route to Claude working there - aimed at models rather than lists, which is what a business's spreadsheet actually is.",
+          "subject": "getting Claude working inside your own numbers"
+        },
+        {
+          "url": "https://support.claude.com/en/articles/9517075-what-are-projects",
+          "reason": "The one structural habit in the pool - a place where your business context lives once - and it names the free-tier ceiling of five Projects before you plan around it.",
+          "subject": "the context habit: stop re-explaining your business"
+        }
+      ],
+      "runners_up": [
+        {
+          "url": "https://www.forbes.com/sites/jodiecook/2026/02/24/how-to-use-claude-cowork-to-run-your-business-with-ai/",
+          "reason": "The credible overview, but written before Cowork reached general availability by its own admission, and Forbes meters you out before the end."
+        },
+        {
+          "url": "https://claude.com/blog/best-practices-for-getting-started-with-claude-cowork",
+          "reason": "What to point Cowork at first - but the WotAI pick answers the question that comes before it, whether to set it up at all."
+        },
+        {
+          "url": "https://www.alliekmiller.com/claude-cowork-in-5-minutes",
+          "reason": "Productive in one sitting, but it costs an email address and starts after signup - the picks start where this reader actually is."
+        }
+      ],
+      "note": "Two picks share chat-prompting as primary topic in a pool of seven primaries - an Excel workflow and a context habit, different subjects under the vocabulary's widest label. The cowork primary is picked; the remaining primaries are single connectors and a subscription-gated Claude Code pitch."
+    },
+    "business-founder|confident": {
+      "role": "business-founder",
+      "level": "confident",
+      "picked_by": "ai",
+      "picked_on": "2026-08-31",
+      "pool_size": 47,
+      "fingerprint": "sha1:3c7a6c54920afb2a",
+      "picks": [
+        {
+          "url": "https://academy.claude.com/use-cases/generate-an-ai-policy",
+          "reason": "Forty-one of forty-seven candidates run a task; this is the one that governs all of them - and it produces an implementation workbook, not just policy prose.",
+          "subject": "writing the organisation's own AI policy"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=0_dSWLOHKng",
+          "reason": "Written for exactly this level's complaint - Cowork works but inconsistently - and it builds a system rather than showing another win.",
+          "subject": "a repeatable daily Cowork system"
+        },
+        {
+          "url": "https://github.com/anthropics/knowledge-work-plugins/tree/main/small-business",
+          "reason": "The only candidate where an owner can read exactly what each skill does before wiring it to the books - the audit that the install pages skip.",
+          "subject": "reading the business skills' source before trusting them"
+        }
+      ],
+      "runners_up": [
+        {
+          "url": "https://academy.claude.com/tutorials/teach-claude-your-way-of-working-using-skills",
+          "reason": "The right habit, lost to the policy page - a confident owner's scarcer gap is governance, and the Academy slot is one."
+        },
+        {
+          "url": "https://www.udemy.com/course/mastering-claude-cowork-ai-agents/",
+          "reason": "The structured route from basics to plugins, but paid-once where the picked video answers the same inconsistency for free."
+        },
+        {
+          "url": "https://academy.claude.com/use-cases/quickly-prep-for-your-week",
+          "reason": "The best single workflow of the forty-one, but one workflow cannot beat a policy, a system, or source you can audit."
+        }
+      ]
+    },
+    "writer-marketer|never-used": {
+      "role": "writer-marketer",
+      "level": "never-used",
+      "picked_by": "ai",
+      "picked_on": "2026-08-31",
+      "pool_size": 9,
+      "fingerprint": "sha1:0ba7fc4373e10df8",
+      "picks": [
+        {
+          "url": "https://academy.claude.com/courses/claude-101",
+          "reason": "The structured start that assumes nothing - the pool's marketing-flavoured alternative undercuts itself with one module and a 4.1 rating from 33 reviews.",
+          "subject": "the official basics course"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=0vZ_UVLhSQQ",
+          "reason": "The cleanest fifteen minutes before real work: every control explained once, with its own honest note that it goes no further than that.",
+          "subject": "one pass over every control"
+        },
+        {
+          "url": "https://learn.g2.com/claude-ai-review",
+          "reason": "The only candidate answering the question that comes before any tutorial - whether to pay at all - as an experience report rather than a feature table.",
+          "subject": "one writer's is-it-worth-paying verdict"
+        }
+      ],
+      "runners_up": [
+        {
+          "url": "https://www.coursera.org/learn/next-generation-ai-assistant-claude-by-anthropic",
+          "reason": "The marketing-specific option, undercut by its own numbers - one module, 4.1 from 33 reviews, and a title that borrows authority it does not have."
+        },
+        {
+          "url": "https://academy.claude.com/courses/ai-capabilities-and-limitations",
+          "reason": "The honest limitations primer, but fifteen minutes of content in a course shell."
+        },
+        {
+          "url": "https://artificialcorner.com/p/free-claude",
+          "reason": "A list of links to other people's videos, before you have opened the product once."
+        }
+      ],
+      "note": "All three picks are chat-prompting-primary. The pool's safety primary is a course shell around a fifteen-minute primer and its cowork primary is a product review that lands better after basics - at nine candidates, the three strongest first steps happen to share the vocabulary's widest label. The subjects are a course, a walkthrough, and a buying decision."
+    },
+    "writer-marketer|basic": {
+      "role": "writer-marketer",
+      "level": "basic",
+      "picked_by": "ai",
+      "picked_on": "2026-08-31",
+      "pool_size": 31,
+      "fingerprint": "sha1:7b6fc00addc063e8",
+      "picks": [
+        {
+          "url": "https://restructurednews.substack.com/p/claude-editor",
+          "reason": "The pool's one candidate about the decision that shapes every later one - editor or ghostwriter - and step 1 of the writing path for exactly that reason.",
+          "subject": "deciding what job Claude has in your writing"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing",
+          "reason": "The only candidate written by the people trained to catch AI writing rather than produce it - you cannot prompt your way out of a tell you cannot name, and this is the catalogue of names.",
+          "subject": "the tells of AI prose, catalogued by its spotters"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=oFe_ho_MwW0",
+          "reason": "The one candidate about scale - consistency of voice and plot across many files - which is the problem chat-window writing advice cannot touch.",
+          "subject": "Claude across a whole manuscript, not one draft"
+        }
+      ],
+      "runners_up": [
+        {
+          "url": "https://willfrancis.com/how-to-stop-claude-writing-like-an-ai/",
+          "reason": "Step 4 of the writing path for a reason its own ordering explains - the fixes only land after the tells, which the Wikipedia pick teaches first."
+        },
+        {
+          "url": "https://kenny-kane.com/blog/claude-ai-for-writing",
+          "reason": "The craft at length, but the path sequences it after the editor-relationship read, and it costs an hour where the picks spend fifteen minutes."
+        },
+        {
+          "url": "https://claude.com/blog/how-anthropic-uses-claude-marketing",
+          "reason": "The best marketing proof in the pool, but it is a case study of their team, not a method for yours."
+        }
+      ],
+      "note": "Two picks share chat-prompting as primary topic: a relationship decision and a tells catalogue - the before and after of signing your name to the work. The pool's safety primaries are newsroom policy pieces that serve institutions more than one byline."
+    },
+    "writer-marketer|confident": {
+      "role": "writer-marketer",
+      "level": "confident",
+      "picked_by": "ai",
+      "picked_on": "2026-08-31",
+      "pool_size": 7,
+      "fingerprint": "sha1:3adf51ad01a6bf6c",
+      "picks": [
+        {
+          "url": "https://academy.claude.com/courses/ai-fluency-for-creative-work",
+          "reason": "The only candidate with a repeatable method for the question this level actually faces - when AI use protects a creative practice and when it erodes it - applied project by project rather than argued once.",
+          "subject": "a method for when to delegate creative work at all"
+        },
+        {
+          "url": "https://medium.com/@stephenstirling/set-your-standards-before-you-start-a-journalists-journey-using-claude-md-744b02bb4210",
+          "reason": "The one candidate about writing your standards down where Claude reads them - one journalist's working guardrails, read by AI in full, useful before any newsroom policy arrives.",
+          "subject": "setting your own ethical guardrails in a config file"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=FAEKF-nr3D0",
+          "reason": "The only candidate showing a complete campaign built end to end including what went wrong - the failures are the part a confident marketer cannot get from documentation.",
+          "subject": "a full campaign built in Cowork, failures included"
+        }
+      ],
+      "runners_up": [
+        {
+          "url": "https://platform.claude.com/docs/en/build-with-claude/multilingual-support",
+          "reason": "Anthropic's own language-performance account, but prompting guidance for a localization niche where the picks serve every creative."
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=UaJhYp7Tql4",
+          "reason": "The prompting level-up, but this cell's scarcer gaps are judgment and guardrails, and the third slot went to seeing real work built."
+        },
+        {
+          "url": "https://localizelikeapro.com/claude-for-localization-stop-starting-every-project-from-zero/",
+          "reason": "The Projects-and-glossaries habit for translators - the right answer through a narrow door."
+        }
+      ]
+    }
+  }
+}

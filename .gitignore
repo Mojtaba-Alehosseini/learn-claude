@@ -31,6 +31,7 @@ data/items.js
 data/paths.js
 data/search-keywords.js
 data/publisher-marks.js
+data/picks.js
 
 # --- Deliberately NOT ignored, so nobody adds them later --------------------
 #
