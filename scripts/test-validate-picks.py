@@ -98,6 +98,27 @@ CASES = [
          p["cells"][first_cell(p)].pop("note", None)),
      "no justification"),
 
+    # Ruling 2026-08-31: a constraint may reject a set, never pull an item into one.
+    # A cell that ships two must say which of the two causes put it there - the
+    # catalogue's shape, or its own shortlist. "Only two" with no cause says nothing.
+    ("two picks with no declared cause",
+     lambda i, p: p["cells"]["pm|builder"].pop("two_pick_cause"),
+     "no two_pick_cause"),
+
+    ("two picks with the wrong cause for the pool",
+     lambda i, p: p["cells"]["pm|builder"].update(
+         {"two_pick_cause": "publisher-thin"}),
+     "which means"),
+
+    ("a cause invented outside the vocabulary",
+     lambda i, p: p["cells"]["pm|builder"].update({"two_pick_cause": "felt right"}),
+     "must be one of"),
+
+    ("a three-pick cell claiming a two-pick cause",
+     lambda i, p: p["cells"]["designer|basic"].update(
+         {"two_pick_cause": "publisher-thin"}),
+     "where it means nothing"),
+
     # The stale half must NOT fail the build: shrink the first cell's pool by retiering
     # a non-picked candidate. Warned, dated, shipped.
     ("pool drift is a warning, not an error",

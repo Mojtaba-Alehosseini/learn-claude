@@ -22,6 +22,23 @@ have different severities:
     python3 scripts/validate-picks.py                      # the real files
     python3 scripts/validate-picks.py <items.json> <picks.json>   # for the tests
 
+## The principle the constraints answer to
+
+**A constraint may reject a set of picks; it may never pull an item into one.**
+
+Ruled 2026-08-31, from a real fault. pm|builder's pool holds 55 candidates from three
+publishers (53 Anthropic Academy, one Every, one Maven). The no-two-from-one-publisher
+rule therefore made every legal three-pick set include the Maven course - a $3,000
+certification the picker had not otherwise chosen. The set was legal and the reasoning
+was honest, and it was still wrong: a rule built to reject monocultures had become a
+rule that promoted an item into a "start with" slot. That inverts it.
+
+So a legal set must come from the picker's own ranked shortlist - its picks and its
+runners-up. An item may be lifted into the set by a constraint knocking out something
+above it; it may never be hauled in from below the cut to satisfy a count. Where no
+legal three exist inside the shortlist, the cell ships two and says why in
+`two_pick_cause`. Two honest picks beat three where the third is the checker's choice.
+
 ## The four constraints, and how each degrades
 
 Checked here in code, not trusted from the picking step — the picker is re-asked until
@@ -83,11 +100,19 @@ def _pick_candidates():
 PC = _pick_candidates()
 
 
-def allowed_picks(pool):
-    """(max from one publisher, required pick count) for this pool.
+# A two-pick cell must say which of these put it there. Never a bare count of two:
+# "only two" is a fact about the catalogue or about the shortlist, and which one it is
+# changes what a reader should conclude.
+TWO_PICK_CAUSES = ("publisher-thin", "rule-carried-third-refused")
 
-    3 picks normally. A 2-publisher pool still gets 3 (2+1). A 1-publisher pool gets 2 —
-    the cap is the constraint holding its ground, not the cell being punished.
+
+def allowed_picks(pool):
+    """(max from one publisher, CEILING on pick count) for this pool.
+
+    A ceiling, not a quota - see the principle above. 3 picks normally; a 2-publisher
+    pool still reaches 3 (2+1); a 1-publisher pool cannot exceed 2 without becoming the
+    monoculture the rule exists to stop. A cell may always ship one fewer than its
+    ceiling when its own shortlist holds no legal candidate for the last slot.
     """
     pubs = {x.get("source", "") for x in pool}
     if len(pubs) >= 3:
@@ -95,6 +120,17 @@ def allowed_picks(pool):
     if len(pubs) == 2:
         return 2, 3
     return 2, 2
+
+
+def expected_two_pick_cause(pool):
+    """Which cause a two-pick cell must declare, given its pool.
+
+    One publisher means the pool itself caps the cell at two - `publisher-thin`.
+    Two or more means the pool could have carried three, so the missing third is the
+    shortlist's doing - `rule-carried-third-refused`.
+    """
+    pubs = {x.get("source", "") for x in pool}
+    return "publisher-thin" if len(pubs) < 2 else "rule-carried-third-refused"
 
 
 def check_cell(key, cell, pool, items_by_url):
@@ -153,13 +189,33 @@ def check_cell(key, cell, pool, items_by_url):
 
     # The four constraints, against what the pool allows.
     if pick_items and pool:
-        max_per_pub, want_count = allowed_picks(pool)
+        max_per_pub, ceiling = allowed_picks(pool)
         pool_pubs = {x.get("source", "") for x in pool}
+        cause = str(cell.get("two_pick_cause") or "").strip()
 
-        if len(picks) != want_count:
-            err("%d picks where this pool requires %d (%d publisher%s in pool)"
-                % (len(picks), want_count, len(pool_pubs),
+        if len(picks) > ceiling:
+            err("%d picks where this pool allows at most %d (%d publisher%s in pool)"
+                % (len(picks), ceiling, len(pool_pubs),
                    "" if len(pool_pubs) == 1 else "s"))
+        elif len(picks) == 2:
+            want = expected_two_pick_cause(pool)
+            if not cause:
+                err("two picks and no two_pick_cause. A bare count of two says nothing; "
+                    "this pool wants %r." % want)
+            elif cause not in TWO_PICK_CAUSES:
+                err("two_pick_cause is %r — must be one of %s"
+                    % (cause, ", ".join(TWO_PICK_CAUSES)))
+            elif cause != want:
+                err("two_pick_cause is %r but this pool has %d publisher%s, which means "
+                    "%r" % (cause, len(pool_pubs),
+                            "" if len(pool_pubs) == 1 else "s", want))
+            else:
+                notes.append("  %-28s two picks, cause %s" % (key, cause))
+        elif len(picks) < 2:
+            err("%d pick(s) — a single card is not a set" % len(picks))
+        elif cause:
+            err("two_pick_cause is %r on a %d-pick cell, where it means nothing"
+                % (cause, len(picks)))
 
         by_pub = {}
         for it in pick_items:
@@ -170,8 +226,9 @@ def check_cell(key, cell, pool, items_by_url):
                     % (len(group), pub, max_per_pub))
         if len(pool_pubs) < 3:
             notes.append("  %-28s publisher-thin pool: %d publisher%s, cap is %d per "
-                         "publisher, %d picks" % (key, len(pool_pubs),
-                         "" if len(pool_pubs) == 1 else "s", max_per_pub, want_count))
+                         "publisher, ceiling %d, %d picks"
+                         % (key, len(pool_pubs), "" if len(pool_pubs) == 1 else "s",
+                            max_per_pub, ceiling, len(picks)))
 
         if any(not x.get("official") for x in pool) and \
            all(it.get("official") for it in pick_items):

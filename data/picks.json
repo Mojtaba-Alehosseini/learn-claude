@@ -338,7 +338,8 @@
           "reason": "The most impressive demo in the pool and the heaviest setup - keep-awake, approval gates and computer use all off by default, which its own notes admit."
         }
       ],
-      "note": "Two picks, not three: all eight candidates are Anthropic Academy, and three from one publisher is the monoculture the constraint exists to stop, so the single-publisher cap holds the cell at two. Both picks are cowork-primary - the pool's mcp-primary alternatives are each platform-gated niches (Mac-only extensions, an admin-gated fundraising connector, a payer-clinical sample skill) rather than general builds. The subjects are a durable voice profile and a stateful daily loop."
+      "note": "Two picks, not three: all eight candidates are Anthropic Academy, and three from one publisher is the monoculture the constraint exists to stop, so the single-publisher cap holds the cell at two. Both picks are cowork-primary - the pool's mcp-primary alternatives are each platform-gated niches (Mac-only extensions, an admin-gated fundraising connector, a payer-clinical sample skill) rather than general builds. The subjects are a durable voice profile and a stateful daily loop.",
+      "two_pick_cause": "publisher-thin"
     },
     "student|never-used": {
       "role": "student",
@@ -1184,14 +1185,13 @@
           "url": "https://academy.claude.com/use-cases/ask-the-company",
           "reason": "Fifty-three single-workflow pages in this pool, and this is the one that builds something the whole team uses daily - with refusal rules you define and a logged gaps file, which is agent-building discipline rather than a recipe.",
           "subject": "an internal Q&A agent the whole team uses"
-        },
-        {
-          "url": "https://maven.com/mahesh-yadav/genaipm",
-          "reason": "The pool's only structured route into AI product roles - a portfolio project, an eval story, interview prep - and its own card carries the caution to read before the price: the burden of proof is on the course.",
-          "subject": "a certified route into AI product roles"
         }
       ],
       "runners_up": [
+        {
+          "url": "https://maven.com/mahesh-yadav/genaipm",
+          "reason": "Was the third pick until 2026-08-31, and only because the no-two-from-one-publisher rule made every legal three-pick set include it - 53 of 55 candidates here are Anthropic Academy. A constraint may reject a set; it may never pull an item in. It is a $3,000 certification whose own card says the burden of proof is on the course, and it is a route into AI product roles rather than a build - so it sits here, where a reader can still find it."
+        },
         {
           "url": "https://academy.claude.com/use-cases/prd-from-a-one-pager",
           "reason": "The best single workflow here - it interviews you before it writes - but a workflow is not a build, and the Academy slot went to the agent."
@@ -1199,13 +1199,10 @@
         {
           "url": "https://academy.claude.com/tutorials/scaling-workflows-with-claude-cowork-at-your-organization",
           "reason": "The org-rollout view, edged out because this cell is one PM's own build, not the organisation's."
-        },
-        {
-          "url": "https://academy.claude.com/use-cases/metrics-narrative",
-          "reason": "The weekly narrative automated end to end, but it needs a changelog file and analytics exports the picked agent does not."
         }
       ],
-      "note": "Two picks share claude-code as primary topic. The pool's publisher shape - 53 of 55 candidates are Anthropic Academy, one Every article, one Maven course - plus the no-two-from-one-publisher rule means every legal three-pick set must include both non-Academy candidates. Said plainly: the Maven certification holds its slot partly because the constraint requires a third publisher; its card's own caution and its price belong in the same glance."
+      "note": "Two picks, not three. Both picks are claude-code-primary: restructuring how the job works, and building one agent the team uses - different subjects under one field value. The third slot is empty on purpose. This pool is 53 of 55 Anthropic Academy, so the publisher rule allowed only one Academy pick, and the shortlist's remaining non-Academy candidate was a $3,000 certification the picker had not chosen on merit. Shipping it would have let a constraint promote an item rather than reject one. It is in the runners-up, where a reader can still find it.",
+      "two_pick_cause": "rule-carried-third-refused"
     },
     "business-founder|never-used": {
       "role": "business-founder",
