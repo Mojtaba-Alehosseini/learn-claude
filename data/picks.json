@@ -228,7 +228,7 @@
           "reason": "The system-as-skill idea one level early - worth the time only if you already have a system worth encoding, and Medium's meter may close it before the end."
         }
       ],
-      "note": "Two picks share the primary topic chat-prompting because the vocabulary has no topic for Claude Design the product - the same blindness the designer|basic note records. The subjects are a design-system setup inside one product and a delegation-judgment method spanning all of them; swapping either for a topic-distinct candidate (the ux-writing repo, the Figma MCC docs) would have traded fit for a field."
+      "note": "Two picks share the primary topic chat-prompting because the vocabulary has no topic for Claude Design the product - the same blindness the designer|basic note records. The subjects are a design-system setup inside one product and a delegation-judgment method spanning all of them; swapping either for a topic-distinct candidate (the ux-writing repo, the Figma MCP docs) would have traded fit for a field."
     },
     "non-technical|never-used": {
       "role": "non-technical",
@@ -250,7 +250,7 @@
         },
         {
           "url": "https://www.datacamp.com/courses/claude-101",
-          "reason": "The structured-course slot could not go to Anthropic's own Claude 101 without doubling a publisher, and this one earns it anyway: built explicitly for people who have never opened an AI chat tool, and it ends where the official course does not - at Skills and connectors.",
+          "reason": "Built explicitly for people who have never opened an AI chat tool, and it ends where the official beginner course stops - with a tour of Projects, Skills and connectors, so one course covers the basics and what comes after them.",
           "subject": "a structured beginner course ending in a tour of the surfaces"
         }
       ],
@@ -368,7 +368,7 @@
       "runners_up": [
         {
           "url": "https://www.youtube.com/watch?v=r2vYObllqJU",
-          "reason": "The best generic walkthrough, but Pitt's twenty minutes cover the same start and add Learning Mode and the hallucination warning a student needs on day one."
+          "reason": "A calm, current walkthrough, but Pitt's twenty minutes cover the same start and add Learning Mode and the hallucination warning a student needs on day one."
         },
         {
           "url": "https://students.unimelb.edu.au/academic-skills/academic-integrity/acknowledging-use-of-ai-tools-and-technologies",
@@ -430,7 +430,7 @@
       "picks": [
         {
           "url": "https://academy.claude.com/use-cases/verify-statistics-from-raw-data",
-          "reason": "The rarest skill in the pool: checking a paper's numbers against its own raw data before leaning on it - the worked example catches a real hundred-fold unit error, which is the argument in one line.",
+          "reason": "The rarest skill in the pool: recomputing a paper's statistics from the authors' own raw data before leaning on it - and its card is honest that this needs the manuscript and the raw data together, not the paper's text alone.",
           "subject": "recomputing a paper's statistics before citing it"
         },
         {
@@ -509,7 +509,7 @@
       "picks": [
         {
           "url": "https://academy.claude.com/use-cases/plan-your-literature-review",
-          "reason": "The only candidate read in full that walks a research workflow end to end - and our note adds the caveat the page itself omits, that it never warns about fabricated references.",
+          "reason": "Ten candidates here have been read in full, and this is the only one of them that walks a research workflow end to end rather than stating a policy or explaining a feature - with our own note adding what the page omits: it never warns about fabricated references.",
           "subject": "a vendor-blessed lit-review starting workflow"
         },
         {
@@ -519,7 +519,7 @@
         },
         {
           "url": "https://www.icmje.org/recommendations/browse/artificial-intelligence/",
-          "reason": "Three journal-policy candidates, and this is the umbrella body the others cite - one policy slot, and it goes to the broadest authority.",
+          "reason": "Three journal-policy candidates, and this is the only one not tied to a single publisher - IEEE and Elsevier each bind their own journals, where this covers any medical or biomedical submission.",
           "subject": "what you must declare when you publish"
         }
       ],
@@ -549,12 +549,12 @@
       "picks": [
         {
           "url": "https://effortlessacademic.com/connect-and-integrate-your-local-zotero-library-with-claude-cowork/",
-          "reason": "The pool's one AI-read walkthrough of connecting Claude to the library you already trust - and honest that working from your own sources reduces the fabrication risk without removing it.",
+          "reason": "The only candidate that connects Claude to the reference library you already keep, rather than to a database it searches fresh - and honest that working from your own sources reduces the fabrication risk without removing it.",
           "subject": "grounding Claude in your own reference library"
         },
         {
           "url": "https://academy.claude.com/use-cases/verify-statistics-from-raw-data",
-          "reason": "The rarest habit in the pool - checking a paper's numbers against its own raw data, with a worked example that catches a hundred-fold unit error.",
+          "reason": "The rarest habit in the pool - recomputing a paper's statistics from the authors' own raw data before citing it, which nothing else here does - and its card is clear you need both the manuscript and that raw data to try it.",
           "subject": "recomputing a paper's statistics before citing it"
         },
         {
@@ -566,7 +566,7 @@
       "runners_up": [
         {
           "url": "https://lszabo.me/posts/ai-literature-search/",
-          "reason": "The PMID habit is the best citation guardrail in the pool, but a second article would have collapsed the format spread - and the habit itself is one line you now know."
+          "reason": "Its PMID habit - treat any reference without one as invented - is a citation guardrail nothing else here states so plainly, but a second article would have collapsed the format spread, and the habit itself is one line you now have."
         },
         {
           "url": "https://www.youtube.com/watch?v=GWtx-d3dALQ",
@@ -792,7 +792,7 @@
         },
         {
           "url": "https://claude.com/blog/best-practices-for-prompt-engineering",
-          "reason": "The only AI-read candidate in the pool, and the craft layer under every tool pick - a short ordered list of fixes rather than another product tour.",
+          "reason": "The craft layer under both tool picks above: this is the pool's fix for answers coming out generic, ordered as things to try today rather than another product tour.",
           "subject": "ordered prompt-craft fixes that apply everywhere"
         }
       ],
@@ -822,7 +822,7 @@
       "picks": [
         {
           "url": "https://code.claude.com/docs/en/best-practices",
-          "reason": "Written for exactly this cell - installed, daily use, still mediocre - and the densest thing in the pool: half the other candidates cite it, and it is read by AI in full where they are skimmed.",
+          "reason": "Its who_for is this cell almost word for word - installed, used daily, still getting mediocre results - and it is corrective by design, which its own card says only works once you have your own bad habits to match it against.",
           "subject": "the corrective read for daily users with mediocre results"
         },
         {
@@ -1005,7 +1005,7 @@
         },
         {
           "url": "https://academy.claude.com/tutorials/prompting-strategies-for-financial-analysis",
-          "reason": "The best prompt-pairs here, but they need Daloopa and Kensho connectors already licensed - a gate most analysts at this level cannot open."
+          "reason": "Built on bad-prompt/good-prompt pairs, which teach quickly - but its card says it assumes Daloopa and Kensho connectors already licensed, a gate most analysts at this level cannot open."
         }
       ]
     },
@@ -1040,7 +1040,7 @@
         },
         {
           "url": "https://academy.claude.com/use-cases/metrics-narrative",
-          "reason": "The best narrative automation in the pool, lost to the ad-hoc queue - which serves every analyst rather than product analysts specifically."
+          "reason": "Automates the weekly narrative end to end, but its who_for names product analysts specifically, where the ad-hoc queue pick serves every analyst in this cell."
         },
         {
           "url": "https://academy.claude.com/use-cases/build-financial-models",
@@ -1148,7 +1148,7 @@
         },
         {
           "url": "https://www.lennysnewsletter.com/p/claude-code-for-product-managers",
-          "reason": "The proof this level needs: a famous non-developer running her own research system in the terminal, demonstrated rather than claimed - the argument the written candidates make, shown working.",
+          "reason": "The proof this level needs: a non-developer's real terminal setup demonstrated rather than described - and its card is straight that you get the shape of the system and rebuild the files yourself.",
           "subject": "a non-developer's live demo of a terminal PM system"
         }
       ],
@@ -1159,7 +1159,7 @@
         },
         {
           "url": "https://www.youtube.com/watch?v=0_dSWLOHKng",
-          "reason": "The best Cowork-side candidate, but the pool's centre of gravity at this level is the move to Claude Code, and there were three slots."
+          "reason": "The one Cowork-side candidate that builds a repeatable system rather than showing single wins - but this level's centre of gravity is the move to Claude Code, and there were three slots."
         },
         {
           "url": "https://www.prodmgmt.world/blog/how-to-use-claude-code",
@@ -1194,7 +1194,7 @@
         },
         {
           "url": "https://academy.claude.com/use-cases/prd-from-a-one-pager",
-          "reason": "The best single workflow here - it interviews you before it writes - but a workflow is not a build, and the Academy slot went to the agent."
+          "reason": "It interviews you before it writes, which no other workflow here does - but a workflow is not a build, and the one Academy slot went to the agent."
         },
         {
           "url": "https://academy.claude.com/tutorials/scaling-workflows-with-claude-cowork-at-your-organization",
@@ -1318,7 +1318,7 @@
         },
         {
           "url": "https://academy.claude.com/use-cases/quickly-prep-for-your-week",
-          "reason": "The best single workflow of the forty-one, but one workflow cannot beat a policy, a system, or source you can audit."
+          "reason": "Strong on its own, but forty-one candidates here run one task each, and the picks are a policy, a system and source you can audit - each of which outlasts a single workflow."
         }
       ]
     },
@@ -1397,7 +1397,7 @@
         },
         {
           "url": "https://claude.com/blog/how-anthropic-uses-claude-marketing",
-          "reason": "The best marketing proof in the pool, but it is a case study of their team, not a method for yours."
+          "reason": "Real numbers from a real marketing team, but it is a case study of theirs, not a method for yours."
         }
       ],
       "note": "Two picks share chat-prompting as primary topic: a relationship decision and a tells catalogue - the before and after of signing your name to the work. The pool's safety primaries are newsroom policy pieces that serve institutions more than one byline."

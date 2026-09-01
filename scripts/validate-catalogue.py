@@ -211,6 +211,61 @@ def load_allowed_titles(path):
     return out
 
 
+# Words that make a role's claim on an item visible in its own card text. Deliberately
+# generous: this feeds a WARNING, and a generous list means fewer false alarms in a check
+# nobody is obliged to act on.
+ROLE_WORDS = {
+    "non-technical":   ("non-technical", "non technical", "not a coder", "no coding",
+                        "non-developer", "non-coder", "anyone", "everyone", "normal people"),
+    "student":         ("student", "phd", "grad", "undergrad", "revision", "coursework"),
+    "researcher":      ("research", "academic", "scientist", "postdoc", "clinician",
+                        "faculty", "literature", "paper"),
+    "teacher":         ("teacher", "educator", "lecturer", "instructor", "professor",
+                        "classroom", "teaching", "school", "syllabus", "student"),
+    "developer":       ("developer", "engineer", "coder", "programmer", "technical",
+                        "terminal", "codebase", "python", "git"),
+    "data-analyst":    ("analyst", "data", "spreadsheet", "excel", "sql", "dataset"),
+    "pm":              ("product manager", " pm ", "pms", "product people", "product",
+                        "roadmap", "prd"),
+    "designer":        ("designer", "design", "ux", "ui", "figma", "prototype"),
+    "business-founder": ("founder", "business", "owner", "entrepreneur", "ops",
+                         "operations", "sales", "finance", "hr", "legal", "nonprofit",
+                         "small business", "marketer", "marketing", "team lead"),
+    "writer-marketer": ("writer", "marketer", "marketing", "content", "copy", "author",
+                        "journalist", "editor", "manuscript"),
+}
+
+
+def role_breadth_warnings(items):
+    """Advisory only. Items whose who_for names ONE persona while carrying 3+ role tags.
+
+    Written after a real fault, and deliberately not an error. On 2026-08-31 a Dive Club
+    interview with a Stripe design manager carried five role tags — designer,
+    non-technical, pm, student, teacher — while its who_for named designers and nobody
+    else. Nothing broke until "start with these three" ran, at which point the publisher
+    rule was about to seat that interview in teachers' picks. Browsing had never surfaced
+    it; a comparative feature did.
+
+    This cannot be an error and must never auto-fix, because breadth is often correct:
+    Claude 101 genuinely serves every role, and its who_for cannot name ten personas
+    without becoming useless. Only a person can tell a broad resource from a mis-tagged
+    one. So this prints, and stops there.
+    """
+    out = []
+    for item in items:
+        roles = item.get("roles") or []
+        if len(roles) < 3:
+            continue
+        hay = " %s %s " % (item.get("who_for", ""), item.get("summary", ""))
+        hay = hay.lower()
+        supported = [r for r in roles
+                     if any(w in hay for w in ROLE_WORDS.get(r, (r,)))]
+        if len(supported) == 1:
+            out.append((item.get("title", "")[:52], supported[0],
+                        sorted(set(roles) - set(supported))))
+    return out
+
+
 def norm_title(t):
     return re.sub(r"[^a-z0-9]+", " ", str(t or "").lower()).strip()
 
@@ -472,6 +527,18 @@ def main(argv=None):
                ", ".join(sorted(slug_hosts)), DUPE_SLUGS))
 
     # ------------------------------------------------------------ report ----
+
+    # Advisory, printed before the verdict and never affecting it. See the docstring on
+    # role_breadth_warnings for why this can only ever be a warning.
+    breadth = role_breadth_warnings(items)
+    if breadth:
+        print("%d item%s tag 3+ roles while the card text names only one. Breadth is "
+              "often right - this is a list to read, not a fault to fix:"
+              % (len(breadth), "" if len(breadth) == 1 else "s"))
+        for title, kept, others in breadth:
+            print("  %-52s card names %-16s also tagged %s"
+                  % (title, kept, ", ".join(others)))
+        print()
 
     if not errors and not path_errors and not tier_errors:
         n_paths = (len(json.load(open(paths_path, encoding="utf-8")))

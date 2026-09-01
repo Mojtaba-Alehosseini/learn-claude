@@ -136,6 +136,13 @@ def card_view(item):
 
     Deliberately not the whole row. The model is ranking our notes, and handing it fields
     the reader never sees would let it justify a pick with something nobody can check.
+    `summary` was missing here until 2026-08-31 and had to be added: it is the most
+    prominent field on the rendered card, so leaving it out handed the picker LESS than
+    the reader sees, and the audit found reasons resting on facts that live only in the
+    summary. Card-answerable has to mean answerable from the card the reader is looking
+    at. `notes` stays out, deliberately - it is stripped from the browser mirror, so a
+    reason resting on it could never be checked by anyone.
+
     The one exception is `primary_topic` (topics[0]): constraint 4 in
     scripts/validate-picks.py binds on it, and a picker that cannot see a constraint's
     input can only satisfy it by luck. It is constraint plumbing, not judgment material -
@@ -145,6 +152,7 @@ def card_view(item):
         "url": item["url"],
         "primary_topic": (item.get("topics") or [None])[0],
         "title": item["title"],
+        "summary": item.get("summary", ""),
         "publisher": item.get("source", ""),
         "official": bool(item.get("official")),
         "format": item.get("format"),
