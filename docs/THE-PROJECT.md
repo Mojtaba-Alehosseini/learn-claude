@@ -1,0 +1,418 @@
+# Learn Claude — the whole project, in one file
+
+Written 31 August 2026. Every number in this file was measured from `data/items.json` on
+that date, not remembered.
+
+If you read only one thing, read part 2. It is the reason the site exists, and almost
+every decision in the other parts follows from it.
+
+---
+
+## 1. What this is
+
+**Learn Claude** is a directory of places to learn Anthropic's Claude.
+
+Live at **https://mojtaba-alehosseini.github.io/learn-claude/**
+
+It is a static website. No server, no database, no accounts, no tracking. Open
+`index.html` from a folder and it works. Push to `master` and it deploys.
+
+It is not affiliated with Anthropic. The footer says so on every page.
+
+---
+
+## 2. What we aim for
+
+There are already many lists of Claude tutorials. A list is easy. A list is also close to
+useless, because a list does not tell you which of the forty links is for you.
+
+So the product is not the links. **The product is the judgment attached to each link.**
+
+Three things make an entry, and all three are ours:
+
+**Who should skip it.** Every resource carries a `Skip if:` line — a real reason a real
+person should not open this. Not "skip if you already know Claude". Something specific:
+*this one costs money and the free part stops exactly where the templates begin.* If
+someone who read the title would already know it, the line is not doing any work.
+
+**The date we last checked.** AI tools change every few months. A tutorial written in
+January can be wrong by June. Every card shows when we last looked, and the card says so
+itself when that date is getting old.
+
+**How thoroughly we checked.** Four levels, and we never round up. This is the part most
+directories do not have: an honest label on our own confidence.
+
+Everything else — the search, the filters, the paths, the picks — exists to get a person
+to the right judgment faster.
+
+**The rule underneath all of it:** never invent a course, a link, a price or a review. If
+it is not verified, it does not ship.
+
+---
+
+## 3. Where it stands today
+
+| | |
+|---|---|
+| Resources | **618** |
+| Publishers (distinct hosts) | 130 |
+| Learning paths | **7** — every one of the 10 roles now has a route |
+| Dead links | 0 |
+| Pages | 5 |
+
+**How thoroughly we have checked:**
+
+| level | shown as | count | what it means |
+|---|---|---|---|
+| `reviewed` | Read in full | **0** | a person went through all of it |
+| `ai-reviewed` | Read by AI | 98 | AI read all of it, no person has checked the notes |
+| `previewed` | Skimmed | 483 | we read the outline or a free sample |
+| `listed` | Found only | 37 | we found it and sorted it, nobody read the content |
+
+**Cost:** 567 free · 25 need a sign-up · 16 subscription · 10 pay once.
+
+**Format:** 289 docs · 124 article · 101 video · 58 course · 32 code · 7 hands-on · 7 podcast.
+
+**Level:** 182 builder · 176 basic · 169 confident · 91 never-used.
+
+**Who publishes it:** 374 of 618 — **61%** — are Anthropic's own material. That is a
+deliberate decision made in August 2026 and it is discussed in part 11.
+
+**Dates:** 431 of 618 carry `published: UNVERIFIED`. That is not a gap, it is the honest
+answer — many pages carry no date at all, and we do not invent one.
+
+**"Start with these three":** 37 of the 40 role×level cells carry picks — **109 picks**
+across **54 distinct publishers**, with **107 runners-up** recorded as the falsifiability
+record. 61 of the 109 picks (**56%**) are not Anthropic's own, against a catalogue that is
+61% Anthropic. Two cells ship two picks rather than three and each says which cause put it
+there: `non-technical|builder` (`publisher-thin` — its 8 candidates come from one
+publisher) and `pm|builder` (`rule-carried-third-refused` — a legal third existed but only
+by promoting an item the picker had not chosen). Of the remaining 3 cells, 2 have three or
+fewer candidates and 1 — `student|builder` — is empty. Every pick is labelled `picked by
+AI` with the date it was made.
+
+---
+
+## 4. The four devices that keep it honest
+
+These are the load-bearing parts. Remove any one and the site becomes another link list.
+
+### The four tiers, and the allowance
+
+`reviewed` > `ai-reviewed` > `previewed` > `listed`.
+
+**Only a person may write `reviewed`.** `data/reviewed-allowance.txt` holds the number
+`0`, and the build fails if more entries claim that tier than the allowance permits. No AI
+run can promote itself. Today the best badge on the site is empty, and the site says so
+out loud on `how-we-check.html`.
+
+### `UNVERIFIED` instead of a guessed date
+
+A publish date is either a real `YYYY-MM-DD` or the literal string `UNVERIFIED`. The
+validator rejects anything else. A missing date shown honestly is worth more than a
+plausible date that is wrong.
+
+### The validator — 11 rules, run before every build
+
+`scripts/validate-catalogue.py`, with its own test suite in
+`scripts/test-validate-catalogue.py`. It runs in CI before `build.sh`, so a bad catalogue
+cannot deploy. The rules that matter most:
+
+- **7, 9, 9b** — a path step must point at a resource that exists, and the resource must
+  agree that it is in that path. This exists because path steps once pointed at list
+  positions, the catalogue grew, and every path silently re-pointed at the wrong things.
+- **8** — the `reviewed` allowance.
+- **10** — the same title on two hosts. One course harvested twice becomes two cards; the
+  developer path once advertised "about 6 hours" because the build picked the wrong copy
+  of step 1.
+- **11** — the same trailing URL segment on two hosts. Added August 2026 after four
+  migrated duplicates got past rule 10, because their titles differed by a word.
+
+Rules 10 and 11 have escape hatches — `data/duplicate-titles.txt` and
+`data/duplicate-slugs.txt` — and both files require a **written reason** per entry. A bare
+allowance list becomes a place to silence a check.
+
+### Nothing may be edited to satisfy a checker
+
+In August 2026 a title was quietly changed to *"Getting started with Claude in Excel
+(Academy)"* so it would pass rule 10. No page anywhere is called that. A title is what the
+reader sees; editing it so a validator stops complaining makes the site lie to the reader
+to keep the build green. That entry was a duplicate and has been merged.
+
+---
+
+## 5. The vocabulary
+
+One word per concept, defined once in `assets/js/ui.js`, used on every screen. A label may
+never drift between two pages. Six axes:
+
+| axis | the words we show |
+|---|---|
+| **Role** | not a coder · a student · a researcher · a teacher · a developer · working with data · a product manager · a designer · running a business · a writer |
+| **Level** | never used Claude · used it a little · used it a lot · built things with it |
+| **Time** | 15 min · 1 hour · half a day · several days |
+| **Cost** | free · sign-up needed · pay once · subscription |
+| **Format** | video · course · docs · article · hands-on · podcast · code |
+| **Topic** | chat and prompting · Claude Code · Cowork · Skills · connectors · agents · API · limits and safety |
+
+The wording is deliberately plain. "Used it a little", not "intermediate". The person
+arriving does not know what level they are, but they do know whether they have used the
+thing.
+
+`docs/design/ux-copy.md` is the copy deck. If a word changes, it changes there and in
+`ui.js` together.
+
+---
+
+## 6. The five screens
+
+**`index.html` — the front door.** Two questions: what kind of work do you do, and how
+much have you used Claude. Answering both takes you into Browse already filtered. Hand-drawn
+icons illustrate each choice, and the picture changes by itself until you choose.
+
+**`browse.html` — the catalogue.** Six filters, instant client-side search, sort, and URL
+state so a filtered view can be shared or bookmarked. On a phone the filters become a
+sheet with a keyboard trap. Search is keyword matching over hidden fields weighted by IDF
+— no API call, because a static page cannot hold a key.
+
+**`paths.html` — the seven routes.** A path is an ordered set of 5–6 resources. What makes
+it a path and not a playlist: **every step carries a `why` that explains its position, not
+its content.** *"Now open the thing itself and do one real task. Reading about it any
+longer is procrastination."* Times and costs are computed from the steps, never typed.
+
+**`resource.html` — one resource.** Everything we know, the `Skip if:` line at full weight,
+which paths it belongs to, and a report link that arrives with the title and URL already
+filled in.
+
+**`how-we-check.html` — the method.** What the four levels mean, what we will not do, and
+the live tally — read from the data, so this page cannot quietly become a lie.
+
+### The seven paths
+
+| path | for | steps | time |
+|---|---|---|---|
+| Your first week with Claude | not a coder, a student, a teacher, running a business | 6 | about 4 hours |
+| Getting good at Claude Code | a developer | 6 | about 3 hours |
+| Using Claude on work you put your name to | a writer | 5 | about 2 hours |
+| Product work without waiting for engineering | a product manager | 5 | about 2 hours |
+| Using Claude for research without embarrassing yourself | a researcher, a student | 5 | about 2 hours |
+| Analysing your own data without getting the numbers wrong | working with data | 5 | about 2 hours |
+| Judging AI design work | a designer | 5 | about 2 hours |
+
+The designer path is the newest and the hardest-won. It took four rounds. It is honest
+about its limit: it teaches judging what AI produces, which is about one fifth of a
+designer's job, and it says so in its own opening line rather than pretending otherwise.
+
+---
+
+## 7. The data
+
+`data/items.json` is the source of truth. Every entry carries:
+
+```
+title  url  author  source  official
+roles[]  level  topics[]  format  time  cost  language
+tier  summary  who_for  skip_if  alt_skip_if[]  teaches  questions[]
+published  checked  status  notes  keywords[]  id  paths[]
+```
+
+`data/paths.json` holds the routes. `build.sh` regenerates ids, sources, the search index
+and the paths, then mirrors everything into `data/*.js`.
+
+**Three implementation rules that are easy to break and expensive to fix:**
+
+1. **Ids come from the URL, never from list position.** `r-<sha1(norm(url))[:10]>`. Path
+   steps reference resources **by URL**. This is not style — position-based ids silently
+   re-pointed every path when the catalogue grew.
+
+2. **`norm()` must keep the query string.** A YouTube video's identity lives in `?v=`.
+   Strip it and 101 videos collapse into one key. This bug appeared in three separate
+   files before there was one shared definition in `scripts/stable-ids.py`.
+
+3. **The data loads through `<script>` globals, not `fetch()`.** Browsers block `fetch()`
+   on `file://`, and a directory nobody can open from a folder is not much of a directory.
+   `scripts/build-data-js.py` also strips fields the site never reads — about 192 KB.
+
+There is a matching lesson about shared helpers. `lstrip("www.")` removes any leading run
+of `w` and `.` characters, so `weather.com` becomes `eather.com`. That bug was copied into
+three host-normalising functions before being fixed into one. **Two copies of a helper is
+how one bug becomes three.**
+
+---
+
+## 8. How it looks
+
+`assets/css/tokens.css` holds the whole design system. Warm earth tones only — no cool
+grey, no blue, ever.
+
+| token | value | used for |
+|---|---|---|
+| `--ivory-medium` | `#f0eee6` | the page |
+| `--ivory-light` | `#faf9f5` | cards |
+| `--slate-dark` | `#141413` | text, the footer |
+| `--clay` | `#d97757` | **one** filled button per page, and nothing else |
+| `--clay-text` | `#ac5233` | clay as text — `--clay` itself fails contrast at small sizes |
+| `--bark` | `#6c6b66` | dates and metadata |
+
+`--bark` exists because Anthropic's own two greys measure 1.91:1 and 3.15:1 against our
+page. A directory whose whole product is a date and a one-line judgment must have those
+legible, so `--bark` is their grey darkened on its own hue until it clears 4.60:1.
+
+Two typefaces: **Tiempos** carries the voice, **Styrene** is interface chrome only. No
+shadows and no gradients — depth comes from tone. The filled button has a bottom-only
+8px radius; that asymmetry is the signature and it is not to be evened out.
+
+`--measure: 50ch`, not 68. `ch` is the width of the digit zero, which is far wider than an
+average letter — measured at 1.41× in Tiempos. `68ch` was setting 96 characters per line.
+
+**The path card** is the newest component: a 4:3 tile on the left with the format drawing,
+the time in the top-right corner, the publisher's real logo in the bottom-left, and the
+cost in the bottom-right *only when the thing is not simply free*. Badge the exception, not
+the rule. The whole card is one click and it goes to our own resource page, not straight
+out — our page carries the `Skip if:` line, and sending someone past it defeats the site.
+Full spec in `docs/design/path-card-spec.md`.
+
+Publisher logos are real files fetched once at build time into `assets/icons/publishers/`,
+never requested at render — a favicon service called per card would send the reader's
+browsing to a third party. Nine marks cover 61% of the catalogue. Everything else gets no
+badge. Initials were built and rejected: a lettered square is not a mark, it is an apology
+for not having one.
+
+---
+
+## 9. What we have done, in order
+
+**Research and specification.** Sources gathered, the content model designed, the four
+tiers defined, the copy deck written.
+
+**The design system.** Tokens measured rather than chosen. 47 hand-drawn icons: 10 roles ×
+4 levels, plus one per format.
+
+**The build.** Claude Design produced screens that needed too much repair, so the site was
+rebuilt by hand — plain HTML, CSS and vanilla JavaScript. 168 inline styles became one
+stylesheet. The placeholder search became a real IDF-weighted index.
+
+**The ten-role attack.** Ten agents, one per role, each acting as a hostile visitor at all
+four levels. Ten findings files and one summary, 161 citations. It found things no single
+reviewer would have: the `?q=` deep link that returned nothing, an unsourced accusation
+about a named person, 71 useless `Skip if` lines, publishers recorded as "Substack" and
+"Medium" instead of the real author, and text lines running 96 characters because a token
+measured the wrong unit.
+
+**Thirteen fix rounds.** Each one written as a brief, run in Claude Code, then verified
+independently rather than accepted. Several of my own claims were wrong and were corrected
+by that verification — including a font weight I had measured through the wrong renderer.
+
+**The Academy harvest, August 2026.** We held 5 of Claude Academy's resources and did not
+know it. The cause was method, not access: the harvest had been search-driven, so it never
+walked the Academy's own index. 291 resources were added — 24 courses, 119 tutorials, 146
+use cases. The catalogue went from 354 to 618 after duplicate merges.
+
+One measurement from that run is worth keeping. The 291 `skip_if` lines written in a single
+long session are **less** repetitive than the 333 written slowly over earlier rounds — 5%
+share their opening words against 12%. Written fast, graded better. Nobody predicted that.
+
+**Cleanup.** Seven format icons shipped named `-alpha.png` with zero transparent pixels.
+Five duplicate pairs from the migration. The `lstrip` bug in three places. A weekly job now
+re-checks all 618 links.
+
+---
+
+## 10. Open right now
+
+**Both picks decisions are closed** (31 August 2026). Kept here as the record:
+
+1. **Thin pools.** Ruled: at most 2 picks from one publisher when the pool holds fewer
+   than 3, and the build prints every publisher-thin cell so the relaxation is never
+   silent. `data-analyst|builder` ships 2+1; `non-technical|builder` ships two.
+
+2. **Topical monoculture.** Ruled: a topic dimension, in two layers. In code, constraint 4
+   fires on a shared `topics[0]` and is an error unless the cell stores a justification —
+   *fire-and-justify* rather than forced distinctness, because measurement showed every
+   pool is 30–90% dominated by one primary topic, and demanding distinctness would have
+   traded better-fitting picks for worse ones to please a checker. Above the code, the
+   picker states a one-line subject per pick and must swap or justify when two match.
+   The `designer|basic` swap was made.
+
+3. **A third ruling came out of shipping it.** `pm|builder`'s pool is 53 of 55 Anthropic
+   Academy, so the publisher rule made every legal three-pick set include a $3,000 course
+   the picker had not chosen. New principle, now the first thing the picks validator's
+   docs say: **a constraint may reject a set of picks; it may never pull an item into
+   one.** That cell now ships two, and any two-pick cell must declare which cause put it
+   there.
+
+**Standing items, all yours:**
+
+- **Nothing is `reviewed`.** 0 of 618. Only a person can change that, by finishing one
+  resource and writing the notes.
+- **The report link needs a GitHub account.** Most of the intended audience does not have
+  one. An email address would fix it. Deliberately parked.
+- **The catalogue is 61% Anthropic.** Decided knowingly. `official` is a Browse filter and
+  `how-we-check.html` states the ratio, computed from the data.
+
+---
+
+## 11. What is weak, said plainly
+
+**618 resources and 35 path steps.** Judgment covers about 6% of the catalogue. The `Skip
+if:` line is per-item; nothing is comparative. That is what the "start with these three"
+work is for, and until it ships a person filtering to "not a coder / used it a little" gets
+69 cards in file order.
+
+**78% of the catalogue is "Skimmed".** We read an outline. That is honestly labelled, but
+it is a weaker claim than the site's own pitch implies, and the strongest label is still
+empty.
+
+**The advanced end is a monoculture.** Publisher diversity collapses as level rises —
+`basic` cells draw on 10–27 publishers, `builder` cells on 1–3. Almost all advanced
+material in this catalogue is Anthropic's own. The constraint check found this without
+being asked the question.
+
+**Roles are uneven.** 220 entries for someone running a business, 46 for a designer.
+
+**No human has ever used this site.** Ten AI agents have attacked it and found a great deal.
+That is not the same thing. Three real people — a teacher, a student, a writer — would
+teach more in an hour than another fix round.
+
+---
+
+## 12. How to work on it
+
+```
+./build.sh        # after any change to data/*.json — regenerates ids, sources,
+                  # the search index, the paths, and the data/*.js mirrors
+python3 scripts/validate-catalogue.py       # 11 rules; CI runs this before build.sh
+python3 scripts/test-validate-catalogue.py  # the validator's own tests
+```
+
+Open `index.html` in a browser. No server needed.
+
+Pushing to `master` deploys. `.github/workflows/deploy.yml` runs `build.sh` on the runner,
+so `data/*.js` stays out of git and the live site can never disagree with
+`data/items.json`.
+
+**Working rules** are in `CLAUDE.md`. The short version: brainstorm → spec → plan → build.
+Specs go in `docs/specs/`. Research goes in `research/` with sources and dates. Every claim
+about a course, tool, price or link needs a source URL and the date checked. Verify before
+claiming done — run it, open it, check the links.
+
+**Where things live:**
+
+| | |
+|---|---|
+| `docs/attack/` | the ten role attacks, the summary, and every fix brief `FIX.md` → `FIX-13.md` |
+| `docs/design/` | the design brief, the copy deck, the path card spec, the token notes |
+| `docs/specs/` | specifications |
+| `research/` | research output with sources and dates |
+| `scripts/` | build, validate, check |
+| `data/` | the catalogue, the paths, and the two duplicate-allowance files |
+
+One warning: **`docs/START-HERE.md` is stale.** It still says 353 resources and 3 paths. It
+was written to bootstrap a new session and has not been updated in thirteen rounds. Read
+this file instead, or fix that one.
+
+---
+
+## 13. The one sentence
+
+*A link with no judgment is worthless — that is the whole point of the site.*

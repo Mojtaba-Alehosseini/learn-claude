@@ -74,6 +74,14 @@ ranking regression shows up there first.
 
 ## Where it stands
 
-- 353 resources, 0 dead links as of 2026-08-23
+- 618 resources, 0 dead links, and 7 learning paths — one for every role — as of
+  2026-08-31
+- 109 picks across 37 of the 40 role×level combinations: answer both questions on the
+  home page and Browse now says which two or three to open first, labelled `picked by AI`
+  with the date, and never called "best" — 78% of the catalogue is skimmed, so quality is
+  not ours to rank; fit and order are
 - 0 are `reviewed` — nobody has finished a course end to end yet, and the cards say so
-- Roughly half publish no date at all, and those cards say that too
+- 431 of 618 publish no date at all, and those cards say that too
+
+Counts here are measured from `data/`, not remembered. The fuller picture, with the same
+discipline, is in `docs/THE-PROJECT.md`.
