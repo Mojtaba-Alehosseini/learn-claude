@@ -164,10 +164,10 @@
       "writer-marketer"
     ],
     "level": "basic",
-    "intro": "Five steps, all free, about two hours. The order runs from what job Claude has, through the tells everyone else is trained to spot, to what you owe the reader. The last step is the one people skip and it is the one with consequences.",
-    "step_count": 5,
-    "total_minutes": 126,
-    "total_time_label": "about 2 hours",
+    "intro": "Four steps, all free, about ninety minutes. The order runs from what job Claude has, through the tells everyone else is trained to spot, to what you owe the reader. The last step is the one people skip and it is the one with consequences.",
+    "step_count": 4,
+    "total_minutes": 81,
+    "total_time_label": "about 81 minutes",
     "cost": "free",
     "weakest_tier": "previewed",
     "steps": [
@@ -183,36 +183,26 @@
       },
       {
         "step": 2,
-        "item": "r-febccc2bee",
-        "title": "Claude AI for Writing: The Complete Guide for Authors and Content Creators",
-        "url": "https://kenny-kane.com/blog/claude-ai-for-writing",
-        "time": "under-1hr",
-        "cost": "free",
-        "tier": "previewed",
-        "why": "Now the craft, at length, with that relationship already fixed. Read this second and it reads as technique; read it first and it reads as permission to hand over the keyboard."
-      },
-      {
-        "step": 3,
         "item": "r-d84a7c8cbe",
         "title": "Wikipedia:Signs of AI writing",
         "url": "https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing",
         "time": "under-1hr",
         "cost": "free",
         "tier": "ai-reviewed",
-        "why": "Third, learn the symptoms before trying to treat them. Wikipedia's editors have catalogued what AI prose actually looks like, and you cannot prompt your way out of a tell you cannot name."
+        "why": "Second, learn the symptoms before trying to treat them. Wikipedia's editors have catalogued what AI prose actually looks like, and you cannot prompt your way out of a tell you cannot name."
       },
       {
-        "step": 4,
+        "step": 3,
         "item": "r-da0e8aedbc",
         "title": "How to Stop Claude Writing Like an AI",
         "url": "https://willfrancis.com/how-to-stop-claude-writing-like-an-ai/",
         "time": "under-15min",
         "cost": "free",
         "tier": "ai-reviewed",
-        "why": "Only now is this useful. It is the treatment for the symptoms in step 3 — read in the other order it is a list of fixes for problems you have not learned to see yet."
+        "why": "Only now is this useful. It is the treatment for the symptoms in step 2 — read in the other order it is a list of fixes for problems you have not learned to see yet."
       },
       {
-        "step": 5,
+        "step": 4,
         "item": "r-3edab99ecf",
         "title": "The Ethics of Using AI",
         "url": "https://ethicscentral.org/the-ethics-of-using-ai/",
@@ -395,9 +385,9 @@
       },
       {
         "step": 3,
-        "item": "r-6ff382f243",
+        "item": "r-7f2c2387f7",
         "title": "Introducing the analysis tool in Claude.ai",
-        "url": "https://anthropic.com/news/analysis-tool",
+        "url": "https://claude.com/blog/analysis-tool",
         "time": "under-15min",
         "cost": "free",
         "tier": "ai-reviewed",

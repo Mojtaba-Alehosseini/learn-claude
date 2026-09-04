@@ -1894,6 +1894,13 @@
       "understand how claude executes code to avoid math hallucinations",
       "evaluate when to use the analysis tool instead of text-only prompting for numbers",
       "leverage code execution for reproducible calculations on csv files"
+    ],
+    "paths": [
+      {
+        "path": "numbers-you-can-defend",
+        "step": 3,
+        "of": 5
+      }
     ]
   },
   {
@@ -2517,7 +2524,7 @@
       {
         "path": "numbers-you-can-defend",
         "step": 5,
-        "of": 4
+        "of": 5
       }
     ]
   },
@@ -2576,7 +2583,7 @@
       {
         "path": "numbers-you-can-defend",
         "step": 4,
-        "of": 4
+        "of": 5
       }
     ]
   },
@@ -4110,66 +4117,6 @@
     ],
     "prerequisites": [
       "experience maintaining or using a design system"
-    ]
-  },
-  {
-    "title": "Meaghan Choi - Designing Claude Code (and what's coming next)",
-    "url": "https://podcasts.apple.com/us/podcast/meaghan-choi-designing-claude-code-and-whats-coming-next/id1686414242",
-    "author": "Dive Club / Ridd",
-    "roles": [
-      "designer"
-    ],
-    "level": "confident",
-    "topics": [
-      "claude-code",
-      "chat-prompting"
-    ],
-    "format": "podcast",
-    "time": "under-1hr",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "summary": "Deep-dive interview with Anthropic's Claude Code design lead on how design operates at Anthropic, the Artifacts workflow, and where AI-native design is heading.",
-    "who_for": "Designers wanting a strategic, insider view of AI-native design.",
-    "skip_if": "Anthropic's own design lead on Anthropic's own product, so read the assessment of what works as coming from inside the building. Good on how design operates there, silent on how you would do any of it.",
-    "published": "2026-07-08",
-    "checked": "2026-08-20",
-    "status": "live",
-    "notes": "Also on YouTube and Spotify. Previewed via episode notes.",
-    "source": "Dive Club / Ridd",
-    "official": false,
-    "id": "r-68ffabe46c",
-    "keywords": [
-      "claude code",
-      "claudecode",
-      "anthropic design",
-      "artifacts",
-      "meaghan choi",
-      "ai native design",
-      "ux design",
-      "product design",
-      "ai design patterns",
-      "future of claude",
-      "anthropic podcast",
-      "designing ai tools",
-      "human ai interaction",
-      "ui design",
-      "interview",
-      "strategic design"
-    ],
-    "questions": [
-      "how does anthropic design claude code",
-      "what is the design philosophy behind artifacts",
-      "where is ai native design heading",
-      "how do designers work at anthropic"
-    ],
-    "teaches": [
-      "understand the design philosophy behind claude code",
-      "evaluate strategic directions for ai-native product design",
-      "understand how the artifacts workflow was created"
-    ],
-    "prerequisites": [
-      "basic understanding of claude and artifacts"
     ]
   },
   {
@@ -6184,7 +6131,7 @@
   },
   {
     "title": "Building agents with the Claude Agent SDK",
-    "url": "https://www.anthropic.com/engineering/building-agents-with-the-claude-agent-sdk",
+    "url": "https://claude.com/blog/building-agents-with-the-claude-agent-sdk",
     "author": "Anthropic",
     "source": "Anthropic",
     "official": true,
@@ -6206,9 +6153,9 @@
     "who_for": "Developers deciding whether to build an agent on the Agent SDK rather than wiring their own tool loop over the Messages API.",
     "skip_if": "Skip it if you want runnable code - it is a five-minute design argument with an illustrative example, not a tutorial with a repository to clone.",
     "published": "2025-09-29",
-    "checked": "2026-08-21",
+    "checked": "2026-09-04",
     "status": "live",
-    "id": "r-2a823a729f",
+    "id": "r-3ce8106ea6",
     "keywords": [
       "claude agent sdk",
       "claude code sdk",
@@ -6238,7 +6185,8 @@
       "apply the gather context take action verify work loop to custom domains",
       "evaluate when to use the agent sdk instead of raw api tool loops",
       "design agent workflows with terminal filesystem and search tools"
-    ]
+    ],
+    "notes": " URL updated 2026-09-04: 308; destination opened and confirmed the same post, printing 29 September 2025. The old address was carried through a full link check that called it \"ok\", because the checker followed permanent redirects silently. It reports them now."
   },
   {
     "title": "Claude Platform documentation home",
@@ -7151,7 +7099,7 @@
   },
   {
     "title": "How to Use Claude Code: Complete Tutorial for Product Managers",
-    "url": "https://www.aakashg.com/cloud-code-tutorial-for-pm",
+    "url": "https://www.aakashg.com/cloud-code-tutorial-for-pm/",
     "author": "Aakash Gupta, with Carl Vellotti",
     "source": "Aakash Gupta",
     "official": false,
@@ -7173,7 +7121,7 @@
     "who_for": "Product managers who prefer a conversational explanation with a searchable transcript, and who want the argument for leaving the chat window.",
     "skip_if": "Skip it if you want precise, current instructions - it is a conversation with no publication date shown on the page, so treat the version-specific detail as unverified.",
     "published": "UNVERIFIED",
-    "checked": "2026-08-21",
+    "checked": "2026-09-04",
     "status": "live",
     "id": "r-56fd40ae95",
     "keywords": [
@@ -7199,7 +7147,8 @@
       "transition from web chat to local agent workflows",
       "prototype ideas using conversational agents",
       "build small agents for recurring tasks"
-    ]
+    ],
+    "notes": " URL updated 2026-09-04: 301 to the trailing-slash form; destination opened, same tutorial by Carl Vellotti and Aakash Gupta. The slug says 'cloud' where it means 'claude' - the publisher's typo, carried as-is because a URL is not ours to correct. The old address was carried through a full link check that called it \"ok\", because the checker followed permanent redirects silently. It reports them now."
   },
   {
     "title": "Getting started with Claude Cowork (Airtree course)",
@@ -7361,9 +7310,9 @@
   },
   {
     "title": "Craft a Professional AI Developer Setup (Cursor & Claude Code)",
-    "url": "https://frontendmasters.com/courses/pro-ai",
+    "url": "https://master.dev/courses/pro-ai/",
     "author": "Steve Kinney",
-    "source": "Frontend Masters",
+    "source": "Master",
     "official": false,
     "roles": [
       "developer"
@@ -7382,9 +7331,9 @@
     "who_for": "Working front-end and full-stack developers who want an opinionated setup covering both Cursor and Claude Code from someone who ships with them.",
     "skip_if": "Skip it if you only want Claude Code - roughly half the course is Cursor - and note it was published in August 2025, so parts of both tools have changed since recording.",
     "published": "2025-08-23",
-    "checked": "2026-08-21",
+    "checked": "2026-09-04",
     "status": "outdated",
-    "id": "r-f22cc5c8d7",
+    "id": "r-289f30bcca",
     "keywords": [
       "cursor",
       "ai developer setup",
@@ -7411,7 +7360,8 @@
       "combine cursor and claude code effectively",
       "write markdown plans with guardrails and linting",
       "manage context windows and compaction techniques"
-    ]
+    ],
+    "notes": " URL updated 2026-09-04: 301 across HOSTS: frontendmasters.com -> master.dev. Not a slug change, a rebrand, so the publisher name changes with it. Destination opened: still Steve Kinney's Cursor and Claude Code course, 25 lessons across 3.7 hours. The other frontendmasters.com row did NOT move and stays where it is. The old address was carried through a full link check that called it \"ok\", because the checker followed permanent redirects silently. It reports them now."
   },
   {
     "title": "MCP Python SDK",
@@ -7528,7 +7478,7 @@
   },
   {
     "title": "A Guide to Claude Code 2.0 and getting better at using coding agents",
-    "url": "https://sankalp.bearblog.dev/my-experience-with-claude-code-20-and-how-to-get-better-at-using-coding-agents",
+    "url": "https://sankalp.bearblog.dev/my-experience-with-claude-code-20-and-how-to-get-better-at-using-coding-agents/",
     "author": "sankalp",
     "source": "sankalp",
     "official": false,
@@ -7551,7 +7501,7 @@
     "who_for": "Developers who already use Claude Code and want mechanism-level understanding of subagents and context, told through one person's tested workflow.",
     "skip_if": "Skip it if you need current detail - it documents Claude Code 2.0 as of December 2025, and both the CLI and the model line-up have moved on since.",
     "published": "2025-12-27",
-    "checked": "2026-08-21",
+    "checked": "2026-09-04",
     "status": "live",
     "id": "r-aa3fb9b26c",
     "keywords": [
@@ -7583,7 +7533,8 @@
       "understand how subagents inherit context in claude code",
       "manage token usage and context engineering in a session",
       "combine hooks skills and system reminders"
-    ]
+    ],
+    "notes": " URL updated 2026-09-04: 301 to the trailing-slash form; destination opened, same guide by Sankalp, printing 27 December 2025. The old address was carried through a full link check that called it \"ok\", because the checker followed permanent redirects silently. It reports them now."
   },
   {
     "title": "Claude for K-12 Teachers: context steering, Projects and Skills",
@@ -7641,7 +7592,7 @@
   },
   {
     "title": "Building a Claude Project for Teaching & Learning (recording)",
-    "url": "https://learning.northeastern.edu/ai-recordings-building-a-claude-project-for-teaching-learning",
+    "url": "https://learning.northeastern.edu/ai-recordings-building-a-claude-project-for-teaching-learning/",
     "author": "Northeastern University, AI in Teaching & Learning",
     "source": "Northeastern University",
     "official": false,
@@ -7661,7 +7612,7 @@
     "who_for": "University instructors who want to see a colleague build a course-specific Claude Project before making one for their own module.",
     "skip_if": "Skip it if you need current interface detail - the recording is labelled 2025, so the Projects screens and features shown are behind what you will see today.",
     "published": "UNVERIFIED",
-    "checked": "2026-08-21",
+    "checked": "2026-09-04",
     "status": "outdated",
     "id": "r-cd019b4ce7",
     "keywords": [
@@ -7688,7 +7639,8 @@
       "load course materials into claude project knowledge",
       "write instructions for a course-specific ai assistant",
       "design interactive experiences for students using claude"
-    ]
+    ],
+    "notes": " URL updated 2026-09-04: 301 to the trailing-slash form; destination opened and confirmed. The old address was carried through a full link check that called it \"ok\", because the checker followed permanent redirects silently. It reports them now."
   },
   {
     "title": "AI capabilities and limitations",
@@ -10301,7 +10253,7 @@
   },
   {
     "title": "Anthropic Academy — Courses hub",
-    "url": "https://claude.com/resources/courses",
+    "url": "https://academy.claude.com/courses",
     "author": "Anthropic",
     "roles": [
       "researcher"
@@ -10324,12 +10276,12 @@
     "who_for": "Any researcher who wants structured, trustworthy Claude training from the vendor.",
     "skip_if": "You need research-specific workflows rather than general Claude training.",
     "published": "UNVERIFIED",
-    "checked": "2026-08-18",
+    "checked": "2026-09-04",
     "status": "live",
-    "notes": "Hosted on Skilljar (anthropic.skilljar.com); catalog size changes often (was 13, then 17, then 20+ courses through 2026).",
-    "source": "Anthropic",
+    "notes": "Hosted on Skilljar (anthropic.skilljar.com); catalog size changes often (was 13, then 17, then 20+ courses through 2026). URL updated 2026-09-04: 301; destination opened and confirmed the Academy courses hub. The old address was carried through a full link check that called it \"ok\", because the checker followed permanent redirects silently. It reports them now.",
+    "source": "Anthropic Academy",
     "official": true,
-    "id": "r-34348eade8",
+    "id": "r-0a09df91fe",
     "keywords": [
       "anthropic academy",
       "claude courses hub",
@@ -11685,7 +11637,7 @@
   },
   {
     "title": "Using Claude Learning Mode to Study",
-    "url": "https://learning.northeastern.edu/ai-student-guides-using-claude-learning-mode-to-study",
+    "url": "https://learning.northeastern.edu/ai-student-guides-using-claude-learning-mode-to-study/",
     "author": "Muhammad Salman, MS student, Northeastern University (CATLR AI Student Guides)",
     "roles": [
       "student"
@@ -11705,7 +11657,7 @@
     "published": "UNVERIFIED",
     "checked": "2026-09-04",
     "status": "live",
-    "notes": "Over 12 months old: the click path and screenshots show the mid-2025 Projects screen and no longer match Claude exactly. The retention and university-outcome claims are cited loosely and should not be treated as established evidence. Method still holds. Re-read 2026-09-04 under the freshness sweep: the page shows no date printed, so published 2025-07-28 -> UNVERIFIED. Article body read and quoted to prove the fetch reached the page rather than a bot wall - a direct request with a plain user agent gets 403 from this host.",
+    "notes": "Over 12 months old: the click path and screenshots show the mid-2025 Projects screen and no longer match Claude exactly. The retention and university-outcome claims are cited loosely and should not be treated as established evidence. Method still holds. Re-read 2026-09-04 under the freshness sweep: the page shows no date printed, so published 2025-07-28 -> UNVERIFIED. Article body read and quoted to prove the fetch reached the page rather than a bot wall - a direct request with a plain user agent gets 403 from this host. URL updated 2026-09-04: 301 to the trailing-slash form; destination opened and confirmed. The old address was carried through a full link check that called it \"ok\", because the checker followed permanent redirects silently. It reports them now.",
     "source": "Northeastern University",
     "official": false,
     "id": "r-97422c936b",
@@ -14198,8 +14150,8 @@
     "paths": [
       {
         "path": "writing-you-sign",
-        "step": 3,
-        "of": 5
+        "step": 2,
+        "of": 4
       }
     ]
   },
@@ -14252,8 +14204,8 @@
     "paths": [
       {
         "path": "writing-you-sign",
-        "step": 5,
-        "of": 5
+        "step": 4,
+        "of": 4
       }
     ]
   },
@@ -14554,8 +14506,8 @@
     "paths": [
       {
         "path": "writing-you-sign",
-        "step": 4,
-        "of": 5
+        "step": 3,
+        "of": 4
       }
     ]
   },
@@ -14821,62 +14773,7 @@
       {
         "path": "writing-you-sign",
         "step": 1,
-        "of": 5
-      }
-    ]
-  },
-  {
-    "title": "Claude AI for Writing: The Complete Guide for Authors and Content Creators",
-    "url": "https://kenny-kane.com/blog/claude-ai-for-writing",
-    "author": "Kenny Kane",
-    "roles": [
-      "writer-marketer"
-    ],
-    "level": "basic",
-    "topics": [
-      "chat-prompting"
-    ],
-    "format": "article",
-    "time": "under-1hr",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "summary": "An author's account of using Claude across two of his own published books, covering manuscript structure and tone, and where Claude over-smooths voice unless explicitly told not to.",
-    "who_for": "Book authors or long-form content creators who want a real practitioner's workflow rather than a generic feature tour.",
-    "skip_if": "You want a neutral third-party review — Kane is a working author with his own books to promote, and this is personal experience, not independent testing.",
-    "published": "2026-07-06",
-    "checked": "2026-08-18",
-    "status": "live",
-    "notes": "Named author with specific, checkable book titles referenced (The Accidental Nonprofiteer, Mission-Driven Ecommerce) — a genuine practitioner voice.",
-    "source": "Kenny Kane",
-    "official": false,
-    "id": "r-febccc2bee",
-    "keywords": [
-      "author workflow",
-      "book writing with ai",
-      "manuscript structure",
-      "long form content creation",
-      "prevent ai from over smoothing voice",
-      "publishing guide",
-      "writing books with claude",
-      "anthropic author",
-      "claud"
-    ],
-    "questions": [
-      "how do authors use claude to write books",
-      "how to keep your own voice when writing with ai",
-      "managing manuscript structure with claude"
-    ],
-    "teaches": [
-      "structure a manuscript using claude",
-      "prevent the ai from over-smoothing your natural writing voice",
-      "apply real author workflows to long-form projects"
-    ],
-    "paths": [
-      {
-        "path": "writing-you-sign",
-        "step": 2,
-        "of": 5
+        "of": 4
       }
     ]
   },
@@ -19028,7 +18925,7 @@
       {
         "path": "numbers-you-can-defend",
         "step": 1,
-        "of": 4
+        "of": 5
       }
     ]
   },
@@ -19088,7 +18985,7 @@
       {
         "path": "numbers-you-can-defend",
         "step": 2,
-        "of": 4
+        "of": 5
       }
     ]
   },

@@ -1,0 +1,5465 @@
+{
+  "when": "2026-09-04",
+  "checked": 637,
+  "counts": {
+    "ok": 607,
+    "blocked": 21,
+    "moved": 9
+  },
+  "drift": [
+    {
+      "id": "r-f86a3e8189",
+      "title": "Get started with Claude Cowork (Help Center)",
+      "url": "https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork",
+      "host": "support.claude.com",
+      "verdict": "ok",
+      "detail": "200",
+      "page_date": "2026-09-02",
+      "page_says": "September 2, 2026",
+      "stored": "UNVERIFIED",
+      "drift": "stored UNVERIFIED, page prints 2026-09-02"
+    },
+    {
+      "id": "r-a6cb8cede5",
+      "title": "What is the Team plan? (Help Center)",
+      "url": "https://support.claude.com/en/articles/9266767-what-is-the-team-plan",
+      "host": "support.claude.com",
+      "verdict": "ok",
+      "detail": "200",
+      "page_date": "2026-08-18",
+      "page_says": "August 18, 2026",
+      "stored": "UNVERIFIED",
+      "drift": "stored UNVERIFIED, page prints 2026-08-18"
+    },
+    {
+      "id": "r-dbd5a58a87",
+      "title": "Is my data used for model training? (Privacy Center)",
+      "url": "https://privacy.claude.com/en/articles/10023580-is-my-data-used-for-model-training",
+      "host": "privacy.claude.com",
+      "verdict": "ok",
+      "detail": "200",
+      "page_date": "2026-03-16",
+      "page_says": "March 16, 2026",
+      "stored": "UNVERIFIED",
+      "drift": "stored UNVERIFIED, page prints 2026-03-16"
+    },
+    {
+      "id": "r-762ee8eaae",
+      "title": "Get started with Claude Design (Help Center)",
+      "url": "https://support.claude.com/en/articles/14604416-get-started-with-claude-design",
+      "host": "support.claude.com",
+      "verdict": "ok",
+      "detail": "200",
+      "page_date": "2026-08-06",
+      "page_says": "August 6, 2026",
+      "stored": "UNVERIFIED",
+      "drift": "stored UNVERIFIED, page prints 2026-08-06"
+    },
+    {
+      "id": "r-84558d3fb4",
+      "title": "Set up your design system in Claude Design",
+      "url": "https://support.claude.com/en/articles/14604397-set-up-your-design-system-in-claude-design",
+      "host": "support.claude.com",
+      "verdict": "ok",
+      "detail": "200",
+      "page_date": "2026-08-06",
+      "page_says": "August 6, 2026",
+      "stored": "UNVERIFIED",
+      "drift": "stored UNVERIFIED, page prints 2026-08-06"
+    },
+    {
+      "id": "r-e686e58ab4",
+      "title": "Use Claude Cowork safely",
+      "url": "https://support.claude.com/en/articles/13364135-use-claude-cowork-safely",
+      "host": "support.claude.com",
+      "verdict": "ok",
+      "detail": "200",
+      "page_date": "2026-08-26",
+      "page_says": "August 26, 2026",
+      "stored": "UNVERIFIED",
+      "drift": "stored UNVERIFIED, page prints 2026-08-26"
+    },
+    {
+      "id": "r-5aa9ca06c5",
+      "title": "Claude for Teachers: your data and our terms",
+      "url": "https://support.claude.com/en/articles/15926041-claude-for-teachers-your-data-and-our-terms",
+      "host": "support.claude.com",
+      "verdict": "ok",
+      "detail": "200",
+      "page_date": "2026-08-28",
+      "page_says": "August 28, 2026",
+      "stored": "UNVERIFIED",
+      "drift": "stored UNVERIFIED, page prints 2026-08-28"
+    },
+    {
+      "id": "r-657d7f5084",
+      "title": "Understanding Claude's Personalization Features",
+      "url": "https://support.claude.com/en/articles/10185728-understanding-claude-s-personalization-features",
+      "host": "support.claude.com",
+      "verdict": "ok",
+      "detail": "200",
+      "page_date": "2026-08-19",
+      "page_says": "August 19, 2026",
+      "stored": "UNVERIFIED",
+      "drift": "stored UNVERIFIED, page prints 2026-08-19"
+    },
+    {
+      "id": "r-6bf4b71e18",
+      "title": "How Can I Create and Manage Projects?",
+      "url": "https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects",
+      "host": "support.claude.com",
+      "verdict": "ok",
+      "detail": "200",
+      "page_date": "2026-09-03",
+      "page_says": "September 3, 2026",
+      "stored": "UNVERIFIED",
+      "drift": "stored UNVERIFIED, page prints 2026-09-03"
+    },
+    {
+      "id": "r-36de89a1ed",
+      "title": "Organize Your Tasks With Projects in Claude Cowork",
+      "url": "https://support.claude.com/en/articles/14116274-organize-your-tasks-with-projects-in-claude-cowork",
+      "host": "support.claude.com",
+      "verdict": "ok",
+      "detail": "200",
+      "page_date": "2026-09-03",
+      "page_says": "September 3, 2026",
+      "stored": "UNVERIFIED",
+      "drift": "stored UNVERIFIED, page prints 2026-09-03"
+    },
+    {
+      "id": "r-e15adda7c4",
+      "title": "How up-to-date is Claude's training data?",
+      "url": "https://support.claude.com/en/articles/8114494-how-up-to-date-is-claude-s-training-data",
+      "host": "support.claude.com",
+      "verdict": "ok",
+      "detail": "200",
+      "page_date": "2026-09-01",
+      "page_says": "September 1, 2026",
+      "stored": "UNVERIFIED",
+      "drift": "stored UNVERIFIED, page prints 2026-09-01"
+    },
+    {
+      "id": "r-de71ac40e6",
+      "title": "What are artifacts and how do I use them?",
+      "url": "https://support.claude.com/en/articles/9487310-what-are-artifacts-and-how-do-i-use-them",
+      "host": "support.claude.com",
+      "verdict": "ok",
+      "detail": "200",
+      "page_date": "2026-09-03",
+      "page_says": "September 3, 2026",
+      "stored": "UNVERIFIED",
+      "drift": "stored UNVERIFIED, page prints 2026-09-03"
+    },
+    {
+      "id": "r-e08547ee31",
+      "title": "What interfaces can I use to access Claude?",
+      "url": "https://support.claude.com/en/articles/8114487-what-interfaces-can-i-use-to-access-claude",
+      "host": "support.claude.com",
+      "verdict": "ok",
+      "detail": "200",
+      "page_date": "2026-08-06",
+      "page_says": "August 6, 2026",
+      "stored": "UNVERIFIED",
+      "drift": "stored UNVERIFIED, page prints 2026-08-06"
+    },
+    {
+      "id": "r-4bf690867e",
+      "title": "Use Claude Cowork on web, desktop, and mobile",
+      "url": "https://support.claude.com/en/articles/15520349-use-claude-cowork-on-web-desktop-and-mobile",
+      "host": "support.claude.com",
+      "verdict": "ok",
+      "detail": "200",
+      "page_date": "2026-09-03",
+      "page_says": "September 3, 2026",
+      "stored": "UNVERIFIED",
+      "drift": "stored UNVERIFIED, page prints 2026-09-03"
+    },
+    {
+      "id": "r-e8ef619289",
+      "title": "Let Claude use your computer in Cowork",
+      "url": "https://support.claude.com/en/articles/14128542-let-claude-use-your-computer-in-cowork",
+      "host": "support.claude.com",
+      "verdict": "ok",
+      "detail": "200",
+      "page_date": "2026-09-02",
+      "page_says": "September 2, 2026",
+      "stored": "UNVERIFIED",
+      "drift": "stored UNVERIFIED, page prints 2026-09-02"
+    }
+  ],
+  "blocked": [
+    {
+      "host": "datacamp.com",
+      "count": 4,
+      "last_human_check": "never"
+    },
+    {
+      "host": "medium.com",
+      "count": 4,
+      "last_human_check": "never"
+    },
+    {
+      "host": "udemy.com",
+      "count": 4,
+      "last_human_check": "never"
+    },
+    {
+      "host": "forbes.com",
+      "count": 1,
+      "last_human_check": "never"
+    },
+    {
+      "host": "uxdesign.cc",
+      "count": 1,
+      "last_human_check": "never"
+    },
+    {
+      "host": "designsystemscollective.com",
+      "count": 1,
+      "last_human_check": "never"
+    },
+    {
+      "host": "students.unimelb.edu.au",
+      "count": 1,
+      "last_human_check": "never"
+    },
+    {
+      "host": "monash.edu",
+      "count": 1,
+      "last_human_check": "never"
+    },
+    {
+      "host": "education.gov.au",
+      "count": 1,
+      "last_human_check": "never"
+    },
+    {
+      "host": "ethicscentral.org",
+      "count": 1,
+      "last_human_check": "never"
+    },
+    {
+      "host": "spj.org",
+      "count": 1,
+      "last_human_check": "never"
+    },
+    {
+      "host": "niemanlab.org",
+      "count": 1,
+      "last_human_check": "never"
+    }
+  ],
+  "results": [
+    {
+      "id": "r-164e1b7c0c",
+      "title": "AI Fluency for Small Businesses",
+      "url": "https://academy.claude.com/courses/ai-fluency-for-small-businesses",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-8b91ddf369",
+      "title": "AI Fluency: Framework & Foundations",
+      "url": "https://academy.claude.com/courses/ai-fluency-framework-foundations",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-06235a836d",
+      "title": "Claude 101",
+      "url": "https://academy.claude.com/courses/claude-101",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-39732065d0",
+      "title": "Introduction to Claude Cowork",
+      "url": "https://academy.claude.com/courses/introduction-to-claude-cowork",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-3927f8ff43",
+      "title": "Using Claude Cowork for your small business",
+      "url": "https://academy.claude.com/tutorials/using-claude-for-your-small-business",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-52edcc6d27",
+      "title": "How to install and use the Claude for Small Business plugin",
+      "url": "https://academy.claude.com/tutorials/how-to-install-the-claude-for-small-business-plugin",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-bd3f4e0bb0",
+      "title": "Small Business plugin (skill inventory)",
+      "url": "https://claude.com/plugins/small-business",
+      "host": "claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-0a5538b4ff",
+      "title": "knowledge-work-plugins/small-business (source repo)",
+      "url": "https://github.com/anthropics/knowledge-work-plugins/tree/main/small-business",
+      "host": "github.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-a9ef977b8a",
+      "title": "Introducing Claude for Small Business (launch post)",
+      "url": "https://www.anthropic.com/news/claude-for-small-business",
+      "host": "anthropic.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-2f1bfe8fd7",
+      "title": "How people are using Claude Cowork (usage data)",
+      "url": "https://claude.com/blog/how-people-are-using-claude-cowork",
+      "host": "claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-f86a3e8189",
+      "title": "Get started with Claude Cowork (Help Center)",
+      "url": "https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork",
+      "host": "support.claude.com",
+      "verdict": "ok",
+      "detail": "200",
+      "page_date": "2026-09-02",
+      "page_says": "September 2, 2026",
+      "stored": "UNVERIFIED",
+      "drift": "stored UNVERIFIED, page prints 2026-09-02"
+    },
+    {
+      "id": "r-eb3bbaf117",
+      "title": "Plans & Pricing",
+      "url": "https://claude.com/pricing",
+      "host": "claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-a6cb8cede5",
+      "title": "What is the Team plan? (Help Center)",
+      "url": "https://support.claude.com/en/articles/9266767-what-is-the-team-plan",
+      "host": "support.claude.com",
+      "verdict": "ok",
+      "detail": "200",
+      "page_date": "2026-08-18",
+      "page_says": "August 18, 2026",
+      "stored": "UNVERIFIED",
+      "drift": "stored UNVERIFIED, page prints 2026-08-18"
+    },
+    {
+      "id": "r-dbd5a58a87",
+      "title": "Is my data used for model training? (Privacy Center)",
+      "url": "https://privacy.claude.com/en/articles/10023580-is-my-data-used-for-model-training",
+      "host": "privacy.claude.com",
+      "verdict": "ok",
+      "detail": "200",
+      "page_date": "2026-03-16",
+      "page_says": "March 16, 2026",
+      "stored": "UNVERIFIED",
+      "drift": "stored UNVERIFIED, page prints 2026-03-16"
+    },
+    {
+      "id": "r-0927578f60",
+      "title": "Claude Team pricing for a small business",
+      "url": "https://www.ssdnodes.com/learn/claude-team-plans-small-business",
+      "host": "ssdnodes.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-332c2d85c1",
+      "title": "How To Use Claude Cowork To Run Your Business With AI",
+      "url": "https://www.forbes.com/sites/jodiecook/2026/02/24/how-to-use-claude-cowork-to-run-your-business-with-ai/",
+      "host": "forbes.com",
+      "verdict": "blocked",
+      "detail": "403"
+    },
+    {
+      "id": "r-4e238f0eb6",
+      "title": "Claude Cowork in 5 Minutes",
+      "url": "https://www.alliekmiller.com/claude-cowork-in-5-minutes",
+      "host": "alliekmiller.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-0bf3998d24",
+      "title": "Claude for Small Business setup (decision tree + 15 workflows)",
+      "url": "https://wotai.co/blog/claude-for-small-business",
+      "host": "wotai.co",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-adbe9bfc96",
+      "title": "Claude for Small Business plugin: 31 skills that run your operations",
+      "url": "https://www.wrightmode.com/blog/claude-cowork-small-business-plugin",
+      "host": "wrightmode.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-a95c4aacae",
+      "title": "A Comprehensive Guide to AI Training for Small Businesses",
+      "url": "https://www.uschamber.com/co/start/strategy/ai-training-guide-small-business",
+      "host": "uschamber.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-c61a03881b",
+      "title": "AI for Small Business: Explore Tools and Build Systems",
+      "url": "https://academy.score.org/course/ai-for-small-business-identify-opportunities-and-explore-tools",
+      "host": "academy.score.org",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-d75f1ea7a4",
+      "title": "AI Fluency for Nonprofits",
+      "url": "https://academy.claude.com/courses/ai-fluency-for-nonprofits",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-2124f4880d",
+      "title": "Introduction to Model Context Protocol",
+      "url": "https://academy.claude.com/courses/introduction-to-model-context-protocol",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-23979203c3",
+      "title": "Remote MCP Servers directory",
+      "url": "https://mcpservers.org/remote-mcp-servers",
+      "host": "mcpservers.org",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-743f82763f",
+      "title": "awesome-mcp-enterprise",
+      "url": "https://github.com/bh-rat/awesome-mcp-enterprise",
+      "host": "github.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-941099b02f",
+      "title": "Claude for Small Business (Back-Office AI, honest review)",
+      "url": "https://www.eigent.ai/blog/claude-for-small-business",
+      "host": "eigent.ai",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-1e88a43d53",
+      "title": "Use Claude for Excel",
+      "url": "https://claude.com/docs/office-agents/excel",
+      "host": "claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-2350921236",
+      "title": "Reduce hallucinations",
+      "url": "https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/reduce-hallucinations",
+      "host": "platform.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-4df1816c97",
+      "title": "claude-cookbooks: data_analyst_agent notebook",
+      "url": "https://github.com/anthropics/claude-cookbooks/blob/main/managed_agents/data_analyst_agent.ipynb",
+      "host": "github.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-471fa6de90",
+      "title": "claude-cookbooks: Skills notebooks",
+      "url": "https://github.com/anthropics/claude-cookbooks/tree/main/skills",
+      "host": "github.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-7592adc74e",
+      "title": "Anthropic's Prompt Engineering Interactive Tutorial",
+      "url": "https://github.com/anthropics/prompt-eng-interactive-tutorial",
+      "host": "github.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-7f2c2387f7",
+      "title": "Introducing the analysis tool in Claude.ai",
+      "url": "https://claude.com/blog/analysis-tool",
+      "host": "claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-167e97c74d",
+      "title": "Introduction to Claude Analysis",
+      "url": "https://www.codecademy.com/learn/ext-courses/introduction-to-claude-analysis",
+      "host": "codecademy.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-204c63428f",
+      "title": "15 Claude Tips for Everyday Data Analysis",
+      "url": "https://www.linkedin.com/learning/15-claude-tips-for-everyday-data-analysis",
+      "host": "linkedin.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-49725783d0",
+      "title": "Create Claude Skills for Data Tasks",
+      "url": "https://www.datacamp.com/code-along/create-claude-skills-for-data-tasks",
+      "host": "datacamp.com",
+      "verdict": "blocked",
+      "detail": "403"
+    },
+    {
+      "id": "r-2dc6c75621",
+      "title": "Introduction to Claude (code-along)",
+      "url": "https://www.datacamp.com/code-along/introduction-to-claude",
+      "host": "datacamp.com",
+      "verdict": "blocked",
+      "detail": "403"
+    },
+    {
+      "id": "r-bcd03ac245",
+      "title": "Sales Analysis with Claude: Data Driven Sales Analytics",
+      "url": "https://www.coursera.org/projects/sales-analysis-with-claude-data-driven-sales-analytics",
+      "host": "coursera.org",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-9694bcc1eb",
+      "title": "Claude Code for Data Analysis",
+      "url": "https://vincent.codes.finance/posts/claude-code-data-analysis/",
+      "host": "vincent.codes.finance",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-e334d38f4e",
+      "title": "Claude Code is secretly an excellent data analysis tool",
+      "url": "https://yang3kc.substack.com/p/claude-code-is-secretly-an-excellent",
+      "host": "yang3kc.substack.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-bc2f9d876d",
+      "title": "3 Claude Skills Every Data Scientist Needs in 2026",
+      "url": "https://towardsdatascience.com/3-claude-skills-every-data-scientist-needs-in-2026/",
+      "host": "towardsdatascience.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-d0b62d548e",
+      "title": "4 Lines You Should Include in Your Claude Skill",
+      "url": "https://towardsdatascience.com/4-lines-you-must-include-in-your-claude-skill/",
+      "host": "towardsdatascience.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-8db161ffa1",
+      "title": "Data Analysis with Claude Code — it's not just for programmers",
+      "url": "https://medium.com/data-science-collective/data-analysis-with-claude-code-its-not-just-for-programmers-08adb529a70d",
+      "host": "medium.com",
+      "verdict": "blocked",
+      "detail": "403"
+    },
+    {
+      "id": "r-f772cf9bea",
+      "title": "Claude Code for Data Analysis: Excel-Free Answers From CSVs",
+      "url": "https://ccforeveryone.com/guides/claude-code-for-data-analysts",
+      "host": "ccforeveryone.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-e638b25bdd",
+      "title": "How to Use Claude for CSV Data Analysis (The Honest Guide)",
+      "url": "https://www.qwe.edu.pl/tutorial/claude-csv-data-analysis/",
+      "host": "qwe.edu.pl",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-9878646d22",
+      "title": "Postgres MCP Pro (crystaldba/postgres-mcp)",
+      "url": "https://github.com/crystaldba/postgres-mcp",
+      "host": "github.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-298096d0e3",
+      "title": "MotherDuck / DuckDB MCP Server",
+      "url": "https://github.com/motherduckdb/mcp-server-motherduck",
+      "host": "github.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-33e0c1904b",
+      "title": "Tableau MCP (official)",
+      "url": "https://github.com/tableau/tableau-mcp",
+      "host": "github.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-68b6652318",
+      "title": "ClaudeR (R + RStudio MCP)",
+      "url": "https://github.com/IMNMV/ClaudeR",
+      "host": "github.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-ea10b7c306",
+      "title": "Design plugin (official)",
+      "url": "https://claude.com/plugins/design",
+      "host": "claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-98e29a0605",
+      "title": "knowledge-work-plugins/design/skills (source)",
+      "url": "https://github.com/anthropics/knowledge-work-plugins/tree/main/design/skills",
+      "host": "github.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-3104499980",
+      "title": "Using Claude Design for prototypes and UX",
+      "url": "https://academy.claude.com/tutorials/using-claude-design-for-prototypes-and-ux",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-762ee8eaae",
+      "title": "Get started with Claude Design (Help Center)",
+      "url": "https://support.claude.com/en/articles/14604416-get-started-with-claude-design",
+      "host": "support.claude.com",
+      "verdict": "ok",
+      "detail": "200",
+      "page_date": "2026-08-06",
+      "page_says": "August 6, 2026",
+      "stored": "UNVERIFIED",
+      "drift": "stored UNVERIFIED, page prints 2026-08-06"
+    },
+    {
+      "id": "r-84558d3fb4",
+      "title": "Set up your design system in Claude Design",
+      "url": "https://support.claude.com/en/articles/14604397-set-up-your-design-system-in-claude-design",
+      "host": "support.claude.com",
+      "verdict": "ok",
+      "detail": "200",
+      "page_date": "2026-08-06",
+      "page_says": "August 6, 2026",
+      "stored": "UNVERIFIED",
+      "drift": "stored UNVERIFIED, page prints 2026-08-06"
+    },
+    {
+      "id": "r-71acc8e921",
+      "title": "Claude Code and Figma: Set up the MCP server",
+      "url": "https://help.figma.com/hc/en-us/articles/39888612464151-Claude-Code-and-Figma-Set-up-the-MCP-server",
+      "host": "help.figma.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-60cce37401",
+      "title": "Guide to the Figma MCP server",
+      "url": "https://help.figma.com/hc/en-us/articles/32132100833559-Guide-to-the-Figma-MCP-server",
+      "host": "help.figma.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-b2dc12bc91",
+      "title": "From Claude Code to Figma: Turning Production Code into Editable Figma Designs",
+      "url": "https://www.figma.com/blog/introducing-claude-code-to-figma/",
+      "host": "figma.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-af950788ba",
+      "title": "A Designer's Guide to Claude Code",
+      "url": "https://medium.com/design-bootcamp/a-designers-guide-to-organizing-ai-skills-and-tools-in-claude-code-f87477c35b82",
+      "host": "medium.com",
+      "verdict": "blocked",
+      "detail": "403"
+    },
+    {
+      "id": "r-dfee5f2159",
+      "title": "Claude Code for Designers (Builder.io)",
+      "url": "https://www.builder.io/blog/claude-code-for-designers",
+      "host": "builder.io",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-8e4939c735",
+      "title": "Claude Code for Designers: The Complete Guide",
+      "url": "https://www.intodesignsystems.com/claude-code-for-designers",
+      "host": "intodesignsystems.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-70d0d98ee3",
+      "title": "A Better (and Cheaper) Figma MCP or How To Let Claude Design",
+      "url": "https://cianfrani.dev/posts/a-better-figma-mcp/",
+      "host": "cianfrani.dev",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-c2cf93c798",
+      "title": "How to Use Claude Design for UX/UI",
+      "url": "https://designerup.co/blog/how-to-use-claude-design-for-ux-ui/",
+      "host": "designerup.co",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-191a9fae0c",
+      "title": "Building AI-driven workflows powered by Claude Code and other tools",
+      "url": "https://uxdesign.cc/designing-with-claude-code-and-codex-cli-building-ai-driven-workflows-powered-by-code-connect-ui-f10c136ec11f",
+      "host": "uxdesign.cc",
+      "verdict": "blocked",
+      "detail": "403"
+    },
+    {
+      "id": "r-493d22de63",
+      "title": "Claude for Designers in 2026: Where AI Actually Helps",
+      "url": "https://artofstyleframe.com/blog/claude-for-designers-2026/",
+      "host": "artofstyleframe.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-519bc88a91",
+      "title": "How to Use Claude Code for UX Writing",
+      "url": "https://uxwritinghub.com/claude-code-ux-writing/",
+      "host": "uxwritinghub.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-9ee2065bff",
+      "title": "ux-writing-skill (open source)",
+      "url": "https://github.com/content-designer/ux-writing-skill",
+      "host": "github.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-8cf07e773d",
+      "title": "Field Notes from the In-Between (Building Epilogue with Claude Code)",
+      "url": "https://permissionless.krispuckett.com/",
+      "host": "permissionless.krispuckett.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-fcef8be242",
+      "title": "Kris Puckett - Becoming an AI-native designer (Dive Club)",
+      "url": "https://www.youtube.com/watch?v=nPyxVMd1LIA",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-81f87177c4",
+      "title": "Full Tutorial: From Design to Code with Claude Code (Meaghan Choi)",
+      "url": "https://creatoreconomy.so/p/full-tutorial-from-design-to-code-with-claude-code-meaghan-choi",
+      "host": "creatoreconomy.so",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-e0f2160e55",
+      "title": "A designer's first attempt at building with Claude Code",
+      "url": "https://medium.com/design-bootcamp/a-designers-first-attempt-at-building-with-claude-code-571686dfa17f",
+      "host": "medium.com",
+      "verdict": "blocked",
+      "detail": "403"
+    },
+    {
+      "id": "r-7f4279493a",
+      "title": "Design Systems in 2026: Turn Your System into a Claude Skill",
+      "url": "https://www.designsystemscollective.com/design-systems-in-2026-turn-your-system-into-a-claude-skill-3dd4d8bf5feb",
+      "host": "designsystemscollective.com",
+      "verdict": "blocked",
+      "detail": "403"
+    },
+    {
+      "id": "r-68ffabe46c",
+      "title": "Meaghan Choi - Designing Claude Code (and what's coming next)",
+      "url": "https://podcasts.apple.com/us/podcast/meaghan-choi-designing-claude-code-and-whats-coming-next/id1686414242",
+      "host": "podcasts.apple.com",
+      "verdict": "moved",
+      "detail": "301 -> https://podcasts.apple.com/us/podcast/dive-club/id1686414242"
+    },
+    {
+      "id": "r-fb8dc53be9",
+      "title": "Best practices for Claude Code",
+      "url": "https://code.claude.com/docs/en/best-practices",
+      "host": "code.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-4f437b4495",
+      "title": "Hooks reference (Claude Code)",
+      "url": "https://code.claude.com/docs/en/hooks",
+      "host": "code.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-af6e675536",
+      "title": "Orchestrate teams of Claude Code sessions",
+      "url": "https://code.claude.com/docs/en/agent-teams",
+      "host": "code.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-c4c418a887",
+      "title": "Choose a sandbox environment for Claude Code",
+      "url": "https://code.claude.com/docs/en/sandbox-environments",
+      "host": "code.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-671a36db48",
+      "title": "Agent SDK overview",
+      "url": "https://code.claude.com/docs/en/agent-sdk/overview",
+      "host": "code.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-3f564157f0",
+      "title": "Claude Code on Amazon Bedrock",
+      "url": "https://code.claude.com/docs/en/amazon-bedrock",
+      "host": "code.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-4601878d32",
+      "title": "Skill authoring best practices",
+      "url": "https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices",
+      "host": "platform.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-1564c417fe",
+      "title": "Claude Managed Agents overview",
+      "url": "https://platform.claude.com/docs/en/managed-agents/overview",
+      "host": "platform.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-42516bb950",
+      "title": "Effective context engineering for AI agents",
+      "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "host": "anthropic.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-4f67b063af",
+      "title": "Writing effective tools for agents - with agents",
+      "url": "https://www.anthropic.com/engineering/writing-tools-for-agents",
+      "host": "anthropic.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-4dd2373a00",
+      "title": "Code execution with MCP: building more efficient agents",
+      "url": "https://www.anthropic.com/engineering/code-execution-with-mcp",
+      "host": "anthropic.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-414ce4b52e",
+      "title": "Demystifying evals for AI agents",
+      "url": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents",
+      "host": "anthropic.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-97cd97d27d",
+      "title": "How we contain Claude across products",
+      "url": "https://www.anthropic.com/engineering/how-we-contain-claude",
+      "host": "anthropic.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-81e43f0350",
+      "title": "The new rules of context engineering for Claude 5 generation models",
+      "url": "https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models",
+      "host": "claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-9f1cc05b1c",
+      "title": "Maximizing the value of your Claude Code sessions",
+      "url": "https://claude.com/blog/maximizing-the-value-of-your-claude-code-sessions",
+      "host": "claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-756c6a8e02",
+      "title": "A harness for every task: dynamic workflows in Claude Code",
+      "url": "https://claude.com/blog/a-harness-for-every-task-dynamic-workflows-in-claude-code",
+      "host": "claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-7340ad4c33",
+      "title": "Claude Code 101",
+      "url": "https://academy.claude.com/courses/claude-code-101",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-cc36d642e5",
+      "title": "Building with the Claude API",
+      "url": "https://academy.claude.com/courses/building-with-the-claude-api",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-c1f2ae6b68",
+      "title": "Model Context Protocol: Advanced Topics",
+      "url": "https://academy.claude.com/courses/model-context-protocol-advanced-topics",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-ff743e0d5a",
+      "title": "Agent Skills with Anthropic",
+      "url": "https://www.deeplearning.ai/courses/agent-skills-with-anthropic",
+      "host": "deeplearning.ai",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-2bbb198498",
+      "title": "Claude Code: A Highly Agentic Coding Assistant",
+      "url": "https://www.deeplearning.ai/courses/claude-code-a-highly-agentic-coding-assistant",
+      "host": "deeplearning.ai",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-190f8f5259",
+      "title": "Claude Code (Frontend Masters)",
+      "url": "https://frontendmasters.com/courses/claude-code/",
+      "host": "frontendmasters.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-26b52d229f",
+      "title": "anthropics/claude-quickstarts",
+      "url": "https://github.com/anthropics/claude-quickstarts",
+      "host": "github.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-e683190d69",
+      "title": "anthropics/claude-agent-sdk-python",
+      "url": "https://github.com/anthropics/claude-agent-sdk-python",
+      "host": "github.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-7773ad4116",
+      "title": "anthropics/claude-code-action",
+      "url": "https://github.com/anthropics/claude-code-action",
+      "host": "github.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-57a8f3a8c5",
+      "title": "ClaudeLog",
+      "url": "https://claudelog.com/",
+      "host": "claudelog.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-881029ebe6",
+      "title": "Agentic Engineering Patterns",
+      "url": "https://simonwillison.net/guides/agentic-engineering-patterns/",
+      "host": "simonwillison.net",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-967880ec2e",
+      "title": "Code w/ Claude Developer Conference (session recordings)",
+      "url": "https://www.youtube.com/playlist?list=PLf2m23nhTg1P5BsOHUOXyQz5RhfUSSVUi",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-97df5a7a7d",
+      "title": "Build an MCP server",
+      "url": "https://modelcontextprotocol.io/docs/develop/build-server",
+      "host": "modelcontextprotocol.io",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-9f57e8bf80",
+      "title": "Head of Claude Code: What happens after coding is solved (Boris Cherny)",
+      "url": "https://www.lennysnewsletter.com/p/head-of-claude-code-what-happens",
+      "host": "lennysnewsletter.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-aac1f93a7e",
+      "title": "Prompt engineering best practices for 2026",
+      "url": "https://claude.com/blog/best-practices-for-prompt-engineering",
+      "host": "claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-5780f44af0",
+      "title": "Steering Claude Code: when to use CLAUDE.md, skills, hooks, and subagents",
+      "url": "https://claude.com/blog/steering-claude-code-skills-hooks-rules-subagents-and-more",
+      "host": "claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-4d17281029",
+      "title": "Claude Code overview and install guide",
+      "url": "https://code.claude.com/docs/en/overview",
+      "host": "code.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-7d24e5faa2",
+      "title": "Building effective agents",
+      "url": "https://www.anthropic.com/engineering/building-effective-agents",
+      "host": "anthropic.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-77ae700ce1",
+      "title": "Equipping agents for the real world with Agent Skills",
+      "url": "https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills",
+      "host": "anthropic.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-2a823a729f",
+      "title": "Building agents with the Claude Agent SDK",
+      "url": "https://www.anthropic.com/engineering/building-agents-with-the-claude-agent-sdk",
+      "host": "anthropic.com",
+      "verdict": "moved",
+      "detail": "308 -> https://claude.com/blog/building-agents-with-the-claude-agent-sdk"
+    },
+    {
+      "id": "r-d20ed293a5",
+      "title": "Claude Platform documentation home",
+      "url": "https://platform.claude.com/docs/en/home",
+      "host": "platform.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-d98aa6f2dd",
+      "title": "Claude Cookbooks",
+      "url": "https://github.com/anthropics/claude-cookbooks",
+      "host": "github.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-f606f9314f",
+      "title": "Anthropic courses: API fundamentals, prompting, evals and tool use",
+      "url": "https://github.com/anthropics/courses",
+      "host": "github.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-10ba719313",
+      "title": "anthropics/skills: example Agent Skills and the skill spec",
+      "url": "https://github.com/anthropics/skills",
+      "host": "github.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-75454d3190",
+      "title": "AI Fluency for pK-12 Educators (learning path)",
+      "url": "https://anthropic.skilljar.com/path/ai-fluency-for-pk-12-educators",
+      "host": "anthropic.skilljar.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-e42f68c371",
+      "title": "Claude Code: Software Engineering with Generative AI Agents",
+      "url": "https://www.coursera.org/learn/claude-code",
+      "host": "coursera.org",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-9189bd0cb6",
+      "title": "Next-Generation AI Assistant: Claude by Anthropic",
+      "url": "https://www.coursera.org/learn/next-generation-ai-assistant-claude-by-anthropic",
+      "host": "coursera.org",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-011e20ba3e",
+      "title": "MCP: Build Rich-Context AI Apps with Anthropic",
+      "url": "https://www.deeplearning.ai/courses/mcp-build-rich-context-ai-apps-with-anthropic",
+      "host": "deeplearning.ai",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-b5a28e4e25",
+      "title": "Claude Cowork Tutorial: How to Use Anthropic's AI Desktop Agent",
+      "url": "https://www.datacamp.com/tutorial/claude-cowork-tutorial",
+      "host": "datacamp.com",
+      "verdict": "blocked",
+      "detail": "403"
+    },
+    {
+      "id": "r-3b409df1d4",
+      "title": "How to Build an MCP Server with Python, Docker, and Claude Code",
+      "url": "https://www.freecodecamp.org/news/how-to-build-an-mcp-server-with-python-docker-and-claude-code",
+      "host": "freecodecamp.org",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-b03b4a5725",
+      "title": "Claude Code Essentials (ExamPro full course)",
+      "url": "https://www.freecodecamp.org/news/claude-code-essentials-exampro",
+      "host": "freecodecamp.org",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-13f7418861",
+      "title": "The Claude Code Handbook",
+      "url": "https://www.freecodecamp.org/news/claude-code-handbook",
+      "host": "freecodecamp.org",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-461f940892",
+      "title": "Claude Code for Product Managers",
+      "url": "https://every.to/source-code/claude-code-for-product-managers",
+      "host": "every.to",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-27f9d9ec35",
+      "title": "How to use Claude Code for non-engineering use cases",
+      "url": "https://departmentofproduct.substack.com/p/how-to-use-claude-code-for-non-engineering",
+      "host": "departmentofproduct.substack.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-e36c212931",
+      "title": "Everyone should be using Claude Code more",
+      "url": "https://www.lennysnewsletter.com/p/everyone-should-be-using-claude-code",
+      "host": "lennysnewsletter.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-0e4ddc7e7a",
+      "title": "How I AI: Claude Code for product managers, with Teresa Torres",
+      "url": "https://www.lennysnewsletter.com/p/claude-code-for-product-managers",
+      "host": "lennysnewsletter.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-56fd40ae95",
+      "title": "How to Use Claude Code: Complete Tutorial for Product Managers",
+      "url": "https://www.aakashg.com/cloud-code-tutorial-for-pm",
+      "host": "aakashg.com",
+      "verdict": "moved",
+      "detail": "301 -> https://www.aakashg.com/cloud-code-tutorial-for-pm/"
+    },
+    {
+      "id": "r-f21dc84635",
+      "title": "Getting started with Claude Cowork (Airtree course)",
+      "url": "https://www.airtree.vc/open-source-vc/claude-cowork-course",
+      "host": "airtree.vc",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-d8e6ba37a0",
+      "title": "Complete Guide to Claude Cowork (Claude Code for Everyone)",
+      "url": "https://ccforeveryone.com/cowork",
+      "host": "ccforeveryone.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-1de0b17424",
+      "title": "Build Your PM Operating System on Claude Code",
+      "url": "https://maven.com/ron-yang/claude-code-os-product-managers",
+      "host": "maven.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-f22cc5c8d7",
+      "title": "Craft a Professional AI Developer Setup (Cursor & Claude Code)",
+      "url": "https://frontendmasters.com/courses/pro-ai",
+      "host": "frontendmasters.com",
+      "verdict": "moved",
+      "detail": "301 -> http://master.dev/courses/pro-ai/"
+    },
+    {
+      "id": "r-efa0486eba",
+      "title": "MCP Python SDK",
+      "url": "https://github.com/modelcontextprotocol/python-sdk",
+      "host": "github.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-fca8ba2163",
+      "title": "MCP reference servers",
+      "url": "https://github.com/modelcontextprotocol/servers",
+      "host": "github.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-aa3fb9b26c",
+      "title": "A Guide to Claude Code 2.0 and getting better at using coding agents",
+      "url": "https://sankalp.bearblog.dev/my-experience-with-claude-code-20-and-how-to-get-better-at-using-coding-agents",
+      "host": "sankalp.bearblog.dev",
+      "verdict": "moved",
+      "detail": "301 -> https://sankalp.bearblog.dev/my-experience-with-claude-code-20-and-how-to-get-better-at-using-coding-agents/"
+    },
+    {
+      "id": "r-bb9cebd574",
+      "title": "Claude for K-12 Teachers: context steering, Projects and Skills",
+      "url": "https://phillipalcock.substack.com/p/claude-for-teachers",
+      "host": "phillipalcock.substack.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-cd019b4ce7",
+      "title": "Building a Claude Project for Teaching & Learning (recording)",
+      "url": "https://learning.northeastern.edu/ai-recordings-building-a-claude-project-for-teaching-learning",
+      "host": "learning.northeastern.edu",
+      "verdict": "moved",
+      "detail": "301 -> https://learning.northeastern.edu/ai-recordings-building-a-claude-project-for-teaching-learning/"
+    },
+    {
+      "id": "r-59f8585925",
+      "title": "AI capabilities and limitations",
+      "url": "https://academy.claude.com/courses/ai-capabilities-and-limitations",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-e686e58ab4",
+      "title": "Use Claude Cowork safely",
+      "url": "https://support.claude.com/en/articles/13364135-use-claude-cowork-safely",
+      "host": "support.claude.com",
+      "verdict": "ok",
+      "detail": "200",
+      "page_date": "2026-08-26",
+      "page_says": "August 26, 2026",
+      "stored": "UNVERIFIED",
+      "drift": "stored UNVERIFIED, page prints 2026-08-26"
+    },
+    {
+      "id": "r-55183ae43b",
+      "title": "Get started with Claude",
+      "url": "https://support.claude.com/en/articles/8114491-get-started-with-claude",
+      "host": "support.claude.com",
+      "verdict": "ok",
+      "detail": "200",
+      "page_date": "2026-06-02",
+      "page_says": "June 2, 2026",
+      "stored": "2026-06-02"
+    },
+    {
+      "id": "r-247e259c83",
+      "title": "Why do AI models hallucinate?",
+      "url": "https://academy.claude.com/tutorials/why-do-ai-models-hallucinate",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-a8a79d9da3",
+      "title": "Working smarter with Claude in PowerPoint",
+      "url": "https://academy.claude.com/tutorials/working-smarter-with-claude-in-powerpoint",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-08d8ef0b41",
+      "title": "Best practices for getting started with Claude Cowork",
+      "url": "https://claude.com/blog/best-practices-for-getting-started-with-claude-cowork",
+      "host": "claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-72da432568",
+      "title": "Real-World AI for Everyone (Specialization)",
+      "url": "https://www.coursera.org/specializations/real-world-ai-for-everyone",
+      "host": "coursera.org",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-82cab02f09",
+      "title": "Claude Cowork 7-Day Challenge: Find Practical AI Use Cases That Deliver",
+      "url": "https://www.linkedin.com/learning/claude-cowork-7-day-challenge-find-practical-ai-use-cases-that-deliver",
+      "host": "linkedin.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-f8d0474bc6",
+      "title": "Everyday Productivity with Claude Cowork",
+      "url": "https://www.linkedin.com/learning/everyday-productivity-with-claude-cowork",
+      "host": "linkedin.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-b7dbdadff8",
+      "title": "Claude 101 (DataCamp)",
+      "url": "https://www.datacamp.com/courses/claude-101",
+      "host": "datacamp.com",
+      "verdict": "blocked",
+      "detail": "403"
+    },
+    {
+      "id": "r-9f181deca1",
+      "title": "Anthropic Claude for Absolute Beginners",
+      "url": "https://www.udemy.com/course/anthropic-claude-for-absolute-beginners/",
+      "host": "udemy.com",
+      "verdict": "blocked",
+      "detail": "403"
+    },
+    {
+      "id": "r-cbd7194dc6",
+      "title": "Claude, Claude Code, Claude Cowork, and Claude in MS Office",
+      "url": "https://www.udemy.com/course/claude-ai/",
+      "host": "udemy.com",
+      "verdict": "blocked",
+      "detail": "403"
+    },
+    {
+      "id": "r-d91d3354ec",
+      "title": "Mastering Claude Cowork & AI Agents in 5 hours",
+      "url": "https://www.udemy.com/course/mastering-claude-cowork-ai-agents/",
+      "host": "udemy.com",
+      "verdict": "blocked",
+      "detail": "403"
+    },
+    {
+      "id": "r-4f8c0cb05c",
+      "title": "I tested Claude Cowork — Anthropic's new AI feels more like a coworker than a chatbot",
+      "url": "https://www.tomsguide.com/ai/i-tested-claude-cowork-anthropics-new-ai-feels-more-like-a-coworker-than-a-chatbot",
+      "host": "tomsguide.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-ac180c0d21",
+      "title": "Stop using Claude like ChatGPT — 10 prompts that unlock its real potential",
+      "url": "https://www.tomsguide.com/ai/stop-using-claude-like-chatgpt-10-prompts-that-unlock-its-real-potential",
+      "host": "tomsguide.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-2e4a3a2cf9",
+      "title": "I Took 20+ Free Claude Courses. These Are the Best",
+      "url": "https://artificialcorner.com/p/free-claude",
+      "host": "artificialcorner.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-fc4a37f0dd",
+      "title": "Claude is not one tool. It's six.",
+      "url": "https://ruben.substack.com/p/claude",
+      "host": "ruben.substack.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-94c1f2a458",
+      "title": "My Claude AI Review (2026): Is It Worth the Hype?",
+      "url": "https://learn.g2.com/claude-ai-review",
+      "host": "learn.g2.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-136c8e0f7b",
+      "title": "Claude, Claude Projects and Claude Code for Non-Coders",
+      "url": "https://www.coursera.org/learn/packt-claude-claude-projects-and-claude-code-for-non-coders-9rpmp",
+      "host": "coursera.org",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-8e6cc78d3c",
+      "title": "Product management on the AI exponential",
+      "url": "https://claude.com/blog/product-management-on-the-ai-exponential",
+      "host": "claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-72bb76da3c",
+      "title": "Product Management Plugin (official Anthropic plugin)",
+      "url": "https://claude.com/plugins/product-management",
+      "host": "claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-a4c5309fe8",
+      "title": "knowledge-work-plugins: product-management (source and README)",
+      "url": "https://github.com/anthropics/knowledge-work-plugins/tree/main/product-management",
+      "host": "github.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-672c9e928e",
+      "title": "Claude Code for Product Managers (free course, taught inside Claude Code)",
+      "url": "https://ccforpms.com/",
+      "host": "ccforpms.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-a27ad6cfc5",
+      "title": "Write a PRD with Claude Code (Module 2.1)",
+      "url": "https://ccforpms.com/advanced/write-prd",
+      "host": "ccforpms.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-d59f31f4a7",
+      "title": "Complete Guide to Claude Cowork (with 12 free interactive lessons)",
+      "url": "https://ccforpms.com/cowork",
+      "host": "ccforpms.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-2f768ad716",
+      "title": "Claude Code for PMs: The Beginner's Guide",
+      "url": "https://www.productcompass.pm/p/claude-code-beginners-guide",
+      "host": "productcompass.pm",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-db64419f9d",
+      "title": "The Guide to Claude Code for PMs",
+      "url": "https://www.productcompass.pm/p/claude-code-guide",
+      "host": "productcompass.pm",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-b15037bbf5",
+      "title": "Claude Code for Product Managers (Sachin Rekhi)",
+      "url": "https://www.sachinrekhi.com/p/claude-code-for-product-managers",
+      "host": "sachinrekhi.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-ef99edbbfd",
+      "title": "Agent-native Product Management (Every's guide)",
+      "url": "https://every.to/guides/ai-product-management-guide",
+      "host": "every.to",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-e7cf466f6e",
+      "title": "compound-engineering-plugin (Every)",
+      "url": "https://github.com/EveryInc/compound-engineering-plugin",
+      "host": "github.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-fb4eb9411b",
+      "title": "Claude Cowork for Product Managers: A Working Guide",
+      "url": "https://haverin.substack.com/p/claude-cowork-for-product-managers",
+      "host": "haverin.substack.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-89cab5ac58",
+      "title": "Claude Code for Product Managers (Builder.io)",
+      "url": "https://www.builder.io/blog/claude-code-for-product-managers",
+      "host": "builder.io",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-feff6f0299",
+      "title": "How to Use Claude Code as a Product Manager",
+      "url": "https://www.prodmgmt.world/blog/how-to-use-claude-code",
+      "host": "prodmgmt.world",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-32ae8cb5c9",
+      "title": "Claude for Product Managers: Synthesizing User Research",
+      "url": "https://www.enterpret.com/guides/claude-for-product-managers-synthesizing-user-research",
+      "host": "enterpret.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-2f2f31cea7",
+      "title": "Top 7 Claude Skills for Product Managers",
+      "url": "https://snyk.io/articles/7-claude-skills-product-managers/",
+      "host": "snyk.io",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-f707a91f9c",
+      "title": "PM Claude Code Setup (free CLAUDE.md, 6 skills, 4 templates)",
+      "url": "https://github.com/aakashg/pm-claude-code-setup",
+      "host": "github.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-1336e553a1",
+      "title": "PM Operating System (Aakash Gupta)",
+      "url": "https://www.news.aakashg.com/p/pm-os",
+      "host": "news.aakashg.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-97fb680e53",
+      "title": "Product-Manager-Skills (Dean Peters)",
+      "url": "https://github.com/deanpeters/Product-Manager-Skills",
+      "host": "github.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-07f903de70",
+      "title": "PM Skills Marketplace (Paweł Huryn)",
+      "url": "https://github.com/phuryn/pm-skills",
+      "host": "github.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-be00a47d2c",
+      "title": "Lenny's Product Skills for Claude Code",
+      "url": "https://github.com/refoundai/lenny-skills",
+      "host": "github.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-d24581da69",
+      "title": "Ralph: PRD skill plus autonomous implementation loop",
+      "url": "https://github.com/snarktank/ralph",
+      "host": "github.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-fc837da72d",
+      "title": "Claude Code for PMs Certification (Product School)",
+      "url": "https://productschool.com/certifications/claude-code",
+      "host": "productschool.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-d248774363",
+      "title": "Claude Code for Product Managers (Maven, Aman Khan and Eric Xiao)",
+      "url": "https://maven.com/aman-khan/claude-code-for-product-managers",
+      "host": "maven.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-66cc1560b7",
+      "title": "Production Ready Agentic AI PM Certification and Claude Cert Prep (Maven)",
+      "url": "https://maven.com/mahesh-yadav/genaipm",
+      "host": "maven.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-4107c13eb0",
+      "title": "Claude Code for Product Managers: Build and Ship with AI (Udemy)",
+      "url": "https://www.udemy.com/course/claude-code-for-product-manager/",
+      "host": "udemy.com",
+      "verdict": "blocked",
+      "detail": "403"
+    },
+    {
+      "id": "r-5a34250896",
+      "title": "AI Productivity (Reforge)",
+      "url": "https://www.reforge.com/courses/ai-productivity",
+      "host": "reforge.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-34348eade8",
+      "title": "Anthropic Academy — Courses hub",
+      "url": "https://claude.com/resources/courses",
+      "host": "claude.com",
+      "verdict": "moved",
+      "detail": "301 -> https://academy.claude.com/courses"
+    },
+    {
+      "id": "r-202ab388df",
+      "title": "Plan your literature review",
+      "url": "https://academy.claude.com/use-cases/plan-your-literature-review",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-fbf7764058",
+      "title": "Use research on Claude",
+      "url": "https://support.claude.com/en/articles/11088861-use-research-on-claude",
+      "host": "support.claude.com",
+      "verdict": "ok",
+      "detail": "200",
+      "page_date": "2026-06-02",
+      "page_says": "June 2, 2026",
+      "stored": "2026-06-02"
+    },
+    {
+      "id": "r-6840ddca47",
+      "title": "What are Projects?",
+      "url": "https://support.claude.com/en/articles/9517075-what-are-projects",
+      "host": "support.claude.com",
+      "verdict": "ok",
+      "detail": "200",
+      "page_date": "2026-07-23",
+      "page_says": "July 23, 2026",
+      "stored": "2026-07-23"
+    },
+    {
+      "id": "r-bc0bf45882",
+      "title": "Anthropic's AI for Science Program",
+      "url": "https://support.claude.com/en/articles/11199177-anthropic-s-ai-for-science-program",
+      "host": "support.claude.com",
+      "verdict": "ok",
+      "detail": "200",
+      "page_date": "2026-03-16",
+      "page_says": "March 16, 2026",
+      "stored": "2026-03-16"
+    },
+    {
+      "id": "r-7bd8f10ea7",
+      "title": "How scientists are using Claude to accelerate research",
+      "url": "https://www.anthropic.com/news/accelerating-scientific-research",
+      "host": "anthropic.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-9c36e115d1",
+      "title": "Claude Code & CoWork for Academics (Beginner Guide, Part 1)",
+      "url": "https://effortlessacademic.com/claude-code-and-cowork-for-academics-beginner-guide-part-1/",
+      "host": "effortlessacademic.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-c049dd93a9",
+      "title": "Claude Skills for Academics (Beginner Tutorial, Part 2)",
+      "url": "https://effortlessacademic.com/claude-skills-for-academics-beginner-tutorial-part-2/",
+      "host": "effortlessacademic.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-4ccc667a90",
+      "title": "Connect and integrate your local Zotero library with Claude Cowork",
+      "url": "https://effortlessacademic.com/connect-and-integrate-your-local-zotero-library-with-claude-cowork/",
+      "host": "effortlessacademic.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-f07cb214cf",
+      "title": "zotero-mcp (54yyyu)",
+      "url": "https://github.com/54yyyu/zotero-mcp",
+      "host": "github.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-5c5ac639b4",
+      "title": "zotero-mcp-setup (GUI installer)",
+      "url": "https://github.com/ehawkin/zotero-mcp-setup",
+      "host": "github.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-69ee3c03e3",
+      "title": "Claude AI and Literature Reviews: An Experiment in Utility and Ethical Use",
+      "url": "https://muse.jhu.edu/article/961199",
+      "host": "muse.jhu.edu",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-3f8ff6f3f3",
+      "title": "Claude for medical literature search: Avoid hallucinations",
+      "url": "https://lszabo.me/posts/ai-literature-search/",
+      "host": "lszabo.me",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-2546202143",
+      "title": "Claude Researcher — source-first literature review workflows",
+      "url": "https://www.clauderesearcher.com/",
+      "host": "clauderesearcher.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-e3ed1d9671",
+      "title": "Academic Research with Claude (live seminar)",
+      "url": "https://aihorizons.io/Seminars/claude-academic-research/",
+      "host": "aihorizons.io",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-0ccfc4f72a",
+      "title": "Mushtaq Bilal — Claude for Academic Writing & Research",
+      "url": "https://mushtaqbilalphd.kit.com/",
+      "host": "mushtaqbilalphd.kit.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-146910f648",
+      "title": "ICMJE Recommendations — Use of AI in Publishing",
+      "url": "https://www.icmje.org/recommendations/browse/artificial-intelligence/",
+      "host": "icmje.org",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-629221ff05",
+      "title": "Nature Portfolio — Artificial Intelligence (AI) editorial policy",
+      "url": "https://www.nature.com/nature-portfolio/editorial-policies/ai",
+      "host": "nature.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-c9d6b82a9d",
+      "title": "Elsevier — Generative AI policies for journals",
+      "url": "https://www.elsevier.com/about/policies-and-standards/generative-ai-policies-for-journals",
+      "host": "elsevier.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-ef2bed3787",
+      "title": "IEEE — Author Guidelines for AI-Generated Text",
+      "url": "https://open.ieee.org/author-guidelines-for-artificial-intelligence-ai-generated-text/",
+      "host": "open.ieee.org",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-1cbd9f78df",
+      "title": "AI Fluency for students",
+      "url": "https://academy.claude.com/courses/ai-fluency-for-students",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-cb786e071f",
+      "title": "Use Claude for Education at your university",
+      "url": "https://support.claude.com/en/articles/11139144-use-claude-for-education-at-your-university",
+      "host": "support.claude.com",
+      "verdict": "ok",
+      "detail": "200",
+      "page_date": "2026-07-13",
+      "page_says": "July 13, 2026",
+      "stored": "2026-07-13"
+    },
+    {
+      "id": "r-3bac54ee56",
+      "title": "Anthropic Education Report: How University Students Use Claude",
+      "url": "https://www.anthropic.com/news/anthropic-education-report-how-university-students-use-claude",
+      "host": "anthropic.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-8b2f0f4a8a",
+      "title": "Advancing Claude for Education",
+      "url": "https://www.anthropic.com/news/advancing-claude-for-education",
+      "host": "anthropic.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-5b2948fb9d",
+      "title": "Claude Campus Program",
+      "url": "https://claude.com/programs/campus",
+      "host": "claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-16c564ede1",
+      "title": "Claude for higher education",
+      "url": "https://claude.com/solutions/education",
+      "host": "claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-97422c936b",
+      "title": "Using Claude Learning Mode to Study",
+      "url": "https://learning.northeastern.edu/ai-student-guides-using-claude-learning-mode-to-study",
+      "host": "learning.northeastern.edu",
+      "verdict": "moved",
+      "detail": "301 -> https://learning.northeastern.edu/ai-student-guides-using-claude-learning-mode-to-study/"
+    },
+    {
+      "id": "r-8d1272151b",
+      "title": "AI-Powered Flashcards with Claude Projects",
+      "url": "https://learning.northeastern.edu/ai-student-guides-using-ai-powered-flashcards-with-claude-projects/",
+      "host": "learning.northeastern.edu",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-7d748fd3ef",
+      "title": "How to Use AI to Help You Prepare for Quizzes and Exams",
+      "url": "https://learning.northeastern.edu/ai-student-guides-using-ai-to-help-prepare-for-quizzes-and-exams/",
+      "host": "learning.northeastern.edu",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-8e050ee72e",
+      "title": "How to Set Up a Claude Project that Answers Questions about Your Class",
+      "url": "https://learning.northeastern.edu/ai-student-guides-claude-project-to-answer-questions-about-class/",
+      "host": "learning.northeastern.edu",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-e7a2c56f78",
+      "title": "Using AI for Writing Feedback",
+      "url": "https://learning.northeastern.edu/ai-student-guides-using-ai-for-writing-feedback/",
+      "host": "learning.northeastern.edu",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-6bdd922cd9",
+      "title": "Claude for Education Is Made for Learning",
+      "url": "https://www.digital.pitt.edu/news/pantherbytes-blog/claude-education-made-learning",
+      "host": "digital.pitt.edu",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-f5fd0dec58",
+      "title": "Claude for Education at Northumbria",
+      "url": "https://www.northumbria.ac.uk/about-us/university-services/it-services/student-digital-induction/claude-for-education/",
+      "host": "northumbria.ac.uk",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-8b7a1fe21d",
+      "title": "Claude Enterprise at Syracuse University",
+      "url": "https://its.syr.edu/claude",
+      "host": "its.syr.edu",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-8ba6552609",
+      "title": "Plagiarism and Academic Integrity 101 in the Age of AI",
+      "url": "https://libguides.tulane.edu/c.php?g=1518597",
+      "host": "libguides.tulane.edu",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-cb8b07b3f1",
+      "title": "Acknowledging AI tools and technologies",
+      "url": "https://students.unimelb.edu.au/academic-skills/academic-integrity/acknowledging-use-of-ai-tools-and-technologies",
+      "host": "students.unimelb.edu.au",
+      "verdict": "blocked",
+      "detail": "403"
+    },
+    {
+      "id": "r-bc9341d0f4",
+      "title": "Referencing AI and Acknowledging AI Use",
+      "url": "https://warwick.libguides.com/artificialintelligence/Referencing",
+      "host": "warwick.libguides.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-57225bbae4",
+      "title": "Documenting Your AI Use",
+      "url": "https://libguides.stkate.edu/generativeai/documentingAI",
+      "host": "libguides.stkate.edu",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-960acd1524",
+      "title": "Disclosing the Use of AI",
+      "url": "https://libguides.princeton.edu/generativeAI/disclosure",
+      "host": "libguides.princeton.edu",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-19d3c9dd56",
+      "title": "Using AI in university",
+      "url": "https://www.unsw.edu.au/student/managing-your-studies/academic-skills-support/toolkit/ai",
+      "host": "unsw.edu.au",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-504ad565db",
+      "title": "AI for Students",
+      "url": "https://www.monash.edu/ai/ai-for-students",
+      "host": "monash.edu",
+      "verdict": "blocked",
+      "detail": "403"
+    },
+    {
+      "id": "r-25cc7a8b0d",
+      "title": "2026 Student Guide to Artificial Intelligence",
+      "url": "https://studentguidetoai.org/",
+      "host": "studentguidetoai.org",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-9d1939cf1e",
+      "title": "AI Student Research Guide: Prompt Engineering",
+      "url": "https://westmoreland.libguides.com/AIStu/prompt",
+      "host": "westmoreland.libguides.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-0723e82a39",
+      "title": "Generative AI and Academic Integrity",
+      "url": "https://libguides.csun.edu/ai/generative-ai-and-academic-integrity",
+      "host": "libguides.csun.edu",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-44f5f08b9e",
+      "title": "AI feedback customized for student writers: the updated PAIRR prompts",
+      "url": "https://annamills.substack.com/p/ai-feedback-customized-for-student",
+      "host": "annamills.substack.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-521c6b7dca",
+      "title": "Peer and AI Review of Student Writing with Marit MacArthur and Anna Mills",
+      "url": "https://intentionalteaching.buzzsprout.com/2069949/episodes/18007554-peer-and-ai-review-of-student-writing-with-marit-macarthur-and-anna-mills",
+      "host": "intentionalteaching.buzzsprout.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-5ef57a95ef",
+      "title": "AI Fluency for Educators (Anthropic Academy)",
+      "url": "https://academy.claude.com/courses/ai-fluency-for-educators",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-f3637f97bc",
+      "title": "Teaching AI Fluency (Anthropic Academy)",
+      "url": "https://academy.claude.com/courses/teaching-ai-fluency",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-32b6bdef8a",
+      "title": "AI Fluency for pK-12 Educators",
+      "url": "https://academy.claude.com/courses/ai-fluency-for-k-12-educators",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-f916cddec9",
+      "title": "AI Fluency for pK-12 Train the Trainer",
+      "url": "https://academy.claude.com/courses/ai-fluency-for-pk-12-train-the-trainer",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-d26fb9ba53",
+      "title": "The AI Fluency Framework - open educational resources hub",
+      "url": "https://aifluencyframework.org/",
+      "host": "aifluencyframework.org",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-d37ce11fa5",
+      "title": "Introducing Claude for Teachers",
+      "url": "https://www.anthropic.com/news/claude-for-teachers",
+      "host": "anthropic.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-8f0d9dff87",
+      "title": "Claude for K-12 teachers - product page with worked prompts",
+      "url": "https://claude.com/solutions/teachers",
+      "host": "claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-5aa9ca06c5",
+      "title": "Claude for Teachers: your data and our terms",
+      "url": "https://support.claude.com/en/articles/15926041-claude-for-teachers-your-data-and-our-terms",
+      "host": "support.claude.com",
+      "verdict": "ok",
+      "detail": "200",
+      "page_date": "2026-08-28",
+      "page_says": "August 28, 2026",
+      "stored": "UNVERIFIED",
+      "drift": "stored UNVERIFIED, page prints 2026-08-28"
+    },
+    {
+      "id": "r-c7fbf92520",
+      "title": "Agent Skills for K-12 Teachers (open source)",
+      "url": "https://github.com/anthropics/k12-teacher-skills",
+      "host": "github.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-ea39152439",
+      "title": "Anthropic Education Report: how educators use Claude",
+      "url": "https://www.anthropic.com/news/anthropic-education-report-how-educators-use-claude",
+      "host": "anthropic.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-fccfc16f07",
+      "title": "Practical ways to get started using Claude for educators",
+      "url": "https://www.ajjuliani.com/blog/practical-ways-to-get-started-using-claude-for-educators",
+      "host": "ajjuliani.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-a6467110a1",
+      "title": "The Ultimate Claude Guide for Teachers",
+      "url": "https://paulmatthews.substack.com/p/the-ultimate-claude-guide-for-teachers",
+      "host": "paulmatthews.substack.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-7bf1e57560",
+      "title": "Claude AI for Teachers - the practical guide",
+      "url": "https://learning-claude.com/teachers/",
+      "host": "learning-claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-6cee334566",
+      "title": "43 Claude Skills for college teachers",
+      "url": "https://howtoteachwithai.substack.com/p/43-claude-skills-that-give-you-the",
+      "host": "howtoteachwithai.substack.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-edbff45289",
+      "title": "Why is Claude for Teachers? (critical hands-on review)",
+      "url": "https://buildcognitiveresonance.substack.com/p/why-is-claude-for-teachers",
+      "host": "buildcognitiveresonance.substack.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-76de44b7a7",
+      "title": "Anthropic launched Claude for Teachers. We blocked it for our district.",
+      "url": "https://drjoephillips.substack.com/p/anthropic-launched-claude-for-teachers",
+      "host": "drjoephillips.substack.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-1b3a17375f",
+      "title": "AI in assignment design - Cornell Center for Teaching Innovation",
+      "url": "https://teaching.cornell.edu/generative-artificial-intelligence/ai-assignment-design",
+      "host": "teaching.cornell.edu",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-3ef5584cd6",
+      "title": "The AI Assessment Scale (AIAS)",
+      "url": "https://aiassessmentscale.com/",
+      "host": "aiassessmentscale.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-1b663b7646",
+      "title": "Guidance on AI detection, and why we're disabling Turnitin's AI detector",
+      "url": "https://www.vanderbilt.edu/brightspace/2023/08/16/guidance-on-ai-detection-and-why-were-disabling-turnitins-ai-detector/",
+      "host": "vanderbilt.edu",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-71c0227d56",
+      "title": "Using AI in education settings: support materials (UK DfE)",
+      "url": "https://www.gov.uk/government/collections/using-ai-in-education-settings-support-materials",
+      "host": "gov.uk",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-6b4b766e56",
+      "title": "The Australian Framework for Generative AI in Schools",
+      "url": "https://www.education.gov.au/schooling/resources/australian-framework-generative-artificial-intelligence-ai-schools",
+      "host": "education.gov.au",
+      "verdict": "blocked",
+      "detail": "known to refuse automation: Times out from a GitHub Actions runner, every time. Verified alive in"
+    },
+    {
+      "id": "r-b19d02a867",
+      "title": "UNESCO AI competency framework for teachers",
+      "url": "https://www.unesco.org/en/articles/ai-competency-framework-teachers",
+      "host": "unesco.org",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-6a15e8b9c3",
+      "title": "Ethical guidelines on the use of AI and data in teaching and learning for educators (EU)",
+      "url": "https://education.ec.europa.eu/focus-topics/digital-education/actions/plan/ethical-guidelines-for-educators-on-using-artificial-intelligence",
+      "host": "education.ec.europa.eu",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-11991cab3c",
+      "title": "Day of AI - free K-12 AI literacy curriculum (MIT RAISE)",
+      "url": "https://dayofai.org/teachers/",
+      "host": "dayofai.org",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-6da5a506f4",
+      "title": "Empowering Education Leaders: a toolkit for safe, ethical and equitable AI integration",
+      "url": "https://files.eric.ed.gov/fulltext/ED661924.pdf",
+      "host": "files.eric.ed.gov",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-657d7f5084",
+      "title": "Understanding Claude's Personalization Features",
+      "url": "https://support.claude.com/en/articles/10185728-understanding-claude-s-personalization-features",
+      "host": "support.claude.com",
+      "verdict": "ok",
+      "detail": "200",
+      "page_date": "2026-08-19",
+      "page_says": "August 19, 2026",
+      "stored": "UNVERIFIED",
+      "drift": "stored UNVERIFIED, page prints 2026-08-19"
+    },
+    {
+      "id": "r-6bf4b71e18",
+      "title": "How Can I Create and Manage Projects?",
+      "url": "https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects",
+      "host": "support.claude.com",
+      "verdict": "ok",
+      "detail": "200",
+      "page_date": "2026-09-03",
+      "page_says": "September 3, 2026",
+      "stored": "UNVERIFIED",
+      "drift": "stored UNVERIFIED, page prints 2026-09-03"
+    },
+    {
+      "id": "r-36de89a1ed",
+      "title": "Organize Your Tasks With Projects in Claude Cowork",
+      "url": "https://support.claude.com/en/articles/14116274-organize-your-tasks-with-projects-in-claude-cowork",
+      "host": "support.claude.com",
+      "verdict": "ok",
+      "detail": "200",
+      "page_date": "2026-09-03",
+      "page_says": "September 3, 2026",
+      "stored": "UNVERIFIED",
+      "drift": "stored UNVERIFIED, page prints 2026-09-03"
+    },
+    {
+      "id": "r-1d0918b7b1",
+      "title": "Multilingual Support",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/multilingual-support",
+      "host": "platform.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-d84a7c8cbe",
+      "title": "Wikipedia:Signs of AI writing",
+      "url": "https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing",
+      "host": "en.wikipedia.org",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-3edab99ecf",
+      "title": "The Ethics of Using AI",
+      "url": "https://ethicscentral.org/the-ethics-of-using-ai/",
+      "host": "ethicscentral.org",
+      "verdict": "blocked",
+      "detail": "403"
+    },
+    {
+      "id": "r-e925795001",
+      "title": "Proposed Revisions to SPJ's Code of Ethics (2026)",
+      "url": "https://www.spj.org/spj-ethics-code-revision-project-2026/",
+      "host": "spj.org",
+      "verdict": "blocked",
+      "detail": "403"
+    },
+    {
+      "id": "r-f0efbc24c6",
+      "title": "Creating a Public AI Policy for Your Newsroom",
+      "url": "https://www.theopennotebook.com/2026/08/11/creating-a-public-ai-policy-for-your-newsroom/",
+      "host": "theopennotebook.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-5c65e32476",
+      "title": "The Guardian Updates Its AI Policies Around Training, Trust and In-House Tools",
+      "url": "https://www.journalism.co.uk/the-guardian-updates-its-ai-policies-training-trust-and-in-house-tools/",
+      "host": "journalism.co.uk",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-df4ca9e8a9",
+      "title": "How Three Newsrooms Are Charting Different Paths for AI Use",
+      "url": "https://www.niemanlab.org/2026/07/how-three-newsrooms-are-charting-different-paths-for-ai-use/",
+      "host": "niemanlab.org",
+      "verdict": "blocked",
+      "detail": "403"
+    },
+    {
+      "id": "r-6a6a4daf55",
+      "title": "AP Sets New AI Standards for Newsroom Use",
+      "url": "https://mediacopilot.ai/ap-ai-newsroom-standards-update/",
+      "host": "mediacopilot.ai",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-da0e8aedbc",
+      "title": "How to Stop Claude Writing Like an AI",
+      "url": "https://willfrancis.com/how-to-stop-claude-writing-like-an-ai/",
+      "host": "willfrancis.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-0d49487f31",
+      "title": "How to Spot AI Writing, According to Wikipedia",
+      "url": "https://www.beutlerink.com/blog/how-to-spot-ai-writing",
+      "host": "beutlerink.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-a66ab760f9",
+      "title": "avoid-ai-writing (Claude Code / agent skill)",
+      "url": "https://github.com/conorbronsdon/avoid-ai-writing",
+      "host": "github.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-300126c401",
+      "title": "Claude Skills for Journalism, Media & Academia",
+      "url": "https://github.com/jamditis/claude-skills-journalism",
+      "host": "github.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-a03d9d3031",
+      "title": "Claude for Localization: Stop Starting Every Project from Zero",
+      "url": "https://localizelikeapro.com/claude-for-localization-stop-starting-every-project-from-zero/",
+      "host": "localizelikeapro.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-020cf5d9f6",
+      "title": "Claude, Editor",
+      "url": "https://restructurednews.substack.com/p/claude-editor",
+      "host": "restructurednews.substack.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-febccc2bee",
+      "title": "Claude AI for Writing: The Complete Guide for Authors and Content Creators",
+      "url": "https://kenny-kane.com/blog/claude-ai-for-writing",
+      "host": "kenny-kane.com",
+      "verdict": "moved",
+      "detail": "301 -> http://kenny-kane.com/books"
+    },
+    {
+      "id": "r-3b623d0e24",
+      "title": "Set Your Standards Before You Start: A Journalist's Journey Using Claude.md",
+      "url": "https://medium.com/@stephenstirling/set-your-standards-before-you-start-a-journalists-journey-using-claude-md-744b02bb4210",
+      "host": "medium.com",
+      "verdict": "blocked",
+      "detail": "403"
+    },
+    {
+      "id": "r-7f8fb0cc8e",
+      "title": "How I Use Claude Cowork to Write With AI in My Voice",
+      "url": "https://ranthebuilder.cloud/blog/how-i-use-claude-cowork-to-write-with-ai-in-my-voice/",
+      "host": "ranthebuilder.cloud",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-158b800917",
+      "title": "Claude AI Comprehensive Guide",
+      "url": "https://www.coursera.org/learn/claude-ai-comprehensive-guide",
+      "host": "coursera.org",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-c8ea212793",
+      "title": "Getting started with Claude.ai",
+      "url": "https://www.youtube.com/watch?v=0vZ_UVLhSQQ",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-5a3db6848c",
+      "title": "Getting started with projects in Claude.ai",
+      "url": "https://www.youtube.com/watch?v=GJ5jTgcbRHA",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-638606c3f0",
+      "title": "Getting started with research in Claude.ai",
+      "url": "https://www.youtube.com/watch?v=R-KJgjIrh24",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-ac6eff0ef2",
+      "title": "What are skills?",
+      "url": "https://www.youtube.com/watch?v=bjdBVZa66oU",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-f4a911fbc0",
+      "title": "Getting started with Claude Cowork",
+      "url": "https://www.youtube.com/watch?v=Lbml7IuGJYw",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-2f546497f1",
+      "title": "Getting started with Claude in Excel",
+      "url": "https://www.youtube.com/watch?v=54BdUqMQUMI",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-7720f251bd",
+      "title": "Lesson 1: Introduction to AI Fluency | AI Fluency: Framework & Foundations Course |",
+      "url": "https://www.youtube.com/watch?v=JpGtOfSgR-c",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-df3de5cb89",
+      "title": "Lesson 2B: The 4D Framework | AI Fluency: Framework & Foundations Course",
+      "url": "https://www.youtube.com/watch?v=W4Ua6XFfX9w",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-e54eb50967",
+      "title": "Lesson 7: Effective prompting techniques (Deep Dive) | AI Fluency: Framework & Foundations Course",
+      "url": "https://www.youtube.com/watch?v=2YCaBqP8muw",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-e6aff5f442",
+      "title": "AI prompt engineering: A deep dive",
+      "url": "https://www.youtube.com/watch?v=T9aRN5JkmL8",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-a4e8419f79",
+      "title": "Prompting 101 | Code w/ Claude",
+      "url": "https://www.youtube.com/watch?v=ysPbXH0LpIE",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-8f05ffaa7f",
+      "title": "What is Claude Code?",
+      "url": "https://www.youtube.com/watch?v=fl1DSmwQKKY",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-7f3c49d115",
+      "title": "The CLAUDE.md file",
+      "url": "https://www.youtube.com/watch?v=O0FGCxkHM-U",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-927657d732",
+      "title": "The Explore → Plan → Code → Commit workflow in Claude Code",
+      "url": "https://www.youtube.com/watch?v=xJQuF02NAK8",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-91bd3a4786",
+      "title": "MCP in Claude Code",
+      "url": "https://www.youtube.com/watch?v=kkBFmwkDzdo",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-e09981c25f",
+      "title": "Mastering Claude Code in 30 minutes",
+      "url": "https://www.youtube.com/watch?v=6eBSHbLKuN0",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-ed4346440d",
+      "title": "Claude Code best practices | Code w/ Claude",
+      "url": "https://www.youtube.com/watch?v=gv0WHhKelSE",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-060f30c2a1",
+      "title": "Beyond the basics with Claude Code",
+      "url": "https://www.youtube.com/watch?v=tuY2ChJIx48",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-439ea99e4e",
+      "title": "The Model Context Protocol (MCP)",
+      "url": "https://www.youtube.com/watch?v=CQywdSdi5iA",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-0006a6ee09",
+      "title": "Tips for building AI agents",
+      "url": "https://www.youtube.com/watch?v=LP5OCa20Zpg",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-9d3aadf6a3",
+      "title": "Claude Code for Beginners Tutorial [Full Course]",
+      "url": "https://www.youtube.com/watch?v=gh2_PhgZGsM",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-fe5b9ebe20",
+      "title": "Claude Code Tutorial - Build Apps 10x Faster with AI",
+      "url": "https://www.youtube.com/watch?v=IuyVVtr1uhY",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-a5e8a7bac1",
+      "title": "Claude Code Crash Course For Developers",
+      "url": "https://www.youtube.com/watch?v=C2GpeepcmYs",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-c01814ac25",
+      "title": "Complete Claude Code Course In 2 Hours For Developers",
+      "url": "https://www.youtube.com/watch?v=TAKDIvvUdc4",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-29661436b2",
+      "title": "CLAUDE CODE Full Course For Beginners (DATA DOMAIN Edition)",
+      "url": "https://www.youtube.com/watch?v=lkc-F5I8gFE",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-6419a4a3bf",
+      "title": "My Claude Code Workflow for 2026",
+      "url": "https://www.youtube.com/watch?v=sy65ARFI9Bg",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-0d9d05fefc",
+      "title": "How I use Claude Code for real engineering",
+      "url": "https://www.youtube.com/watch?v=kZ-zzHVUrO4",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-b05c78ed77",
+      "title": "Red Green Refactor is OP With Claude Code",
+      "url": "https://www.youtube.com/watch?v=hYZdIwFIy-c",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-5d7c70895f",
+      "title": "Claude Code Task System: ANTI-HYPE Agentic Coding (Advanced)",
+      "url": "https://www.youtube.com/watch?v=4_2j5wgt_ds",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-bb41b4ccac",
+      "title": "Parallel Claude Code + Git Worktrees: This Setup Will Change How You Ship",
+      "url": "https://www.youtube.com/watch?v=rFGlJ4oIlhw",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-02984ea890",
+      "title": "Git Worktrees Explained — Run Multiple AI Agents in Parallel (Claude Code Tutorial)",
+      "url": "https://www.youtube.com/watch?v=n35KalqEwJc",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-0cef6247ae",
+      "title": "Completely understand hooks in less than 20 minutes",
+      "url": "https://www.youtube.com/watch?v=03CfGf9iw_U",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-a2105632bc",
+      "title": "Hooks in Claude Code — Full Theory + Practical Use | CampusX",
+      "url": "https://www.youtube.com/watch?v=oo1oADOiVmM",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-ef1045fa72",
+      "title": "Claude Code Headless Automation & Agent Workflows",
+      "url": "https://www.youtube.com/watch?v=lY_QdF0Nnio",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-c8d8026843",
+      "title": "Claude Code Sub-Agents: Step-by-Step Beginner Tutorial",
+      "url": "https://www.youtube.com/watch?v=MbKUeufUZIY",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-72f66fc93f",
+      "title": "Stop Confusing Skills and Subagents in Claude Code (Watch This)",
+      "url": "https://www.youtube.com/watch?v=byhjo2shK4o",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-897ecaef49",
+      "title": "Claude Code Skills + Subagents: Build a Security Scanner",
+      "url": "https://www.youtube.com/watch?v=VFLieg8JjLA",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-646ba2376f",
+      "title": "8 Claude Code Skills Every Developer Needs in 2026",
+      "url": "https://www.youtube.com/watch?v=Va-U1dqhwzk",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-019479b8e5",
+      "title": "How Model Context Protocol (MCP) actually works",
+      "url": "https://www.youtube.com/watch?v=cGuyrANVi4A",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-59c1cdaa47",
+      "title": "MCP Tutorial for Beginners: Connect Claude to Any Tool (2026)",
+      "url": "https://www.youtube.com/watch?v=40k3SIwlFVM",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-86179f9b6f",
+      "title": "Build an MCP Server from Scratch in 2026 | Local, Remote, OAuth & Claude Skills",
+      "url": "https://www.youtube.com/watch?v=YKIUt9ytxIE",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-f1a6a369d2",
+      "title": "Claude Agent SDK [Full Workshop] — Thariq Shihipar, Anthropic",
+      "url": "https://www.youtube.com/watch?v=TqC1qOfiVcQ",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-b108b1b8f6",
+      "title": "You Can Build The Craziest Things with Claudes Agent SDK",
+      "url": "https://www.youtube.com/watch?v=ChaQ_tZDBFg",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-6b9e11235c",
+      "title": "I Built an Agentic Software Factory with Codex and Claude Code",
+      "url": "https://www.youtube.com/watch?v=AbpyqAfxZ8c",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-7dac023c0c",
+      "title": "How I Use Claude Code as a Data Analyst (10 Real Use Cases)",
+      "url": "https://www.youtube.com/watch?v=XzpgAzLWjmQ",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-70115e8537",
+      "title": "Claude AI Tutorial for Beginners (Step-by-Step)",
+      "url": "https://www.youtube.com/watch?v=r2vYObllqJU",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-496c145f5c",
+      "title": "Full Claude Tutorial: Beginner to Advanced in 19 Minutes",
+      "url": "https://www.youtube.com/watch?v=WSPChlfxJyA",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-c05fa5a028",
+      "title": "FULL Claude Tutorial for Beginners in 2026! (Become a PRO!)",
+      "url": "https://www.youtube.com/watch?v=rRrBbyv3ChM",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-143f1aa35d",
+      "title": "FULL Claude Tutorial For Beginners in 2026! (FULL COURSE)",
+      "url": "https://www.youtube.com/watch?v=Xg55nTrbYYY",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-9b8a0da5f7",
+      "title": "Claude AI Step-by-Step: The Beginner's Blueprint for Real Results",
+      "url": "https://www.youtube.com/watch?v=s2VGBpREoek",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-1eac95e29e",
+      "title": "NEW: Claude's 'Super Prompts' Will Save You DAYS of Work (Full Tutorial + Demo)",
+      "url": "https://www.youtube.com/watch?v=UaJhYp7Tql4",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-d626dfd75e",
+      "title": "How to Use Claude Projects (Full Tutorial)",
+      "url": "https://www.youtube.com/watch?v=w7_yWjYyxjE",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-6191435073",
+      "title": "Learn 80% of Claude Cowork in Under 20 Minutes",
+      "url": "https://www.youtube.com/watch?v=z9rdrNrkvDY",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-fb2d847a41",
+      "title": "My Simple Claude Cowork System (for normal people)",
+      "url": "https://www.youtube.com/watch?v=0_dSWLOHKng",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-51c2e80e44",
+      "title": "The ONLY Claude Cowork Tutorial You'll Ever Need in 2026",
+      "url": "https://www.youtube.com/watch?v=PnPsf-hwGtI",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-5ef8f24b43",
+      "title": "Claude AI for Researchers: Projects, Skills, Cowork & Consensus Explained",
+      "url": "https://www.youtube.com/watch?v=QqNXf7DfSpA",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-6102637486",
+      "title": "How To Use Claude For Academic Research (My Actual AI Stack)",
+      "url": "https://www.youtube.com/watch?v=GWtx-d3dALQ",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-9dbd5f5607",
+      "title": "3 Mind Blowing Claude & Consensus Research Workflows | No Coding",
+      "url": "https://www.youtube.com/watch?v=cWUifkGd9Ws",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-0545b73dfe",
+      "title": "Claude Cowork for Academics: Full Setup & Use Cases",
+      "url": "https://www.youtube.com/watch?v=ldwjRjx8xIQ",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-598bb88527",
+      "title": "Claude AI for Teachers: Complete Beginner's Guide to Getting Started (Projects, Prompts & More)",
+      "url": "https://www.youtube.com/watch?v=vP4yIEwO0k8",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-a80189a012",
+      "title": "How Teachers Can Create Interactive Classroom Activities with AI (Claude Artefacts Tutorial)",
+      "url": "https://www.youtube.com/watch?v=LHSt4lhpxf4",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-1446dfba71",
+      "title": "Claude Design: The Complete Guide",
+      "url": "https://www.youtube.com/watch?v=eXlSgQmz02E",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-1cab275cb5",
+      "title": "Claude Design Tutorial for Designers | First Look + Full Walkthrough!",
+      "url": "https://www.youtube.com/watch?v=o7HSVPHCX8I",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-0d2b1cdbba",
+      "title": "Claude Code for product managers: research, writing, context libraries, custom to-do system, more",
+      "url": "https://www.youtube.com/watch?v=oBho3hZ7MHM",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-76a7a8999e",
+      "title": "Claude Code for Product Managers with Sachin Rekhi",
+      "url": "https://www.youtube.com/watch?v=zsAAaY8a63Q",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-8897af0a88",
+      "title": "Claude Cowork: The Ultimate AI Agent for Writers (Full Tutorial)",
+      "url": "https://www.youtube.com/watch?v=oFe_ho_MwW0",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-11acf1db6f",
+      "title": "Claude Cowork Just Changed How You Do Marketing",
+      "url": "https://www.youtube.com/watch?v=FAEKF-nr3D0",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-c2dd3f226c",
+      "title": "Anthropic Just Dropped Claude for Small Businesses (31 Skills)",
+      "url": "https://www.youtube.com/watch?v=zzo33HUOfxI",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-023b082bb5",
+      "title": "How to setup Claude for Small Business",
+      "url": "https://www.youtube.com/watch?v=EYOKSYe7zC0",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-b857f5251c",
+      "title": "Master Claude for Excel in 10 Minutes: Financial Modeling",
+      "url": "https://www.youtube.com/watch?v=iEh53QLluNw",
+      "host": "youtube.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-bf694c1746",
+      "title": "How Anthropic's Growth Marketing team cut ad creation from 30 minutes to 30 seconds",
+      "url": "https://claude.com/blog/how-anthropic-uses-claude-marketing",
+      "host": "claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-a3392f8b76",
+      "title": "Create on-brand content (use case)",
+      "url": "https://academy.claude.com/use-cases/on-brand-content",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-5a7be113ab",
+      "title": "Upload files to Claude (Help Center)",
+      "url": "https://support.claude.com/en/articles/8241126-upload-files-to-claude",
+      "host": "support.claude.com",
+      "verdict": "ok",
+      "detail": "200",
+      "page_date": "2026-07-23",
+      "page_says": "July 23, 2026",
+      "stored": "2026-07-23"
+    },
+    {
+      "id": "r-9021f6f590",
+      "title": "How long do you store my data?",
+      "url": "https://privacy.claude.com/en/articles/10023548-how-long-do-you-store-my-data",
+      "host": "privacy.claude.com",
+      "verdict": "ok",
+      "detail": "200",
+      "page_date": "2026-07-01",
+      "page_says": "July 1, 2026",
+      "stored": "2026-07-01"
+    },
+    {
+      "id": "r-b6899b89d9",
+      "title": "Analyze patterns in user feedback (use case)",
+      "url": "https://academy.claude.com/use-cases/analyze-patterns-in-user-feedback",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-47ee07d20b",
+      "title": "The UX Researcher's Guide to Claude, Claude Cowork, and Claude Code",
+      "url": "https://productimpactpod.com/news/ux-researcher-guide-claude-tools/",
+      "host": "productimpactpod.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-50ce9b31c6",
+      "title": "Good from Afar, But Far from Good: AI Prototyping in Real Design Contexts",
+      "url": "https://www.nngroup.com/articles/ai-prototyping/",
+      "host": "nngroup.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-e321fd52f6",
+      "title": "Testing AI with Real Design Scenarios: Evaluation Methodology and Prompts",
+      "url": "https://www.nngroup.com/articles/testing-ai-methodology/",
+      "host": "nngroup.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-7dd355965b",
+      "title": "AI Can't Replace Real Research in Empathy Mapping",
+      "url": "https://www.nngroup.com/articles/ai-empathy-mapping/",
+      "host": "nngroup.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-041707c67d",
+      "title": "AI Fluency for Builders",
+      "url": "https://academy.claude.com/courses/ai-fluency-for-builders",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-cefb7cc98d",
+      "title": "AI Fluency for Creative Work",
+      "url": "https://academy.claude.com/courses/ai-fluency-for-creative-work",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-6545a74859",
+      "title": "The AI-Native SDLC Playbook",
+      "url": "https://academy.claude.com/courses/ai-native-sdlc-playbook",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-29a30e0346",
+      "title": "Claude Code in Action",
+      "url": "https://academy.claude.com/courses/claude-code-in-action",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-e1c0040b36",
+      "title": "Claude Platform 101",
+      "url": "https://academy.claude.com/courses/claude-platform-101",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-26b3942151",
+      "title": "Claude with Amazon Bedrock",
+      "url": "https://academy.claude.com/courses/claude-with-amazon-bedrock",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-e78a8c3d0a",
+      "title": "Claude with Google Cloud's Vertex AI",
+      "url": "https://academy.claude.com/courses/claude-with-google-cloud-s-vertex-ai",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-b23d0f42c9",
+      "title": "Introduction to agent skills",
+      "url": "https://academy.claude.com/courses/introduction-to-agent-skills",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-185e71d34e",
+      "title": "Introduction to subagents",
+      "url": "https://academy.claude.com/courses/introduction-to-subagents",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-f82c83ed82",
+      "title": "Create and edit files with Claude to eliminate hours of busy work",
+      "url": "https://academy.claude.com/tutorials/create-and-edit-files-with-claude-to-eliminate-hours-of-busy-work",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-944de6ef3a",
+      "title": "Creating your first skill (Claude Code)",
+      "url": "https://academy.claude.com/tutorials/creating-your-first-skill",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-53a9496388",
+      "title": "Customize Claude Cowork",
+      "url": "https://academy.claude.com/tutorials/customize-claude-cowork",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-b75714f54f",
+      "title": "Delegating and scheduling tasks in Claude Cowork",
+      "url": "https://academy.claude.com/tutorials/delegating-and-scheduling-tasks-in-claude-cowork",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-cd14de5be4",
+      "title": "Delegating your first task in Claude Cowork",
+      "url": "https://academy.claude.com/tutorials/delegating-your-first-task-in-claude-cowork",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-8219431120",
+      "title": "Financial analysis workflows with Claude",
+      "url": "https://academy.claude.com/tutorials/financial-analysis-workflows-with-claude",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-f5b662dfb1",
+      "title": "Get started in Claude Cowork in three steps",
+      "url": "https://academy.claude.com/tutorials/get-started-in-claude-cowork-in-three-steps",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-fec5b15601",
+      "title": "Getting good at Claude: A research-backed curriculum",
+      "url": "https://academy.claude.com/tutorials/getting-good-at-claude-a-research-backed-curriculum",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-aafeb276f7",
+      "title": "Getting started with Claude.ai (Academy)",
+      "url": "https://academy.claude.com/tutorials/getting-started-with-claude-ai",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-37a35b4864",
+      "title": "Getting Started with Claude for Financial Services",
+      "url": "https://academy.claude.com/tutorials/getting-started-with-claude-for-financial-services",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-1aa402df48",
+      "title": "Getting Started with Claude for Life Sciences",
+      "url": "https://academy.claude.com/tutorials/getting-started-with-claude-for-life-sciences",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-ade31a7911",
+      "title": "Getting started with Claude for nonprofits",
+      "url": "https://academy.claude.com/tutorials/getting-started-with-claude-for-nonprofits",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-ce736a694a",
+      "title": "Getting started with Claude Security",
+      "url": "https://academy.claude.com/tutorials/getting-started-with-claude-security",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-ac9b1dae2c",
+      "title": "Getting started with connectors (Academy)",
+      "url": "https://academy.claude.com/tutorials/getting-started-with-connectors",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-113e782c9f",
+      "title": "How skills compare to other Claude Code features",
+      "url": "https://academy.claude.com/tutorials/how-skills-compare-to-other-claude-code-features",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-1809f0478e",
+      "title": "How to build a plugin from scratch in Claude Cowork",
+      "url": "https://academy.claude.com/tutorials/how-to-build-a-plugin-from-scratch-in-cowork",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-e075253cc4",
+      "title": "How to choose between Claude's Voice Mode and Dictation",
+      "url": "https://academy.claude.com/tutorials/how-to-choose-between-voice-mode-and-dictation",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-db5f28fc61",
+      "title": "How to create a skill with Claude through conversation",
+      "url": "https://academy.claude.com/tutorials/how-to-create-a-skill-with-claude-through-conversation",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-cfa5a678ad",
+      "title": "How to customize plugins in Claude Cowork",
+      "url": "https://academy.claude.com/tutorials/how-to-customize-plugins-in-cowork",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-57efc29207",
+      "title": "How to enable Claude Code for your Enterprise team",
+      "url": "https://academy.claude.com/tutorials/how-to-enable-claude-code-for-your-enterprise-team",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-3df0496065",
+      "title": "How to select the right effort setting for Claude Cowork and Chat",
+      "url": "https://academy.claude.com/tutorials/how-to-select-the-right-effort-setting-for-claude-cowork-and-chat",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-eccd1f16c3",
+      "title": "How to use Claude in Excel for accounting: Revenue model validation",
+      "url": "https://academy.claude.com/tutorials/how-to-use-claude-in-excel-for-accounting-revenue-model-validation",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-c54106432e",
+      "title": "How to use Claude in Excel for HR: Headcount planning",
+      "url": "https://academy.claude.com/tutorials/how-to-use-claude-in-excel-for-hr-headcount-planning",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-ab8bf64651",
+      "title": "How to use the Clinical Trial Protocol Draft Generation sample skill with Claude",
+      "url": "https://academy.claude.com/tutorials/how-to-use-the-clinical-trial-protocol-draft-generation-sample-skill-with-claude",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-f25d1080e9",
+      "title": "How to use the FHIR Developer agent skill with Claude Code",
+      "url": "https://academy.claude.com/tutorials/how-to-use-the-fhir-developer-agent-skill-with-claude-code",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-529b6c65e3",
+      "title": "Scaling workflows with Claude Cowork at your organization",
+      "url": "https://academy.claude.com/tutorials/scaling-workflows-with-claude-cowork-at-your-organization",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-24db16a5ae",
+      "title": "Sharing skills",
+      "url": "https://academy.claude.com/tutorials/sharing-skills",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-1319f9201d",
+      "title": "Simplify your browsing experience with Claude in Chrome",
+      "url": "https://academy.claude.com/tutorials/simplify-your-browsing-experience-with-claude-for-chrome",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-0fcc607c0b",
+      "title": "Tasks to try with Claude Tag in your workspace",
+      "url": "https://academy.claude.com/tutorials/tasks-to-try-with-claude-tag-in-your-workspace",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-1911b456d5",
+      "title": "Teach Claude your way of working using skills",
+      "url": "https://academy.claude.com/tutorials/teach-claude-your-way-of-working-using-skills",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-e7a56d404e",
+      "title": "The 4 Ds of AI Fluency — Behavioral Indicators",
+      "url": "https://academy.claude.com/tutorials/the-4-ds-of-ai-fluency-behavioral-indicators",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-985113a138",
+      "title": "The 4 Properties of AI",
+      "url": "https://academy.claude.com/tutorials/the-4-properties-of-ai",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-38cfb64943",
+      "title": "Anthropic Education Report: The AI Fluency Index",
+      "url": "https://academy.claude.com/tutorials/the-ai-fluency-index",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-a49a4c4aa6",
+      "title": "Tokens: why some inputs cost more than others",
+      "url": "https://academy.claude.com/tutorials/tokens-and-embeddings",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-007962aad0",
+      "title": "Troubleshooting skills",
+      "url": "https://academy.claude.com/tutorials/troubleshooting-skills",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-a1951936c4",
+      "title": "Use artifacts to visualize and create AI apps without ever writing a line of code",
+      "url": "https://academy.claude.com/tutorials/use-artifacts-to-visualize-and-create-ai-apps-without-ever-writing-a-line-of-code",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-d3a0d18ea7",
+      "title": "Using Aiera for earnings intelligence and market analysis",
+      "url": "https://academy.claude.com/tutorials/using-aiera-for-earnings-intelligence-and-market-analysis",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-34b80958cf",
+      "title": "Using Chronograph for portfolio monitoring",
+      "url": "https://academy.claude.com/tutorials/using-chronograph-for-portfolio-monitoring",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-70137913bd",
+      "title": "Using Claude Code Remote Control",
+      "url": "https://academy.claude.com/tutorials/using-claude-code-remote-control",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-e11187754a",
+      "title": "Using Claude Cowork for legal: answer fast questions on past decisions",
+      "url": "https://academy.claude.com/tutorials/using-claude-cowork-for-legal-question-briefing",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-0db119275a",
+      "title": "Using the Medidata Connector in Claude",
+      "url": "https://academy.claude.com/tutorials/using-the-medidata-connector-in-claude",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-1ddea3148e",
+      "title": "Using the NPI Registry Connector in Claude",
+      "url": "https://academy.claude.com/tutorials/using-the-npi-registry-connector-in-claude",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-715c68215e",
+      "title": "Using the Open Targets Connector in Claude",
+      "url": "https://academy.claude.com/tutorials/using-the-open-targets-connector-in-claude",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-7810311517",
+      "title": "Using the Owkin Connector in Claude",
+      "url": "https://academy.claude.com/tutorials/using-the-owkin-connector-in-claude",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-8501c33670",
+      "title": "Using the PubMed Connector in Claude",
+      "url": "https://academy.claude.com/tutorials/using-the-pubmed-connector-in-claude",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-dbea376d20",
+      "title": "Using the Scholar Gateway Connector in Claude",
+      "url": "https://academy.claude.com/tutorials/using-the-scholar-gateway-connector-in-claude",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-e17473d97f",
+      "title": "Using the Synapse.org Connector in Claude",
+      "url": "https://academy.claude.com/tutorials/using-the-synapse-org-connector-in-claude",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-d31580a24c",
+      "title": "Using the ToolUniverse Extension in Claude",
+      "url": "https://academy.claude.com/tutorials/using-the-tooluniverse-extension-in-claude",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-75ecc00e1f",
+      "title": "What are skills?",
+      "url": "https://academy.claude.com/tutorials/what-are-skills",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-f7577363a3",
+      "title": "What does AI know about me?",
+      "url": "https://academy.claude.com/tutorials/what-does-ai-know-about-me",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-5ebc2ddd4c",
+      "title": "What happens when you talk to AI?",
+      "url": "https://academy.claude.com/tutorials/what-happens-when-you-talk-to-ai",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-cc98d69c68",
+      "title": "What is Claude Managed Agents?",
+      "url": "https://academy.claude.com/tutorials/what-is-claude-managed-agents",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-264c06cbe5",
+      "title": "What is sycophancy in AI models?",
+      "url": "https://academy.claude.com/tutorials/what-is-sycophancy-in-ai-models",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-3338d6177f",
+      "title": "Why does bias exist in AI models?",
+      "url": "https://academy.claude.com/tutorials/why-does-bias-exist-in-ai-models",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-749e37612b",
+      "title": "Writing an AI diligence statement",
+      "url": "https://academy.claude.com/tutorials/writing-an-ai-diligence-statement",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-43c3c12bca",
+      "title": "A discussion guide for the AI Fluency Index",
+      "url": "https://academy.claude.com/tutorials/a-discussion-guide-for-the-ai-fluency-index",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-5bb9254c53",
+      "title": "Best practices for using Claude Tag",
+      "url": "https://academy.claude.com/tutorials/best-practices-using-claude-tag",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-9644384def",
+      "title": "Building a PowerPoint with Claude",
+      "url": "https://academy.claude.com/tutorials/building-a-powerpoint-with-claude",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-4c75fa41f0",
+      "title": "Can you trust what AI tells you?",
+      "url": "https://academy.claude.com/tutorials/can-you-trust-what-ai-tells-you",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-dbe67e576f",
+      "title": "Choosing between Claude Cowork or Chat",
+      "url": "https://academy.claude.com/tutorials/choosing-between-claude-cowork-or-chat",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-b5eb9ca1b3",
+      "title": "Choosing the right Claude model: Haiku, Sonnet, Opus, or Fable",
+      "url": "https://academy.claude.com/tutorials/choosing-the-right-claude-model",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-b86487f3ba",
+      "title": "Choosing the right effort level in Claude Code",
+      "url": "https://academy.claude.com/tutorials/choosing-the-right-effort-level-in-claude-code",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-4e09474dae",
+      "title": "Claude Cowork Enterprise Admin Guide",
+      "url": "https://academy.claude.com/tutorials/claude-cowork-enterprise-administrator-guide",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-94dd4d8b10",
+      "title": "Claude Enterprise Administrator Guide",
+      "url": "https://academy.claude.com/tutorials/claude-enterprise-administrator-guide",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-a37e5e5da8",
+      "title": "Claude for financial services overview",
+      "url": "https://academy.claude.com/tutorials/claude-for-financial-services-overview",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-a24a171453",
+      "title": "Six skills for financial service professionals",
+      "url": "https://academy.claude.com/tutorials/claude-for-financial-services-skills",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-50a68c41e4",
+      "title": "Claude for nonprofits partnership guide for all users",
+      "url": "https://academy.claude.com/tutorials/claude-for-nonprofits-partnership-guide-for-all-users",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-5eac4c1ab0",
+      "title": "Claude for nonprofits partnership success guide for admins",
+      "url": "https://academy.claude.com/tutorials/claude-for-nonprofits-partnership-success-guide-for-admins",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-b617ba0186",
+      "title": "Claude for Teachers in action",
+      "url": "https://academy.claude.com/tutorials/claude-for-teachers-in-action",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-41c2f1dee2",
+      "title": "Configuration and multi-file skills",
+      "url": "https://academy.claude.com/tutorials/configuration-and-multi-file-skills",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-546043d183",
+      "title": "Connect your tools to unlock a smarter, more capable AI companion",
+      "url": "https://academy.claude.com/tutorials/connect-your-tools-to-unlock-a-smarter-more-capable-ai-companion",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-f04887acc5",
+      "title": "How to use the Instrument Data to Allotrope Skill with Claude",
+      "url": "https://academy.claude.com/tutorials/how-to-use-the-instrument-data-to-allotrope-skill-with-claude",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-56149c993a",
+      "title": "How to use the Nextflow Deployment agent skill with Claude Code",
+      "url": "https://academy.claude.com/tutorials/how-to-use-the-nextflow-deployment-agent-skill-with-claude-code",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-1fdd7bd5a5",
+      "title": "How to use the Prior Auth Review sample skill with Claude",
+      "url": "https://academy.claude.com/tutorials/how-to-use-the-prior-auth-review-sample-skill-with-claude-2ggy8",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-9c1c80e704",
+      "title": "How to use the Scientific Problem Selection Skill with Claude",
+      "url": "https://academy.claude.com/tutorials/how-to-use-the-scientific-problem-selection-skill-with-claude",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-012770a3f2",
+      "title": "How to use the scVI-Tools bioinformatics skill bundle with Claude",
+      "url": "https://academy.claude.com/tutorials/how-to-use-the-scvi-tools-bioinformatics-skill-bundle-with-claude",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-85b3edaa73",
+      "title": "How to use the single-cell-rna-qc skill with Claude",
+      "url": "https://academy.claude.com/tutorials/how-to-use-the-single-cell-rna-qc-skill-with-claude",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-591713bde9",
+      "title": "Visuals that appear as you study with Claude",
+      "url": "https://academy.claude.com/tutorials/imagine-with-claude-student-guide",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-f0a6d1c495",
+      "title": "Install financial services plugins for Claude Cowork",
+      "url": "https://academy.claude.com/tutorials/install-financial-services-plugins-for-cowork",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-052958c979",
+      "title": "Intro to Projects",
+      "url": "https://academy.claude.com/tutorials/intro-to-projects",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-df065c404d",
+      "title": "Navigating the Claude desktop app: Chat, Claude Cowork, Claude Code",
+      "url": "https://academy.claude.com/tutorials/navigating-the-claude-desktop-app",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-8e75d912b0",
+      "title": "How context affects Claude's performance and cost",
+      "url": "https://academy.claude.com/tutorials/parametric-memory-and-context",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-63c2fba467",
+      "title": "Prompting strategies for financial analysis",
+      "url": "https://academy.claude.com/tutorials/prompting-strategies-for-financial-analysis",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-3c6ee9bbf8",
+      "title": "Prototype AI-Powered Apps with Claude artifacts",
+      "url": "https://academy.claude.com/tutorials/prototype-ai-powered-apps-with-claude-artifacts",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-86ef6bca39",
+      "title": "Refining a PowerPoint with Claude",
+      "url": "https://academy.claude.com/tutorials/refining-a-powerpoint-with-claude",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-9a2a25541c",
+      "title": "Using Claude Cowork for marketing ops: run a weekly review that preps itself",
+      "url": "https://academy.claude.com/tutorials/using-claude-cowork-for-marketing-ops-review",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-7e0d6889fb",
+      "title": "Using Claude Cowork for sales: research any account before the first call",
+      "url": "https://academy.claude.com/tutorials/using-claude-cowork-for-sales-account-research",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-291f047540",
+      "title": "Using Claude Design for presentations and slide decks",
+      "url": "https://academy.claude.com/tutorials/using-claude-design-for-presentations-and-slide-decks",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-b32e19f042",
+      "title": "Using Daloopa for financial analysis",
+      "url": "https://academy.claude.com/tutorials/using-daloopa-for-financial-analysis",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-f14ef0bf7f",
+      "title": "Using Databricks for Data Analysis",
+      "url": "https://academy.claude.com/tutorials/using-databricks-for-data-analysis",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-e05d12e007",
+      "title": "Using Egnyte for data room management with Claude",
+      "url": "https://academy.claude.com/tutorials/using-egnyte-for-data-room-management-with-claude",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-abcd6628cb",
+      "title": "Using FactSet for comprehensive financial research",
+      "url": "https://academy.claude.com/tutorials/using-factset-for-comprehensive-financial-research",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-8fd56d4623",
+      "title": "Using LSEG for financial market data analysis",
+      "url": "https://academy.claude.com/tutorials/using-lseg-for-financial-market-data-analysis",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-608014bdee",
+      "title": "Using Moody's for financial analysis",
+      "url": "https://academy.claude.com/tutorials/using-moodys-for-financial-analysis",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-96bbefc7bd",
+      "title": "Using Morningstar for investment research",
+      "url": "https://academy.claude.com/tutorials/using-morningstar-for-investment-research",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-bc2c388cda",
+      "title": "Using MT Newswires for real-time financial news",
+      "url": "https://academy.claude.com/tutorials/using-mt-newswires-for-real-time-financial-news",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-9213856444",
+      "title": "Using PitchBook for investment research",
+      "url": "https://academy.claude.com/tutorials/using-pitchbook-for-investment-research",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-e36f2940da",
+      "title": "Using Research",
+      "url": "https://academy.claude.com/tutorials/using-research",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-25738ca991",
+      "title": "Using S&P global data for financial analysis",
+      "url": "https://academy.claude.com/tutorials/using-s-p-global-data-for-financial-analysis",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-5130e96925",
+      "title": "Using the 10x Genomics Extension in Claude",
+      "url": "https://academy.claude.com/tutorials/using-the-10x-genomics-extension-in-claude",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-de0ea7159d",
+      "title": "Using the Benchling connector in Claude",
+      "url": "https://academy.claude.com/tutorials/using-the-benchling-connector-in-claude",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-7443bef42c",
+      "title": "Using the Benevity connector in Claude",
+      "url": "https://academy.claude.com/tutorials/using-the-benevity-connector-in-claude",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-197aa1a8ce",
+      "title": "Using the BioRender Connector in Claude",
+      "url": "https://academy.claude.com/tutorials/using-the-biorender-connector-in-claude",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-759815db09",
+      "title": "Using the bioRxiv and medRxiv Connector in Claude",
+      "url": "https://academy.claude.com/tutorials/using-the-biorxiv-and-medrxiv-connector-in-claude",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-37460d60db",
+      "title": "Using the Blackbaud connector in Claude",
+      "url": "https://academy.claude.com/tutorials/using-the-blackbaud-connector-in-claude",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-770dd2351e",
+      "title": "Using the Blender Connector in Claude",
+      "url": "https://academy.claude.com/tutorials/using-the-blender-connector-in-claude",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-3cfbe8a29c",
+      "title": "Using the Candid connector in Claude",
+      "url": "https://academy.claude.com/tutorials/using-the-candid-connector-in-claude",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-e0b9410710",
+      "title": "Using the ChEMBL Connector in Claude",
+      "url": "https://academy.claude.com/tutorials/using-the-chembl-connector-in-claude",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-7fba0e936a",
+      "title": "Using the ClinicalTrials.gov Connector in Claude",
+      "url": "https://academy.claude.com/tutorials/using-the-clinicaltrials-gov-connector-in-claude",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-ed49348746",
+      "title": "Using the CMS Coverage Connector in Claude",
+      "url": "https://academy.claude.com/tutorials/using-the-cms-coverage-connector-in-claude",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-ade17796f6",
+      "title": "Using the Function Connector in Claude",
+      "url": "https://academy.claude.com/tutorials/using-the-function-connector-in-claude",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-6479cdb63b",
+      "title": "Using the HealthEx Connector in Claude",
+      "url": "https://academy.claude.com/tutorials/using-the-healthex-connector-in-claude",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-e1fdecd477",
+      "title": "Using the ICD-10 Connector in Claude",
+      "url": "https://academy.claude.com/tutorials/using-the-icd-10-connector-in-claude",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-f27b435b17",
+      "title": "Account research",
+      "url": "https://academy.claude.com/use-cases/account-research-brief",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-5545ec31d8",
+      "title": "Account tracking",
+      "url": "https://academy.claude.com/use-cases/account-tracking",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-b16383461e",
+      "title": "Recap your ad performance",
+      "url": "https://academy.claude.com/use-cases/ad-performance-recap",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-d8491a14bd",
+      "title": "Adapt a standard textbook page to every reading level",
+      "url": "https://academy.claude.com/use-cases/adapt-a-standard-textbook-page-to-every-reading-level",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-bd3cbde4a8",
+      "title": "Adapt content across platforms",
+      "url": "https://academy.claude.com/use-cases/adapt-content-across-platforms",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-ec1ab6be9d",
+      "title": "Analyze campaign performance",
+      "url": "https://academy.claude.com/use-cases/analyze-campaign-performance",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-9e266a3164",
+      "title": "Analyze fundraising performance",
+      "url": "https://academy.claude.com/use-cases/analyze-fundraising-performance",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-2930f25a79",
+      "title": "Answer the ad-hoc data question",
+      "url": "https://academy.claude.com/use-cases/answer-the-adhoc",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-8f55dd906a",
+      "title": "Apply a formula as you learn it",
+      "url": "https://academy.claude.com/use-cases/apply-a-formula-as-you-learn-it-in-chat-with-claude",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-819e268d62",
+      "title": "Build an 'Ask the Company' agent",
+      "url": "https://academy.claude.com/use-cases/ask-the-company",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-aed95b6d90",
+      "title": "Audit a folder of visual assets against your guidelines",
+      "url": "https://academy.claude.com/use-cases/audit-a-folder-of-visual-assets-against-your-guidelines",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-0ec32f763b",
+      "title": "Encode the brand as a skill",
+      "url": "https://academy.claude.com/use-cases/brand-guidelines-skill",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-95967eff05",
+      "title": "Bring your whiteboard lesson to life",
+      "url": "https://academy.claude.com/use-cases/bring-your-whiteboard-lesson-to-life",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-d4d3fca2b6",
+      "title": "Build a battle card library",
+      "url": "https://academy.claude.com/use-cases/build-a-battle-card-library",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-cf655c989c",
+      "title": "Build a custom bucket list",
+      "url": "https://academy.claude.com/use-cases/build-a-custom-bucket-list-app",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-770072be75",
+      "title": "Build a daily briefing across your tools",
+      "url": "https://academy.claude.com/use-cases/build-a-daily-briefing-across-your-tools",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-cb2509ec19",
+      "title": "Build analysis from browser charts and folder data",
+      "url": "https://academy.claude.com/use-cases/build-analysis-from-browser-charts-and-folder-data",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-8613d66ddf",
+      "title": "Build customer personas",
+      "url": "https://academy.claude.com/use-cases/build-customer-personas",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-ee8a08ce90",
+      "title": "Build financial models",
+      "url": "https://academy.claude.com/use-cases/build-financial-models",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-4469069e4b",
+      "title": "Build interactive diagram tools",
+      "url": "https://academy.claude.com/use-cases/build-interactive-diagram-tools",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-3962e03165",
+      "title": "Call prep",
+      "url": "https://academy.claude.com/use-cases/call-prep-sheet",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-64258cc0b8",
+      "title": "Build a campaign brief",
+      "url": "https://academy.claude.com/use-cases/campaign-brief",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-c8084a60dc",
+      "title": "Chart your data in conversation with Claude before you commit to a reading",
+      "url": "https://academy.claude.com/use-cases/chart-your-data-before-you-commit",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-f6c51287ba",
+      "title": "Clean up promotional emails",
+      "url": "https://academy.claude.com/use-cases/clean-up-promotional-emails",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-26ee310feb",
+      "title": "Clickable prototype from real components",
+      "url": "https://academy.claude.com/use-cases/clickable-prototype",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-798adaf71b",
+      "title": "Find the cloud cost anomaly",
+      "url": "https://academy.claude.com/use-cases/cloud-cost-anomalies",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-5a86e7b688",
+      "title": "Compare and analyze competing options",
+      "url": "https://academy.claude.com/use-cases/compare-and-analyze-competing-options",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-8cbc7524d9",
+      "title": "Compare products across sites",
+      "url": "https://academy.claude.com/use-cases/compare-products-across-sites",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-85a2dc1b9e",
+      "title": "Competitive teardown and positioning gaps",
+      "url": "https://academy.claude.com/use-cases/competitive-teardown",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-dbad74772b",
+      "title": "Build the competitive comparison doc",
+      "url": "https://academy.claude.com/use-cases/competitor-comparison",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-55e622988a",
+      "title": "Contract redlining",
+      "url": "https://academy.claude.com/use-cases/contract-playbook-review",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-fe08131b56",
+      "title": "Contract redlining and negotiation",
+      "url": "https://academy.claude.com/use-cases/contract-redlining-and-negotiation",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-291b16de6a",
+      "title": "Contract to ledger extraction",
+      "url": "https://academy.claude.com/use-cases/contract-to-ledger",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-c4ed22158a",
+      "title": "Create a company newsletter",
+      "url": "https://academy.claude.com/use-cases/create-a-company-newsletter",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-b45c8d342b",
+      "title": "Create a custom webpage",
+      "url": "https://academy.claude.com/use-cases/create-a-custom-webpage",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-f91c15b7b5",
+      "title": "Create a daily travel itinerary",
+      "url": "https://academy.claude.com/use-cases/create-a-daily-travel-itinerary",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-7a7389177b",
+      "title": "Create a process flowchart",
+      "url": "https://academy.claude.com/use-cases/create-a-process-flowchart",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-c338e819ef",
+      "title": "Create a sales proposal presentation",
+      "url": "https://academy.claude.com/use-cases/create-a-sales-proposal-presentation",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-3f9f3aede3",
+      "title": "Create a volunteer management system",
+      "url": "https://academy.claude.com/use-cases/create-a-volunteer-management-system",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-70cdf38f94",
+      "title": "Create brand assets",
+      "url": "https://academy.claude.com/use-cases/create-brand-assets",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-6231c957c6",
+      "title": "Create custom course materials",
+      "url": "https://academy.claude.com/use-cases/create-custom-course-materials",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-79d6b064b5",
+      "title": "Create digital recipe cards",
+      "url": "https://academy.claude.com/use-cases/create-digital-recipe-cards",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-cf6eb80195",
+      "title": "Create health and exercise notes",
+      "url": "https://academy.claude.com/use-cases/create-health-and-exercise-notes",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-fc3679573c",
+      "title": "Create interactive PDF forms",
+      "url": "https://academy.claude.com/use-cases/create-interactive-pdf-forms",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-b6d113b051",
+      "title": "Create new hire onboarding guides",
+      "url": "https://academy.claude.com/use-cases/create-new-hire-onboarding-guides",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-0c1d71e757",
+      "title": "Create sales reports",
+      "url": "https://academy.claude.com/use-cases/create-sales-reports",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-a742871628",
+      "title": "M&A diligence",
+      "url": "https://academy.claude.com/use-cases/data-room-diligence",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-e2c0e9a061",
+      "title": "Debate practice with feedback",
+      "url": "https://academy.claude.com/use-cases/debate-practice-with-feedback",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-474c132da1",
+      "title": "Design a local foraging guide",
+      "url": "https://academy.claude.com/use-cases/design-a-local-foraging-guide",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-fc22940afb",
+      "title": "Write the design doc or RFC",
+      "url": "https://academy.claude.com/use-cases/design-doc",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-b58008a116",
+      "title": "Competitive teardown and heuristic audit",
+      "url": "https://academy.claude.com/use-cases/design-heuristic-audit",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-60ea446379",
+      "title": "Design system drift review",
+      "url": "https://academy.claude.com/use-cases/design-police",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-946ecd5ab4",
+      "title": "Design spec from scattered threads",
+      "url": "https://academy.claude.com/use-cases/design-spec-from-threads",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-e1b6f315a5",
+      "title": "Develop a program toolkit",
+      "url": "https://academy.claude.com/use-cases/develop-a-program-toolkit",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-b7629ae885",
+      "title": "Draft a credit memo from spreads and statements with Claude for Excel",
+      "url": "https://academy.claude.com/use-cases/draft-a-credit-memo-from-spreads-and-statements-with-claude-for-excel",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-419e3b3529",
+      "title": "Draft investment memos",
+      "url": "https://academy.claude.com/use-cases/draft-investment-memos",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-c902b3cd33",
+      "title": "Elevate Claude's design using skills",
+      "url": "https://academy.claude.com/use-cases/elevate-claudes-design-using-skills",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-d1b9252ab8",
+      "title": "Draft your reports' performance reviews",
+      "url": "https://academy.claude.com/use-cases/eng-performance-reviews",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-24a8ad4539",
+      "title": "Engagement survey to action plan",
+      "url": "https://academy.claude.com/use-cases/engagement-survey-themes",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-573da45bcf",
+      "title": "Evaluate a company from the science to the balance sheet",
+      "url": "https://academy.claude.com/use-cases/evaluate-a-company-from-the-science-to-the-balance-sheet",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-6636e79be0",
+      "title": "Explain a variance",
+      "url": "https://academy.claude.com/use-cases/explain-a-variance",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-434e205e76",
+      "title": "Explore what Claude can do for you",
+      "url": "https://academy.claude.com/use-cases/explore-what-claude-can-do-for-you",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-3fab06e739",
+      "title": "Feedback synthesis to prioritized themes",
+      "url": "https://academy.claude.com/use-cases/feedback-synthesis",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-da4dd886f8",
+      "title": "Forecast & scenario modeling",
+      "url": "https://academy.claude.com/use-cases/forecast-scenarios",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-13ab6fa70b",
+      "title": "Generate an AI policy",
+      "url": "https://academy.claude.com/use-cases/generate-an-ai-policy",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-1be9a1bc53",
+      "title": "Generate project status reports",
+      "url": "https://academy.claude.com/use-cases/generate-project-status-reports",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-19efb1ffa0",
+      "title": "Genomic data analysis",
+      "url": "https://academy.claude.com/use-cases/genomic-data-analysis",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-3308a32410",
+      "title": "Grant proposal assembly line",
+      "url": "https://academy.claude.com/use-cases/grant-proposal-assembly-line",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-bee34f76e6",
+      "title": "Handle a request while away from your keyboard",
+      "url": "https://academy.claude.com/use-cases/handle-a-request-while-away-from-your-keyboard",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-8b7ac094da",
+      "title": "Reconcile headcount",
+      "url": "https://academy.claude.com/use-cases/headcount-reconciliation",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-7719f04e57",
+      "title": "Draft the incident postmortem",
+      "url": "https://academy.claude.com/use-cases/incident-postmortem",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-9782588d4d",
+      "title": "Interview debrief synthesis",
+      "url": "https://academy.claude.com/use-cases/interview-debrief",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-334f360edc",
+      "title": "Launch readiness sweep",
+      "url": "https://academy.claude.com/use-cases/launch-readiness",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-58b57b367e",
+      "title": "Legal research",
+      "url": "https://academy.claude.com/use-cases/legal-research-memo",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-79adf355e3",
+      "title": "Log sales calls to your CRM",
+      "url": "https://academy.claude.com/use-cases/log-sales-calls-to-your-crm",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-e31096ecec",
+      "title": "Map your lit review mid-conversation to surface the underlying debate",
+      "url": "https://academy.claude.com/use-cases/map-your-lit-review-mid-conversation",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-ea04f3c0ad",
+      "title": "Map your understanding and build lessons from the gaps",
+      "url": "https://academy.claude.com/use-cases/map-your-understanding-and-build-lessons-from-the-gaps",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-714dbe1d4e",
+      "title": "Slack and Teams message sweep",
+      "url": "https://academy.claude.com/use-cases/message-sweep",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-1bc3b6ab4f",
+      "title": "Metrics deep-dive to narrative",
+      "url": "https://academy.claude.com/use-cases/metrics-narrative",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-c8aa1b2ccc",
+      "title": "Daily bookends",
+      "url": "https://academy.claude.com/use-cases/morning-evening",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-0f870cfd55",
+      "title": "Write in my voice",
+      "url": "https://academy.claude.com/use-cases/my-voice",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-6965832870",
+      "title": "NDA triage at scale",
+      "url": "https://academy.claude.com/use-cases/nda-review",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-c4fdca0423",
+      "title": "Offer process",
+      "url": "https://academy.claude.com/use-cases/offer-process",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-a2f1ea505c",
+      "title": "On-call handoff brief",
+      "url": "https://academy.claude.com/use-cases/oncall-handoff-brief",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-4b9338b108",
+      "title": "Open a new role",
+      "url": "https://academy.claude.com/use-cases/open-new-role",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-50bc05e424",
+      "title": "Organize files across your desktop",
+      "url": "https://academy.claude.com/use-cases/organize-files-by-whats-in-them",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-4254d1c2f5",
+      "title": "Organize files in Google Drive",
+      "url": "https://academy.claude.com/use-cases/organize-files-in-google-drive",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-dde2b36a8c",
+      "title": "Organize your business finances",
+      "url": "https://academy.claude.com/use-cases/organize-your-business-finances",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-b0a4f9e6dd",
+      "title": "Organize your legal workflows using Projects",
+      "url": "https://academy.claude.com/use-cases/organize-your-legal-workflows-using-projects",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-c412347e82",
+      "title": "Outside counsel management",
+      "url": "https://academy.claude.com/use-cases/outside-counsel-review",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-14a4f7d474",
+      "title": "Package your brand guidelines in a skill",
+      "url": "https://academy.claude.com/use-cases/package-your-brand-guidelines-in-a-skill",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-ee52358653",
+      "title": "Pattern consistency audit",
+      "url": "https://academy.claude.com/use-cases/pattern-consistency-audit",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-a4a27f2135",
+      "title": "Performance review administrator",
+      "url": "https://academy.claude.com/use-cases/performance-review-admin",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-e2e55589df",
+      "title": "Pipeline reviews",
+      "url": "https://academy.claude.com/use-cases/pipeline-review",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-6da1df1aac",
+      "title": "Plan your career path",
+      "url": "https://academy.claude.com/use-cases/plan-your-career-path",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-e03aab374b",
+      "title": "Plan your syllabus",
+      "url": "https://academy.claude.com/use-cases/plan-your-syllabus-see-which-weeks-are-locked",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-da2d48528c",
+      "title": "Practice case interviews with feedback",
+      "url": "https://academy.claude.com/use-cases/practice-case-interviews-with-feedback",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-e98bafbe7a",
+      "title": "PRD from a problem statement",
+      "url": "https://academy.claude.com/use-cases/prd-from-a-one-pager",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-06f3de8071",
+      "title": "Preclinical study analysis",
+      "url": "https://academy.claude.com/use-cases/preclinical-study-analysis",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-4388a3f2a4",
+      "title": "Prep scattered documents for a compliance audit",
+      "url": "https://academy.claude.com/use-cases/prep-scattered-documents-for-a-compliance-audit",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-6a50113b4f",
+      "title": "Prepare and plan from your calendar",
+      "url": "https://academy.claude.com/use-cases/prepare-and-plan-from-your-calendar",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-044461a722",
+      "title": "Prepare for sales deals",
+      "url": "https://academy.claude.com/use-cases/prepare-for-sales-deals",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-9e54ee6e74",
+      "title": "Process batches of vendors with Cowork",
+      "url": "https://academy.claude.com/use-cases/process-batches-of-vendors-with-cowork",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-143e8d5a24",
+      "title": "Pull metrics from analytics dashboards",
+      "url": "https://academy.claude.com/use-cases/pull-metrics-from-analytics-dashboards",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-c233c18727",
+      "title": "Quickly prep for your week",
+      "url": "https://academy.claude.com/use-cases/quickly-prep-for-your-week",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-48b52d65bc",
+      "title": "Reconcile and draft the journal entries",
+      "url": "https://academy.claude.com/use-cases/recon-journal-entries",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-9fe7f776df",
+      "title": "Reconcile transactions across your accounts",
+      "url": "https://academy.claude.com/use-cases/reconcile-transactions-across-your-accounts",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-52af026126",
+      "title": "Regulatory and compliance",
+      "url": "https://academy.claude.com/use-cases/regulatory-analysis",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-62e1be4df3",
+      "title": "Renewal risk audit",
+      "url": "https://academy.claude.com/use-cases/renewal-risk-audit",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-ff5ed4be6c",
+      "title": "Repurpose content across channels",
+      "url": "https://academy.claude.com/use-cases/repurpose-content",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-fc0225a17c",
+      "title": "Research and compare travel destinations",
+      "url": "https://academy.claude.com/use-cases/research-and-compare-travel-destinations",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-6b298d11c7",
+      "title": "See budget futures side by side, in chat with Claude",
+      "url": "https://academy.claude.com/use-cases/see-budget-futures-side-by-side",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-4f799af1e6",
+      "title": "See what your campaign goal actually requires",
+      "url": "https://academy.claude.com/use-cases/see-what-your-campaign-goal-actually-requires",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-17c8b75fa5",
+      "title": "See why donor retention beats acquisition, in chat with Claude",
+      "url": "https://academy.claude.com/use-cases/see-why-donor-retention-beats-acquisition",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-50c5cf2a80",
+      "title": "See your theory of change in chat with Claude",
+      "url": "https://academy.claude.com/use-cases/see-your-theory-of-change-in-chat-with-claude",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-d195e90feb",
+      "title": "Size a market using your research",
+      "url": "https://academy.claude.com/use-cases/size-a-market-using-your-research",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-5f968ae13d",
+      "title": "Source insights from your tools to build a deck",
+      "url": "https://academy.claude.com/use-cases/source-insights-from-your-tools-to-build-a-deck",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-fce9525592",
+      "title": "SOX & controls documentation",
+      "url": "https://academy.claude.com/use-cases/sox-controls-doc",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-77822f4ef0",
+      "title": "Write the sprint retro and on-call handoff",
+      "url": "https://academy.claude.com/use-cases/sprint-retro-handoff",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-6a195715f1",
+      "title": "Stress-test your financial plan across scenarios",
+      "url": "https://academy.claude.com/use-cases/stress-test-your-financial-plan-across-scenarios",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-fbc979c557",
+      "title": "Support incident postmortem",
+      "url": "https://academy.claude.com/use-cases/support-incident-postmortem",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-174f2d7fa0",
+      "title": "Surface themes from all your feedback channels",
+      "url": "https://academy.claude.com/use-cases/surface-themes-from-all-your-feedback-channels",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-c5d6f6f281",
+      "title": "Thoughtful gift giving with Claude",
+      "url": "https://academy.claude.com/use-cases/thoughtful-gift-giving-with-claude",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-a22aa59497",
+      "title": "Thread to decision doc",
+      "url": "https://academy.claude.com/use-cases/thread-to-decision",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-d07866943a",
+      "title": "Track discovery timelines and analyze patterns",
+      "url": "https://academy.claude.com/use-cases/track-discovery-timelines-and-analyze-patterns",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-0806ea63e9",
+      "title": "Transcript theme extractor",
+      "url": "https://academy.claude.com/use-cases/transcript-themes",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-cb2f394169",
+      "title": "Turn emails into an event tracker",
+      "url": "https://academy.claude.com/use-cases/turn-emails-into-an-event-tracker",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-305fb7e2b1",
+      "title": "Turn inspiration into design plans",
+      "url": "https://academy.claude.com/use-cases/turn-inspiration-to-design-plans",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-a15745c97b",
+      "title": "Turn research into presentations",
+      "url": "https://academy.claude.com/use-cases/turn-research-into-presentations",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-4275c6e31c",
+      "title": "Turn text threads to researched notes",
+      "url": "https://academy.claude.com/use-cases/turn-text-threads-to-researched-notes",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-a40582eae8",
+      "title": "Turn transit time into research time",
+      "url": "https://academy.claude.com/use-cases/turn-transit-time-into-research-time",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-4e18a04113",
+      "title": "Understand and extend an inherited spreadsheet",
+      "url": "https://academy.claude.com/use-cases/understand-and-extend-an-inherited-spreadsheet",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-3c278f0ed4",
+      "title": "Update your financial model after earnings",
+      "url": "https://academy.claude.com/use-cases/update-your-financial-model-after-earnings",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-a898e7f400",
+      "title": "Synthesize user interviews into findings",
+      "url": "https://academy.claude.com/use-cases/uxr-synthesis",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-a5a90e6d20",
+      "title": "Validate reserves and draft filing narrative with Claude for Excel",
+      "url": "https://academy.claude.com/use-cases/validate-reserves-and-draft-filing-narrative-with-claude-for-excel",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-112311cb83",
+      "title": "Variance to exec slides",
+      "url": "https://academy.claude.com/use-cases/variance-exec-slides",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-832eb694a1",
+      "title": "Prep the vendor negotiation",
+      "url": "https://academy.claude.com/use-cases/vendor-negotiation",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-3efdd4d39e",
+      "title": "Vendor risk review",
+      "url": "https://academy.claude.com/use-cases/vendor-risk-review",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-b3444cdb4e",
+      "title": "Verify statistics from raw data",
+      "url": "https://academy.claude.com/use-cases/verify-statistics-from-raw-data",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-1c7d361b6f",
+      "title": "Visualize program data",
+      "url": "https://academy.claude.com/use-cases/visualize-program-data",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-11034e1480",
+      "title": "Visualize the mechanism behind an explanation mid-chat",
+      "url": "https://academy.claude.com/use-cases/visualize-the-mechanism-behind-an-explanation-mid-chat",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-74b4aa5e10",
+      "title": "Prep call look-ahead",
+      "url": "https://academy.claude.com/use-cases/week-ahead-prep",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-029e31b97b",
+      "title": "Work through grant options in chat",
+      "url": "https://academy.claude.com/use-cases/work-through-grant-options-in-chat-with-claude",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-7388a2be11",
+      "title": "Workflow improvement planner",
+      "url": "https://academy.claude.com/use-cases/workflow-improvement-planner",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-8657bce390",
+      "title": "Write an impact report",
+      "url": "https://academy.claude.com/use-cases/write-an-impact-report",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-b8a6d9b34b",
+      "title": "Claude is producing links that don't work and falsely claiming that it has sent emails or produced external documents",
+      "url": "https://support.claude.com/en/articles/8241188-claude-is-producing-links-that-don-t-work-and-falsely-claiming-that-it-has-sent-emails-or-produced-external-documents-what-s-going-on",
+      "host": "support.claude.com",
+      "verdict": "ok",
+      "detail": "200",
+      "page_date": "2026-03-16",
+      "page_says": "March 16, 2026",
+      "stored": "2026-03-16"
+    },
+    {
+      "id": "r-b9f15cfee0",
+      "title": "What are some things I can use Claude for? (Help Center)",
+      "url": "https://support.claude.com/en/articles/7996845-what-are-some-things-i-can-use-claude-for",
+      "host": "support.claude.com",
+      "verdict": "ok",
+      "detail": "200",
+      "page_date": "2026-03-16",
+      "page_says": "March 16, 2026",
+      "stored": "2026-03-16"
+    },
+    {
+      "id": "r-e15adda7c4",
+      "title": "How up-to-date is Claude's training data?",
+      "url": "https://support.claude.com/en/articles/8114494-how-up-to-date-is-claude-s-training-data",
+      "host": "support.claude.com",
+      "verdict": "ok",
+      "detail": "200",
+      "page_date": "2026-09-01",
+      "page_says": "September 1, 2026",
+      "stored": "UNVERIFIED",
+      "drift": "stored UNVERIFIED, page prints 2026-09-01"
+    },
+    {
+      "id": "r-ea64f27605",
+      "title": "How does Claude handle mathematical equations and calculations?",
+      "url": "https://support.claude.com/en/articles/10366421-how-does-claude-handle-mathematical-equations-and-calculations",
+      "host": "support.claude.com",
+      "verdict": "ok",
+      "detail": "200",
+      "page_date": "2026-03-16",
+      "page_says": "March 16, 2026",
+      "stored": "2026-03-16"
+    },
+    {
+      "id": "r-18778e9fde",
+      "title": "Claude is providing incorrect or misleading responses. What's going on?",
+      "url": "https://support.claude.com/en/articles/8525154-claude-is-providing-incorrect-or-misleading-responses-what-s-going-on",
+      "host": "support.claude.com",
+      "verdict": "ok",
+      "detail": "200",
+      "page_date": "2026-03-16",
+      "page_says": "March 16, 2026",
+      "stored": "2026-03-16"
+    },
+    {
+      "id": "r-554e94c26c",
+      "title": "When should I use web search, extended thinking, and research?",
+      "url": "https://support.claude.com/en/articles/11095361-when-should-i-use-web-search-extended-thinking-and-research",
+      "host": "support.claude.com",
+      "verdict": "ok",
+      "detail": "200",
+      "page_date": "2026-06-02",
+      "page_says": "June 2, 2026",
+      "stored": "2026-06-02"
+    },
+    {
+      "id": "r-05aee12a3b",
+      "title": "How do usage and length limits work?",
+      "url": "https://support.claude.com/en/articles/11647753-how-do-usage-and-length-limits-work",
+      "host": "support.claude.com",
+      "verdict": "ok",
+      "detail": "200",
+      "page_date": "2026-07-13",
+      "page_says": "July 13, 2026",
+      "stored": "2026-07-13"
+    },
+    {
+      "id": "r-de71ac40e6",
+      "title": "What are artifacts and how do I use them?",
+      "url": "https://support.claude.com/en/articles/9487310-what-are-artifacts-and-how-do-i-use-them",
+      "host": "support.claude.com",
+      "verdict": "ok",
+      "detail": "200",
+      "page_date": "2026-09-03",
+      "page_says": "September 3, 2026",
+      "stored": "UNVERIFIED",
+      "drift": "stored UNVERIFIED, page prints 2026-09-03"
+    },
+    {
+      "id": "r-f10a9145b0",
+      "title": "Choose a Claude plan (Help Center)",
+      "url": "https://support.claude.com/en/articles/11049762-choose-a-claude-plan",
+      "host": "support.claude.com",
+      "verdict": "ok",
+      "detail": "200",
+      "page_date": "2026-05-19",
+      "page_says": "May 19, 2026",
+      "stored": "2026-05-19"
+    },
+    {
+      "id": "r-1960b65117",
+      "title": "Where can I access Claude? (country availability)",
+      "url": "https://support.claude.com/en/articles/8461763-where-can-i-access-claude",
+      "host": "support.claude.com",
+      "verdict": "ok",
+      "detail": "200",
+      "page_date": "2026-03-16",
+      "page_says": "March 16, 2026",
+      "stored": "2026-03-16"
+    },
+    {
+      "id": "r-e08547ee31",
+      "title": "What interfaces can I use to access Claude?",
+      "url": "https://support.claude.com/en/articles/8114487-what-interfaces-can-i-use-to-access-claude",
+      "host": "support.claude.com",
+      "verdict": "ok",
+      "detail": "200",
+      "page_date": "2026-08-06",
+      "page_says": "August 6, 2026",
+      "stored": "UNVERIFIED",
+      "drift": "stored UNVERIFIED, page prints 2026-08-06"
+    },
+    {
+      "id": "r-d2c1983579",
+      "title": "Use voice mode",
+      "url": "https://support.claude.com/en/articles/11101966-use-voice-mode",
+      "host": "support.claude.com",
+      "verdict": "ok",
+      "detail": "200",
+      "page_date": "2026-07-23",
+      "page_says": "July 23, 2026",
+      "stored": "2026-07-23"
+    },
+    {
+      "id": "r-11dc1daaed",
+      "title": "Troubleshoot Claude error messages",
+      "url": "https://support.claude.com/en/articles/12466728-troubleshoot-claude-error-messages",
+      "host": "support.claude.com",
+      "verdict": "ok",
+      "detail": "200",
+      "page_date": "2026-05-18",
+      "page_says": "May 18, 2026",
+      "stored": "2026-05-18"
+    },
+    {
+      "id": "r-ea6c1824ae",
+      "title": "Usage limit best practices",
+      "url": "https://support.claude.com/en/articles/9797557-usage-limit-best-practices",
+      "host": "support.claude.com",
+      "verdict": "ok",
+      "detail": "200",
+      "page_date": "2026-06-02",
+      "page_says": "June 2, 2026",
+      "stored": "2026-06-02"
+    },
+    {
+      "id": "r-4bf690867e",
+      "title": "Use Claude Cowork on web, desktop, and mobile",
+      "url": "https://support.claude.com/en/articles/15520349-use-claude-cowork-on-web-desktop-and-mobile",
+      "host": "support.claude.com",
+      "verdict": "ok",
+      "detail": "200",
+      "page_date": "2026-09-03",
+      "page_says": "September 3, 2026",
+      "stored": "UNVERIFIED",
+      "drift": "stored UNVERIFIED, page prints 2026-09-03"
+    },
+    {
+      "id": "r-e8ef619289",
+      "title": "Let Claude use your computer in Cowork",
+      "url": "https://support.claude.com/en/articles/14128542-let-claude-use-your-computer-in-cowork",
+      "host": "support.claude.com",
+      "verdict": "ok",
+      "detail": "200",
+      "page_date": "2026-09-02",
+      "page_says": "September 2, 2026",
+      "stored": "UNVERIFIED",
+      "drift": "stored UNVERIFIED, page prints 2026-09-02"
+    },
+    {
+      "id": "r-a494e31b55",
+      "title": "Claude Design Fundamentals",
+      "url": "https://www.coursera.org/learn/claude-design-fundamentals",
+      "host": "coursera.org",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-4fce76b7b9",
+      "title": "AI: Artificial Intelligence Resources: Claude",
+      "url": "https://libguides.und.edu/ai-resources/claude",
+      "host": "libguides.und.edu",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-83502e754e",
+      "title": "Generative AI Literacy",
+      "url": "https://guides.library.harvard.edu/c.php?g=1330621&p=10034696",
+      "host": "guides.library.harvard.edu",
+      "verdict": "ok",
+      "detail": "200"
+    },
+    {
+      "id": "r-84289d43e5",
+      "title": "AI & Academic Integrity",
+      "url": "https://teaching.cornell.edu/generative-artificial-intelligence/ai-academic-integrity",
+      "host": "teaching.cornell.edu",
+      "verdict": "ok",
+      "detail": "200"
+    }
+  ]
+}

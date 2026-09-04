@@ -11,12 +11,12 @@ THE-PROJECT.md and README point at this file rather than repeating it.
 
 | | |
 |---|---|
-| Resources | **637** |
+| Resources | **635** |
 | Distinct publishers | 171 |
-| Distinct hosts | 130 |
+| Distinct hosts | 129 |
 | Learning paths | **7**, 36 steps |
-| Anthropic's own | 390 of 637 — **61%** |
-| No publish date (`UNVERIFIED`) | 441 of 637 — 69% |
+| Anthropic's own | 390 of 635 — **61%** |
+| No publish date (`UNVERIFIED`) | 441 of 635 — 69% |
 
 **How thoroughly we have checked**
 
@@ -24,16 +24,16 @@ THE-PROJECT.md and README point at this file rather than repeating it.
 |---|---|---|---|
 | `reviewed` | Read in full | **0** | 0% |
 | `ai-reviewed` | Read by AI | **98** | 15% |
-| `previewed` | Skimmed | **503** | 79% |
+| `previewed` | Skimmed | **501** | 79% |
 | `listed` | Found only | **36** | 6% |
 
-**Format:** 307 docs · 125 article · 101 video · 58 course · 32 repo · 7 hands-on · 7 podcast.
+**Format:** 307 docs · 124 article · 101 video · 58 course · 32 repo · 7 hands-on · 6 podcast.
 
-**Level:** 182 builder · 179 basic · 170 confident · 106 never-used.
+**Level:** 182 builder · 178 basic · 169 confident · 106 never-used.
 
-**Cost:** 585 free · 26 free-account · 16 subscription · 10 paid-once.
+**Cost:** 583 free · 26 free-account · 16 subscription · 10 paid-once.
 
-**Status:** 634 live · 3 outdated.
+**Status:** 632 live · 3 outdated.
 
 ## "Start with these three"
 
@@ -41,7 +41,7 @@ THE-PROJECT.md and README point at this file rather than repeating it.
 |---|---|
 | Cells with picks | **37** of 40 |
 | Picks | 108 |
-| Runners-up recorded | 108 |
+| Runners-up recorded | 107 |
 
 **Cells with three or fewer candidates** (shown as-is, no picks): `teacher|builder` (2), `writer-marketer|builder` (3)
 
@@ -58,14 +58,14 @@ relaxes): `non-technical|builder` (1 pub, 8 items), `teacher|builder` (2 pub, 2 
 |---|---|---|---|---|
 | `non-technical` | 66 / 20p / 18x | 72 / 27p / 25x | 14 / 6p / 4x | 8 / 1p / 0x |
 | `student` | 36 / 16p / 13x | 19 / 11p / 9x | 9 / 5p / 4x | 0 / 0p / 0x |
-| `researcher` | 19 / 6p / 2x | 19 / 15p / 12x | 19 / 12p / 10x | 20 / 3p / 2x |
+| `researcher` | 19 / 5p / 2x | 19 / 15p / 12x | 19 / 12p / 10x | 20 / 3p / 2x |
 | `teacher` | 27 / 11p / 7x | 18 / 12p / 9x | 9 / 3p / 2x | 2 / 2p / 1x |
 | `developer` | 7 / 4p / 1x | 19 / 11p / 8x | 37 / 18p / 19x | 57 / 18p / 17x |
 | `data-analyst` | 7 / 4p / 1x | 18 / 13p / 11x | 22 / 12p / 10x | 33 / 2p / 3x |
 | `pm` | 12 / 8p / 5x | 42 / 15p / 15x | 53 / 23p / 25x | 55 / 3p / 2x |
-| `designer` | 7 / 6p / 5x | 10 / 8p / 6x | 20 / 16p / 16x | 11 / 4p / 3x |
+| `designer` | 7 / 6p / 5x | 10 / 8p / 6x | 19 / 16p / 15x | 11 / 4p / 3x |
 | `business-founder` | 42 / 14p / 10x | 66 / 24p / 22x | 48 / 8p / 6x | 78 / 3p / 2x |
-| `writer-marketer` | 19 / 9p / 7x | 34 / 23p / 21x | 7 / 7p / 4x | 3 / 2p / 3x |
+| `writer-marketer` | 19 / 9p / 7x | 33 / 22p / 20x | 7 / 7p / 4x | 3 / 2p / 3x |
 
 ## Live resources the freshness rule excludes from every pool
 
@@ -94,7 +94,30 @@ comparative recommendation should not point at something a year stale.
 
 ## Links
 
-No machine-readable link report yet. Run:
+Last full check: **2026-09-04**.
 
-    python3 scripts/check-links.py --json data/link-check.json
+| verdict | count |
+|---|---|
+| ok | 607 |
+| moved | 9 |
+| blocked | 21 |
+
+**Blocked hosts are unverifiable by machine** — they refuse automated
+requests, so a bot-wall is not evidence a page is dead. Each was last
+confirmed by a person on the date shown.
+
+| host | items | last confirmed by a person |
+|---|---|---|
+| datacamp.com | 4 | never |
+| medium.com | 4 | never |
+| udemy.com | 4 | never |
+| forbes.com | 1 | never |
+| uxdesign.cc | 1 | never |
+| designsystemscollective.com | 1 | never |
+| students.unimelb.edu.au | 1 | never |
+| monash.edu | 1 | never |
+| education.gov.au | 1 | never |
+| ethicscentral.org | 1 | never |
+| spj.org | 1 | never |
+| niemanlab.org | 1 | never |
 

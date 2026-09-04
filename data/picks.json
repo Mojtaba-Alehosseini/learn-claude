@@ -46,7 +46,7 @@
       "picked_by": "ai",
       "picked_on": "2026-09-04",
       "pool_size": 72,
-      "fingerprint": "sha1:5303e2649359112c",
+      "fingerprint": "sha1:89da10f9a52c76ac",
       "picks": [
         {
           "url": "https://claude.com/blog/best-practices-for-prompt-engineering",
@@ -198,9 +198,9 @@
       "role": "designer",
       "level": "confident",
       "picked_by": "ai",
-      "picked_on": "2026-08-31",
-      "pool_size": 20,
-      "fingerprint": "sha1:db6f63675c999a0d",
+      "picked_on": "2026-09-04",
+      "pool_size": 19,
+      "fingerprint": "sha1:4222cd696c067e77",
       "picks": [
         {
           "url": "https://www.builder.io/blog/claude-code-for-designers",
@@ -391,7 +391,7 @@
       "picked_by": "ai",
       "picked_on": "2026-09-04",
       "pool_size": 19,
-      "fingerprint": "sha1:ee6448aced5e640a",
+      "fingerprint": "sha1:40a195b6829830b9",
       "picks": [
         {
           "url": "https://academy.claude.com/tutorials/imagine-with-claude-student-guide",
@@ -469,7 +469,7 @@
       "picked_by": "ai",
       "picked_on": "2026-09-04",
       "pool_size": 19,
-      "fingerprint": "sha1:6933d27f5b9931ec",
+      "fingerprint": "sha1:ca1f50504075a8f0",
       "picks": [
         {
           "url": "https://academy.claude.com/courses/claude-101",
@@ -497,7 +497,7 @@
           "reason": "The strongest research-specific candidate, but it would double the Academy slot Claude 101 holds, and connecting literature search comes after a first conversation, not before."
         },
         {
-          "url": "https://claude.com/resources/courses",
+          "url": "https://academy.claude.com/courses",
           "reason": "A catalog rather than a course - the pick is the course it points to."
         }
       ],
@@ -817,9 +817,9 @@
       "role": "developer",
       "level": "confident",
       "picked_by": "ai",
-      "picked_on": "2026-08-31",
+      "picked_on": "2026-09-04",
       "pool_size": 37,
-      "fingerprint": "sha1:ee0488add5dc9cbb",
+      "fingerprint": "sha1:151d95110d5485e6",
       "picks": [
         {
           "url": "https://code.claude.com/docs/en/best-practices",
@@ -859,7 +859,7 @@
       "picked_by": "ai",
       "picked_on": "2026-09-04",
       "pool_size": 57,
-      "fingerprint": "sha1:e353f5bafe835af5",
+      "fingerprint": "sha1:47b690d64f7fa3fa",
       "picks": [
         {
           "url": "https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models",
@@ -1096,7 +1096,7 @@
       "picked_by": "ai",
       "picked_on": "2026-09-04",
       "pool_size": 42,
-      "fingerprint": "sha1:01e65da9b1f5f735",
+      "fingerprint": "sha1:eae9f973e6aa6046",
       "picks": [
         {
           "url": "https://www.enterpret.com/guides/claude-for-product-managers-synthesizing-user-research",
@@ -1369,8 +1369,8 @@
       "level": "basic",
       "picked_by": "ai",
       "picked_on": "2026-09-04",
-      "pool_size": 34,
-      "fingerprint": "sha1:9d52c5a1c3c93dbb",
+      "pool_size": 33,
+      "fingerprint": "sha1:97eb6f2bfe002b06",
       "picks": [
         {
           "url": "https://restructurednews.substack.com/p/claude-editor",
@@ -1394,15 +1394,11 @@
           "reason": "Step 4 of the writing path for a reason its own ordering explains - the fixes only land after the tells, which the Wikipedia pick teaches first."
         },
         {
-          "url": "https://kenny-kane.com/blog/claude-ai-for-writing",
-          "reason": "The craft at length, but the path sequences it after the editor-relationship read, and it costs an hour where the picks spend fifteen minutes."
-        },
-        {
           "url": "https://claude.com/blog/how-anthropic-uses-claude-marketing",
           "reason": "Real numbers from a real marketing team, but it is a case study of theirs, not a method for yours."
         }
       ],
-      "note": "Two picks share chat-prompting as primary topic: a relationship decision and a tells catalogue - the before and after of signing your name to the work. The pool's safety primaries are newsroom policy pieces that serve institutions more than one byline."
+      "note": "Two picks share chat-prompting as primary topic: a relationship decision and a tells catalogue - the before and after of signing your name to the work. The pool's safety primaries are newsroom policy pieces that serve institutions more than one byline. One runner-up was dropped on 2026-09-04, not re-judged: kenny-kane.com's writing guide 301s to the author's books page and the article no longer exists, so its row left the catalogue. Two runners-up remain, which is still a record of what lost."
     },
     "writer-marketer|confident": {
       "role": "writer-marketer",

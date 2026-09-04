@@ -112,26 +112,26 @@ PATHS = [
                "explain themselves later.",
         "roles": ["writer-marketer"],
         "level": "basic",
-        "intro": "Five steps, all free, about two hours. The order runs from what job "
-                 "Claude has, through the tells everyone else is trained to spot, to "
-                 "what you owe the reader. The last step is the one people skip and it "
-                 "is the one with consequences.",
+        # Was five steps until 2026-09-04. Step 2 was a craft-at-length guide on
+        # kenny-kane.com; that URL now 301s to the author's books page and the guide
+        # is gone, so the row was removed and this path lost a step rather than
+        # pointing readers at something that is not the thing described.
+        "intro": "Four steps, all free, about ninety minutes. The order runs from what "
+                 "job Claude has, through the tells everyone else is trained to spot, "
+                 "to what you owe the reader. The last step is the one people skip and "
+                 "it is the one with consequences.",
         "steps": [
             {"url": "https://restructurednews.substack.com/p/claude-editor",
              "why": "First, decide what job it has. This is a writer using Claude as an "
              "editor rather than a ghostwriter, and settling that question now is what "
              "makes every later step a craft problem instead of an ethics problem."},
-            {"url": "https://kenny-kane.com/blog/claude-ai-for-writing",
-             "why": "Now the craft, at length, with that relationship already fixed. Read "
-             "this second and it reads as technique; read it first and it reads as "
-             "permission to hand over the keyboard."},
             {"url": "https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing",
-             "why": "Third, learn the symptoms before trying to treat them. Wikipedia's "
+             "why": "Second, learn the symptoms before trying to treat them. Wikipedia's "
              "editors have catalogued what AI prose actually looks like, and you cannot "
              "prompt your way out of a tell you cannot name."},
             {"url": "https://willfrancis.com/how-to-stop-claude-writing-like-an-ai/",
              "why": "Only now is this useful. It is the treatment for the symptoms in step "
-             "3 — read in the other order it is a list of fixes for problems you have not "
+             "2 — read in the other order it is a list of fixes for problems you have not "
              "learned to see yet."},
             {"url": "https://ethicscentral.org/the-ethics-of-using-ai/",
              "why": "Last, and last on purpose: everything above makes the work harder to "
@@ -226,7 +226,7 @@ PATHS = [
              "reading the retention terms afterwards changes nothing. Anthropic's own "
              "numbers, and narrow ones — consumer plans only, and the page never once "
              "says the word attachment."},
-            {"url": "https://anthropic.com/news/analysis-tool",
+            {"url": "https://claude.com/blog/analysis-tool",
              "why": "Now the idea the rest of the path rests on: Claude can run real code "
              "against your file instead of reasoning about the numbers in prose. Here for "
              "the concept and not the click-path — it is nearly two years old and the "

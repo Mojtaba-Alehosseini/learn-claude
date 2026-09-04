@@ -6,7 +6,8 @@ Reads the JSON that scripts/check-links.py writes and decides whether it is wort
 anyone's attention. The whole design goal is that this can be trusted in week thirty,
 which means it must almost never be wrong:
 
-  - `gone` (404/410) is the only thing that opens an issue. `blocked` never does. About
+  - `gone` (404/410), `moved` (301/308) and a stored date that has fallen behind the
+    page all open an issue. `blocked` never does. About
     a fifth of the catalogue is behind hosts that refuse automation and serve browsers
     fine, and a weekly issue naming them is how a report gets filtered to trash.
   - A single open thread, not one issue a week. If a `dead-links` issue is already open
@@ -41,18 +42,54 @@ def gh(*args, check=True):
                           encoding="utf-8", errors="replace", check=check)
 
 
-def body_for(gone, wobbly, counts, checked, run_url):
+def body_for(gone, moved, drift, wobbly, counts, checked, run_url):
     lines = []
-    one = len(gone) == 1
-    lines.append("The weekly link check found **%d resource%s the host says %s gone** "
-                 "(404 or 410)." % (len(gone), "" if one else "s", "is" if one else "are"))
-    lines.append("")
-    for r in gone:
-        lines.append("- **%s**" % r["title"])
-        lines.append("  - %s — HTTP %s" % (r["url"], r["detail"]))
-        lines.append("  - https://mojtaba-alehosseini.github.io/learn-claude/resource.html?id=%s"
-                     % r["id"])
-    lines.append("")
+    if gone:
+        one = len(gone) == 1
+        lines.append("The weekly link check found **%d resource%s the host says %s gone** "
+                     "(404 or 410)." % (len(gone), "" if one else "s",
+                                        "is" if one else "are"))
+        lines.append("")
+        for r in gone:
+            lines.append("- **%s**" % r["title"])
+            lines.append("  - %s — HTTP %s" % (r["url"], r["detail"]))
+            lines.append("  - https://mojtaba-alehosseini.github.io/learn-claude/"
+                         "resource.html?id=%s" % r["id"])
+        lines.append("")
+
+    if moved:
+        one = len(moved) == 1
+        lines.append("**%d resource%s moved permanently** (301 or 308). A redirect is a "
+                     "fault, not a pass: the catalogue holds a URL that no longer "
+                     "resolves to itself, and ids are derived from URLs, so picks and "
+                     "path steps still point at the old address."
+                     % (len(moved), "" if one else "s"))
+        lines.append("")
+        for r in moved:
+            lines.append("- **%s**" % r["title"])
+            lines.append("  - %s" % r["url"])
+            lines.append("  - → %s" % r["detail"])
+        lines.append("")
+        lines.append("Open each destination before taking it. A moved page is often a "
+                     "rewritten page — when the Excel article moved to claude.com/docs "
+                     "it had gained a prompt-injection warning the old card never "
+                     "mentioned — and sometimes the redirect lands somewhere that is "
+                     "not the resource at all, which is a removal and not an update.")
+        lines.append("")
+
+    stale_dates = [r for r in drift
+                   if r.get("drift_class") == "stale-stored-date"]
+    if stale_dates:
+        lines.append("**%d stored date%s fallen behind the page.** These hosts print a "
+                     "last-updated date that moves by design. A stored date left behind "
+                     "can push a live resource past the freshness rule and out of every "
+                     "picks pool, silently — which is exactly what happened to "
+                     "\"Anthropic's AI for Science Program\" for ten months."
+                     % (len(stale_dates), "" if len(stale_dates) == 1 else "s"))
+        lines.append("")
+        for r in stale_dates:
+            lines.append("- **%s** — %s" % (r["title"], r["drift"]))
+        lines.append("")
     lines.append("---")
     lines.append("")
     lines.append("**What this does not mean.** A link that answers 403 is not in this "
@@ -67,10 +104,15 @@ def body_for(gone, wobbly, counts, checked, run_url):
     lines.append("")
     lines.append("**Do not move the `checked` date.** Re-checking that a link still "
                  "resolves is not the same as re-reading the resource, and only the "
-                 "second earns a new date. If a link is genuinely gone the honest edit "
-                 "is `status: dead`, which the site already renders as \"This link no "
-                 "longer works\" while leaving the card in place so a reader knows it "
-                 "was checked rather than quietly dropped.")
+                 "second earns a new date.")
+    lines.append("")
+    lines.append("**The convention, ruled 2026-09-04.** A dead resource that redirects "
+                 "somewhere real gets its new URL and a re-read card. A dead resource "
+                 "with no destination is **removed** — the catalogue carries no "
+                 "`status: dead` rows, and \"0 dead links\" is a swept number rather "
+                 "than a labelled one. An expired one-off event is removed for the same "
+                 "reason: there is nothing a reader could open. A redirect that lands on "
+                 "something which is not the resource counts as no destination.")
     lines.append("")
     lines.append("Nothing was changed automatically. %d URLs were asked. "
                  "[Full run](%s)." % (checked, run_url or "n/a"))
@@ -88,22 +130,26 @@ def main():
     counts = data.get("counts", {})
     checked = data.get("checked", len(results))
     gone = [r for r in results if r["verdict"] == "gone"]
+    moved = [r for r in results if r["verdict"] == "moved"]
     wobbly = [r for r in results if r["verdict"] == "wobbly"]
+    drift = data.get("drift", [])
+    stale_dates = [r for r in drift if r.get("drift_class") == "stale-stored-date"]
     run_url = os.environ.get("RUN_URL", "")
 
-    print("checked %d · gone %d · blocked %d · wobbly %d"
-          % (checked, len(gone), counts.get("blocked", 0), len(wobbly)))
+    print("checked %d · gone %d · moved %d · blocked %d · wobbly %d · stale dates %d"
+          % (checked, len(gone), len(moved), counts.get("blocked", 0), len(wobbly),
+             len(stale_dates)))
 
     if checked and len(gone) / checked > IMPLAUSIBLE:
         print("%d of %d reading as gone is not %d dead links, it is a broken runner. "
               "Filing nothing." % (len(gone), checked, len(gone)))
         return 0
 
-    if not gone:
-        print("Nothing gone. No issue filed.")
+    if not gone and not moved and not stale_dates:
+        print("Nothing gone, nothing moved, no stale dates. No issue filed.")
         return 0
 
-    body = body_for(gone, wobbly, counts, checked, run_url)
+    body = body_for(gone, moved, drift, wobbly, counts, checked, run_url)
     if args.dry_run:
         print("\n--- issue that would be filed ---\n")
         print(body)

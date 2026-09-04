@@ -1,0 +1,24 @@
+# Hosts that refuse automated requests. A bot-wall is NOT evidence that a page is dead,
+# so check-links.py classes them `blocked` rather than `gone` and never acts on them.
+#
+# The date beside each host is the last time a PERSON opened one of its pages and
+# confirmed the resource was still there. Machine checks cannot supply that date, which
+# is the whole reason this file is written by hand.
+#
+# Format:  host  YYYY-MM-DD   # optional note
+#
+# docs/STATUS.md renders this beside the blocked count, so an old date here shows up as
+# an old date on the status page rather than being quietly forgotten.
+
+datacamp.com                    never   # 4 items
+medium.com                      never   # 4 items, mostly member-metered
+udemy.com                       never   # 4 items
+forbes.com                      never   # 1 item
+uxdesign.cc                     never   # 1 item, Medium-hosted
+designsystemscollective.com     never   # 1 item, Medium-hosted
+students.unimelb.edu.au         never   # 1 item
+monash.edu                      never   # 1 item
+education.gov.au                never   # 1 item
+ethicscentral.org               never   # 1 item, and it is step 4 of the writing path
+spj.org                         never   # 1 item
+niemanlab.org                   never   # 1 item
