@@ -26,6 +26,12 @@ actually fits them instead of drowning in options.
   AI-tool content goes stale in months — always search, never answer from memory.
 - Prefer one file that does one thing. Split when a file gets long.
 - Verify before claiming done: run it, open it, check the links.
+- Shell hygiene: never put a regex or a backslash through a heredoc — write scripts to a
+  file and run the file. Commit messages via `git commit -F`. Never background a command
+  that backgrounds itself; confirm a job started before reporting it running.
+- Numbers in documentation are generated, never typed. `scripts/measure.py` writes
+  `docs/STATUS.md` on every build; docs point at it. Hand-written figures rotted twice in
+  three rounds.
 
 ## Tech defaults (unless we decide otherwise)
 - Static site, no backend. Data lives in a JSON/YAML file, site reads from it.

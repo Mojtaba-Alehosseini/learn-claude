@@ -74,14 +74,16 @@ ranking regression shows up there first.
 
 ## Where it stands
 
-- 637 resources, 0 dead links, and 7 learning paths — one for every role — as of
-  2026-09-04
-- 109 picks across 37 of the 40 role×level combinations: answer both questions on the
-  home page and Browse now says which two or three to open first, labelled `picked by AI`
-  with the date, and never called "best" — 78% of the catalogue is skimmed, so quality is
-  not ours to rank; fit and order are
-- 0 are `reviewed` — nobody has finished a course end to end yet, and the cards say so
-- 436 of 637 publish no date at all, and those cards say that too
+**[docs/STATUS.md](docs/STATUS.md)** — generated from `data/` on every build, never typed.
+Catalogue size, publishers, how thoroughly each resource has been checked, the official
+ratio, which cells are thin or empty, and what the last link check found.
 
-Counts here are measured from `data/`, not remembered. The fuller picture, with the same
-discipline, is in `docs/THE-PROJECT.md`.
+Three things that file will not tell you, because they are judgments rather than counts:
+
+- **0 resources are `reviewed`.** Nobody has finished a course end to end. That is the
+  honest gap in the site's promise, and the cards say so.
+- **"Start with these three" is picked by a model, not a person**, labelled as such on
+  every block, with the date it was picked and the runners-up recorded in `data/picks.json`.
+- **We never call anything "best".** 78% of the catalogue is skimmed, so quality is not
+  ours to rank. Fit and order are.
+
