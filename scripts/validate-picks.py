@@ -39,6 +39,35 @@ above it; it may never be hauled in from below the cut to satisfy a count. Where
 legal three exist inside the shortlist, the cell ships two and says why in
 `two_pick_cause`. Two honest picks beat three where the third is the checker's choice.
 
+## Why an undated resource is still a candidate
+
+Asked and answered 5 September 2026, with the counterfactual measured rather than
+argued. If `published: UNVERIFIED` were excluded from the pre-filter:
+
+    cells falling below MIN_POOL (4)   3 -> 13 of 40
+    cells becoming completely empty    1 ->  8 of 40
+
+and every `builder` cell in the catalogue would hold ZERO candidates. Not few - zero.
+`pm|builder` has 55 eligible resources and not one of them carries a date, because
+advanced material is overwhelmingly Anthropic Academy pages and Academy prints no dates
+at all. Excluding the undated would not raise the bar, it would delete the top half of
+the site.
+
+So undated stays eligible. What changes is the tie-break below.
+
+## The tie-break: at equal fit, a dated resource wins
+
+The picker is told that where two candidates fit the cell equally well, the one whose
+date we can stand behind takes the slot - and that when that rule decided it, the reason
+says so in one clause, so a reader can see the tie was broken on evidence rather than on
+taste. "Equal fit" is doing real work there: this is a tie-break, not a ranking factor.
+A better-fitting undated resource still beats a worse-fitting dated one, every time.
+
+Applies from the next re-pick onward. The 37 cells already picked were judged before the
+rule existed and are not re-run for it - re-picking a cell to apply a tie-break that
+would not have changed the outcome is churn, and where it would have changed the outcome
+we would be reversing a judgment on a rule that did not exist when it was made.
+
 ## The four constraints, and how each degrades
 
 Checked here in code, not trusted from the picking step — the picker is re-asked until

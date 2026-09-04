@@ -27,6 +27,19 @@ able to launder a resource nobody has looked at into a recommendation.
                               at all and the site says so rather than guessing, so
                               guessing here would contradict the card
 
+## What the picker is told about dates
+
+Every candidate carries `published`, `updated` and `date_source`, so the picker can see
+not just when a resource is from but whether we can stand behind that. The rule:
+
+    At equal fit, a dated resource beats an undated one. When that rule decides a slot,
+    the reason must say so in one clause.
+
+Equal fit is the whole condition. A better-fitting undated resource still wins - most of
+the catalogue is undated, and at `builder` level every single candidate is, so a rule
+that preferred dates outright would empty those cells rather than improve them. The
+measurement behind that is in scripts/validate-picks.py.
+
 ## What this does not do
 
 It does not rank. Ordering the survivors by tier or date would be a quality claim, and
