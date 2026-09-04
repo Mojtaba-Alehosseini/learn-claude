@@ -308,6 +308,17 @@ PATHS = [
 # This is the same fault the README warns about for ids, in a second place nobody had
 # looked. stable-ids.py already normalises correctly — it keeps the query and drops only
 # tracking parameters — so use that one and stop maintaining two answers to one question.
+QUARTER = {
+    0: "no time at all",
+    15: "15 minutes",
+    30: "half an hour",
+    45: "45 minutes",
+    60: "an hour",
+    75: "an hour and a quarter",
+    90: "an hour and a half",
+}
+
+
 def _load_norm():
     import importlib.util, os
     path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "stable-ids.py")
@@ -380,7 +391,13 @@ def main():
             "intro": p["intro"],
             "step_count": len(steps),
             "total_minutes": minutes,
-            "total_time_label": (f"about {round(minutes)} minutes" if minutes < 90
+            # "about 81 minutes" shipped for weeks beside "about 4 hours" and
+            # "about 2 hours". Every one of the ten Attack 2 agents found it, and
+            # several named it as the moment the page stopped sounding like a person.
+            # Under 90 minutes now rounds to the nearest quarter hour in words, the
+            # way the hours branch already rounded.
+            "total_time_label": (f"about {QUARTER[round(minutes / 15) * 15]}"
+                                 if minutes < 90
                                  else f"about {hours:.0f} hours"),
             "cost": "free" if costs <= {"free", "free-account"} else "some paid steps",
             "weakest_tier": [k for k, v in RANK.items() if v == weakest][0],

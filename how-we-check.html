@@ -44,7 +44,7 @@
   </div>
 </header>
 
-<main id="main" class="wrap page">
+<main id="main" tabindex="-1" class="wrap page">
   <h1 class="h1">How we check</h1>
 
   <p class="lede" style="margin-top:var(--space-24)">
@@ -164,10 +164,10 @@
   items.forEach(function (x) { n[x.tier] = (n[x.tier] || 0) + 1; });
   var order = ["reviewed", "ai-reviewed", "previewed", "listed"];
   var parts = order.filter(function (t) { return n[t]; }).map(function (t) {
-    return n[t] + " " + window.LC.TIER[t].label.toLowerCase();
+    return n[t] + " " + window.LC.TIER[t].label;
   });
   var none = order.filter(function (t) { return !n[t]; }).map(function (t) {
-    return window.LC.TIER[t].label.toLowerCase();
+    return window.LC.TIER[t].label;
   });
   var s = "Right now: " + items.length + " resources — " + parts.join(", ") + ".";
   if (none.length) {

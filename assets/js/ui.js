@@ -347,8 +347,13 @@
     var pathLine = "";
     if (!opts.hidePath && item.paths && item.paths.length) {
       var p = item.paths[0];
-      pathLine = '<span class="card-path">Step ' + p.step + ' of ' + p.of +
-                 ' in ' + LC.esc(p.pathTitle || p.path) + '</span>';
+      /* This was a <span>. It is the only filled pill in the card's reading
+         column, so it is the most eye-catching thing on the card, and it went
+         nowhere - while the resource page linked the identical string. Two
+         affordances for one string; now one. */
+      pathLine = '<a class="card-path" href="paths.html?id=' +
+                 encodeURIComponent(p.path) + '">Step ' + p.step + ' of ' + p.of +
+                 ' in ' + LC.esc(p.pathTitle || p.path) + '</a>';
     }
 
     var icon = '<span class="card-icon" aria-hidden="true" style="background:url(\'' +

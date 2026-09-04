@@ -394,6 +394,11 @@ button, .btn, .nav-link, .filter-option { min-height: var(--tap-min); }
 .flag-dead { color: var(--flag-outdated); font-weight: var(--weight-medium); }
 
 /* "Step 2 of 6 in Your first week with Claude" */
+/* This is a link now. It was a <span> on the card and an <a> on the resource page -
+   the same string, the same filled pill, two different affordances, and the card's
+   version was the eye-catching one that went nowhere. A pill carrying a rule-width
+   underline looks broken, so the underline waits for hover; the shape and colour at
+   rest are unchanged. */
 .card-path {
   display: inline-block;
   margin-top: var(--space-12);
@@ -401,7 +406,10 @@ button, .btn, .nav-link, .filter-option { min-height: var(--tap-min); }
   background: var(--surface-feature);
   border-radius: var(--radius-badge);
   font: var(--weight-medium) var(--text-caption)/var(--leading-caption) var(--font-sans);
+  text-decoration: none;
 }
+
+a.card-path:hover { text-decoration: underline; }
 
 /* -------------------------------------------------------------- browse ---- */
 

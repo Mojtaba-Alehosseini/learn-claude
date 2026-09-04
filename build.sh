@@ -32,6 +32,10 @@ python3 scripts/build-search-index.py --keywords
 python3 scripts/test-search.py | tail -2
 
 echo
+echo "4b/6 sitemap, generated rather than typed"
+python3 scripts/build-sitemap.py
+
+echo
 echo "5/6  data as loadable javascript"
 python3 scripts/build-data-js.py
 

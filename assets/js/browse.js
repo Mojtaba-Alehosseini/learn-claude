@@ -210,22 +210,35 @@
          who arrived with a role already applied to "browse by role instead" sends them
          back to what they were doing when they got stuck; the useful move there is to
          drop the role and search everything. */
+      /* "Try fewer words" was printed to people who had typed one. Two agents hit
+         it - on "typography" and on "em dash" - and both wrote down that the advice
+         could not be followed. Only offer it when there is a word to drop. */
+      var multi = q.trim().split(/\s+/).length > 1;
       msg = "<strong>No match for “<bdi>" + LC.esc(q) + "</bdi>”.</strong>" +
             (sel.roles.length
-              ? "Try fewer words, or clear the role filter to search all " +
-                items.length + "."
-              : "Try fewer words, or browse by role instead.");
+              ? (multi ? "Try fewer words, or clear" : "Clear") +
+                " the role filter to search all " + items.length + "."
+              : (multi
+                  ? 'Try fewer words, or <a href="browse.html">browse everything</a>'
+                  : '<a href="browse.html">Browse everything</a>') + " instead.");
     } else if (sel.roles.length && !anyOtherThanRole()) {
       msg = "<strong>We have not covered this role yet.</strong>" +
-            "It's on the list. Browse everything instead.";
+            "It's on the list. <a href=\"browse.html\">Browse everything</a> instead.";
     } else if (sel.roles.length === 1 && sel.levels.length === 1 &&
                !sel.times.length && !sel.topics.length && !sel.formats.length &&
                !sel.costs.length && !sel.officials.length) {
       /* The two front-door questions can land on a combination the catalogue does not
          cover yet - student|builder today. Say so plainly, the way the paths page does
          for a role with no path, instead of the generic remove-a-filter shrug. */
+      /* Both ways out were plain text. The 404 in resource.js, which is the same
+         shape of dead end, has always linked. student|builder sends a whole cell of
+         the front-door grid here and the only escape was a small x chip further up -
+         off screen entirely on a phone. */
       msg = "<strong>We have nothing for this combination yet.</strong>" +
-            "It's on the list. Loosen the level, or browse everything.";
+            "It's on the list. Loosen the level, or " +
+            '<a href="browse.html?role=' + encodeURIComponent(sel.roles[0]) + '">' +
+            "see everything for this role</a>, or " +
+            '<a href="browse.html">browse everything</a>.';
     } else {
       msg = "<strong>Nothing matches all of those.</strong>" +
             "Try removing one filter — time is usually the one to loosen.";
@@ -308,7 +321,8 @@
     var picked = renderPicks(out);
     var rest = out.filter(function (it) { return !picked[it.id]; });
     el.results.innerHTML = rest.map(function (it) { return LC.card(it); }).join("");
-    document.title = "Browse " + out.length + " Claude resources — Learn Claude";
+    document.title = "Browse " + out.length + " Claude resource" +
+                     (out.length === 1 ? "" : "s") + " — Learn Claude";
     writeURL();
   }
 

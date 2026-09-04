@@ -25,6 +25,21 @@
 
   document.title = item.title + " — Learn Claude";
 
+  /* A bare browse.html here threw away the role and level the reader had just
+     chosen and dropped them into all 635 - on a phone, at the top of a page hundreds
+     of screens long. Filters live only in the URL, so the referrer has them. Only our
+     own browse page is trusted, and only its query string is used. */
+  function backHref() {
+    try {
+      var r = new URL(document.referrer);
+      if (r.origin === location.origin && /(^|\/)browse\.html$/.test(r.pathname) &&
+          r.search) {
+        return "browse.html" + r.search;
+      }
+    } catch (e) { /* no referrer, or not a URL we can read */ }
+    return "browse.html";
+  }
+
   var fresh = LC.freshness(item);
   var author = LC.authorLine(item);
 
@@ -52,7 +67,7 @@
   var tier = LC.TIER[item.tier] || LC.TIER.listed;
 
   out.innerHTML = '' +
-    '<p class="meta"><a href="browse.html">← Back to browse</a></p>' +
+    '<p class="meta"><a href="' + backHref() + '">← Back to browse</a></p>' +
 
     '<div class="resource-head" style="margin-top:var(--space-24)">' +
       '<div class="chip-row">' + LC.badge(item.tier) + '</div>' +
@@ -73,6 +88,14 @@
       ? '<p class="prose flag-dead" style="margin-top:var(--space-16)">' +
         'This link no longer works. We have left it here so you know we checked.</p>' : '') +
 
+    /* The catalogue has carried status "outdated" on a handful of rows for months and
+       nothing rendered it, because this branch only ever asked about "dead". A flag
+       the reader never sees is the same as no flag. */
+    (item.status === "outdated"
+      ? '<p class="prose flag-outdated" style="margin-top:var(--space-16)">' +
+        'We marked this out of date at the last check. Parts of it no longer match ' +
+        'Claude.</p>' : '') +
+
     list("What it teaches", item.teaches) +
 
     '<section class="section"><h2 class="h2">Who it\'s for</h2>' +
@@ -88,13 +111,24 @@
       '<p class="prose"><strong>' + LC.esc(tier.label) + '.</strong> ' +
       LC.esc(tier.tip) + ' <a href="how-we-check.html">How we check</a>.</p></section>' +
 
+    /* This line used to rebuild the dates by hand and drop two things the card
+       already showed: the Updated date, which 96 items carry and which for 44 of them
+       is the only date evidence there is, and the "over a year ago" warning on 17.
+       So the page reached from a shared link said less than the card that linked to
+       it. It now takes both from LC.freshness, the same source the card uses.
+       It keeps the real date as well as the warning rather than swapping one for the
+       other: the card has room for one and this page has room for both. */
     '<p class="provenance">' +
       LC.esc(fresh.checked) +
       (LC.fmtDate(item.published)
         ? ' · Published ' + LC.esc(LC.fmtDate(item.published))
         : ' · No publish date given') +
+      (fresh.updatedNote ? ' · ' + LC.esc(fresh.updatedNote) : '') +
       ' · Found through ' + LC.esc(item.source) +
     '</p>' +
+
+    (fresh.cls === 'flag-outdated'
+      ? '<p class="provenance flag-outdated">' + LC.esc(fresh.note) + '</p>' : '') +
 
     /* The escape hatch. Sits under the provenance line, in the same quiet type, because
        it belongs to the same conversation: here is what we know about this and when we

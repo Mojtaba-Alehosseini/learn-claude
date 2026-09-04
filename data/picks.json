@@ -868,7 +868,7 @@
         },
         {
           "url": "https://www.youtube.com/watch?v=TqC1qOfiVcQ",
-          "reason": "The deepest non-Anthropic material in the pool: a half-day workshop on the design reasoning behind agents in production, by the SDK's own engineer, where the alternatives stop before the hard parts.",
+          "reason": "The deepest material in the pool: a half-day workshop on the design reasoning behind agents in production, by the SDK's own engineer, where the alternatives stop before the hard parts.",
           "subject": "building agents into your own product with the SDK"
         },
         {
@@ -912,7 +912,7 @@
         },
         {
           "url": "https://www.datacamp.com/courses/claude-101",
-          "reason": "The pool's one non-Anthropic voice, and the course that goes on to tour Projects, Skills and connectors where the official twin stays at chat basics.",
+          "reason": "The course that goes on to tour Projects, Skills and connectors where the official twin stays at chat basics.",
           "subject": "a structured basics course that tours the surfaces"
         }
       ],
@@ -1065,7 +1065,7 @@
         },
         {
           "url": "https://www.datacamp.com/courses/claude-101",
-          "reason": "The structured option that goes on to tour Projects, Skills and connectors - the map a PM needs one week in, from the pool's strongest non-Anthropic voice.",
+          "reason": "The structured option that goes on to tour Projects, Skills and connectors - the map a PM needs one week in.",
           "subject": "a structured basics course that tours the surfaces"
         },
         {

@@ -2,7 +2,7 @@
      this file, and a number typed here would be silently replaced. Change the
      data, then run ./build.sh. -->
 
-# Status — measured 2026-09-04
+# Status — measured 2026-09-05
 
 Every figure below is computed from `data/` at build time. Nothing here is typed.
 THE-PROJECT.md and README point at this file rather than repeating it.
@@ -90,17 +90,17 @@ comparative recommendation should not point at something a year stale.
 
 | item | publisher | published | days | level |
 |---|---|---|---|---|
-| AI prompt engineering: A deep dive | Anthropic | 2024-09-05 | 729 | confident |
-| Tips for building AI agents | Anthropic | 2025-02-13 | 568 | builder |
-| Mastering Claude Code in 30 minutes | Anthropic | 2025-05-22 | 470 | confident |
-| Lesson 1: Introduction to AI Fluency \| AI Fluency: Framewo | Anthropic | 2025-06-12 | 449 | never-used |
-| Lesson 2B: The 4D Framework \| AI Fluency: Framework & Foun | Anthropic | 2025-06-12 | 449 | never-used |
-| Lesson 7: Effective prompting techniques (Deep Dive) \| AI  | Anthropic | 2025-06-12 | 449 | basic |
-| The Model Context Protocol (MCP) | Anthropic | 2025-06-16 | 445 | confident |
-| Advancing Claude for Education | Anthropic | 2025-07-09 | 422 | basic |
-| Claude for Small Business (Back-Office AI, honest review) | Eigent AI | 2025-07-29 | 402 | basic |
-| Prompting 101 \| Code w/ Claude | Anthropic | 2025-07-31 | 400 | basic |
-| Claude Code best practices \| Code w/ Claude | Anthropic | 2025-07-31 | 400 | confident |
+| AI prompt engineering: A deep dive | Anthropic | 2024-09-05 | 730 | confident |
+| Tips for building AI agents | Anthropic | 2025-02-13 | 569 | builder |
+| Mastering Claude Code in 30 minutes | Anthropic | 2025-05-22 | 471 | confident |
+| Lesson 1: Introduction to AI Fluency \| AI Fluency: Framewo | Anthropic | 2025-06-12 | 450 | never-used |
+| Lesson 2B: The 4D Framework \| AI Fluency: Framework & Foun | Anthropic | 2025-06-12 | 450 | never-used |
+| Lesson 7: Effective prompting techniques (Deep Dive) \| AI  | Anthropic | 2025-06-12 | 450 | basic |
+| The Model Context Protocol (MCP) | Anthropic | 2025-06-16 | 446 | confident |
+| Advancing Claude for Education | Anthropic | 2025-07-09 | 423 | basic |
+| Claude for Small Business (Back-Office AI, honest review) | Eigent AI | 2025-07-29 | 403 | basic |
+| Prompting 101 \| Code w/ Claude | Anthropic | 2025-07-31 | 401 | basic |
+| Claude Code best practices \| Code w/ Claude | Anthropic | 2025-07-31 | 401 | confident |
 
 ## Needs a person
 
@@ -153,7 +153,7 @@ stale. Opening one either restores its date or confirms it should go.
 
 | item | date we had | age it implied |
 |---|---|---|
-| The Ethics of Using AI | 2023-02-01 | 1311 days |
+| The Ethics of Using AI | 2023-02-01 | 1312 days |
 
 ### Cells with no independent material (1)
 

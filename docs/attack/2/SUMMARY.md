@@ -328,11 +328,47 @@ judgment call inside it.
 | M8 | "Try fewer words" advised to someone who typed one word | `assets/js/browse.js` | only advise it when there is more than one word |
 | M9 | "Browse 1 Claude resources" | `assets/js/browse.js` | singularise |
 | M10 | The path signpost is a `<span>` on the card and a link on the resource page | `assets/js/ui.js` | make it the same link in both places |
-| M11 | `Skip if:` repeats its own label on 157 of 635 cards | `data/items.json` | strip the duplicated prefix; 104 cards already use the correct form |
-| M12 | `sitemap.xml` lists 353 of 635 resources and 35 ids that no longer exist | `scripts/` | regenerate from the current data |
-| M13 | Pick reasons describe Anthropic material as "non-Anthropic" (3 cells) | `data/picks.json` | corrected to say what the data says |
+| M11 | `Skip if:` repeats its own label on 157 of 635 cards | `data/items.json` | prefix stripped on all 157; every change in [MECHANICAL-LOG.md](MECHANICAL-LOG.md) |
+| M12 | `sitemap.xml` lists 353 of 635 resources and 35 ids that no longer exist | new `scripts/build-sitemap.py`, wired into `build.sh` | generated from the data every build: 646 urls, 0 dead |
+| M13 | Pick reasons describe Anthropic material as "non-Anthropic" (3 of 6) | `data/picks.json` + `scripts/validate-picks.py` | false clause deleted, nothing added; and a check so a fourth cannot ship |
 
-*(This table is filled in as the commit lands — see the fix log at the bottom of this file.)*
+**Verified, not assumed.** Every one of these was opened in a browser against a local
+server after the change: the two dropped date lines on `r-7d24e5faa2` and `r-f86a3e8189`,
+the outdated advisory, the back link carrying `?role=designer&level=basic`, the card pill
+resolving to `paths.html?id=judging-ai-design-work`, both dead ends' links, the singular
+tab title on `?q=turnitin`, the one-word empty state on `?q=typography`, and the skip link
+now landing focus on `MAIN#main` instead of falling back to `<body>`.
+
+**Three things came out of the fixing that were not in the plan.**
+
+*The 157 `Skip if` edits are logged in full.* One file, `MECHANICAL-LOG.md`, before and
+after for every line. Nothing but the leading label was touched; a mid-sentence "Skip also
+if" is correct English and was left alone. Median length is unchanged at 187 characters,
+so no argument was shortened.
+
+*M13 got a check as well as a correction.* Removing three false sentences does not stop a
+fourth. `validate-picks.py` now refuses a pick reason that claims to be non-Anthropic when
+the item's own author or title says Anthropic, with the message *"official means the
+domain, not the author"* — which is the actual confusion. Proved it fires by putting one
+of the three claims back: exit 1, naming the cell and quoting the card. The three genuinely
+independent claims (Harvard, freeCodeCamp, Doan Winkel) were left alone.
+
+*M12 became a generator rather than an edit.* `sitemap.xml` was typed once and never
+touched. Hand-fixing it would have put it back where it was inside a month, so
+`scripts/build-sitemap.py` writes it from the data on every build, with `lastmod` from each
+row's own `checked` date. 646 URLs, **0 dead ids, 0 items missing** — measured after
+generating, not assumed.
+
+**Two judgment calls inside the mechanical work, both yours to reverse.**
+
+1. **M10 costs one tab stop on 35 cards.** The card was deliberately one focus stop, and
+   seven agents praised that. Making the path pill a link adds a second stop to the 35
+   cards that carry a path. I made it a link because a filled, eye-catching pill that is
+   not clickable is a dead control, and the resource page already linked the same string —
+   but the trade is real and it is against a decision that was made on purpose.
+2. **The wording of the new `outdated` advisory is mine.** *"We marked this out of date at
+   the last check. Parts of it no longer match Claude."* The field was already set on three
+   rows; only the sentence is new.
 
 ### 4b. Decisions — yours, with the evidence
 

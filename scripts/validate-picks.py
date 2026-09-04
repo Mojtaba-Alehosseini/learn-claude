@@ -203,6 +203,22 @@ def check_cell(key, cell, pool, items_by_url):
                 % (it["title"][:40], role, level, it.get("tier"), it.get("published")))
         if len(str(p.get("reason") or "").strip()) < 20:
             err("pick %s has no working reason sentence" % u)
+        # A reason may not claim independence the data denies. `official` means "not
+        # published on an Anthropic domain", and three reasons read it as "not from
+        # Anthropic": two praised Claude 101 as the pool's non-Anthropic voice while its
+        # own author line said "Created by Anthropic, adapted for the DataCamp
+        # platform", and one called a talk non-Anthropic material in the same sentence
+        # that credited the SDK's own engineer. Independence is the axis those sentences
+        # were selling, so getting it backwards is not a wording slip.
+        reason = str(p.get("reason") or "")
+        if "non-anthropic" in reason.lower().replace(" ", "-"):
+            author = str(it.get("author") or "")
+            said = (author if "anthropic" in author.lower()
+                    else (it["title"] if "anthropic" in it["title"].lower() else ""))
+            if said:
+                err("pick %r calls itself non-Anthropic, and its own card says %r "
+                    "— official means the domain, not the author"
+                    % (it["title"][:40], said[:70]))
         if not str(p.get("subject") or "").strip():
             err("pick %s has no subject line — the self-check cannot have run" % u)
 
