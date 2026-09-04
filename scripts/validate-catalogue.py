@@ -63,6 +63,22 @@ LIST_FIELDS = {"roles", "topics"}
 # `item.status === "dead"` in ui.js and resource.js — so there is nothing to read.
 STATUS = {"live", "dead", "outdated"}
 
+# How we know a date. Required on any row carrying a real `published` or `updated`;
+# `UNVERIFIED` needs none, because "we do not know" is already the whole statement.
+#
+# Added 2026-09-05 after a sweep found 9 stored dates disagreeing with their own pages,
+# one by nine months - and found that not one of the nine recorded where its date came
+# from. The notes fields were careful about affiliate codes, paywalls and vendor bias,
+# and silent on provenance, so a wrong date was unfalsifiable until a machine could read
+# the page. This is the same move the site already made twice: never round up, and say
+# what you actually know.
+DATE_SOURCES = {
+    "printed":  "a person read the date on the page",
+    "metadata": "parsed from JSON-LD, article:published_time or dateModified",
+    "upload":   "a video platform's upload date",
+    "intercom": "the Help Center's Intercom template, read by the weekly parser",
+}
+
 DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 
 # Ways of writing "I did not fill this in". They pass an empty check and fail the
@@ -636,6 +652,25 @@ def main(argv=None):
                ", ".join(sorted(slug_hosts)), DUPE_SLUGS))
 
     # ------------------------------------------------------------ report ----
+
+    # ---- `date_source`: a real date must say how we know it ----------------------
+    for n, item in enumerate(items):
+        pub = item.get("published")
+        upd = item.get("updated")
+        has_real = ((pub and pub != "UNVERIFIED" and DATE.match(str(pub)))
+                    or (upd and upd != "UNVERIFIED" and DATE.match(str(upd))))
+        src = item.get("date_source")
+        if has_real and not src:
+            bad(n, item, "carries a real date and no `date_source`. A date whose "
+                         "provenance nobody recorded cannot be checked, which is how a "
+                         "nine-month error sat in this catalogue unnoticed. Use one of: "
+                         + ", ".join(sorted(DATE_SOURCES)))
+        elif src and src not in DATE_SOURCES:
+            bad(n, item, "`date_source` = %r is not one of %s"
+                         % (src, ", ".join(sorted(DATE_SOURCES))))
+        elif src and not has_real:
+            bad(n, item, "`date_source` = %r but no real date to source. Remove the "
+                         "field when the dates are UNVERIFIED." % src)
 
     # ---- `updated`: a sibling of `published`, never a substitute for it ----------
     # Added 2026-09-05. `published` is when a resource first appeared; `updated` is when
