@@ -8106,7 +8106,7 @@
     "published": "UNVERIFIED",
     "checked": "2026-09-05",
     "status": "live",
-    "notes": "Launched before Claude Cowork existed (Cowork shipped January 2026), so it does not cover Cowork — it focuses on chat, Claude Projects, and prompting technique. Date read from the page 2026-09-05: \"Last update: June 2026\" - a month with no day. Choosing the 1st would be the rounding-up this ruling exists to stop.. published 2025-11-18 -> UNVERIFIED.",
+    "notes": "Launched before Claude Cowork existed (Cowork shipped January 2026), so it does not cover Cowork — it focuses on chat, Claude Projects, and prompting technique. Date read from the page 2026-09-05: \"Last update: June 2026\" - a month with no day. Choosing the 1st would be the rounding-up this ruling exists to stop.. published 2025-11-18 -> UNVERIFIED. Restored 2026-09-05 as updated: 2026-06. The page prints 'Last update: June 2026' - a month with no day, which is a fact the schema used to throw away for not having one. The card prints the month and never invents a day; staleness reads it as the first of that month, its oldest possible meaning.",
     "source": "Coursera",
     "official": false,
     "id": "r-72da432568",
@@ -8134,7 +8134,9 @@
     "teaches": [
       "use claude for basic tasks like editing emails",
       "simulate a job interview using ai"
-    ]
+    ],
+    "updated": "2026-06",
+    "date_source": "printed"
   },
   {
     "title": "Claude Cowork 7-Day Challenge: Find Practical AI Use Cases That Deliver",
@@ -15074,9 +15076,9 @@
     "who_for": "Someone who wants a structured, assessed course path with a shareable certificate rather than piecing together blog posts.",
     "skip_if": "You don't want a Coursera Plus subscription — the course is listed as included with Coursera Plus rather than as a standalone free offering.",
     "published": "UNVERIFIED",
-    "checked": "2026-08-18",
+    "checked": "2026-09-05",
     "status": "live",
-    "notes": "Listed as 'Recently updated! February 2026'; only the syllabus was reviewed, not the video content, so the depth of the marketing module is unconfirmed.",
+    "notes": "Listed as 'Recently updated! February 2026'; only the syllabus was reviewed, not the video content, so the depth of the marketing module is unconfirmed. Restored 2026-09-05 as updated: 2026-02. The page prints 'Recently updated! February 2026' - a month with no day, which is a fact the schema used to throw away for not having one. The card prints the month and never invents a day; staleness reads it as the first of that month, its oldest possible meaning.",
     "source": "Coursera",
     "official": false,
     "id": "r-158b800917",
@@ -15100,7 +15102,9 @@
       "use structured prompting for marketing and copywriting tasks",
       "generate landing pages and social media content with ai",
       "apply formal course frameworks to everyday chat interactions"
-    ]
+    ],
+    "updated": "2026-02",
+    "date_source": "printed"
   },
   {
     "title": "Getting started with Claude.ai",
@@ -32169,14 +32173,16 @@
       "how do i learn claude as a designer",
       "what is the best structured start for design"
     ],
-    "notes": "Opened via fetch 2026-09-04. Coursera shows 'Last Updated May 2026' and 1,911 enrolled; published recorded as 2026-05-01 from that month, which is the finest granularity the page gives. Harvested for designer|never-used, which held five items and no course before this. Date read from the page 2026-09-05: \"Recently updated! May 2026\" - a month with no day. The stored 2026-05-01 was exactly that rounding, recorded in August as \"the finest granularity the page gives\".. published 2026-05-01 -> UNVERIFIED.",
+    "notes": "Opened via fetch 2026-09-04. Coursera shows 'Last Updated May 2026' and 1,911 enrolled; published recorded as 2026-05-01 from that month, which is the finest granularity the page gives. Harvested for designer|never-used, which held five items and no course before this. Date read from the page 2026-09-05: \"Recently updated! May 2026\" - a month with no day. The stored 2026-05-01 was exactly that rounding, recorded in August as \"the finest granularity the page gives\".. published 2026-05-01 -> UNVERIFIED. Restored 2026-09-05 as updated: 2026-05. The page prints 'Recently updated! May 2026' - a month with no day, which is a fact the schema used to throw away for not having one. The card prints the month and never invents a day; staleness reads it as the first of that month, its oldest possible meaning.",
     "official": false,
     "language": "en",
     "tier": "previewed",
     "status": "live",
     "checked": "2026-09-05",
     "prerequisites": [],
-    "id": "r-a494e31b55"
+    "id": "r-a494e31b55",
+    "updated": "2026-05",
+    "date_source": "printed"
   },
   {
     "title": "AI: Artificial Intelligence Resources: Claude",

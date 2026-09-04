@@ -17,7 +17,7 @@ THE-PROJECT.md and README point at this file rather than repeating it.
 | Learning paths | **7**, 36 steps |
 | Anthropic's own | 390 of 635 — **61%** |
 | No publish date (`UNVERIFIED`) | 489 of 635 — 77% |
-| Carrying an `updated` date | 93 of 635 — 15% |
+| Carrying an `updated` date | 96 of 635 — 15% |
 
 **Where every date came from.** `date_source` is required on any row carrying a
 real date; a row with no date needs none, because "we do not know" is the whole
@@ -25,11 +25,11 @@ statement.
 
 | how we know | count |
 |---|---|
-| `printed` — a person read it on the page | 23 |
+| `printed` — a person read it on the page | 26 |
 | `metadata` — parsed from JSON-LD or a meta tag | 60 |
 | `upload` — a video platform's upload date | 71 |
 | `intercom` — the Help Center's template | 33 |
-| `(none)` — no real date — `UNVERIFIED` | 448 |
+| `(none)` — no real date — `UNVERIFIED` | 445 |
 
 **How thoroughly we have checked**
 

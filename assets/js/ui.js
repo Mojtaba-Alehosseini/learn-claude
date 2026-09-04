@@ -108,8 +108,13 @@
   LC.fmtDate = function (iso) {
     if (!iso || iso === "UNVERIFIED") return "";
     var m = /^(\d{4})-(\d{2})-(\d{2})/.exec(iso);
-    if (!m) return "";
-    return Number(m[3]) + " " + MONTHS[Number(m[2]) - 1] + " " + m[1];
+    if (m) { return Number(m[3]) + " " + MONTHS[Number(m[2]) - 1] + " " + m[1]; }
+    /* A month with no day. Coursera prints "Last update: June 2026" and gives no day, so
+       the card prints exactly that much and never invents one. The day is what is
+       missing; the month is a fact and gets shown. */
+    var mo = /^(\d{4})-(\d{2})$/.exec(iso);
+    if (mo) { return MONTHS[Number(mo[2]) - 1] + " " + mo[1]; }
+    return "";
   };
 
   /* Three date states, and the third is the common one.
@@ -142,6 +147,18 @@
     return p || u || null;
   };
 
+  /* A month-only date - "2026-06" - is what a page like Coursera actually gives: "Last
+     update: June 2026", with no day. It is a fact, and the schema used to throw it away
+     for not having a day, which is the schema being wrong rather than the page.
+
+     For staleness it becomes the FIRST of that month: the earliest day the date could
+     mean. Never round up applies here too - if June 2026 could mean the 1st or the 30th,
+     the honest reading for "is this old?" is the one that makes it oldest. */
+  LC.dateFloor = function (d) {
+    if (!d) { return null; }
+    return d.length === 7 ? d + "-01" : d;
+  };
+
   LC.freshness = function (item) {
     var out = { checked: "Checked " + LC.fmtDate(item.checked), note: "", cls: "",
                 updatedNote: "" };
@@ -162,7 +179,7 @@
       return out;
     }
 
-    var age = (Date.now() - Date.parse(eff)) / 86400000;
+    var age = (Date.now() - Date.parse(LC.dateFloor(eff))) / 86400000;
     if (age > 365) {
       out.note = "Published over a year ago — may not match Claude today";
       out.cls = "flag-outdated";

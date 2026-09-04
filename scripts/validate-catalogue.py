@@ -81,6 +81,13 @@ DATE_SOURCES = {
 
 DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 
+# A month-only date is legal wherever a date is legal. Added 2026-09-05: pages like
+# Coursera print "Last update: June 2026" with no day, and forcing that to UNVERIFIED
+# threw away a fact the page had actually given. The day is what is missing, not the
+# date. Staleness reads a month as its first day - see date_floor in
+# scripts/pick-candidates.py and LC.dateFloor in assets/js/ui.js.
+DATE_OR_MONTH = re.compile(r"^\d{4}-\d{2}(-\d{2})?$")
+
 # Ways of writing "I did not fill this in". They pass an empty check and fail the
 # reader, which is worse than an empty field because nothing flags them.
 PLACEHOLDERS = {"n/a", "n\a", "n.a.", "not applicable", "na", "none", "nobody",
@@ -577,7 +584,7 @@ def main(argv=None):
         # 6. dates. published may say it does not know; checked never may, because we
         #    did the checking ourselves and always know when.
         pub = item.get("published")
-        if pub is not None and pub != "UNVERIFIED" and not DATE.match(str(pub)):
+        if pub is not None and pub != "UNVERIFIED" and not DATE_OR_MONTH.match(str(pub)):
             bad(n, item, "published = %r is neither UNVERIFIED nor YYYY-MM-DD" % pub)
         chk = item.get("checked")
         if chk is not None and not DATE.match(str(chk)):
@@ -741,8 +748,8 @@ def main(argv=None):
     for n, item in enumerate(items):
         pub = item.get("published")
         upd = item.get("updated")
-        has_real = ((pub and pub != "UNVERIFIED" and DATE.match(str(pub)))
-                    or (upd and upd != "UNVERIFIED" and DATE.match(str(upd))))
+        has_real = ((pub and pub != "UNVERIFIED" and DATE_OR_MONTH.match(str(pub)))
+                    or (upd and upd != "UNVERIFIED" and DATE_OR_MONTH.match(str(upd))))
         src = item.get("date_source")
         if has_real and not src:
             bad(n, item, "carries a real date and no `date_source`. A date whose "
@@ -778,11 +785,11 @@ def main(argv=None):
                          "absent is the honest empty, and two spellings of 'we do "
                          "not know' is one too many.")
             continue
-        if not DATE.match(str(u)):
-            bad(n, item, "`updated` = %r is not YYYY-MM-DD" % (u,))
+        if not DATE_OR_MONTH.match(str(u)):
+            bad(n, item, "`updated` = %r is not YYYY-MM-DD or YYYY-MM" % (u,))
             continue
         p = item.get("published")
-        if p and p != "UNVERIFIED" and DATE.match(str(p)) and u < p:
+        if p and p != "UNVERIFIED" and DATE_OR_MONTH.match(str(p)) and u < p[:len(u)]:
             bad(n, item, "`updated` %s is before `published` %s. A revision cannot "
                          "precede what it revises." % (u, p))
 

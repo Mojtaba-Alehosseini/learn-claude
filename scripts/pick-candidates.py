@@ -106,6 +106,19 @@ def effective_date(item):
     return p or u
 
 
+def date_floor(d):
+    """A month-only date becomes the first of that month - its oldest possible day.
+
+    "2026-06" is what Coursera prints ("Last update: June 2026") and it is a fact, not a
+    broken date. For the staleness question the honest reading is the earliest day it
+    could mean, because "never round up" applies to age as much as to precision.
+    Mirrors LC.dateFloor in assets/js/ui.js.
+    """
+    if not d:
+        return d
+    return d + "-01" if len(d) == 7 else d
+
+
 def days_old(published, today):
     """None when there is no real date. Not zero, and not infinity — unknown.
 
@@ -115,7 +128,7 @@ def days_old(published, today):
     if not published or published == "UNVERIFIED":
         return None
     try:
-        y, m, d = (int(x) for x in str(published).split("-"))
+        y, m, d = (int(x) for x in str(date_floor(published)).split("-"))
     except (ValueError, TypeError):
         return None
     from datetime import date
