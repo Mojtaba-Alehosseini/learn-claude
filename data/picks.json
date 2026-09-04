@@ -547,9 +547,9 @@
       "role": "researcher",
       "level": "confident",
       "picked_by": "ai",
-      "picked_on": "2026-09-04",
-      "pool_size": 19,
-      "fingerprint": "sha1:4b94f798ad617754",
+      "picked_on": "2026-09-05",
+      "pool_size": 20,
+      "fingerprint": "sha1:3da36457484ea344",
       "picks": [
         {
           "url": "https://effortlessacademic.com/connect-and-integrate-your-local-zotero-library-with-claude-cowork/",
@@ -936,9 +936,9 @@
       "role": "data-analyst",
       "level": "basic",
       "picked_by": "ai",
-      "picked_on": "2026-09-04",
-      "pool_size": 18,
-      "fingerprint": "sha1:13110fbdcf0ec83d",
+      "picked_on": "2026-09-05",
+      "pool_size": 19,
+      "fingerprint": "sha1:2fa0375d6650f7d4",
       "picks": [
         {
           "url": "https://claude.com/docs/office-agents/excel",
@@ -1248,9 +1248,9 @@
       "role": "business-founder",
       "level": "basic",
       "picked_by": "ai",
-      "picked_on": "2026-09-04",
-      "pool_size": 66,
-      "fingerprint": "sha1:e42155a7048f93a1",
+      "picked_on": "2026-09-05",
+      "pool_size": 65,
+      "fingerprint": "sha1:d5e54c9f26415d58",
       "picks": [
         {
           "url": "https://wotai.co/blog/claude-for-small-business",
@@ -1368,9 +1368,9 @@
       "role": "writer-marketer",
       "level": "basic",
       "picked_by": "ai",
-      "picked_on": "2026-09-04",
-      "pool_size": 33,
-      "fingerprint": "sha1:97eb6f2bfe002b06",
+      "picked_on": "2026-09-05",
+      "pool_size": 34,
+      "fingerprint": "sha1:46b63ea1c7b79ab6",
       "picks": [
         {
           "url": "https://restructurednews.substack.com/p/claude-editor",

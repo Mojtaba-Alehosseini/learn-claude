@@ -336,6 +336,21 @@ little" is told which three to open first instead of being handed 72 cards in fi
 What remains uneven is everything below that block: three picks are ranked, and the other
 69 in that cell are not.
 
+**Three quarters of the catalogue has no publication date we can stand behind, and that
+number went UP on purpose.** On 5 September 2026 every row carrying a date was checked
+against its own page. `date_source` is now required on any real date — `printed`,
+`metadata`, `upload` or `intercom` — and any date that could not be traced to a page was
+set to `UNVERIFIED`. The exact counts are in [STATUS.md](STATUS.md); the direction is
+what matters here, and it is worse-looking and more honest.
+
+Two consequences, both real, and the second is a cost rather than a win. A resource whose
+stored date was nine months too recent is now correctly flagged as over a year old and has
+left every picks pool. And three resources that were correctly excluded as old are back in
+the pools — not because they got newer, but because their date turned out to be
+unsupported and `UNVERIFIED` is deliberately not stale. One of them is a 2023 article on a
+host that blocks us. The rule that refuses to round up cuts both ways, and this is the
+side that costs something.
+
 **78% of the catalogue is "Skimmed".** We read an outline. That is honestly labelled, but
 it is a weaker claim than the site's own pitch implies, and the strongest label is still
 empty.
