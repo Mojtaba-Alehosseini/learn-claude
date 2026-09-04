@@ -302,6 +302,27 @@ CASES = [
 ]
 
 
+# The role-breadth warning is advisory, so nothing goes red when it is wrong - which is
+# exactly why it needs a test. Its first implementation matched substrings, so "engineer"
+# matched inside "engineering"; the fix for that was written through a shell heredoc that
+# ate the escapes, leaving a matcher that matched EVERYTHING. Every role then counted as
+# named, no item ever had exactly one, and the check reported zero findings while looking
+# healthy. Both failure directions are pinned below.
+ROLE_WORD_CASES = [
+    # (card text, role, should this text be read as naming that role?)
+    ("four prompt engineering practitioners talk through prompts", "developer", False),
+    ("written for engineers shipping to production", "developer", True),
+    ("for working designers evaluating the tool", "designer", True),
+    ("a course on design systems", "designer", True),
+    ("teachers and lecturers planning a term", "teacher", True),
+    ("owners doing their own numbers", "business-founder", True),
+    ("analysts fielding ad-hoc questions", "data-analyst", True),
+    # The matcher must not be a rubber stamp: a card that names nobody names nobody.
+    ("a short guided tour of the product", "developer", False),
+    ("a short guided tour of the product", "teacher", False),
+]
+
+
 def main():
     good_items = json.load(open(ITEMS, encoding="utf-8"))
     good_paths = json.load(open(PATHS, encoding="utf-8"))
@@ -318,6 +339,31 @@ def main():
         else:
             print("ok    host() strips the www. prefix and nothing else (%d urls)"
                   % len(HOST_CASES))
+
+        _vspec = importlib.util.spec_from_file_location("validate_catalogue_uut",
+                                                        VALIDATOR)
+        vc = importlib.util.module_from_spec(_vspec)
+        _vspec.loader.exec_module(vc)
+        word_bad = [(t, r, want) for t, r, want in ROLE_WORD_CASES
+                    if vc._names_role(" %s " % t, r) != want]
+        if word_bad:
+            for t, r, want in word_bad:
+                print("FAIL  _names_role(%r, %r) should be %s" % (t, r, want))
+                failures.append("_names_role(%r, %r) wanted %s" % (t, r, want))
+        else:
+            print("ok    role words match on word boundaries, both ways (%d cases)"
+                  % len(ROLE_WORD_CASES))
+
+        planted = copy.deepcopy(good_items)
+        planted[0].update({"roles": ["designer", "teacher", "student"],
+                           "who_for": "Working designers evaluating the tool.",
+                           "summary": "A critique of one product's output quality."})
+        if [t for t, _, _ in vc.role_breadth_warnings(planted)
+                if t == planted[0]["title"][:52]]:
+            print("ok    a planted one-persona card under 3 roles is reported")
+        else:
+            print("FAIL  the role-breadth check missed a planted mis-tag")
+            failures.append("role_breadth_warnings missed a planted mis-tag")
 
         code, out = run(good_items, good_paths, tmp)
         if code != 0:
@@ -355,12 +401,12 @@ def main():
 
     print()
     if failures:
-        print("%d of %d checks did not do their job:" % (len(failures), len(CASES) + 2))
+        print("%d of %d checks did not do their job:" % (len(failures), len(CASES) + 4))
         for f in failures:
             print("  - " + f)
         return 1
     # +2, not +1: the untouched-catalogue check, and the host() unit phase above it.
-    print("All %d checks caught their fault. data/ was not touched." % (len(CASES) + 2))
+    print("All %d checks caught their fault. data/ was not touched." % (len(CASES) + 4))
     return 0
 
 

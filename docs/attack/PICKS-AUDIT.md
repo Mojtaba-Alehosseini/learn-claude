@@ -50,6 +50,12 @@ Two reasons that leaned on the summary (`developer|confident` on the Frontend Ma
 course, `developer|builder` on the Agent SDK workshop) were checked and **left alone** —
 both claims are in the summary, which is on the card, so a reader can verify them.
 
+**The 37 shipped cells predate the `summary` fix.** They were chosen on a smaller card
+than the reader sees. Ruled 1 September 2026 that this is not grounds for a re-pick: the
+audit read all 37 against the *full* cards and found zero self-contradictions and eight
+reason faults, all fixed, so re-picking now would be churn. The next natural re-pick — a
+cell whose pool has drifted enough to be re-judged — uses the full card view.
+
 ---
 
 ## The mechanical sweep
@@ -247,10 +253,18 @@ that says **For: Researchers**. Projects is genuinely universal; the card is not
 it means rewriting a `who_for`, which is catalogue copy, so it waits for you.
 
 **`Generate an AI policy`** — `who_for` reads *"Nonprofit leadership drafting AI
-governance for the first time."* It is picked in `business-founder|confident`. Same
-shape: the resource serves any organisation writing its first AI policy, the card names
-one sector. This one carries a single role tag, so the new role-breadth check below
-cannot see it — the signature is different.
+governance for the first time."* It is picked in `business-founder|confident`.
+
+**Corrected 1 September 2026.** This entry originally said "the resource serves any
+organisation writing its first AI policy, the card names one sector" — and that was
+wrong, asserted without opening the page. The page was then opened as part of the who_for
+job: its scenario is explicitly *"our nonprofit that serves vulnerable populations"*, a
+mid-sized youth mental-health organisation with 75 staff and 200 volunteers, and its
+output is tailored to nonprofit-specific concerns. **The card is accurate and the
+resource is genuinely nonprofit-shaped.** So there is nothing to widen and nothing to
+trim, and the real question is a different one, for Morteza: whether a nonprofit-specific
+page should hold the first slot in `business-founder|confident` at all. That is a pick
+swap, so it is not being made here.
 
 ---
 
@@ -329,3 +343,66 @@ So: **3 to look at, 29 cleared as genuine breadth.** The check earns its place b
   heading is a real `<h2>`, and the reason is a `<p>` after the card rather than inside
   the link. Whether the count line still announces correctly with the block inserted
   above it is **not verified** and belongs in that pass.
+
+---
+
+## The who_for test, 1 September 2026
+
+**The test:** a card must support every role it is tagged for. A business owner
+reading *For: Researchers* is the site lying in its own voice.
+
+Four items were examined — the two named in the last round plus the three the
+role-breadth check marked *worth a look*, one of which is the same item. **Every URL
+was opened**, because the previous round's entry on `Generate an AI policy` was wrong
+precisely because it was not.
+
+### Changed — the card was narrower than the resource
+
+**Introduction to Claude Cowork**  
+*Was:* Owners and ops people who want Claude to do real multi-step work, not just chat.  
+*Now:* Anyone whose day is spent moving information between files, apps and tools - owners, analysts, designers, marketers - who wants Claude to take on the multi-step work rather than answer questions about it.  
+*Why:* Widened 2026-09-01. The old line read "Owners and ops people" while the item is tagged business-founder, data-analyst, designer, non-technical and writer-marketer. Checked the course page the same day: its own stated audience is "knowledge workers whose day is spent moving information between files, apps, and tools" - broader than our card, and it covers all five tags.
+
+**What are Projects?**  
+*Was:* Researchers wanting a reusable, context-rich setup per paper/topic.  
+*Now:* Anyone who keeps re-pasting the same background into new chats - a researcher per paper, a student per module, a teacher per class, an owner per client - and wants that context to stay put.  
+*Why:* Widened 2026-09-01. The old line read "Researchers wanting a reusable, context-rich setup per paper/topic" while the item is tagged for five roles, so a business owner and a student were both shown a card saying For: Researchers. Checked the page the same day: it names no profession and states Projects are available to all users, including free accounts. The card was narrower than the resource.
+
+Neither change touches `roles`, so no pool membership moved and no cell fingerprint
+needed refreshing — the fingerprint covers URL and tier, not card copy. Verified by
+re-running the picks validator: 37 cells, no staleness reported.
+
+### Not changed — the card was right and I was wrong
+
+**Generate an AI policy.** The page's scenario is explicitly a nonprofit serving
+vulnerable populations — 75 staff, 200 volunteers, youth mental health — and its
+output is tailored to that. The `who_for` naming nonprofit leadership is accurate.
+Widening it would have been the exact sin this project has in writing: editing copy so
+a checker stops complaining. The open question it leaves is a pick question, not a
+card question, and it is recorded above for Morteza.
+
+**AI prompt engineering: A deep dive.** Its `who_for` — *"People past basic prompting
+who want judgment and reasoning rather than another list of tips"* — names no
+profession and supports all five of its tags equally. It was never the Puckett shape.
+The check fired on a **substring artefact**: `engineer` matched inside *"prompt
+engineering practitioners"* in the summary. The item is untouched; the check was
+fixed instead. Its YouTube page returns no description to a fetch, so there was also
+nothing to re-ground a rewrite on, and rewriting a `who_for` I could not check would
+have been guessing.
+
+### The check itself, fixed twice
+
+Matching moved from substring to word boundaries with an optional plural, so
+`engineer` no longer matches `engineering` while `designers` and `analysts` still
+match. That dropped the list from **32 items to 29**, all three removals being
+artefacts of the same kind.
+
+The first attempt at that fix was written into the file through a shell heredoc, which
+ate both `` escapes and left literal backspace characters. The matcher then matched
+**everything**: every role counted as named, no item ever had exactly one, and the
+check reported **zero findings while looking perfectly healthy**. It was caught only
+because a drop from 32 to 0 was too convenient to believe. The pattern is now written
+with lookarounds and no backslash in its source, and two tests pin both failure
+directions — the substring bug and the matches-everything bug — with a planted
+one-persona card proving the check still finds a real mis-tag. Both were confirmed to
+fail when each bug is reintroduced.

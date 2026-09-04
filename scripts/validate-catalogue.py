@@ -218,14 +218,14 @@ ROLE_WORDS = {
     "non-technical":   ("non-technical", "non technical", "not a coder", "no coding",
                         "non-developer", "non-coder", "anyone", "everyone", "normal people"),
     "student":         ("student", "phd", "grad", "undergrad", "revision", "coursework"),
-    "researcher":      ("research", "academic", "scientist", "postdoc", "clinician",
-                        "faculty", "literature", "paper"),
+    "researcher":      ("research", "researcher", "academic", "scientist", "postdoc",
+                        "clinician", "faculty", "literature", "paper"),
     "teacher":         ("teacher", "educator", "lecturer", "instructor", "professor",
                         "classroom", "teaching", "school", "syllabus", "student"),
     "developer":       ("developer", "engineer", "coder", "programmer", "technical",
                         "terminal", "codebase", "python", "git"),
     "data-analyst":    ("analyst", "data", "spreadsheet", "excel", "sql", "dataset"),
-    "pm":              ("product manager", " pm ", "pms", "product people", "product",
+    "pm":              ("product manager", "pm", "product people", "product",
                         "roadmap", "prd"),
     "designer":        ("designer", "design", "ux", "ui", "figma", "prototype"),
     "business-founder": ("founder", "business", "owner", "entrepreneur", "ops",
@@ -234,6 +234,27 @@ ROLE_WORDS = {
     "writer-marketer": ("writer", "marketer", "marketing", "content", "copy", "author",
                         "journalist", "editor", "manuscript"),
 }
+
+
+def _names_role(hay, role):
+    """Does this card text name `role`, as a word rather than as a substring?
+
+    Plain `in` was wrong and produced a false alarm on its first run: "engineer" is a
+    substring of "engineering", so "prompt engineering practitioners" in a summary made
+    an item look developer-only when its who_for was deliberately role-neutral. Matching
+    on word boundaries with an optional plural keeps "designers" and "analysts" while
+    refusing "engineering" for "engineer".
+    """
+    for w in ROLE_WORDS.get(role, (role,)):
+        # Lookarounds rather than a backslash-b, on purpose. This pattern was first
+        # written into the file through a shell heredoc, which ate both escapes and left
+        # backspace characters instead: the matcher then matched everything, every role
+        # counted as named, no item ever had exactly one, and the check reported zero
+        # findings while looking perfectly healthy. A pattern with no backslash in its
+        # source cannot fail that way.
+        if re.search("(?<![a-z])%ss?(?![a-z])" % re.escape(w.strip()), hay):
+            return True
+    return False
 
 
 def role_breadth_warnings(items):
@@ -258,8 +279,7 @@ def role_breadth_warnings(items):
             continue
         hay = " %s %s " % (item.get("who_for", ""), item.get("summary", ""))
         hay = hay.lower()
-        supported = [r for r in roles
-                     if any(w in hay for w in ROLE_WORDS.get(r, (r,)))]
+        supported = [r for r in roles if _names_role(hay, r)]
         if len(supported) == 1:
             out.append((item.get("title", "")[:52], supported[0],
                         sorted(set(roles) - set(supported))))
