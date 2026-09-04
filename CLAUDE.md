@@ -32,6 +32,8 @@ actually fits them instead of drowning in options.
 - Numbers anywhere a reader or I will read them — docs, path intros, UI strings, commit
   messages that state a count — are generated or measured, never typed.
   `scripts/measure.py` writes `docs/STATUS.md` on every build; docs point at it.
+- A commit does one job. If a file change serves two jobs, the second waits.
+- Scratch files go in `tmp/` — gitignored — never outside the repo.
 
 ## Tech defaults (unless we decide otherwise)
 - Static site, no backend. Data lives in a JSON/YAML file, site reads from it.

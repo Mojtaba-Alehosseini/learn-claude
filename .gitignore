@@ -48,3 +48,8 @@ data/picks.js
 #
 # The real fix was not a gitignore entry. It was to stop staging with `git add -A` and
 # name the paths instead, which is what every commit since does.
+
+# Scratch space. See tmp/README.md - patch scripts and probe output live here so they
+# never land in the repo or, as happened once, in the directory above it.
+tmp/*
+!tmp/README.md
