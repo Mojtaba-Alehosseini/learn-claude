@@ -44,9 +44,9 @@
       "role": "non-technical",
       "level": "basic",
       "picked_by": "ai",
-      "picked_on": "2026-08-31",
-      "pool_size": 69,
-      "fingerprint": "sha1:1557f35e6707bdbe",
+      "picked_on": "2026-09-04",
+      "pool_size": 72,
+      "fingerprint": "sha1:5303e2649359112c",
       "picks": [
         {
           "url": "https://claude.com/blog/best-practices-for-prompt-engineering",
@@ -120,9 +120,9 @@
       "role": "designer",
       "level": "never-used",
       "picked_by": "ai",
-      "picked_on": "2026-08-31",
-      "pool_size": 5,
-      "fingerprint": "sha1:4ddb615a7affd23d",
+      "picked_on": "2026-09-04",
+      "pool_size": 7,
+      "fingerprint": "sha1:c5861c6caaad0a5d",
       "picks": [
         {
           "url": "https://www.nngroup.com/articles/ai-prototyping/",
@@ -141,6 +141,10 @@
         }
       ],
       "runners_up": [
+        {
+          "url": "https://www.coursera.org/learn/claude-design-fundamentals",
+          "reason": "The first designer-specific course this cell has ever had, and it stays below the cut on cost rather than quality: four hours, an hour of which is portfolio and interview preparation, against a fifteen-minute primer on what Claude cannot do. For a designer who has never opened Claude the cheap first step wins. Open this one second."
+        },
         {
           "url": "https://www.nngroup.com/articles/ai-empathy-mapping/",
           "reason": "The deeper NN/g question, but it shows no tool at all and assumes empathy-mapping fluency - its sibling answers what a first-time user actually asks, and one NN/g pick is the cap."
@@ -234,9 +238,9 @@
       "role": "non-technical",
       "level": "never-used",
       "picked_by": "ai",
-      "picked_on": "2026-08-31",
-      "pool_size": 51,
-      "fingerprint": "sha1:00265c707ad5543c",
+      "picked_on": "2026-09-04",
+      "pool_size": 65,
+      "fingerprint": "sha1:40cc2dbfddea28b8",
       "picks": [
         {
           "url": "https://academy.claude.com/use-cases/explore-what-claude-can-do-for-you",
@@ -274,9 +278,9 @@
       "role": "non-technical",
       "level": "confident",
       "picked_by": "ai",
-      "picked_on": "2026-08-31",
-      "pool_size": 13,
-      "fingerprint": "sha1:e2921374869fb501",
+      "picked_on": "2026-09-04",
+      "pool_size": 14,
+      "fingerprint": "sha1:36c50ceded349ae4",
       "picks": [
         {
           "url": "https://academy.claude.com/tutorials/teach-claude-your-way-of-working-using-skills",
@@ -345,9 +349,9 @@
       "role": "student",
       "level": "never-used",
       "picked_by": "ai",
-      "picked_on": "2026-08-31",
-      "pool_size": 21,
-      "fingerprint": "sha1:1d5747864118c71f",
+      "picked_on": "2026-09-04",
+      "pool_size": 35,
+      "fingerprint": "sha1:ac72d65179a8c210",
       "picks": [
         {
           "url": "https://www.digital.pitt.edu/news/pantherbytes-blog/claude-education-made-learning",
@@ -385,9 +389,9 @@
       "role": "student",
       "level": "basic",
       "picked_by": "ai",
-      "picked_on": "2026-08-31",
-      "pool_size": 15,
-      "fingerprint": "sha1:62c6be1c7c2b1599",
+      "picked_on": "2026-09-04",
+      "pool_size": 17,
+      "fingerprint": "sha1:76f9e0b9a412e55d",
       "picks": [
         {
           "url": "https://academy.claude.com/tutorials/imagine-with-claude-student-guide",
@@ -463,9 +467,9 @@
       "role": "researcher",
       "level": "never-used",
       "picked_by": "ai",
-      "picked_on": "2026-08-31",
-      "pool_size": 12,
-      "fingerprint": "sha1:165a78e970118603",
+      "picked_on": "2026-09-04",
+      "pool_size": 18,
+      "fingerprint": "sha1:b4962bd71e92cff0",
       "picks": [
         {
           "url": "https://academy.claude.com/courses/claude-101",
@@ -473,17 +477,21 @@
           "subject": "the official basics course"
         },
         {
-          "url": "https://support.claude.com/en/articles/8241126-upload-files-to-claude",
-          "reason": "The step every research guide assumes you have already done, and the only candidate that states the ceilings you will actually hit - 500MB in chat versus 30MB in a Project, twenty files either way.",
-          "subject": "getting files in front of Claude, with the real ceilings"
-        },
-        {
           "url": "https://privacy.claude.com/en/articles/10023548-how-long-do-you-store-my-data",
           "reason": "A researcher's first question is not what Claude can do but what happens to the data - this is the retention answer from the company itself, and the pool's only candidate that addresses it at all.",
           "subject": "what happens to data you paste in"
+        },
+        {
+          "url": "https://guides.library.harvard.edu/c.php?g=1330621&p=10034696",
+          "reason": "The pool's first non-Anthropic voice, and it is the only candidate that teaches you to judge an AI tool rather than to operate one - the ROBOT test, a checklist for deciding whether to believe what a tool claims about itself, which a researcher needs before the first upload and not after.",
+          "subject": "judging any AI tool's claims before trusting it"
         }
       ],
       "runners_up": [
+        {
+          "url": "https://support.claude.com/en/articles/8241126-upload-files-to-claude",
+          "reason": "Held a slot until 2026-09-04 and still the step every research guide assumes you have already done. It lost it to arithmetic rather than to merit: until this week every candidate in this cell was Anthropic's own, so a set of three official picks was legal. The harvest put two independent pages in the pool, constraint 2 woke up, and the weakest of three strong picks had to move - this one, because Claude 101 already covers uploading a file."
+        },
         {
           "url": "https://academy.claude.com/tutorials/using-the-pubmed-connector-in-claude",
           "reason": "The strongest research-specific candidate, but it would double the Academy slot Claude 101 holds, and connecting literature search comes after a first conversation, not before."
@@ -491,10 +499,6 @@
         {
           "url": "https://claude.com/resources/courses",
           "reason": "A catalog rather than a course - the pick is the course it points to."
-        },
-        {
-          "url": "https://academy.claude.com/tutorials/using-the-clinicaltrials-gov-connector-in-claude",
-          "reason": "Free and fully open, but a connector for one registry is a second step in a cell about the first."
         }
       ],
       "note": "Two picks share chat-prompting as primary topic. The pool splits three ways - chat basics, seven single-source mcp connectors, one safety page - and every connector is both Academy-published (colliding with Claude 101's slot) and a second step by nature. The subjects are a course, a file-handling mechanic, and a data-retention answer."
@@ -503,9 +507,9 @@
       "role": "researcher",
       "level": "basic",
       "picked_by": "ai",
-      "picked_on": "2026-08-31",
-      "pool_size": 18,
-      "fingerprint": "sha1:a024293ce2a2e9f4",
+      "picked_on": "2026-09-04",
+      "pool_size": 19,
+      "fingerprint": "sha1:7d2db1a0931d5f56",
       "picks": [
         {
           "url": "https://academy.claude.com/use-cases/plan-your-literature-review",
@@ -543,9 +547,9 @@
       "role": "researcher",
       "level": "confident",
       "picked_by": "ai",
-      "picked_on": "2026-08-31",
-      "pool_size": 18,
-      "fingerprint": "sha1:6da5780fbb8a2f77",
+      "picked_on": "2026-09-04",
+      "pool_size": 19,
+      "fingerprint": "sha1:4b94f798ad617754",
       "picks": [
         {
           "url": "https://effortlessacademic.com/connect-and-integrate-your-local-zotero-library-with-claude-cowork/",
@@ -622,9 +626,9 @@
       "role": "teacher",
       "level": "never-used",
       "picked_by": "ai",
-      "picked_on": "2026-08-31",
-      "pool_size": 18,
-      "fingerprint": "sha1:36931d70ff4ec618",
+      "picked_on": "2026-09-04",
+      "pool_size": 26,
+      "fingerprint": "sha1:b5115b33b134d8f0",
       "picks": [
         {
           "url": "https://academy.claude.com/courses/ai-fluency-for-k-12-educators",
@@ -895,9 +899,9 @@
       "role": "data-analyst",
       "level": "never-used",
       "picked_by": "ai",
-      "picked_on": "2026-08-31",
-      "pool_size": 6,
-      "fingerprint": "sha1:b46e1ce351d0b002",
+      "picked_on": "2026-09-04",
+      "pool_size": 7,
+      "fingerprint": "sha1:920d0599b985895b",
       "picks": [
         {
           "url": "https://support.claude.com/en/articles/8241126-upload-files-to-claude",
@@ -917,16 +921,16 @@
       ],
       "runners_up": [
         {
+          "url": "https://support.claude.com/en/articles/10366421-how-does-claude-handle-mathematical-equations-and-calculations",
+          "reason": "Anthropic's own page saying complex or mission-critical calculations must be verified elsewhere - the sharpest warning in the pool for this reader. It lost to the retention page because an analyst's data is usually somebody else's, and that risk has to be settled before the first upload rather than before the first sum."
+        },
+        {
           "url": "https://academy.claude.com/courses/claude-101",
           "reason": "The official twin of the picked course - it lost on the surface tour, and on being the third Anthropic property in a three-pick set."
         },
         {
           "url": "https://academy.claude.com/courses/ai-capabilities-and-limitations",
           "reason": "The honest limitations primer, but its own notes call it fifteen minutes of primer in a course shell - the docs picks carry more per minute."
-        },
-        {
-          "url": "https://academy.claude.com/tutorials/tokens-and-embeddings",
-          "reason": "A pricing intuition is the right second month, not the first day."
         }
       ],
       "note": "Two picks share chat-prompting as primary topic. The pool's api primary is a token-pricing page and the second safety page is the same publisher as the first - at six candidates the spread is what it is. The subjects are a mechanic, a policy answer, and a course."
@@ -935,13 +939,13 @@
       "role": "data-analyst",
       "level": "basic",
       "picked_by": "ai",
-      "picked_on": "2026-08-31",
+      "picked_on": "2026-09-04",
       "pool_size": 18,
-      "fingerprint": "sha1:0fe72f1e57fdb729",
+      "fingerprint": "sha1:13110fbdcf0ec83d",
       "picks": [
         {
-          "url": "https://support.claude.com/en/articles/12650343-use-claude-for-excel",
-          "reason": "The surface this reader already lives in, read by AI in full - and the only candidate whose page itself names what not to use it for: audit-critical calculations without verification.",
+          "url": "https://claude.com/docs/office-agents/excel",
+          "reason": "The surface this reader already lives in, read in full - and the only candidate whose own page tells you what not to use it for, twice over: audit-critical calculations without verification, and any spreadsheet you did not write, because a downloaded template can carry hidden instructions that turn Claude against your data.",
           "subject": "Claude inside Excel, with the audit warning"
         },
         {
@@ -974,9 +978,9 @@
       "role": "data-analyst",
       "level": "confident",
       "picked_by": "ai",
-      "picked_on": "2026-08-31",
-      "pool_size": 21,
-      "fingerprint": "sha1:74d326f085259985",
+      "picked_on": "2026-09-04",
+      "pool_size": 22,
+      "fingerprint": "sha1:a1ccbf213a3e9dc7",
       "picks": [
         {
           "url": "https://www.qwe.edu.pl/tutorial/claude-csv-data-analysis/",
@@ -1053,9 +1057,9 @@
       "role": "pm",
       "level": "never-used",
       "picked_by": "ai",
-      "picked_on": "2026-08-31",
-      "pool_size": 10,
-      "fingerprint": "sha1:d415836562b98c3c",
+      "picked_on": "2026-09-04",
+      "pool_size": 12,
+      "fingerprint": "sha1:d79a22a385c6d2ea",
       "picks": [
         {
           "url": "https://www.youtube.com/watch?v=0vZ_UVLhSQQ",
@@ -1093,9 +1097,9 @@
       "role": "pm",
       "level": "basic",
       "picked_by": "ai",
-      "picked_on": "2026-08-31",
-      "pool_size": 40,
-      "fingerprint": "sha1:dae4de109871f0e0",
+      "picked_on": "2026-09-04",
+      "pool_size": 42,
+      "fingerprint": "sha1:01e65da9b1f5f735",
       "picks": [
         {
           "url": "https://www.enterpret.com/guides/claude-for-product-managers-synthesizing-user-research",
@@ -1132,9 +1136,9 @@
       "role": "pm",
       "level": "confident",
       "picked_by": "ai",
-      "picked_on": "2026-08-31",
-      "pool_size": 52,
-      "fingerprint": "sha1:c0adbff928a4c6d0",
+      "picked_on": "2026-09-04",
+      "pool_size": 53,
+      "fingerprint": "sha1:be0de3b3aea3b3e4",
       "picks": [
         {
           "url": "https://claude.com/blog/product-management-on-the-ai-exponential",
@@ -1208,9 +1212,9 @@
       "role": "business-founder",
       "level": "never-used",
       "picked_by": "ai",
-      "picked_on": "2026-08-31",
-      "pool_size": 29,
-      "fingerprint": "sha1:7000095a7a7707de",
+      "picked_on": "2026-09-04",
+      "pool_size": 41,
+      "fingerprint": "sha1:b961e5ba2a1e1223",
       "picks": [
         {
           "url": "https://privacy.claude.com/en/articles/10023580-is-my-data-used-for-model-training",
@@ -1247,9 +1251,9 @@
       "role": "business-founder",
       "level": "basic",
       "picked_by": "ai",
-      "picked_on": "2026-08-31",
-      "pool_size": 63,
-      "fingerprint": "sha1:33cca4ed12350e02",
+      "picked_on": "2026-09-04",
+      "pool_size": 66,
+      "fingerprint": "sha1:e42155a7048f93a1",
       "picks": [
         {
           "url": "https://wotai.co/blog/claude-for-small-business",
@@ -1287,9 +1291,9 @@
       "role": "business-founder",
       "level": "confident",
       "picked_by": "ai",
-      "picked_on": "2026-08-31",
-      "pool_size": 47,
-      "fingerprint": "sha1:3c7a6c54920afb2a",
+      "picked_on": "2026-09-04",
+      "pool_size": 48,
+      "fingerprint": "sha1:74d404350fc88911",
       "picks": [
         {
           "url": "https://academy.claude.com/tutorials/teach-claude-your-way-of-working-using-skills",
@@ -1327,9 +1331,9 @@
       "role": "writer-marketer",
       "level": "never-used",
       "picked_by": "ai",
-      "picked_on": "2026-08-31",
-      "pool_size": 9,
-      "fingerprint": "sha1:0ba7fc4373e10df8",
+      "picked_on": "2026-09-04",
+      "pool_size": 19,
+      "fingerprint": "sha1:7f5b5c14a16fe1d4",
       "picks": [
         {
           "url": "https://academy.claude.com/courses/claude-101",
@@ -1367,9 +1371,9 @@
       "role": "writer-marketer",
       "level": "basic",
       "picked_by": "ai",
-      "picked_on": "2026-08-31",
-      "pool_size": 31,
-      "fingerprint": "sha1:7b6fc00addc063e8",
+      "picked_on": "2026-09-04",
+      "pool_size": 34,
+      "fingerprint": "sha1:9d52c5a1c3c93dbb",
       "picks": [
         {
           "url": "https://restructurednews.substack.com/p/claude-editor",
