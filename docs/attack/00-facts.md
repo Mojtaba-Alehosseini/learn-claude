@@ -1,54 +1,78 @@
-# Ground truth — measured 2026-08-20
+# Ground truth for Attack 2
 
-Every number here came from `data/items.json`. Do not recompute from memory;
-if a number in an attack file disagrees with this file, this file wins.
+**Site version attacked: `5c7372d`. Written 2026-09-05.**
 
-Total resources: **353**. Paths: **3**.
+## Where the numbers are
 
-## What each role gets
+**[docs/STATUS.md](../STATUS.md).** Every count this file used to hold by hand is
+generated there on every build: catalogue size, publishers, the tier ladder, formats,
+levels, costs, the official ratio, the `UNVERIFIED` count, the `date_source`
+provenance table, the full per-cell grid with publisher and non-Anthropic counts, the
+thin and empty cells, the freshness exclusions, and the last link check.
 
-| role | total | never-used | basic | confident | builder | only-this-role | free | has a path |
-|---|---|---|---|---|---|---|---|---|
-| non-technical | **68** | 24 | 39 | 5 | 0 | 21 | 50 | yes |
-| student | **41** | 20 | 15 | 6 | 0 | 15 | 35 | yes |
-| researcher | **41** | 6 | 19 | 14 | 2 | 23 | 31 | yes |
-| teacher | **47** | 16 | 24 | 6 | 1 | 29 | 37 | yes |
-| developer | **94** | 3 | 16 | 32 | 43 | 71 | 83 | yes |
-| data-analyst | **37** | 1 | 17 | 12 | 7 | 20 | 27 | NO |
-| pm | **56** | 3 | 20 | 28 | 5 | 23 | 42 | NO |
-| designer | **29** | 1 | 8 | 17 | 3 | 22 | 22 | NO |
-| business-founder | **54** | 10 | 35 | 5 | 4 | 18 | 48 | yes |
-| writer-marketer | **41** | 3 | 28 | 7 | 3 | 21 | 36 | NO |
+The August version of this file wrote those out by hand and every one of them is now
+wrong — it says 353 resources and 3 paths. That is the whole reason this section is a
+pointer. **If an agent's number disagrees with STATUS.md, STATUS.md wins.**
 
-## Paths and who they name
+For the per-role, per-level view a visitor actually gets on screen:
 
-- **Your first week with Claude** — 6 steps · about 2 hours · free · roles: non-technical, student, teacher, business-founder
-- **Getting good at Claude Code** — 6 steps · about 6 hours · free · roles: developer
-- **Using Claude for research without embarrassing yourself** — 5 steps · about 2 hours · some paid steps · roles: researcher, student
+    python3 docs/attack/role-view.py <role> [level]
+    python3 docs/attack/role-view.py designer never-used
 
-Roles with no path at all: **data-analyst, pm, designer, writer-marketer**
+It reproduces Browse's default sort, so row 1 is the first card on the page.
 
-## Format mix per role
+---
 
-| role | video | course | docs | article | repo | hands-on | podcast |
-|---|---|---|---|---|---|---|---|
-| non-technical | 30 | 16 | 4 | 15 | 0 | 1 | 2 |
-| student | 13 | 2 | 15 | 9 | 0 | 0 | 2 |
-| researcher | 12 | 6 | 8 | 9 | 3 | 1 | 2 |
-| teacher | 10 | 9 | 11 | 14 | 1 | 0 | 2 |
-| developer | 38 | 14 | 12 | 16 | 12 | 1 | 1 |
-| data-analyst | 11 | 3 | 2 | 9 | 8 | 4 | 0 |
-| pm | 18 | 8 | 2 | 16 | 7 | 1 | 4 |
-| designer | 4 | 2 | 5 | 13 | 3 | 0 | 2 |
-| business-founder | 19 | 10 | 8 | 12 | 4 | 1 | 0 |
-| writer-marketer | 13 | 4 | 7 | 14 | 2 | 1 | 0 |
+## What changed since Attack 1 — the things an attacker should know exist
 
-## Tier mix (how well checked)
+Attack 1 ran on a site with 353 resources, 3 paths, no picks block and no date
+provenance. Everything below is new since then. It is listed so that an agent does not
+waste its hour rediscovering that a feature exists — the value is in judging whether
+it *works*.
 
-- reviewed: 0
-- ai-reviewed: 98
-- previewed: 212
-- listed: 43
+- **"Start with these three"** on Browse: when a visitor sets exactly one role and one
+  level and nothing else, a block appears above the results naming three resources to
+  open first, each with a one-sentence reason, labelled `picked by AI · <date>`. It
+  covers 37 of the 40 role-and-level cells. Two cells ship **two** picks, not three,
+  with a heading that says two. One cell is empty and says so.
+- **A second date line.** Cards can now show `Updated <date>` as well as, or instead
+  of, `Published <date>`. A page that gives only a revision date shows "No publish
+  date given" *and* an Updated line.
+- **Month-only dates.** A card may say `Updated May 2026` with no day, because that is
+  all its page prints.
+- **Three quarters of cards now say "No publish date given."** That number went up
+  deliberately: every stored date was checked against its own page and any that could
+  not be traced was cleared.
+- **Card links changed shape.** The whole card is still one click target, but the link
+  is now the title alone rather than the entire card.
+- **Seven paths**, one for every role — Attack 1 found four roles with none.
+- **A repaired path.** `writing-you-sign` lost a step when its resource vanished and
+  is now four steps.
 
-Resources with no publish date: 171 of 353
-Dead links: 0
+---
+
+## Already known — do not present these as new
+
+An agent may sharpen or contradict these. It earns nothing by rediscovering them.
+
+- **0 resources are `reviewed`.** The top badge on the ladder is empty by design and
+  only a person can change it.
+- **The report link needs a GitHub account.** Most of the audience does not have one.
+- **The catalogue is 61% Anthropic's own material**, stated on `how-we-check.html`.
+- **`non-technical|builder` has no independent material at all** and `student|builder`
+  is empty.
+- **21 items sit on hosts that refuse automated checking**, so their links are
+  confirmed by a person or not at all.
+- **No analytics, no tracking, no accounts.** By design, and not an oversight.
+
+---
+
+## The rule that has not changed
+
+**No number may be invented.** Every figure comes from STATUS.md, a command shown in
+the file, or the live site. "Probably", "likely" and "seems" are banned in findings
+and allowed only in the opinion section.
+
+**A finding is a claim.** It carries the URL, what was done, what was seen, what a
+reasonable person expected instead, and who it harms. An attacker who cannot reproduce
+something does not report it.
