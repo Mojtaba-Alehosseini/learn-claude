@@ -626,9 +626,9 @@
       "role": "teacher",
       "level": "never-used",
       "picked_by": "ai",
-      "picked_on": "2026-09-04",
-      "pool_size": 27,
-      "fingerprint": "sha1:5711775f726461b9",
+      "picked_on": "2026-09-05",
+      "pool_size": 28,
+      "fingerprint": "sha1:6c29e7b01dcee608",
       "picks": [
         {
           "url": "https://academy.claude.com/courses/ai-fluency-for-k-12-educators",
@@ -705,9 +705,9 @@
       "role": "teacher",
       "level": "confident",
       "picked_by": "ai",
-      "picked_on": "2026-09-04",
-      "pool_size": 9,
-      "fingerprint": "sha1:51011e8359fa2d92",
+      "picked_on": "2026-09-05",
+      "pool_size": 8,
+      "fingerprint": "sha1:ec1ca140304cc92d",
       "picks": [
         {
           "url": "https://howtoteachwithai.substack.com/p/43-claude-skills-that-give-you-the",
@@ -718,13 +718,14 @@
           "url": "https://academy.claude.com/courses/teaching-ai-fluency",
           "reason": "The one candidate about the job change rather than the tool - designing assignments and assessment for students who have AI - and its strongest lessons are exactly there.",
           "subject": "teaching and assessing AI itself, not just using it"
+        },
+        {
+          "url": "https://academy.claude.com/use-cases/adapt-a-standard-textbook-page-to-every-reading-level",
+          "reason": "The classroom craft task with the widest reach in the pool - every teacher differentiates, where the alternatives serve one subject's typesetting or one syllabus shape.",
+          "subject": "differentiating one lesson across reading levels"
         }
       ],
       "runners_up": [
-        {
-          "url": "https://academy.claude.com/use-cases/adapt-a-standard-textbook-page-to-every-reading-level",
-          "reason": "Held a slot until 2026-09-04 and lost it to a pool that improved. A Northeastern article became eligible when its invented publish date was corrected, which gave this pool a third publisher and tightened the cap from two Academy picks to one. Of the two, the differentiation task is the workflow and the AI Fluency course is the job change, so the workflow moved. Still the widest-reach classroom craft task here - every teacher differentiates - so open it second."
-        },
         {
           "url": "https://academy.claude.com/courses/ai-fluency-for-pk-12-train-the-trainer",
           "reason": "The delivery kit, but its own notes require the Educators course first and an audience of adults to train - a narrower door than either Academy pick."
@@ -734,8 +735,7 @@
           "reason": "The most original university tool here, edged out because differentiation serves every classroom while dependency-mapping serves those free to reorder."
         }
       ],
-      "two_pick_cause": "rule-carried-third-refused",
-      "note": "Two picks, not three. The pool has three publishers, so the cap is one each, and every candidate on the picker's shortlist except Doan Winkel is Anthropic Academy. The third publisher is represented by a single item whose who_for reads \"A student taking one dense course\" - a student-facing card that would put \"For: A student...\" in front of a teacher. There is no honest legal three, so the cell ships two."
+      "note": "Two picks share Anthropic Academy's publisher slot? No - the cap here is two per publisher because the pool has two publishers, and that is what this cell ships. It was briefly two picks on 2026-09-04, when a student-facing Northeastern guide became eligible and looked like a third publisher. The guide was opened on 2026-09-05: written by a student, for students, with nothing for an instructor. Its `teacher` tag was wrong, not the cell, so the tag came off and the third pick came back."
     },
     "developer|never-used": {
       "role": "developer",

@@ -41,8 +41,8 @@ THE-PROJECT.md and README point at this file rather than repeating it.
 | | |
 |---|---|
 | Cells with picks | **37** of 40 |
-| Picks | 108 |
-| Runners-up recorded | 107 |
+| Picks | 109 |
+| Runners-up recorded | 106 |
 
 **Cells with three or fewer candidates** (shown as-is, no picks): `teacher|builder` (2), `writer-marketer|builder` (3)
 
@@ -51,7 +51,7 @@ THE-PROJECT.md and README point at this file rather than repeating it.
 **Pools with zero non-Anthropic material:** `non-technical|builder` (8 items, 1 publisher)
 
 **Publisher-thin pools** (fewer than 3 publishers, so the no-two-from-one rule
-relaxes): `non-technical|builder` (1 pub, 8 items), `teacher|builder` (2 pub, 2 items), `data-analyst|builder` (2 pub, 33 items), `writer-marketer|builder` (2 pub, 3 items)
+relaxes): `non-technical|builder` (1 pub, 8 items), `teacher|confident` (2 pub, 8 items), `teacher|builder` (2 pub, 2 items), `data-analyst|builder` (2 pub, 33 items), `writer-marketer|builder` (2 pub, 3 items)
 
 ## Per cell — eligible / publishers / non-Anthropic
 
@@ -60,7 +60,7 @@ relaxes): `non-technical|builder` (1 pub, 8 items), `teacher|builder` (2 pub, 2 
 | `non-technical` | 66 / 20p / 18x | 72 / 27p / 25x | 14 / 6p / 4x | 8 / 1p / 0x |
 | `student` | 36 / 16p / 13x | 19 / 11p / 9x | 9 / 5p / 4x | 0 / 0p / 0x |
 | `researcher` | 19 / 5p / 2x | 19 / 15p / 12x | 19 / 12p / 10x | 20 / 3p / 2x |
-| `teacher` | 28 / 12p / 8x | 18 / 12p / 9x | 9 / 3p / 2x | 2 / 2p / 1x |
+| `teacher` | 28 / 12p / 8x | 18 / 12p / 9x | 8 / 2p / 1x | 2 / 2p / 1x |
 | `developer` | 7 / 4p / 1x | 19 / 11p / 8x | 37 / 18p / 19x | 57 / 18p / 17x |
 | `data-analyst` | 7 / 4p / 1x | 18 / 13p / 11x | 22 / 12p / 10x | 33 / 2p / 3x |
 | `pm` | 12 / 8p / 5x | 42 / 15p / 15x | 53 / 23p / 25x | 55 / 3p / 2x |

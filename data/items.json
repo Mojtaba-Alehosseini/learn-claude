@@ -11800,8 +11800,7 @@
     "url": "https://learning.northeastern.edu/ai-student-guides-claude-project-to-answer-questions-about-class/",
     "author": "Northeastern University CATLR, AI Student Guides (student-authored)",
     "roles": [
-      "student",
-      "teacher"
+      "student"
     ],
     "level": "confident",
     "topics": [
@@ -11816,9 +11815,9 @@
     "who_for": "A student taking one dense course who keeps re-pasting the same context into every chat and wants to stop.",
     "skip_if": "Skip if your syllabus changes often - the guide itself admits the assistant goes stale the moment the course does. Skip if you teach school; it assumes a syllabus, TAs and a Canvas-style platform.",
     "published": "UNVERIFIED",
-    "checked": "2026-09-04",
+    "checked": "2026-09-05",
     "status": "live",
-    "notes": "Over 12 months old, so the Projects screenshots will not match the current interface. I checked the page is live and read the summary and headings, not the full walkthrough. Re-read 2026-09-04 under the freshness sweep: the page shows no date printed; a student byline instead, so published 2025-07-21 -> UNVERIFIED. Body quoted to prove the article was read. The page carries an author and class year but no date.",
+    "notes": "Over 12 months old, so the Projects screenshots will not match the current interface. I checked the page is live and read the summary and headings, not the full walkthrough. Re-read 2026-09-04 under the freshness sweep: the page shows no date printed; a student byline instead, so published 2025-07-21 -> UNVERIFIED. Body quoted to prove the article was read. The page carries an author and class year but no date. Role trimmed 2026-09-05: ['student', 'teacher'] -> ['student']. The page was opened and is written by a student, in the first person, for students - \"I've created this guide because, as a student...\" - with no section on how an instructor would build or share a Project for a class. It had been carrying `teacher` while its who_for named only a student, which is the Puckett shape. Trimming it returns teacher|confident to two publishers and makes three picks legal there again.",
     "alt_skip_if": [
       "Your course materials are locked in a VLE you cannot export from, or your institution forbids uploading copyrighted readings to an AI tool. Check before you upload."
     ],
