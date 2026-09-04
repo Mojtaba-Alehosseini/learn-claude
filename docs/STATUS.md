@@ -98,9 +98,8 @@ Last full check: **2026-09-04**.
 
 | verdict | count |
 |---|---|
-| ok | 612 |
+| ok | 614 |
 | blocked | 21 |
-| wobbly | 2 |
 
 **Blocked hosts are unverifiable by machine** — they refuse automated
 requests, so a bot-wall is not evidence a page is dead. Each was last

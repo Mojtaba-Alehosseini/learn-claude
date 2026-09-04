@@ -126,7 +126,72 @@ host_of = _load_host()
 # live resource over the freshness threshold, so the picks pre-filter dropped it from
 # every pool for ten months and nothing went red. Parsing the printed date on every
 # weekly run turns that silent drift into a reported number.
+# Hosts whose visible date is a LAST-UPDATED date rather than a publication date. The
+# Claude Help Center runs on Intercom, which prints "updated yesterday" to a reader while
+# keeping the calendar date in the HTML - so the machine can read a date the page does not
+# display. Anything parsed from these goes to `updated`, never `published`.
 DATED_HOSTS = ("support.claude.com", "privacy.claude.com")
+
+# Every other host is read too, from standard metadata. Added 2026-09-05: until then only
+# Intercom was parsed, so 105 dated rows on other hosts had never been checked against
+# their own pages - each one printing a date on a card that nobody had confirmed.
+META_PUBLISHED = (
+    'article:published_time', 'og:published_time', 'datePublished',
+    'publishdate', 'DC.date.issued', 'sailthru.date',
+)
+META_MODIFIED = (
+    'article:modified_time', 'og:updated_time', 'dateModified', 'lastmod',
+)
+
+_META_RE = re.compile(
+    r'<meta[^>]+(?:property|name|itemprop)\s*=\s*["\']([^"\']+)["\'][^>]*'
+    r'content\s*=\s*["\']([^"\']+)["\']', re.I)
+_META_RE_REV = re.compile(
+    r'<meta[^>]+content\s*=\s*["\']([^"\']+)["\'][^>]*'
+    r'(?:property|name|itemprop)\s*=\s*["\']([^"\']+)["\']', re.I)
+_JSONLD_RE = re.compile(
+    r'"(datePublished|dateModified)"\s*:\s*"([0-9]{4}-[0-9]{2}-[0-9]{2})', re.I)
+_TIME_RE = re.compile(
+    r'<time[^>]+datetime\s*=\s*["\']([0-9]{4}-[0-9]{2}-[0-9]{2})', re.I)
+_ISO_HEAD = re.compile(r'^([0-9]{4}-[0-9]{2}-[0-9]{2})')
+
+
+def _iso(v):
+    m = _ISO_HEAD.match((v or "").strip())
+    return m.group(1) if m else None
+
+
+def page_dates(html):
+    """(published, modified, evidence). Either may be None.
+
+    Reads, in order of trust: OpenGraph/article meta tags, JSON-LD, then a <time
+    datetime>. A visible byline date is deliberately NOT guessed at - a date in prose
+    could be anything, and a wrong date here is worse than no date, because it silently
+    changes what the freshness rule excludes.
+    """
+    pub = mod = None
+    ev = []
+    for rx in (_META_RE, _META_RE_REV):
+        for a, b in rx.findall(html):
+            key, val = (a, b) if rx is _META_RE else (b, a)
+            k = key.strip()
+            d = _iso(val)
+            if not d:
+                continue
+            if not pub and any(k.lower() == x.lower() for x in META_PUBLISHED):
+                pub, _ = d, ev.append("meta %s=%s" % (k, d))
+            elif not mod and any(k.lower() == x.lower() for x in META_MODIFIED):
+                mod, _ = d, ev.append("meta %s=%s" % (k, d))
+    for k, d in _JSONLD_RE.findall(html):
+        if k.lower() == "datepublished" and not pub:
+            pub, _ = d, ev.append("json-ld datePublished=%s" % d)
+        elif k.lower() == "datemodified" and not mod:
+            mod, _ = d, ev.append("json-ld dateModified=%s" % d)
+    if not pub and not mod:
+        m = _TIME_RE.search(html)
+        if m:
+            pub, _ = m.group(1), ev.append("<time datetime=%s>" % m.group(1))
+    return pub, mod, "; ".join(ev)
 
 MONTHS = {m: i + 1 for i, m in enumerate(
     ["january", "february", "march", "april", "may", "june",
@@ -254,24 +319,47 @@ def main():
     for n, it in enumerate(items, 1):
         url = it["url"]
         h = host_of(url)
-        dated = any(h.endswith(d) for d in DATED_HOSTS)
+        intercom = any(h.endswith(d) for d in DATED_HOSTS)
         if h in allow:
             verdict, detail, body = "blocked", \
                 "known to refuse automation: " + (allow[h] or h), ""
         else:
-            verdict, detail, body = check(url, want_body=dated)
+            # Every readable page gets its body read now, not only Intercom. Until
+            # 2026-09-05 only two hosts were parsed, so 105 dated rows elsewhere printed
+            # a date on a card that had never been checked against the page.
+            verdict, detail, body = check(url, want_body=True)
 
         row = {"id": it["id"], "title": it["title"], "url": url,
                "host": h, "verdict": verdict, "detail": detail}
 
-        # Drift: the page prints a last-updated date newer than what we store.
-        if dated and verdict == "ok" and body:
-            iso, said = printed_date(body)
+        # Drift: what the page says about its own dates, against what we store.
+        if verdict == "ok" and body:
+            if intercom:
+                iso, said = printed_date(body)
+                meta_pub, meta_mod = None, iso
+            else:
+                meta_pub, meta_mod, said = page_dates(body)
+                iso = meta_pub or meta_mod
             row["page_date"] = iso
+            row["page_published"] = meta_pub
+            row["page_updated"] = meta_mod
             row["page_says"] = said
             row["stored"] = it.get("published")
             stored = it.get("published")
-            if iso and stored and stored != "UNVERIFIED" and stored != iso:
+            stored_upd = it.get("updated")
+
+            if not intercom and meta_pub and stored and stored != "UNVERIFIED" \
+                    and meta_pub != stored:
+                row["drift"] = ("stored published %s, page metadata says %s"
+                                % (stored, meta_pub))
+                row["drift_class"] = "stale-stored-date"
+                drift.append(row)
+            elif not intercom and meta_mod and not stored_upd:
+                row["drift"] = ("page carries a modified date %s and we store none"
+                                % meta_mod)
+                row["drift_class"] = "missing-updated"
+                drift.append(row)
+            elif iso and stored and stored != "UNVERIFIED" and stored != iso:
                 # A stored calendar date that has fallen behind the page's. This is the
                 # one that bites: it can push a live resource past the freshness rule
                 # and out of every picks pool. "Anthropic's AI for Science Program"
