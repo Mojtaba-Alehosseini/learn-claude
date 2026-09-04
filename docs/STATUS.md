@@ -102,6 +102,71 @@ comparative recommendation should not point at something a year stale.
 | Prompting 101 \| Code w/ Claude | Anthropic | 2025-07-31 | 400 | basic |
 | Claude Code best practices \| Code w/ Claude | Anthropic | 2025-07-31 | 400 | confident |
 
+## Needs a person
+
+Everything below is generated from `data/`. It is the half of the backlog a
+machine can see; the other half — the standing items no data can reveal — is in
+[THE-PROJECT.md part 10](THE-PROJECT.md). Two halves, one list, no third copy.
+
+### Pages no machine can read (9)
+
+Their host refuses automated requests or serves a challenge, so the date we held
+could not be confirmed and was dropped. One visit each settles it.
+
+| item | publisher | date dropped | url |
+|---|---|---|---|
+| How To Use Claude Cowork To Run Your Business Wi | Forbes | 2026-02-24 | https://www.forbes.com/sites/jodiecook/2026/02/24/how-to-use-claude-cowork-to-run-your-business-with-ai/ |
+| Mastering Claude Cowork & AI Agents in 5 hours | Udemy | 2026-04-03 | https://www.udemy.com/course/mastering-claude-cowork-ai-agents/ |
+| Claude AI and Literature Reviews: An Experiment  | Johns Hopkins Universi | unknown | https://muse.jhu.edu/article/961199 |
+| Acknowledging AI tools and technologies | University of Melbourn | 2026-05-01 | https://students.unimelb.edu.au/academic-skills/academic-integrity/acknowledging-use-of-ai-tools-and-technologies |
+| AI for Students | Monash University | 2026-06-29 | https://www.monash.edu/ai/ai-for-students |
+| Empowering Education Leaders: a toolkit for safe | ERIC | unknown | https://files.eric.ed.gov/fulltext/ED661924.pdf |
+| The Ethics of Using AI | SPJ Ethics Central | 2023-02-01 | https://ethicscentral.org/the-ethics-of-using-ai/ |
+| How Three Newsrooms Are Charting Different Paths | Nieman Lab | 2026-07-29 | https://www.niemanlab.org/2026/07/how-three-newsrooms-are-charting-different-paths-for-ai-use/ |
+| Set Your Standards Before You Start: A Journalis | Stephen Stirling | 2026-04-12 | https://medium.com/@stephenstirling/set-your-standards-before-you-start-a-journalists-journey-using-claude-md-744b02bb4210 |
+
+### Hosts that block the weekly check (21 items)
+
+A bot-wall is not evidence a page is dead. These can only ever be confirmed by a
+person, and the date beside each is the last time one did.
+
+| host | items | last confirmed by a person |
+|---|---|---|
+| datacamp.com | 4 | never |
+| medium.com | 4 | never |
+| udemy.com | 4 | never |
+| forbes.com | 1 | never |
+| uxdesign.cc | 1 | never |
+| designsystemscollective.com | 1 | never |
+| students.unimelb.edu.au | 1 | never |
+| monash.edu | 1 | never |
+| education.gov.au | 1 | never |
+| ethicscentral.org | 1 | never |
+| spj.org | 1 | never |
+| niemanlab.org | 1 | never |
+
+### Back in the pools because we lost the evidence (1)
+
+These are old. They are candidates again not because they were revised but
+because their date could not be confirmed, and `UNVERIFIED` is deliberately not
+stale. Opening one either restores its date or confirms it should go.
+
+| item | date we had | age it implied |
+|---|---|---|
+| The Ethics of Using AI | 2023-02-01 | 1311 days |
+
+### Cells with no independent material (1)
+
+Every candidate is Anthropic's own. No constraint can fix this; only material can.
+
+| cell | items | publishers |
+|---|---|---|
+| `non-technical\|builder` | 8 | 1 |
+
+### Empty cells (1)
+
+A reader who answers both questions this way is told we have nothing. `student\|builder`
+
 ## Links
 
 Last full check: **2026-09-04**.

@@ -317,14 +317,38 @@ re-checks all 637 links.
    one.** That cell now ships two, and any two-pick cell must declare which cause put it
    there.
 
-**Standing items, all yours:**
+## The backlog, in two halves
 
-- **Nothing is `reviewed`.** 0 of 637. Only a person can change that, by finishing one
-  resource and writing the notes.
+Until 5 September 2026 this list lived in the "Not yours" paragraph of nine consecutive
+prompts, which is nowhere. It now has one home in two halves, and no third copy.
+
+**The half a machine can see is generated**, in
+[STATUS.md's "Needs a person"](STATUS.md): the pages no machine can read and the date
+each one lost, the hosts that block the weekly check and when a person last confirmed
+them, the resources back in the pools because their date could not be re-established,
+every cell with no independent material, and every empty cell. Those change with the
+data, so they are never written by hand.
+
+**The half below cannot be derived from anything**, so it is written here.
+
+- **Nothing is `reviewed`.** Only a person can change that, by finishing one resource end
+  to end and writing the notes. The allowance is a file and it holds 0.
+- **A screen-reader pass with NVDA.** The accessibility round verified the structure that
+  determines what a screen reader says. It is not the same as hearing one, and the
+  findings say so.
+- **Windows High Contrast.** The forced-colors block was written from the spec and never
+  run — the preview pane cannot emulate the mode. It needs one confirming look.
+- **Walking YouTube and Udemy by hand.** Both refuse a machine: every YouTube channel URL
+  redirects to a consent wall, and Udemy answers 403. They are the two indexes most
+  likely to hold independent advanced material, and until someone walks them the
+  advanced-end survey stays half-blind. Part 11 states the consequence.
 - **The report link needs a GitHub account.** Most of the intended audience does not have
   one. An email address would fix it. Deliberately parked.
 - **The catalogue is 61% Anthropic.** Decided knowingly. `official` is a Browse filter and
   `how-we-check.html` states the ratio, computed from the data.
+- **Three people, one hour.** Part 11 has said for three weeks that this would teach more
+  than another fix round. The script is now written and waiting, so the hour is not spent
+  deciding what to ask: `docs/specs/2026-09-04-first-human-test.md`.
 
 ---
 

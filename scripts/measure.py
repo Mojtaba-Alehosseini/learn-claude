@@ -29,6 +29,7 @@ import importlib.util
 import io
 import json
 import os
+import re
 import sys
 from collections import Counter
 from datetime import date
@@ -92,6 +93,32 @@ def measure(today=None):
                              "roles": it.get("roles", []), "level": it.get("level")})
     excluded.sort(key=lambda x: -x["days"])
 
+    # Rows whose date was dropped because no machine could read the page. Each needs a
+    # person to open it once; until then the catalogue says it does not know.
+    unreadable = []
+    for it in items:
+        note = it.get("notes") or ""
+        if "cannot be read by machine" in note or "security challenge" in note \
+                or "no extractable text" in note:
+            m = re.search(r"the stored published date (\S+) could not be confirmed", note)
+            unreadable.append({"title": it["title"], "url": it["url"],
+                               "dropped": m.group(1) if m else "unknown",
+                               "source": it.get("source", "")})
+
+    # Resources back in the pools not because they got newer but because the evidence
+    # for their date was lost. The honest cost of "never round up".
+    re_entered = []
+    for it in items:
+        note = it.get("notes") or ""
+        if "cannot be read by machine" in note and it.get("published") == "UNVERIFIED":
+            m = re.search(r"the stored published date (\S+)", note)
+            old_date = m.group(1) if m else None
+            if old_date and pc.days_old(old_date, today) and \
+                    pc.days_old(old_date, today) > pc.STALE_DAYS:
+                re_entered.append({"title": it["title"], "url": it["url"],
+                                   "was": old_date,
+                                   "days": pc.days_old(old_date, today)})
+
     link = {}
     if os.path.exists(LINKS):
         try:
@@ -126,6 +153,8 @@ def measure(today=None):
         "zero_non_anthropic": zero_indep,
         "publisher_thin": pubthin,
         "excluded_by_freshness": excluded,
+        "unreadable_by_machine": unreadable,
+        "re_entered_on_lost_evidence": re_entered,
         "link_check": link,
     }
 
@@ -243,6 +272,74 @@ def render(m, pc):
               % (e["title"][:58].replace("|", "\\|"), e["source"][:24],
                  e["published"], e["days"], e["level"]))
         w("")
+
+    w("## Needs a person")
+    w("")
+    w("Everything below is generated from `data/`. It is the half of the backlog a")
+    w("machine can see; the other half — the standing items no data can reveal — is in")
+    w("[THE-PROJECT.md part 10](THE-PROJECT.md). Two halves, one list, no third copy.")
+    w("")
+
+    w("### Pages no machine can read (%d)" % len(m["unreadable_by_machine"]))
+    w("")
+    w("Their host refuses automated requests or serves a challenge, so the date we held")
+    w("could not be confirmed and was dropped. One visit each settles it.")
+    w("")
+    if m["unreadable_by_machine"]:
+        w("| item | publisher | date dropped | url |")
+        w("|---|---|---|---|")
+        for r in m["unreadable_by_machine"]:
+            w("| %s | %s | %s | %s |"
+              % (r["title"][:48].replace("|", "\\|"), r["source"][:22], r["dropped"],
+                 r["url"]))
+        w("")
+
+    w("### Hosts that block the weekly check (%d items)"
+      % sum(b.get("count", 0) for b in (m["link_check"].get("blocked") or [])))
+    w("")
+    w("A bot-wall is not evidence a page is dead. These can only ever be confirmed by a")
+    w("person, and the date beside each is the last time one did.")
+    w("")
+    if (m["link_check"].get("blocked") or []):
+        w("| host | items | last confirmed by a person |")
+        w("|---|---|---|")
+        for b in m["link_check"]["blocked"]:
+            w("| %s | %s | %s |" % (b.get("host"), b.get("count"),
+                                    b.get("last_human_check", "never")))
+        w("")
+
+    w("### Back in the pools because we lost the evidence (%d)"
+      % len(m["re_entered_on_lost_evidence"]))
+    w("")
+    w("These are old. They are candidates again not because they were revised but")
+    w("because their date could not be confirmed, and `UNVERIFIED` is deliberately not")
+    w("stale. Opening one either restores its date or confirms it should go.")
+    w("")
+    if m["re_entered_on_lost_evidence"]:
+        w("| item | date we had | age it implied |")
+        w("|---|---|---|")
+        for r in m["re_entered_on_lost_evidence"]:
+            w("| %s | %s | %d days |"
+              % (r["title"][:52].replace("|", "\\|"), r["was"], r["days"]))
+        w("")
+
+    w("### Cells with no independent material (%d)" % len(m["zero_non_anthropic"]))
+    w("")
+    w("Every candidate is Anthropic's own. No constraint can fix this; only material can.")
+    w("")
+    if m["zero_non_anthropic"]:
+        w("| cell | items | publishers |")
+        w("|---|---|---|")
+        for k, n, p in m["zero_non_anthropic"]:
+            w("| `%s` | %d | %d |" % (k.replace("|", "\\|"), n, p))
+        w("")
+
+    w("### Empty cells (%d)" % len(m["empty_cells"]))
+    w("")
+    w("A reader who answers both questions this way is told we have nothing. %s"
+      % (", ".join("`%s`" % c.replace("|", "\\|") for c in m["empty_cells"])
+         or "None — every combination has something."))
+    w("")
 
     w("## Links")
     w("")
