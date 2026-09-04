@@ -325,6 +325,17 @@ def opening_share(items, field, n=3):
             "top": [(k, len(v)) for k, v in top]}
 
 
+# Measured 2026-09-05 on 635 rows and set as the floor, so this fires on REGRESSION
+# rather than permanently. The 10% threshold it replaces was on the `shared` figure,
+# which sat at 44% on its first run and can never fall below roughly 20% - "Skip if you"
+# is the natural English opening for a field called skip_if, and a light that is always
+# on is a light nobody reads. Variety is the figure that moves when a batch is written
+# in one sitting with one sentence shape, which is the thing worth catching.
+#
+# Raise these when variety genuinely improves. Never lower them to make a build quiet.
+VARIETY_BASELINE = {"skip_if": 63, "who_for": 74}
+
+
 def report_monotony(items):
     """Print the opening-word share for skip_if and who_for. Warn above 10%.
 
@@ -349,14 +360,16 @@ def report_monotony(items):
           "statistic):")
     for field in ("skip_if", "who_for"):
         m = opening_share(items, field)
-        flag = "  ** above 10%, see the note in the source" if m["pct"] > 10 else ""
-        print("  %-8s %3d%% of %d lines share their first three words%s"
-              % (field, m["pct"], m["total"], flag))
-        print("           variety %d distinct openings for %d lines (%d%%), "
-              "largest cluster %d"
-              % (m["distinct"], m["total"],
-                 0 if not m["total"] else round(100.0 * m["distinct"] / m["total"]),
-                 m["largest"]))
+        total = m["total"]
+        variety = 0 if not total else round(100.0 * m["distinct"] / total)
+        floor = VARIETY_BASELINE.get(field)
+        flag = ""
+        if floor is not None and variety < floor:
+            flag = "  ** BELOW BASELINE %d%% - variety has fallen" % floor
+        print("  %-8s variety %d%% (%d distinct openings for %d lines), largest "
+              "cluster %d%s" % (field, variety, m["distinct"], total, m["largest"], flag))
+        print("           shared %d%% share their first three words - see the note in "
+              "the source for why this figure is not the one to watch" % m["pct"])
         for phrase, count in m["top"][:3]:
             print("             %-34s %d lines" % ('"' + phrase + '..."', count))
     print()

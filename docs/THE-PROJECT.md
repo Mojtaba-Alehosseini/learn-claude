@@ -340,13 +340,28 @@ What remains uneven is everything below that block: three picks are ranked, and 
 it is a weaker claim than the site's own pitch implies, and the strongest label is still
 empty.
 
-**The advanced end is a monoculture, and the September harvest did not touch it.**
-Publisher diversity still collapses as level rises — `basic` cells draw on 10–27
-publishers, `builder` cells on 1–3. `non-technical|builder` remains the one pool in the
-catalogue with **zero** non-Anthropic items, 8 of them from a single publisher, and
-`student|builder` is still empty. The 2026-09-04 harvest added 20 rows and every one
-landed at `never-used` or `basic`, because that was the priority order. The constraint
-check found this without
+**The advanced end is a monoculture, and we now know roughly why.** Publisher diversity
+collapses as level rises — `basic` cells draw on 10–27 publishers, `builder` cells on
+1–3. `non-technical|builder` remains the one pool in the catalogue with **zero**
+non-Anthropic items, and `student|builder` is still empty. This is not thinness in
+general: `developer|builder` holds 57 items from 17 publishers, 16 of them independent.
+It is thin specifically for people who do not write code.
+
+A supply survey on 4 September 2026 (`research/2026-09-04-advanced-end-supply-survey.md`)
+walked five publishers and found **five plausible non-coder candidates** — two DataCamp
+code-alongs, a Coursera Cowork course, a Maven cohort, and an agent-skills course — all
+paid or sign-up-gated. Against the previous harvest's yield of four from nine after
+opening, that is perhaps two or three shippable entries: enough to give
+`non-technical|builder` its first independent voice, not enough for a harvest round.
+
+**And the survey was taken half-blind.** Two of the seven indexes cannot be walked by
+machine, and they are the two most likely to hold this material: every YouTube channel
+URL redirects to a consent wall, and Udemy returns 403 to any automated request. Whether
+those get walked by hand is Morteza's call, and this paragraph does not wait for it. If
+they are never walked, the honest statement is that the catalogue's independent advanced
+material will stay under-represented, and a reader filtering to `builder` as a
+non-developer is mostly reading Anthropic's own material. The constraint check found this
+without
 being asked the question.
 
 **Roles are uneven.** 220 entries for someone running a business, 46 for a designer.

@@ -36,6 +36,12 @@ OUT = "data/paths.json"
 
 MINUTES = {"under-15min": 12, "under-1hr": 45, "half-day": 210, "multi-day": 600}
 
+# An intro carries the ARGUMENT for the order. It must not carry the step count, the
+# duration or the cost: build-paths.py computes all three from the steps, and paths.js
+# prints them as "6 steps · about 4 hours · free" directly above the intro. A hand-typed
+# copy two lines below a computed one is how a number rots - on 2026-09-05 an intro said
+# "about ninety minutes" while the build said 81, and three more intros carried counts
+# that happened to still be right.
 PATHS = [
     {
         "id": "first-week",
@@ -43,9 +49,9 @@ PATHS = [
         "for": "Anyone who has just opened Claude and does not know what to do next.",
         "roles": ["non-technical", "student", "teacher", "business-founder"],
         "level": "never-used",
-        "intro": "Five short steps and one real course. Steps 1, 2, 4, 5 and 6 take "
-                 "fifteen minutes each; step 3 is Anthropic's own 2.5-hour Claude 101, "
-                 "and stopping there still leaves you better off than most people.",
+        "intro": "Most of this is short. Steps 1, 2, 4, 5 and 6 take fifteen minutes "
+                 "each; step 3 is Anthropic's own 2.5-hour Claude 101, and stopping "
+                 "there still leaves you better off than most people.",
         "steps": [
             {"url": "https://ruben.substack.com/p/claude",
              "why": "Start here because most confusion is not about prompting — it is not "
@@ -77,8 +83,8 @@ PATHS = [
         "roles": ["developer"],
         "level": "basic",
         "intro": "The gap between installing Claude Code and being fast with it is "
-                 "configuration and habits, not model quality. Six steps, roughly a day "
-                 "of reading spread over a week of practice.",
+                 "configuration and habits, not model quality. The reading is short. "
+                 "The practice is what takes a week.",
         "steps": [
             # academy.claude.com, not anthropic.skilljar.com. The two rows were the same course
             # harvested from both hosts; the skilljar one was merged away on 2026-08-27
@@ -116,10 +122,9 @@ PATHS = [
         # kenny-kane.com; that URL now 301s to the author's books page and the guide
         # is gone, so the row was removed and this path lost a step rather than
         # pointing readers at something that is not the thing described.
-        "intro": "Four steps, all free, about ninety minutes. The order runs from what "
-                 "job Claude has, through the tells everyone else is trained to spot, "
-                 "to what you owe the reader. The last step is the one people skip and "
-                 "it is the one with consequences.",
+        "intro": "The order runs from what job Claude has, through the tells everyone "
+                 "else is trained to spot, to what you owe the reader. The last step "
+                 "is the one people skip and it is the one with consequences.",
         "steps": [
             {"url": "https://restructurednews.substack.com/p/claude-editor",
              "why": "First, decide what job it has. This is a writer using Claude as an "
@@ -146,7 +151,7 @@ PATHS = [
                "keep having to queue for someone else's sprint.",
         "roles": ["pm"],
         "level": "basic",
-        "intro": "Five steps, all free, about two hours. Steps 1 to 4 need nothing but a "
+        "intro": "Steps 1 to 4 need nothing but a "
                  "browser — stop after step 4 and you can already synthesise research, "
                  "keep it somewhere, delegate the repeatable parts and know what is safe "
                  "to paste in. Step 5 needs a terminal, and it is fair to decide that is "
@@ -208,7 +213,7 @@ PATHS = [
                "the number came from.",
         "roles": ["data-analyst"],
         "level": "never-used",
-        "intro": "Five steps, all free, about two hours. The arc is your data rather "
+        "intro": "The arc is your data rather "
                  "than Claude: get it in front of the model, know what happens to it, "
                  "then learn the difference between Claude reading your numbers and "
                  "Claude actually running them. Only the last step needs a terminal, and "
@@ -252,7 +257,7 @@ PATHS = [
                "the rest of the job, just this slice of it.",
         "roles": ["designer"],
         "level": "never-used",
-        "intro": "Five steps, all free, about two hours. The arc is judgment, not "
+        "intro": "The arc is judgment, not "
                  "craft: two honest critiques of what AI prototyping and AI research "
                  "actually get wrong, the method to test it yourself, one real task to "
                  "try it on, then the line that ties it together. This covers about a "
