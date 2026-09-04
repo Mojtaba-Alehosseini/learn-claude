@@ -93,7 +93,23 @@
      Anthropic uses those two for small metadata anyway. We cannot: a directory
      whose whole product is a date and a one-line judgement must have those legible.
      --bark is --cloud-dark darkened on its own hue until it clears 4.60:1, so it
-     stays in the warm family and passes AA at any size. */
+     stays in the warm family and passes AA at any size.
+
+     DO NOT LIGHTEN THIS FOR TASTE. Re-measured in the browser 2026-09-01:
+       #6c6b66 on #f0eee6 (page canvas)   4.60:1   AA needs 4.5
+       #6c6b66 on #faf9f5 (card surface)  5.07:1   AA needs 4.5
+     The canvas figure is the whole site's thinnest margin: 0.10 of headroom. It
+     carries the "picked by AI - <date>" label and every "Start with these three"
+     reason line, both of which sit on the canvas rather than on a card. Any lift
+     toward --cloud-dark drops those below AA, and nothing will go red when it
+     happens - contrast is not something a build can fail on. Measure before you
+     change this value, and measure on #f0eee6, not on the card.
+
+     One more surface to know about, currently safe because nothing uses it:
+       #6c6b66 on #e3dacc (--surface-panel)  3.86:1  would FAIL at normal size
+     The panel tone carries only images and near-black ink today. Putting
+     secondary text on it would fail silently. --clay-text is worse there, 3.78:1,
+     which is why the flag note below prefers a darker value if that ever moves. */
 
   /* ------------------------------------------------------------------------
      Surfaces — elevation comes from tone, never from a shadow

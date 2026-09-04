@@ -1292,9 +1292,9 @@
       "fingerprint": "sha1:3c7a6c54920afb2a",
       "picks": [
         {
-          "url": "https://academy.claude.com/use-cases/generate-an-ai-policy",
-          "reason": "Forty-one of forty-seven candidates run a task; this is the one that governs all of them - and it produces an implementation workbook, not just policy prose.",
-          "subject": "writing the organisation's own AI policy"
+          "url": "https://academy.claude.com/tutorials/teach-claude-your-way-of-working-using-skills",
+          "reason": "Written for the complaint this level actually has - you keep giving Claude the same instructions and they keep not sticking - and it is the one candidate here that makes them permanent instead of running one more task well.",
+          "subject": "making your own instructions permanent"
         },
         {
           "url": "https://www.youtube.com/watch?v=0_dSWLOHKng",
@@ -1309,8 +1309,8 @@
       ],
       "runners_up": [
         {
-          "url": "https://academy.claude.com/tutorials/teach-claude-your-way-of-working-using-skills",
-          "reason": "The right habit, lost to the policy page - a confident owner's scarcer gap is governance, and the Academy slot is one."
+          "url": "https://academy.claude.com/use-cases/generate-an-ai-policy",
+          "reason": "Held the first slot until 2026-09-04, and it is still the pool's only governance candidate with a real implementation workbook - intake workflow, risk matrix, training tracker. It lost the slot when its card was checked against the page: the whole walkthrough is built on a nonprofit serving vulnerable populations, 75 staff and 200 volunteers, so its own who_for names nonprofit leadership. That is a fine card and the wrong first step for the general owner this cell is for. If you run a nonprofit, open this one first."
         },
         {
           "url": "https://www.udemy.com/course/mastering-claude-cowork-ai-agents/",
@@ -1320,7 +1320,8 @@
           "url": "https://academy.claude.com/use-cases/quickly-prep-for-your-week",
           "reason": "Strong on its own, but forty-one candidates here run one task each, and the picks are a policy, a system and source you can audit - each of which outlasts a single workflow."
         }
-      ]
+      ],
+      "note": "Two picks share the primary topic skills, and the subjects are opposite halves of one habit: the Academy tutorial is about authoring a skill so your own instructions stick, the small-business repo is about reading the source of skills somebody else wrote before you trust them with the books. Authoring and auditing, not the same subject under one field value."
     },
     "writer-marketer|never-used": {
       "role": "writer-marketer",

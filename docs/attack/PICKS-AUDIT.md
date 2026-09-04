@@ -406,3 +406,38 @@ with lookarounds and no backslash in its source, and two tests pin both failure
 directions — the substring bug and the matches-everything bug — with a planted
 one-persona card proving the check still finds a real mis-tag. Both were confirmed to
 fail when each bug is reintroduced.
+
+---
+
+## Ruling 3, applied 4 September 2026 — `Generate an AI policy` re-judged
+
+The card was right and the audit entry was wrong; that left a different question open:
+does a nonprofit-specific walkthrough still beat its pool for the **general** reader of
+`business-founder|confident`? Judged against the standing bars, with the corrected card
+in front of it: **no.** Swapped for a recorded runner-up.
+
+**Out of the picks, into the runners-up:** *Generate an AI policy* (Anthropic Academy).
+Its reason was never false — it is still the only governance candidate of 47, and the
+workbook it produces is real. It fails a different bar: its own `who_for` names
+nonprofit leadership, and the page's whole scenario is a nonprofit serving vulnerable
+populations with 75 staff and 200 volunteers. The reader of this cell runs a business.
+A first step that asks them to translate somebody else's sector before they start is a
+worse first step than one that speaks to them. Its runner-up line now says who *should*
+open it first, so a nonprofit leader browsing the cell still finds it.
+
+**Lifted into the picks:** *Teach Claude your way of working using skills* (Anthropic
+Academy), which was already runner-up #1 — so this is a lift from the recorded
+shortlist, not an item hauled in from below the cut. Its `who_for` — *"Someone who
+keeps giving Claude the same instructions and wants those instructions to stick"* — is
+this cell almost exactly, and role-neutral.
+
+Constraints after the swap: publishers Anthropic Academy / Jeff Su / GitHub, three
+distinct. Formats article / video / repo, distinct. Two non-Anthropic picks. Constraint
+4 now fires — two picks are `skills`-primary — and carries a justification: the Academy
+tutorial is about **authoring** a skill so your own instructions stick, the
+small-business repo is about **auditing** skills somebody else wrote before trusting
+them with the books. Opposite halves of one habit, not one subject twice.
+
+The original ruling that seated the policy page said *"a confident owner's scarcer gap
+is governance"*. That was reasoned from a card that turned out to describe a narrower
+resource than I thought it did. The premise moved, so the conclusion did.
