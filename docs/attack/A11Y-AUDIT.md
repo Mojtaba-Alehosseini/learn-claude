@@ -250,3 +250,92 @@ that have no changing count, and the two-column tab order on Browse.
 
 Catalogue and picks validators re-run afterwards, and the browse query suite: nothing
 else moved.
+
+---
+
+# The two leftovers — 4 September 2026
+
+Both were listed as *not covered* by the 23 August spec and again by the 1 September
+pass. Done now.
+
+## 400 % zoom — passes, no changes
+
+Tested as WCAG 1.4.10 Reflow defines it: a **320 × 256 CSS px viewport**, which is what
+400 % zoom on a 1280 × 1024 window produces. All five pages plus the filter sheet.
+
+| Page | Horizontal scroll | Overflowing elements | Clipped text |
+|---|---|---|---|
+| `index.html` | none | none | none |
+| `browse.html` | none | none | none |
+| `paths.html` (detail) | none | none | none |
+| `resource.html` | none | none | none |
+| `how-we-check.html` | none | none | none |
+
+`document.scrollWidth` equals `clientWidth` (320) on every page, and no element's right
+edge crosses the viewport. The single element reporting as off-screen on the home page
+is the skip link at `right: -9841px` — the visually-hidden pattern doing its job until
+it takes focus.
+
+**The filter sheet at 320 × 256** is the case worth naming, because 256 px of height is
+less than a twentieth of the panel's content: the sheet fills the viewport, the body
+scrolls (`overflow-y: auto`, 2062 px of content in a 94 px window), all **38** filter
+options are reachable, and the confirm button — *Show 10 resources* — stays visible
+rather than being pushed off the bottom. Nothing needed fixing.
+
+## Forced colors — one block added, and it is not verified
+
+**The caveat comes first: the preview pane cannot emulate forced colors.**
+`matchMedia('(forced-colors: active)')` is `false` there and nothing in the tooling
+turns it on. What follows is an inspection of the computed styles of every element whose
+meaning could depend on a fill, plus a defensive `@media (forced-colors: active)` block
+written from the spec. It is **not** a browser-confirmed pass, and it wants one look in
+a real Windows High Contrast session — which belongs with the NVDA run.
+
+### What already survives, and why
+
+Three things carry the site through this mode, and two were decided for entirely
+different reasons:
+
+- **Focus is `outline`, never `box-shadow`.** Forced colors keeps outlines and drops
+  shadows. The design rule *no box-shadow, ever* — written for elevation-by-tone, not
+  for accessibility — is what saves the focus ring. Confirmed: **zero** elements on any
+  rendered page have a computed `box-shadow`.
+- **The tier badges say what they mean in words.** `badge-ai-reviewed` distinguishes
+  itself with a `#e3dacc` fill behind a transparent border, so it loses its look here —
+  but it reads *Read by AI*, and `badge-previewed` reads *Skimmed*. Losing the fill
+  loses decoration, not information.
+- **The filter tick is a real character.** A literal `✓` is written into `.filter-box`,
+  not drawn as a CSS shape or a background image, so a ticked box stays ticked when the
+  fill is forced away. The state is also on `aria-checked`, so it never depended on
+  paint for assistive tech in the first place.
+
+### What did not survive, and the fix
+
+**1. The filled call to action.** Measured: `background #d97757`, `border-color:
+transparent`. The entire shape of that button is its fill, and the fill is exactly what
+this mode replaces — without a border it becomes a line of text with nothing round it.
+*Now:* `.btn { border-color: ButtonText; }` inside the media block.
+
+**2. Selection conveyed by tone.** The chosen role chip
+(`.chip-choice[aria-pressed="true"]`) and the ticked filter box both separate
+themselves from their neighbours with tone, and tone is what goes. *Now:* both take
+`background: Highlight; color: HighlightText; border-color: Highlight` — the reader's
+own selection colour, so a chosen thing looks chosen in whatever palette they run.
+
+**3. The focus ring is pinned rather than assumed.** `:focus-visible { outline-color:
+CanvasText }`. It survives without this, but it is the one thing a keyboard user cannot
+do without, so it is stated instead of trusted.
+
+### On rule 4 and system colours
+
+The block uses `ButtonText`, `Highlight`, `HighlightText` and `CanvasText`. These are
+not hardcoded values slipping past *every value comes from `tokens.css`*: inside this
+media query the reader's palette has replaced ours, and a token would simply be
+overridden. The system keywords **are** the tokens once the reader takes over.
+`forced-color-adjust: none` is not used anywhere and should never be — it opts an
+element out of the reader's palette, which defeats the whole mode.
+
+Verified after adding it: the media query parses with all four rules present, and normal
+rendering is untouched — the checked filter box is still `rgb(20, 20, 19)` outside the
+query. A block inside a media query that does not match cannot regress anything, which
+is why it was safe to write without being able to run it.

@@ -914,3 +914,54 @@ button, .btn, .nav-link, .filter-option { min-height: var(--tap-min); }
   padding: 0; margin: -1px; overflow: hidden;
   clip: rect(0 0 0 0); white-space: nowrap; border: 0;
 }
+
+/* ------------------------------------------------------- forced colors ---- */
+/* Windows High Contrast and any other forced-colors mode replaces our palette
+   with the reader's own. Everything below is about what SHAPE survives that,
+   not about colour: in this mode the tokens are overridden by the user agent,
+   which is the point of the mode, so system keywords are the only thing that
+   can be written here. That is not a hardcoded value sneaking past rule 4 -
+   `CanvasText` and `Highlight` ARE the tokens once the reader takes over.
+
+   Audited 2026-09-04. Most of the site already survives, and mostly by
+   accident of decisions taken for other reasons:
+     - Focus is `outline`, never `box-shadow`. Forced colors keeps outlines and
+       drops shadows, so the no-shadow rule in the design saved the focus ring.
+       Nothing on any rendered page uses box-shadow at all.
+     - The tier badges say "Skimmed" and "Read by AI" in words, so losing the
+       fill loses decoration, not meaning.
+     - The filter checkbox draws its tick as a real "✓" character rather than a
+       CSS shape, so a checked box stays checked when the fill goes.
+   Two things did NOT survive on inspection, and are fixed here.
+
+   NOT VERIFIED IN A BROWSER. The preview pane cannot emulate forced-colors -
+   `matchMedia('(forced-colors: active)')` is false there and there is no way
+   to turn it on - so this block is written from the spec and from the computed
+   styles of the elements it names. It cannot regress normal rendering, because
+   it only ever applies inside the media query. It still needs one confirming
+   look in a real Windows High Contrast session. */
+@media (forced-colors: active) {
+
+  /* 1. The filled call to action carries its whole shape in a background fill
+        and a transparent border - measured: background #d97757, border-color
+        transparent. The fill is forced to Canvas here, so without this the
+        button becomes a line of text with nothing round it. */
+  .btn { border-color: ButtonText; }
+
+  /* 2. Selection state must not be a fill. The chosen role chip and the ticked
+        filter box both distinguish themselves with tone; tone is exactly what
+        this mode takes away. Highlight is the reader's own selection colour,
+        so a chosen thing looks chosen in whatever palette they run. */
+  .chip-choice[aria-pressed="true"],
+  .filter-option[aria-checked="true"] .filter-box {
+    background: Highlight;
+    color: HighlightText;
+    border-color: Highlight;
+  }
+
+  /* 3. Pin the focus ring rather than trust the default. It already survives -
+        outlines do - but the ring is the one thing a keyboard user cannot do
+        without, so it is stated instead of assumed. */
+  :focus-visible { outline-color: CanvasText; }
+  .site-footer :focus-visible { outline-color: CanvasText; }
+}
