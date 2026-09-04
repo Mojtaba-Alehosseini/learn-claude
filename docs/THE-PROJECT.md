@@ -54,8 +54,8 @@ it is not verified, it does not ship.
 
 | | |
 |---|---|
-| Resources | **618** |
-| Publishers (distinct hosts) | 130 |
+| Resources | **637** |
+| Publishers (distinct hosts) | 171 |
 | Learning paths | **7** — every one of the 10 roles now has a route |
 | Dead links | 0 |
 | Pages | 5 |
@@ -66,23 +66,23 @@ it is not verified, it does not ship.
 |---|---|---|---|
 | `reviewed` | Read in full | **0** | a person went through all of it |
 | `ai-reviewed` | Read by AI | 98 | AI read all of it, no person has checked the notes |
-| `previewed` | Skimmed | 483 | we read the outline or a free sample |
-| `listed` | Found only | 37 | we found it and sorted it, nobody read the content |
+| `previewed` | Skimmed | 503 | we read the outline or a free sample |
+| `listed` | Found only | 36 | we found it and sorted it, nobody read the content |
 
-**Cost:** 567 free · 25 need a sign-up · 16 subscription · 10 pay once.
+**Cost:** 585 free · 26 need a sign-up · 16 subscription · 10 pay once.
 
-**Format:** 289 docs · 124 article · 101 video · 58 course · 32 code · 7 hands-on · 7 podcast.
+**Format:** 307 docs · 125 article · 101 video · 58 course · 32 code · 7 hands-on · 7 podcast.
 
-**Level:** 182 builder · 176 basic · 169 confident · 91 never-used.
+**Level:** 182 builder · 179 basic · 170 confident · 106 never-used.
 
-**Who publishes it:** 374 of 618 — **61%** — are Anthropic's own material. That is a
+**Who publishes it:** 390 of 637 — **61%** — are Anthropic's own material. That is a
 deliberate decision made in August 2026 and it is discussed in part 11.
 
-**Dates:** 431 of 618 carry `published: UNVERIFIED`. That is not a gap, it is the honest
+**Dates:** 436 of 637 carry `published: UNVERIFIED`. That is not a gap, it is the honest
 answer — many pages carry no date at all, and we do not invent one.
 
 **"Start with these three":** 37 of the 40 role×level cells carry picks — **109 picks**
-across **54 distinct publishers**, with **107 runners-up** recorded as the falsifiability
+across **54 distinct publishers**, with **108 runners-up** recorded as the falsifiability
 record. 61 of the 109 picks (**56%**) are not Anthropic's own, against a catalogue that is
 61% Anthropic. Two cells ship two picks rather than three and each says which cause put it
 there: `non-technical|builder` (`publisher-thin` — its 8 candidates come from one
@@ -314,7 +314,7 @@ share their opening words against 12%. Written fast, graded better. Nobody predi
 
 **Cleanup.** Seven format icons shipped named `-alpha.png` with zero transparent pixels.
 Five duplicate pairs from the migration. The `lstrip` bug in three places. A weekly job now
-re-checks all 618 links.
+re-checks all 637 links.
 
 ---
 
@@ -343,7 +343,7 @@ re-checks all 618 links.
 
 **Standing items, all yours:**
 
-- **Nothing is `reviewed`.** 0 of 618. Only a person can change that, by finishing one
+- **Nothing is `reviewed`.** 0 of 637. Only a person can change that, by finishing one
   resource and writing the notes.
 - **The report link needs a GitHub account.** Most of the intended audience does not have
   one. An email address would fix it. Deliberately parked.
@@ -354,18 +354,23 @@ re-checks all 618 links.
 
 ## 11. What is weak, said plainly
 
-**618 resources and 35 path steps.** Judgment covers about 6% of the catalogue. The `Skip
-if:` line is per-item; nothing is comparative. That is what the "start with these three"
-work is for, and until it ships a person filtering to "not a coder / used it a little" gets
-69 cards in file order.
+**637 resources and 35 path steps.** "Start with these three" now covers 37 of the 40
+cells with 109 comparative picks, so a person filtering to "not a coder / used it a
+little" is told which three to open first instead of being handed 72 cards in file order.
+What remains uneven is everything below that block: three picks are ranked, and the other
+69 in that cell are not.
 
 **78% of the catalogue is "Skimmed".** We read an outline. That is honestly labelled, but
 it is a weaker claim than the site's own pitch implies, and the strongest label is still
 empty.
 
-**The advanced end is a monoculture.** Publisher diversity collapses as level rises —
-`basic` cells draw on 10–27 publishers, `builder` cells on 1–3. Almost all advanced
-material in this catalogue is Anthropic's own. The constraint check found this without
+**The advanced end is a monoculture, and the September harvest did not touch it.**
+Publisher diversity still collapses as level rises — `basic` cells draw on 10–27
+publishers, `builder` cells on 1–3. `non-technical|builder` remains the one pool in the
+catalogue with **zero** non-Anthropic items, 8 of them from a single publisher, and
+`student|builder` is still empty. The 2026-09-04 harvest added 20 rows and every one
+landed at `never-used` or `basic`, because that was the priority order. The constraint
+check found this without
 being asked the question.
 
 **Roles are uneven.** 220 entries for someone running a business, 46 for a designer.

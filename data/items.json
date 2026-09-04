@@ -1136,60 +1136,6 @@
     ]
   },
   {
-    "title": "AI for Small Business: Getting Started with Claude (SBA event)",
-    "url": "https://www.sba.gov/event/85201",
-    "author": "U.S. Small Business Administration",
-    "roles": [
-      "business-founder"
-    ],
-    "level": "never-used",
-    "topics": [
-      "chat-prompting"
-    ],
-    "format": "course",
-    "time": "under-1hr",
-    "cost": "free",
-    "language": "en",
-    "tier": "listed",
-    "summary": "A live introductory webinar on navigating Claude's interface, writing effective prompts, uploading your own business documents, and building a repeatable process.",
-    "who_for": "Owners who prefer a live, vendor-neutral government session.",
-    "skip_if": "The listed date has passed — check sba.gov for the next scheduled session.",
-    "published": "2026-08-05",
-    "checked": "2026-08-20",
-    "status": "live",
-    "notes": "One-off event listing, not evergreen content; SBA district offices run these recurringly with no upsell.",
-    "source": "US Small Business Administration",
-    "official": false,
-    "id": "r-22cb3b5706",
-    "keywords": [
-      "sba claude training",
-      "government ai training",
-      "sba webinar",
-      "beginner claude course",
-      "first time using claude",
-      "upload business documents",
-      "prompts for small business",
-      "ai chat beginner",
-      "vendor neutral ai",
-      "small business administration",
-      "claude interface walkthrough",
-      "document analysis"
-    ],
-    "questions": [
-      "how do i use claude for my small business as a beginner",
-      "how do i upload documents to claude",
-      "how to write prompts for business tasks in claude",
-      "where can i find free vendor neutral claude training",
-      "how do i navigate the claude interface"
-    ],
-    "teaches": [
-      "navigate the claude chat interface",
-      "write effective business prompts",
-      "upload and analyze your business documents in claude",
-      "build repeatable ai processes for your business"
-    ]
-  },
-  {
     "title": "A Comprehensive Guide to AI Training for Small Businesses",
     "url": "https://www.uschamber.com/co/start/strategy/ai-training-guide-small-business",
     "author": "US Chamber of Commerce (CO—)",
