@@ -293,6 +293,75 @@ def role_breadth_warnings(items):
     return out
 
 
+def opening_share(items, field, n=3):
+    """Share of `field` lines that share their first `n` words with another line.
+
+    Measured once by hand on 2026-08-29, on skip_if: the 291 lines written in a single
+    Academy run shared an opening 5% of the time, and the 333 written slowly over earlier
+    rounds shared 12%. The conclusion at the time was that fast batches were not the
+    problem. Two rounds later six who_for lines written in one batch all opened "Anyone
+    who..." and nobody noticed until an unrelated check tripped on them - because that
+    measurement had been taken once, by hand, and never again.
+
+    So it runs every build now, on both fields. It PRINTS and never fails: a build that
+    goes red on a copy statistic is a build that teaches people to edit copy until the
+    number moves, which is worse than the monotony.
+    """
+    opens = {}
+    for it in items:
+        words = re.findall(r"[a-z']+", (it.get(field) or "").lower())
+        if len(words) < n:
+            continue
+        key = " ".join(words[:n])
+        opens.setdefault(key, []).append(it)
+    shared = {k: v for k, v in opens.items() if len(v) > 1}
+    total = sum(len(v) for v in opens.values())
+    dup = sum(len(v) for v in shared.values())
+    top = sorted(shared.items(), key=lambda kv: -len(kv[1]))[:5]
+    return {"total": total, "shared": dup,
+            "pct": 0 if not total else round(100.0 * dup / total),
+            "distinct": len(opens),
+            "largest": max([len(v) for v in opens.values()] or [0]),
+            "top": [(k, len(v)) for k, v in top]}
+
+
+def report_monotony(items):
+    """Print the opening-word share for skip_if and who_for. Warn above 10%.
+
+    Two figures, because the first one alone turned out to carry no signal.
+
+    `shared` is the measurement as specified: the share of lines whose first three words
+    match another line's. On first run it was 44% for skip_if, and it will never fall
+    below about 20%, because "Skip if you" is the natural English opening for a field
+    called skip_if. A threshold that is permanently exceeded is a light that is always
+    on, and nobody reads it.
+
+    `variety` is the figure that moves: distinct openings as a share of lines, and the
+    size of the largest single cluster. When a batch is written in one sitting with one
+    sentence shape - six who_for lines all opening "Anyone who...", which is what
+    actually happened on 2026-09-04 - variety falls and the largest cluster grows. That
+    is the shape worth watching.
+
+    Both print. Neither fails a build. A build that goes red on a copy statistic teaches
+    people to edit copy until the number moves, which is worse than the monotony.
+    """
+    print("Copy openings (printed, never enforced - nobody edits copy to move a "
+          "statistic):")
+    for field in ("skip_if", "who_for"):
+        m = opening_share(items, field)
+        flag = "  ** above 10%, see the note in the source" if m["pct"] > 10 else ""
+        print("  %-8s %3d%% of %d lines share their first three words%s"
+              % (field, m["pct"], m["total"], flag))
+        print("           variety %d distinct openings for %d lines (%d%%), "
+              "largest cluster %d"
+              % (m["distinct"], m["total"],
+                 0 if not m["total"] else round(100.0 * m["distinct"] / m["total"]),
+                 m["largest"]))
+        for phrase, count in m["top"][:3]:
+            print("             %-34s %d lines" % ('"' + phrase + '..."', count))
+    print()
+
+
 def norm_title(t):
     return re.sub(r"[^a-z0-9]+", " ", str(t or "").lower()).strip()
 
@@ -555,8 +624,10 @@ def main(argv=None):
 
     # ------------------------------------------------------------ report ----
 
-    # Advisory, printed before the verdict and never affecting it. See the docstring on
-    # role_breadth_warnings for why this can only ever be a warning.
+    # Both of these are advisory, printed before the verdict and never affecting it.
+    report_monotony(items)
+
+    # See the docstring on role_breadth_warnings for why this can only ever be a warning.
     breadth = role_breadth_warnings(items)
     if breadth:
         print("%d item%s tag 3+ roles while the card text names only one. Breadth is "
