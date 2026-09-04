@@ -85,10 +85,10 @@
     "summary": "Anthropic's foundational course on the 4D framework - Delegation, Description, Discernment, Diligence - across twelve lessons and about three hours, including when not to hand a task to AI at all.",
     "who_for": "Anyone who wants the conceptual backbone before diving into product-specific workflows.",
     "skip_if": "Three to four hours, and not one of them is about Claude's interface. It is the strongest official material on where AI stops being reliable, which is worth the time, but you will finish it without having learned a single click.",
-    "published": "2025-06-01",
-    "checked": "2026-08-29",
+    "published": "UNVERIFIED",
+    "checked": "2026-09-04",
     "status": "live",
-    "notes": "Co-developed with academic partners. Prerequisite for the small-business, nonprofit and educator variants. Certificate on completion. The strongest official material on where AI stops being reliable. Merged 2026-08-27 from three rows for one course: www.anthropic.com/ai-fluency redirects here (verified 2026-08-27, so it was the same page, not a second resource), and the Coursera listing at www.coursera.org/learn/ai-fluency-framework-foundations is the same course on another platform - use it if you would rather enrol there. Enrolment needs a Skilljar account separate from your Claude account, which is why the cost reads free-account and not free. The three rows disagreed on level (basic against never-used); never-used is the honest one, because the course assumes nothing. Migrated 2026-08-29 from anthropic.skilljar.com to academy.claude.com, the live URL - both were checked 2026-08-29 and the skilljar row still answers, but academy.claude.com is Anthropic's current front door for this course. Read in full on the new page: 14 lessons, 1 quiz, 4 hr. Same time bucket as before (`half-day`), now confirmed from the page rather than estimated. Content itself is visible without signing in - only progress-tracking sits behind \"Sign in to save progress\" - so cost moves from `free-account` to `free`.",
+    "notes": "Co-developed with academic partners. Prerequisite for the small-business, nonprofit and educator variants. Certificate on completion. The strongest official material on where AI stops being reliable. Merged 2026-08-27 from three rows for one course: www.anthropic.com/ai-fluency redirects here (verified 2026-08-27, so it was the same page, not a second resource), and the Coursera listing at www.coursera.org/learn/ai-fluency-framework-foundations is the same course on another platform - use it if you would rather enrol there. Enrolment needs a Skilljar account separate from your Claude account, which is why the cost reads free-account and not free. The three rows disagreed on level (basic against never-used); never-used is the honest one, because the course assumes nothing. Migrated 2026-08-29 from anthropic.skilljar.com to academy.claude.com, the live URL - both were checked 2026-08-29 and the skilljar row still answers, but academy.claude.com is Anthropic's current front door for this course. Read in full on the new page: 14 lessons, 1 quiz, 4 hr. Same time bucket as before (`half-day`), now confirmed from the page rather than estimated. Content itself is visible without signing in - only progress-tracking sits behind \"Sign in to save progress\" - so cost moves from `free-account` to `free`. Re-read 2026-09-04 under the freshness sweep: the page shows no date printed anywhere on the page - only a 2026 copyright line, so published 2025-06-01 -> UNVERIFIED. The stored 2025-06-01 is not derivable from the page and never was. Under the one-method rule it becomes UNVERIFIED, and UNVERIFIED is not stale - so this course re-enters every candidate pool it belongs to after 460 days of silent exclusion.",
     "alt_skip_if": [
       "You only want quick, copy-paste task recipes."
     ],
@@ -1844,7 +1844,7 @@
   },
   {
     "title": "Introducing the analysis tool in Claude.ai",
-    "url": "https://anthropic.com/news/analysis-tool",
+    "url": "https://claude.com/blog/analysis-tool",
     "author": "Anthropic",
     "roles": [
       "data-analyst"
@@ -1860,14 +1860,14 @@
     "tier": "ai-reviewed",
     "summary": "Launch blog explaining the analysis tool as a built-in code sandbox that produces mathematically precise and reproducible answers from CSV data.",
     "who_for": "Analysts who want to understand why code execution beats text-only reasoning for numbers.",
-    "skip_if": "Nearly two years old, and stale in the way that matters most: the feature has been renamed. Anthropic's own how-to page for the analysis tool now returns 404, and what you actually switch on is Code execution and file creation, under Settings then Capabilities - a toggle that can be off. Read this for why running real code makes the arithmetic trustworthy, then go and find that switch rather than hunting the interface for the name in this post.",
+    "skip_if": "Read the update notice before the article: the analysis tool this post introduces is being replaced by code execution, dated 5 November 2025 on the page itself. So this is history rather than instruction - useful for understanding why Claude runs code at all, useless as a guide to doing it today. Go to the code execution documentation for the current feature.",
     "published": "2024-10-24",
-    "checked": "2026-08-19",
+    "checked": "2026-09-04",
     "status": "live",
-    "notes": "References Claude 3.5 Sonnet and predates Excel and Cowork; dated framing but conceptually sound, which is why it is step 3 of the data-analyst path.\n\nRe-checked 2026-08-28 while looking for a replacement for step 4 of that path. The blog post itself still resolves, but the feature it announces has been renamed and its Help Center article is gone: support.anthropic.com/en/articles/10008684-enabling-and-using-the-analysis-tool redirects to support.claude.com and then 404s. The live control is \"Code execution and file creation\" under Settings > Capabilities, per support.claude.com/en/articles/12111783-create-and-edit-files-with-claude, which is reachable on Free, Pro and Max and can be switched off by a Team or Enterprise administrator. `checked` did not move: the source page was not re-read, only the vocabulary around it was.",
+    "notes": "References Claude 3.5 Sonnet and predates Excel and Cowork; dated framing but conceptually sound, which is why it is step 3 of the data-analyst path.\n\nRe-checked 2026-08-28 while looking for a replacement for step 4 of that path. The blog post itself still resolves, but the feature it announces has been renamed and its Help Center article is gone: support.anthropic.com/en/articles/10008684-enabling-and-using-the-analysis-tool redirects to support.claude.com and then 404s. The live control is \"Code execution and file creation\" under Settings > Capabilities, per support.claude.com/en/articles/12111783-create-and-edit-files-with-claude, which is reachable on Free, Pro and Max and can be switched off by a Team or Enterprise administrator. `checked` did not move: the source page was not re-read, only the vocabulary around it was. Re-read 2026-09-04. Three things: the URL 308-redirects from anthropic.com/news to claude.com/blog, so it is updated here; the publication date Oct 24 2024 is genuine and fixed, so the item stays correctly flagged as over a year old; and the page carries an update notice saying the analysis tool is being REPLACED by code execution (5 November 2025). The last of those matters more than the date and is now in skip_if.",
     "source": "Anthropic",
     "official": true,
-    "id": "r-6ff382f243",
+    "id": "r-7f2c2387f7",
     "keywords": [
       "analysis tool",
       "claude analysis",
@@ -1894,13 +1894,6 @@
       "understand how claude executes code to avoid math hallucinations",
       "evaluate when to use the analysis tool instead of text-only prompting for numbers",
       "leverage code execution for reproducible calculations on csv files"
-    ],
-    "paths": [
-      {
-        "path": "numbers-you-can-defend",
-        "step": 3,
-        "of": 5
-      }
     ]
   },
   {
@@ -2524,7 +2517,7 @@
       {
         "path": "numbers-you-can-defend",
         "step": 5,
-        "of": 5
+        "of": 4
       }
     ]
   },
@@ -2583,7 +2576,7 @@
       {
         "path": "numbers-you-can-defend",
         "step": 4,
-        "of": 5
+        "of": 4
       }
     ]
   },
@@ -6663,8 +6656,8 @@
     "summary": "Eleven video lessons and six code examples, just under two hours, taught by Anthropic's head of technical education. You build a research chatbot with custom tools, convert it into an MCP-compatible application, write a local server with FastMCP that exposes tools, resources and prompt templates, test it with MCP Inspector, add an MCP client inside the chatbot, connect to Anthropic's reference filesystem and fetch servers, wire it into Claude Desktop, and finally deploy the server remotely.",
     "who_for": "Python developers who want one guided pass through both sides of MCP - client and server - instead of assembling it from documentation.",
     "skip_if": "Skip it if you are new to Python or to LLM app development, and note it was recorded in May 2025, so the Python SDK has since moved to v2 and some code needs adjusting.",
-    "published": "2025-05-14",
-    "checked": "2026-08-21",
+    "published": "UNVERIFIED",
+    "checked": "2026-09-04",
     "status": "live",
     "id": "r-011e20ba3e",
     "keywords": [
@@ -6699,7 +6692,8 @@
       "build a client application that consumes mcp tools",
       "connect custom and reference mcp servers to claude desktop",
       "deploy an mcp server for remote use"
-    ]
+    ],
+    "notes": " Re-read 2026-09-04 under the freshness sweep: the page shows no date printed, so published 2025-05-14 -> UNVERIFIED. Course confirmed still live on the same date: 1 h 58 m, 11 video lessons, 6 code examples. Nothing about it is out of date except a figure we invented."
   },
   {
     "title": "Claude Cowork Tutorial: How to Use Anthropic's AI Desktop Agent",
@@ -11708,10 +11702,10 @@
     "summary": "A student-written explanation of when to use plain Claude chat, a Project, or Learning Mode, with a worked Calculus II example. The best part is the section on how to phrase questions so Socratic mode helps you: share your partial reasoning instead of asking for the answer.",
     "who_for": "Any student, in any subject, who wants AI that questions them instead of finishing their homework, and who needs to be shown how to talk to it.",
     "skip_if": "You want a fast answer to a specific problem. Learning Mode is deliberately slower, and this guide will annoy you if you are on a deadline tonight.",
-    "published": "2025-07-28",
-    "checked": "2026-08-21",
+    "published": "UNVERIFIED",
+    "checked": "2026-09-04",
     "status": "live",
-    "notes": "Over 12 months old: the click path and screenshots show the mid-2025 Projects screen and no longer match Claude exactly. The retention and university-outcome claims are cited loosely and should not be treated as established evidence. Method still holds.",
+    "notes": "Over 12 months old: the click path and screenshots show the mid-2025 Projects screen and no longer match Claude exactly. The retention and university-outcome claims are cited loosely and should not be treated as established evidence. Method still holds. Re-read 2026-09-04 under the freshness sweep: the page shows no date printed, so published 2025-07-28 -> UNVERIFIED. Article body read and quoted to prove the fetch reached the page rather than a bot wall - a direct request with a plain user agent gets 403 from this host.",
     "source": "Northeastern University",
     "official": false,
     "id": "r-97422c936b",
@@ -11808,10 +11802,10 @@
     "summary": "Two full copy-paste prompts written by a student who uses them: a Quizzer that runs an escalating self-test and adapts difficulty from your answers, and an Examiner that simulates a scored oral exam. Both work better when you upload your real course material first.",
     "who_for": "A student with an exam coming who wants active retrieval practice and pressure rehearsal instead of re-reading notes.",
     "skip_if": "You have not studied the material yet. These prompts test you, they do not teach you, and going in cold just produces a demoralising transcript.",
-    "published": "2025-06-04",
-    "checked": "2026-08-21",
+    "published": "UNVERIFIED",
+    "checked": "2026-09-04",
     "status": "live",
-    "notes": "Over 12 months old and possibly outdated in its interface references, but the prompts are plain text and still work. Grades Claude first and lists ChatGPT as an alternative.",
+    "notes": "Over 12 months old and possibly outdated in its interface references, but the prompts are plain text and still work. Grades Claude first and lists ChatGPT as an alternative. Re-read 2026-09-04 under the freshness sweep: the page shows no date printed, so published 2025-06-04 -> UNVERIFIED. Same host, same check.",
     "source": "Northeastern University",
     "official": false,
     "id": "r-7d748fd3ef",
@@ -11858,10 +11852,10 @@
     "summary": "A walkthrough of building a per-course Claude Project loaded with your syllabus, slides and readings, so Claude answers using your module rather than the internet.",
     "who_for": "A student taking one dense course who keeps re-pasting the same context into every chat and wants to stop.",
     "skip_if": "Skip if your syllabus changes often - the guide itself admits the assistant goes stale the moment the course does. Skip if you teach school; it assumes a syllabus, TAs and a Canvas-style platform.",
-    "published": "2025-07-21",
-    "checked": "2026-08-21",
+    "published": "UNVERIFIED",
+    "checked": "2026-09-04",
     "status": "live",
-    "notes": "Over 12 months old, so the Projects screenshots will not match the current interface. I checked the page is live and read the summary and headings, not the full walkthrough.",
+    "notes": "Over 12 months old, so the Projects screenshots will not match the current interface. I checked the page is live and read the summary and headings, not the full walkthrough. Re-read 2026-09-04 under the freshness sweep: the page shows no date printed; a student byline instead, so published 2025-07-21 -> UNVERIFIED. Body quoted to prove the article was read. The page carries an author and class year but no date.",
     "alt_skip_if": [
       "Your course materials are locked in a VLE you cannot export from, or your institution forbids uploading copyrighted readings to an AI tool. Check before you upload."
     ],
@@ -19034,7 +19028,7 @@
       {
         "path": "numbers-you-can-defend",
         "step": 1,
-        "of": 5
+        "of": 4
       }
     ]
   },
@@ -19094,7 +19088,7 @@
       {
         "path": "numbers-you-can-defend",
         "step": 2,
-        "of": 5
+        "of": 4
       }
     ]
   },

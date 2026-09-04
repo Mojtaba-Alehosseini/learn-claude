@@ -14,9 +14,9 @@ THE-PROJECT.md and README point at this file rather than repeating it.
 | Resources | **637** |
 | Distinct publishers | 171 |
 | Distinct hosts | 130 |
-| Learning paths | **7**, 37 steps |
+| Learning paths | **7**, 36 steps |
 | Anthropic's own | 390 of 637 — **61%** |
-| No publish date (`UNVERIFIED`) | 436 of 637 — 68% |
+| No publish date (`UNVERIFIED`) | 441 of 637 — 69% |
 
 **How thoroughly we have checked**
 
@@ -40,7 +40,7 @@ THE-PROJECT.md and README point at this file rather than repeating it.
 | | |
 |---|---|
 | Cells with picks | **37** of 40 |
-| Picks | 109 |
+| Picks | 108 |
 | Runners-up recorded | 108 |
 
 **Cells with three or fewer candidates** (shown as-is, no picks): `teacher|builder` (2), `writer-marketer|builder` (3)
@@ -50,21 +50,21 @@ THE-PROJECT.md and README point at this file rather than repeating it.
 **Pools with zero non-Anthropic material:** `non-technical|builder` (8 items, 1 publisher)
 
 **Publisher-thin pools** (fewer than 3 publishers, so the no-two-from-one rule
-relaxes): `non-technical|builder` (1 pub, 8 items), `teacher|confident` (2 pub, 8 items), `teacher|builder` (2 pub, 2 items), `data-analyst|builder` (2 pub, 33 items), `writer-marketer|builder` (2 pub, 3 items)
+relaxes): `non-technical|builder` (1 pub, 8 items), `teacher|builder` (2 pub, 2 items), `data-analyst|builder` (2 pub, 33 items), `writer-marketer|builder` (2 pub, 3 items)
 
 ## Per cell — eligible / publishers / non-Anthropic
 
 | role | never-used | basic | confident | builder |
 |---|---|---|---|---|
-| `non-technical` | 65 / 20p / 18x | 72 / 27p / 25x | 14 / 6p / 4x | 8 / 1p / 0x |
-| `student` | 35 / 16p / 13x | 17 / 10p / 7x | 8 / 5p / 3x | 0 / 0p / 0x |
-| `researcher` | 18 / 6p / 2x | 19 / 15p / 12x | 19 / 12p / 10x | 20 / 3p / 2x |
-| `teacher` | 26 / 11p / 7x | 18 / 12p / 9x | 8 / 2p / 1x | 2 / 2p / 1x |
-| `developer` | 7 / 4p / 1x | 19 / 11p / 8x | 37 / 18p / 19x | 56 / 17p / 16x |
+| `non-technical` | 66 / 20p / 18x | 72 / 27p / 25x | 14 / 6p / 4x | 8 / 1p / 0x |
+| `student` | 36 / 16p / 13x | 19 / 11p / 9x | 9 / 5p / 4x | 0 / 0p / 0x |
+| `researcher` | 19 / 6p / 2x | 19 / 15p / 12x | 19 / 12p / 10x | 20 / 3p / 2x |
+| `teacher` | 27 / 11p / 7x | 18 / 12p / 9x | 9 / 3p / 2x | 2 / 2p / 1x |
+| `developer` | 7 / 4p / 1x | 19 / 11p / 8x | 37 / 18p / 19x | 57 / 18p / 17x |
 | `data-analyst` | 7 / 4p / 1x | 18 / 13p / 11x | 22 / 12p / 10x | 33 / 2p / 3x |
 | `pm` | 12 / 8p / 5x | 42 / 15p / 15x | 53 / 23p / 25x | 55 / 3p / 2x |
 | `designer` | 7 / 6p / 5x | 10 / 8p / 6x | 20 / 16p / 16x | 11 / 4p / 3x |
-| `business-founder` | 41 / 14p / 10x | 66 / 24p / 22x | 48 / 8p / 6x | 78 / 3p / 2x |
+| `business-founder` | 42 / 14p / 10x | 66 / 24p / 22x | 48 / 8p / 6x | 78 / 3p / 2x |
 | `writer-marketer` | 19 / 9p / 7x | 34 / 23p / 21x | 7 / 7p / 4x | 3 / 2p / 3x |
 
 ## Live resources the freshness rule excludes from every pool
@@ -73,7 +73,7 @@ A real `published` date more than 365 days old. These still appear in Browse wit
 the outdated flag; they are kept out of "Start with these three" because a
 comparative recommendation should not point at something a year stale.
 
-**19 excluded.**
+**14 excluded.**
 
 | item | publisher | published | days | level |
 |---|---|---|---|---|
@@ -82,18 +82,13 @@ comparative recommendation should not point at something a year stale.
 | Introducing the analysis tool in Claude.ai | Anthropic | 2024-10-24 | 680 | basic |
 | Claude AI and Literature Reviews: An Experiment in Utility | Johns Hopkins University | 2025-02-01 | 580 | confident |
 | Tips for building AI agents | Anthropic | 2025-02-13 | 568 | builder |
-| MCP: Build Rich-Context AI Apps with Anthropic | DeepLearning.AI | 2025-05-14 | 478 | builder |
 | Mastering Claude Code in 30 minutes | Anthropic | 2025-05-22 | 470 | confident |
-| AI Fluency: Framework & Foundations | Anthropic Academy | 2025-06-01 | 460 | never-used |
-| How to Use AI to Help You Prepare for Quizzes and Exams | Northeastern University | 2025-06-04 | 457 | basic |
 | Using AI in education settings: support materials (UK DfE) | GOV.UK | 2025-06-10 | 451 | never-used |
 | Lesson 1: Introduction to AI Fluency \| AI Fluency: Framewo | Anthropic | 2025-06-12 | 449 | never-used |
 | Lesson 2B: The 4D Framework \| AI Fluency: Framework & Foun | Anthropic | 2025-06-12 | 449 | never-used |
 | Lesson 7: Effective prompting techniques (Deep Dive) \| AI  | Anthropic | 2025-06-12 | 449 | basic |
 | The Model Context Protocol (MCP) | Anthropic | 2025-06-16 | 445 | confident |
 | Advancing Claude for Education | Anthropic | 2025-07-09 | 422 | basic |
-| How to Set Up a Claude Project that Answers Questions abou | Northeastern University | 2025-07-21 | 410 | confident |
-| Using Claude Learning Mode to Study | Northeastern University | 2025-07-28 | 403 | basic |
 | Prompting 101 \| Code w/ Claude | Anthropic | 2025-07-31 | 400 | basic |
 | Claude Code best practices \| Code w/ Claude | Anthropic | 2025-07-31 | 400 | confident |
 
