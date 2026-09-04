@@ -25,6 +25,11 @@ python3 scripts/build-paths.py | tail -3
 echo
 echo "4/6  search index"
 python3 scripts/build-search-index.py --keywords
+# Fifty-seven sentences ten hostile strangers actually typed at the site, with the
+# result each of them got. Twenty-two are asserted; the rest are recorded failures,
+# and the run says so out loud rather than hiding them. Exits 1 only when a query
+# that used to work stops working.
+python3 scripts/test-search.py | tail -2
 
 echo
 echo "5/6  data as loadable javascript"

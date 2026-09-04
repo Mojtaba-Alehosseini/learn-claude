@@ -85,6 +85,9 @@ jobs:
       - name: Check a question asked on the home page is answered on Browse
         run: node scripts/test-browse-query.js
 
+      - name: Check search still answers the sentences visitors typed
+        run: python3 scripts/test-search.py
+
       # Copy only what the browser asks for. scripts/, docs/, research/ and prompts/
       # stay in the repo but do not need to be served.
       - name: Assemble the site
