@@ -398,7 +398,7 @@ match. That dropped the list from **32 items to 29**, all three removals being
 artefacts of the same kind.
 
 The first attempt at that fix was written into the file through a shell heredoc, which
-ate both `` escapes and left literal backspace characters. The matcher then matched
+ate both `\b` escapes and left literal backspace characters. The matcher then matched
 **everything**: every role counted as named, no item ever had exactly one, and the
 check reported **zero findings while looking perfectly healthy**. It was caught only
 because a drop from 32 to 0 was too convenient to believe. The pattern is now written

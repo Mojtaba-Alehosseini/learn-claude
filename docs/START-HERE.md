@@ -24,12 +24,18 @@ JavaScript, hand-written, no framework and no build step for the browser. Open
 ## How to work on it
 
 ```
+python3 scripts/install-hooks.py   # once per clone - see below
 ./build.sh          # after any change to data/*.json — regenerates ids, sources,
                     # paths, the search index, and the .js mirrors
 python3 scripts/validate-catalogue.py     # the catalogue's own rules
 python3 scripts/validate-picks.py         # the "start with these three" rules
 python3 scripts/test-search.py            # the exact algorithm the browser runs
 ```
+
+The hook is worth the one command. It refuses to commit a control character in a
+tracked text file — a literal backspace, which is what a `\b` becomes when a regex goes
+through a shell heredoc — and it runs the catalogue validator locally, so a failure
+arrives before the commit rather than after the push.
 
 To see a change in the browser, hard-reload — the CSS caches aggressively.
 
