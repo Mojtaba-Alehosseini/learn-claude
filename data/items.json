@@ -640,9 +640,9 @@
     "who_for": "Anyone who wants the definitive, always-current feature reference.",
     "skip_if": "You've already run a few Cowork sessions — this is orientation, not troubleshooting.",
     "published": "UNVERIFIED",
-    "checked": "2026-09-04",
+    "checked": "2026-09-05",
     "status": "live",
-    "notes": "Kept current as Cowork changes; covers what Cowork cannot do. Re-dated 2026-09-04: page printed \"Updated yesterday\", so published 2026-01-13 -> UNVERIFIED. One method for the whole publisher - a printed calendar date becomes the date, a relative phrase stays UNVERIFIED.",
+    "notes": "Kept current as Cowork changes; covers what Cowork cannot do. Re-dated 2026-09-04: page printed \"Updated yesterday\", so published 2026-01-13 -> UNVERIFIED. One method for the whole publisher - a printed calendar date becomes the date, a relative phrase stays UNVERIFIED. 2026-09-05: the weekly parser read a last-updated date of 2026-09-02 out of this page's HTML, which Intercom keeps there while showing a relative phrase to a reader. Recorded as `updated`. `published` stays UNVERIFIED - the page has never given one.",
     "alt_skip_if": [
       "You want guided workflows, not reference material."
     ],
@@ -678,6 +678,7 @@
       "set up projects and scheduled tasks",
       "navigate browser actions and understand current platform limits"
     ],
+    "updated": "2026-09-02",
     "paths": [
       {
         "path": "first-week",
@@ -761,9 +762,9 @@
     "who_for": "Owners deciding whether a team of 5+ should move from Pro to Team.",
     "skip_if": "Team starts at five seats, so a pair or a trio cannot buy it at all. The usage limits are per person rather than pooled, which is the detail that changes the arithmetic.",
     "published": "UNVERIFIED",
-    "checked": "2026-09-04",
+    "checked": "2026-09-05",
     "status": "live",
-    "notes": "Pairs with the pricing page. Team has a 5-seat minimum; usage limits are per-member, not pooled.",
+    "notes": "Pairs with the pricing page. Team has a 5-seat minimum; usage limits are per-member, not pooled. 2026-09-05: the weekly parser read a last-updated date of 2026-08-18 out of this page's HTML, which Intercom keeps there while showing a relative phrase to a reader. Recorded as `updated`. `published` stays UNVERIFIED - the page has never given one.",
     "source": "Claude Help Center",
     "official": true,
     "id": "r-a6cb8cede5",
@@ -793,7 +794,8 @@
       "evaluate differences between claude pro and claude team tiers",
       "understand the distinctions between team standard and premium seats",
       "manage team usage credits and centralized billing features"
-    ]
+    ],
+    "updated": "2026-08-18"
   },
   {
     "title": "Is my data used for model training? (Privacy Center)",
@@ -815,9 +817,9 @@
     "who_for": "Anyone worried about data privacy — the #1 SMB hesitation.",
     "skip_if": "You have nobody to satisfy about data handling. This is the policy to quote in a review, not a settings guide — it states what Anthropic does with your data, not how to change what you send.",
     "published": "UNVERIFIED",
-    "checked": "2026-08-20",
+    "checked": "2026-09-05",
     "status": "live",
-    "notes": "On consumer plans you must toggle 'Help Improve Claude' off; commercial plans exclude training by default.",
+    "notes": "On consumer plans you must toggle 'Help Improve Claude' off; commercial plans exclude training by default. 2026-09-05: the weekly parser read a last-updated date of 2026-03-16 out of this page's HTML, which Intercom keeps there while showing a relative phrase to a reader. Recorded as `updated`. `published` stays UNVERIFIED - the page has never given one.",
     "source": "Claude Privacy Center",
     "official": true,
     "id": "r-dbd5a58a87",
@@ -847,7 +849,8 @@
       "verify exactly what data anthropic does and does not use for training",
       "explain privacy protections covering raw connector data and mcp servers",
       "assess whether claude meets your company privacy standards"
-    ]
+    ],
+    "updated": "2026-03-16"
   },
   {
     "title": "Claude Team pricing for a small business",
@@ -3033,9 +3036,9 @@
     "who_for": "Any designer setting up Claude Design for the first time.",
     "skip_if": "Claude Design needs Pro, Max, Team or Enterprise, and on Enterprise an administrator has to switch it on before you see it at all. Still in beta, so what you set up here can move under you.",
     "published": "UNVERIFIED",
-    "checked": "2026-09-04",
+    "checked": "2026-09-05",
     "status": "live",
-    "notes": "Available on Pro, Max, Team, Enterprise; default off for Enterprise.",
+    "notes": "Available on Pro, Max, Team, Enterprise; default off for Enterprise. 2026-09-05: the weekly parser read a last-updated date of 2026-08-06 out of this page's HTML, which Intercom keeps there while showing a relative phrase to a reader. Recorded as `updated`. `published` stays UNVERIFIED - the page has never given one.",
     "source": "Claude Help Center",
     "official": true,
     "id": "r-762ee8eaae",
@@ -3068,7 +3071,8 @@
     ],
     "prerequisites": [
       "claude account"
-    ]
+    ],
+    "updated": "2026-08-06"
   },
   {
     "title": "Set up your design system in Claude Design",
@@ -3090,9 +3094,9 @@
     "who_for": "Designers and design leads establishing a reusable design system in Claude Design.",
     "skip_if": "One switch in here publishes your design system to everyone in the organisation, so find out which one before you experiment. On Enterprise an administrator may hold that switch instead of you.",
     "published": "UNVERIFIED",
-    "checked": "2026-09-04",
+    "checked": "2026-09-05",
     "status": "live",
-    "notes": "Publish toggle applies the system org-wide; Enterprise can restrict who publishes.",
+    "notes": "Publish toggle applies the system org-wide; Enterprise can restrict who publishes. 2026-09-05: the weekly parser read a last-updated date of 2026-08-06 out of this page's HTML, which Intercom keeps there while showing a relative phrase to a reader. Recorded as `updated`. `published` stays UNVERIFIED - the page has never given one.",
     "source": "Claude Help Center",
     "official": true,
     "id": "r-84558d3fb4",
@@ -3126,7 +3130,8 @@
     "prerequisites": [
       "claude design workspace set up",
       "existing design system brand assets or figma files to import"
-    ]
+    ],
+    "updated": "2026-08-06"
   },
   {
     "title": "Claude Code and Figma: Set up the MCP server",
@@ -7726,9 +7731,9 @@
     "who_for": "Anyone about to give Cowork access to real files, especially sensitive ones (financial, health, client data).",
     "skip_if": "Nothing — worth reading before your first real Cowork task regardless of experience level.",
     "published": "UNVERIFIED",
-    "checked": "2026-09-04",
+    "checked": "2026-09-05",
     "status": "live",
-    "notes": "Directly addresses the 'is this safe to point at my files' worry a nurse, HR manager, or lawyer would reasonably have.",
+    "notes": "Directly addresses the 'is this safe to point at my files' worry a nurse, HR manager, or lawyer would reasonably have. 2026-09-05: the weekly parser read a last-updated date of 2026-08-26 out of this page's HTML, which Intercom keeps there while showing a relative phrase to a reader. Recorded as `updated`. `published` stays UNVERIFIED - the page has never given one.",
     "source": "Claude Help Center",
     "official": true,
     "id": "r-e686e58ab4",
@@ -7755,6 +7760,7 @@
       "block sensitive applications from folder access",
       "safely delegate file tasks without exposing private data"
     ],
+    "updated": "2026-08-26",
     "paths": [
       {
         "path": "pm-without-engineering",
@@ -7785,10 +7791,10 @@
     "summary": "The absolute basics — what Claude is, how to access it, what a prompt is — written in plain language with simple examples like 'how do I hang a picture frame.'",
     "who_for": "Someone who has literally never used Claude before.",
     "skip_if": "You've sent Claude more than a handful of messages already — nothing new here.",
-    "published": "2026-06-02",
-    "checked": "2026-09-04",
+    "published": "UNVERIFIED",
+    "checked": "2026-09-05",
     "status": "live",
-    "notes": "The same article also exists at the older support.anthropic.com domain under a slightly different URL slug — both resolved when checked; support.claude.com is the current branded one. Re-dated 2026-09-04: page printed \"June 2, 2026\", so published UNVERIFIED -> 2026-06-02. One method for the whole publisher - a printed calendar date becomes the date, a relative phrase stays UNVERIFIED.",
+    "notes": "The same article also exists at the older support.anthropic.com domain under a slightly different URL slug — both resolved when checked; support.claude.com is the current branded one. Re-dated 2026-09-04: page printed \"June 2, 2026\", so published UNVERIFIED -> 2026-06-02. One method for the whole publisher - a printed calendar date becomes the date, a relative phrase stays UNVERIFIED. Migrated 2026-09-05: Intercom never prints a publication date, so the 2026-06-02 written into `published` was a last-updated date all along. Moved to `updated`; `published` is UNVERIFIED, which is what the page supports.",
     "source": "Claude Help Center",
     "official": true,
     "id": "r-55183ae43b",
@@ -7815,6 +7821,7 @@
       "write basic prompts to get useful answers",
       "understand what claude is and how it responds"
     ],
+    "updated": "2026-06-02",
     "paths": [
       {
         "path": "first-week",
@@ -10380,10 +10387,10 @@
     "summary": "Authoritative Help Center article on the agentic Research feature: multi-step searches across web and connected internal sources, delivered with checkable citations.",
     "who_for": "Paid-plan researchers doing deep, multi-source syntheses.",
     "skip_if": "Research burns through usage limits noticeably faster than ordinary chat, and it does nothing at all unless web search is switched on in settings first. Both are easy to discover the expensive way.",
-    "published": "2026-06-02",
-    "checked": "2026-09-04",
+    "published": "UNVERIFIED",
+    "checked": "2026-09-05",
     "status": "live",
-    "notes": "Requires web search on; consumes usage limits faster. Re-dated 2026-09-04: page printed \"June 2, 2026\", so published UNVERIFIED -> 2026-06-02. One method for the whole publisher - a printed calendar date becomes the date, a relative phrase stays UNVERIFIED.",
+    "notes": "Requires web search on; consumes usage limits faster. Re-dated 2026-09-04: page printed \"June 2, 2026\", so published UNVERIFIED -> 2026-06-02. One method for the whole publisher - a printed calendar date becomes the date, a relative phrase stays UNVERIFIED. Migrated 2026-09-05: Intercom never prints a publication date, so the 2026-06-02 written into `published` was a last-updated date all along. Moved to `updated`; `published` is UNVERIFIED, which is what the page supports.",
     "source": "Claude Help Center",
     "official": true,
     "id": "r-fbf7764058",
@@ -10410,7 +10417,8 @@
     ],
     "prerequisites": [
       "paid claude plan pro max team or enterprise"
-    ]
+    ],
+    "updated": "2026-06-02"
   },
   {
     "title": "What are Projects?",
@@ -10436,10 +10444,10 @@
     "summary": "Explains Projects: self-contained workspaces with a knowledge base and custom instructions that persist across chats.",
     "who_for": "Anyone who keeps re-pasting the same background into new chats - a researcher per paper, a student per module, a teacher per class, an owner per client - and wants that context to stay put.",
     "skip_if": "The free tier stops at five Projects, and the larger knowledge base that makes one useful for a whole topic only arrives on a paid plan — if you are planning around Projects, plan around that first.",
-    "published": "2026-07-23",
-    "checked": "2026-09-04",
+    "published": "UNVERIFIED",
+    "checked": "2026-09-05",
     "status": "live",
-    "notes": "Free tier = 5 projects; RAG on paid plans expands knowledge-base capacity. Widened 2026-09-01. The old line read \"Researchers wanting a reusable, context-rich setup per paper/topic\" while the item is tagged for five roles, so a business owner and a student were both shown a card saying For: Researchers. Checked the page the same day: it names no profession and states Projects are available to all users, including free accounts. The card was narrower than the resource. Re-dated 2026-09-04: page printed \"July 23, 2026\", so published UNVERIFIED -> 2026-07-23. One method for the whole publisher - a printed calendar date becomes the date, a relative phrase stays UNVERIFIED.",
+    "notes": "Free tier = 5 projects; RAG on paid plans expands knowledge-base capacity. Widened 2026-09-01. The old line read \"Researchers wanting a reusable, context-rich setup per paper/topic\" while the item is tagged for five roles, so a business owner and a student were both shown a card saying For: Researchers. Checked the page the same day: it names no profession and states Projects are available to all users, including free accounts. The card was narrower than the resource. Re-dated 2026-09-04: page printed \"July 23, 2026\", so published UNVERIFIED -> 2026-07-23. One method for the whole publisher - a printed calendar date becomes the date, a relative phrase stays UNVERIFIED. Migrated 2026-09-05: Intercom never prints a publication date, so the 2026-07-23 written into `published` was a last-updated date all along. Moved to `updated`; `published` is UNVERIFIED, which is what the page supports.",
     "source": "Claude Help Center",
     "official": true,
     "id": "r-6840ddca47",
@@ -10463,6 +10471,7 @@
       "set up self-contained workspaces with custom instructions and knowledge bases",
       "maintain context across multiple chats using projects"
     ],
+    "updated": "2026-07-23",
     "paths": [
       {
         "path": "first-week",
@@ -10495,10 +10504,10 @@
     "summary": "Program giving up to $20,000 in Anthropic API credits over a 6-month period to researchers at academic/nonprofit institutions (biology/life-sciences focus).",
     "who_for": "Researchers who can use the API for high-impact scientific work.",
     "skip_if": "Your work isn't API-based or high-impact science.",
-    "published": "2026-03-16",
-    "checked": "2026-09-04",
+    "published": "UNVERIFIED",
+    "checked": "2026-09-05",
     "status": "live",
-    "notes": "Applications reviewed monthly; credits are API-only (not claude.ai). A July 2026 rare-disease track offers up to $50,000. Re-dated 2026-09-04: page printed \"March 16, 2026\", so published 2025-05-05 -> 2026-03-16. One method for the whole publisher - a printed calendar date becomes the date, a relative phrase stays UNVERIFIED.",
+    "notes": "Applications reviewed monthly; credits are API-only (not claude.ai). A July 2026 rare-disease track offers up to $50,000. Re-dated 2026-09-04: page printed \"March 16, 2026\", so published 2025-05-05 -> 2026-03-16. One method for the whole publisher - a printed calendar date becomes the date, a relative phrase stays UNVERIFIED. Migrated 2026-09-05: Intercom never prints a publication date, so the 2026-03-16 written into `published` was a last-updated date all along. Moved to `updated`; `published` is UNVERIFIED, which is what the page supports.",
     "source": "Claude Help Center",
     "official": true,
     "id": "r-bc0bf45882",
@@ -10523,7 +10532,8 @@
     "prerequisites": [
       "affiliation with an academic or nonprofit institution",
       "api-based scientific research project"
-    ]
+    ],
+    "updated": "2026-03-16"
   },
   {
     "title": "How scientists are using Claude to accelerate research",
@@ -11397,10 +11407,10 @@
     "summary": "The official help page for students on a university-provided Claude account: what the education plan gives you (bigger context window, Projects, higher limits), a long list of study tasks Claude can help with, how to sign in on each device, and what to do when login or usage limits break.",
     "who_for": "A student whose university just switched on Claude for Education and who wants one page that says what they now have and how to log in.",
     "skip_if": "Skip if your university has no Claude for Education licence - none of it applies. Skip if you want teaching advice; the 'what can I use Claude for' list is written for students, not for people who set assignments.",
-    "published": "2026-07-13",
-    "checked": "2026-09-04",
+    "published": "UNVERIFIED",
+    "checked": "2026-09-05",
     "status": "live",
-    "notes": "One line on academic integrity, and it is only one line: follow your university's policy. Do not treat this page as integrity guidance. No date shown, so freshness is unknowable.",
+    "notes": "One line on academic integrity, and it is only one line: follow your university's policy. Do not treat this page as integrity guidance. No date shown, so freshness is unknowable. Migrated 2026-09-05: Intercom never prints a publication date, so the 2026-07-13 written into `published` was a last-updated date all along. Moved to `updated`; `published` is UNVERIFIED, which is what the page supports.",
     "alt_skip_if": [
       "Your university does not provide Claude. Most of this page is about the institutional plan and will not match a personal free or Pro account."
     ],
@@ -11428,7 +11438,8 @@
     ],
     "prerequisites": [
       "university provided claude account"
-    ]
+    ],
+    "updated": "2026-07-13"
   },
   {
     "title": "Anthropic Education Report: How University Students Use Claude",
@@ -13031,9 +13042,9 @@
     "who_for": "US school teachers and school leaders who must answer 'is this safe for student data?' before anyone in the building signs up.",
     "skip_if": "Skip if your district already has its own written agreement with Anthropic - that agreement overrides these terms. Skip if you are outside the US; none of this applies to you.",
     "published": "UNVERIFIED",
-    "checked": "2026-09-04",
+    "checked": "2026-09-05",
     "status": "live",
-    "notes": "This is Anthropic's own account of its own terms. Independent critics argue the FERPA position is weaker than it sounds, because an individual teacher cannot designate a vendor as a 'school official' - read Joe Phillips' district piece next to it. Re-dated 2026-09-04: page printed \"Updated this week\", so published 2026-07-14 -> UNVERIFIED. One method for the whole publisher - a printed calendar date becomes the date, a relative phrase stays UNVERIFIED.",
+    "notes": "This is Anthropic's own account of its own terms. Independent critics argue the FERPA position is weaker than it sounds, because an individual teacher cannot designate a vendor as a 'school official' - read Joe Phillips' district piece next to it. Re-dated 2026-09-04: page printed \"Updated this week\", so published 2026-07-14 -> UNVERIFIED. One method for the whole publisher - a printed calendar date becomes the date, a relative phrase stays UNVERIFIED. 2026-09-05: the weekly parser read a last-updated date of 2026-08-28 out of this page's HTML, which Intercom keeps there while showing a relative phrase to a reader. Recorded as `updated`. `published` stays UNVERIFIED - the page has never given one.",
     "source": "Claude Help Center",
     "official": true,
     "id": "r-5aa9ca06c5",
@@ -13057,7 +13068,8 @@
     "teaches": [
       "explain Anthropic's K-12 data privacy and training policies",
       "verify safety compliance for school deployment"
-    ]
+    ],
+    "updated": "2026-08-28"
   },
   {
     "title": "Agent Skills for K-12 Teachers (open source)",
@@ -13631,9 +13643,9 @@
     "who_for": "School and college staff in England, either as whole-staff CPD or as self-study. Own work and school policy, school level.",
     "skip_if": "Skip if you are outside England - the safeguarding, data and KCSIE references are UK-specific. Skip if you want tool training; it is deliberately generic and never mentions Claude.",
     "published": "2025-06-10",
-    "checked": "2026-08-21",
+    "checked": "2026-09-05",
     "status": "live",
-    "notes": "First published 10 June 2025 and updated 19 May 2026 for the 2026/27 academic year, so it is current - I confirmed both dates on the page. Module 3 (safe use) is the one everyone should do regardless of experience. A free certified assessment carrying Chartered Teacher Status credits is available from the Chartered College.",
+    "notes": "First published 10 June 2025 and updated 19 May 2026 for the 2026/27 academic year, so it is current - I confirmed both dates on the page. Module 3 (safe use) is the one everyone should do regardless of experience. A free certified assessment carrying Chartered Teacher Status credits is available from the Chartered College. 2026-09-05: the page prints BOTH \"Published 10 June 2025\" and \"Last updated 19 May 2026\". This was the case the one-field method could not express - `published` was right and the outdated flag was wrong in substance. With `updated` it carries both, and freshness now measures from the later one.",
     "source": "GOV.UK",
     "official": false,
     "id": "r-71c0227d56",
@@ -13659,7 +13671,8 @@
       "deliver school staff CPD on generative AI",
       "plan safe AI use in UK schools and colleges",
       "use Department for Education training materials for teachers"
-    ]
+    ],
+    "updated": "2026-05-19"
   },
   {
     "title": "The Australian Framework for Generative AI in Schools",
@@ -13930,9 +13943,9 @@
     "who_for": "Anyone setting up Claude for a recurring writing role who is unsure where their voice rules should live.",
     "skip_if": "You've already got Projects and Styles configured — this is a conceptual explainer, not new tactics.",
     "published": "UNVERIFIED",
-    "checked": "2026-09-04",
+    "checked": "2026-09-05",
     "status": "live",
-    "notes": "Continuously updated help article (shown as 'Updated yesterday' at time of check); accurate as of Aug 2026.",
+    "notes": "Continuously updated help article (shown as 'Updated yesterday' at time of check); accurate as of Aug 2026. 2026-09-05: the weekly parser read a last-updated date of 2026-08-19 out of this page's HTML, which Intercom keeps there while showing a relative phrase to a reader. Recorded as `updated`. `published` stays UNVERIFIED - the page has never given one.",
     "source": "Claude Help Center",
     "official": true,
     "id": "r-657d7f5084",
@@ -13955,7 +13968,8 @@
     "teaches": [
       "choose between profile preferences project instructions and styles",
       "maintain a consistent voice across multiple chats"
-    ]
+    ],
+    "updated": "2026-08-19"
   },
   {
     "title": "How Can I Create and Manage Projects?",
@@ -13977,9 +13991,9 @@
     "who_for": "Writers and editors who haven't yet set up a Project to hold style guides and reference material.",
     "skip_if": "The plan limits in this article have moved more than once - how many Projects you get on free versus paid has changed between versions of the page - so take the number from the app rather than from here.",
     "published": "UNVERIFIED",
-    "checked": "2026-09-04",
+    "checked": "2026-09-05",
     "status": "live",
-    "notes": "Plan limits (e.g., how many projects on free vs. paid tiers) have shifted across versions of this article — check current limits in-app.",
+    "notes": "Plan limits (e.g., how many projects on free vs. paid tiers) have shifted across versions of this article — check current limits in-app. 2026-09-05: the weekly parser read a last-updated date of 2026-09-03 out of this page's HTML, which Intercom keeps there while showing a relative phrase to a reader. Recorded as `updated`. `published` stays UNVERIFIED - the page has never given one.",
     "source": "Claude Help Center",
     "official": true,
     "id": "r-6bf4b71e18",
@@ -14003,7 +14017,8 @@
       "create a new claude project from scratch",
       "upload knowledge files and reference documents to a project",
       "write persistent instructions for consistent AI output"
-    ]
+    ],
+    "updated": "2026-09-03"
   },
   {
     "title": "Organize Your Tasks With Projects in Claude Cowork",
@@ -14025,9 +14040,9 @@
     "who_for": "Writers or editorial teams handling long-running, file-heavy projects (a book, a recurring report) who want Claude working directly on local files.",
     "skip_if": "You only do one-off chat-based writing tasks — Cowork setup overhead isn't worth it for that.",
     "published": "UNVERIFIED",
-    "checked": "2026-09-04",
+    "checked": "2026-09-05",
     "status": "live",
-    "notes": "Described as desktop-only with no cloud sync at time of writing — worth confirming current status in-app before relying on it for team handoffs.",
+    "notes": "Described as desktop-only with no cloud sync at time of writing — worth confirming current status in-app before relying on it for team handoffs. 2026-09-05: the weekly parser read a last-updated date of 2026-09-03 out of this page's HTML, which Intercom keeps there while showing a relative phrase to a reader. Recorded as `updated`. `published` stays UNVERIFIED - the page has never given one.",
     "source": "Claude Help Center",
     "official": true,
     "id": "r-36de89a1ed",
@@ -14051,7 +14066,8 @@
     "teaches": [
       "combine local folder context with persistent project instructions in cowork",
       "manage long-running document projects with claude cowork"
-    ]
+    ],
+    "updated": "2026-09-03"
   },
   {
     "title": "Multilingual Support",
@@ -18893,12 +18909,12 @@
     "language": "en",
     "tier": "previewed",
     "status": "live",
-    "published": "2026-07-23",
-    "checked": "2026-09-04",
+    "published": "UNVERIFIED",
+    "checked": "2026-09-05",
     "summary": "The five clicks that put your own data in front of Claude: the plus button, add files or photos, choose, open - or drag the file onto the window. Lists what it will actually accept, including CSV and XLSX, and the ceilings on each.",
     "who_for": "Anyone with a spreadsheet on their laptop and no idea how to get Claude to look at it. The step every data guide assumes you have already done.",
     "skip_if": "Two ceilings here are different and easy to trip over: a chat takes 500MB per file, a Project takes 30MB, and twenty files is the limit either way. XLSX also needs code execution switched on first, which the page mentions once. Nothing in it tells you to check the answers Claude gives back, and you should.",
-    "notes": "Dated 2026-07-23 on the page. Read via fetch on 2026-08-27, not opened by a person. Says nothing about what happens to an uploaded file afterwards - for that, see Anthropic's retention page, also in this catalogue.",
+    "notes": "Dated 2026-07-23 on the page. Read via fetch on 2026-08-27, not opened by a person. Says nothing about what happens to an uploaded file afterwards - for that, see Anthropic's retention page, also in this catalogue. Migrated 2026-09-05: Intercom never prints a publication date, so the 2026-07-23 written into `published` was a last-updated date all along. Moved to `updated`; `published` is UNVERIFIED, which is what the page supports.",
     "prerequisites": [],
     "teaches": [
       "get a file from your computer in front of Claude",
@@ -18921,6 +18937,7 @@
       "why won't my excel file upload to claude"
     ],
     "id": "r-5a7be113ab",
+    "updated": "2026-07-23",
     "paths": [
       {
         "path": "numbers-you-can-defend",
@@ -18952,12 +18969,12 @@
     "language": "en",
     "tier": "previewed",
     "status": "live",
-    "published": "2026-07-01",
-    "checked": "2026-08-27",
+    "published": "UNVERIFIED",
+    "checked": "2026-09-05",
     "summary": "Anthropic's own numbers on how long it keeps what you send: a deleted chat leaves your history at once and the back end within 30 days, but if you allowed your chats to improve Claude, they can be held de-identified for five years. Usage-policy violations are kept two years, the safety scores behind them seven.",
     "who_for": "Anyone about to paste work data into Claude and wanting the retention figures from the company itself rather than from a blog that read the terms once.",
     "skip_if": "It covers Free, Pro and Max only. If your data sits on Team, Enterprise or the API the answers are different and this is the wrong page. It also never once says the word attachment, so the file you upload is exactly the thing it does not address.",
-    "notes": "Dated 2026-07-01 on the page. Read via fetch on 2026-08-27, not opened by a person. It links onward to the setting that decides which retention you get. Chosen over a well-written independent guide that stated Pro excludes training by default - Anthropic's own 2025-08-28 consumer terms update makes it a required choice for Free, Pro and Max, so that guide is wrong on the sentence that matters most.",
+    "notes": "Dated 2026-07-01 on the page. Read via fetch on 2026-08-27, not opened by a person. It links onward to the setting that decides which retention you get. Chosen over a well-written independent guide that stated Pro excludes training by default - Anthropic's own 2025-08-28 consumer terms update makes it a required choice for Free, Pro and Max, so that guide is wrong on the sentence that matters most. Migrated 2026-09-05: Intercom never prints a publication date, so the 2026-07-01 written into `published` was a last-updated date all along. Moved to `updated`; `published` is UNVERIFIED, which is what the page supports.",
     "prerequisites": [],
     "teaches": [
       "know how long Claude keeps a deleted conversation",
@@ -18981,6 +18998,7 @@
       "what happens when i delete a claude conversation"
     ],
     "id": "r-9021f6f590",
+    "updated": "2026-07-01",
     "paths": [
       {
         "path": "numbers-you-can-defend",
@@ -31067,7 +31085,7 @@
     "topics": [
       "safety"
     ],
-    "published": "2026-03-16",
+    "published": "UNVERIFIED",
     "summary": "Claude will sometimes say it has emailed someone, saved a document or produced a working link when it has done none of those things. Anthropic's own page for it, stating the cause plainly: Claude has no access to any tool that is not explicitly connected - not email, not a word processor, not file transfer - and it invents the capability while trying to be helpful.",
     "who_for": "Anyone about to trust Claude with something it says it has already done. The single most expensive first-week mistake, in the publisher's own words rather than a forum thread's.",
     "skip_if": "It explains the behaviour and does not tell you how to spot it in the moment, which is the part you actually need: if Claude reports finishing a task you never watched it do, check the thing itself. Also read it as a floor rather than a ceiling - connectors change what Claude really can reach, and this page is about the case where nothing is connected.",
@@ -31089,7 +31107,7 @@
       "why are claude's links broken",
       "claude said it saved a document but it didn't"
     ],
-    "notes": "Opened via fetch 2026-09-04, not read by a person. Page prints 2026-03-16. Found by walking the Help Center's Claude collection (79 articles) rather than by search - the collection walk is in research/2026-09-04-thin-cell-source-list.md. Title corrected 2026-09-04: it had been re-authored as \"Claude claims it sent an email or made a file. It did not.\" - a better sentence and not the page's. The title is now the page's own H1 with only the trailing \"What's going on?\" cut, which is a trim rather than a rewrite.",
+    "notes": "Opened via fetch 2026-09-04, not read by a person. Page prints 2026-03-16. Found by walking the Help Center's Claude collection (79 articles) rather than by search - the collection walk is in research/2026-09-04-thin-cell-source-list.md. Title corrected 2026-09-04: it had been re-authored as \"Claude claims it sent an email or made a file. It did not.\" - a better sentence and not the page's. The title is now the page's own H1 with only the trailing \"What's going on?\" cut, which is a trim rather than a rewrite. Migrated 2026-09-05: Intercom never prints a publication date, so the 2026-03-16 written into `published` was a last-updated date all along. Moved to `updated`; `published` is UNVERIFIED, which is what the page supports.",
     "author": "Anthropic",
     "source": "Claude Help Center",
     "official": true,
@@ -31099,9 +31117,10 @@
     "tier": "previewed",
     "status": "live",
     "time": "under-15min",
-    "checked": "2026-09-04",
+    "checked": "2026-09-05",
     "prerequisites": [],
-    "id": "r-b8a6d9b34b"
+    "id": "r-b8a6d9b34b",
+    "updated": "2026-03-16"
   },
   {
     "title": "What are some things I can use Claude for? (Help Center)",
@@ -31116,7 +31135,7 @@
     "topics": [
       "chat-prompting"
     ],
-    "published": "2026-03-16",
+    "published": "UNVERIFIED",
     "summary": "Seven things Claude is for, with examples concrete enough to copy: writing in a named style, learning a topic (pasta carbonara, a Python library, 20th-century Uruguayan history), summarising, code, arguing a point back at you, translation, and reading an image. About 250 words.",
     "who_for": "Someone who has opened Claude, seen an empty box, and closed it again. This is the answer to the blank page, from Anthropic rather than from a listicle.",
     "skip_if": "Two hundred and fifty words and no depth on any of the seven - if you already know what you want to ask, it has nothing for you. It is also older than the product: written before Cowork, Skills and connectors, so it describes a chat box and not the thing Claude is now.",
@@ -31136,7 +31155,7 @@
       "what should i ask claude first",
       "is claude only for coding"
     ],
-    "notes": "Opened via fetch 2026-09-04. Page prints 2026-03-16, which is why the skip_if says it predates Cowork and Skills - the age is the caveat, and the card carries the outdated flag on its own once it passes a year.",
+    "notes": "Opened via fetch 2026-09-04. Page prints 2026-03-16, which is why the skip_if says it predates Cowork and Skills - the age is the caveat, and the card carries the outdated flag on its own once it passes a year. Migrated 2026-09-05: Intercom never prints a publication date, so the 2026-03-16 written into `published` was a last-updated date all along. Moved to `updated`; `published` is UNVERIFIED, which is what the page supports.",
     "author": "Anthropic",
     "source": "Claude Help Center",
     "official": true,
@@ -31146,9 +31165,10 @@
     "tier": "previewed",
     "status": "live",
     "time": "under-15min",
-    "checked": "2026-09-04",
+    "checked": "2026-09-05",
     "prerequisites": [],
-    "id": "r-b9f15cfee0"
+    "id": "r-b9f15cfee0",
+    "updated": "2026-03-16"
   },
   {
     "title": "How up-to-date is Claude's training data?",
@@ -31185,7 +31205,7 @@
       "what is claude's training cutoff",
       "why doesn't claude know about this news"
     ],
-    "notes": "Opened via fetch 2026-09-04. The page shows no date, only 'updated this week', so published is UNVERIFIED rather than guessed. Its gap - never mentioning web search - is the reason the skip_if sends the reader onward.",
+    "notes": "Opened via fetch 2026-09-04. The page shows no date, only 'updated this week', so published is UNVERIFIED rather than guessed. Its gap - never mentioning web search - is the reason the skip_if sends the reader onward. 2026-09-05: the weekly parser read a last-updated date of 2026-09-01 out of this page's HTML, which Intercom keeps there while showing a relative phrase to a reader. Recorded as `updated`. `published` stays UNVERIFIED - the page has never given one.",
     "author": "Anthropic",
     "source": "Claude Help Center",
     "official": true,
@@ -31195,9 +31215,10 @@
     "tier": "previewed",
     "status": "live",
     "time": "under-15min",
-    "checked": "2026-09-04",
+    "checked": "2026-09-05",
     "prerequisites": [],
-    "id": "r-e15adda7c4"
+    "id": "r-e15adda7c4",
+    "updated": "2026-09-01"
   },
   {
     "title": "How does Claude handle mathematical equations and calculations?",
@@ -31213,7 +31234,7 @@
     "topics": [
       "safety"
     ],
-    "published": "2026-03-16",
+    "published": "UNVERIFIED",
     "summary": "Claude can work through equations and arithmetic, and Anthropic's own page says complex or mission-critical calculations should be verified with specialist software or by hand.",
     "who_for": "Anyone who is about to let Claude do a sum that matters - an invoice, a dose, a budget line - and wants the publisher's position before they do.",
     "skip_if": "It is a caution and not a method. It does not tell you to switch on code execution, which is the thing that actually makes Claude compute rather than predict, and it does not show you how to check an answer. Take the warning and get the technique elsewhere.",
@@ -31233,7 +31254,7 @@
       "does claude get maths wrong",
       "should i check claude's calculations"
     ],
-    "notes": "Opened via fetch 2026-09-04. Page prints 2026-03-16. Deliberately tagged never-used rather than data-analyst-only: the mistake it prevents is a first-week mistake in every role.",
+    "notes": "Opened via fetch 2026-09-04. Page prints 2026-03-16. Deliberately tagged never-used rather than data-analyst-only: the mistake it prevents is a first-week mistake in every role. Migrated 2026-09-05: Intercom never prints a publication date, so the 2026-03-16 written into `published` was a last-updated date all along. Moved to `updated`; `published` is UNVERIFIED, which is what the page supports.",
     "author": "Anthropic",
     "source": "Claude Help Center",
     "official": true,
@@ -31243,9 +31264,10 @@
     "tier": "previewed",
     "status": "live",
     "time": "under-15min",
-    "checked": "2026-09-04",
+    "checked": "2026-09-05",
     "prerequisites": [],
-    "id": "r-ea64f27605"
+    "id": "r-ea64f27605",
+    "updated": "2026-03-16"
   },
   {
     "title": "Claude is providing incorrect or misleading responses. What's going on?",
@@ -31261,7 +31283,7 @@
     "topics": [
       "safety"
     ],
-    "published": "2026-03-16",
+    "published": "UNVERIFIED",
     "summary": "Anthropic's own account of why Claude gets things wrong - hallucination, stale training data, quotes that are fabricated but sound authoritative - and three things to do about it: do not make Claude your only source on anything that matters, open the sources it cites, and use the thumbs-down.",
     "who_for": "Someone who has just caught Claude being confidently wrong and wants to know whether it is broken or normal. It is normal, and this says so from the publisher.",
     "skip_if": "The remedies put the work on you and stop there - verify, check sources, report. Nothing here about prompting to reduce the risk in the first place, and the fabricated-quote warning deserves more than the sentence it gets. Two hundred and fifty words.",
@@ -31283,7 +31305,7 @@
       "is claude broken when it gets things wrong",
       "how do i stop claude hallucinating"
     ],
-    "notes": "Opened via fetch 2026-09-04. Page prints 2026-03-16. Sits beside the fake-email page in the same collection; the two together are the honest first-week briefing this catalogue was missing at never-used.",
+    "notes": "Opened via fetch 2026-09-04. Page prints 2026-03-16. Sits beside the fake-email page in the same collection; the two together are the honest first-week briefing this catalogue was missing at never-used. Migrated 2026-09-05: Intercom never prints a publication date, so the 2026-03-16 written into `published` was a last-updated date all along. Moved to `updated`; `published` is UNVERIFIED, which is what the page supports.",
     "author": "Anthropic",
     "source": "Claude Help Center",
     "official": true,
@@ -31293,9 +31315,10 @@
     "tier": "previewed",
     "status": "live",
     "time": "under-15min",
-    "checked": "2026-09-04",
+    "checked": "2026-09-05",
     "prerequisites": [],
-    "id": "r-18778e9fde"
+    "id": "r-18778e9fde",
+    "updated": "2026-03-16"
   },
   {
     "title": "When should I use web search, extended thinking, and research?",
@@ -31311,7 +31334,7 @@
     "topics": [
       "chat-prompting"
     ],
-    "published": "2026-06-02",
+    "published": "UNVERIFIED",
     "summary": "Three modes and when each earns its time, with the decision made on tool calls: web search for a fact that takes one or two, extended thinking for reasoning that needs no fresh information, and Research for a question worth five or more calls over one to three minutes.",
     "who_for": "Someone who has found the toggles and does not know which to reach for, and is currently either waiting three minutes for a one-line fact or getting a stale answer to a live question.",
     "skip_if": "It is good on when to use each and thin on when not to - the negative case is barely stated, so you get a preference rather than a rule. Around 500 words, and it assumes you already know where the controls are.",
@@ -31332,7 +31355,7 @@
       "what does extended thinking do",
       "why is claude taking so long"
     ],
-    "notes": "Opened via fetch 2026-09-04. Page prints 2026-06-02. Tagged basic rather than never-used: it assumes the reader has already found the controls, which a first-day reader has not.",
+    "notes": "Opened via fetch 2026-09-04. Page prints 2026-06-02. Tagged basic rather than never-used: it assumes the reader has already found the controls, which a first-day reader has not. Migrated 2026-09-05: Intercom never prints a publication date, so the 2026-06-02 written into `published` was a last-updated date all along. Moved to `updated`; `published` is UNVERIFIED, which is what the page supports.",
     "author": "Anthropic",
     "source": "Claude Help Center",
     "official": true,
@@ -31342,9 +31365,10 @@
     "tier": "previewed",
     "status": "live",
     "time": "under-15min",
-    "checked": "2026-09-04",
+    "checked": "2026-09-05",
     "prerequisites": [],
-    "id": "r-554e94c26c"
+    "id": "r-554e94c26c",
+    "updated": "2026-06-02"
   },
   {
     "title": "How do usage and length limits work?",
@@ -31360,7 +31384,7 @@
     "topics": [
       "chat-prompting"
     ],
-    "published": "2026-07-13",
+    "published": "UNVERIFIED",
     "summary": "The two limits people confuse. Usage limits are a message budget over time and depend on the plan; length limits are the context window, described as working memory, at 200K, 500K or 1M tokens depending on the model. When you hit the first you wait, upgrade or buy credits; when you hit the second you start a new conversation or move to a Project.",
     "who_for": "Someone who has just been cut off mid-task and cannot tell whether they ran out of messages or out of room. Two different walls, two different answers.",
     "skip_if": "It names the token numbers and then sends you to another page for the per-model breakdown, so you will click again. It also gives no way to see how close you are to either limit before you hit it, which is the thing you actually wanted.",
@@ -31382,7 +31406,7 @@
       "what is a context window",
       "how many messages do i get"
     ],
-    "notes": "Opened via fetch 2026-09-04. Page prints 2026-07-13, the most recent of the ten.",
+    "notes": "Opened via fetch 2026-09-04. Page prints 2026-07-13, the most recent of the ten. Migrated 2026-09-05: Intercom never prints a publication date, so the 2026-07-13 written into `published` was a last-updated date all along. Moved to `updated`; `published` is UNVERIFIED, which is what the page supports.",
     "author": "Anthropic",
     "source": "Claude Help Center",
     "official": true,
@@ -31392,9 +31416,10 @@
     "tier": "previewed",
     "status": "live",
     "time": "under-15min",
-    "checked": "2026-09-04",
+    "checked": "2026-09-05",
     "prerequisites": [],
-    "id": "r-05aee12a3b"
+    "id": "r-05aee12a3b",
+    "updated": "2026-07-13"
   },
   {
     "title": "What are artifacts and how do I use them?",
@@ -31433,7 +31458,7 @@
       "how do i download what claude made",
       "can i share an artifact"
     ],
-    "notes": "Opened via fetch 2026-09-04. No date on the page, only 'updated yesterday', so published is UNVERIFIED. Tagged designer as well - the artifact panel is where Claude's visual output lands, and designer|never-used holds only five items.",
+    "notes": "Opened via fetch 2026-09-04. No date on the page, only 'updated yesterday', so published is UNVERIFIED. Tagged designer as well - the artifact panel is where Claude's visual output lands, and designer|never-used holds only five items. 2026-09-05: the weekly parser read a last-updated date of 2026-09-03 out of this page's HTML, which Intercom keeps there while showing a relative phrase to a reader. Recorded as `updated`. `published` stays UNVERIFIED - the page has never given one.",
     "author": "Anthropic",
     "source": "Claude Help Center",
     "official": true,
@@ -31443,9 +31468,10 @@
     "tier": "previewed",
     "status": "live",
     "time": "under-15min",
-    "checked": "2026-09-04",
+    "checked": "2026-09-05",
     "prerequisites": [],
-    "id": "r-de71ac40e6"
+    "id": "r-de71ac40e6",
+    "updated": "2026-09-03"
   },
   {
     "title": "Choose a Claude plan (Help Center)",
@@ -31461,7 +31487,7 @@
     "topics": [
       "chat-prompting"
     ],
-    "published": "2026-05-19",
+    "published": "UNVERIFIED",
     "summary": "The individual plans side by side with prices printed: Free at nothing, Pro at $20 a month or $200 a year, Max 5x at $100, Max 20x at $200, each with a 'best for' line running from occasional use to daily use. Team and Enterprise are named and sent elsewhere.",
     "who_for": "Someone deciding whether they need to pay anything at all, who would rather read the price list from the company than a review with an affiliate link.",
     "skip_if": "A price table, not an argument: it will not tell you whether your particular work needs Pro, only that heavier use costs more. If you have not yet hit a limit on the free plan, you do not need this page yet - go and hit one first.",
@@ -31483,7 +31509,7 @@
       "how much does claude pro cost",
       "what do i get on the free plan"
     ],
-    "notes": "Opened via fetch 2026-09-04. Page prints 2026-05-19. Prices as shown on that date - $20/$200 Pro, $100 Max 5x, $200 Max 20x - and prices are exactly the claim that rots, so the checked date matters more than usual here.",
+    "notes": "Opened via fetch 2026-09-04. Page prints 2026-05-19. Prices as shown on that date - $20/$200 Pro, $100 Max 5x, $200 Max 20x - and prices are exactly the claim that rots, so the checked date matters more than usual here. Migrated 2026-09-05: Intercom never prints a publication date, so the 2026-05-19 written into `published` was a last-updated date all along. Moved to `updated`; `published` is UNVERIFIED, which is what the page supports.",
     "author": "Anthropic",
     "source": "Claude Help Center",
     "official": true,
@@ -31493,9 +31519,10 @@
     "tier": "previewed",
     "status": "live",
     "time": "under-15min",
-    "checked": "2026-09-04",
+    "checked": "2026-09-05",
     "prerequisites": [],
-    "id": "r-f10a9145b0"
+    "id": "r-f10a9145b0",
+    "updated": "2026-05-19"
   },
   {
     "title": "Where can I access Claude? (country availability)",
@@ -31511,7 +31538,7 @@
     "topics": [
       "chat-prompting"
     ],
-    "published": "2026-03-16",
+    "published": "UNVERIFIED",
     "summary": "The list of 180-odd countries and territories where Claude is available. That is the whole page: about 2,600 words, almost all of it the list.",
     "who_for": "Someone outside the US and UK checking whether Claude is available where they live, before they spend an evening learning a tool they cannot sign up for.",
     "skip_if": "The title is wrong for what this is. It promises somewhere to access Claude and delivers geography - if you want to know whether to use the web app, the desktop app or the mobile app, this is the wrong page and 'What interfaces can I use to access Claude?' is the right one. Skip entirely if you are in North America or Western Europe; you are on the list.",
@@ -31530,7 +31557,7 @@
       "can i use claude outside the us",
       "where is claude supported"
     ],
-    "notes": "Opened via fetch 2026-09-04. Page prints 2026-03-16. Kept despite a misleading title because the question is real for a large part of the audience - and the skip_if names the mismatch and points at the page the title implies. This entry is the argument for opening every URL: from the title alone it would have been filed as an interfaces guide.",
+    "notes": "Opened via fetch 2026-09-04. Page prints 2026-03-16. Kept despite a misleading title because the question is real for a large part of the audience - and the skip_if names the mismatch and points at the page the title implies. This entry is the argument for opening every URL: from the title alone it would have been filed as an interfaces guide. Migrated 2026-09-05: Intercom never prints a publication date, so the 2026-03-16 written into `published` was a last-updated date all along. Moved to `updated`; `published` is UNVERIFIED, which is what the page supports.",
     "author": "Anthropic",
     "source": "Claude Help Center",
     "official": true,
@@ -31540,9 +31567,10 @@
     "tier": "previewed",
     "status": "live",
     "time": "under-15min",
-    "checked": "2026-09-04",
+    "checked": "2026-09-05",
     "prerequisites": [],
-    "id": "r-1960b65117"
+    "id": "r-1960b65117",
+    "updated": "2026-03-16"
   },
   {
     "title": "What interfaces can I use to access Claude?",
@@ -31580,7 +31608,7 @@
       "what is the difference between claude.ai and the api",
       "which claude should i install"
     ],
-    "notes": "Opened via fetch 2026-09-04. No date printed, so published is UNVERIFIED. This is the page the country-list article's title implies and does not deliver - the two are cross-referenced in each other's skip_if lines on purpose.",
+    "notes": "Opened via fetch 2026-09-04. No date printed, so published is UNVERIFIED. This is the page the country-list article's title implies and does not deliver - the two are cross-referenced in each other's skip_if lines on purpose. 2026-09-05: the weekly parser read a last-updated date of 2026-08-06 out of this page's HTML, which Intercom keeps there while showing a relative phrase to a reader. Recorded as `updated`. `published` stays UNVERIFIED - the page has never given one.",
     "author": "Anthropic",
     "source": "Claude Help Center",
     "official": true,
@@ -31590,9 +31618,10 @@
     "tier": "previewed",
     "status": "live",
     "time": "under-15min",
-    "checked": "2026-09-04",
+    "checked": "2026-09-05",
     "prerequisites": [],
-    "id": "r-e08547ee31"
+    "id": "r-e08547ee31",
+    "updated": "2026-08-06"
   },
   {
     "title": "Use voice mode",
@@ -31607,7 +31636,7 @@
     "topics": [
       "chat-prompting"
     ],
-    "published": "2026-07-23",
+    "published": "UNVERIFIED",
     "summary": "Where the sound-wave button is on each surface, and what voice mode will and will not do. It speaks and listens in many languages, reaches connected tools like Gmail, Calendar and Slack, and uses the same models as text.",
     "who_for": "Someone who would rather talk than type, and anyone who finds a blank text box harder to start than a conversation.",
     "skip_if": "Three limits worth knowing before you rely on it: voice does not work in Cowork or Claude Code at all, Fable models are unavailable in it, and the page says outright it is built to work best from a phone. Voice also spends the same usage allowance as typing, so it is not a way round a limit.",
@@ -31629,7 +31658,7 @@
       "does voice mode work on desktop",
       "does voice use more of my limit"
     ],
-    "notes": "Opened via fetch 2026-09-04. Page prints 2026-07-23.",
+    "notes": "Opened via fetch 2026-09-04. Page prints 2026-07-23. Migrated 2026-09-05: Intercom never prints a publication date, so the 2026-07-23 written into `published` was a last-updated date all along. Moved to `updated`; `published` is UNVERIFIED, which is what the page supports.",
     "author": "Anthropic",
     "source": "Claude Help Center",
     "official": true,
@@ -31639,9 +31668,10 @@
     "tier": "previewed",
     "status": "live",
     "time": "under-15min",
-    "checked": "2026-09-04",
+    "checked": "2026-09-05",
     "prerequisites": [],
-    "id": "r-d2c1983579"
+    "id": "r-d2c1983579",
+    "updated": "2026-07-23"
   },
   {
     "title": "Troubleshoot Claude error messages",
@@ -31657,7 +31687,7 @@
     "topics": [
       "chat-prompting"
     ],
-    "published": "2026-05-18",
+    "published": "UNVERIFIED",
     "summary": "Five errors and what each one actually means: approaching or hitting the five-hour limit, a message that will exceed the chat's length limit, a login failure, a capacity constraint, and a service incident. Each with the specific move - shrink the input or start a new chat, drop the VPN and clear cookies, wait a few minutes, or check status.claude.com.",
     "who_for": "Someone who has hit a red message and cannot tell whether they did something wrong, ran out of something, or the service is down. Three different problems that look identical from the chair.",
     "skip_if": "It is a lookup table, not an explanation - it tells you what to do and not why the limit works the way it does, so pair it with the usage-limits page if the same error keeps arriving. Nothing here about errors inside Cowork or Claude Code.",
@@ -31680,7 +31710,7 @@
       "is claude down",
       "what does capacity constraints mean"
     ],
-    "notes": "Opened via fetch 2026-09-04. Page prints 2026-05-18. The Troubleshooting sub-section of the Help Center's Claude collection was one of the three named in the source list as the never-used gap; this is its most useful page.",
+    "notes": "Opened via fetch 2026-09-04. Page prints 2026-05-18. The Troubleshooting sub-section of the Help Center's Claude collection was one of the three named in the source list as the never-used gap; this is its most useful page. Migrated 2026-09-05: Intercom never prints a publication date, so the 2026-05-18 written into `published` was a last-updated date all along. Moved to `updated`; `published` is UNVERIFIED, which is what the page supports.",
     "author": "Anthropic",
     "source": "Claude Help Center",
     "official": true,
@@ -31690,9 +31720,10 @@
     "tier": "previewed",
     "status": "live",
     "time": "under-15min",
-    "checked": "2026-09-04",
+    "checked": "2026-09-05",
     "prerequisites": [],
-    "id": "r-11dc1daaed"
+    "id": "r-11dc1daaed",
+    "updated": "2026-05-18"
   },
   {
     "title": "Usage limit best practices",
@@ -31708,7 +31739,7 @@
     "topics": [
       "chat-prompting"
     ],
-    "published": "2026-06-02",
+    "published": "UNVERIFIED",
     "summary": "Eight tactics for making an allowance go further, and they are specific: plan the whole conversation before starting it, batch related questions into one message, lean on chat search and memory instead of re-pasting context, upload documents to a Project once so only new portions count again, edit before sending, and watch Settings then Usage to see what you have spent.",
     "who_for": "Someone hitting their limit before the end of the week who assumes the only answer is to pay more. Several of these are free.",
     "skip_if": "The caching and Project advice is the part that actually moves the number, and it needs a paid plan - chat search and memory are paid features too. On the free tier you get the batching and editing advice and not much else. It also stops at habits and never explains how the five-hour window works.",
@@ -31731,7 +31762,7 @@
       "why do i hit the limit so fast",
       "does a project save my usage"
     ],
-    "notes": "Opened via fetch 2026-09-04. Page prints 2026-06-02. Tagged basic rather than never-used: it assumes a reader who has already hit a limit and knows what a Project is.",
+    "notes": "Opened via fetch 2026-09-04. Page prints 2026-06-02. Tagged basic rather than never-used: it assumes a reader who has already hit a limit and knows what a Project is. Migrated 2026-09-05: Intercom never prints a publication date, so the 2026-06-02 written into `published` was a last-updated date all along. Moved to `updated`; `published` is UNVERIFIED, which is what the page supports.",
     "author": "Anthropic",
     "source": "Claude Help Center",
     "official": true,
@@ -31741,9 +31772,10 @@
     "tier": "previewed",
     "status": "live",
     "time": "under-15min",
-    "checked": "2026-09-04",
+    "checked": "2026-09-05",
     "prerequisites": [],
-    "id": "r-ea6c1824ae"
+    "id": "r-ea6c1824ae",
+    "updated": "2026-06-02"
   },
   {
     "title": "Use Claude Cowork on web, desktop, and mobile",
@@ -31780,7 +31812,7 @@
       "does cowork work on my phone",
       "why can't cowork see my files"
     ],
-    "notes": "Opened via fetch 2026-09-04. No printed date, so UNVERIFIED - the page dates a feature change to 2026-08-19 but does not date itself.",
+    "notes": "Opened via fetch 2026-09-04. No printed date, so UNVERIFIED - the page dates a feature change to 2026-08-19 but does not date itself. 2026-09-05: the weekly parser read a last-updated date of 2026-09-03 out of this page's HTML, which Intercom keeps there while showing a relative phrase to a reader. Recorded as `updated`. `published` stays UNVERIFIED - the page has never given one.",
     "author": "Anthropic",
     "source": "Claude Help Center",
     "official": true,
@@ -31790,9 +31822,10 @@
     "tier": "previewed",
     "status": "live",
     "time": "under-15min",
-    "checked": "2026-09-04",
+    "checked": "2026-09-05",
     "prerequisites": [],
-    "id": "r-4bf690867e"
+    "id": "r-4bf690867e",
+    "updated": "2026-09-03"
   },
   {
     "title": "Let Claude use your computer in Cowork",
@@ -31829,7 +31862,7 @@
       "what can claude click on",
       "how do i stop claude opening an app"
     ],
-    "notes": "Opened via fetch 2026-09-04. No printed date, only 'updated yesterday', so UNVERIFIED. Tagged safety-primary and confident rather than never-used: the capability is not a first-week one and the page assumes Cowork is already running. who_for widened before the merge shipped: the role-breadth check fired on my own entry, because \"anyone\" reads as non-technical while the item is tagged for four roles. Each is now named.",
+    "notes": "Opened via fetch 2026-09-04. No printed date, only 'updated yesterday', so UNVERIFIED. Tagged safety-primary and confident rather than never-used: the capability is not a first-week one and the page assumes Cowork is already running. who_for widened before the merge shipped: the role-breadth check fired on my own entry, because \"anyone\" reads as non-technical while the item is tagged for four roles. Each is now named. 2026-09-05: the weekly parser read a last-updated date of 2026-09-02 out of this page's HTML, which Intercom keeps there while showing a relative phrase to a reader. Recorded as `updated`. `published` stays UNVERIFIED - the page has never given one.",
     "author": "Anthropic",
     "source": "Claude Help Center",
     "official": true,
@@ -31839,9 +31872,10 @@
     "tier": "previewed",
     "status": "live",
     "time": "under-15min",
-    "checked": "2026-09-04",
+    "checked": "2026-09-05",
     "prerequisites": [],
-    "id": "r-e8ef619289"
+    "id": "r-e8ef619289",
+    "updated": "2026-09-02"
   },
   {
     "title": "Claude Design Fundamentals",

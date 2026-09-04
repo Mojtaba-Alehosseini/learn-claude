@@ -83,10 +83,11 @@ def measure(today=None):
     for it in items:
         if it.get("status") != "live" or it.get("tier") == "listed":
             continue
-        age = pc.days_old(it.get("published"), today)
+        age = pc.days_old(pc.effective_date(it), today)
         if age is not None and age > pc.STALE_DAYS:
             excluded.append({"title": it["title"], "url": it["url"],
-                             "published": it.get("published"), "days": age,
+                             "published": it.get("published"),
+                             "updated": it.get("updated"), "days": age,
                              "source": it.get("source", ""),
                              "roles": it.get("roles", []), "level": it.get("level")})
     excluded.sort(key=lambda x: -x["days"])
@@ -114,6 +115,7 @@ def measure(today=None):
         "status": dict(Counter(i["status"] for i in items)),
         "official": sum(1 for i in items if i.get("official")),
         "unverified": sum(1 for i in items if i.get("published") == "UNVERIFIED"),
+        "with_updated": sum(1 for i in items if i.get("updated")),
         "cells": cells,
         "cells_with_picks": len(picks),
         "picks": sum(len(c["picks"]) for c in picks.values()),
@@ -155,6 +157,8 @@ def render(m, pc):
       % (m["official"], m["resources"], pct(m["official"], m["resources"])))
     w("| No publish date (`UNVERIFIED`) | %d of %d — %d%% |"
       % (m["unverified"], m["resources"], pct(m["unverified"], m["resources"])))
+    w("| Carrying an `updated` date | %d of %d — %d%% |"
+      % (m["with_updated"], m["resources"], pct(m["with_updated"], m["resources"])))
     w("")
     w("**How thoroughly we have checked**")
     w("")

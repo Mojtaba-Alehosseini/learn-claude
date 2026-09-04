@@ -20,11 +20,12 @@ able to launder a resource nobody has looked at into a recommendation.
   tier != "listed"            `listed` means nobody has looked at the content. We cannot
                               say "open this first" about something we have not opened.
                               This is the rule that makes the pre-filter non-negotiable
-  not flagged out of date     the same rule the card already prints, imported in spirit
-                              from LC.freshness in assets/js/ui.js: a real `published`
-                              date more than 365 days old. `UNVERIFIED` is NOT stale —
-                              171 rows publish no date at all and the site says so rather
-                              than guessing, so guessing here would contradict the card
+  not flagged out of date     the same rule the card prints, and the same definition as
+                              LC.effectiveDate in assets/js/ui.js: the LATER of
+                              `published` and `updated`, more than 365 days old.
+                              `UNVERIFIED` is NOT stale — hundreds of rows publish no date
+                              at all and the site says so rather than guessing, so
+                              guessing here would contradict the card
 
 ## What this does not do
 
@@ -84,8 +85,33 @@ def check_vocabulary(mod):
                      % (name, missing or "none", extra or "none"))
 
 
+def effective_date(item):
+    """The later of `published` and `updated`, or None if neither is a real date.
+
+    THE freshness rule, and the same one as LC.effectiveDate in assets/js/ui.js - two
+    languages, one definition, so they share a name and a note. Change one, change the
+    other.
+
+    Age is measured from the later date because that is what the flag is asking: might
+    this not match Claude today? A page published in June 2025 and revised in May 2026 is
+    not a year stale. Before `updated` existed, one field was doing two jobs and the
+    answer was wrong in substance while being right about `published`.
+    """
+    p = item.get("published")
+    u = item.get("updated")
+    p = p if p and p != "UNVERIFIED" else None
+    u = u if u and u != "UNVERIFIED" else None
+    if p and u:
+        return max(p, u)
+    return p or u
+
+
 def days_old(published, today):
-    """None when there is no real date. Not zero, and not infinity — unknown."""
+    """None when there is no real date. Not zero, and not infinity — unknown.
+
+    Takes a date string, not an item, so callers that already know which date they mean
+    can use it directly. For the freshness question always pass effective_date(item).
+    """
     if not published or published == "UNVERIFIED":
         return None
     try:
@@ -105,7 +131,7 @@ def is_eligible(item, role, level, today):
         return False
     if item.get("tier") == "listed":
         return False
-    age = days_old(item.get("published"), today)
+    age = days_old(effective_date(item), today)
     if age is not None and age > STALE_DAYS:
         return False
     return True

@@ -282,6 +282,33 @@ Order of information on every card:
 `Skip if:` is set in the serif and carries more visual weight than `For:`. It is the
 reason the site exists.
 
+### Dates on a card
+
+Two lines, and the card only ever shows what it actually knows.
+
+**Published line** — one of:
+
+- `Published 12 Jun 2026` — the page gave a publication date.
+- `Published over a year ago — may not match Claude today` — it did, and it is old.
+  This is the only one that takes the outdated colour.
+- `No publish date given` — the page gave none. Said plainly rather than left blank,
+  because a blank reads as an oversight and this is a fact about the source.
+
+**Updated line** — `Updated 2 Sep 2026`, shown only when the page tells us when it was
+last revised, and never otherwise.
+
+Why two lines rather than one. Intercom-templated pages — the whole Claude Help Center —
+print a last-updated date and never a publication date. Writing that into `published`
+made cards state a publication date the page had never given, and 34 rows were doing
+exactly that until 5 September 2026. `updated` is a real date or absent; it is never
+`UNVERIFIED`, because absent already means "we do not know" and a second spelling of that
+is a second thing to keep in step.
+
+**The outdated flag measures from the later of the two.** A GOV.UK collection published
+in June 2025 and revised in May 2026 is not a year stale, and saying so was wrong in
+substance while being right about `published`. The string lives in `LC.UPDATED_PREFIX`
+in `assets/js/ui.js`; that constant and this section change together.
+
 ### How-we-checked badges
 
 Colour never carries this alone. The word is always present.

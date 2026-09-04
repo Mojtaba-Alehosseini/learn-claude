@@ -624,6 +624,36 @@ def main(argv=None):
 
     # ------------------------------------------------------------ report ----
 
+    # ---- `updated`: a sibling of `published`, never a substitute for it ----------
+    # Added 2026-09-05. `published` is when a resource first appeared; `updated` is when
+    # its page was last revised. Intercom-templated hosts - the whole Claude Help Center -
+    # print only the second, so writing it into `published` made cards state publication
+    # dates the page never gave. Three rules keep the two honest:
+    #
+    #   1. `updated` is a real YYYY-MM-DD or absent. Never "UNVERIFIED": absent already
+    #      means "we do not know", and a second spelling of the same idea is a second
+    #      thing to keep in step.
+    #   2. When both are real, updated >= published. A revision cannot precede the
+    #      publication it revises, so the reverse is a data entry error, not a fact.
+    #   3. `updated` alone is fine - a page can tell you when it was revised and never
+    #      when it appeared, which is exactly the Help Center's shape.
+    for n, item in enumerate(items):
+        u = item.get("updated")
+        if u is None:
+            continue
+        if u == "UNVERIFIED":
+            bad(n, item, "`updated` is 'UNVERIFIED'. Leave the field out instead - "
+                         "absent is the honest empty, and two spellings of 'we do "
+                         "not know' is one too many.")
+            continue
+        if not DATE.match(str(u)):
+            bad(n, item, "`updated` = %r is not YYYY-MM-DD" % (u,))
+            continue
+        p = item.get("published")
+        if p and p != "UNVERIFIED" and DATE.match(str(p)) and u < p:
+            bad(n, item, "`updated` %s is before `published` %s. A revision cannot "
+                         "precede what it revises." % (u, p))
+
     # Both of these are advisory, printed before the verdict and never affecting it.
     report_monotony(items)
 

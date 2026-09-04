@@ -54,6 +54,13 @@
     "agents": "agents", "api": "API", "safety": "limits and safety"
   };
 
+  /* The card's second date line, shown only when a page tells us when it was last
+     revised. "Updated" and not "Published": Intercom-templated pages - the whole Claude
+     Help Center - print a last-updated date and never a publication date, and writing
+     that into `published` would make the card state a publication date that is false.
+     This string and docs/design/ux-copy.md change together. */
+  LC.UPDATED_PREFIX = "Updated ";
+
   /* "Start with these three" on Browse. Every reader-facing string for the picks
      block lives here and in docs/design/ux-copy.md together, per the no-drift rule.
      The heading is count-dependent because one cell (a single-publisher pool) holds
@@ -115,25 +122,56 @@
    * maintained continuously and simply does not print one. Saying nothing would let a
    * reader assume it is current; inventing a date would be worse. So we say we do not
    * know, and lean on `checked`, which we always know because we did it ourselves. */
+  /* THE freshness rule. `published` is when a resource first appeared; `updated` is when
+     its page was last revised, and only ever a real date - absent is the honest empty,
+     never "UNVERIFIED".
+
+     Age is measured from the LATER of the two, because that is the question the flag is
+     actually asking: might this not match Claude today? A GOV.UK collection published in
+     June 2025 and revised in May 2026 is not a year stale, and flagging it as such was
+     wrong in substance while being right about `published`. One field was doing two jobs.
+
+     scripts/pick-candidates.py has the same rule in Python, as `effective_date`, and its
+     comment points back here. They cannot share code across two languages, so they share
+     a name and a note instead. Change one, change the other. */
+  LC.effectiveDate = function (item) {
+    var p = item.published && item.published !== "UNVERIFIED" ? item.published : null;
+    var u = item.updated && item.updated !== "UNVERIFIED" ? item.updated : null;
+    if (p && u) { return u > p ? u : p; }
+    return p || u || null;
+  };
+
   LC.freshness = function (item) {
-    var out = { checked: "Checked " + LC.fmtDate(item.checked), note: "", cls: "" };
+    var out = { checked: "Checked " + LC.fmtDate(item.checked), note: "", cls: "",
+                updatedNote: "" };
     if (item.status === "dead") {
       out.note = "This link no longer works";
       out.cls = "flag-dead";
       return out;
     }
+
     var pub = LC.fmtDate(item.published);
-    if (!pub) {
+    var upd = LC.fmtDate(item.updated);
+    if (upd) { out.updatedNote = LC.UPDATED_PREFIX + upd; }
+
+    var eff = LC.effectiveDate(item);
+    if (!eff) {
       out.note = "No publish date given";
       out.cls = "";
       return out;
     }
-    var age = (Date.now() - Date.parse(item.published)) / 86400000;
+
+    var age = (Date.now() - Date.parse(eff)) / 86400000;
     if (age > 365) {
       out.note = "Published over a year ago — may not match Claude today";
       out.cls = "flag-outdated";
-    } else {
+    } else if (pub) {
       out.note = "Published " + pub;
+    } else {
+      /* No publication date, but the page says when it was last revised. Saying nothing
+         would imply we know nothing; saying "Published" would state a date the page
+         never gave. So the card says neither, and the updated line carries the fact. */
+      out.note = "No publish date given";
     }
     return out;
   };
@@ -324,6 +362,7 @@
         '<div class="card-foot">' +
           '<span>' + LC.esc(fresh.checked) + '</span>' +
           (fresh.note ? '<span class="' + fresh.cls + '">' + LC.esc(fresh.note) + '</span>' : '') +
+          (fresh.updatedNote ? '<span>' + LC.esc(fresh.updatedNote) + '</span>' : '') +
         '</div>' +
       '</article>';
   };
