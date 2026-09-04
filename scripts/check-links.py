@@ -149,8 +149,32 @@ _META_RE = re.compile(
 _META_RE_REV = re.compile(
     r'<meta[^>]+content\s*=\s*["\']([^"\']+)["\'][^>]*'
     r'(?:property|name|itemprop)\s*=\s*["\']([^"\']+)["\']', re.I)
+# Two shapes, because publishers disagree. ISO is the common one; claude.com's Webflow
+# JSON-LD writes "Oct 24, 2024" instead, and an ISO-only pattern silently reported "no
+# metadata" for every Anthropic blog post.
 _JSONLD_RE = re.compile(
     r'"(datePublished|dateModified)"\s*:\s*"([0-9]{4}-[0-9]{2}-[0-9]{2})', re.I)
+_JSONLD_TEXT_RE = re.compile(
+    r'"(datePublished|dateModified)"\s*:\s*"([A-Z][a-z]{2,8}\.?\s+[0-9]{1,2},\s*[0-9]{4})"',
+    re.I)
+
+_MONTH_ABBR = {}
+for _i, _full in enumerate(
+        ["january", "february", "march", "april", "may", "june", "july", "august",
+         "september", "october", "november", "december"], start=1):
+    _MONTH_ABBR[_full] = _i
+    _MONTH_ABBR[_full[:3]] = _i
+
+
+def _from_text_date(v):
+    """"Oct 24, 2024" -> "2024-10-24". None if it is not that shape."""
+    m = re.match(r"([A-Za-z]+)\.?\s+([0-9]{1,2}),\s*([0-9]{4})", (v or "").strip())
+    if not m:
+        return None
+    mon = _MONTH_ABBR.get(m.group(1).lower())
+    if not mon:
+        return None
+    return "%04d-%02d-%02d" % (int(m.group(3)), mon, int(m.group(2)))
 _TIME_RE = re.compile(
     r'<time[^>]+datetime\s*=\s*["\']([0-9]{4}-[0-9]{2}-[0-9]{2})', re.I)
 _ISO_HEAD = re.compile(r'^([0-9]{4}-[0-9]{2}-[0-9]{2})')
@@ -175,7 +199,7 @@ def page_dates(html):
         for a, b in rx.findall(html):
             key, val = (a, b) if rx is _META_RE else (b, a)
             k = key.strip()
-            d = _iso(val)
+            d = _iso(val) or _from_text_date(val)
             if not d:
                 continue
             if not pub and any(k.lower() == x.lower() for x in META_PUBLISHED):
@@ -187,6 +211,14 @@ def page_dates(html):
             pub, _ = d, ev.append("json-ld datePublished=%s" % d)
         elif k.lower() == "datemodified" and not mod:
             mod, _ = d, ev.append("json-ld dateModified=%s" % d)
+    for k, raw in _JSONLD_TEXT_RE.findall(html):
+        d = _from_text_date(raw)
+        if not d:
+            continue
+        if k.lower() == "datepublished" and not pub:
+            pub, _ = d, ev.append('json-ld datePublished="%s" -> %s' % (raw, d))
+        elif k.lower() == "datemodified" and not mod:
+            mod, _ = d, ev.append('json-ld dateModified="%s" -> %s' % (raw, d))
     if not pub and not mod:
         m = _TIME_RE.search(html)
         if m:

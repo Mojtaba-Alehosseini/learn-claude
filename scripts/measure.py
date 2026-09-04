@@ -116,6 +116,7 @@ def measure(today=None):
         "official": sum(1 for i in items if i.get("official")),
         "unverified": sum(1 for i in items if i.get("published") == "UNVERIFIED"),
         "with_updated": sum(1 for i in items if i.get("updated")),
+        "date_source": dict(Counter(i.get("date_source") or "(none)" for i in items)),
         "cells": cells,
         "cells_with_picks": len(picks),
         "picks": sum(len(c["picks"]) for c in picks.values()),
@@ -159,6 +160,19 @@ def render(m, pc):
       % (m["unverified"], m["resources"], pct(m["unverified"], m["resources"])))
     w("| Carrying an `updated` date | %d of %d — %d%% |"
       % (m["with_updated"], m["resources"], pct(m["with_updated"], m["resources"])))
+    w("")
+    w("**Where every date came from.** `date_source` is required on any row carrying a")
+    w("real date; a row with no date needs none, because \"we do not know\" is the whole")
+    w("statement.")
+    w("")
+    w("| how we know | count |")
+    w("|---|---|")
+    for key, label in (("printed", "a person read it on the page"),
+                       ("metadata", "parsed from JSON-LD or a meta tag"),
+                       ("upload", "a video platform's upload date"),
+                       ("intercom", "the Help Center's template"),
+                       ("(none)", "no real date — `UNVERIFIED`")):
+        w("| `%s` — %s | %d |" % (key, label, m["date_source"].get(key, 0)))
     w("")
     w("**How thoroughly we have checked**")
     w("")
