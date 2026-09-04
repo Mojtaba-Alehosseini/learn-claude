@@ -391,6 +391,90 @@ def report_monotony(items):
     print()
 
 
+# Words and digits that count as a number when they sit next to a unit this site
+# computes. "one" and "a" are deliberately absent - "one real course", "a week of
+# practice" are prose, not arithmetic.
+NUMBER_WORDS = ("two", "three", "four", "five", "six", "seven", "eight", "nine", "ten",
+                "eleven", "twelve", "fifteen", "twenty", "thirty", "forty", "fifty",
+                "sixty", "ninety", "hundred")
+
+# The units the build already computes and prints. A typed figure beside one of these is
+# a second copy of a generated number.
+COUNTED_UNITS = ("minute", "minutes", "hour", "hours", "day", "days", "week", "weeks",
+                 "step", "steps", "resource", "resources", "publisher", "publishers",
+                 "item", "items", "cell", "cells", "percent", "%")
+
+_NUM_NEAR_UNIT = re.compile(
+    r"(?<![\w-])(\d+(?:\.\d+)?|%s)\s+(?:[a-z-]+\s+){0,2}?(%s)\b"
+    % ("|".join(NUMBER_WORDS), "|".join(u for u in COUNTED_UNITS if u != "%")),
+    re.I)
+_PCT = re.compile(r"(?<![\w-])(\d+(?:\.\d+)?)\s*%")
+
+
+def typed_numbers(text):
+    """Every figure in `text` that sits next to a unit the build computes."""
+    hits = []
+    for m in _NUM_NEAR_UNIT.finditer(text or ""):
+        hits.append(m.group(0).strip())
+    for m in _PCT.finditer(text or ""):
+        hits.append(m.group(0).strip())
+    return hits
+
+
+def report_typed_numbers(paths_path, ui_js_path):
+    """Print every typed figure in reader-facing prose. Warning, never an error.
+
+    Written 2026-09-05 because the rule alone was not enough. `measure.py` was built to
+    end hand-typed counts on 4 September; on 5 September a path intro said "about ninety
+    minutes" against a build that computes 81 and prints it two lines above, and four
+    other intros carried the same shape. The rule existed, it was written down, and it
+    did not fire - because prose in a build script did not feel like documentation.
+
+    Some of these are legitimate: "steps 1, 2, 4, 5 and 6 take fifteen minutes each" is
+    an argument about shape that no computed total can make. So this prints and never
+    fails. The point is only that a typed figure cannot sit there unseen.
+    """
+    found = []
+    try:
+        paths = json.load(open(paths_path, encoding="utf-8"))
+    except Exception:                                    # noqa: BLE001
+        paths = []
+    for p in paths:
+        for field, text in [("intro", p.get("intro", ""))]:
+            for h in typed_numbers(text):
+                found.append(("paths.json", "%s.%s" % (p.get("id"), field), h))
+        for n, st in enumerate(p.get("steps", []), 1):
+            for h in typed_numbers(st.get("why", "")):
+                found.append(("paths.json", "%s.step%d.why" % (p.get("id"), n), h))
+
+    try:
+        src = open(ui_js_path, encoding="utf-8").read()
+    except Exception:                                    # noqa: BLE001
+        src = ""
+    # No newlines inside the match: the first version allowed them, so a single "match"
+    # ran from one quote through several lines of code and comments to the next quote,
+    # and reported a figure from a comment as if it were a UI string. Comments are not
+    # reader-facing; strings are.
+    for m in re.finditer(r'"((?:[^"\\\n]|\\.){8,200})"', src):
+        text = m.group(1)
+        if not re.search(r"[a-z]{3}\s+[a-z]{3}", text, re.I):
+            continue                                     # not a sentence
+        for h in typed_numbers(text):
+            found.append(("ui.js", text[:38] + "...", h))
+
+    if not found:
+        print("Typed numbers in reader-facing prose: none.")
+        print()
+        return
+    print("Typed numbers in reader-facing prose (%d). Printed, never enforced - some are"
+          % len(found))
+    print("legitimate. The build computes steps, durations, costs and every count in")
+    print("STATUS.md; a figure typed beside one of those is a second copy waiting to rot:")
+    for where, field, hit in found:
+        print("  %-11s %-34s %s" % (where, field[:34], hit))
+    print()
+
+
 def norm_title(t):
     return re.sub(r"[^a-z0-9]+", " ", str(t or "").lower()).strip()
 
@@ -704,6 +788,7 @@ def main(argv=None):
 
     # Both of these are advisory, printed before the verdict and never affecting it.
     report_monotony(items)
+    report_typed_numbers(paths_path, UI_JS)
 
     # See the docstring on role_breadth_warnings for why this can only ever be a warning.
     breadth = role_breadth_warnings(items)

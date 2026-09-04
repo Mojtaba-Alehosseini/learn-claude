@@ -114,7 +114,8 @@
 
   /* Three date states, and the third is the common one.
    *
-   * 166 of 347 resources publish no date at all, measured 2026-08-27 with
+   * most of the catalogue publishes no date at all - the current figure is in
+   * docs/STATUS.md, generated on every build. Measured once with
    *   python3 -c "import json;d=json.load(open('data/items.json',encoding='utf-8'));print(sum(1 for i in d if i.get('published')=='UNVERIFIED'),'of',len(d))"
    * The figure that stood here said 176 of 353 and had been wrong for some time; a bare
    * number in a comment rots silently, so this one carries the date it was taken and the
@@ -275,7 +276,8 @@
      and offered no way to tell anyone: zero mailto: and zero issue links across all five
      pages. The person who finds a dead link is looking at the dead link, so the report
      starts from there with the details already filled in. Sending them somewhere else to
-     describe which of 347 resources they meant loses most reports before they are made.
+     describe which of several hundred resources they meant loses most reports
+     before they are made.
      Quiet by design. This is not a call to action, it is an escape hatch for the one
      reader in a hundred who spots something. */
   var REPO = "https://github.com/Mojtaba-Alehosseini/learn-claude";

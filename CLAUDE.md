@@ -29,9 +29,9 @@ actually fits them instead of drowning in options.
 - Shell hygiene: never put a regex or a backslash through a heredoc — write scripts to a
   file and run the file. Commit messages via `git commit -F`. Never background a command
   that backgrounds itself; confirm a job started before reporting it running.
-- Numbers in documentation are generated, never typed. `scripts/measure.py` writes
-  `docs/STATUS.md` on every build; docs point at it. Hand-written figures rotted twice in
-  three rounds.
+- Numbers anywhere a reader or I will read them — docs, path intros, UI strings, commit
+  messages that state a count — are generated or measured, never typed.
+  `scripts/measure.py` writes `docs/STATUS.md` on every build; docs point at it.
 
 ## Tech defaults (unless we decide otherwise)
 - Static site, no backend. Data lives in a JSON/YAML file, site reads from it.
