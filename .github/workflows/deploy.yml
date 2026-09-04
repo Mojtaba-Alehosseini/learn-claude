@@ -50,6 +50,12 @@ jobs:
       - name: Check the validator still catches its faults
         run: python3 scripts/test-validate-catalogue.py
 
+      # measure.py is the file every document quotes, so a wrong number there becomes a
+      # wrong number everywhere at once. This checks its own output: types, and that
+      # every partition sums to the population it partitions.
+      - name: Check the measurements describe the catalogue
+        run: python3 scripts/test-measure.py
+
       # The picks are a committed model judgment, so they rot two ways: a stale pool
       # (warned, dated, ships) and a dead or ineligible pick (fails - "open this one
       # first" about a page nobody can open is the site lying in its own voice).

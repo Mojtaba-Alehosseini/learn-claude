@@ -37,6 +37,7 @@ echo "6/6  measured status, and the freshness exclusions"
 # picks pools: that exclusion used to be silent, and a wrong date once hid a live
 # resource from every pool for ten months without one step going red.
 python3 scripts/measure.py --status
+python3 scripts/test-measure.py > /dev/null
 
 echo
 echo "Done. Open index.html."
