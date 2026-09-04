@@ -215,8 +215,15 @@ def load_allowed_titles(path):
 # generous: this feeds a WARNING, and a generous list means fewer false alarms in a check
 # nobody is obliged to act on.
 ROLE_WORDS = {
+    # "anyone", "everyone" and "someone" are deliberately NOT here. They were, and on
+    # 2026-09-04 they made the check fire on six freshly written entries whose who_for
+    # opened "Anyone who..." - deliberately role-neutral copy for material that genuinely
+    # serves every tagged role. That is the opposite of the fault this check exists for.
+    # The Puckett fault is a who_for naming ONE persona under many tags; a who_for naming
+    # NO persona is not mis-tagged, it is general. With the universal words removed such
+    # an item matches zero roles and falls out of the len==1 test on its own.
     "non-technical":   ("non-technical", "non technical", "not a coder", "no coding",
-                        "non-developer", "non-coder", "anyone", "everyone", "normal people"),
+                        "non-developer", "non-coder", "normal people"),
     "student":         ("student", "phd", "grad", "undergrad", "revision", "coursework"),
     "researcher":      ("research", "researcher", "academic", "scientist", "postdoc",
                         "clinician", "faculty", "literature", "paper"),

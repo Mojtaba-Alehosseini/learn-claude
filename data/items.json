@@ -31215,5 +31215,795 @@
       "how do i get different audience versions of an impact report"
     ],
     "id": "r-8657bce390"
+  },
+  {
+    "title": "Claude is producing links that don't work and falsely claiming that it has sent emails or produced external documents",
+    "url": "https://support.claude.com/en/articles/8241188-claude-is-producing-links-that-don-t-work-and-falsely-claiming-that-it-has-sent-emails-or-produced-external-documents-what-s-going-on",
+    "roles": [
+      "non-technical",
+      "business-founder",
+      "student",
+      "writer-marketer",
+      "teacher"
+    ],
+    "level": "never-used",
+    "topics": [
+      "safety"
+    ],
+    "published": "2026-03-16",
+    "summary": "Claude will sometimes say it has emailed someone, saved a document or produced a working link when it has done none of those things. Anthropic's own page for it, stating the cause plainly: Claude has no access to any tool that is not explicitly connected - not email, not a word processor, not file transfer - and it invents the capability while trying to be helpful.",
+    "who_for": "Anyone about to trust Claude with something it says it has already done. The single most expensive first-week mistake, in the publisher's own words rather than a forum thread's.",
+    "skip_if": "It explains the behaviour and does not tell you how to spot it in the moment, which is the part you actually need: if Claude reports finishing a task you never watched it do, check the thing itself. Also read it as a floor rather than a ceiling - connectors change what Claude really can reach, and this page is about the case where nothing is connected.",
+    "teaches": [
+      "recognise when Claude claims a capability it does not have",
+      "know that Claude cannot email, save or transfer files unless a tool is connected",
+      "check the artefact rather than the assurance"
+    ],
+    "keywords": [
+      "claude says it sent an email",
+      "fake link",
+      "claude lied",
+      "did not send",
+      "hallucinated capability",
+      "claude claims it made a file"
+    ],
+    "questions": [
+      "did claude actually send that email",
+      "why are claude's links broken",
+      "claude said it saved a document but it didn't"
+    ],
+    "notes": "Opened via fetch 2026-09-04, not read by a person. Page prints 2026-03-16. Found by walking the Help Center's Claude collection (79 articles) rather than by search - the collection walk is in research/2026-09-04-thin-cell-source-list.md. Title corrected 2026-09-04: it had been re-authored as \"Claude claims it sent an email or made a file. It did not.\" - a better sentence and not the page's. The title is now the page's own H1 with only the trailing \"What's going on?\" cut, which is a trim rather than a rewrite.",
+    "author": "Anthropic",
+    "source": "Claude Help Center",
+    "official": true,
+    "language": "en",
+    "format": "docs",
+    "cost": "free",
+    "tier": "previewed",
+    "status": "live",
+    "time": "under-15min",
+    "checked": "2026-09-04",
+    "prerequisites": [],
+    "id": "r-b8a6d9b34b"
+  },
+  {
+    "title": "What are some things I can use Claude for? (Help Center)",
+    "url": "https://support.claude.com/en/articles/7996845-what-are-some-things-i-can-use-claude-for",
+    "roles": [
+      "non-technical",
+      "student",
+      "business-founder",
+      "writer-marketer"
+    ],
+    "level": "never-used",
+    "topics": [
+      "chat-prompting"
+    ],
+    "published": "2026-03-16",
+    "summary": "Seven things Claude is for, with examples concrete enough to copy: writing in a named style, learning a topic (pasta carbonara, a Python library, 20th-century Uruguayan history), summarising, code, arguing a point back at you, translation, and reading an image. About 250 words.",
+    "who_for": "Someone who has opened Claude, seen an empty box, and closed it again. This is the answer to the blank page, from Anthropic rather than from a listicle.",
+    "skip_if": "Two hundred and fifty words and no depth on any of the seven - if you already know what you want to ask, it has nothing for you. It is also older than the product: written before Cowork, Skills and connectors, so it describes a chat box and not the thing Claude is now.",
+    "teaches": [
+      "name seven concrete things to try in a first session",
+      "see the shape of a useful request rather than a vague one"
+    ],
+    "keywords": [
+      "what can claude do",
+      "what is claude for",
+      "claude use cases",
+      "first things to try",
+      "claude examples for beginners"
+    ],
+    "questions": [
+      "what can i actually use claude for",
+      "what should i ask claude first",
+      "is claude only for coding"
+    ],
+    "notes": "Opened via fetch 2026-09-04. Page prints 2026-03-16, which is why the skip_if says it predates Cowork and Skills - the age is the caveat, and the card carries the outdated flag on its own once it passes a year.",
+    "author": "Anthropic",
+    "source": "Claude Help Center",
+    "official": true,
+    "language": "en",
+    "format": "docs",
+    "cost": "free",
+    "tier": "previewed",
+    "status": "live",
+    "time": "under-15min",
+    "checked": "2026-09-04",
+    "prerequisites": [],
+    "id": "r-b9f15cfee0"
+  },
+  {
+    "title": "How up-to-date is Claude's training data?",
+    "url": "https://support.claude.com/en/articles/8114494-how-up-to-date-is-claude-s-training-data",
+    "roles": [
+      "non-technical",
+      "student",
+      "researcher",
+      "business-founder",
+      "writer-marketer"
+    ],
+    "level": "never-used",
+    "topics": [
+      "safety"
+    ],
+    "published": "UNVERIFIED",
+    "summary": "The knowledge cutoff per model, in a table - January 2026 for the current family, back to August 2023 for Opus 3 - with the plain statement that a model may not know about anything after its own date.",
+    "who_for": "Anyone about to ask Claude about something recent and take the answer at face value. The one fact that explains a whole class of confident wrong answers.",
+    "skip_if": "It states the limit and offers no way round it: web search, which is the actual answer, is never mentioned. Read it for the dates, then go and turn search on. The page also carries no visible publication date - it says only 'updated this week' - so the cutoffs it lists are current on the day you read it and not before.",
+    "teaches": [
+      "know that each model has a fixed knowledge cutoff",
+      "match a model to its cutoff date",
+      "expect confident answers about events after the cutoff to be wrong"
+    ],
+    "keywords": [
+      "training cutoff",
+      "knowledge cutoff",
+      "how current is claude",
+      "does claude know about",
+      "claude out of date"
+    ],
+    "questions": [
+      "does claude know about recent events",
+      "what is claude's training cutoff",
+      "why doesn't claude know about this news"
+    ],
+    "notes": "Opened via fetch 2026-09-04. The page shows no date, only 'updated this week', so published is UNVERIFIED rather than guessed. Its gap - never mentioning web search - is the reason the skip_if sends the reader onward.",
+    "author": "Anthropic",
+    "source": "Claude Help Center",
+    "official": true,
+    "language": "en",
+    "format": "docs",
+    "cost": "free",
+    "tier": "previewed",
+    "status": "live",
+    "time": "under-15min",
+    "checked": "2026-09-04",
+    "prerequisites": [],
+    "id": "r-e15adda7c4"
+  },
+  {
+    "title": "How does Claude handle mathematical equations and calculations?",
+    "url": "https://support.claude.com/en/articles/10366421-how-does-claude-handle-mathematical-equations-and-calculations",
+    "roles": [
+      "data-analyst",
+      "student",
+      "researcher",
+      "business-founder",
+      "non-technical"
+    ],
+    "level": "never-used",
+    "topics": [
+      "safety"
+    ],
+    "published": "2026-03-16",
+    "summary": "Claude can work through equations and arithmetic, and Anthropic's own page says complex or mission-critical calculations should be verified with specialist software or by hand.",
+    "who_for": "Anyone who is about to let Claude do a sum that matters - an invoice, a dose, a budget line - and wants the publisher's position before they do.",
+    "skip_if": "It is a caution and not a method. It does not tell you to switch on code execution, which is the thing that actually makes Claude compute rather than predict, and it does not show you how to check an answer. Take the warning and get the technique elsewhere.",
+    "teaches": [
+      "treat Claude's arithmetic as a draft, not a result",
+      "know that the publisher itself asks you to verify anything mission-critical"
+    ],
+    "keywords": [
+      "claude maths",
+      "claude arithmetic wrong",
+      "can claude do calculations",
+      "claude bad at maths",
+      "verify claude's numbers"
+    ],
+    "questions": [
+      "can i trust claude with numbers",
+      "does claude get maths wrong",
+      "should i check claude's calculations"
+    ],
+    "notes": "Opened via fetch 2026-09-04. Page prints 2026-03-16. Deliberately tagged never-used rather than data-analyst-only: the mistake it prevents is a first-week mistake in every role.",
+    "author": "Anthropic",
+    "source": "Claude Help Center",
+    "official": true,
+    "language": "en",
+    "format": "docs",
+    "cost": "free",
+    "tier": "previewed",
+    "status": "live",
+    "time": "under-15min",
+    "checked": "2026-09-04",
+    "prerequisites": [],
+    "id": "r-ea64f27605"
+  },
+  {
+    "title": "Claude is providing incorrect or misleading responses. What's going on?",
+    "url": "https://support.claude.com/en/articles/8525154-claude-is-providing-incorrect-or-misleading-responses-what-s-going-on",
+    "roles": [
+      "non-technical",
+      "student",
+      "researcher",
+      "teacher",
+      "business-founder"
+    ],
+    "level": "never-used",
+    "topics": [
+      "safety"
+    ],
+    "published": "2026-03-16",
+    "summary": "Anthropic's own account of why Claude gets things wrong - hallucination, stale training data, quotes that are fabricated but sound authoritative - and three things to do about it: do not make Claude your only source on anything that matters, open the sources it cites, and use the thumbs-down.",
+    "who_for": "Someone who has just caught Claude being confidently wrong and wants to know whether it is broken or normal. It is normal, and this says so from the publisher.",
+    "skip_if": "The remedies put the work on you and stop there - verify, check sources, report. Nothing here about prompting to reduce the risk in the first place, and the fabricated-quote warning deserves more than the sentence it gets. Two hundred and fifty words.",
+    "teaches": [
+      "know that a confident wrong answer is an expected failure, not a fault",
+      "open the source behind a citation before repeating it",
+      "avoid using Claude as a single source on anything consequential"
+    ],
+    "keywords": [
+      "claude wrong",
+      "hallucination",
+      "made up quote",
+      "claude lies",
+      "incorrect answers",
+      "fabricated citation"
+    ],
+    "questions": [
+      "why does claude make things up",
+      "is claude broken when it gets things wrong",
+      "how do i stop claude hallucinating"
+    ],
+    "notes": "Opened via fetch 2026-09-04. Page prints 2026-03-16. Sits beside the fake-email page in the same collection; the two together are the honest first-week briefing this catalogue was missing at never-used.",
+    "author": "Anthropic",
+    "source": "Claude Help Center",
+    "official": true,
+    "language": "en",
+    "format": "docs",
+    "cost": "free",
+    "tier": "previewed",
+    "status": "live",
+    "time": "under-15min",
+    "checked": "2026-09-04",
+    "prerequisites": [],
+    "id": "r-18778e9fde"
+  },
+  {
+    "title": "When should I use web search, extended thinking, and research?",
+    "url": "https://support.claude.com/en/articles/11095361-when-should-i-use-web-search-extended-thinking-and-research",
+    "roles": [
+      "non-technical",
+      "student",
+      "researcher",
+      "business-founder",
+      "writer-marketer"
+    ],
+    "level": "basic",
+    "topics": [
+      "chat-prompting"
+    ],
+    "published": "2026-06-02",
+    "summary": "Three modes and when each earns its time, with the decision made on tool calls: web search for a fact that takes one or two, extended thinking for reasoning that needs no fresh information, and Research for a question worth five or more calls over one to three minutes.",
+    "who_for": "Someone who has found the toggles and does not know which to reach for, and is currently either waiting three minutes for a one-line fact or getting a stale answer to a live question.",
+    "skip_if": "It is good on when to use each and thin on when not to - the negative case is barely stated, so you get a preference rather than a rule. Around 500 words, and it assumes you already know where the controls are.",
+    "teaches": [
+      "choose between web search, extended thinking and Research for a given question",
+      "use expected tool calls as the criterion rather than guessing",
+      "stop paying three minutes for a one-call answer"
+    ],
+    "keywords": [
+      "web search vs research",
+      "extended thinking",
+      "which mode",
+      "deep research claude",
+      "when to use research"
+    ],
+    "questions": [
+      "should i use research or web search",
+      "what does extended thinking do",
+      "why is claude taking so long"
+    ],
+    "notes": "Opened via fetch 2026-09-04. Page prints 2026-06-02. Tagged basic rather than never-used: it assumes the reader has already found the controls, which a first-day reader has not.",
+    "author": "Anthropic",
+    "source": "Claude Help Center",
+    "official": true,
+    "language": "en",
+    "format": "docs",
+    "cost": "free",
+    "tier": "previewed",
+    "status": "live",
+    "time": "under-15min",
+    "checked": "2026-09-04",
+    "prerequisites": [],
+    "id": "r-554e94c26c"
+  },
+  {
+    "title": "How do usage and length limits work?",
+    "url": "https://support.claude.com/en/articles/11647753-how-do-usage-and-length-limits-work",
+    "roles": [
+      "non-technical",
+      "student",
+      "business-founder",
+      "writer-marketer",
+      "pm"
+    ],
+    "level": "never-used",
+    "topics": [
+      "chat-prompting"
+    ],
+    "published": "2026-07-13",
+    "summary": "The two limits people confuse. Usage limits are a message budget over time and depend on the plan; length limits are the context window, described as working memory, at 200K, 500K or 1M tokens depending on the model. When you hit the first you wait, upgrade or buy credits; when you hit the second you start a new conversation or move to a Project.",
+    "who_for": "Someone who has just been cut off mid-task and cannot tell whether they ran out of messages or out of room. Two different walls, two different answers.",
+    "skip_if": "It names the token numbers and then sends you to another page for the per-model breakdown, so you will click again. It also gives no way to see how close you are to either limit before you hit it, which is the thing you actually wanted.",
+    "teaches": [
+      "tell a usage limit apart from a context-length limit",
+      "know the three context window sizes and what they mean in practice",
+      "respond to each limit correctly - wait or upgrade, versus start fresh"
+    ],
+    "keywords": [
+      "usage limit",
+      "message limit",
+      "context window",
+      "conversation too long",
+      "ran out of messages",
+      "claude cut me off"
+    ],
+    "questions": [
+      "why did claude stop replying",
+      "what is a context window",
+      "how many messages do i get"
+    ],
+    "notes": "Opened via fetch 2026-09-04. Page prints 2026-07-13, the most recent of the ten.",
+    "author": "Anthropic",
+    "source": "Claude Help Center",
+    "official": true,
+    "language": "en",
+    "format": "docs",
+    "cost": "free",
+    "tier": "previewed",
+    "status": "live",
+    "time": "under-15min",
+    "checked": "2026-09-04",
+    "prerequisites": [],
+    "id": "r-05aee12a3b"
+  },
+  {
+    "title": "What are artifacts and how do I use them?",
+    "url": "https://support.claude.com/en/articles/9487310-what-are-artifacts-and-how-do-i-use-them",
+    "roles": [
+      "non-technical",
+      "student",
+      "teacher",
+      "business-founder",
+      "writer-marketer",
+      "designer"
+    ],
+    "level": "never-used",
+    "topics": [
+      "chat-prompting"
+    ],
+    "published": "UNVERIFIED",
+    "summary": "What the side panel is. Claude opens an Artifact when the thing it is making is substantial and stands alone - roughly fifteen lines or more, and something you are likely to edit or reuse. Documents, code, sites, SVG, React. You can edit in place by asking, download the file, keep several at once, publish one, or build one that calls Claude itself.",
+    "who_for": "Someone who watched a panel open beside the chat and does not know what it is, whether it is saved, or how to get the file out.",
+    "skip_if": "It runs from 'what is this panel' to publishing an app with persistent storage and MCP in one page, so the last third is aimed at somebody two levels further on. Read the first half. The page also carries no publication date, only 'updated yesterday', so treat the feature list as current on the day you read it.",
+    "teaches": [
+      "recognise when and why Claude opens an Artifact",
+      "edit an Artifact by asking rather than by copying it out",
+      "download or publish what Claude made"
+    ],
+    "keywords": [
+      "artifacts",
+      "side panel",
+      "download from claude",
+      "publish artifact",
+      "what is that window",
+      "edit in place"
+    ],
+    "questions": [
+      "what is the panel next to the chat",
+      "how do i download what claude made",
+      "can i share an artifact"
+    ],
+    "notes": "Opened via fetch 2026-09-04. No date on the page, only 'updated yesterday', so published is UNVERIFIED. Tagged designer as well - the artifact panel is where Claude's visual output lands, and designer|never-used holds only five items.",
+    "author": "Anthropic",
+    "source": "Claude Help Center",
+    "official": true,
+    "language": "en",
+    "format": "docs",
+    "cost": "free",
+    "tier": "previewed",
+    "status": "live",
+    "time": "under-15min",
+    "checked": "2026-09-04",
+    "prerequisites": [],
+    "id": "r-de71ac40e6"
+  },
+  {
+    "title": "Choose a Claude plan (Help Center)",
+    "url": "https://support.claude.com/en/articles/11049762-choose-a-claude-plan",
+    "roles": [
+      "non-technical",
+      "student",
+      "business-founder",
+      "writer-marketer",
+      "pm"
+    ],
+    "level": "never-used",
+    "topics": [
+      "chat-prompting"
+    ],
+    "published": "2026-05-19",
+    "summary": "The individual plans side by side with prices printed: Free at nothing, Pro at $20 a month or $200 a year, Max 5x at $100, Max 20x at $200, each with a 'best for' line running from occasional use to daily use. Team and Enterprise are named and sent elsewhere.",
+    "who_for": "Someone deciding whether they need to pay anything at all, who would rather read the price list from the company than a review with an affiliate link.",
+    "skip_if": "A price table, not an argument: it will not tell you whether your particular work needs Pro, only that heavier use costs more. If you have not yet hit a limit on the free plan, you do not need this page yet - go and hit one first.",
+    "teaches": [
+      "see what each Claude plan costs",
+      "match a plan to how heavily you expect to use it",
+      "know that Team and Enterprise are priced separately"
+    ],
+    "keywords": [
+      "claude pricing",
+      "how much is claude pro",
+      "free vs pro",
+      "claude plans",
+      "is claude free",
+      "max plan cost"
+    ],
+    "questions": [
+      "do i need to pay for claude",
+      "how much does claude pro cost",
+      "what do i get on the free plan"
+    ],
+    "notes": "Opened via fetch 2026-09-04. Page prints 2026-05-19. Prices as shown on that date - $20/$200 Pro, $100 Max 5x, $200 Max 20x - and prices are exactly the claim that rots, so the checked date matters more than usual here.",
+    "author": "Anthropic",
+    "source": "Claude Help Center",
+    "official": true,
+    "language": "en",
+    "format": "docs",
+    "cost": "free",
+    "tier": "previewed",
+    "status": "live",
+    "time": "under-15min",
+    "checked": "2026-09-04",
+    "prerequisites": [],
+    "id": "r-f10a9145b0"
+  },
+  {
+    "title": "Where can I access Claude? (country availability)",
+    "url": "https://support.claude.com/en/articles/8461763-where-can-i-access-claude",
+    "roles": [
+      "non-technical",
+      "student",
+      "business-founder",
+      "teacher",
+      "researcher"
+    ],
+    "level": "never-used",
+    "topics": [
+      "chat-prompting"
+    ],
+    "published": "2026-03-16",
+    "summary": "The list of 180-odd countries and territories where Claude is available. That is the whole page: about 2,600 words, almost all of it the list.",
+    "who_for": "Someone outside the US and UK checking whether Claude is available where they live, before they spend an evening learning a tool they cannot sign up for.",
+    "skip_if": "The title is wrong for what this is. It promises somewhere to access Claude and delivers geography - if you want to know whether to use the web app, the desktop app or the mobile app, this is the wrong page and 'What interfaces can I use to access Claude?' is the right one. Skip entirely if you are in North America or Western Europe; you are on the list.",
+    "teaches": [
+      "check whether Claude is available in a given country"
+    ],
+    "keywords": [
+      "claude availability",
+      "which countries",
+      "is claude available in",
+      "claude country list",
+      "can i use claude here"
+    ],
+    "questions": [
+      "is claude available in my country",
+      "can i use claude outside the us",
+      "where is claude supported"
+    ],
+    "notes": "Opened via fetch 2026-09-04. Page prints 2026-03-16. Kept despite a misleading title because the question is real for a large part of the audience - and the skip_if names the mismatch and points at the page the title implies. This entry is the argument for opening every URL: from the title alone it would have been filed as an interfaces guide.",
+    "author": "Anthropic",
+    "source": "Claude Help Center",
+    "official": true,
+    "language": "en",
+    "format": "docs",
+    "cost": "free",
+    "tier": "previewed",
+    "status": "live",
+    "time": "under-15min",
+    "checked": "2026-09-04",
+    "prerequisites": [],
+    "id": "r-1960b65117"
+  },
+  {
+    "title": "What interfaces can I use to access Claude?",
+    "url": "https://support.claude.com/en/articles/8114487-what-interfaces-can-i-use-to-access-claude",
+    "roles": [
+      "non-technical",
+      "student",
+      "business-founder",
+      "teacher",
+      "writer-marketer"
+    ],
+    "level": "never-used",
+    "topics": [
+      "chat-prompting"
+    ],
+    "published": "UNVERIFIED",
+    "summary": "The five places Claude runs: chat at claude.ai, the iOS app, the Android app, Claude Desktop, and the Console and API for developers. A list, and little else.",
+    "who_for": "Someone who has heard Claude mentioned in three different shapes - a website, a phone app, something in a terminal - and wants to know which one people mean.",
+    "skip_if": "It names the five and describes none of them, so it settles what exists and not which to open. If you want the differences that matter - what only the desktop app can do, what the API is actually for - you will need another page. It also carries no date at all, so treat the list as current on the day you read it.",
+    "teaches": [
+      "name the five surfaces Claude is available on",
+      "tell the consumer apps apart from the developer Console"
+    ],
+    "keywords": [
+      "claude interfaces",
+      "desktop app",
+      "claude.ai",
+      "mobile app",
+      "console",
+      "where do i use claude",
+      "which claude app"
+    ],
+    "questions": [
+      "is there a claude desktop app",
+      "what is the difference between claude.ai and the api",
+      "which claude should i install"
+    ],
+    "notes": "Opened via fetch 2026-09-04. No date printed, so published is UNVERIFIED. This is the page the country-list article's title implies and does not deliver - the two are cross-referenced in each other's skip_if lines on purpose.",
+    "author": "Anthropic",
+    "source": "Claude Help Center",
+    "official": true,
+    "language": "en",
+    "format": "docs",
+    "cost": "free",
+    "tier": "previewed",
+    "status": "live",
+    "time": "under-15min",
+    "checked": "2026-09-04",
+    "prerequisites": [],
+    "id": "r-e08547ee31"
+  },
+  {
+    "title": "Use voice mode",
+    "url": "https://support.claude.com/en/articles/11101966-use-voice-mode",
+    "roles": [
+      "non-technical",
+      "student",
+      "business-founder",
+      "writer-marketer"
+    ],
+    "level": "never-used",
+    "topics": [
+      "chat-prompting"
+    ],
+    "published": "2026-07-23",
+    "summary": "Where the sound-wave button is on each surface, and what voice mode will and will not do. It speaks and listens in many languages, reaches connected tools like Gmail, Calendar and Slack, and uses the same models as text.",
+    "who_for": "Someone who would rather talk than type, and anyone who finds a blank text box harder to start than a conversation.",
+    "skip_if": "Three limits worth knowing before you rely on it: voice does not work in Cowork or Claude Code at all, Fable models are unavailable in it, and the page says outright it is built to work best from a phone. Voice also spends the same usage allowance as typing, so it is not a way round a limit.",
+    "teaches": [
+      "start a spoken conversation with Claude on phone, web or desktop",
+      "know which surfaces and models voice mode does not cover",
+      "expect voice to draw on the same usage allowance as text"
+    ],
+    "keywords": [
+      "voice mode",
+      "talk to claude",
+      "speak to claude",
+      "dictation",
+      "hands free",
+      "claude voice"
+    ],
+    "questions": [
+      "can i talk to claude out loud",
+      "does voice mode work on desktop",
+      "does voice use more of my limit"
+    ],
+    "notes": "Opened via fetch 2026-09-04. Page prints 2026-07-23.",
+    "author": "Anthropic",
+    "source": "Claude Help Center",
+    "official": true,
+    "language": "en",
+    "format": "docs",
+    "cost": "free",
+    "tier": "previewed",
+    "status": "live",
+    "time": "under-15min",
+    "checked": "2026-09-04",
+    "prerequisites": [],
+    "id": "r-d2c1983579"
+  },
+  {
+    "title": "Troubleshoot Claude error messages",
+    "url": "https://support.claude.com/en/articles/12466728-troubleshoot-claude-error-messages",
+    "roles": [
+      "non-technical",
+      "student",
+      "business-founder",
+      "writer-marketer",
+      "teacher"
+    ],
+    "level": "never-used",
+    "topics": [
+      "chat-prompting"
+    ],
+    "published": "2026-05-18",
+    "summary": "Five errors and what each one actually means: approaching or hitting the five-hour limit, a message that will exceed the chat's length limit, a login failure, a capacity constraint, and a service incident. Each with the specific move - shrink the input or start a new chat, drop the VPN and clear cookies, wait a few minutes, or check status.claude.com.",
+    "who_for": "Someone who has hit a red message and cannot tell whether they did something wrong, ran out of something, or the service is down. Three different problems that look identical from the chair.",
+    "skip_if": "It is a lookup table, not an explanation - it tells you what to do and not why the limit works the way it does, so pair it with the usage-limits page if the same error keeps arriving. Nothing here about errors inside Cowork or Claude Code.",
+    "teaches": [
+      "tell a usage error apart from a length error apart from an outage",
+      "act on each of the five common Claude errors",
+      "find the live status page when Claude is down"
+    ],
+    "keywords": [
+      "claude error",
+      "error message",
+      "capacity constraints",
+      "cannot log in",
+      "limit reached",
+      "claude not working",
+      "status page"
+    ],
+    "questions": [
+      "why is claude showing an error",
+      "is claude down",
+      "what does capacity constraints mean"
+    ],
+    "notes": "Opened via fetch 2026-09-04. Page prints 2026-05-18. The Troubleshooting sub-section of the Help Center's Claude collection was one of the three named in the source list as the never-used gap; this is its most useful page.",
+    "author": "Anthropic",
+    "source": "Claude Help Center",
+    "official": true,
+    "language": "en",
+    "format": "docs",
+    "cost": "free",
+    "tier": "previewed",
+    "status": "live",
+    "time": "under-15min",
+    "checked": "2026-09-04",
+    "prerequisites": [],
+    "id": "r-11dc1daaed"
+  },
+  {
+    "title": "Usage limit best practices",
+    "url": "https://support.claude.com/en/articles/9797557-usage-limit-best-practices",
+    "roles": [
+      "non-technical",
+      "student",
+      "business-founder",
+      "writer-marketer",
+      "pm"
+    ],
+    "level": "basic",
+    "topics": [
+      "chat-prompting"
+    ],
+    "published": "2026-06-02",
+    "summary": "Eight tactics for making an allowance go further, and they are specific: plan the whole conversation before starting it, batch related questions into one message, lean on chat search and memory instead of re-pasting context, upload documents to a Project once so only new portions count again, edit before sending, and watch Settings then Usage to see what you have spent.",
+    "who_for": "Someone hitting their limit before the end of the week who assumes the only answer is to pay more. Several of these are free.",
+    "skip_if": "The caching and Project advice is the part that actually moves the number, and it needs a paid plan - chat search and memory are paid features too. On the free tier you get the batching and editing advice and not much else. It also stops at habits and never explains how the five-hour window works.",
+    "teaches": [
+      "batch related questions into one message rather than several",
+      "use a Project's knowledge base so repeated context stops costing",
+      "find your own usage figures in Settings"
+    ],
+    "keywords": [
+      "usage limits",
+      "make claude last longer",
+      "hitting limits",
+      "save messages",
+      "caching",
+      "five hour limit",
+      "usage tips"
+    ],
+    "questions": [
+      "how do i stop running out of messages",
+      "why do i hit the limit so fast",
+      "does a project save my usage"
+    ],
+    "notes": "Opened via fetch 2026-09-04. Page prints 2026-06-02. Tagged basic rather than never-used: it assumes a reader who has already hit a limit and knows what a Project is.",
+    "author": "Anthropic",
+    "source": "Claude Help Center",
+    "official": true,
+    "language": "en",
+    "format": "docs",
+    "cost": "free",
+    "tier": "previewed",
+    "status": "live",
+    "time": "under-15min",
+    "checked": "2026-09-04",
+    "prerequisites": [],
+    "id": "r-ea6c1824ae"
+  },
+  {
+    "title": "Use Claude Cowork on web, desktop, and mobile",
+    "url": "https://support.claude.com/en/articles/15520349-use-claude-cowork-on-web-desktop-and-mobile",
+    "roles": [
+      "non-technical",
+      "business-founder",
+      "pm",
+      "writer-marketer"
+    ],
+    "level": "basic",
+    "topics": [
+      "cowork"
+    ],
+    "published": "UNVERIFIED",
+    "summary": "Where Cowork actually runs, with a table. Cloud work carries on with the laptop shut and syncs across devices; local file access, browser use and computer use are full only on the desktop app and partial elsewhere, and partial means the desktop app has to stay open.",
+    "who_for": "Someone deciding whether to install the desktop app or stay in the browser, before building a workflow on a capability the browser only half has.",
+    "skip_if": "The comparison table is the page - everything else is short. If you are not choosing between surfaces it has nothing for you. It also carries no printed date and refers to a change 'rolling out gradually this week', so the table is a snapshot and the ticks may have moved by the time you read it.",
+    "teaches": [
+      "know which Cowork capabilities need the desktop app",
+      "understand that partial support means the desktop app must stay open",
+      "expect cloud tasks to continue when the laptop is closed"
+    ],
+    "keywords": [
+      "cowork desktop",
+      "cowork web",
+      "cowork mobile",
+      "which surface",
+      "does cowork need the desktop app",
+      "local file access"
+    ],
+    "questions": [
+      "can i use cowork in a browser",
+      "does cowork work on my phone",
+      "why can't cowork see my files"
+    ],
+    "notes": "Opened via fetch 2026-09-04. No printed date, so UNVERIFIED - the page dates a feature change to 2026-08-19 but does not date itself.",
+    "author": "Anthropic",
+    "source": "Claude Help Center",
+    "official": true,
+    "language": "en",
+    "format": "docs",
+    "cost": "free",
+    "tier": "previewed",
+    "status": "live",
+    "time": "under-15min",
+    "checked": "2026-09-04",
+    "prerequisites": [],
+    "id": "r-4bf690867e"
+  },
+  {
+    "title": "Let Claude use your computer in Cowork",
+    "url": "https://support.claude.com/en/articles/14128542-let-claude-use-your-computer-in-cowork",
+    "roles": [
+      "non-technical",
+      "business-founder",
+      "pm",
+      "data-analyst"
+    ],
+    "level": "confident",
+    "topics": [
+      "safety"
+    ],
+    "published": "UNVERIFIED",
+    "summary": "Claude clicking and typing in your own applications: what it can reach, the per-application permission prompt, the categories blocked by default (trading and cryptocurrency), and the blocklist you can write yourself.",
+    "who_for": "Anyone about to hand Claude the mouse - an owner automating a tool that has no API, an analyst pulling from a system with no connector, a product manager driving their own app to test it. The permission model and the refusals are the point of reading it first rather than after.",
+    "skip_if": "Read the caution before the capability. Anthropic's own words: computer use has no sandbox, no safeguards are perfect, and they do not recommend it on apps holding healthcare, financial or other personal records - including other people's. If you were planning to point it at your accounts, this page is telling you not to. No printed date either, only 'updated yesterday'.",
+    "teaches": [
+      "know what Claude can and cannot reach when controlling your computer",
+      "set a blocklist before granting access",
+      "keep computer use away from financial, medical and legal applications"
+    ],
+    "keywords": [
+      "computer use",
+      "let claude use my computer",
+      "screen control",
+      "cowork permissions",
+      "blocklist",
+      "is computer use safe"
+    ],
+    "questions": [
+      "is it safe to let claude control my computer",
+      "what can claude click on",
+      "how do i stop claude opening an app"
+    ],
+    "notes": "Opened via fetch 2026-09-04. No printed date, only 'updated yesterday', so UNVERIFIED. Tagged safety-primary and confident rather than never-used: the capability is not a first-week one and the page assumes Cowork is already running. who_for widened before the merge shipped: the role-breadth check fired on my own entry, because \"anyone\" reads as non-technical while the item is tagged for four roles. Each is now named.",
+    "author": "Anthropic",
+    "source": "Claude Help Center",
+    "official": true,
+    "language": "en",
+    "format": "docs",
+    "cost": "free",
+    "tier": "previewed",
+    "status": "live",
+    "time": "under-15min",
+    "checked": "2026-09-04",
+    "prerequisites": [],
+    "id": "r-e8ef619289"
   }
 ]
