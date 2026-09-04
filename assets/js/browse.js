@@ -274,17 +274,28 @@
              '<p class="pick-reason">' + LC.esc(p.reason) + '</p></div>';
     }).join("");
 
+    /* Two things here are about what this sounds like rather than what it looks like,
+       both found by reading the block out in the accessibility pass on 2026-09-01.
+
+       aria-labelledby, not aria-label: the label used to repeat the heading word for
+       word, so a screen reader said "Start with these three, region" and then "Start
+       with these three, heading level 2". Pointing the region at its own heading says
+       it once.
+
+       The "Everything else" heading closes the section rather than sitting inside it.
+       It labels the results list, and the results list is NOT in this section - so
+       inside, it told a screen reader that everything else was part of the picks. */
     el.picks.innerHTML =
-      '<section class="picks" aria-label="' + LC.esc(heading) + '">' +
+      '<section class="picks" aria-labelledby="picksHeading">' +
         '<div class="picks-head">' +
-          '<h2 class="h2">' + LC.esc(heading) + '</h2>' +
+          '<h2 class="h2" id="picksHeading">' + LC.esc(heading) + '</h2>' +
           '<span class="picks-meta">' + LC.esc(LC.PICKS_UI.by) + ' · ' +
             LC.esc(LC.fmtDate(cell.picked_on)) + '</span>' +
         '</div>' +
         '<div class="card-list">' + cards + '</div>' +
-        '<h2 class="h2 picks-rest">' + LC.esc(LC.PICKS_UI.rest) + ' (' +
-          (out.length - shown.length) + ')</h2>' +
-      '</section>';
+      '</section>' +
+      '<h2 class="h2 picks-rest">' + LC.esc(LC.PICKS_UI.rest) + ' (' +
+        (out.length - shown.length) + ')</h2>';
     return picked;
   }
 

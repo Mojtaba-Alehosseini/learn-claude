@@ -298,11 +298,21 @@
                'assets/icons/formats/' + LC.esc(item.format) +
                '-alpha.png\') center/contain no-repeat"></span>';
 
+    /* An <article> holding ONE link, not one <a> wrapped round everything.
+       Measured 2026-09-01 on browse: with the whole card as the anchor, each link's
+       accessible name was every word on the card - 70 to 123 words, up to 689
+       characters. A screen reader announced the tier, the publisher, three chips, the
+       who_for, the whole skip_if and both dates as the NAME of one link, for every card
+       in the list. The name is now the title alone; everything else stays readable as
+       content. The whole card is still one click target: .card-title a::after spreads
+       the link over the card, which is the same pattern the path step cards already use
+       (see .sp-title a::after). Nothing moves on screen. */
     return '' +
-      '<a class="card" href="' + LC.esc(LC.href(item)) + '">' +
+      '<article class="card">' +
         '<div class="card-top">' +
           '<div>' + LC.badge(item.tier) +
-            '<div class="card-title">' + LC.esc(item.title) + '</div>' +
+            '<div class="card-title"><a href="' + LC.esc(LC.href(item)) + '">' +
+              LC.esc(item.title) + '</a></div>' +
             '<div class="card-source meta">' + LC.publisher(item) + author + '</div>' +
           '</div>' + icon +
         '</div>' +
@@ -315,7 +325,7 @@
           '<span>' + LC.esc(fresh.checked) + '</span>' +
           (fresh.note ? '<span class="' + fresh.cls + '">' + LC.esc(fresh.note) + '</span>' : '') +
         '</div>' +
-      '</a>';
+      '</article>';
   };
 
   /* --------------------------------------------------------------- data ---- */

@@ -323,6 +323,10 @@ button, .btn, .nav-link, .filter-option { min-height: var(--tap-min); }
 
 .card {
   display: block;
+  /* The card holds one link (the title) whose ::after covers the card, so the whole
+     tile stays clickable while the link's accessible name stays the title. That overlay
+     is positioned against this box. See the note on LC.card in assets/js/ui.js. */
+  position: relative;
   background: var(--surface-card);
   border: var(--hairline) solid var(--border);
   border-radius: var(--radius-card);
@@ -333,6 +337,19 @@ button, .btn, .nav-link, .filter-option { min-height: var(--tap-min); }
               background var(--dur-fast) var(--ease-out);
 }
 .card:hover { border-color: var(--border-strong); background: var(--surface-feature); color: inherit; }
+
+/* The title carries the link. It must not look like one - the card is the affordance. */
+.card-title a { color: inherit; text-decoration: none; }
+.card-title a::after {
+  content: ""; position: absolute; inset: 0;
+  border-radius: var(--radius-card);
+}
+/* Focus rings the card, not the title's words - the same decision as .sp-card, and
+   scoped to the title link so a second link inside a card could never ring the card. */
+.card-title a:focus-visible { outline: none; }
+.card:has(.card-title a:focus-visible) {
+  outline: var(--focus-ring); outline-offset: var(--focus-offset);
+}
 
 .card-list { display: flex; flex-direction: column; gap: var(--space-16); }
 
@@ -632,7 +649,11 @@ button, .btn, .nav-link, .filter-option { min-height: var(--tap-min); }
 }
 /* Focus must ring the card, not the four words of the title. */
 .sp-title a:focus-visible { outline: none; }
-.sp-card:has(a:focus-visible) {
+/* Scoped to the title link 2026-09-01. `:has(a:focus-visible)` also matched the "Start
+   with this" button inside the card, so focusing the CTA drew two rings at once - one
+   round the button and one round the whole card - and a keyboard user could not tell
+   which thing was focused. */
+.sp-card:has(.sp-title a:focus-visible) {
   outline: var(--focus-ring); outline-offset: var(--focus-offset);
 }
 /* Anything that must stay separately clickable sits above the overlay. */
