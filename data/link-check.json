@@ -1,10 +1,10 @@
 {
   "when": "2026-09-04",
-  "checked": 637,
+  "checked": 635,
   "counts": {
-    "ok": 607,
+    "ok": 612,
     "blocked": 21,
-    "moved": 9
+    "wobbly": 2
   },
   "drift": [
     {
@@ -17,7 +17,8 @@
       "page_date": "2026-09-02",
       "page_says": "September 2, 2026",
       "stored": "UNVERIFIED",
-      "drift": "stored UNVERIFIED, page prints 2026-09-02"
+      "drift": "UNVERIFIED here; page prints 2026-09-02 (last-updated)",
+      "drift_class": "unverified-page-has-date"
     },
     {
       "id": "r-a6cb8cede5",
@@ -29,7 +30,8 @@
       "page_date": "2026-08-18",
       "page_says": "August 18, 2026",
       "stored": "UNVERIFIED",
-      "drift": "stored UNVERIFIED, page prints 2026-08-18"
+      "drift": "UNVERIFIED here; page prints 2026-08-18 (last-updated)",
+      "drift_class": "unverified-page-has-date"
     },
     {
       "id": "r-dbd5a58a87",
@@ -41,7 +43,8 @@
       "page_date": "2026-03-16",
       "page_says": "March 16, 2026",
       "stored": "UNVERIFIED",
-      "drift": "stored UNVERIFIED, page prints 2026-03-16"
+      "drift": "UNVERIFIED here; page prints 2026-03-16 (last-updated)",
+      "drift_class": "unverified-page-has-date"
     },
     {
       "id": "r-762ee8eaae",
@@ -53,7 +56,8 @@
       "page_date": "2026-08-06",
       "page_says": "August 6, 2026",
       "stored": "UNVERIFIED",
-      "drift": "stored UNVERIFIED, page prints 2026-08-06"
+      "drift": "UNVERIFIED here; page prints 2026-08-06 (last-updated)",
+      "drift_class": "unverified-page-has-date"
     },
     {
       "id": "r-84558d3fb4",
@@ -65,7 +69,8 @@
       "page_date": "2026-08-06",
       "page_says": "August 6, 2026",
       "stored": "UNVERIFIED",
-      "drift": "stored UNVERIFIED, page prints 2026-08-06"
+      "drift": "UNVERIFIED here; page prints 2026-08-06 (last-updated)",
+      "drift_class": "unverified-page-has-date"
     },
     {
       "id": "r-e686e58ab4",
@@ -77,7 +82,8 @@
       "page_date": "2026-08-26",
       "page_says": "August 26, 2026",
       "stored": "UNVERIFIED",
-      "drift": "stored UNVERIFIED, page prints 2026-08-26"
+      "drift": "UNVERIFIED here; page prints 2026-08-26 (last-updated)",
+      "drift_class": "unverified-page-has-date"
     },
     {
       "id": "r-5aa9ca06c5",
@@ -89,7 +95,8 @@
       "page_date": "2026-08-28",
       "page_says": "August 28, 2026",
       "stored": "UNVERIFIED",
-      "drift": "stored UNVERIFIED, page prints 2026-08-28"
+      "drift": "UNVERIFIED here; page prints 2026-08-28 (last-updated)",
+      "drift_class": "unverified-page-has-date"
     },
     {
       "id": "r-657d7f5084",
@@ -101,7 +108,8 @@
       "page_date": "2026-08-19",
       "page_says": "August 19, 2026",
       "stored": "UNVERIFIED",
-      "drift": "stored UNVERIFIED, page prints 2026-08-19"
+      "drift": "UNVERIFIED here; page prints 2026-08-19 (last-updated)",
+      "drift_class": "unverified-page-has-date"
     },
     {
       "id": "r-6bf4b71e18",
@@ -113,7 +121,8 @@
       "page_date": "2026-09-03",
       "page_says": "September 3, 2026",
       "stored": "UNVERIFIED",
-      "drift": "stored UNVERIFIED, page prints 2026-09-03"
+      "drift": "UNVERIFIED here; page prints 2026-09-03 (last-updated)",
+      "drift_class": "unverified-page-has-date"
     },
     {
       "id": "r-36de89a1ed",
@@ -125,7 +134,8 @@
       "page_date": "2026-09-03",
       "page_says": "September 3, 2026",
       "stored": "UNVERIFIED",
-      "drift": "stored UNVERIFIED, page prints 2026-09-03"
+      "drift": "UNVERIFIED here; page prints 2026-09-03 (last-updated)",
+      "drift_class": "unverified-page-has-date"
     },
     {
       "id": "r-e15adda7c4",
@@ -137,7 +147,8 @@
       "page_date": "2026-09-01",
       "page_says": "September 1, 2026",
       "stored": "UNVERIFIED",
-      "drift": "stored UNVERIFIED, page prints 2026-09-01"
+      "drift": "UNVERIFIED here; page prints 2026-09-01 (last-updated)",
+      "drift_class": "unverified-page-has-date"
     },
     {
       "id": "r-de71ac40e6",
@@ -149,7 +160,8 @@
       "page_date": "2026-09-03",
       "page_says": "September 3, 2026",
       "stored": "UNVERIFIED",
-      "drift": "stored UNVERIFIED, page prints 2026-09-03"
+      "drift": "UNVERIFIED here; page prints 2026-09-03 (last-updated)",
+      "drift_class": "unverified-page-has-date"
     },
     {
       "id": "r-e08547ee31",
@@ -161,7 +173,8 @@
       "page_date": "2026-08-06",
       "page_says": "August 6, 2026",
       "stored": "UNVERIFIED",
-      "drift": "stored UNVERIFIED, page prints 2026-08-06"
+      "drift": "UNVERIFIED here; page prints 2026-08-06 (last-updated)",
+      "drift_class": "unverified-page-has-date"
     },
     {
       "id": "r-4bf690867e",
@@ -173,7 +186,8 @@
       "page_date": "2026-09-03",
       "page_says": "September 3, 2026",
       "stored": "UNVERIFIED",
-      "drift": "stored UNVERIFIED, page prints 2026-09-03"
+      "drift": "UNVERIFIED here; page prints 2026-09-03 (last-updated)",
+      "drift_class": "unverified-page-has-date"
     },
     {
       "id": "r-e8ef619289",
@@ -185,7 +199,8 @@
       "page_date": "2026-09-02",
       "page_says": "September 2, 2026",
       "stored": "UNVERIFIED",
-      "drift": "stored UNVERIFIED, page prints 2026-09-02"
+      "drift": "UNVERIFIED here; page prints 2026-09-02 (last-updated)",
+      "drift_class": "unverified-page-has-date"
     }
   ],
   "blocked": [
@@ -341,7 +356,8 @@
       "page_date": "2026-09-02",
       "page_says": "September 2, 2026",
       "stored": "UNVERIFIED",
-      "drift": "stored UNVERIFIED, page prints 2026-09-02"
+      "drift": "UNVERIFIED here; page prints 2026-09-02 (last-updated)",
+      "drift_class": "unverified-page-has-date"
     },
     {
       "id": "r-eb3bbaf117",
@@ -361,7 +377,8 @@
       "page_date": "2026-08-18",
       "page_says": "August 18, 2026",
       "stored": "UNVERIFIED",
-      "drift": "stored UNVERIFIED, page prints 2026-08-18"
+      "drift": "UNVERIFIED here; page prints 2026-08-18 (last-updated)",
+      "drift_class": "unverified-page-has-date"
     },
     {
       "id": "r-dbd5a58a87",
@@ -373,7 +390,8 @@
       "page_date": "2026-03-16",
       "page_says": "March 16, 2026",
       "stored": "UNVERIFIED",
-      "drift": "stored UNVERIFIED, page prints 2026-03-16"
+      "drift": "UNVERIFIED here; page prints 2026-03-16 (last-updated)",
+      "drift_class": "unverified-page-has-date"
     },
     {
       "id": "r-0927578f60",
@@ -681,7 +699,8 @@
       "page_date": "2026-08-06",
       "page_says": "August 6, 2026",
       "stored": "UNVERIFIED",
-      "drift": "stored UNVERIFIED, page prints 2026-08-06"
+      "drift": "UNVERIFIED here; page prints 2026-08-06 (last-updated)",
+      "drift_class": "unverified-page-has-date"
     },
     {
       "id": "r-84558d3fb4",
@@ -693,7 +712,8 @@
       "page_date": "2026-08-06",
       "page_says": "August 6, 2026",
       "stored": "UNVERIFIED",
-      "drift": "stored UNVERIFIED, page prints 2026-08-06"
+      "drift": "UNVERIFIED here; page prints 2026-08-06 (last-updated)",
+      "drift_class": "unverified-page-has-date"
     },
     {
       "id": "r-71acc8e921",
@@ -830,14 +850,6 @@
       "host": "designsystemscollective.com",
       "verdict": "blocked",
       "detail": "403"
-    },
-    {
-      "id": "r-68ffabe46c",
-      "title": "Meaghan Choi - Designing Claude Code (and what's coming next)",
-      "url": "https://podcasts.apple.com/us/podcast/meaghan-choi-designing-claude-code-and-whats-coming-next/id1686414242",
-      "host": "podcasts.apple.com",
-      "verdict": "moved",
-      "detail": "301 -> https://podcasts.apple.com/us/podcast/dive-club/id1686414242"
     },
     {
       "id": "r-fb8dc53be9",
@@ -1120,12 +1132,12 @@
       "detail": "200"
     },
     {
-      "id": "r-2a823a729f",
+      "id": "r-3ce8106ea6",
       "title": "Building agents with the Claude Agent SDK",
-      "url": "https://www.anthropic.com/engineering/building-agents-with-the-claude-agent-sdk",
-      "host": "anthropic.com",
-      "verdict": "moved",
-      "detail": "308 -> https://claude.com/blog/building-agents-with-the-claude-agent-sdk"
+      "url": "https://claude.com/blog/building-agents-with-the-claude-agent-sdk",
+      "host": "claude.com",
+      "verdict": "ok",
+      "detail": "200"
     },
     {
       "id": "r-d20ed293a5",
@@ -1258,10 +1270,10 @@
     {
       "id": "r-56fd40ae95",
       "title": "How to Use Claude Code: Complete Tutorial for Product Managers",
-      "url": "https://www.aakashg.com/cloud-code-tutorial-for-pm",
+      "url": "https://www.aakashg.com/cloud-code-tutorial-for-pm/",
       "host": "aakashg.com",
-      "verdict": "moved",
-      "detail": "301 -> https://www.aakashg.com/cloud-code-tutorial-for-pm/"
+      "verdict": "ok",
+      "detail": "200"
     },
     {
       "id": "r-f21dc84635",
@@ -1288,12 +1300,12 @@
       "detail": "200"
     },
     {
-      "id": "r-f22cc5c8d7",
+      "id": "r-289f30bcca",
       "title": "Craft a Professional AI Developer Setup (Cursor & Claude Code)",
-      "url": "https://frontendmasters.com/courses/pro-ai",
-      "host": "frontendmasters.com",
-      "verdict": "moved",
-      "detail": "301 -> http://master.dev/courses/pro-ai/"
+      "url": "https://master.dev/courses/pro-ai/",
+      "host": "master.dev",
+      "verdict": "ok",
+      "detail": "200"
     },
     {
       "id": "r-efa0486eba",
@@ -1314,10 +1326,10 @@
     {
       "id": "r-aa3fb9b26c",
       "title": "A Guide to Claude Code 2.0 and getting better at using coding agents",
-      "url": "https://sankalp.bearblog.dev/my-experience-with-claude-code-20-and-how-to-get-better-at-using-coding-agents",
+      "url": "https://sankalp.bearblog.dev/my-experience-with-claude-code-20-and-how-to-get-better-at-using-coding-agents/",
       "host": "sankalp.bearblog.dev",
-      "verdict": "moved",
-      "detail": "301 -> https://sankalp.bearblog.dev/my-experience-with-claude-code-20-and-how-to-get-better-at-using-coding-agents/"
+      "verdict": "ok",
+      "detail": "200"
     },
     {
       "id": "r-bb9cebd574",
@@ -1330,10 +1342,10 @@
     {
       "id": "r-cd019b4ce7",
       "title": "Building a Claude Project for Teaching & Learning (recording)",
-      "url": "https://learning.northeastern.edu/ai-recordings-building-a-claude-project-for-teaching-learning",
+      "url": "https://learning.northeastern.edu/ai-recordings-building-a-claude-project-for-teaching-learning/",
       "host": "learning.northeastern.edu",
-      "verdict": "moved",
-      "detail": "301 -> https://learning.northeastern.edu/ai-recordings-building-a-claude-project-for-teaching-learning/"
+      "verdict": "ok",
+      "detail": "200"
     },
     {
       "id": "r-59f8585925",
@@ -1353,7 +1365,8 @@
       "page_date": "2026-08-26",
       "page_says": "August 26, 2026",
       "stored": "UNVERIFIED",
-      "drift": "stored UNVERIFIED, page prints 2026-08-26"
+      "drift": "UNVERIFIED here; page prints 2026-08-26 (last-updated)",
+      "drift_class": "unverified-page-has-date"
     },
     {
       "id": "r-55183ae43b",
@@ -1711,12 +1724,12 @@
       "detail": "200"
     },
     {
-      "id": "r-34348eade8",
+      "id": "r-0a09df91fe",
       "title": "Anthropic Academy — Courses hub",
-      "url": "https://claude.com/resources/courses",
-      "host": "claude.com",
-      "verdict": "moved",
-      "detail": "301 -> https://academy.claude.com/courses"
+      "url": "https://academy.claude.com/courses",
+      "host": "academy.claude.com",
+      "verdict": "ok",
+      "detail": "200"
     },
     {
       "id": "r-202ab388df",
@@ -1933,10 +1946,10 @@
     {
       "id": "r-97422c936b",
       "title": "Using Claude Learning Mode to Study",
-      "url": "https://learning.northeastern.edu/ai-student-guides-using-claude-learning-mode-to-study",
+      "url": "https://learning.northeastern.edu/ai-student-guides-using-claude-learning-mode-to-study/",
       "host": "learning.northeastern.edu",
-      "verdict": "moved",
-      "detail": "301 -> https://learning.northeastern.edu/ai-student-guides-using-claude-learning-mode-to-study/"
+      "verdict": "ok",
+      "detail": "200"
     },
     {
       "id": "r-8d1272151b",
@@ -2156,7 +2169,8 @@
       "page_date": "2026-08-28",
       "page_says": "August 28, 2026",
       "stored": "UNVERIFIED",
-      "drift": "stored UNVERIFIED, page prints 2026-08-28"
+      "drift": "UNVERIFIED here; page prints 2026-08-28 (last-updated)",
+      "drift_class": "unverified-page-has-date"
     },
     {
       "id": "r-c7fbf92520",
@@ -2304,7 +2318,8 @@
       "page_date": "2026-08-19",
       "page_says": "August 19, 2026",
       "stored": "UNVERIFIED",
-      "drift": "stored UNVERIFIED, page prints 2026-08-19"
+      "drift": "UNVERIFIED here; page prints 2026-08-19 (last-updated)",
+      "drift_class": "unverified-page-has-date"
     },
     {
       "id": "r-6bf4b71e18",
@@ -2316,7 +2331,8 @@
       "page_date": "2026-09-03",
       "page_says": "September 3, 2026",
       "stored": "UNVERIFIED",
-      "drift": "stored UNVERIFIED, page prints 2026-09-03"
+      "drift": "UNVERIFIED here; page prints 2026-09-03 (last-updated)",
+      "drift_class": "unverified-page-has-date"
     },
     {
       "id": "r-36de89a1ed",
@@ -2328,7 +2344,8 @@
       "page_date": "2026-09-03",
       "page_says": "September 3, 2026",
       "stored": "UNVERIFIED",
-      "drift": "stored UNVERIFIED, page prints 2026-09-03"
+      "drift": "UNVERIFIED here; page prints 2026-09-03 (last-updated)",
+      "drift_class": "unverified-page-has-date"
     },
     {
       "id": "r-1d0918b7b1",
@@ -2391,8 +2408,8 @@
       "title": "AP Sets New AI Standards for Newsroom Use",
       "url": "https://mediacopilot.ai/ap-ai-newsroom-standards-update/",
       "host": "mediacopilot.ai",
-      "verdict": "ok",
-      "detail": "200"
+      "verdict": "wobbly",
+      "detail": "TimeoutError"
     },
     {
       "id": "r-da0e8aedbc",
@@ -2441,14 +2458,6 @@
       "host": "restructurednews.substack.com",
       "verdict": "ok",
       "detail": "200"
-    },
-    {
-      "id": "r-febccc2bee",
-      "title": "Claude AI for Writing: The Complete Guide for Authors and Content Creators",
-      "url": "https://kenny-kane.com/blog/claude-ai-for-writing",
-      "host": "kenny-kane.com",
-      "verdict": "moved",
-      "detail": "301 -> http://kenny-kane.com/books"
     },
     {
       "id": "r-3b623d0e24",
@@ -3989,8 +3998,8 @@
       "title": "Using the Benchling connector in Claude",
       "url": "https://academy.claude.com/tutorials/using-the-benchling-connector-in-claude",
       "host": "academy.claude.com",
-      "verdict": "ok",
-      "detail": "200"
+      "verdict": "wobbly",
+      "detail": "no response ([WinError 10054] An existing connection was forcibly closed by the remote host)"
     },
     {
       "id": "r-7443bef42c",
@@ -5280,7 +5289,8 @@
       "page_date": "2026-09-01",
       "page_says": "September 1, 2026",
       "stored": "UNVERIFIED",
-      "drift": "stored UNVERIFIED, page prints 2026-09-01"
+      "drift": "UNVERIFIED here; page prints 2026-09-01 (last-updated)",
+      "drift_class": "unverified-page-has-date"
     },
     {
       "id": "r-ea64f27605",
@@ -5336,7 +5346,8 @@
       "page_date": "2026-09-03",
       "page_says": "September 3, 2026",
       "stored": "UNVERIFIED",
-      "drift": "stored UNVERIFIED, page prints 2026-09-03"
+      "drift": "UNVERIFIED here; page prints 2026-09-03 (last-updated)",
+      "drift_class": "unverified-page-has-date"
     },
     {
       "id": "r-f10a9145b0",
@@ -5370,7 +5381,8 @@
       "page_date": "2026-08-06",
       "page_says": "August 6, 2026",
       "stored": "UNVERIFIED",
-      "drift": "stored UNVERIFIED, page prints 2026-08-06"
+      "drift": "UNVERIFIED here; page prints 2026-08-06 (last-updated)",
+      "drift_class": "unverified-page-has-date"
     },
     {
       "id": "r-d2c1983579",
@@ -5415,7 +5427,8 @@
       "page_date": "2026-09-03",
       "page_says": "September 3, 2026",
       "stored": "UNVERIFIED",
-      "drift": "stored UNVERIFIED, page prints 2026-09-03"
+      "drift": "UNVERIFIED here; page prints 2026-09-03 (last-updated)",
+      "drift_class": "unverified-page-has-date"
     },
     {
       "id": "r-e8ef619289",
@@ -5427,7 +5440,8 @@
       "page_date": "2026-09-02",
       "page_says": "September 2, 2026",
       "stored": "UNVERIFIED",
-      "drift": "stored UNVERIFIED, page prints 2026-09-02"
+      "drift": "UNVERIFIED here; page prints 2026-09-02 (last-updated)",
+      "drift_class": "unverified-page-has-date"
     },
     {
       "id": "r-a494e31b55",
