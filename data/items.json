@@ -32005,5 +32005,192 @@
     "checked": "2026-09-04",
     "prerequisites": [],
     "id": "r-e8ef619289"
+  },
+  {
+    "title": "Claude Design Fundamentals",
+    "url": "https://www.coursera.org/learn/claude-design-fundamentals",
+    "author": "Anton Voroniuk",
+    "source": "Coursera",
+    "roles": [
+      "designer",
+      "non-technical",
+      "writer-marketer"
+    ],
+    "level": "never-used",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "course",
+    "time": "half-day",
+    "cost": "free-account",
+    "published": "2026-05-01",
+    "summary": "Six modules over about four hours, from SkillsBooster Academy: what Claude can do for a designer, prompting techniques including role-setting and chain of thought, design systems and tokens, wireframes and pitch decks, then Figma integration, automation and the ethical part, ending on portfolio and interview prep.",
+    "who_for": "A designer who has never opened Claude and wants a structured route rather than a pile of videos - and who would rather be taught by somebody outside Anthropic.",
+    "skip_if": "Two things to weigh. It is a beginner course that spends its last hour on portfolio and interview preparation, so a working designer is paying an hour for career advice they did not come for. And it is Coursera: free to enrol, and the certificate costs. The instructor is an independent trainer, not a practising designer at a studio, which is a different kind of authority from the critique-style material already in this catalogue.",
+    "teaches": [
+      "prompt Claude with role-setting and chain-of-thought as a designer",
+      "apply design tokens and system rules through Claude",
+      "fit Claude into a Figma-centred workflow"
+    ],
+    "keywords": [
+      "claude for designers course",
+      "design fundamentals",
+      "coursera claude",
+      "beginner design course",
+      "claude design training"
+    ],
+    "questions": [
+      "is there a claude course for designers",
+      "how do i learn claude as a designer",
+      "what is the best structured start for design"
+    ],
+    "notes": "Opened via fetch 2026-09-04. Coursera shows 'Last Updated May 2026' and 1,911 enrolled; published recorded as 2026-05-01 from that month, which is the finest granularity the page gives. Harvested for designer|never-used, which held five items and no course before this.",
+    "official": false,
+    "language": "en",
+    "tier": "previewed",
+    "status": "live",
+    "checked": "2026-09-04",
+    "prerequisites": [],
+    "id": "r-a494e31b55"
+  },
+  {
+    "title": "AI: Artificial Intelligence Resources: Claude",
+    "url": "https://libguides.und.edu/ai-resources/claude",
+    "author": "Chester Fritz Library",
+    "source": "Und",
+    "roles": [
+      "researcher",
+      "student",
+      "non-technical"
+    ],
+    "level": "never-used",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "published": "2026-09-01",
+    "summary": "A librarian's page on Claude inside a larger guide that also covers ChatGPT, Gemini, Consensus, Scite and NotebookLM. Two hundred and fifty words: what Claude is good at, the ethical framing Anthropic gives it, and the two limits that matter academically - a fixed knowledge cutoff and no access to outside data unless you give it some.",
+    "who_for": "An academic deciding which AI tool to open first, who wants Claude placed next to its alternatives by a librarian rather than sold to them by a vendor.",
+    "skip_if": "Two hundred and fifty words is an orientation, not a tutorial - it will not teach you to use anything. Its value is the comparison it sits inside, so read the sibling pages too or the point is lost. It also describes 'no access to external data', which is true of a bare chat and not of a Claude with connectors switched on.",
+    "teaches": [
+      "place Claude against the other AI tools an academic might use",
+      "know Claude's two academically relevant limits before relying on it"
+    ],
+    "keywords": [
+      "claude vs chatgpt academic",
+      "library guide claude",
+      "which ai tool research",
+      "claude for university",
+      "ai tools compared"
+    ],
+    "questions": [
+      "which ai tool should i use for research",
+      "how does claude compare to chatgpt",
+      "is claude good for academic work"
+    ],
+    "notes": "Opened via fetch 2026-09-04. Page prints 'Last Updated September 1, 2026 4:11 PM'. Harvested specifically for researcher|never-used, which held twelve items of which ZERO were non-Anthropic - this is the first.",
+    "official": false,
+    "language": "en",
+    "cost": "free",
+    "tier": "previewed",
+    "status": "live",
+    "checked": "2026-09-04",
+    "prerequisites": [],
+    "id": "r-4fce76b7b9"
+  },
+  {
+    "title": "Generative AI Literacy",
+    "url": "https://guides.library.harvard.edu/c.php?g=1330621&p=10034696",
+    "author": "Harvard Library",
+    "source": "Harvard University",
+    "roles": [
+      "researcher",
+      "student",
+      "teacher"
+    ],
+    "level": "never-used",
+    "topics": [
+      "chat-prompting"
+    ],
+    "format": "docs",
+    "time": "under-15min",
+    "published": "2026-07-14",
+    "summary": "Harvard Library's literacy page for research use of generative AI, built round two named frameworks: CLEAR for writing a prompt, and the ROBOT test for deciding whether to believe a tool's claims about itself.",
+    "who_for": "A researcher who wants a way to think about any AI tool rather than instructions for one, and specifically a way to judge the claims made about them.",
+    "skip_if": "It is not about Claude. Not one instruction here is Claude-specific, and if you already have a prompting habit the CLEAR framework will not add to it. The ROBOT test is the part worth the visit: a checklist for evaluating a tool's own marketing, which almost nothing else in this catalogue offers.",
+    "teaches": [
+      "structure a prompt with the CLEAR framework",
+      "evaluate an AI tool's claims with the ROBOT test",
+      "separate tool-specific skill from general AI literacy"
+    ],
+    "keywords": [
+      "ai literacy",
+      "clear framework",
+      "robot test",
+      "evaluate ai tools",
+      "harvard library ai",
+      "prompt framework"
+    ],
+    "questions": [
+      "how do i judge whether an ai tool is any good",
+      "what is the clear framework",
+      "how should researchers think about ai"
+    ],
+    "notes": "Opened via fetch 2026-09-04. Page prints 'Last Updated July 14, 2026'. General AI rather than Claude-specific, and the skip_if says so in its first line - kept because researcher|never-used had no non-Anthropic voice at all and because the ROBOT test is genuinely rare material.",
+    "official": false,
+    "language": "en",
+    "cost": "free",
+    "tier": "previewed",
+    "status": "live",
+    "checked": "2026-09-04",
+    "prerequisites": [],
+    "id": "r-83502e754e"
+  },
+  {
+    "title": "AI & Academic Integrity",
+    "url": "https://teaching.cornell.edu/generative-artificial-intelligence/ai-academic-integrity",
+    "author": "Center for Teaching Innovation",
+    "source": "Cornell University",
+    "roles": [
+      "teacher"
+    ],
+    "level": "never-used",
+    "topics": [
+      "safety"
+    ],
+    "format": "article",
+    "time": "under-15min",
+    "published": "UNVERIFIED",
+    "summary": "Cornell's guidance for instructors on AI and academic integrity: three model syllabus policies - prohibited, permitted with attribution, encouraged - then how to spot a violation, what counts as evidence, and how to cite AI output in APA, MLA and Chicago. About 3,000 words.",
+    "who_for": "A teacher who has to write an AI line into a syllabus before term starts and would rather borrow three tested wordings than invent one.",
+    "skip_if": "It is general generative AI, and its examples name ChatGPT rather than Claude. Read it for one thing above the others: it tells you not to lean on AI detectors, because they 'cannot provide evidence' for what they claim and testing has shown wide error margins. If your department is buying a detector, that sentence is the reason to read this page. No publication date is shown and some references are from 2023.",
+    "teaches": [
+      "choose between prohibited, permitted-with-attribution and encouraged AI policies",
+      "gather evidence for a suspected violation without relying on detection software",
+      "cite AI-generated content in APA, MLA and Chicago"
+    ],
+    "keywords": [
+      "academic integrity ai",
+      "syllabus policy",
+      "ai detector",
+      "cite ai apa",
+      "student ai cheating",
+      "detection tools"
+    ],
+    "questions": [
+      "what should my syllabus say about ai",
+      "do ai detectors work",
+      "how do students cite ai"
+    ],
+    "notes": "Opened via fetch 2026-09-04. No publication date on the page, so UNVERIFIED, and it cites 2023 material - the age is in the skip_if. General AI, not Claude, and the card says so.",
+    "official": false,
+    "language": "en",
+    "cost": "free",
+    "tier": "previewed",
+    "status": "live",
+    "checked": "2026-09-04",
+    "prerequisites": [],
+    "id": "r-84289d43e5"
   }
 ]

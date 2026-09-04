@@ -144,3 +144,15 @@ teachers                           # RULED 2026-08-29: claude.com/solutions/teac
                                  # different organisation, a different subject, not even
                                  # about Claude specifically). Three real, different
                                  # resources.
+
+c.php  # RULED 2026-09-04. Not a duplicate and never will be: c.php is the URL
+       # shape of Springshare's LibGuides, which most university libraries run, so
+       # EVERY library guide in the catalogue ends in it and the real identity is in
+       # the query string (?g=1330621&p=10034696). Checked both pages the same day:
+       # guides.library.harvard.edu is Harvard Library's "Generative AI Literacy",
+       # a CLEAR/ROBOT framework page for researchers; libguides.tulane.edu is
+       # Tulane's "Plagiarism and Academic Integrity 101 in the Age of AI", a
+       # scenario-based integrity guide for students. Different universities,
+       # different subjects, different audiences. Expect this line to cover more
+       # libraries as the never-used harvest continues.
+
