@@ -245,3 +245,11 @@ are already reading about how the site works.
 
 One commit each, each with its suite number in the message, so a change that helps nothing
 is visible as one that helped nothing.
+
+**The gate is per commit.** A step that breaks a query that used to pass is not committed
+until it does not. FIX-27 committed step 1 with four `ok` queries broken, disclosed it, and
+repaired them four commits later - which meant the gate was down for five commits and the
+repair arrived tangled with three other changes. A gate checked at the end of a round is
+not a gate; it is a hope. If a step cannot hold the line on its own, it is not finished,
+and the honest move is to keep working on it rather than to write the breakage into the
+message.
