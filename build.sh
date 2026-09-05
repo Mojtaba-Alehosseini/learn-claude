@@ -49,6 +49,10 @@ python3 scripts/measure.py --status
 python3 scripts/test-measure.py > /dev/null
 # Four sentences the site is not allowed to say again - see D2 in FIX-24.md.
 python3 scripts/test-copy-claims.py
+# Advisory, printed, never enforced: picks whose own card names another reader or
+# turns this one away. FIX-15's audit reported zero of these because it read the
+# pick's reason instead of the pick's card against the cell.
+python3 scripts/audit-pick-contradictions.py | tail -1
 
 echo
 echo "Done. Open index.html."

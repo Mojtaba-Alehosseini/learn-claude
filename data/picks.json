@@ -467,7 +467,7 @@
       "role": "researcher",
       "level": "never-used",
       "picked_by": "ai",
-      "picked_on": "2026-09-04",
+      "picked_on": "2026-09-05",
       "pool_size": 19,
       "fingerprint": "sha1:ca1f50504075a8f0",
       "picks": [
@@ -477,9 +477,9 @@
           "subject": "the official basics course"
         },
         {
-          "url": "https://privacy.claude.com/en/articles/10023548-how-long-do-you-store-my-data",
-          "reason": "A researcher's first question is not what Claude can do but what happens to the data - this is the retention answer from the company itself, and the pool's only candidate that addresses it at all.",
-          "subject": "what happens to data you paste in"
+          "url": "https://support.claude.com/en/articles/8241126-upload-files-to-claude",
+          "reason": "The step every later guide assumes has already happened, and the only candidate that names the ceilings before you hit them - 500MB in a chat against 30MB in a Project, twenty files either way, which is exactly the wall a first manuscript runs into.",
+          "subject": "getting your own documents into Claude at all"
         },
         {
           "url": "https://guides.library.harvard.edu/c.php?g=1330621&p=10034696",
@@ -489,16 +489,17 @@
       ],
       "runners_up": [
         {
-          "url": "https://support.claude.com/en/articles/8241126-upload-files-to-claude",
-          "reason": "Held a slot until 2026-09-04 and still the step every research guide assumes you have already done. It lost it to arithmetic rather than to merit: until this week every candidate in this cell was Anthropic's own, so a set of three official picks was legal. The harvest put two independent pages in the pool, constraint 2 woke up, and the weakest of three strong picks had to move - this one, because Claude 101 already covers uploading a file."
-        },
-        {
           "url": "https://academy.claude.com/tutorials/using-the-pubmed-connector-in-claude",
           "reason": "The strongest research-specific candidate, but it would double the Academy slot Claude 101 holds, and connecting literature search comes after a first conversation, not before."
         },
         {
           "url": "https://academy.claude.com/courses",
           "reason": "A catalog rather than a course - the pick is the course it points to."
+        },
+        {
+          "url": "https://privacy.claude.com/en/articles/10023548-how-long-do-you-store-my-data",
+          "reason": "Sold as the retention answer from the company itself, and its own card says the page covers Free, Pro and Max only and is \"the wrong page\" for Team, Enterprise or the API - which is where university work sits.",
+          "cause": "contradicted-its-own-card"
         }
       ],
       "note": "Two picks share chat-prompting as primary topic. The pool splits three ways - chat basics, seven single-source mcp connectors, one safety page - and every connector is both Academy-published (colliding with Claude 101's slot) and a second step by nature. The subjects are a course, a file-handling mechanic, and a data-retention answer."
@@ -896,7 +897,7 @@
       "role": "data-analyst",
       "level": "never-used",
       "picked_by": "ai",
-      "picked_on": "2026-09-04",
+      "picked_on": "2026-09-05",
       "pool_size": 7,
       "fingerprint": "sha1:920d0599b985895b",
       "picks": [
@@ -906,9 +907,9 @@
           "subject": "getting a file in front of Claude, with the real ceilings"
         },
         {
-          "url": "https://privacy.claude.com/en/articles/10023548-how-long-do-you-store-my-data",
-          "reason": "An analyst's data is usually somebody else's data, and this is the retention answer from the company itself - the question to settle before the first upload, not after.",
-          "subject": "what happens to pasted work data"
+          "url": "https://academy.claude.com/courses/ai-capabilities-and-limitations",
+          "reason": "The only candidate about what Claude gets wrong rather than what it can do, which for someone whose first upload is a spreadsheet is the more useful half - and it is short enough to finish before the first real question arrives.",
+          "subject": "the honest limits, before trusting a number"
         },
         {
           "url": "https://www.datacamp.com/courses/claude-101",
@@ -926,8 +927,9 @@
           "reason": "The official twin of the picked course - it lost on the surface tour, and on being the third Anthropic property in a three-pick set."
         },
         {
-          "url": "https://academy.claude.com/courses/ai-capabilities-and-limitations",
-          "reason": "The honest limitations primer, but its own notes call it fifteen minutes of primer in a course shell - the docs picks carry more per minute."
+          "url": "https://privacy.claude.com/en/articles/10023548-how-long-do-you-store-my-data",
+          "reason": "Sold as the retention answer to settle before the first upload, and its own card says the page covers Free, Pro and Max only and is \"the wrong page\" for Team, Enterprise or the API - which is where work data sits.",
+          "cause": "contradicted-its-own-card"
         }
       ],
       "note": "Two picks share chat-prompting as primary topic. The pool's api primary is a token-pricing page and the second safety page is the same publisher as the first - at six candidates the spread is what it is. The subjects are a mechanic, a policy answer, and a course."
@@ -1173,7 +1175,7 @@
       "role": "pm",
       "level": "builder",
       "picked_by": "ai",
-      "picked_on": "2026-08-31",
+      "picked_on": "2026-09-05",
       "pool_size": 55,
       "fingerprint": "sha1:0303cbc9b057bdb4",
       "picks": [
@@ -1183,9 +1185,9 @@
           "subject": "restructuring PM work around agents"
         },
         {
-          "url": "https://academy.claude.com/use-cases/ask-the-company",
-          "reason": "Fifty-three single-workflow pages in this pool, and this is the one that builds something the whole team uses daily - with refusal rules you define and a logged gaps file, which is agent-building discipline rather than a recipe.",
-          "subject": "an internal Q&A agent the whole team uses"
+          "url": "https://academy.claude.com/use-cases/prd-from-a-one-pager",
+          "reason": "The one page in this pool aimed at the document a PM actually owns, and it starts where the job starts - an early problem statement rather than a finished spec.",
+          "subject": "turning a problem statement into a PRD"
         }
       ],
       "runners_up": [
@@ -1194,12 +1196,13 @@
           "reason": "Was the third pick until 2026-08-31, and only because the no-two-from-one-publisher rule made every legal three-pick set include it - 53 of 55 candidates here are Anthropic Academy. A constraint may reject a set; it may never pull an item in. It is a $3,000 certification whose own card says the burden of proof is on the course, and it is a route into AI product roles rather than a build - so it sits here, where a reader can still find it."
         },
         {
-          "url": "https://academy.claude.com/use-cases/prd-from-a-one-pager",
-          "reason": "It interviews you before it writes, which no other workflow here does - but a workflow is not a build, and the one Academy slot went to the agent."
-        },
-        {
           "url": "https://academy.claude.com/tutorials/scaling-workflows-with-claude-cowork-at-your-organization",
           "reason": "The org-rollout view, edged out because this cell is one PM's own build, not the organisation's."
+        },
+        {
+          "url": "https://academy.claude.com/use-cases/ask-the-company",
+          "reason": "Recommended to product managers while its own who_for reads \"Engineering teams tired of re-answering the same onboarding and ownership questions\" - a different job, on one of only two things this cell tells a PM to start with.",
+          "cause": "contradicted-its-own-card"
         }
       ],
       "note": "Two picks, not three. Both picks are claude-code-primary: restructuring how the job works, and building one agent the team uses - different subjects under one field value. The third slot is empty on purpose. This pool is 53 of 55 Anthropic Academy, so the publisher rule allowed only one Academy pick, and the shortlist's remaining non-Academy candidate was a $3,000 certification the picker had not chosen on merit. Shipping it would have let a constraint promote an item rather than reject one. It is in the runners-up, where a reader can still find it.",

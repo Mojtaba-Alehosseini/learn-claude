@@ -135,6 +135,18 @@ PC = _pick_candidates()
 TWO_PICK_CAUSES = ("publisher-thin", "rule-carried-third-refused")
 
 
+# Optional on a runner-up, and machine-readable so a class of mistake can be counted
+# rather than remembered. Added 2026-09-05 after Attack 2 found two picks whose own card
+# named a different reader or excluded this one - the FIX-15 audit had reported zero
+# self-contradictions, because it read each pick's reason against the pick rather than
+# the pick's own who_for and skip_if against the CELL. Three cells were re-cut; the
+# displaced picks carry this cause so the next audit starts from a record instead of a
+# memory.
+RUNNER_CAUSES = {
+    "contradicted-its-own-card",
+}
+
+
 def allowed_picks(pool):
     """(max from one publisher, CEILING on pick count) for this pool.
 
@@ -231,6 +243,9 @@ def check_cell(key, cell, pool, items_by_url):
             err("runner-up %s is not in the catalogue" % r.get("url"))
         if len(str(r.get("reason") or "").strip()) < 20:
             err("runner-up %s has no reason for losing" % r.get("url"))
+        if r.get("cause") is not None and r["cause"] not in RUNNER_CAUSES:
+            err("runner-up %s has cause %r, which is not one of %s"
+                % (r.get("url"), r["cause"], ", ".join(sorted(RUNNER_CAUSES))))
 
     # The four constraints, against what the pool allows.
     if pick_items and pool:
