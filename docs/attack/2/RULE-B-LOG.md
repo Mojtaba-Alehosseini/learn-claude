@@ -350,3 +350,51 @@ carrying a tag their card denies, and 60 more that fit no role. FIX-25 applied R
 the gallery only. The rest of the catalogue has never been swept. That is a round of its
 own and it is not this one.
 
+---
+
+# The re-audit FIX-25 was owed
+
+FIX-25 applied Rule B with role patterns that matched the wrong words: `tutor` matched
+"tutorial", `coder` matched "non-coder", `scientist` matched "data scientist", `content`
+matched the word anywhere. FIX-26 tightened them and swept forward. Nothing went back to
+check what the loose ones had already decided, and every other round in this project got
+that verification.
+
+Run on 2026-09-06 against the catalogue as FIX-25 left it (`6506724`), with the tightened
+patterns.
+
+## The direction of the fault, before any measurement
+
+A loose pattern matches **more** roles, so the set of roles a card "names" was larger than
+it should have been. A tag is dropped when its role is **not** in that set. A role outside
+the larger set is necessarily outside the smaller one, so **every drop FIX-25 made is still
+a drop under the tightened patterns.** That is provable rather than measured, and it means
+the 26 drops cannot be the fault.
+
+What looseness could break is the other two decisions: a tag **kept** because a bogus match
+put its role in the set, and a row treated as naming a role when the tightened patterns say
+it names none - which sends it to Rule B's drop list instead of Rule C's collection cards.
+
+## What was measured
+
+| | rows |
+|---|---|
+| rows FIX-25 changed the tags on | 40 |
+| of those, where the tightened patterns disagree with the outcome | **0** |
+| rows left carrying a tag the tightened patterns deny - in the gallery | **0** |
+| the same, outside the gallery | 77 |
+| rows left tagged that the tightened patterns call roleless - in the gallery | 49 |
+
+Zero disagreements, and zero gallery rows carrying a tag the tightened patterns deny. The
+loose patterns changed no Rule B decision inside the use-case gallery that stands today.
+
+The 49 gallery rows the tightened patterns would have called roleless did not survive as
+they were either: Rule C absorbed or removed most of them, and FIX-26 ruled the remainder
+one page at a time. On today's catalogue, gallery rows carrying a tag their card denies:
+**0**. Gallery rows fitting no role: **0**.
+
+## What this does not clear
+
+The 77 rows outside the gallery carrying a tag the tightened patterns deny are not a
+FIX-25 fault - Rule B has never been run outside the use-case gallery at all. They are the
+sweep that is still owed, and they are named as such in the FIX-26 record.
