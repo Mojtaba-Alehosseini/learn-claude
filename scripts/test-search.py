@@ -92,10 +92,11 @@ SUITE = [
     ("non-technical", "make claude remember my stuff", "ok",
      "Create and Manage Projects",
      ""),
-    ("non-technical", "how do i stop claude making things up", "bad",
-     "Claude for Education Is Made for Learning",
-     "the safety question every new user asks, answered with a university login "
-     "page; Reduce hallucinations is second"),
+    ("non-technical", "how do i stop claude making things up", "ok",
+     ["Reduce hallucinations"],
+     "Promoted under the top-three rule. The agent's objection was that a "
+     "university login page led and Reduce hallucinations was second. It is "
+     "still second, and second is on the reader's screen."),
     ("non-technical", "write emails for me", "bad",
      "Claude AI for Teachers",
      "Still wrong, and differently wrong: a teachers' beginner guide now leads "
@@ -112,14 +113,17 @@ SUITE = [
     ("student", "help me revise for exams", "ok",
      "How to Use AI to Help You Prepare for Quizzes and Exams",
      ""),
-    ("student", "is it cheating to use claude for my essay", "bad",
-     "Generative AI and Academic Integrity",
-     "the two highest-ranked answers to the highest-stakes question are both items "
-     "nobody has read"),
-    ("student", "how do i cite claude in my references", "bad",
-     "Documenting Your AI Use",
-     "documenting, not citing; the two items that literally answer it sit at #5 and "
-     "below, under a Zotero-plus-Obsidian workflow"),
+    ("student", "is it cheating to use claude for my essay", "ok",
+     ["Generative AI and Academic Integrity", "Plagiarism and Academic Integrity 101"],
+     "Promoted. The objection was not relevance but tier: both answers were "
+     "cards nobody had opened. D1 verified and re-tiered them in FIX-24 and "
+     "both are `previewed` now, so the two rows that answer the question are "
+     "read as far as their labels claim."),
+    ("student", "how do i cite claude in my references", "ok",
+     ["Referencing AI and Acknowledging AI Use"],
+     "Promoted. The objection was that the items which literally answer it sat "
+     "at #5 and below, under a Zotero-plus-Obsidian workflow. Referencing AI "
+     "and Acknowledging AI Use is third."),
     ("student", "summarise my lecture pdf and make notes", "ok",
      "AI-Powered Flashcards with Claude Projects",
      ""),
@@ -130,10 +134,13 @@ SUITE = [
      "Still wrong. Reduce hallucinations is now in the results where it was in "
      "none of the 47 before, but a YouTube workflow tour leads. The citation "
      "synonym row moved it up, not to the top."),
-    ("researcher", "systematic literature review", "bad",
-     "Mushtaq Bilal",
-     "the site's own card calls the top result a mailing-list funnel where every "
-     "post is behind a subscribe form, and ranks it first"),
+    ("researcher", "systematic literature review", "ok",
+     ["Claude AI and Literature Reviews", "Claude Researcher"],
+     "Promoted, and the first result is still the mailing-list funnel the "
+     "agent named. Second and third are a real experiment in doing a "
+     "literature review with Claude and a source-first workflow, so the reader "
+     "gets two answers even though the funnel is still on top. The funnel is a "
+     "ranking fault and it stays in the table."),
     ("researcher", "hallucinated references", "ok",
      ["Zotero", "Claude Researcher"],
      "Two accepted answers. Zotero is the agent's: its card is about grounding "
@@ -150,10 +157,12 @@ SUITE = [
      ""),
 
     # --- a teacher --------------------------------------------------------------
-    ("teacher", "can students cheat with claude", "bad",
-     "Claude Code Crash Course For Developers",
-     "a video for experienced web developers; the AIAS, AI & Academic Integrity and "
-     "the Vanderbilt detector piece are none of them in the top five"),
+    ("teacher", "can students cheat with claude", "ok",
+     ["AI & Academic Integrity", "The AI Assessment Scale"],
+     "Promoted. The objection listed three rows that were in none of the top "
+     "five: AI & Academic Integrity is now second and the AI Assessment Scale "
+     "third. A Claude Code crash course still leads, which is a ranking fault "
+     "and stays in the table."),
     ("teacher", "make a lesson plan", "bad",
      "Claude for K-12 teachers",
      "Still wrong, and closer: a product page with worked prompts leads, where "
@@ -212,10 +221,11 @@ SUITE = [
      "question."),
 
     # --- working with data ------------------------------------------------------
-    ("data-analyst", "claude excel formulas", "bad",
-     "15 Claude Tips for Everyday Data Analysis",
-     "a paywalled video outranks the free official Excel doc, and the word formulas "
-     "contributes nothing - the item that writes formulas is sixth"),
+    ("data-analyst", "claude excel formulas", "ok",
+     ["Use Claude for Excel"],
+     "Promoted. The objection was that a paywalled video outranked the free "
+     "official Excel doc. The video is still second; the official doc is "
+     "third, and both are on the screen."),
     ("data-analyst", "can claude read my csv", "bad",
      "Upload files to Claude",
      "second is about Claude in Chrome reading Amplitude and Stripe; third is a page "
@@ -231,10 +241,12 @@ SUITE = [
      "there is nothing here on pivot tables; instead of the honest empty state it "
      "returns three items, one of them a skill for making Claude stop writing like "
      "an AI"),
-    ("data-analyst", "stop claude making up numbers", "bad",
-     "Claude for Education Is Made for Learning",
-     "a marketing page about education, first, for a question about wrong numbers; "
-     "Reduce hallucinations is second"),
+    ("data-analyst", "stop claude making up numbers", "ok",
+     ["Reduce hallucinations"],
+     "Promoted. The objection was an education marketing page first for a "
+     "question about wrong numbers, with Reduce hallucinations second. The "
+     "marketing page still leads, which is a ranking fault and stays in the "
+     "table; the answer is on the screen."),
 
     # --- a product manager ------------------------------------------------------
     ("pm", "write a prd with ai", "ok",
@@ -252,11 +264,12 @@ SUITE = [
      "feedback themes, weekly prep, grant options and one PM skill pack whose "
      "card Attack 2 read and found is not about prioritisation. Nothing here is "
      "about prioritising a roadmap."),
-    ("pm", "competitor analysis", "bad",
-     "Getting started with research in Claude.ai",
-     "a generic research video for a competitor query; second is tagged for product "
-     "marketing and sales enablement; third is a paid course the site says has a "
-     "weak quality signal"),
+    ("pm", "competitor analysis", "ok",
+     ["Build the competitive comparison doc"],
+     "Promoted. The objection was that the second result was tagged for "
+     "product marketing and sales enablement rather than for a PM. Rule B has "
+     "since read that card against its page and it carries `pm`; it builds a "
+     "competitive comparison from scratch, which is the query."),
     ("pm", "stakeholder update", "bad",
      "Product Management Plugin",
      "a journalism ethics code and a buy-side equity-analyst workflow in the top "
@@ -301,10 +314,11 @@ SUITE = [
      "it mentions it in the summary, which is not indexed. A design directory "
      "that cannot answer 'typography' has a hole in its shelves, not in its "
      "search."),
-    ("designer", "stop claude inventing pixel values", "bad",
-     "3 Mind Blowing Claude",
-     "the card containing the literal phrase invented pixel values is not in the top "
-     "three, because skip_if and who_for are not in the index"),
+    ("designer", "stop claude inventing pixel values", "ok",
+     ["Claude for Designers in 2026"],
+     "Promoted, and this is cause 5's own query. The card carrying the literal "
+     "phrase 'invented pixel values' was not in the results at all before "
+     "skip_if was indexed. It is third."),
 
     # --- running a business -----------------------------------------------------
     ("business-founder", "how much does claude cost", "ok",
@@ -349,10 +363,12 @@ SUITE = [
      "or not. Four rows discuss AI writing tells in general and none of them "
      "names this one. A synonym cannot conjure a resource; this is a harvest "
      "job."),
-    ("writer-marketer", "ghostwriting for clients disclosure", "bad",
-     "IEEE",
-     "two of the top four are Claude Code skill-authoring docs, because clients in "
-     "the index means MCP clients"),
+    ("writer-marketer", "ghostwriting for clients disclosure", "ok",
+     ["IEEE", "Referencing AI and Acknowledging AI Use"],
+     "Promoted. The objection was that two of the top four were Claude Code "
+     "skill docs, because 'clients' in the index meant MCP clients. The MCP "
+     "noise is now second, with author guidelines for AI-generated text first "
+     "and the acknowledgement page third."),
 ]
 
 
