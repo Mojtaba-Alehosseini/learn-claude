@@ -171,6 +171,19 @@ Every candidate is Anthropic's own. No constraint can fix this; only material ca
 
 A reader who answers both questions this way is told we have nothing. `student\|builder`
 
+### Questions the catalogue cannot answer (6)
+
+Queries from the suite that fail because nothing here is on the subject, not because the ranking is wrong. No stemmer, spelling pair or synonym can conjure a resource, so these are a harvest list rather than a search backlog. Generated from `scripts/test-search.py`; the judgement behind each one is in its reason there.
+
+| the role that asked | what they typed | why it cannot be answered |
+|---|---|---|
+| pm | roadmap prioritisation | Five rows contain 'prioritis'/'prioritiz' anywhere: a literature review, feedback themes, weekly prep, grant options and one PM skill pack whose card Attack 2 read and found is not about prioritisation. Nothing here is about prioritising a roadmap. |
+| pm | prioritisation | Same hole as 'roadmap prioritisation', and the reason the British and American spellings now return the same two rows is step 4 working. Both rows are still about something else. |
+| pm | prioritization | The American spelling of a subject this catalogue does not cover. It returns the same rows as the British one now, which is the spelling fix landing on an empty shelf. |
+| designer | will ai design replace me | Nothing in the catalogue is about AI replacing designers: zero rows contain 'replace me' or 'replace design' in any field. The query returns 42 results because its other words are common, and not one of them is on the subject. |
+| designer | typography | One row mentions typography anywhere - Encode the brand as a skill - and it mentions it in the summary, which is not indexed. A design directory that cannot answer 'typography' has a hole in its shelves, not in its search. |
+| writer-marketer | em dash | Not one row in the catalogue contains the phrase, in any field, indexed or not. Four rows discuss AI writing tells in general and none of them names this one. A synonym cannot conjure a resource; this is a harvest job. |
+
 ## Links
 
 Last full check: **2026-09-04**.

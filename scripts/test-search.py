@@ -26,6 +26,11 @@ own header comment: eight self-authored benchmark sentences is not a search eval
 Each row records the agent's verdict on what it actually got:
 
     ok   - the top result was the right one. This is asserted. Breaking it exits 1.
+    content-gap - the query fails because this catalogue holds nothing on the subject, not
+           because the ranking is wrong. Checked by hand, with the count of rows
+           mentioning the subject at all recorded in the reason. Never asserted: no
+           stemmer, no synonym and no tie-break can conjure a resource. measure.py
+           collects these into STATUS.md as the harvest list.
     bad  - the top result was wrong. The reason is the agent's, quoted. Not asserted,
            because these are known open findings, not regressions - but the top result
            of the day is recorded, and --strict fails when it moves, so the note cannot
@@ -208,10 +213,12 @@ SUITE = [
     ("pm", "claude for user research", "ok",
      "Claude Code for product managers",
      ""),
-    ("pm", "roadmap prioritisation", "bad",
+    ("pm", "roadmap prioritisation", "content-gap",
      "Claude Code for Product Managers",
-     "nothing about prioritisation; the top hit is paywalled at the roadmap section "
-     "by its own Skip if, and two of three want a credit card"),
+     "Five rows contain 'prioritis'/'prioritiz' anywhere: a literature review, "
+     "feedback themes, weekly prep, grant options and one PM skill pack whose "
+     "card Attack 2 read and found is not about prioritisation. Nothing here is "
+     "about prioritising a roadmap."),
     ("pm", "competitor analysis", "bad",
      "Getting started with research in Claude.ai",
      "a generic research video for a competitor query; second is tagged for product "
@@ -221,22 +228,27 @@ SUITE = [
      "Product Management Plugin",
      "a journalism ethics code and a buy-side equity-analyst workflow in the top "
      "three, both matched on the word update"),
-    ("pm", "prioritisation", "bad",
+    ("pm", "prioritisation", "content-gap",
      "Lenny's Product Skills for Claude Code",
-     "one result, not about prioritisation - and the American spelling returns a "
-     "different single result, also not about prioritisation"),
-    ("pm", "prioritization", "bad",
+     "Same hole as 'roadmap prioritisation', and the reason the British and "
+     "American spellings now return the same two rows is step 4 working. Both "
+     "rows are still about something else."),
+    ("pm", "prioritization", "content-gap",
      "Work through grant options in chat",
-     "one result: Work through grant options in chat, for grant administrators"),
+     "The American spelling of a subject this catalogue does not cover. It "
+     "returns the same rows as the British one now, which is the spelling fix "
+     "landing on an empty shelf."),
 
     # --- a designer -------------------------------------------------------------
     ("designer", "claude for figma", "ok",
      "Figma",
      ""),
-    ("designer", "will ai design replace me", "bad",
+    ("designer", "will ai design replace me", "content-gap",
      "How to Use Claude Code for UX Writing",
-     "the highest-intent query a designer types, answered with a CSV tutorial second; "
-     "AI Can't Replace Real Research in Empathy Mapping is 32nd of 47"),
+     "Nothing in the catalogue is about AI replacing designers: zero rows "
+     "contain 'replace me' or 'replace design' in any field. The query returns "
+     "42 results because its other words are common, and not one of them is on "
+     "the subject."),
     ("designer", "design system", "ok",
      "design system",
      ""),
@@ -246,10 +258,12 @@ SUITE = [
     ("designer", "design critique", "ok",
      "Design plugin",
      ""),
-    ("designer", "typography", "bad",
+    ("designer", "typography", "content-gap",
      "",
-     "zero results on a design directory, and the empty state advises Try fewer "
-     "words to someone who typed one word"),
+     "One row mentions typography anywhere - Encode the brand as a skill - and "
+     "it mentions it in the summary, which is not indexed. A design directory "
+     "that cannot answer 'typography' has a hole in its shelves, not in its "
+     "search."),
     ("designer", "stop claude inventing pixel values", "bad",
      "3 Mind Blowing Claude",
      "the card containing the literal phrase invented pixel values is not in the top "
@@ -287,10 +301,12 @@ SUITE = [
      "Anthropic Education Report",
      "three academic-integrity pages for a freelance writer with a client; The "
      "Ethics of Using AI, step 4 of this reader's own path, is not surfaced"),
-    ("writer-marketer", "em dash", "bad",
+    ("writer-marketer", "em dash", "content-gap",
      "",
-     "zero results, on a site stocking four resources about AI writing tells - and "
-     "the empty state says Try fewer words to someone who typed two"),
+     "Not one row in the catalogue contains the phrase, in any field, indexed "
+     "or not. Four rows discuss AI writing tells in general and none of them "
+     "names this one. A synonym cannot conjure a resource; this is a harvest "
+     "job."),
     ("writer-marketer", "ghostwriting for clients disclosure", "bad",
      "IEEE",
      "two of the top four are Claude Code skill-authoring docs, because clients in "
@@ -435,14 +451,18 @@ def main():
 
     by_id, kw = load()
     fails, changed, xpass = [], [], []
-    ok_n = bad_n = 0
+    ok_n = bad_n = gap_n = 0
 
     for role, q, verdict, frag, why in SUITE:
         hits = rank(q, kw)
         top = by_id[hits[0][0]]["title"] if hits else ""
         matched = bool(frag) and frag.lower() in top.lower()
 
-        if verdict == "ok":
+        if verdict == "content-gap":
+            gap_n += 1
+            print("  gap   %-16s %-42s -> %s" % (role, q[:42],
+                                                 top[:44] or "(0 results)"))
+        elif verdict == "ok":
             ok_n += 1
             if matched:
                 print("  ok    %-16s %-42s -> %s" % (role, q[:42], top[:44]))
@@ -463,7 +483,8 @@ def main():
                 print("  MOVED %-16s %-42s -> (0 results)" % (role, q[:42]))
 
     print()
-    print("%d queries: %d recorded good, %d recorded bad." % (len(SUITE), ok_n, bad_n))
+    print("%d queries: %d recorded good, %d recorded bad, %d content gaps."
+          % (len(SUITE), ok_n, bad_n, gap_n))
 
     if fails:
         print()
