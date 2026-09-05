@@ -38,7 +38,7 @@
 
   var el = {};
   ["clearAll", "filtersPrimary", "filtersMore", "moreToggle", "moreGlyph", "q", "sort",
-   "appliedChips", "count", "results", "empty", "picks", "openSheet", "closeSheet",
+   "appliedChips", "count", "results", "empty", "picks", "thin", "openSheet", "closeSheet",
    "sheet", "sheetBody", "sheetConfirm"].forEach(function (id) {
     el[id] = document.getElementById(id);
   });
@@ -197,7 +197,11 @@
          and let the chips speak for the filters. */
       text = LC.countText(n) + " for “" + q.trim() + "”";
     }
-    if (n > 0 && n <= 6 && anyFilters()) text += ". Remove a filter to see more.";
+    /* The thin panel below makes a specific offer with a measured number in it. When it
+       is showing, this generic tail is the same advice said worse, and said first. */
+    if (n > 0 && n <= 6 && anyFilters() && !thinOffer(n)) {
+      text += ". Remove a filter to see more.";
+    }
     el.count.textContent = text;
     el.sheetConfirm.textContent = n === 1 ? "Show 1 resource" : "Show " + n + " resources";
   }
@@ -238,8 +242,13 @@
          shape of dead end, has always linked. student|builder sends a whole cell of
          the front-door grid here and the only escape was a small x chip further up -
          off screen entirely on a phone. */
+      var below0 = levelBelow(sel.levels[0]);
       msg = "<strong>We have nothing for this combination yet.</strong>" +
-            "It's on the list. Loosen the level, or " +
+            "It's on the list. " +
+            (below0 && countAtLevel(below0)
+              ? "The level below has " + countAtLevel(below0) + ". " +
+                offerHTML(below0) + " Or "
+              : "Loosen the level, or ") +
             '<a href="browse.html?role=' + encodeURIComponent(sel.roles[0]) + '">' +
             "see everything for this role</a>, or " +
             '<a href="browse.html">browse everything</a>.';
@@ -248,6 +257,58 @@
             "Try removing one filter — time is usually the one to loosen.";
     }
     el.empty.innerHTML = '<div class="empty prose">' + msg + '</div>';
+  }
+
+  /* D4 ------------------------------------------------------------------------
+     THIN is the count below which a cell reads as empty rather than as short. Five,
+     because "Start with these three" already fills three slots: at four results the
+     page is a picks block and one card, which four of Attack 2's ten agents read as
+     "nothing here for me". */
+  var THIN = 5;
+
+  /* Order comes from LC.LEVEL's own keys. A second list of the same four words in a
+     second file is the drift this vocabulary exists to prevent. */
+  function levelBelow(level) {
+    var order = Object.keys(LC.LEVEL);
+    var i = order.indexOf(level);
+    return i > 0 ? order[i - 1] : null;
+  }
+
+  /* How many the offer is actually worth. Measured by running the same filters with the
+     level below substituted - never estimated, and never promised without counting. */
+  function countAtLevel(level) {
+    var keep = sel.levels;
+    sel.levels = [level];
+    var n = items.filter(function (it) { return matches(it, null); }).length;
+    sel.levels = keep;
+    return n;
+  }
+
+  function offerHTML(below) {
+    return '<button type="button" class="btn btn-secondary" data-axis="levels" ' +
+           'data-value="' + below + '">Add “' + LC.esc(LC.LEVEL[below]) + '” too</button>';
+  }
+
+  /* Null unless this is a thin cell with somewhere to widen to. Both the count line and
+     the panel ask, so the answer is computed once. */
+  function thinOffer(n) {
+    if (q.trim() || !n || n >= THIN) return null;
+    if (sel.roles.length !== 1 || sel.levels.length !== 1) return null;
+    var below = levelBelow(sel.levels[0]);
+    if (!below) return null;
+    var more = countAtLevel(below);
+    return more ? { below: below, more: more } : null;
+  }
+
+  function renderThin(n) {
+    el.thin.innerHTML = "";
+    var offer = thinOffer(n);
+    if (!offer) return;
+    el.thin.innerHTML =
+      '<div class="empty prose"><strong>Only ' + n + ' at “' +
+      LC.esc(LC.LEVEL[sel.levels[0]]) + '” for ' + LC.esc(LC.ROLE[sel.roles[0]]) +
+      '.</strong>The level below, “' + LC.esc(LC.LEVEL[offer.below]) + '”, has ' +
+      offer.more + '. ' + offerHTML(offer.below) + '</div>';
   }
 
   function anyOtherThanRole() {
@@ -363,6 +424,7 @@
     renderChips();
     renderCount(out.length);
     renderEmpty(out.length);
+    renderThin(out.length);
     var picked = renderPicks(out);
     var rest = out.filter(function (it) { return !picked[it.id]; });
     el.results.innerHTML = rest.map(function (it) { return LC.card(it); }).join("");

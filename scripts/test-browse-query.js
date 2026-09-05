@@ -44,7 +44,7 @@ const BENCHMARK = [
 ];
 
 const ELEMENT_IDS = ["clearAll", "filtersPrimary", "filtersMore", "moreToggle", "moreGlyph",
-  "q", "sort", "appliedChips", "count", "results", "empty", "picks", "openSheet", "closeSheet",
+  "q", "sort", "appliedChips", "count", "results", "empty", "picks", "thin", "openSheet", "closeSheet",
   "sheet", "sheetBody", "sheetConfirm"];
 
 function fakeElement(id) {

@@ -458,13 +458,28 @@ Provenance line at the bottom:
 | Search found nothing | **No match for "[query]".** Try fewer words, or browse by role instead. |
 | A filter group is empty | Nothing here yet for this. |
 | A role has no resources | **We have not covered this role yet.** It's on the list. Browse everything instead. |
-| A role + level combination has no resources | **We have nothing for this combination yet.** It's on the list. Loosen the level, or browse everything. |
+| A role + level combination has no resources | **We have nothing for this combination yet.** It's on the list. The level below has [n]. [Add "[level below]" too] Or see everything for this role, or browse everything. |
+| A role + level combination is thin (1-4) | **Only [n] at "[level]" for [role].** The level below, "[level below]", has [m]. [Add "[level below]" too] |
 | A path is not built yet | **This path isn't ready.** We only publish a path once every step in it has been checked. |
 | Data file failed to load | **The directory didn't load.** Reload the page. If it keeps happening, the site is broken and we want to know. |
 | Loading | Loading the directory… |
 
 Search is instant and client-side. There is no spinner in normal use — the loading string
 exists only for a cold start on a slow connection.
+
+**The thin-level offer (D4).** Four of the ten agents in Attack 2 read three or four
+results as an empty catalogue. Below five, with one role and one level chosen and no
+search running, the page says how thin it is and offers the level below in one click.
+
+Exact match stays the default: the offer is a button the reader presses, never a widening
+the page does for them. `[n]` and `[m]` are counted, not promised — `[m]` is measured by
+running the same filters with the level below substituted, so "has 8" is eight. The
+button adds the level through the same control the filter rail uses, so the chips, the
+URL and clear-all all behave normally afterwards, and the reader undoes it the way they
+undo any filter.
+
+While this offer is showing, the count line drops its generic "Remove a filter to see
+more". Two pieces of advice for one problem is one too many, and the vaguer one goes.
 
 ---
 
