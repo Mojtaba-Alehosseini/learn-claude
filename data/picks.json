@@ -38,15 +38,16 @@
           "reason": "The only paid candidate, and our notes say the free part stops exactly where the agent templates begin."
         }
       ],
-      "note": "All three picks share the primary topic chat-prompting, which is the vocabulary's ceiling rather than sameness: the topic axis records surfaces (chat, code, cowork), not subjects, and 7 of 10 candidates in this pool are chat-prompting-primary. The subjects are distinct by the self-check: an orientation essay on where Claude fits design work, a critique of one product's output, and a runnable synthesis task. The swap that produced this set (Help Center out, feedback-synthesis in) was made because two picks about Claude Design was already one too many on subject grounds, whatever the topic field says."
+      "note": "All three picks share the primary topic chat-prompting, which is the vocabulary's ceiling rather than sameness: the topic axis records surfaces (chat, code, cowork), not subjects, and 7 of 10 candidates in this pool are chat-prompting-primary. The subjects are distinct by the self-check: an orientation essay on where Claude fits design work, a critique of one product's output, and a runnable synthesis task. The swap that produced this set (Help Center out, feedback-synthesis in) was made because two picks about Claude Design was already one too many on subject grounds, whatever the topic field says.",
+      "claims_checked_on": "2026-09-06"
     },
     "non-technical|basic": {
       "role": "non-technical",
       "level": "basic",
       "picked_by": "ai",
       "picked_on": "2026-09-06",
-      "pool_size": 70,
-      "fingerprint": "sha1:e24198731df0290c",
+      "pool_size": 69,
+      "fingerprint": "sha1:ec1b06326378618e",
       "picks": [
         {
           "url": "https://claude.com/blog/best-practices-for-prompt-engineering",
@@ -78,15 +79,16 @@
           "reason": "Its skip_if says nobody should skip it, which nearly carries it alone; it stays out only because it presumes you have already chosen Cowork, which this reader has not."
         }
       ],
-      "note": "All three picks are chat-prompting-primary in a pool where most candidates are - the topic axis records the surface, and at this level the surface is chat. The subjects pass the self-check as three different kinds of thing: a fix-list for output quality, a guided tour of the product's breadth, and one structural habit. Spreading the primaries would have meant seating a Cowork or connector item ahead of better-fitting material purely to satisfy the field."
+      "note": "All three picks are chat-prompting-primary in a pool where most candidates are - the topic axis records the surface, and at this level the surface is chat. The subjects pass the self-check as three different kinds of thing: a fix-list for output quality, a guided tour of the product's breadth, and one structural habit. Spreading the primaries would have meant seating a Cowork or connector item ahead of better-fitting material purely to satisfy the field.",
+      "claims_checked_on": "2026-09-06"
     },
     "business-founder|builder": {
       "role": "business-founder",
       "level": "builder",
       "picked_by": "ai",
       "picked_on": "2026-09-06",
-      "pool_size": 14,
-      "fingerprint": "sha1:f829399e13da2ef6",
+      "pool_size": 13,
+      "fingerprint": "sha1:83ad3bfa34a5c7f0",
       "picks": [
         {
           "url": "https://every.to/guides/ai-product-management-guide",
@@ -115,7 +117,8 @@
           "reason": "Builds something reusable rather than running one workflow, but it is marketing-ops-shaped where this reader runs the whole business."
         }
       ],
-      "note": "Two picks share the primary topic mcp, and the subjects are different halves of the same decision: awesome-mcp-enterprise is about choosing among governed integrations, the MCP course is about understanding and building the protocol underneath them. Publisher-thin pool (3 publishers across 78 candidates, 76 of them Anthropic Academy) - the two non-Academy items are both picked, which is what constraint 2 is for."
+      "note": "Two picks share the primary topic mcp, and the subjects are different halves of the same decision: awesome-mcp-enterprise is about choosing among governed integrations, the MCP course is about understanding and building the protocol underneath them. Publisher-thin pool (3 publishers across 78 candidates, 76 of them Anthropic Academy) - the two non-Academy items are both picked, which is what constraint 2 is for.",
+      "claims_checked_on": "2026-09-06"
     },
     "designer|never-used": {
       "role": "designer",
@@ -154,7 +157,8 @@
           "url": "https://artificialcorner.com/p/free-claude",
           "reason": "A shortlist of links to other people's videos is a detour before you have opened the product once."
         }
-      ]
+      ],
+      "claims_checked_on": "2026-09-06"
     },
     "designer|builder": {
       "role": "designer",
@@ -195,15 +199,16 @@
           "reason": "Levelled to `confident` under Rule A on 2026-09-06 - its card describes running a recipe or using a connector someone else built, not building one - so it left this pool on a definition rather than on merit.",
           "cause": "re-levelled-out-of-the-pool"
         }
-      ]
+      ],
+      "claims_checked_on": "2026-09-06"
     },
     "designer|confident": {
       "role": "designer",
       "level": "confident",
       "picked_by": "ai",
       "picked_on": "2026-09-06",
-      "pool_size": 23,
-      "fingerprint": "sha1:eecf5815813a2e21",
+      "pool_size": 24,
+      "fingerprint": "sha1:68c7d3166f1f5ed1",
       "picks": [
         {
           "url": "https://www.builder.io/blog/claude-code-for-designers",
@@ -237,15 +242,16 @@
           "cause": "re-levelled-out-of-the-pool"
         }
       ],
-      "note": "Two picks share the primary topic chat-prompting because the vocabulary has no topic for Claude Design the product - the same blindness the designer|basic note records. The subjects are a design-system setup inside one product and a delegation-judgment method spanning all of them; swapping either for a topic-distinct candidate (the ux-writing repo, the Figma MCP docs) would have traded fit for a field."
+      "note": "Two picks share the primary topic chat-prompting because the vocabulary has no topic for Claude Design the product - the same blindness the designer|basic note records. The subjects are a design-system setup inside one product and a delegation-judgment method spanning all of them; swapping either for a topic-distinct candidate (the ux-writing repo, the Figma MCP docs) would have traded fit for a field.",
+      "claims_checked_on": "2026-09-06"
     },
     "non-technical|never-used": {
       "role": "non-technical",
       "level": "never-used",
       "picked_by": "ai",
       "picked_on": "2026-09-06",
-      "pool_size": 63,
-      "fingerprint": "sha1:f7615848e30ea2a1",
+      "pool_size": 61,
+      "fingerprint": "sha1:c06732629623145a",
       "picks": [
         {
           "url": "https://academy.claude.com/use-cases/explore-what-claude-can-do-for-you",
@@ -277,7 +283,8 @@
           "reason": "The official walkthrough, recorded December 2025 and never going past what each button does - Stratvert covers the same ground four months more current."
         }
       ],
-      "note": "All three picks are chat-prompting-primary in a pool of seven primaries. Every safety-primary candidate is Anthropic Academy's, and the Academy slot went to the personalized front door - spreading topics would have doubled a publisher or dropped the strongest pick in the pool. The subjects are a map, a walkthrough, and a curriculum: three different kinds of first step."
+      "note": "All three picks are chat-prompting-primary in a pool of seven primaries. Every safety-primary candidate is Anthropic Academy's, and the Academy slot went to the personalized front door - spreading topics would have doubled a publisher or dropped the strongest pick in the pool. The subjects are a map, a walkthrough, and a curriculum: three different kinds of first step.",
+      "claims_checked_on": "2026-09-06"
     },
     "non-technical|confident": {
       "role": "non-technical",
@@ -317,7 +324,8 @@
           "url": "https://academy.claude.com/tutorials/using-research",
           "reason": "States its paid-plan gate honestly, but three minutes of video on one feature cannot beat a habit, a technique, or a course."
         }
-      ]
+      ],
+      "claims_checked_on": "2026-09-06"
     },
     "student|never-used": {
       "role": "student",
@@ -357,15 +365,16 @@
           "reason": "The official student course, but its own notes say it assumes the core 4D Fluency course first, which the title does not admit - the wrong first open."
         }
       ],
-      "note": "Two picks share chat-prompting as primary topic. The pool's only other primaries are safety (taken by the integrity pick) and claude-code, which for a student who has never opened Claude is the wrong door entirely - spreading further would have seated a developer video to satisfy a field. The subjects are an orientation read, a structured course, and the integrity line: three different first-day needs."
+      "note": "Two picks share chat-prompting as primary topic. The pool's only other primaries are safety (taken by the integrity pick) and claude-code, which for a student who has never opened Claude is the wrong door entirely - spreading further would have seated a developer video to satisfy a field. The subjects are an orientation read, a structured course, and the integrity line: three different first-day needs.",
+      "claims_checked_on": "2026-09-06"
     },
     "student|basic": {
       "role": "student",
       "level": "basic",
       "picked_by": "ai",
       "picked_on": "2026-09-06",
-      "pool_size": 20,
-      "fingerprint": "sha1:4eb24c9560d50f65",
+      "pool_size": 21,
+      "fingerprint": "sha1:165556139c1b61fa",
       "picks": [
         {
           "url": "https://academy.claude.com/tutorials/imagine-with-claude-student-guide",
@@ -374,7 +383,7 @@
         },
         {
           "url": "https://libguides.stkate.edu/generativeai/documentingAI",
-          "reason": "Nothing else in the pool does this job: a fresh, AI-read page on protecting yourself from a false accusation by documenting as you work - the risk a student at this level has started running without noticing.",
+          "reason": "The only candidate that tells a student what to do about it - a fresh, AI-read page on protecting yourself from a false accusation by documenting as you work. Vanderbilt's page, now in this pool, explains why the accusation happens; this is the habit that answers it - the risk a student at this level has started running without noticing.",
           "subject": "keeping a defensible record of how you used AI"
         },
         {
@@ -396,7 +405,8 @@
           "url": "https://academy.claude.com/use-cases/debate-practice-with-feedback",
           "reason": "The most interactive candidate, but it needs AI-powered Artifacts switched on and serves debate prep specifically where the picks serve every course."
         }
-      ]
+      ],
+      "claims_checked_on": "2026-09-06"
     },
     "student|confident": {
       "role": "student",
@@ -436,7 +446,8 @@
           "url": "https://www.youtube.com/watch?v=ldwjRjx8xIQ",
           "reason": "The right next surface for file-heavy research, but it needs a paid plan and local-file habits the three picks do not assume."
         }
-      ]
+      ],
+      "claims_checked_on": "2026-09-06"
     },
     "researcher|never-used": {
       "role": "researcher",
@@ -477,7 +488,8 @@
           "cause": "contradicted-its-own-card"
         }
       ],
-      "note": "Two picks share chat-prompting as primary topic. The pool splits three ways - chat basics, seven single-source mcp connectors, one safety page - and every connector is both Academy-published (colliding with Claude 101's slot) and a second step by nature. The subjects are a course, a file-handling mechanic, and a data-retention answer."
+      "note": "Two picks share chat-prompting as primary topic. The pool splits three ways - chat basics, seven single-source mcp connectors, one safety page - and every connector is both Academy-published (colliding with Claude 101's slot) and a second step by nature. The subjects are a course, a file-handling mechanic, and a data-retention answer.",
+      "claims_checked_on": "2026-09-06"
     },
     "researcher|basic": {
       "role": "researcher",
@@ -517,15 +529,16 @@
           "reason": "Two rules that catch people at other publishers too, but ICMJE is the umbrella the field actually cites."
         }
       ],
-      "note": "Two picks share chat-prompting as primary topic in a pool of six primaries. The alternatives under other primaries are a prompting repo, Cowork guides and a showcase article - none research-native. The subjects are a starting workflow, copyable recipes with citation guardrails, and disclosure rules: plan, practice, publish."
+      "note": "Two picks share chat-prompting as primary topic in a pool of six primaries. The alternatives under other primaries are a prompting repo, Cowork guides and a showcase article - none research-native. The subjects are a starting workflow, copyable recipes with citation guardrails, and disclosure rules: plan, practice, publish.",
+      "claims_checked_on": "2026-09-06"
     },
     "researcher|confident": {
       "role": "researcher",
       "level": "confident",
       "picked_by": "ai",
       "picked_on": "2026-09-06",
-      "pool_size": 32,
-      "fingerprint": "sha1:fa6754eed2c432d2",
+      "pool_size": 34,
+      "fingerprint": "sha1:12960f8188bcd256",
       "picks": [
         {
           "url": "https://effortlessacademic.com/connect-and-integrate-your-local-zotero-library-with-claude-cowork/",
@@ -556,7 +569,8 @@
           "url": "https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/reduce-hallucinations",
           "reason": "Already step 1 of the research path - it would displace a pick no path carries."
         }
-      ]
+      ],
+      "claims_checked_on": "2026-09-06"
     },
     "researcher|builder": {
       "role": "researcher",
@@ -597,7 +611,8 @@
           "cause": "re-levelled-out-of-the-pool"
         }
       ],
-      "note": "Two picks share mcp as primary topic: one is a single reference-manager integration, the other a 600-source access layer - different subjects under one field value. The pool's claude-code and cowork primaries are a single sequencing pipeline and consulting-shaped tasks, not research builds. Publisher spread is the pool's own ceiling: 17 of 20 candidates are Anthropic Academy, so both non-Academy candidates are picked."
+      "note": "Two picks share mcp as primary topic: one is a single reference-manager integration, the other a 600-source access layer - different subjects under one field value. The pool's claude-code and cowork primaries are a single sequencing pipeline and consulting-shaped tasks, not research builds. Publisher spread is the pool's own ceiling: 17 of 20 candidates are Anthropic Academy, so both non-Academy candidates are picked.",
+      "claims_checked_on": "2026-09-06"
     },
     "teacher|never-used": {
       "role": "teacher",
@@ -636,7 +651,8 @@
           "url": "https://academy.claude.com/tutorials/claude-for-teachers-in-action",
           "reason": "A real scheduled workflow, but it needs verified US K-12 status plus a paid TeachFX account before any of it reproduces."
         }
-      ]
+      ],
+      "claims_checked_on": "2026-09-06"
     },
     "teacher|basic": {
       "role": "teacher",
@@ -676,7 +692,8 @@
           "reason": "Projects is the right habit, but the Alcock pick teaches the same habit inside the classroom context, with skills on top."
         }
       ],
-      "note": "Two picks share chat-prompting as primary topic in a pool of three primaries. The unpicked primaries are cowork (a surface this reader has not chosen) and safety, which IS picked - the clash is between a setup guide and an activities tutorial, different subjects under the vocabulary's widest label."
+      "note": "Two picks share chat-prompting as primary topic in a pool of three primaries. The unpicked primaries are cowork (a surface this reader has not chosen) and safety, which IS picked - the clash is between a setup guide and an activities tutorial, different subjects under the vocabulary's widest label.",
+      "claims_checked_on": "2026-09-06"
     },
     "teacher|confident": {
       "role": "teacher",
@@ -712,7 +729,8 @@
         }
       ],
       "note": "Re-cut twice by the same mechanism, and the two cases are worth telling apart. On 2026-09-04 a student-facing Northeastern guide became eligible and looked like a third publisher; opened on 2026-09-05 it turned out to be written by a student for students with nothing for an instructor, so its `teacher` tag came off - the tag was wrong, not the cell, and the third pick came back. On 2026-09-05 the PAIRR prompts came out of `listed` under D1 and became a real third publisher. That one is genuinely for instructors, so the tag stays and the cap tightens to one per publisher. But Anna Mills and Doan Winkel each publish only articles here, so every legal three-pick set spans two formats and the format rule wants three. The two rules cannot both be met at three picks in this pool, so the cell ships two and says so. Its cause was `rule-carried-third-refused` until 2026-09-06, which blamed the shortlist for something the rules did; R4 gave the case its own name.",
-      "two_pick_cause": "constraints-jointly-unsatisfiable"
+      "two_pick_cause": "constraints-jointly-unsatisfiable",
+      "claims_checked_on": "2026-09-06"
     },
     "developer|never-used": {
       "role": "developer",
@@ -748,7 +766,8 @@
           "reason": "A concept you meet after the tool works, not before - and its own notes say it shows no authoring steps."
         }
       ],
-      "note": "All three picks are claude-code-primary. The pool's other primaries are a token-pricing page and two single-purpose connectors (Blender, ICD-10) - none of them a first door for a developer. The subjects are the idea, the install, and the course."
+      "note": "All three picks are claude-code-primary. The pool's other primaries are a token-pricing page and two single-purpose connectors (Blender, ICD-10) - none of them a first door for a developer. The subjects are the idea, the install, and the course.",
+      "claims_checked_on": "2026-08-31"
     },
     "developer|basic": {
       "role": "developer",
@@ -788,7 +807,8 @@
           "reason": "A structured, assessed alternative, but its own notes concede Anthropic's best-practices docs go further for free."
         }
       ],
-      "note": "Two picks share claude-code as primary topic: a foundation course and a habits fix - the before and after of the same install. The pool's api primaries are a different job entirely (building on the API), and its chat primary is picked."
+      "note": "Two picks share claude-code as primary topic: a foundation course and a habits fix - the before and after of the same install. The pool's api primaries are a different job entirely (building on the API), and its chat primary is picked.",
+      "claims_checked_on": "2026-08-31"
     },
     "developer|confident": {
       "role": "developer",
@@ -828,7 +848,8 @@
           "reason": "Practice-level and vendor-neutral, but deliberately tool-agnostic and still being written - the picks answer this tool, today."
         }
       ],
-      "note": "Two picks share claude-code as primary topic: one corrects working habits, the other settles where conventions live - sequential subjects, not the same one. The best-practices pick is agents-primary in the data, which understates how directly it serves this cell."
+      "note": "Two picks share claude-code as primary topic: one corrects working habits, the other settles where conventions live - sequential subjects, not the same one. The best-practices pick is agents-primary in the data, which understates how directly it serves this cell.",
+      "claims_checked_on": "2026-09-06"
     },
     "developer|builder": {
       "role": "developer",
@@ -867,7 +888,8 @@
           "url": "https://www.freecodecamp.org/news/how-to-build-an-mcp-server-with-python-docker-and-claude-code",
           "reason": "The deployable build-along, lost to the format spread - and the Cookbooks cover the same learn-by-running instinct across every capability rather than one protocol."
         }
-      ]
+      ],
+      "claims_checked_on": "2026-09-06"
     },
     "data-analyst|never-used": {
       "role": "data-analyst",
@@ -908,7 +930,8 @@
           "cause": "contradicted-its-own-card"
         }
       ],
-      "note": "Two picks share chat-prompting as primary topic. The pool's api primary is a token-pricing page and the second safety page is the same publisher as the first - at six candidates the spread is what it is. The subjects are a mechanic, a policy answer, and a course."
+      "note": "Two picks share chat-prompting as primary topic. The pool's api primary is a token-pricing page and the second safety page is the same publisher as the first - at six candidates the spread is what it is. The subjects are a mechanic, a policy answer, and a course.",
+      "claims_checked_on": "2026-09-05"
     },
     "data-analyst|basic": {
       "role": "data-analyst",
@@ -947,7 +970,8 @@
           "url": "https://www.linkedin.com/learning/15-claude-tips-for-everyday-data-analysis",
           "reason": "The right audience and the wrong gate - subscription-only in a pool where everything picked is free."
         }
-      ]
+      ],
+      "claims_checked_on": "2026-09-06"
     },
     "data-analyst|confident": {
       "role": "data-analyst",
@@ -987,7 +1011,8 @@
           "url": "https://academy.claude.com/tutorials/prompting-strategies-for-financial-analysis",
           "reason": "Built on bad-prompt/good-prompt pairs, which teach quickly - but its card says it assumes Daloopa and Kensho connectors already licensed, a gate most analysts at this level cannot open."
         }
-      ]
+      ],
+      "claims_checked_on": "2026-09-06"
     },
     "data-analyst|builder": {
       "role": "data-analyst",
@@ -1030,7 +1055,8 @@
           "cause": "re-levelled-out-of-the-pool"
         }
       ],
-      "note": "Publisher-thin pool: 30 of 33 candidates are Anthropic Academy and the other three are GitHub, so the cap is two per publisher. The three primaries picked (api, cowork, mcp) are distinct."
+      "note": "Publisher-thin pool: 30 of 33 candidates are Anthropic Academy and the other three are GitHub, so the cap is two per publisher. The three primaries picked (api, cowork, mcp) are distinct.",
+      "claims_checked_on": "2026-09-06"
     },
     "pm|never-used": {
       "role": "pm",
@@ -1070,7 +1096,8 @@
           "reason": "Inspiration behind a paywall, and it predates Cowork by its own publication date."
         }
       ],
-      "note": "Two picks share chat-prompting as primary topic. The pool's safety primary is a half-day course shell around fifteen minutes of content, and its claude-code primary is subscription-gated - the two chat picks are different kinds of first step, a walkthrough and a curriculum."
+      "note": "Two picks share chat-prompting as primary topic. The pool's safety primary is a half-day course shell around fifteen minutes of content, and its claude-code primary is subscription-gated - the two chat picks are different kinds of first step, a walkthrough and a curriculum.",
+      "claims_checked_on": "2026-09-04"
     },
     "pm|basic": {
       "role": "pm",
@@ -1109,15 +1136,16 @@
           "url": "https://support.claude.com/en/articles/13364135-use-claude-cowork-safely",
           "reason": "Nobody should skip it, says its own card - it is step 4 of the PM path, sequenced where it belongs."
         }
-      ]
+      ],
+      "claims_checked_on": "2026-09-04"
     },
     "pm|confident": {
       "role": "pm",
       "level": "confident",
       "picked_by": "ai",
       "picked_on": "2026-09-06",
-      "pool_size": 61,
-      "fingerprint": "sha1:d69341a036e41d0f",
+      "pool_size": 58,
+      "fingerprint": "sha1:09fd1baef528ec7d",
       "picks": [
         {
           "url": "https://claude.com/blog/product-management-on-the-ai-exponential",
@@ -1149,7 +1177,8 @@
           "reason": "The operating-discipline read, held back by unmeasured cost tables and the $99 product it keeps selling."
         }
       ],
-      "note": "All three picks are claude-code-primary in a pool where 17 of 52 candidates are - the PM material's own centre of gravity at this level. The subjects are a team's process, a copyable setup, and a live demonstration: three different kinds of evidence, not three copies. The chat-primary majority is single-workflow pages this reader has outgrown."
+      "note": "All three picks are claude-code-primary in a pool where 17 of 52 candidates are - the PM material's own centre of gravity at this level. The subjects are a team's process, a copyable setup, and a live demonstration: three different kinds of evidence, not three copies. The chat-primary majority is single-workflow pages this reader has outgrown.",
+      "claims_checked_on": "2026-09-06"
     },
     "pm|builder": {
       "role": "pm",
@@ -1192,15 +1221,16 @@
           "cause": "re-levelled-out-of-the-pool"
         }
       ],
-      "note": "All three picks are claude-code-primary. The pool's other primaries are cowork and chat-prompting, and every one of those seven candidates is an admin or rollout guide written for an administrator rather than a product manager. The three here are different subjects: the argument for the job changing, the skill bundle that argument produces, and training that ends in a portfolio piece."
+      "note": "All three picks are claude-code-primary. The pool's other primaries are cowork and chat-prompting, and every one of those seven candidates is an admin or rollout guide written for an administrator rather than a product manager. The three here are different subjects: the argument for the job changing, the skill bundle that argument produces, and training that ends in a portfolio piece.",
+      "claims_checked_on": "2026-09-06"
     },
     "business-founder|never-used": {
       "role": "business-founder",
       "level": "never-used",
       "picked_by": "ai",
       "picked_on": "2026-09-06",
-      "pool_size": 41,
-      "fingerprint": "sha1:23f5b4c303ffd127",
+      "pool_size": 39,
+      "fingerprint": "sha1:78fc9f00d4494dc2",
       "picks": [
         {
           "url": "https://privacy.claude.com/en/articles/10023580-is-my-data-used-for-model-training",
@@ -1231,7 +1261,8 @@
           "url": "https://claude.com/pricing",
           "reason": "Prices and seat counts with nothing about what any of it does - its own card says it answers cost, not which plan you need."
         }
-      ]
+      ],
+      "claims_checked_on": "2026-09-06"
     },
     "business-founder|basic": {
       "role": "business-founder",
@@ -1271,15 +1302,16 @@
           "reason": "Productive in one sitting, but it costs an email address and starts after signup - the picks start where this reader actually is."
         }
       ],
-      "note": "Two picks share chat-prompting as primary topic in a pool of seven primaries - an Excel workflow and a context habit, different subjects under the vocabulary's widest label. The cowork primary is picked; the remaining primaries are single connectors and a subscription-gated Claude Code pitch."
+      "note": "Two picks share chat-prompting as primary topic in a pool of seven primaries - an Excel workflow and a context habit, different subjects under the vocabulary's widest label. The cowork primary is picked; the remaining primaries are single connectors and a subscription-gated Claude Code pitch.",
+      "claims_checked_on": "2026-09-06"
     },
     "business-founder|confident": {
       "role": "business-founder",
       "level": "confident",
       "picked_by": "ai",
       "picked_on": "2026-09-06",
-      "pool_size": 63,
-      "fingerprint": "sha1:73672f4dcf97c616",
+      "pool_size": 61,
+      "fingerprint": "sha1:df9b2315b2ba61de",
       "picks": [
         {
           "url": "https://academy.claude.com/tutorials/teach-claude-your-way-of-working-using-skills",
@@ -1311,15 +1343,16 @@
           "reason": "Strong on its own, but this pool is thick with pages that run one task each, and the picks are a policy, a system and source you can audit - each of which outlasts a single workflow."
         }
       ],
-      "note": "Two picks share the primary topic skills, and the subjects are opposite halves of one habit: the Academy tutorial is about authoring a skill so your own instructions stick, the small-business repo is about reading the source of skills somebody else wrote before you trust them with the books. Authoring and auditing, not the same subject under one field value."
+      "note": "Two picks share the primary topic skills, and the subjects are opposite halves of one habit: the Academy tutorial is about authoring a skill so your own instructions stick, the small-business repo is about reading the source of skills somebody else wrote before you trust them with the books. Authoring and auditing, not the same subject under one field value.",
+      "claims_checked_on": "2026-09-06"
     },
     "writer-marketer|never-used": {
       "role": "writer-marketer",
       "level": "never-used",
       "picked_by": "ai",
       "picked_on": "2026-09-06",
-      "pool_size": 20,
-      "fingerprint": "sha1:1f1e96c69a55c4e6",
+      "pool_size": 21,
+      "fingerprint": "sha1:c91ab134b37a0393",
       "picks": [
         {
           "url": "https://academy.claude.com/courses/claude-101",
@@ -1351,7 +1384,8 @@
           "reason": "A list of links to other people's videos, before you have opened the product once."
         }
       ],
-      "note": "All three picks are chat-prompting-primary. The pool's safety primary is a course shell around a fifteen-minute primer and its cowork primary is a product review that lands better after basics - at nine candidates, the three strongest first steps happen to share the vocabulary's widest label. The subjects are a course, a walkthrough, and a buying decision."
+      "note": "All three picks are chat-prompting-primary. The pool's safety primary is a course shell around a fifteen-minute primer and its cowork primary is a product review that lands better after basics - at nine candidates, the three strongest first steps happen to share the vocabulary's widest label. The subjects are a course, a walkthrough, and a buying decision.",
+      "claims_checked_on": "2026-09-06"
     },
     "writer-marketer|basic": {
       "role": "writer-marketer",
@@ -1387,15 +1421,16 @@
           "reason": "Real numbers from a real marketing team, but it is a case study of theirs, not a method for yours."
         }
       ],
-      "note": "Two picks share chat-prompting as primary topic: a relationship decision and a tells catalogue - the before and after of signing your name to the work. The pool's safety primaries are newsroom policy pieces that serve institutions more than one byline. One runner-up was dropped on 2026-09-04, not re-judged: kenny-kane.com's writing guide 301s to the author's books page and the article no longer exists, so its row left the catalogue. Two runners-up remain, which is still a record of what lost."
+      "note": "Two picks share chat-prompting as primary topic: a relationship decision and a tells catalogue - the before and after of signing your name to the work. The pool's safety primaries are newsroom policy pieces that serve institutions more than one byline. One runner-up was dropped on 2026-09-04, not re-judged: kenny-kane.com's writing guide 301s to the author's books page and the article no longer exists, so its row left the catalogue. Two runners-up remain, which is still a record of what lost.",
+      "claims_checked_on": "2026-09-06"
     },
     "writer-marketer|confident": {
       "role": "writer-marketer",
       "level": "confident",
       "picked_by": "ai",
       "picked_on": "2026-09-06",
-      "pool_size": 16,
-      "fingerprint": "sha1:7b4a3ffccfb689b9",
+      "pool_size": 22,
+      "fingerprint": "sha1:2fcbc184848611cc",
       "picks": [
         {
           "url": "https://academy.claude.com/courses/ai-fluency-for-creative-work",
@@ -1404,7 +1439,7 @@
         },
         {
           "url": "https://medium.com/@stephenstirling/set-your-standards-before-you-start-a-journalists-journey-using-claude-md-744b02bb4210",
-          "reason": "The one candidate about writing your standards down where Claude reads them - one journalist's working guardrails, read by AI in full, useful before any newsroom policy arrives.",
+          "reason": "The only candidate about a writer's own ethical standards, written where Claude reads them - one journalist's working guardrails. The skill-shaped candidates here encode a house style; this encodes a conscience, read by AI in full, useful before any newsroom policy arrives.",
           "subject": "setting your own ethical guardrails in a config file"
         },
         {
@@ -1426,7 +1461,8 @@
           "url": "https://localizelikeapro.com/claude-for-localization-stop-starting-every-project-from-zero/",
           "reason": "The Projects-and-glossaries habit for translators - the right answer through a narrow door."
         }
-      ]
+      ],
+      "claims_checked_on": "2026-09-06"
     }
   }
 }

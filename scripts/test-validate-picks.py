@@ -123,6 +123,14 @@ CASES = [
          {"two_pick_cause": "publisher-thin"}),
      "where it means nothing"),
 
+    # A re-pick that refreshed the fingerprint and left the sentences behind. This is the
+    # exact shape FIX-25 found eleven of by hand and FIX-26 turned into a step: a cell
+    # does not close until its pool claims have been read against the pool it now has.
+    ("picked_on moves ahead of claims_checked_on",
+     lambda i, p: p["cells"]["researcher|confident"].update(
+         {"claims_checked_on": "2026-01-01"}),
+     "does not close until its own sentences"),
+
     # The stale half must NOT fail the build: shrink the first cell's pool by retiering
     # a non-picked candidate. Warned, dated, shipped.
     ("pool drift is a warning, not an error",

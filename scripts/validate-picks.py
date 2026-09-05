@@ -163,6 +163,25 @@ RUNNER_CAUSES = {
 }
 
 
+# A claim about the pool that no script can check: whether this really is the only
+# candidate that walks a workflow end to end, whether every safety page here is
+# Anthropic's. They were all true when written. Pools move; sentences do not.
+POOL_CLAIM = re.compile(
+    r"\b(the only|only one|the one candidate|the pool's one|every |all of|none of|"
+    r"no other|nothing else|everything else|never explain|always)\b", re.I)
+
+
+def claim_lines(cell):
+    """Every reason in this cell that asserts something about the whole pool."""
+    out = []
+    for kind in ("picks", "runners_up"):
+        for p in cell.get(kind) or []:
+            m = POOL_CLAIM.search(p.get("reason") or "")
+            if m:
+                out.append((kind, p.get("url"), m.group(0).strip(), p.get("reason")))
+    return out
+
+
 def allowed_picks(pool):
     """(max from one publisher, CEILING on pick count) for this pool.
 
@@ -248,6 +267,9 @@ def check_cell(key, cell, pool, items_by_url):
             "path starts at an allowance of 0, like `reviewed`." % cell.get("picked_by"))
     if not DATE.match(str(cell.get("picked_on") or "")):
         err("picked_on = %r is not YYYY-MM-DD" % cell.get("picked_on"))
+    if cell.get("claims_checked_on") and \
+       not DATE.match(str(cell.get("claims_checked_on"))):
+        err("claims_checked_on = %r is not YYYY-MM-DD" % cell.get("claims_checked_on"))
     if not str(cell.get("fingerprint") or "").startswith("sha1:"):
         err("fingerprint is missing — staleness cannot be detected without it")
 
@@ -390,6 +412,29 @@ def check_cell(key, cell, pool, items_by_url):
         warn("stale: the eligible pool has changed since these were picked on %s "
              "(%d candidates now). The picks still ship — the card carries the date — "
              "but this cell wants a re-pick." % (cell.get("picked_on"), len(pool)))
+        # The re-pick is not finished when three URLs are chosen. Every sentence that
+        # claims something about the pool has to be read against the pool as it is now.
+        claims = claim_lines(cell)
+        if claims:
+            warn("...and %d of its sentences claim something about that pool. Re-read "
+                 "each one before closing this cell, then set claims_checked_on to the "
+                 "day you did:" % len(claims))
+            for kind, url, phrase, reason in claims:
+                warn("      %-10s \"%s\"  %s" % (kind, phrase, url[-52:]))
+
+    # Closing a cell means saying the sentences were re-read, not only that three URLs
+    # were chosen. A picked_on ahead of claims_checked_on is a re-pick that refreshed the
+    # fingerprint and left the prose behind - the exact failure FIX-25 found eleven of.
+    claims = claim_lines(cell)
+    checked = str(cell.get("claims_checked_on") or "")
+    if claims and checked and checked < str(cell.get("picked_on") or ""):
+        err("re-picked on %s but its %d pool claims were last read on %s. A cell does "
+            "not close until its own sentences have been read against the pool it now "
+            "has." % (cell.get("picked_on"), len(claims), checked))
+    elif claims and not checked:
+        warn("%d sentence(s) claim something about this pool and none has been re-read "
+             "since the claim was written. Set claims_checked_on when you next open "
+             "this cell." % len(claims))
     if pool and len(pool) < PC.MIN_POOL:
         warn("stale: the pool has shrunk to %d, below the %d this feature requires. "
              "These picks should be retired, not re-picked." % (len(pool), PC.MIN_POOL))
