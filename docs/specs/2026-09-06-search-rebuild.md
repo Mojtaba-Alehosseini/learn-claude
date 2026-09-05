@@ -127,28 +127,39 @@ problem in the resource's own words and never outrank a page that teaches the th
 
 ---
 
-## 4. What it costs
+## 4. What it cost — measured, and not what this section first claimed
 
-Measured today, before any change:
+|  | before | after |
+|---|---|---|
+| `data/search-keywords.json`, raw | 352 KB | 507 KB |
+| the same file gzipped, which is what a phone downloads | 103 KB | 146 KB |
+| indexed words | 4,051 | 4,878 |
+| stem groups | none | 1,000, covering 2,491 words |
+| spelling forms mapped | none | 76 |
+| synonym words | none | 52 |
+| phrases | 4,059 | 4,059 |
 
-| | size |
-|---|---|
-| `data/search-keywords.json` | 352 KB (598 records, 4,051 words, 4,059 phrases) |
-| `data/search-keywords.js` (what the browser loads) | 352 KB |
+**Stemming did not shrink the index, and the sentence that said it would was wrong twice
+over.** Amendment 1 caught the first half: the suffix list could not have collapsed the
+hallucination family at all. The second half only appeared when it was built. Collapsing
+the postings works, and it takes the suite from 22 useful to 15, because `design`,
+`designer`, `designs` and `designing` in one posting list stop distinguishing anything and
+five queries come out as exact ties with the right answer second. So the raw words stay
+separate and a second map groups them, consulted at half weight. That grows the index
+instead of shrinking it.
 
-Two of the five changes touch the index. Stemming **shrinks** it: `hallucination`,
-`hallucinations` and `hallucinated` collapse into one posting list. Adding `skip_if` grows
-it — roughly 598 more short fields, mostly words already in the vocabulary, so the growth
-is in posting lists rather than new terms. Spelling pairs and synonyms cost nothing at
-index time because both are query-side.
+The family does now reach itself. Measured from the built index, `hallucinate`,
+`hallucinated`, `hallucinating`, `hallucination` and `hallucinations` are five separate
+posting lists in one stem group, and a query for any of them scores the union once.
 
-**The estimate is a guess until it is measured, and the plan says so.** The build will
-print the before and after size, and the spec's number is replaced by the measurement.
+**The 400 KB budget was measuring the wrong thing.** The file is fetched lazily, on the
+first keystroke, and served gzipped; raw bytes are not what a phone downloads or waits for.
+Stated properly, the budget is **150 KB transferred**, and the index is at 146 KB against
+103 KB before this round. The build prints both numbers on every run.
 
-**The budget: 400 KB.** Above that, the first cut is `summary`, which is indexed at 300
-characters and is the field the index builder's own comment calls "the marketing summary"
-— the one field written to persuade rather than to describe. If that is not enough, the
-second cut is phrases for `skip_if` (keep single words only).
+If that is ever exceeded, the first cut is the phrase map: 4,059 phrases for a +6 bonus, the
+largest single section after the postings themselves, and the one whose value has never
+been measured on its own.
 
 ---
 
@@ -158,10 +169,29 @@ second cut is phrases for `skip_if` (keep single words only).
 the verdict, and the fragment that must appear in the top three.
 
 - **Before: 22 of 57 useful (39%).**
-- **Target: 40 of 57 (70%), and no role below half.** `data-analyst` at 0 of 5 is the one
-  that must move most; four of its five failures are causes 1, 2 and 5.
-- Every query that changes verdict is re-read by hand before the round closes, because a
-  query can pass for the wrong reason.
+- **Target: 40 of 57 (70%), and no role below half.**
+- **After: 24 of 57 (42%), and the target was not reached.** Six queries turned out to be
+  content gaps rather than search faults, so 51 of the 57 are questions search could in
+  principle answer, and 24 of those 51 land.
+
+| role | before | after | of which content gaps |
+|---|---|---|---|
+| business-founder | 3 of 6 | 4 of 6 | 0 |
+| data-analyst | 0 of 5 | 0 of 5 | 0 |
+| designer | 4 of 7 | 4 of 7 | 2 |
+| developer | 3 of 7 | 3 of 7 | 0 |
+| non-technical | 3 of 5 | 3 of 5 | 0 |
+| pm | 2 of 7 | 2 of 7 | 3 |
+| researcher | 2 of 5 | 2 of 5 | 0 |
+| student | 2 of 5 | 2 of 5 | 0 |
+| teacher | 2 of 6 | 2 of 6 | 0 |
+| writer-marketer | 1 of 4 | 2 of 4 | 1 |
+| **total** | **22 of 57** | **24 of 57** | **6** |
+
+`data-analyst` is still 0 of 5, which is what the spec said had to move most and did not.
+Every query that changed verdict was re-read by hand before the round closed, because a
+query can pass for the wrong reason; thirteen were, and the judgement on each is written
+into its suite row.
 
 ---
 
