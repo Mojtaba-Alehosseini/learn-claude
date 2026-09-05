@@ -267,10 +267,37 @@
 
   /* ------------------------------------------------------------- pieces ---- */
 
+  /* D11. This was a <span title="...">, and a title tooltip opens on hover and
+     nowhere else: not on keyboard focus in any browser, and not at all on a phone. So
+     the site's second pillar - "We say how we checked" - was delivered by the one
+     mechanism most of its readers cannot use, on 68 badges of a single browse page.
+     Now it is a link to the row that defines it, the tooltip stays for the mouse, and
+     the sentence itself is in aria-describedby so a screen reader reads the meaning
+     without following the link. The cost is one focus stop per card; see D11 in
+     docs/attack/FIX-24.md. */
   LC.badge = function (tier) {
-    var t = LC.TIER[tier] || LC.TIER.listed;
-    return '<span class="badge ' + t.cls + '" title="' + LC.esc(t.tip) + '">' +
-           LC.esc(t.label) + '</span>';
+    var key = LC.TIER[tier] ? tier : "listed";
+    var t = LC.TIER[key];
+    return '<a class="badge ' + t.cls + '" href="how-we-check.html#tier-' + key + '"' +
+           ' title="' + LC.esc(t.tip) + '"' +
+           ' aria-describedby="tierdesc-' + key + '">' +
+           LC.esc(t.label) + '</a>';
+  };
+
+  /* The four sentences, once per page, for the aria-describedby above to point at.
+     Injected rather than written into five HTML files, so LC.TIER stays the only place
+     the wording lives - the same no-drift rule the picks strings follow. */
+  LC.tierDescriptions = function () {
+    if (document.getElementById("tierdesc-listed")) return;
+    var box = document.createElement("div");
+    box.className = "visually-hidden";
+    box.hidden = false;
+    var html = "";
+    Object.keys(LC.TIER).forEach(function (k) {
+      html += '<span id="tierdesc-' + k + '">' + LC.esc(LC.TIER[k].tip) + '</span>';
+    });
+    box.innerHTML = html;
+    document.body.appendChild(box);
   };
 
   /* Named because it is the publisher, not the platform: a video on Anthropic's
@@ -476,4 +503,13 @@
   };
 
   window.LC = LC;
+
+  /* D11: the badges are links now and each points at a hidden sentence for
+     aria-describedby. Every page that draws a badge needs those sentences, so they
+     are injected here rather than remembered in four page scripts. */
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", LC.tierDescriptions);
+  } else {
+    LC.tierDescriptions();
+  }
 })();
