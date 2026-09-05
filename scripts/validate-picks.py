@@ -152,6 +152,10 @@ TWO_PICK_CAUSES = ("publisher-thin", "rule-carried-third-refused",
 # memory.
 RUNNER_CAUSES = {
     "contradicted-its-own-card",
+    # Added 2026-09-06 with Rule A. A pick that leaves because the level it sat at
+    # was redefined did not lose an argument, and the record should not imply it
+    # did.
+    "re-levelled-out-of-the-pool",
 }
 
 

@@ -132,6 +132,27 @@ Prompt above the chips: **Who are you?**
 
 Prompt: **How much Claude do you know?**
 
+**What the top two levels mean** *(Rule A, 2026-09-06)*
+
+The labels were doing the work of a definition and could not carry it. 148 rows from one
+prompt-recipe gallery had been filed at `builder` - 43% of the level - so "Account
+tracking", fifteen minutes of Cowork with a Salesforce connector attached, sat beside the
+Agent SDK. Attack 2's developer agent put the objection in a line: a prompt recipe is not
+building.
+
+> **built things with it** — wrote code against the API; built a skill, an agent, a
+> connector or an automation; or set up Claude Code.
+>
+> **used it a lot** — everything else that assumes fluency, including running a recipe in
+> Cowork with connectors attached. That is using Claude hard, not building with it.
+
+A row is levelled on what its card says, not on how impressive it sounds. "Encode the
+brand as a skill" is `builder` because it builds a skill. "Account tracking" is
+`confident` because it runs a recipe. Where a card says neither, the row stays where it
+is - silence is not evidence.
+
+`scripts/audit-levels.py` applies this and prints the phrase behind every decision.
+
 **Time** — a filter, not an entry question. Labels used in the filter panel and on cards:
 
 | Value | Label |

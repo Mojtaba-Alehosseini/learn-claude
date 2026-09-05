@@ -313,38 +313,6 @@
         }
       ]
     },
-    "non-technical|builder": {
-      "role": "non-technical",
-      "level": "builder",
-      "picked_by": "ai",
-      "picked_on": "2026-08-31",
-      "pool_size": 8,
-      "fingerprint": "sha1:aff8fc3744a86bd7",
-      "picks": [
-        {
-          "url": "https://academy.claude.com/use-cases/my-voice",
-          "reason": "The most durable build in the pool - a skill that accumulates your corrections into a voice profile - where five of the eight candidates run once and keep nothing.",
-          "subject": "building a personal voice skill that improves with correction"
-        },
-        {
-          "url": "https://academy.claude.com/use-cases/morning-evening",
-          "reason": "The only candidate whose two halves feed each other - the evening wrap becomes the next morning's briefing - which is automation as a system rather than another single task.",
-          "subject": "a stateful morning-and-evening briefing loop"
-        }
-      ],
-      "runners_up": [
-        {
-          "url": "https://academy.claude.com/use-cases/message-sweep",
-          "reason": "The third general-purpose candidate, but it reads state where both picks build things that persist - a voice skill and a daily loop."
-        },
-        {
-          "url": "https://academy.claude.com/use-cases/handle-a-request-while-away-from-your-keyboard",
-          "reason": "The most impressive demo in the pool and the heaviest setup - keep-awake, approval gates and computer use all off by default, which its own notes admit."
-        }
-      ],
-      "note": "Two picks, not three: all eight candidates are Anthropic Academy, and three from one publisher is the monoculture the constraint exists to stop, so the single-publisher cap holds the cell at two. Both picks are cowork-primary - the pool's mcp-primary alternatives are each platform-gated niches (Mac-only extensions, an admin-gated fundraising connector, a payer-clinical sample skill) rather than general builds. The subjects are a durable voice profile and a stateful daily loop.",
-      "two_pick_cause": "publisher-thin"
-    },
     "student|never-used": {
       "role": "student",
       "level": "never-used",
@@ -587,9 +555,9 @@
       "role": "researcher",
       "level": "builder",
       "picked_by": "ai",
-      "picked_on": "2026-08-31",
-      "pool_size": 20,
-      "fingerprint": "sha1:f869649372cdd0ce",
+      "picked_on": "2026-09-06",
+      "pool_size": 6,
+      "fingerprint": "sha1:edc6d0d620b77fa6",
       "picks": [
         {
           "url": "https://effortlessacademic.com/claude-skills-for-academics-beginner-tutorial-part-2/",
@@ -602,16 +570,12 @@
           "subject": "deep integration with your own Zotero library"
         },
         {
-          "url": "https://academy.claude.com/tutorials/using-the-tooluniverse-extension-in-claude",
-          "reason": "Seventeen Academy candidates each connect one source; this is the one that wraps six hundred, including two of its own neighbours - the widest capability per unit of setup in the pool.",
-          "subject": "one extension covering 600 scientific data sources"
+          "url": "https://academy.claude.com/tutorials/how-to-use-the-nextflow-deployment-agent-skill-with-claude-code",
+          "reason": "The pool's four Anthropic pages are three connectors and this - the only one where you deploy something rather than attach to something, and the only one that touches Claude Code.",
+          "subject": "deploying a skill rather than attaching a connector"
         }
       ],
       "runners_up": [
-        {
-          "url": "https://academy.claude.com/tutorials/how-to-use-the-scientific-problem-selection-skill-with-claude",
-          "reason": "The only candidate about choosing the problem rather than processing data - it lost the Academy slot to the page that widens every other workflow at once."
-        },
         {
           "url": "https://academy.claude.com/tutorials/using-the-synapse-org-connector-in-claude",
           "reason": "Dataset discovery with provenance is rare, but most of what it finds sits behind per-dataset governance approval."
@@ -619,6 +583,11 @@
         {
           "url": "https://academy.claude.com/tutorials/how-to-use-the-scvi-tools-bioinformatics-skill-bundle-with-claude",
           "reason": "Eleven models in one bundle, but only for labs already running the scVerse stack."
+        },
+        {
+          "url": "https://academy.claude.com/tutorials/using-the-tooluniverse-extension-in-claude",
+          "reason": "Levelled to `confident` under Rule A on 2026-09-06 - its card describes running a recipe or using a connector someone else built, not building one - so it left this pool on a definition rather than on merit.",
+          "cause": "re-levelled-out-of-the-pool"
         }
       ],
       "note": "Two picks share mcp as primary topic: one is a single reference-manager integration, the other a 600-source access layer - different subjects under one field value. The pool's claude-code and cowork primaries are a single sequencing pipeline and consulting-shaped tasks, not research builds. Publisher spread is the pool's own ceiling: 17 of 20 candidates are Anthropic Academy, so both non-Academy candidates are picked."
@@ -1016,9 +985,9 @@
       "role": "data-analyst",
       "level": "builder",
       "picked_by": "ai",
-      "picked_on": "2026-08-31",
-      "pool_size": 33,
-      "fingerprint": "sha1:4a18cc7b6fd1c5e7",
+      "picked_on": "2026-09-06",
+      "pool_size": 15,
+      "fingerprint": "sha1:9800151895ab354b",
       "picks": [
         {
           "url": "https://github.com/anthropics/claude-cookbooks/blob/main/managed_agents/data_analyst_agent.ipynb",
@@ -1026,28 +995,30 @@
           "subject": "an agent that turns datasets into narrative reports"
         },
         {
-          "url": "https://academy.claude.com/use-cases/answer-the-adhoc",
-          "reason": "The only candidate aimed at the job around the analysis - the recurring question queue - down to scheduling Claude to watch the requests channel and draft answers first.",
-          "subject": "automating the ad-hoc stakeholder-question queue"
+          "url": "https://towardsdatascience.com/4-lines-you-must-include-in-your-claude-skill/",
+          "reason": "The only candidate about writing a skill rather than running one, and the shortest route in the pool from 'I have a repeated analysis' to something reusable.",
+          "subject": "authoring a skill, not running one"
         },
         {
-          "url": "https://academy.claude.com/tutorials/using-databricks-for-data-analysis",
-          "reason": "Fourteen connector pages in this pool, and this is the one self-serve one - no invitation, no sales call - and the only one where existing Unity Catalog permissions survive intact by design.",
-          "subject": "querying the warehouse without losing permission boundaries"
+          "url": "https://www.youtube.com/watch?v=cGuyrANVi4A",
+          "reason": "Four MCP servers sit in this pool and none of them explains the protocol they implement - this is the one that does, which is what you need before choosing between them or writing a fifth.",
+          "subject": "how MCP works, before picking a server"
         }
       ],
       "runners_up": [
         {
-          "url": "https://github.com/anthropics/claude-cookbooks/tree/main/skills",
-          "reason": "The other buildable GitHub candidate, but its worked examples are all financial statements where the data-analyst agent serves any dataset."
-        },
-        {
-          "url": "https://academy.claude.com/use-cases/metrics-narrative",
-          "reason": "Automates the weekly narrative end to end, but its who_for names product analysts specifically, where the ad-hoc queue pick serves every analyst in this cell."
-        },
-        {
           "url": "https://academy.claude.com/use-cases/build-financial-models",
           "reason": "The most ambitious page here, and the heaviest gate in its own batch by its own admission - three paid connectors and a waitlist."
+        },
+        {
+          "url": "https://academy.claude.com/use-cases/answer-the-adhoc",
+          "reason": "Levelled to `confident` under Rule A on 2026-09-06 - its card describes running a recipe or using a connector someone else built, not building one - so it left this pool on a definition rather than on merit.",
+          "cause": "re-levelled-out-of-the-pool"
+        },
+        {
+          "url": "https://academy.claude.com/tutorials/using-databricks-for-data-analysis",
+          "reason": "Levelled to `confident` under Rule A on 2026-09-06 - its card describes running a recipe or using a connector someone else built, not building one - so it left this pool on a definition rather than on merit.",
+          "cause": "re-levelled-out-of-the-pool"
         }
       ],
       "note": "Publisher-thin pool: 30 of 33 candidates are Anthropic Academy and the other three are GitHub, so the cap is two per publisher. The three primaries picked (api, cowork, mcp) are distinct."
@@ -1175,9 +1146,9 @@
       "role": "pm",
       "level": "builder",
       "picked_by": "ai",
-      "picked_on": "2026-09-05",
-      "pool_size": 55,
-      "fingerprint": "sha1:0303cbc9b057bdb4",
+      "picked_on": "2026-09-06",
+      "pool_size": 10,
+      "fingerprint": "sha1:ed8ae442998b3d52",
       "picks": [
         {
           "url": "https://every.to/guides/ai-product-management-guide",
@@ -1185,16 +1156,17 @@
           "subject": "restructuring PM work around agents"
         },
         {
-          "url": "https://academy.claude.com/use-cases/prd-from-a-one-pager",
-          "reason": "The one page in this pool aimed at the document a PM actually owns, and it starts where the job starts - an early problem statement rather than a finished spec.",
-          "subject": "turning a problem statement into a PRD"
+          "url": "https://github.com/EveryInc/compound-engineering-plugin",
+          "reason": "The skills that guide only describes, installed with one marketplace command - the pool's one candidate that hands you the thing rather than the argument for it.",
+          "subject": "the toolkit behind the argument"
+        },
+        {
+          "url": "https://maven.com/mahesh-yadav/genaipm",
+          "reason": "The only candidate that ends with something to show rather than something to know - a portfolio project and an eval story - and its own card is straight that thirteen reviews is thin evidence, which is the honest way to sell a paid course.",
+          "subject": "a portfolio project, not another read"
         }
       ],
       "runners_up": [
-        {
-          "url": "https://maven.com/mahesh-yadav/genaipm",
-          "reason": "Was the third pick until 2026-08-31, and only because the no-two-from-one-publisher rule made every legal three-pick set include it - 53 of 55 candidates here are Anthropic Academy. A constraint may reject a set; it may never pull an item in. It is a $3,000 certification whose own card says the burden of proof is on the course, and it is a route into AI product roles rather than a build - so it sits here, where a reader can still find it."
-        },
         {
           "url": "https://academy.claude.com/tutorials/scaling-workflows-with-claude-cowork-at-your-organization",
           "reason": "The org-rollout view, edged out because this cell is one PM's own build, not the organisation's."
@@ -1203,10 +1175,14 @@
           "url": "https://academy.claude.com/use-cases/ask-the-company",
           "reason": "Recommended to product managers while its own who_for reads \"Engineering teams tired of re-answering the same onboarding and ownership questions\" - a different job, on one of only two things this cell tells a PM to start with.",
           "cause": "contradicted-its-own-card"
+        },
+        {
+          "url": "https://academy.claude.com/use-cases/prd-from-a-one-pager",
+          "reason": "Levelled to `confident` under Rule A on 2026-09-06 - its card describes running a recipe or using a connector someone else built, not building one - so it left this pool on a definition rather than on merit.",
+          "cause": "re-levelled-out-of-the-pool"
         }
       ],
-      "note": "Two picks, not three. Both picks are claude-code-primary: restructuring how the job works, and building one agent the team uses - different subjects under one field value. The third slot is empty on purpose. This pool is 53 of 55 Anthropic Academy, so the publisher rule allowed only one Academy pick, and the shortlist's remaining non-Academy candidate was a $3,000 certification the picker had not chosen on merit. Shipping it would have let a constraint promote an item rather than reject one. It is in the runners-up, where a reader can still find it.",
-      "two_pick_cause": "rule-carried-third-refused"
+      "note": "All three picks are claude-code-primary. The pool's other primaries are cowork and chat-prompting, and every one of those seven candidates is an admin or rollout guide written for an administrator rather than a product manager. The three here are different subjects: the argument for the job changing, the skill bundle that argument produces, and training that ends in a portfolio piece."
     },
     "business-founder|never-used": {
       "role": "business-founder",

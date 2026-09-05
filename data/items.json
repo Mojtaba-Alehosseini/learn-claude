@@ -2385,7 +2385,7 @@
     "roles": [
       "data-analyst"
     ],
-    "level": "confident",
+    "level": "builder",
     "topics": [
       "skills",
       "safety"
@@ -3222,7 +3222,7 @@
     "roles": [
       "designer"
     ],
-    "level": "confident",
+    "level": "builder",
     "topics": [
       "mcp"
     ],
@@ -4096,7 +4096,7 @@
     "roles": [
       "designer"
     ],
-    "level": "confident",
+    "level": "builder",
     "topics": [
       "skills",
       "claude-code"
@@ -5266,7 +5266,7 @@
     "roles": [
       "developer"
     ],
-    "level": "confident",
+    "level": "builder",
     "topics": [
       "skills",
       "mcp",
@@ -6406,7 +6406,7 @@
     "roles": [
       "developer"
     ],
-    "level": "confident",
+    "level": "builder",
     "topics": [
       "skills",
       "agents"
@@ -16140,7 +16140,7 @@
       "developer",
       "pm"
     ],
-    "level": "confident",
+    "level": "builder",
     "topics": [
       "mcp",
       "api"
@@ -17234,7 +17234,7 @@
       "developer",
       "data-analyst"
     ],
-    "level": "confident",
+    "level": "builder",
     "topics": [
       "mcp"
     ],
@@ -17282,7 +17282,7 @@
       "developer",
       "data-analyst"
     ],
-    "level": "confident",
+    "level": "builder",
     "topics": [
       "mcp"
     ],
@@ -19866,7 +19866,7 @@
     "roles": [
       "developer"
     ],
-    "level": "confident",
+    "level": "builder",
     "topics": [
       "claude-code",
       "skills"
@@ -21000,7 +21000,7 @@
     "roles": [
       "researcher"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "skills",
       "mcp"
@@ -21092,7 +21092,7 @@
       "business-founder",
       "pm"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -21564,7 +21564,7 @@
       "data-analyst",
       "business-founder"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "mcp"
     ],
@@ -21607,7 +21607,7 @@
       "data-analyst",
       "business-founder"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "mcp"
     ],
@@ -21694,7 +21694,7 @@
       "business-founder",
       "pm"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -21862,7 +21862,7 @@
     "roles": [
       "researcher"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "mcp"
     ],
@@ -21944,7 +21944,7 @@
     "roles": [
       "researcher"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "mcp"
     ],
@@ -21986,7 +21986,7 @@
     "roles": [
       "researcher"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "mcp"
     ],
@@ -22030,7 +22030,7 @@
       "researcher",
       "developer"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "mcp"
     ],
@@ -22756,7 +22756,7 @@
       "data-analyst",
       "business-founder"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "chat-prompting"
     ],
@@ -23063,7 +23063,7 @@
     "roles": [
       "researcher"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "skills"
     ],
@@ -23151,7 +23151,7 @@
       "non-technical",
       "researcher"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "skills"
     ],
@@ -23193,7 +23193,7 @@
     "roles": [
       "researcher"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "skills"
     ],
@@ -23235,7 +23235,7 @@
     "roles": [
       "researcher"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "skills"
     ],
@@ -23278,7 +23278,7 @@
     "roles": [
       "researcher"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "skills"
     ],
@@ -23675,7 +23675,7 @@
       "pm",
       "business-founder"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -23718,7 +23718,7 @@
       "pm",
       "business-founder"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -23851,7 +23851,7 @@
       "data-analyst",
       "developer"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "mcp"
     ],
@@ -23895,7 +23895,7 @@
       "business-founder",
       "pm"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "mcp"
     ],
@@ -23938,7 +23938,7 @@
       "data-analyst",
       "business-founder"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "mcp"
     ],
@@ -23982,7 +23982,7 @@
       "data-analyst",
       "business-founder"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "mcp"
     ],
@@ -24026,7 +24026,7 @@
       "data-analyst",
       "business-founder"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "mcp"
     ],
@@ -24113,7 +24113,7 @@
       "data-analyst",
       "business-founder"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "mcp"
     ],
@@ -24157,7 +24157,7 @@
       "data-analyst",
       "business-founder"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "mcp"
     ],
@@ -24244,7 +24244,7 @@
       "data-analyst",
       "business-founder"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "mcp"
     ],
@@ -24415,7 +24415,7 @@
     "roles": [
       "researcher"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "mcp"
     ],
@@ -24498,7 +24498,7 @@
       "business-founder",
       "non-technical"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "mcp"
     ],
@@ -24882,7 +24882,7 @@
       "business-founder",
       "pm"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -24927,7 +24927,7 @@
       "business-founder",
       "pm"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -24972,7 +24972,7 @@
       "business-founder",
       "pm"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -25193,7 +25193,7 @@
       "data-analyst",
       "developer"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -25324,7 +25324,7 @@
       "business-founder",
       "pm"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -25457,7 +25457,7 @@
       "business-founder",
       "pm"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "chat-prompting"
     ],
@@ -25541,7 +25541,7 @@
       "pm",
       "business-founder"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -25586,7 +25586,7 @@
       "data-analyst",
       "business-founder"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -25632,7 +25632,7 @@
       "pm",
       "business-founder"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "chat-prompting"
     ],
@@ -25676,7 +25676,7 @@
       "data-analyst",
       "business-founder"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "chat-prompting"
     ],
@@ -25762,7 +25762,7 @@
       "business-founder",
       "pm"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -25808,7 +25808,7 @@
       "business-founder",
       "pm"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -25940,7 +25940,7 @@
       "designer",
       "developer"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -25984,7 +25984,7 @@
     "roles": [
       "developer"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -26117,7 +26117,7 @@
       "pm",
       "business-founder"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -26163,7 +26163,7 @@
       "pm",
       "business-founder"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -26209,7 +26209,7 @@
       "business-founder",
       "pm"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -26298,7 +26298,7 @@
       "data-analyst",
       "business-founder"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -26731,7 +26731,7 @@
     "roles": [
       "non-technical"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "mcp"
     ],
@@ -26907,7 +26907,7 @@
       "business-founder",
       "pm"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -27037,7 +27037,7 @@
       "developer",
       "pm"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -27082,7 +27082,7 @@
       "designer",
       "pm"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -27128,7 +27128,7 @@
       "designer",
       "developer"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -27173,7 +27173,7 @@
       "designer",
       "pm"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -27258,7 +27258,7 @@
       "data-analyst",
       "business-founder"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "chat-prompting"
     ],
@@ -27303,7 +27303,7 @@
       "data-analyst",
       "business-founder"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "chat-prompting"
     ],
@@ -27347,7 +27347,7 @@
       "non-technical",
       "business-founder"
     ],
-    "level": "confident",
+    "level": "builder",
     "topics": [
       "skills"
     ],
@@ -27391,7 +27391,7 @@
       "developer",
       "pm"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -27436,7 +27436,7 @@
       "business-founder",
       "pm"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -27526,7 +27526,7 @@
       "data-analyst",
       "business-founder"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -27611,7 +27611,7 @@
     "roles": [
       "pm"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -27656,7 +27656,7 @@
       "data-analyst",
       "business-founder"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -27873,7 +27873,7 @@
       "non-technical",
       "business-founder"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -27918,7 +27918,7 @@
       "data-analyst",
       "business-founder"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -27962,7 +27962,7 @@
     "roles": [
       "developer"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -28008,7 +28008,7 @@
       "pm",
       "business-founder"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -28052,7 +28052,7 @@
     "roles": [
       "pm"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -28098,7 +28098,7 @@
       "business-founder",
       "pm"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -28143,7 +28143,7 @@
       "business-founder",
       "pm"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "agents"
     ],
@@ -28273,7 +28273,7 @@
       "non-technical",
       "business-founder"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -28318,7 +28318,7 @@
       "pm",
       "data-analyst"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -28364,7 +28364,7 @@
       "non-technical",
       "business-founder"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -28456,7 +28456,7 @@
       "business-founder",
       "pm"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -28502,7 +28502,7 @@
       "business-founder",
       "pm"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -28592,7 +28592,7 @@
       "business-founder",
       "pm"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -28809,7 +28809,7 @@
       "business-founder",
       "pm"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -28897,7 +28897,7 @@
     "roles": [
       "designer"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -28987,7 +28987,7 @@
       "business-founder",
       "pm"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -29161,7 +29161,7 @@
     "roles": [
       "pm"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -29205,7 +29205,7 @@
     "roles": [
       "researcher"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "mcp"
     ],
@@ -29382,7 +29382,7 @@
       "business-founder",
       "pm"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -29514,7 +29514,7 @@
       "data-analyst",
       "business-founder"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -29559,7 +29559,7 @@
       "business-founder",
       "data-analyst"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -29603,7 +29603,7 @@
       "business-founder",
       "pm"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -29648,7 +29648,7 @@
       "business-founder",
       "pm"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -29694,7 +29694,7 @@
       "business-founder",
       "pm"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -29945,7 +29945,7 @@
       "business-founder",
       "researcher"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -29990,7 +29990,7 @@
       "business-founder",
       "pm"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -30035,7 +30035,7 @@
       "data-analyst",
       "business-founder"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -30079,7 +30079,7 @@
     "roles": [
       "developer"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -30213,7 +30213,7 @@
     "roles": [
       "pm"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -30301,7 +30301,7 @@
       "pm",
       "business-founder"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -30391,7 +30391,7 @@
       "business-founder",
       "pm"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -30567,7 +30567,7 @@
     "roles": [
       "non-technical"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "mcp"
     ],
@@ -30701,7 +30701,7 @@
       "data-analyst",
       "business-founder"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "chat-prompting"
     ],
@@ -30746,7 +30746,7 @@
       "designer",
       "researcher"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -30836,7 +30836,7 @@
       "data-analyst",
       "business-founder"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -30882,7 +30882,7 @@
       "business-founder",
       "pm"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -30927,7 +30927,7 @@
       "business-founder",
       "pm"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],
@@ -31101,7 +31101,7 @@
       "pm",
       "business-founder"
     ],
-    "level": "builder",
+    "level": "confident",
     "topics": [
       "cowork"
     ],

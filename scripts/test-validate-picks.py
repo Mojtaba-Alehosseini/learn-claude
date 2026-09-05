@@ -101,17 +101,21 @@ CASES = [
     # Ruling 2026-08-31: a constraint may reject a set, never pull an item into one.
     # A cell that ships two must say which of the two causes put it there - the
     # catalogue's shape, or its own shortlist. "Only two" with no cause says nothing.
+    # teacher|confident rather than pm|builder since 2026-09-06: Rule A gave
+    # pm|builder a pool big enough for three picks again, so the fixture broke on a
+    # KeyError instead of on the rule it tests.
     ("two picks with no declared cause",
-     lambda i, p: p["cells"]["pm|builder"].pop("two_pick_cause"),
+     lambda i, p: p["cells"]["teacher|confident"].pop("two_pick_cause"),
      "no two_pick_cause"),
 
     ("two picks with the wrong cause for the pool",
-     lambda i, p: p["cells"]["pm|builder"].update(
+     lambda i, p: p["cells"]["teacher|confident"].update(
          {"two_pick_cause": "publisher-thin"}),
      "which means"),
 
     ("a cause invented outside the vocabulary",
-     lambda i, p: p["cells"]["pm|builder"].update({"two_pick_cause": "felt right"}),
+     lambda i, p: p["cells"]["teacher|confident"].update(
+         {"two_pick_cause": "felt right"}),
      "must be one of"),
 
     ("a three-pick cell claiming a two-pick cause",

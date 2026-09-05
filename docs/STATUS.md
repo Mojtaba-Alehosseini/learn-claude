@@ -42,7 +42,7 @@ statement.
 
 **Format:** 307 docs · 124 article · 101 video · 58 course · 32 repo · 7 hands-on · 6 podcast.
 
-**Level:** 182 builder · 178 basic · 169 confident · 106 never-used.
+**Level:** 255 confident · 178 basic · 106 never-used · 96 builder.
 
 **Cost:** 583 free · 26 free-account · 16 subscription · 10 paid-once.
 
@@ -52,32 +52,32 @@ statement.
 
 | | |
 |---|---|
-| Cells with picks | **37** of 40 |
-| Picks | 108 |
-| Runners-up recorded | 107 |
+| Cells with picks | **36** of 40 |
+| Picks | 107 |
+| Runners-up recorded | 105 |
 
-**Cells with three or fewer candidates** (shown as-is, no picks): `teacher|builder` (2), `writer-marketer|builder` (3)
+**Cells with three or fewer candidates** (shown as-is, no picks): `non-technical|builder` (2), `teacher|builder` (2), `writer-marketer|builder` (3)
 
 **Empty cells:** `student|builder`
 
-**Pools with zero non-Anthropic material:** `non-technical|builder` (8 items, 1 publisher)
+**Pools with zero non-Anthropic material:** `non-technical|builder` (2 items, 1 publisher)
 
 **Publisher-thin pools** (fewer than 3 publishers, so the no-two-from-one rule
-relaxes): `non-technical|builder` (1 pub, 8 items), `teacher|builder` (2 pub, 2 items), `data-analyst|builder` (2 pub, 37 items), `writer-marketer|builder` (2 pub, 3 items)
+relaxes): `non-technical|builder` (1 pub, 2 items), `teacher|builder` (2 pub, 2 items), `writer-marketer|builder` (2 pub, 3 items)
 
 ## Per cell — eligible / publishers / non-Anthropic
 
 | role | never-used | basic | confident | builder |
 |---|---|---|---|---|
-| `non-technical` | 66 / 20p / 18x | 72 / 27p / 25x | 14 / 6p / 4x | 8 / 1p / 0x |
+| `non-technical` | 66 / 20p / 18x | 72 / 27p / 25x | 20 / 6p / 4x | 2 / 1p / 0x |
 | `student` | 42 / 21p / 18x | 21 / 13p / 11x | 10 / 6p / 5x | 0 / 0p / 0x |
-| `researcher` | 19 / 5p / 2x | 20 / 16p / 13x | 20 / 13p / 11x | 20 / 3p / 2x |
+| `researcher` | 19 / 5p / 2x | 20 / 16p / 13x | 34 / 13p / 11x | 6 / 3p / 2x |
 | `teacher` | 30 / 13p / 9x | 25 / 19p / 16x | 9 / 3p / 2x | 2 / 2p / 1x |
-| `developer` | 7 / 4p / 1x | 19 / 11p / 8x | 39 / 18p / 20x | 61 / 18p / 20x |
-| `data-analyst` | 7 / 4p / 1x | 20 / 14p / 12x | 22 / 12p / 10x | 37 / 2p / 7x |
-| `pm` | 12 / 8p / 5x | 42 / 15p / 15x | 53 / 23p / 25x | 56 / 4p / 3x |
-| `designer` | 7 / 6p / 5x | 10 / 8p / 6x | 19 / 16p / 15x | 11 / 4p / 3x |
-| `business-founder` | 42 / 14p / 10x | 65 / 23p / 21x | 48 / 8p / 6x | 79 / 3p / 3x |
+| `developer` | 7 / 4p / 1x | 19 / 11p / 8x | 44 / 17p / 16x | 56 / 20p / 24x |
+| `data-analyst` | 7 / 4p / 1x | 20 / 14p / 12x | 44 / 10p / 7x | 15 / 5p / 10x |
+| `pm` | 12 / 8p / 5x | 42 / 15p / 15x | 99 / 23p / 25x | 10 / 4p / 3x |
+| `designer` | 7 / 6p / 5x | 10 / 8p / 6x | 23 / 15p / 13x | 7 / 6p / 5x |
+| `business-founder` | 42 / 14p / 10x | 65 / 23p / 21x | 111 / 8p / 6x | 16 / 3p / 3x |
 | `writer-marketer` | 19 / 9p / 7x | 35 / 24p / 22x | 7 / 7p / 4x | 3 / 2p / 3x |
 
 ## Live resources the freshness rule excludes from every pool
@@ -98,7 +98,7 @@ comparative recommendation should not point at something a year stale.
 | Lesson 1: Introduction to AI Fluency \| AI Fluency: Framewo | Anthropic | 2025-06-12 | 450 | never-used |
 | Lesson 2B: The 4D Framework \| AI Fluency: Framework & Foun | Anthropic | 2025-06-12 | 450 | never-used |
 | Lesson 7: Effective prompting techniques (Deep Dive) \| AI  | Anthropic | 2025-06-12 | 450 | basic |
-| The Model Context Protocol (MCP) | Anthropic | 2025-06-16 | 446 | confident |
+| The Model Context Protocol (MCP) | Anthropic | 2025-06-16 | 446 | builder |
 | Advancing Claude for Education | Anthropic | 2025-07-09 | 423 | basic |
 | Claude for Small Business (Back-Office AI, honest review) | Eigent AI | 2025-07-29 | 403 | basic |
 | Prompting 101 \| Code w/ Claude | Anthropic | 2025-07-31 | 401 | basic |
@@ -165,7 +165,7 @@ Every candidate is Anthropic's own. No constraint can fix this; only material ca
 
 | cell | items | publishers |
 |---|---|---|
-| `non-technical\|builder` | 8 | 1 |
+| `non-technical\|builder` | 2 | 1 |
 
 ### Empty cells (1)
 
