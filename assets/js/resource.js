@@ -70,7 +70,7 @@
     '<p class="meta"><a href="' + backHref() + '">← Back to browse</a></p>' +
 
     '<div class="resource-head" style="margin-top:var(--space-24)">' +
-      '<div class="chip-row">' + LC.badge(item.tier) + '</div>' +
+      '<div class="chip-row">' + LC.badgeLink(item.tier) + '</div>' +
       '<h1 class="h1" style="margin-top:var(--space-12)">' + LC.esc(item.title) + '</h1>' +
       '<p class="meta" style="margin-top:var(--space-8)">' +
         LC.publisher(item) + author + '</p>' +

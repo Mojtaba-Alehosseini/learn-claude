@@ -399,8 +399,9 @@ button, .btn, .nav-link, .filter-option { min-height: var(--tap-min); }
    version was the eye-catching one that went nowhere. A pill carrying a rule-width
    underline looks broken, so the underline waits for hover; the shape and colour at
    rest are unchanged. */
-/* D11. The badge is a link to its definition now. A rule-width underline through a
-   filled pill looks broken, so the underline waits for hover; the shape and colour at
+/* The badge is a link on the resource page only - on a card it went back to a span so
+   that one focus stop per card survives (R2, 2026-09-06). A rule-width underline through
+   a filled pill looks broken, so the underline waits for hover; the shape and colour at
    rest are unchanged, which matters because the badge is the site's trust signal and it
    should not start reading as navigation. */
 a.badge { text-decoration: none; }

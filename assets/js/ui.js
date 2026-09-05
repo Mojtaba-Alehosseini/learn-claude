@@ -339,9 +339,27 @@
      the sentence itself is in aria-describedby so a screen reader reads the meaning
      without following the link. The cost is one focus stop per card; see D11 in
      docs/attack/FIX-24.md. */
+  /* Two shapes, because the right answer differs by page.
+
+     On a CARD it is a span. D11 made it a link everywhere, which bought reachability by
+     adding a focus stop to every card - 68 of them on one browse page, to make one
+     sentence reachable 68 times. One stop per card was a deliberate decision that seven
+     Attack 2 agents praised by name, so the card keeps it and reaches the meaning the
+     other way: LC.card puts the tier's sentence in aria-describedby on the title link,
+     which is the stop that was always there. A screen reader still hears it.
+
+     On the RESOURCE PAGE it is a link. There is one badge, the reader has already
+     committed to the item, and a route to the definition is worth one stop. */
+  LC.tierKey = function (tier) { return LC.TIER[tier] ? tier : "listed"; };
+
   LC.badge = function (tier) {
-    var key = LC.TIER[tier] ? tier : "listed";
-    var t = LC.TIER[key];
+    var key = LC.tierKey(tier), t = LC.TIER[key];
+    return '<span class="badge ' + t.cls + '" title="' + LC.esc(t.tip) + '">' +
+           LC.esc(t.label) + '</span>';
+  };
+
+  LC.badgeLink = function (tier) {
+    var key = LC.tierKey(tier), t = LC.TIER[key];
     return '<a class="badge ' + t.cls + '" href="how-we-check.html#tier-' + key + '"' +
            ' title="' + LC.esc(t.tip) + '"' +
            ' aria-describedby="tierdesc-' + key + '">' +
@@ -502,7 +520,8 @@
       '<article class="card">' +
         '<div class="card-top">' +
           '<div>' + LC.badge(item.tier) +
-            '<div class="card-title"><a href="' + LC.esc(LC.href(item)) + '">' +
+            '<div class="card-title"><a href="' + LC.esc(LC.href(item)) + '"' +
+              ' aria-describedby="tierdesc-' + LC.tierKey(item.tier) + '">' +
               LC.esc(item.title) + '</a></div>' +
             '<div class="card-source meta">' + LC.publisher(item) + author + '</div>' +
           '</div>' + icon +
