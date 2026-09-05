@@ -408,8 +408,27 @@ def adhoc(queries):
     return 0
 
 
+def emit(path):
+    """Write every suite query's top three, for the cross-runtime check to compare."""
+    by_id, kw = load()
+    rows = [{"role": role, "query": q,
+             "top3": [iid for iid, _s in rank(q, kw)[:3]]}
+            for role, q, _v, _f, _w in SUITE]
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump({"generated": "scripts/test-search.py --emit", "queries": rows}, f,
+                  ensure_ascii=False, indent=1)
+    print("Emitted %d queries' top three -> %s" % (len(rows), path))
+    return 0
+
+
 def main():
-    args = [a for a in sys.argv[1:] if a != "--strict"]
+    argv = sys.argv[1:]
+    if "--emit" in argv:
+        i = argv.index("--emit")
+        if i + 1 >= len(argv):
+            sys.exit("--emit needs a path")
+        return emit(argv[i + 1])
+    args = [a for a in argv if a != "--strict"]
     strict = "--strict" in sys.argv
     if args:
         return adhoc(args)

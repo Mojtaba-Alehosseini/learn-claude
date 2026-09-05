@@ -30,6 +30,14 @@ python3 scripts/build-search-index.py --keywords
 # and the run says so out loud rather than hiding them. Exits 1 only when a query
 # that used to work stops working.
 python3 scripts/test-search.py | tail -2
+# One algorithm, two runtimes, all 57 queries. Amendment 3 to the search spec: ten samples
+# is a place for drift to hide, and Python and the browser had already disagreed once.
+python3 scripts/test-search.py --emit tmp/py-top3.json > /dev/null
+node scripts/test-search-runtimes.js tmp/py-top3.json | tail -1
+# Every synonym row carries the reason it exists, like every skip_if.
+python3 scripts/validate-synonyms.py
+# The stemmer's word families, taken from the failing suite lines.
+python3 scripts/test-stem.py | tail -1
 
 echo
 echo "4b/6 sitemap, generated rather than typed"

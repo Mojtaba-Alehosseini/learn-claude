@@ -21,6 +21,7 @@ Usage:
     python3 scripts/build-search-index.py --resume     # only embed what is missing
 """
 
+import gzip
 import json
 import math
 import os
@@ -327,8 +328,13 @@ def main():
         "synonyms": synonyms,
         "phrases": phrases,
     }, open(KW_OUT, "w", encoding="utf-8"), separators=(",", ":"))
+    # Both numbers, because the raw one is not what a phone downloads. The index is
+    # fetched lazily, on the first keystroke, and gzipped by the host; the spec's budget
+    # is stated in transferred bytes for that reason.
+    gz = len(gzip.compress(open(KW_OUT, "rb").read(), 9))
     print(f"keyword index: {len(idx)} words, {len(phrases)} phrases "
-          f"-> {KW_OUT} ({os.path.getsize(KW_OUT)/1024:.0f} KB)")
+          f"-> {KW_OUT} ({os.path.getsize(KW_OUT)/1024:.0f} KB raw, {gz/1024:.0f} KB "
+          f"gzipped, lazy-loaded on the first keystroke)")
 
     # A minimum stem of 3 merges hard, so what it merged is printed rather than trusted.
     big = sorted(groups.items(), key=lambda kv: -len(kv[1]))
