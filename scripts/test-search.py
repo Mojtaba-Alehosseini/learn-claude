@@ -25,7 +25,10 @@ own header comment: eight self-authored benchmark sentences is not a search eval
 
 Each row records the agent's verdict on what it actually got:
 
-    ok   - the top result was the right one. This is asserted. Breaking it exits 1.
+    ok   - an accepted answer is in the top three. This is asserted. Breaking it exits 1.
+           The top three is what the reader sees and what the agents scored; asserting
+           the first result alone was a stricter test than anyone agreed to, and it
+           disagreed with section 5 of the search spec from the day both were written.
     content-gap - the query fails because this catalogue holds nothing on the subject, not
            because the ranking is wrong. Checked by hand, with the count of rows
            mentioning the subject at all recorded in the reason. Never asserted: no
@@ -484,7 +487,8 @@ def main():
     for role, q, verdict, frag, why in SUITE:
         hits = rank(q, kw)
         top = by_id[hits[0][0]]["title"] if hits else ""
-        matched = bool(frag) and frag.lower() in top.lower()
+        top3 = [by_id[i]["title"] for i, _s in hits[:3]]
+        matched = bool(frag) and any(frag.lower() in t.lower() for t in top3)
 
         if verdict == "content-gap":
             gap_n += 1
@@ -493,7 +497,10 @@ def main():
         elif verdict == "ok":
             ok_n += 1
             if matched:
-                print("  ok    %-16s %-42s -> %s" % (role, q[:42], top[:44]))
+                at = next(n + 1 for n, t in enumerate(top3)
+                          if frag.lower() in t.lower())
+                print("  ok    %-16s %-42s -> #%d %s"
+                      % (role, q[:42], at, top3[at - 1][:41]))
             else:
                 fails.append((role, q, frag, top, len(hits)))
                 print("  FAIL  %-16s %-42s -> %s" % (role, q[:42], top[:44] or "(0 results)"))
