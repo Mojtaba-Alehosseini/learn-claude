@@ -69,16 +69,16 @@ relaxes): `non-technical|builder` (1 pub, 2 items), `teacher|builder` (2 pub, 2 
 
 | role | never-used | basic | confident | builder |
 |---|---|---|---|---|
-| `non-technical` | 66 / 20p / 18x | 72 / 27p / 25x | 20 / 6p / 4x | 2 / 1p / 0x |
-| `student` | 42 / 21p / 18x | 21 / 13p / 11x | 10 / 6p / 5x | 0 / 0p / 0x |
-| `researcher` | 19 / 5p / 2x | 20 / 16p / 13x | 34 / 13p / 11x | 6 / 3p / 2x |
-| `teacher` | 30 / 13p / 9x | 25 / 19p / 16x | 9 / 3p / 2x | 2 / 2p / 1x |
-| `developer` | 7 / 4p / 1x | 19 / 11p / 8x | 44 / 17p / 16x | 56 / 20p / 24x |
-| `data-analyst` | 7 / 4p / 1x | 20 / 14p / 12x | 44 / 10p / 7x | 15 / 5p / 10x |
-| `pm` | 12 / 8p / 5x | 42 / 15p / 15x | 88 / 23p / 25x | 10 / 4p / 3x |
-| `designer` | 7 / 6p / 5x | 10 / 8p / 6x | 23 / 15p / 13x | 7 / 6p / 5x |
-| `business-founder` | 42 / 14p / 10x | 65 / 23p / 21x | 101 / 8p / 6x | 16 / 3p / 3x |
-| `writer-marketer` | 19 / 9p / 7x | 35 / 24p / 22x | 7 / 7p / 4x | 3 / 2p / 3x |
+| `non-technical` | 63 / 20p / 18x | 70 / 27p / 25x | 19 / 6p / 4x | 2 / 1p / 0x |
+| `student` | 42 / 21p / 18x | 20 / 13p / 11x | 10 / 6p / 5x | 0 / 0p / 0x |
+| `researcher` | 18 / 5p / 2x | 20 / 16p / 13x | 32 / 13p / 11x | 6 / 3p / 2x |
+| `teacher` | 30 / 13p / 9x | 25 / 19p / 16x | 8 / 3p / 2x | 2 / 2p / 1x |
+| `developer` | 7 / 4p / 1x | 19 / 11p / 8x | 41 / 17p / 16x | 56 / 20p / 24x |
+| `data-analyst` | 7 / 4p / 1x | 19 / 14p / 12x | 42 / 10p / 7x | 15 / 5p / 10x |
+| `pm` | 12 / 8p / 5x | 42 / 15p / 15x | 77 / 23p / 25x | 8 / 4p / 3x |
+| `designer` | 8 / 6p / 5x | 11 / 8p / 6x | 23 / 15p / 13x | 7 / 6p / 5x |
+| `business-founder` | 41 / 14p / 10x | 65 / 23p / 21x | 85 / 8p / 6x | 16 / 3p / 3x |
+| `writer-marketer` | 20 / 9p / 7x | 35 / 24p / 22x | 16 / 7p / 4x | 3 / 2p / 3x |
 
 ## Live resources the freshness rule excludes from every pool
 

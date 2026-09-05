@@ -10385,8 +10385,7 @@
     "url": "https://academy.claude.com/use-cases/plan-your-literature-review",
     "author": "Anthropic",
     "roles": [
-      "researcher",
-      "student"
+      "researcher"
     ],
     "level": "basic",
     "topics": [
@@ -19023,8 +19022,7 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "writer-marketer",
-      "business-founder"
+      "writer-marketer"
     ],
     "level": "basic",
     "topics": [
@@ -19201,8 +19199,7 @@
     "official": true,
     "roles": [
       "designer",
-      "pm",
-      "data-analyst"
+      "pm"
     ],
     "level": "basic",
     "topics": [
@@ -24879,8 +24876,7 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "business-founder",
-      "pm"
+      "writer-marketer"
     ],
     "level": "confident",
     "topics": [
@@ -24967,8 +24963,7 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "business-founder",
-      "pm"
+      "writer-marketer"
     ],
     "level": "confident",
     "topics": [
@@ -25011,9 +25006,7 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "business-founder",
-      "pm",
-      "data-analyst"
+      "writer-marketer"
     ],
     "level": "confident",
     "topics": [
@@ -25100,8 +25093,7 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "data-analyst",
-      "developer"
+      "data-analyst"
     ],
     "level": "confident",
     "topics": [
@@ -25186,8 +25178,7 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "developer",
-      "pm"
+      "developer"
     ],
     "level": "builder",
     "topics": [
@@ -25276,7 +25267,6 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "pm",
       "designer"
     ],
     "level": "builder",
@@ -25495,8 +25485,7 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "pm",
-      "business-founder"
+      "pm"
     ],
     "level": "confident",
     "topics": [
@@ -25539,8 +25528,7 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "data-analyst",
-      "business-founder"
+      "data-analyst"
     ],
     "level": "confident",
     "topics": [
@@ -25625,8 +25613,7 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "business-founder",
-      "pm"
+      "writer-marketer"
     ],
     "level": "confident",
     "topics": [
@@ -25757,8 +25744,7 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "designer",
-      "developer"
+      "designer"
     ],
     "level": "confident",
     "topics": [
@@ -25934,8 +25920,7 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "pm",
-      "business-founder"
+      "pm"
     ],
     "level": "confident",
     "topics": [
@@ -25980,8 +25965,7 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "pm",
-      "business-founder"
+      "pm"
     ],
     "level": "confident",
     "topics": [
@@ -26071,8 +26055,7 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "business-founder",
-      "pm"
+      "business-founder"
     ],
     "level": "confident",
     "topics": [
@@ -26160,8 +26143,7 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "business-founder",
-      "pm"
+      "writer-marketer"
     ],
     "level": "confident",
     "topics": [
@@ -26375,8 +26357,7 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "business-founder",
-      "designer"
+      "business-founder"
     ],
     "level": "confident",
     "topics": [
@@ -26723,7 +26704,7 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "non-technical"
+      "designer"
     ],
     "level": "basic",
     "topics": [
@@ -26810,8 +26791,7 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "designer",
-      "pm"
+      "designer"
     ],
     "level": "confident",
     "topics": [
@@ -26856,8 +26836,7 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "designer",
-      "developer"
+      "designer"
     ],
     "level": "confident",
     "topics": [
@@ -26901,8 +26880,7 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "designer",
-      "pm"
+      "designer"
     ],
     "level": "confident",
     "topics": [
@@ -26946,7 +26924,8 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "business-founder"
+      "designer",
+      "writer-marketer"
     ],
     "level": "confident",
     "topics": [
@@ -26986,8 +26965,7 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "data-analyst",
-      "business-founder"
+      "data-analyst"
     ],
     "level": "confident",
     "topics": [
@@ -27031,8 +27009,7 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "data-analyst",
-      "business-founder"
+      "data-analyst"
     ],
     "level": "confident",
     "topics": [
@@ -27119,8 +27096,7 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "developer",
-      "pm"
+      "developer"
     ],
     "level": "confident",
     "topics": [
@@ -27210,8 +27186,7 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "data-analyst",
-      "researcher"
+      "data-analyst"
     ],
     "level": "confident",
     "topics": [
@@ -27557,7 +27532,7 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "business-founder"
+      "writer-marketer"
     ],
     "level": "confident",
     "topics": [
@@ -27914,7 +27889,7 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "non-technical"
+      "student"
     ],
     "level": "confident",
     "topics": [
@@ -28002,7 +27977,6 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "pm",
       "data-analyst"
     ],
     "level": "confident",
@@ -29154,8 +29128,7 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "business-founder",
-      "data-analyst"
+      "business-founder"
     ],
     "level": "confident",
     "topics": [
@@ -29243,8 +29216,7 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "business-founder",
-      "pm"
+      "writer-marketer"
     ],
     "level": "confident",
     "topics": [
@@ -29330,8 +29302,7 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "business-founder",
-      "non-technical"
+      "business-founder"
     ],
     "level": "never-used",
     "topics": [
@@ -29453,8 +29424,7 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "business-founder",
-      "non-technical"
+      "designer"
     ],
     "level": "never-used",
     "topics": [
@@ -29494,8 +29464,7 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "business-founder",
-      "researcher"
+      "writer-marketer"
     ],
     "level": "confident",
     "topics": [
@@ -29983,7 +29952,7 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "non-technical"
+      "business-founder"
     ],
     "level": "basic",
     "topics": [
@@ -30027,8 +29996,7 @@
     "official": true,
     "roles": [
       "student",
-      "researcher",
-      "teacher"
+      "researcher"
     ],
     "level": "confident",
     "topics": [
@@ -30204,8 +30172,7 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "data-analyst",
-      "business-founder"
+      "data-analyst"
     ],
     "level": "confident",
     "topics": [
@@ -30476,8 +30443,7 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "researcher",
-      "student"
+      "researcher"
     ],
     "level": "confident",
     "topics": [
@@ -30650,8 +30616,7 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "researcher",
-      "non-technical"
+      "writer-marketer"
     ],
     "level": "never-used",
     "topics": [
