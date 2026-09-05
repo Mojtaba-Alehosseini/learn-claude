@@ -458,6 +458,22 @@ Provenance line at the bottom:
 
 ---
 
+### Who "we" is *(how-we-check.html)*
+
+> One person makes this site - a researcher at the Technical University of Denmark, working on it outside their job. It is not affiliated with Anthropic and takes no money from anyone to rank anything. The reading is done by Claude, at the level each card's label claims and no further: Claude opens the pages, writes the summary, the who-it-is-for and the who-should-skip-it lines, and chooses the three picks. A person sets the rules, decides what the labels are allowed to say, and reads the arguments - and has not yet read a single resource end to end, which is why the strongest label has the count you can see above it. When this site says "we", that is what it means.
+
+D13, ruled after Attack 2: four of ten agents asked who "we" was, and one said the answer
+would change how much of the rest they believed. Three things have to be in it and all
+three are uncomfortable: one person, not a team; the reading is Claude's, not a person's;
+and nobody has read anything end to end yet.
+
+No name. The ruling made that the default and the sentence works without one - what a
+reader needs is the shape of the operation, not who to email. The last clause points at the
+tier tally computed above it rather than stating the count, because a number typed into a
+paragraph is a number that rots.
+
+---
+
 ### What search can and cannot do *(how-we-check.html)*
 
 > Search finds what we hold, and nothing else. It reads the title, the hidden questions and keywords, what a resource teaches, who it is for and who should skip it - so a sentence in your own words usually lands. It will not tell you which of three results is best; that is what "Start with these three" is for, on the Browse page, where a role and a level are chosen. And when we have nothing on your subject, you get nothing back and a line saying so. That is a gap in the shelves, not a trick of the ranking, and the ones we know about are listed in STATUS.md under "Questions the catalogue cannot answer".
