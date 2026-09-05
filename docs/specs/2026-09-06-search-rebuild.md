@@ -157,9 +157,16 @@ first keystroke, and served gzipped; raw bytes are not what a phone downloads or
 Stated properly, the budget is **150 KB transferred**, and the index is at 146 KB against
 103 KB before this round. The build prints both numbers on every run.
 
-If that is ever exceeded, the first cut is the phrase map: 4,059 phrases for a +6 bonus, the
-largest single section after the postings themselves, and the one whose value has never
-been measured on its own.
+**The phrase map was measured by removal, and it stays.** It is the largest section after
+the postings - 4,059 entries, 123 KB raw and 35 KB gzipped, a quarter of the transferred
+file - and building without it takes the suite from 24 to 23. One query needs it:
+`is claude free`, from the non-technical reader, where the phrase "is claude free" is
+matched whole against the plan page's own question list. No query is hurt by it.
+
+So the ratio is stark and it is written down rather than argued: 35 KB over the wire for
+one query in fifty-seven. It stays because the ruling was measure-then-decide and the
+measurement moved. If the budget is ever exceeded this is still the first thing to weigh,
+and the next round now has the number instead of an opinion.
 
 ---
 
