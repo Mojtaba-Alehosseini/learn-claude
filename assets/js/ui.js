@@ -70,6 +70,11 @@
   LC.PICKS_UI = {
     heading3: "Start with these three",
     heading2: "Start with these two",
+    /* D8. Filtering can leave one pick standing. Un-filtered, a single card is not a
+       set and the validator makes it unshippable; filtered, it is the one thing the
+       picker chose that survived what the reader asked for, and hiding it would be the
+       old fault in a smaller size. */
+    heading1: "Start with this one",
     by: "picked by AI",
     rest: "Everything else for you",
 
@@ -86,7 +91,15 @@
     },
     /* Three or fewer to choose from is not a shortlist, and calling it one would be the
        page flattering itself. */
-    tooFew: "Too few to pick from \u2014 these are all of them."
+    tooFew: "Too few to pick from \u2014 these are all of them.",
+
+    /* D8. Every pick filtered out. Naming the count keeps it honest for the cells that
+       hold two, and naming the cause keeps the reader from reading it as "we have
+       nothing for you" - the picks exist, they are just not what was asked for. */
+    noneMatch: function (n) {
+      return "None of the " + (n === 2 ? "two" : "three") +
+             " picks match your other filters.";
+    }
   };
 
   /* Order is fixed and meaningful: most thoroughly checked first. */

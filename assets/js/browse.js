@@ -255,16 +255,24 @@
      one role and exactly one level, nothing else narrowing the list. Any further
      filter or a search could exclude a pick, and a block recommending something the
      reader just filtered out would be the page contradicting itself. */
+  /* The two front-door questions, answered. D8: the block belongs to this reader
+     whatever else they then narrow by, so this is all picksCell() needs. */
+  function atRoleLevel() {
+    return sel.roles.length === 1 && sel.levels.length === 1;
+  }
+
+  /* The two questions and nothing else. Stricter, and used only by the "too few to
+     pick from" line - "these are all of them" is a claim about the pool, and it stops
+     being true the moment a filter or a query is narrowing what is on screen. */
   function atCell() {
-    if (q.trim()) return false;
-    if (sel.roles.length !== 1 || sel.levels.length !== 1) return false;
+    if (q.trim() || !atRoleLevel()) return false;
     return !(sel.times.length || sel.topics.length || sel.formats.length ||
              sel.costs.length || sel.officials.length);
   }
 
   function picksCell() {
     if (!window.LC_PICKS || !window.LC_PICKS.cells) return null;
-    if (!atCell()) return null;
+    if (!atRoleLevel()) return null;
     return window.LC_PICKS.cells[sel.roles[0] + "|" + sel.levels[0]] || null;
   }
 
@@ -286,11 +294,28 @@
     var byUrl = {};
     out.forEach(function (it) { byUrl[it.url] = it; });
     var shown = cell.picks.filter(function (p) { return byUrl[p.url]; });
-    /* The validator makes a missing pick unshippable, so this guard is for a stale
-       browser cache, not an expected state. A one-card "start here" is not a set. */
-    if (shown.length < 2) { el.picks.innerHTML = ""; return {}; }
 
-    var heading = shown.length === 2 ? LC.PICKS_UI.heading2 : LC.PICKS_UI.heading3;
+    /* D8. A pick can be missing for two different reasons and they need different
+       answers. If the reader has narrowed the list, the pick is legitimately gone and
+       the block says so rather than vanishing. If nothing is narrowing and a pick is
+       still missing, the data is wrong - the validator makes that unshippable, so it
+       means a stale browser cache, and there the old silence is still right. */
+    if (!shown.length) {
+      /* Nothing on screen at all: the empty state already explains it, and a second
+         sentence about the picks would just be the page saying "nothing" twice. */
+      el.picks.innerHTML = (atCell() || !out.length)
+        ? ""
+        : '<p class="picks-why picks-why-alone">' +
+          LC.esc(LC.PICKS_UI.noneMatch(cell.picks.length)) + '</p>';
+      return {};
+    }
+    if (shown.length < cell.picks.length && atCell()) {
+      el.picks.innerHTML = ""; return {};
+    }
+
+    var heading = shown.length === 1 ? LC.PICKS_UI.heading1
+                : shown.length === 2 ? LC.PICKS_UI.heading2
+                : LC.PICKS_UI.heading3;
     /* Only when the shortfall is the picker's, not this reader's filtering. */
     var why = (shown.length === 2 && shown.length === cell.picks.length)
       ? LC.PICKS_UI.why[cell.two_pick_cause] : "";

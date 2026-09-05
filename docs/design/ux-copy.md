@@ -217,6 +217,17 @@ exists — the line stands on its own above the results:
 
 The 0-result state already speaks for itself and is left alone.
 
+**When the reader narrows the list** *(D8, 2026-09-05)* — the block used to vanish the
+moment anyone typed a word or clicked a third filter, which hid the site's only real
+editorial work from its most engaged reader. It now stays wherever role and level are set.
+A pick the reader has filtered out is omitted, the heading counts what is left
+(`Start with this one` at one), and when every pick is gone:
+
+> None of the three picks match your other filters.
+
+Count-honest, so a two-pick cell says "two". On a page with no results at all the empty
+state says it already, and this line stays quiet rather than saying nothing twice.
+
 **Label:** `picked by AI · 31 Aug 2026` — the honesty label, same ladder as the tier
 badges. Nothing may imply a person chose these. The date is `picked_on` from
 data/picks.json, formatted like every other date on the site.
