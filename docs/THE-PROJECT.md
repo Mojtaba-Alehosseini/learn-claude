@@ -344,8 +344,6 @@ data, so they are never written by hand.
   advanced-end survey stays half-blind. Part 11 states the consequence.
 - **The report link needs a GitHub account.** Most of the intended audience does not have
   one. An email address would fix it. Deliberately parked.
-- **The catalogue is 61% Anthropic.** Decided knowingly. `official` is a Browse filter and
-  `how-we-check.html` states the ratio, computed from the data.
 - **Three people, one hour.** Part 11 has said for three weeks that this would teach more
   than another fix round. The script is now written and waiting, so the hour is not spent
   deciding what to ask: `docs/specs/2026-09-04-first-human-test.md`.
@@ -354,8 +352,8 @@ data, so they are never written by hand.
 
 ## 11. What is weak, said plainly
 
-**637 resources and 35 path steps.** "Start with these three" now covers 37 of the 40
-cells with 109 comparative picks, so a person filtering to "not a coder / used it a
+**598 resources and 36 path steps.** "Start with these three" now covers 36 of the 40
+cells with 107 comparative picks, so a person filtering to "not a coder / used it a
 little" is told which three to open first instead of being handed 72 cards in file order.
 What remains uneven is everything below that block: three picks are ranked, and the other
 69 in that cell are not.
@@ -375,16 +373,29 @@ unsupported and `UNVERIFIED` is deliberately not stale. One of them is a 2023 ar
 host that blocks us. The rule that refuses to round up cuts both ways, and this is the
 side that costs something.
 
-**78% of the catalogue is "Skimmed".** We read an outline. That is honestly labelled, but
+**83% of the catalogue is "Skimmed".** We read an outline. That is honestly labelled, but
 it is a weaker claim than the site's own pitch implies, and the strongest label is still
 empty.
 
-**The advanced end is a monoculture, and we now know roughly why.** Publisher diversity
-collapses as level rises — `basic` cells draw on 10–27 publishers, `builder` cells on
-1–3. `non-technical|builder` remains the one pool in the catalogue with **zero**
-non-Anthropic items, and `student|builder` is still empty. This is not thinness in
-general: `developer|builder` holds 57 items from 17 publishers, 16 of them independent.
-It is thin specifically for people who do not write code.
+**The advanced end is thin, and many of the catalogue's `builder` rows left it on purpose.**
+`builder` now holds 94 rows, down from 182, because Rule A stopped counting somebody
+else's recipe as something you built. That is the honest number rather than a worse one:
+two thirds of the old `builder` was Cowork recipes with connectors attached.
+
+What is underneath has not changed shape. `developer|builder` holds 58 items from 20
+publishers, 16 of them independent. `non-technical|builder` holds two rows, both from
+Anthropic, with no independent voice at all. `business-founder|builder` holds 13 from 3
+publishers. `student|builder` is empty. The advanced end is not thin in general; it is thin for everyone who does not
+write code, and Rule A made that visible rather than causing it.
+
+**The catalogue is 59% Anthropic's own writing, and that figure fell for a bad reason.**
+It was 61.4% on 5 September 2026 and was recorded in the backlog as decided knowingly.
+Then D12 measured what those rows were doing: 148 single-recipe gallery pages, most of
+them tagged for readers their own cards named somebody else for. Rules A, B and C removed
+40 of them into five collection cards and dropped two outright, and every row that left
+was Anthropic's. A composition figure that improves because rows nobody could use were
+removed is an accounting correction, not a win, and it is written up as one in
+[the gallery-collections spec](specs/2026-09-06-gallery-collections.md).
 
 A supply survey on 4 September 2026 (`research/2026-09-04-advanced-end-supply-survey.md`)
 walked five publishers and found **five plausible non-coder candidates** — two DataCamp
@@ -400,10 +411,12 @@ those get walked by hand is Morteza's call, and this paragraph does not wait for
 they are never walked, the honest statement is that the catalogue's independent advanced
 material will stay under-represented, and a reader filtering to `builder` as a
 non-developer is mostly reading Anthropic's own material. The constraint check found this
-without
-being asked the question.
+without being asked the question.
 
-**Roles are uneven.** 220 entries for someone running a business, 46 for a designer.
+Every number in this section was measured on 6 September 2026. The live ones are in
+[STATUS.md](STATUS.md); none of these is a figure to quote tomorrow.
+
+**Roles are uneven.** 178 entries for someone running a business, 50 for a designer.
 
 **No human has ever used this site.** Ten AI agents have attacked it and found a great deal.
 That is not the same thing. Three real people — a teacher, a student, a writer — would
