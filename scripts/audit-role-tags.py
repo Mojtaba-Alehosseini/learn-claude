@@ -44,10 +44,25 @@ marketers", "Marketing teams", tagged `business-founder, pm` - and without the a
 they would have been swept into a collection card when the fix was a tag they should
 always have had. Refusing to add would have caused a deletion.
 
-FITS NO ROLE
+FITS NO ROLE, AND THE TWO THINGS THAT MEANS
 
-A row fits no role when its card names none - not when its current tags happen to be
-wrong. Those are Rule C's, printed at the end grouped by the gallery's own family.
+A row fits no role when its card names none of the ten - not when its current tags happen
+to be wrong. But that answer covers two different situations and FIX-28 found them tangled
+together in one pile of sixty rows.
+
+A card can name a job this site has no role for: "regulatory affairs staff at a pharma or
+device company", "payer clinical reviewers", "healthcare administrators". Those are the
+rows Rule C is about, and the ruling is to tag them if the page serves one of the ten and
+remove them otherwise.
+
+Or a card can name no job at all: "Claude Code users whose sessions have grown long
+enough", "A paid-plan user deciding whether Claude in Chrome fits", "Complete beginners
+who have never opened Claude". Those describe a situation, not an occupation, and FIX-16
+settled them - a card that names nobody in particular serves everybody, and its tags stand.
+
+The two are told apart with the off-roster job vocabulary validate-catalogue.py keeps for
+the Puckett check. Names an off-roster job, no role: Rule C's. Names no job at all: left
+alone.
 """
 
 import io
@@ -96,6 +111,20 @@ NEUTRAL = re.compile(r"^\s*(anyone|any\b|someone|somebody|people who|everyone|wh
                      r"those who|a reader|teams?\b)", re.I)
 
 
+def off_roster():
+    """The job vocabulary validate-catalogue.py already keeps, borrowed rather than
+    copied. Two lists of the same job titles is two lists to forget."""
+    import importlib.util
+    path = os.path.join(ROOT, "scripts", "validate-catalogue.py")
+    spec = importlib.util.spec_from_file_location("_vc", path)
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod.OFF_ROSTER
+
+
+OFF = off_roster()
+
+
 def load(path):
     with io.open(path, encoding="utf-8") as f:
         return json.load(f)
@@ -108,6 +137,7 @@ def main():
     fam = load(FAM) if os.path.exists(FAM) else {}
 
     dropped, roleless, rescued, suggested = [], defaultdict(list), [], []
+    neutral = []
 
     for it in items:
         if gallery_only and not it["url"].startswith(GALLERY):
@@ -127,9 +157,15 @@ def main():
         add_anywhere = sorted(named_anywhere - set(tags))
 
         if not named:
+            jobs = [f for f, rx in OFF.items() if rx.search(who)]
+            if not jobs:
+                # Names a situation, not an occupation. FIX-16: leave it alone.
+                neutral.append(it)
+                continue
             slug = (it["url"][len(GALLERY):].rstrip("/")
                     if it["url"].startswith(GALLERY) else None)
-            roleless[fam.get(slug) or "(not in the gallery)"].append((it, lose))
+            key = fam.get(slug) or ("off-roster: " + "/".join(jobs))
+            roleless[key].append((it, lose))
             continue
         if not keep and add:
             # Every tag fails and the card names something else. Not adding here would
@@ -163,6 +199,13 @@ def main():
         print("       who:  %s" % (it.get("who_for") or "")[:104])
         if from_skip:
             print("       skip: %s" % (it.get("skip_if") or "")[:104])
+
+    print()
+    print("NAMES A SITUATION RATHER THAN A JOB (%d rows) - left alone, FIX-16" % len(neutral))
+    for it in neutral[:6]:
+        print("  %-46s %s" % (it["title"][:46], (it.get("who_for") or "")[:60]))
+    if len(neutral) > 6:
+        print("  ... and %d more" % (len(neutral) - 6))
 
     total_roleless = sum(len(v) for v in roleless.values())
     print()

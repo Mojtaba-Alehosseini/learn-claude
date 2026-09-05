@@ -398,3 +398,95 @@ one page at a time. On today's catalogue, gallery rows carrying a tag their card
 The 77 rows outside the gallery carrying a tag the tightened patterns deny are not a
 FIX-25 fault - Rule B has never been run outside the use-case gallery at all. They are the
 sweep that is still owed, and they are named as such in the FIX-26 record.
+
+---
+
+# Rule B outside the gallery: batch 1, and the checkpoint
+
+Rule B had only ever run on the use-case gallery. Outside it the sweep found 78
+rows carrying a tag their card denies and 60 that fit no role.
+
+## The third bucket was two buckets
+
+Reading the sixty, most name no job at all: "Claude Code users whose sessions have
+grown long enough", "A paid-plan user deciding whether Claude in Chrome fits",
+"Complete beginners who have never opened Claude". Those are situations, not
+occupations, and FIX-16 settled them - a card that names nobody serves everybody.
+The sweep could not tell them from cards written for a job off the roster, because
+it only asked whether one of our ten was named and put everything else in one pile.
+
+It now asks the second question with the off-roster job vocabulary
+`validate-catalogue.py` already keeps, extended with the families this sweep found -
+regulatory affairs, payer clinical reviewers, clinical feasibility leads, healthcare
+administrators, patients, enterprise and nonprofit admins, investment teams. The
+sixty split **41 naming a situation** and **19 naming an off-roster job**.
+
+## Batch 1: 34 rows
+
+| outcome | rows |
+|---|---|
+| trimmed - the card denies the tag and the card is right | 11 |
+| rewritten - the page supports the tag and the card was wrong | 5 |
+| rewritten and retagged - the page serves a role the row did not carry | 6 |
+| removed | **0 applied, 12 proposed** |
+| flagged as a pick or path step | 0 |
+
+**The checkpoint fired.** Twelve removals in thirty-four rows is over a third, and
+the rule was to stop above a fifth and show them. None of the twelve is a pick or a
+path step, so nothing is load-bearing; they are listed below and not touched.
+
+## Trimmed
+
+- **3 Mind Blowing Claude & Consensus Research Workflows | No Coding** `-non-technical` — Researchers and graduate students, with literature-review workflows and Consensus. A non-coder who is not doing research is not its reader.
+- **Advancing Claude for Education** `-teacher` — Written for a student at a Claude for Education university, about what their own lectures and library connect to. The teacher-facing announcement is a different row.
+- **AI Fluency for students** `-teacher` — Anthropic's course applying the 4D framework to student life. A teacher's version exists separately.
+- **AI Student Research Guide: Prompt Engineering** `-non-technical` — A university library's page for its own students. The site has non-technical prompting material that does not assume coursework.
+- **Anthropic Education Report: How University Students Use Claude** `-teacher` — A student-framed read of how peers use AI. The educator report is its own row.
+- **Best practices for Claude Code** `-pm` — Anthropic's playbook for developers who use Claude Code daily. The site has four Claude-Code-for-PMs rows and this is not one of them.
+- **Claude AI for Researchers: Projects, Skills, Cowork & Consensus Explained** `-non-technical` — PhD students, postdocs and academics, framed in research terms throughout.
+- **Claude Code 101** `-pm` — The official onboarding for engineers who have not used an agentic coding tool.
+- **Claude Code for Product Managers (Maven, Aman Khan and Eric Xiao)** `-designer` — A PM cohort course. Wireframes appear as an output, not as an audience.
+- **Claude Code for Product Managers with Sachin Rekhi** `-designer` — The strategic case for AI in product work, for experienced PMs.
+- **Claude Code for product managers: research, writing, context libraries, custom to-do system, more** `-non-technical` — A PM's end-to-end workflow for research synthesis and drafting. Almost nothing here is programming, but a PM workflow is not a general-audience one.
+
+## Rewritten
+
+- **AI feedback customized for student writers: the updated PAIRR prompts** `student,teacher -> student,teacher` — The card named only a student while the page's own prompts are written for instructors to deploy. The page supports `teacher`; the card was wrong.
+- **AI Fluency for Nonprofits** `business-founder -> business-founder` — The page names leadership among its audiences and the card left it out, which is the only reason `business-founder` looked wrong.
+- **AI Fluency for Small Businesses** `business-founder,non-technical -> business-founder,non-technical` — A nine-lesson course taught by small-business owners for people new to AI. The non-coder is its reader; the card just never said so.
+- **AI: Artificial Intelligence Resources: Claude** `researcher,student,non-technical -> researcher,student` — A university library guide, written for the students it serves as much as for faculty. `student` holds and the card was hiding it; `non-technical` does not - it is shelved inside an academic research guide.
+- **Using the 10x Genomics Extension in Claude** `researcher -> researcher` — Computational biology is research. The card led with the facility manager, which is the off-roster half of its audience.
+- **How to use Claude in Excel for accounting: Revenue model validation** `data-analyst,business-founder -> data-analyst,business-founder` — Validating somebody else's spreadsheet model is analyst work whoever holds the job title. The page serves `data-analyst`.
+- **How to use Claude in Excel for HR: Headcount planning** `business-founder,pm -> business-founder,data-analyst` — Writing formulas into an inherited model is analyst work. `pm` is not in the page anywhere; `data-analyst` is what it actually serves.
+- **How to enable Claude Code for your Enterprise team** `developer -> business-founder,developer` — Seat allocation is a decision the person paying makes. The page serves the owner as much as the admin, and this site has a role for the owner.
+- **Scaling workflows with Claude Cowork at your organization** `business-founder,pm -> business-founder` — Scaling past a pilot is the owner's decision in a small organisation. `pm` is not in the page.
+- **Claude Cowork Enterprise Admin Guide** `business-founder,pm -> business-founder` — Same reader as the scaling guide. `pm` is not in the page.
+- **Claude for nonprofits partnership success guide for admins** `business-founder,pm -> business-founder` — In a small nonprofit the executive director is the admin. `pm` is not in the page.
+
+## Proposed for removal — held for a decision
+
+Every one of these is a card written for a job this site has no role for, on a page
+that serves that job and no other. None is a pick or a path step.
+
+| row | who its card names | why it cannot be retagged |
+|---|---|---|
+| How to use the Clinical Trial Protocol Draft Generation sample skill | Regulatory affairs staff at a pharma or device company | Drafting a regulatory submission is not research and not one of the ten. |
+| Using the Medidata Connector in Claude | Clinical feasibility leads, study managers, site selection specialists | Three job titles, none of them ours, on a platform most readers cannot log into. |
+| How to use the Prior Auth Review sample skill with Claude | Payer clinical reviewers | Insurance utilisation review. No role here comes near it. |
+| Using the HealthEx Connector in Claude | Patients managing a chronic condition | A patient is not a role on a directory about learning Claude for work. |
+| Using the NPI Registry Connector in Claude | Healthcare administrators, credentialing staff, healthcare recruiters | Provider credentialing. Off the roster three ways. |
+| Install financial services plugins for Claude Cowork | Financial modeling, equity research, investment banking, private equity, wealth management teams | The same audience the gallery's Finance collection card was built for, on a setup page rather than a recipe. |
+| Financial analysis workflows with Claude | Investment professionals with Daloopa, S&P Global or FactSet access | Requires institutional data subscriptions before the first step. |
+| Using Chronograph for portfolio monitoring | Private equity portfolio and investment teams | Private equity portfolio monitoring. |
+| Using Egnyte for data room management with Claude | M&A and legal teams doing due diligence over a data room | M&A diligence, which Rule C already removed from the gallery as a family. |
+| Using FactSet for comprehensive financial research | Investment professionals who already rely on FactSet | Same audience, same subscription gate. |
+| Claude Enterprise Administrator Guide | An Enterprise admin planning SSO/SCIM setup | SSO and SCIM are IT work. The owner-facing rollout guides are kept and retagged; this one is the identity-provider half and nobody here does that. |
+| Using Claude Cowork for sales: research any account before the call | An account executive | The sales family, outside the gallery. Its eleven siblings became a collection card in FIX-25. |
+
+Two shapes. Nine are gated behind something the reader cannot get: an institutional
+data subscription, a Medidata account, a payer's claims system. Three are jobs
+nobody on this roster does - a patient, a credentialing clerk, an identity-provider
+admin. The alternative to removing them is a healthcare collection card and a
+finance one, which is what Rule C did for the gallery, and building those was not
+what this round was asked to do.
+

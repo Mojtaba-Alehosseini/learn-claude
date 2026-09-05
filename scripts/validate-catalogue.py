@@ -581,7 +581,18 @@ OFF_ROSTER = {
     "support": r"\bsupport (?:rep|team|agent)s?\b|\bhelp ?desk\b",
     "operations": r"\bprocurement\b|\bvendor manage\w*\b|\bcompliance officers?\b",
     "clinical": (r"\bmedical coders?\b|\bbilling specialists?\b|\bclinicians?\b"
-                 r"|\bcredentialing staff\b|\bprior authorization\b"),
+                 r"|\bcredentialing staff\b|\bprior authorization\b"
+                 # Found by the whole-catalogue sweep in FIX-28. Every one of these is a
+                 # real job and none of them is one of this site's ten.
+                 r"|\bregulatory affairs\b|\bpayer clinical reviewers?\b"
+                 r"|\bclinical feasibility\b|\bstudy managers?\b"
+                 r"|\bsite selection specialists?\b|\bhealthcare administrators?\b"
+                 r"|\bhealthcare recruiters?\b|\bpatients?\b|\bcore facility managers?\b"),
+    "it-admin": (r"\benterprise admin\w*\b|\bworkspace admin\w*\b|\bit admin\w*\b"
+                 r"|\brollout leads?\b|\bnonprofit admin\w*\b"),
+    "investment": (r"\binvestment (?:professional|team|bank\w*)s?\b|\bprivate equity\b"
+                   r"|\bportfolio (?:team|manager)s?\b|\bwealth management\b"
+                   r"|\bm&a (?:and legal )?teams?\b"),
 }
 OFF_ROSTER = {k: re.compile(v, re.I) for k, v in OFF_ROSTER.items()}
 

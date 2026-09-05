@@ -18,7 +18,7 @@
     "language": "en",
     "tier": "previewed",
     "summary": "A 9-lesson course, taught by real small-business owners, on choosing which tasks to hand to AI, handling customer data responsibly, and writing an AI use policy, built on the 4D framework.",
-    "who_for": "Founders and staff new to AI who want a structured, vetted foundation before subscribing to or rolling out Claude.",
+    "who_for": "Founders and staff with no technical background who want a structured, vetted foundation before subscribing to or rolling out Claude.",
     "skip_if": "You are already AI-fluent and want product mechanics rather than a decision framework.",
     "published": "UNVERIFIED",
     "checked": "2026-09-05",
@@ -1276,7 +1276,7 @@
     "language": "en",
     "tier": "previewed",
     "summary": "The 4D framework adapted for mission-driven work: research, grant proposals, donor communications, and program data analysis.",
-    "who_for": "Nonprofit staff across fundraising, communications, program delivery, operations, and leadership.",
+    "who_for": "Nonprofit leadership and staff - the executive director deciding whether to adopt it, and the fundraising, communications, programme and operations people who would use it.",
     "skip_if": "The same 4D framework as the general course with grant proposals and donor communications swapped into the examples, so take one or the other and not both. Separately worth knowing: nonprofits qualify for up to 75% off Team and Enterprise.",
     "published": "UNVERIFIED",
     "checked": "2026-09-05",
@@ -4155,8 +4155,7 @@
     "url": "https://code.claude.com/docs/en/best-practices",
     "author": "Anthropic",
     "roles": [
-      "developer",
-      "pm"
+      "developer"
     ],
     "level": "confident",
     "topics": [
@@ -5103,8 +5102,7 @@
     "url": "https://academy.claude.com/courses/claude-code-101",
     "author": "Anthropic (Claude Academy)",
     "roles": [
-      "developer",
-      "pm"
+      "developer"
     ],
     "level": "basic",
     "topics": [
@@ -10110,8 +10108,7 @@
     "url": "https://maven.com/aman-khan/claude-code-for-product-managers",
     "author": "Aman Khan (Arize) and Eric Xiao",
     "roles": [
-      "pm",
-      "designer"
+      "pm"
     ],
     "level": "confident",
     "topics": [
@@ -11419,8 +11416,7 @@
     "url": "https://academy.claude.com/courses/ai-fluency-for-students",
     "author": "Anthropic, with Prof. Joseph Feller (University College Cork) and Prof. Rick Dakan (Ringling College)",
     "roles": [
-      "student",
-      "teacher"
+      "student"
     ],
     "level": "never-used",
     "topics": [
@@ -11526,8 +11522,7 @@
     "url": "https://www.anthropic.com/news/anthropic-education-report-how-university-students-use-claude",
     "author": "Anthropic",
     "roles": [
-      "student",
-      "teacher"
+      "student"
     ],
     "level": "basic",
     "topics": [
@@ -11574,8 +11569,7 @@
     "url": "https://www.anthropic.com/news/advancing-claude-for-education",
     "author": "Anthropic",
     "roles": [
-      "student",
-      "teacher"
+      "student"
     ],
     "level": "basic",
     "topics": [
@@ -12563,8 +12557,7 @@
     "url": "https://westmoreland.libguides.com/AIStu/prompt",
     "author": "Westmoreland County Community College Library",
     "roles": [
-      "student",
-      "non-technical"
+      "student"
     ],
     "level": "never-used",
     "topics": [
@@ -12685,7 +12678,7 @@
     "language": "en",
     "tier": "previewed",
     "summary": "The openly published prompts from a funded research project on AI feedback for student writing, tested over a year by writing instructors, plus demonstration chatbots so you can see the kind of feedback they produce. The design goal is feedback that sends you back to a human reader, not away from one.",
-    "who_for": "A student who wants feedback prompts that were actually studied rather than invented for a blog post, and who is willing to read the reasoning behind them.",
+    "who_for": "Instructors and students who want feedback prompts that were actually studied rather than invented for a blog post, and who are willing to read the research behind them.",
     "skip_if": "You want a one-line prompt. These are long, pedagogy-driven prompts written primarily for instructors to deploy, and adapting them takes effort.",
     "published": "2026-01-27",
     "checked": "2026-09-05",
@@ -18156,8 +18149,7 @@
     "official": false,
     "roles": [
       "researcher",
-      "student",
-      "non-technical"
+      "student"
     ],
     "level": "basic",
     "topics": [
@@ -18261,8 +18253,7 @@
     "official": false,
     "roles": [
       "researcher",
-      "student",
-      "non-technical"
+      "student"
     ],
     "level": "basic",
     "topics": [
@@ -18580,8 +18571,7 @@
     "source": "How I AI",
     "official": false,
     "roles": [
-      "pm",
-      "non-technical"
+      "pm"
     ],
     "level": "confident",
     "topics": [
@@ -18637,8 +18627,7 @@
     "source": "Reforge",
     "official": false,
     "roles": [
-      "pm",
-      "designer"
+      "pm"
     ],
     "level": "confident",
     "topics": [
@@ -20821,6 +20810,7 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
+      "business-founder",
       "developer"
     ],
     "level": "builder",
@@ -20836,7 +20826,7 @@
     "published": "UNVERIFIED",
     "checked": "2026-08-29",
     "summary": "Adding Claude Code seats to a Claude for Enterprise plan: three seat types - Standard, Premium, Unassigned - where only Premium includes Claude Code access, and the operational gotchas around bulk-assigning one tier at a time and overflow members landing 'unassigned'.",
-    "who_for": "A Claude for Enterprise admin deciding how to allocate Claude Code seats across a team.",
+    "who_for": "A business owner or engineering lead deciding how to allocate Claude Code seats across a team.",
     "skip_if": "This is seat-gated, not usage-gated, and only primary owners and owners can manage assignments - if you are not one of those two roles this page describes a control panel you cannot reach.",
     "notes": "Read via fetch 2026-08-29, not opened by a person. 4 min read. Includes a copy-paste onboarding message for end users; no dollar figures given anywhere on the page.",
     "prerequisites": [
@@ -20927,7 +20917,7 @@
     "published": "UNVERIFIED",
     "checked": "2026-08-29",
     "summary": "A twenty-minute, chapter-marked walkthrough of validating an ASC 606 revenue model in an inherited workbook: Claude reads every tab, surfaces reconciliation issues, waits for approval before changing anything, and learns the existing revenue-split pattern to fill new rows.",
-    "who_for": "An accountant handed a multi-tab revenue model they did not build and need to trust before presenting it.",
+    "who_for": "An analyst or accountant handed a multi-tab revenue model they did not build and need to trust before presenting it.",
     "skip_if": "Despite the title, it does not walk through an itemised list of ASC 606 checks - the video shows the workflow, not a compliance checklist - and it does not state which plan the Claude in Excel add-in needs.",
     "notes": "Read via fetch 2026-08-29, not opened by a person. 20 min video with chapters (0:00 to 6:11) and copy-paste prompts on the page. Claude shows the proposed change and waits for a 'yes, go ahead' before editing the workbook.",
     "prerequisites": [
@@ -20958,7 +20948,7 @@
     "official": true,
     "roles": [
       "business-founder",
-      "pm"
+      "data-analyst"
     ],
     "level": "confident",
     "topics": [
@@ -20973,7 +20963,7 @@
     "published": "UNVERIFIED",
     "checked": "2026-08-29",
     "summary": "Tracing #REF! errors across a four-tab headcount model, writing cross-sheet formulas, applying conditional logic by department, and building pivot tables and charts from plain-language requests - the sibling to the accounting Excel tutorial, this one states its own plan gate plainly.",
-    "who_for": "HR staff who inherited a headcount or compensation model and need Claude to actually write formulas into it, not just describe them.",
+    "who_for": "An analyst or HR staffer who inherited a headcount or compensation model and needs Claude to write formulas into it, not just describe them.",
     "skip_if": "Claude in Excel is beta and restricted to Max, Team and Enterprise - Pro is not enough, unlike its sibling accounting tutorial which does not mention this at all. Salary data is involved and the page gives no privacy guidance for that.",
     "notes": "Read via fetch 2026-08-29, not opened by a person. 20 min video with timestamped segments and copy-paste prompts. Sibling entry: How to use Claude in Excel for accounting - same product, different plan-gate disclosure.",
     "prerequisites": [
@@ -21093,8 +21083,7 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "business-founder",
-      "pm"
+      "business-founder"
     ],
     "level": "confident",
     "topics": [
@@ -21109,7 +21098,7 @@
     "published": "UNVERIFIED",
     "checked": "2026-08-29",
     "summary": "A rollout playbook for admins, AI CoE leads and transformation teams taking Claude Cowork from one team to the whole organization.",
-    "who_for": "Admins and rollout leads planning how Cowork governance, connectors and adoption scale past a pilot team.",
+    "who_for": "A business owner or rollout lead planning how Cowork governance, connectors and adoption scale past a pilot team.",
     "skip_if": "Names a real product gap rather than glossing over it: governance posture does not currently control connector access - connectors are org-wide on or off today, and cannot yet be scoped per team.",
     "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min read. Assumes org-admin rights over Connectors and governance settings.",
     "prerequisites": [
@@ -22664,8 +22653,7 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "business-founder",
-      "pm"
+      "business-founder"
     ],
     "level": "builder",
     "topics": [
@@ -22680,7 +22668,7 @@
     "published": "UNVERIFIED",
     "checked": "2026-08-29",
     "summary": "A four-phase Claude Cowork enterprise deployment guide - technical setup, change management, enablement, scaling - written for a rollout team of Primary Owner, DNS admin, IdP admin, connector owners and MDM admin.",
-    "who_for": "An enterprise admin planning a Cowork rollout, not an individual user.",
+    "who_for": "A business owner or admin planning a Cowork rollout, not an individual user.",
     "skip_if": "Written for a rollout team on a paid Enterprise plan - candidly admits real gaps too, like 'Audit Logs do not cover Claude Cowork yet' and no in-product undo on an RBAC migration that can drop every user to zero permissions.",
     "notes": "Read via fetch 2026-08-29, not opened by a person. 20 min, ~30k chars. Warns to use the MSIX installer on Windows, not .exe.",
     "prerequisites": [
@@ -22889,8 +22877,7 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "business-founder",
-      "pm"
+      "business-founder"
     ],
     "level": "builder",
     "topics": [
@@ -22905,7 +22892,7 @@
     "published": "UNVERIFIED",
     "checked": "2026-08-29",
     "summary": "A four-phase (Foundation/Activation/Acceleration/Expansion) rollout framework for nonprofit admins launching Claude, with concrete champion-recruitment and 30-day retrospective targets.",
-    "who_for": "A nonprofit admin planning an org-wide Claude rollout.",
+    "who_for": "A nonprofit executive director or admin planning an org-wide Claude rollout.",
     "skip_if": "Needs admin rights for SSO, SCIM, data retention and audit logs even though no plan tier is printed on the page - shares its rollout shape with the enterprise admin guides, just renamed to different phase names.",
     "notes": "Read via fetch 2026-08-29, not opened by a person. 4 min. Recommends recruiting 3-5 champion team members and monthly webinars in the third week of each month.",
     "prerequisites": [
@@ -24304,7 +24291,7 @@
     "published": "UNVERIFIED",
     "checked": "2026-08-29",
     "summary": "A local Claude Desktop extension that runs 10x Cloud Analysis Cell Ranger pipelines - upload data, launch jobs, monitor status, download results - by natural language instead of the command line.",
-    "who_for": "Computational biologists and core facility managers running single-cell or spatial genomics pipelines.",
+    "who_for": "Researchers and computational biologists running single-cell or spatial genomics pipelines, and the core facility managers who support them.",
     "skip_if": "A local Claude Desktop extension, not a remote connector - and unlike most connectors here it actually runs compute jobs on your data, so it needs a free 10x Cloud Analysis account plus real sequencing data to be useful.",
     "notes": "Read via fetch 2026-08-29, not opened by a person. 3 min, shortest in its batch. Covers gene expression, cell multiplexing and CRISPR screening pipelines.",
     "prerequisites": [
@@ -30235,8 +30222,7 @@
     "source": "University of North Dakota",
     "roles": [
       "researcher",
-      "student",
-      "non-technical"
+      "student"
     ],
     "level": "never-used",
     "topics": [
@@ -30246,7 +30232,7 @@
     "time": "under-15min",
     "published": "UNVERIFIED",
     "summary": "A librarian's page on Claude inside a larger guide that also covers ChatGPT, Gemini, Consensus, Scite and NotebookLM. Two hundred and fifty words: what Claude is good at, the ethical framing Anthropic gives it, and the two limits that matter academically - a fixed knowledge cutoff and no access to outside data unless you give it some.",
-    "who_for": "An academic deciding which AI tool to open first, who wants Claude placed next to its alternatives by a librarian rather than sold to them by a vendor.",
+    "who_for": "A student or academic deciding which AI tool to open first, who wants Claude placed next to its alternatives by a librarian rather than by a vendor.",
     "skip_if": "Two hundred and fifty words is an orientation, not a tutorial - it will not teach you to use anything. Its value is the comparison it sits inside, so read the sibling pages too or the point is lost. It also describes 'no access to external data', which is true of a bare chat and not of a Claude with connectors switched on.",
     "teaches": [
       "place Claude against the other AI tools an academic might use",
