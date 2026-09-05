@@ -73,7 +73,15 @@ PATTERNS = [
                re.I),
     re.compile(r"\b%s\b\s+of\s+%s\b" % (POOL, NUM), re.I),
     re.compile(r"\bthe pool's %s\b" % NUM, re.I),
+    # The bare count, with no anchor at all: "Two candidates cover this exact subject".
+    # Missed by everything above, and found by the stale-cell re-read instead.
+    re.compile(r"\b%s\b[\w -]{0,24}?%s\b" % (NUM, POOL), re.I),
 ]
+
+
+# "fifteen minutes in the pool" is a duration standing next to a pool word, not a count of
+# the pool. The resource's own numbers stay - see the header.
+DURATION = re.compile(r"\b(minutes?|hours?|days?|weeks?|months?|years?|min\b)", re.I)
 
 
 def offences(text):
@@ -81,6 +89,8 @@ def offences(text):
     for rx in PATTERNS:
         for m in rx.finditer(text or ""):
             frag = m.group(0)
+            if DURATION.search(frag):
+                continue
             if frag not in out:
                 out.append(frag)
     return out

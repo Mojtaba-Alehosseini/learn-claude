@@ -207,7 +207,7 @@
       "picks": [
         {
           "url": "https://www.builder.io/blog/claude-code-for-designers",
-          "reason": "Two candidates cover this exact subject and this is the one read in full rather than skimmed - and the only guide in the pool straight about where designers actually get stuck: git, pull requests, keeping code and Figma in step.",
+          "reason": "Another candidate covers this exact subject; this is the one read in full rather than skimmed - and the only guide in the pool straight about where designers actually get stuck: git, pull requests, keeping code and Figma in step.",
           "subject": "a designer's real-world Claude Code and Figma workflow"
         },
         {
@@ -379,7 +379,7 @@
         },
         {
           "url": "https://www.youtube.com/watch?v=QqNXf7DfSpA",
-          "reason": "Four feature-tour candidates, and this is the only one that explains the surfaces in research terms rather than business ones - the translation a student otherwise has to do alone.",
+          "reason": "Of the feature tours here, this is the only one that explains the surfaces in research terms rather than business ones - the translation a student otherwise has to do alone.",
           "subject": "a tour of the feature set in academic terms"
         }
       ],
@@ -499,7 +499,7 @@
         },
         {
           "url": "https://www.icmje.org/recommendations/browse/artificial-intelligence/",
-          "reason": "Three journal-policy candidates, and this is the only one not tied to a single publisher - IEEE and Elsevier each bind their own journals, where this covers any medical or biomedical submission.",
+          "reason": "Of the journal-policy candidates here, this is the only one not tied to a single publisher - IEEE and Elsevier each bind their own journals, where this covers any medical or biomedical submission.",
           "subject": "what you must declare when you publish"
         }
       ],
@@ -708,7 +708,7 @@
         },
         {
           "url": "https://annamills.substack.com/p/ai-feedback-customized-for-student",
-          "reason": "Research-tested prompts an instructor can deploy, and the pool's third publisher - it lost to the rules, not to quality. Every legal third pick here is an article, and the two picks above already span the only two formats this pool can reach under the publisher cap. Its who_for also names a student on a card whose own notes say the prompts are written for instructors."
+          "reason": "Research-tested prompts an instructor can deploy, and the pool's third publisher - it lost to the rules, not to quality. Every legal third pick here is an article, and the two picks above already span every format this pool can reach under the publisher cap. Its who_for also names a student on a card whose own notes say the prompts are written for instructors."
         }
       ],
       "note": "Re-cut twice by the same mechanism, and the two cases are worth telling apart. On 2026-09-04 a student-facing Northeastern guide became eligible and looked like a third publisher; opened on 2026-09-05 it turned out to be written by a student for students with nothing for an instructor, so its `teacher` tag came off - the tag was wrong, not the cell, and the third pick came back. On 2026-09-05 the PAIRR prompts came out of `listed` under D1 and became a real third publisher. That one is genuinely for instructors, so the tag stays and the cap tightens to one per publisher. But Anna Mills and Doan Winkel each publish only articles here, so every legal three-pick set spans two formats and the format rule wants three. The two rules cannot both be met at three picks in this pool, so the cell ships two and says so. Its cause was `rule-carried-third-refused` until 2026-09-06, which blamed the shortlist for something the rules did; R4 gave the case its own name.",
@@ -930,7 +930,7 @@
         },
         {
           "url": "https://www.youtube.com/watch?v=PnPsf-hwGtI",
-          "reason": "Four Cowork candidates, and this is the practitioner's take that includes what the tool is not good at - the half a vendor demo never shows.",
+          "reason": "Of the Cowork candidates here, this is the practitioner's take that includes what the tool is not good at - the half a vendor demo never shows.",
           "subject": "a practitioner's honest overview of Cowork"
         }
       ],
