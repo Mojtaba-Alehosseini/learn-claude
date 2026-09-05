@@ -1,7 +1,8 @@
 # D3 — the search rebuild
 
 **Date:** 6 September 2026
-**Status:** spec, awaiting Morteza's approval. No code has been written.
+**Status:** approved 6 September 2026, with five amendments, all folded in below and
+marked where they sit. Built in FIX-27.
 **Measure:** `scripts/test-search.py`, 57 queries. **22 useful today (39%).**
 
 ---
@@ -37,20 +38,59 @@ Per role, useful in the top three today:
 ## 2. The approach, cause by cause
 
 **Stemming — a suffix list, not a library.** One function, applied identically when the
-index is built and when a query is parsed. Suffixes in order, longest first: `ational →
-ate`, `ization/isation → ize`, `iveness → ive`, `fulness → ful`, `ousness → ous`, `ing`,
-`edly`, `ed`, `ies → y`, `es`, `s`. Minimum stem length 4, so `is` and `use` survive. A
-short irregular list beside it — `made/making → make`, `wrote/writing → write`,
-`ran/running → run` — because the suffix rules cannot reach those and the suite needs
-three of them. No Porter implementation, no dependency: the whole point is that the same
-twenty lines run in Python and in the browser and can be read in one sitting.
+index is built and when a query is parsed. Suffixes in order, longest first:
+
+    ational → ate      ization/isation → ize      iveness → ive
+    fulness → ful      ousness → ous
+    ations ation ating ated ates ate → (removed)
+    ing  edly  ed  ies → y  es  s  e
+
+**Amendment 1, and it is a defect in this spec rather than a refinement.** The first draft
+had no -ate family at all, and section 4 nonetheless claimed the stemmer would collapse
+`hallucination`, `hallucinations` and `hallucinated` into one posting list. It would not:
+`hallucinated` reaches `hallucinat` through the `ed` rule and `hallucination` does not move
+at all, so cause 1 would have been reported fixed while the two words stayed in separate
+posting lists and the index still shrank for unrelated reasons. The family is added.
+
+**It is `→ (removed)`, not `→ at`.** Removing the suffix collapses `hallucinate`,
+`hallucinated`, `hallucinating`, `hallucination` and `hallucinations` onto `hallucin`.
+Mapping it to `at` collapses those five onto `hallucinat` equally well, but it leaves
+`citation` at `citat` while `cite`, `cited` and `citing` reach `cit`, and cause 1's other
+half is exactly a citation query. Removal plus a trailing-`e` rule brings all four to
+`cit`.
+
+**Minimum stem length 3, not 4.** `citation` → `cit` is three characters, and at a
+minimum of 4 the whole citation family fails to collapse. The cost of 3 is more collisions
+(`site` and `sit` become one term), so the build prints the largest collision groups and
+the vocabulary count before and after, and a person reads them once.
+
+A short irregular list sits beside the rules — `made/making → make`, `wrote/writing →
+write`, `ran/running → run` — because no suffix rule reaches those and the suite needs
+three of them.
+
+**The unit test contains every word pair the five causes need**, taken from the failing
+suite lines rather than invented: hallucination/hallucinations/hallucinated/hallucinate,
+citation/citations/cite/cited/citing, prioritise/prioritisation/prioritize/prioritization,
+grade/grading/graded, mark/marking/marked, invent/inventing/invented, cheat/cheating,
+write/writing/wrote. Each asserts that the members reach one stem, and that a listed
+non-pair does not.
+
+No Porter implementation, no dependency: the whole point is that the same twenty-odd lines
+run in Python and in the browser and can be read in one sitting.
 
 **Synonyms — a table in `data/`, with a written reason per row.** `data/synonyms.json`,
 one object per entry: `{"terms": ["grading", "marking", "assessment"], "why": "...",
 "added": "2026-09-06"}`. The `why` is required and validated, exactly like `skip_if`: a
 synonym nobody can justify is a search result nobody can explain. Expansion happens at
 query time, not index time, so the index does not grow and a bad row can be deleted
-without a rebuild. First rows, all from the suite: grading/marking, essay/paper/assignment,
+without a rebuild.
+
+**Amendment 2: an expanded term scores at half the weight of the term the person typed.**
+`SYNONYM_WEIGHT = 0.5`, stated in this sentence and in `search.js` in the same words.
+Without it, somebody who types *marking* can be handed the page that says *grading* above
+the page that says *marking*, and the site would be overruling the reader's own word. Half
+is enough to surface a page that uses the other word and never enough to outrank an exact
+hit. First rows, all from the suite: grading/marking, essay/paper/assignment,
 citation/reference/bibliography, spreadsheet/excel/csv, cheating/academic integrity/
 plagiarism, roadmap/prioritisation/backlog, bookkeeping/accounting/invoicing.
 
@@ -79,8 +119,10 @@ problem in the resource's own words and never outrank a page that teaches the th
   keypress. If a change cannot hold that, the change does not ship.
 - **One algorithm, two runtimes.** `scripts/test-search.py` and `assets/js/search.js` must
   agree. Today they share the index; after this they must also share stemming, synonym
-  expansion and the tie-break, and a test asserts that ten sample queries produce the same
-  top three in both.
+  expansion and the tie-break. **Amendment 3: the cross-runtime test is the whole suite** —
+  all 57 queries, run in Python and in Node, top three identical, on every build. Ten
+  samples is a place for drift to hide, and the drift this test exists to catch is exactly
+  the kind that shows up on the queries nobody chose as a sample.
 - **The suite is the gate.** No query that is `ok` today may become `bad`.
 
 ---
@@ -125,6 +167,13 @@ the verdict, and the fragment that must appear in the top three.
 
 ## 6. What this will not fix, plainly
 
+**Amendment 4: these become a list, not a paragraph.** A query that fails because the
+catalogue holds nothing is marked `content-gap` in the suite — a third verdict, distinct
+from `ok` and `bad`, because "search cannot find it" and "we do not have it" are different
+problems with different owners. `measure.py` writes them into STATUS.md under **Questions
+the catalogue cannot answer**, with the role that asked. That list is the harvest target,
+it is generated, and nobody types it.
+
 - **`em dash` returns nothing because the catalogue holds nothing.** No row mentions it in
   any indexed field. A synonym cannot conjure a resource. Four rows discuss AI writing
   tells generally, and the honest fix is either an editorial note on one of them or an
@@ -138,6 +187,13 @@ the verdict, and the fragment that must appear in the top three.
 - **Ranking by quality.** This spec makes search find what the site holds. Which of three
   found rows is best is what "Start with these three" answers, and it only exists in cells,
   not in search results.
+
+**Amendment 5: section 6 ships.** One paragraph of it is kept verbatim on
+`how-we-check.html`, under the method: search finds what we hold; which of three found
+rows is best is what the picks answer; a question with no answer in the catalogue returns
+nothing and says so. It goes through `docs/design/ux-copy.md` like every other string on
+the site. A limit a reader can discover for themselves should be written down where they
+are already reading about how the site works.
 
 ---
 
