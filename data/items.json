@@ -2208,7 +2208,8 @@
     "url": "https://vincent.codes.finance/posts/claude-code-data-analysis/",
     "author": "Vincent Grégoire (Vincent Codes Finance)",
     "roles": [
-      "data-analyst"
+      "data-analyst",
+      "researcher"
     ],
     "level": "confident",
     "topics": [
@@ -2267,7 +2268,8 @@
     "url": "https://yang3kc.substack.com/p/claude-code-is-secretly-an-excellent",
     "author": "Kai-Cheng Yang",
     "roles": [
-      "data-analyst"
+      "data-analyst",
+      "researcher"
     ],
     "level": "confident",
     "topics": [
@@ -2854,7 +2856,8 @@
     "url": "https://claude.com/plugins/design",
     "author": "Anthropic",
     "roles": [
-      "designer"
+      "designer",
+      "writer-marketer"
     ],
     "level": "confident",
     "topics": [
@@ -3742,7 +3745,8 @@
     "url": "https://uxwritinghub.com/claude-code-ux-writing/",
     "author": "UX Writing Hub",
     "roles": [
-      "designer"
+      "designer",
+      "writer-marketer"
     ],
     "level": "confident",
     "topics": [
@@ -3801,7 +3805,8 @@
     "url": "https://github.com/content-designer/ux-writing-skill",
     "author": "content-designer",
     "roles": [
-      "designer"
+      "designer",
+      "writer-marketer"
     ],
     "level": "confident",
     "topics": [
@@ -11105,7 +11110,8 @@
     "url": "https://aihorizons.io/Seminars/claude-academic-research/",
     "author": "AI Horizons",
     "roles": [
-      "researcher"
+      "researcher",
+      "student"
     ],
     "level": "basic",
     "topics": [
@@ -13666,6 +13672,7 @@
     "url": "https://www.vanderbilt.edu/brightspace/2023/08/16/guidance-on-ai-detection-and-why-were-disabling-turnitins-ai-detector/",
     "author": "Vanderbilt University (Brightspace / Center for Teaching)",
     "roles": [
+      "student",
       "teacher"
     ],
     "level": "basic",
@@ -24452,7 +24459,8 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "researcher"
+      "researcher",
+      "writer-marketer"
     ],
     "level": "never-used",
     "topics": [
@@ -26179,7 +26187,8 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "business-founder"
+      "business-founder",
+      "writer-marketer"
     ],
     "level": "confident",
     "topics": [

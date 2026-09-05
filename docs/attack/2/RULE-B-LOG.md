@@ -226,3 +226,127 @@ reaches.
 - **Prep call look-ahead** — `-pm` — The card names executive assistants, chiefs of staff and managers with a heavy calendar. None of those is this site's product manager.
 - **Analyze fundraising performance** — `card corrected` — The page is channel ROI; the analyst tag holds and the card now says so.
 
+---
+
+# Rule B runs both directions
+
+Until FIX-26 the check could only take a tag away. Vanderbilt's page on AI-detector
+false accusations is what that cost: it singles out non-native English writers - the
+people most often falsely accused - carried `teacher` alone, and was therefore unreachable
+from the student filter. Attack 1 filed it. Attack 2 filed it again. A check that can only
+subtract was never going to fix it.
+
+The sweep now asks which roles a card names using `skip_if` as well as `who_for`, and
+prints every role a card names that the row does not carry. The two directions do not
+share their evidence: dropping stays on `who_for` alone, because "skip this if you are a
+developer" must not be allowed to keep a `developer` tag.
+
+Four patterns were tightened first, because the wider read exposed them: `tutor` matched
+"tutorial", `coder` matched "non-coder", `scientist` matched "data scientist", and
+`content` matched the word anywhere. A warning list nobody can trust is noise with a script
+attached.
+
+Fifty-eight rows named a role they did not carry. Nine survived the page.
+
+## Added
+
+### Guidance on AI detection, and why we're disabling Turnitin's AI detector
+
+`https://www.vanderbilt.edu/brightspace/2023/08/16/guidance-on-ai-detection-and-why-were-disabling-turnitins-ai-detector/`
+
+- **Roles:** `teacher` → `student, teacher`
+- **The page:** The page carries a section headed "For Students", says 750 of Vanderbilt's own student papers could have been falsely labelled, and is about accusations made against students. Attack 1 filed this row and Attack 2 filed it again: the people the page protects could not reach it.
+
+### Academic Research with Claude (live seminar)
+
+`https://aihorizons.io/Seminars/claude-academic-research/`
+
+- **Roles:** `researcher` → `researcher, student`
+- **The page:** "This seminar is designed for academic researchers - faculty, postdoctoral scholars, and advanced graduate students". The page names the student itself.
+
+### Create brand assets
+
+`https://academy.claude.com/use-cases/create-brand-assets`
+
+- **Roles:** `business-founder` → `business-founder, writer-marketer`
+- **The page:** The page's own line is "business cards, flyers, and marketing materials that match your exact branding guidelines". Marketing collateral is the marketer's work.
+
+### Design plugin (official)
+
+`https://claude.com/plugins/design`
+
+- **Roles:** `designer` → `designer, writer-marketer`
+- **The page:** The plugin's own listed workflows include UX Writing - "write microcopy for our checkout flow error states". A content designer installs this.
+
+### How to Use Claude Code for UX Writing
+
+`https://uxwritinghub.com/claude-code-ux-writing/`
+
+- **Roles:** `designer` → `designer, writer-marketer`
+- **The page:** Written at UX writers directly: "Most UX writers look at a terminal window and worry about breaking something."
+
+### ux-writing-skill (open source)
+
+`https://github.com/content-designer/ux-writing-skill`
+
+- **Roles:** `designer` → `designer, writer-marketer`
+- **The page:** The repository's own framing: "Design systems solve visual consistency, but content quality still depends on individual writers."
+
+### Claude Code for Data Analysis
+
+`https://vincent.codes.finance/posts/claude-code-data-analysis/`
+
+- **Roles:** `data-analyst` → `data-analyst, researcher`
+- **The page:** The page is about academic repositories, reproducibility, and treating Claude Code as "a research assistant who works hard but needs guidance".
+
+### Claude Code is secretly an excellent data analysis tool
+
+`https://yang3kc.substack.com/p/claude-code-is-secretly-an-excellent`
+
+- **Roles:** `data-analyst` → `data-analyst, researcher`
+- **The page:** Its first person is a researcher: "I'm a researcher. In my day-to-day work, I need to write (mostly) Python code... Finally, I write papers about the findings."
+
+### Using the bioRxiv and medRxiv Connector in Claude
+
+`https://academy.claude.com/tutorials/using-the-biorxiv-and-medrxiv-connector-in-claude`
+
+- **Roles:** `researcher` → `researcher, writer-marketer`
+- **The page:** The page lists its audiences outright, and two of them are ours: "Journal Editors & Publishers" and "Science Journalists & Communicators".
+
+## Rejected, by cause
+
+Forty-nine suggestions did not survive. Grouped, because they fail in five ways and
+listing them one by one would hide that.
+
+| cause | rows |
+|---|---|
+| the role is the page's subject, not its reader | 19 |
+| "anyone" as a second clause | 12 |
+| the skip line naming who should not bother | 11 |
+| a job title that is not this site's role | 5 |
+| could benefit is not is served | 2 |
+
+**The role is the page's subject, not its reader.** A teacher's page about assessing students names students on every line. AI-detector policy, assignment design, K-12 curricula, flashcards a lecturer never sees - the student is what the page is about, and the reader is still the teacher. Vanderbilt is the exception that earns the tag, because the page addresses the accused directly.
+
+**"anyone" as a second clause.** "Developers who ... and anyone who needs a defensible starting point" is a courtesy, not an audience. The Cookbooks are code; the MCP SDK is code; the containment write-up is engineering architecture. `non-technical` on any of them would put code in front of a reader who told us they do not write it.
+
+**The skip line naming who should not bother.** "Skip if you are still learning the basics", "skip if you want tutorials", "this assumes an engineering-adjacent setup". The sweep reads skip_if on purpose and this is the shape it mostly finds: the persona is being excluded, which is the opposite of a tag.
+
+**A job title that is not this site's role.** An instructional designer is not this site's `designer`; a design-system owner is not a business owner; a freelance journalist is a writer, not a founder.
+
+**Could benefit is not is served.** Claude Code PM material would not hurt a solo founder, but a PM course is a PM course, and the founder cells are not short of material. Adding it would refill the founder level with product-manager content, which is the fault this rule exists to stop, wearing the other face.
+
+## The useful negative
+
+Coursera's "Next-Generation AI Assistant" was suggested for `business-founder`, and our
+card is why: it says "a marketer or small-business owner who has used ChatGPT casually".
+The page says nothing of the kind - those words were our reading of it. The page decides,
+so the tag was not added.
+
+## What the sweep found that is not this round's job
+
+Run without `--gallery-only`, the drop side reports 62 rows outside the use-case gallery
+carrying a tag their card denies, and 60 more that fit no role. FIX-25 applied Rule B to
+the gallery only. The rest of the catalogue has never been swept. That is a round of its
+own and it is not this one.
+

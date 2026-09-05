@@ -26,6 +26,18 @@ Mostly it does not. A card naming a designer while carrying no designer tag is a
 question and guessing at it from a phrase is how a catalogue acquires tags nobody checked,
 so those are printed for a person to decide.
 
+The question is asked of `skip_if` as well as `who_for`. Vanderbilt's page on AI-detector
+false accusations singles out non-native English writers - the people most often falsely
+accused - carries `teacher` alone, and was unreachable from the student filter. Attack 1
+filed it; Attack 2 filed it again; a check that can only subtract was never going to fix
+it.
+
+The two directions do not share their evidence. Dropping stays on `who_for` alone, because
+`skip_if` is who should not bother, and "skip this if you are a developer" must not be
+allowed to keep a `developer` tag. Adding is a warning either way: a persona named
+anywhere on a card is one the card serves or excludes on purpose, and both are worth a
+person's look.
+
 The exception is a row whose every current tag fails while its card plainly names a role
 it does not carry. Eight marketing recipes were in that state - "Marketers", "Content
 marketers", "Marketing teams", tagged `business-founder, pm` - and without the addition
@@ -58,17 +70,22 @@ ROLE_WORDS = {
                         r"running a business|smb\b",
     "pm": r"product manager|product owner|product team|product people|product lead|\bpm\b|"
           r"product marketing",
+    # \btutor\b, not tutor: "tutorial" is not a teacher.
     "teacher": r"teacher|instructor|faculty|educator|lecturer|classroom|professor|"
-               r"school|tutor",
+               r"school|\btutor\b",
     "student": r"student|undergrad|coursework|learner|pupil",
-    "researcher": r"researcher|academic|postdoc|scholar|\bphd\b|scientist|principal "
-                  r"investigator",
-    "developer": r"developer|engineer|programmer|coder|devops|\bsre\b|on-call|"
+    # (?<!data )scientist: a data scientist is this site's data-analyst.
+    "researcher": r"researcher|academic|postdoc|scholar|\bphd\b|(?<!data )scientist|"
+                  r"principal investigator",
+    # (?<!non-)coder: "non-coder" is the opposite of the reader this names.
+    "developer": r"developer|engineer|programmer|(?<!non-)coder|devops|\bsre\b|on-call|"
                  r"technical team|software team",
     "designer": r"designer|design team|design system|\bux\b|\bui\b",
     "data-analyst": r"analyst|data scientist|data team|analytics",
-    "writer-marketer": r"writer|marketer|copywriter|journalist|editor|content|"
-                       r"communications|marketing team",
+    # content only where it is a job, not wherever the word appears.
+    "writer-marketer": r"writer|marketer|copywriter|journalist|editor|"
+                       r"content (marketer|designer|writer|strateg|team)|"
+                       r"content marketing|communications|marketing team",
     "non-technical": r"anyone|everyone|non-technical|not a coder|office|"
                      r"somebody|no technical background",
 }
@@ -99,11 +116,15 @@ def main():
         if not who or NEUTRAL.match(who):
             continue
 
+        # Two questions, two pieces of evidence. See ADDING A TAG above.
         named = {r for r, rx in ROLE_WORDS.items() if rx.search(who)}
+        card = who + " " + str(it.get("skip_if") or "")
+        named_anywhere = {r for r, rx in ROLE_WORDS.items() if rx.search(card)}
         tags = it.get("roles") or []
         keep = [r for r in tags if r in named]
         lose = [r for r in tags if r not in named]
         add = sorted(named - set(tags))
+        add_anywhere = sorted(named_anywhere - set(tags))
 
         if not named:
             slug = (it["url"][len(GALLERY):].rstrip("/")
@@ -116,8 +137,9 @@ def main():
             rescued.append((it, lose, add))
         elif lose:
             dropped.append((it, lose, keep))
-        if keep and add:
-            suggested.append((it, add))
+        if keep and add_anywhere:
+            suggested.append((it, add_anywhere,
+                              [r for r in add_anywhere if r not in add]))
 
     print("TAGS THE CARD DENIES, where at least one tag survives (%d rows)" % len(dropped))
     for it, lose, keep in dropped[:40]:
@@ -132,12 +154,15 @@ def main():
         print("  %-44s -%-22s +%s" % (it["title"][:44], ",".join(lose), ",".join(add)))
 
     print()
-    print("NAMES A ROLE IT DOES NOT CARRY, but keeps at least one (%d rows) - printed "
-          "only; adding is a judgement" % len(suggested))
-    for it, add in suggested[:15]:
-        print("  %-44s +%s" % (it["title"][:44], ",".join(add)))
-    if len(suggested) > 15:
-        print("  ... and %d more" % (len(suggested) - 15))
+    print("NAMES A ROLE IT DOES NOT CARRY (%d rows) - printed only; adding is a "
+          "judgement. A role marked (skip_if) is named in the skip line rather than the "
+          "who line" % len(suggested))
+    for it, add, from_skip in suggested:
+        marked = ",".join(r + ("(skip_if)" if r in from_skip else "") for r in add)
+        print("  %-44s +%s" % (it["title"][:44], marked))
+        print("       who:  %s" % (it.get("who_for") or "")[:104])
+        if from_skip:
+            print("       skip: %s" % (it.get("skip_if") or "")[:104])
 
     total_roleless = sum(len(v) for v in roleless.values())
     print()
