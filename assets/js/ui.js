@@ -249,11 +249,75 @@
     obsidian: "Obsidian", notion: "Notion", jetbrains: "JetBrains", docker: "Docker",
     python: "Python", javascript: "JavaScript", jupyter: "Jupyter", cowork: "Cowork",
     "claude.md": "CLAUDE.md", ide: "IDE", cli: "CLI", ui: "UI", ux: "UX",
-    seo: "SEO", pdfs: "PDFs", rag: "RAG", vscode: "VS Code"
+    seo: "SEO", pdfs: "PDFs", rag: "RAG", vscode: "VS Code",
+
+    /* Added 2026-09-05, measured from the generated bullets rather than guessed - the
+       count in the catalogue is beside each. The agents' quoted line, "Install Claude
+       code across macos linux and windows environments", needed four of them.
+       Deliberately absent: word, sheets, stripe and a bare vertex. Each is ordinary
+       English at least as often as it is a name, and a map that turns "a word" into
+       "a Word" is worse than the fault it fixes. */
+    sdk: "SDK", sdks: "SDKs",            /* 11 */
+    tableau: "Tableau",                  /* 5 */
+    git: "Git",                          /* 4 */
+    english: "English",                  /* 3 */
+    bedrock: "Bedrock",                  /* 3 */
+    aws: "AWS",                          /* 3 */
+    windows: "Windows",                  /* 3 */
+    prd: "PRD", prds: "PRDs",            /* 4 */
+    hubspot: "HubSpot",                  /* 2 */
+    powerpoint: "PowerPoint",            /* 2 */
+    postgres: "Postgres",                /* 2 */
+    ci: "CI",                            /* 2 */
+    xlsx: "XLSX", docx: "DOCX", pptx: "PPTX",
+    quickbooks: "QuickBooks", paypal: "PayPal", microsoft: "Microsoft",
+    html: "HTML", url: "URL", urls: "URLs", iam: "IAM",
+    macos: "macOS", linux: "Linux",
+    duckdb: "DuckDB", motherduck: "MotherDuck", rstudio: "RStudio"
   };
+
+  /* PROPER is a word map, and a product name is not always one word. "claude code"
+     came out as "Claude code" on 103 of the 1,357 generated bullets - the name of the
+     product this site exists to teach, spelled wrong, on a page whose H1 spells it
+     correctly two inches above. Two Attack 2 agents found it independently.
+
+     Ordered longest first so "claude agent sdk" is matched whole rather than being
+     eaten by "claude" and left as three words. Run before the word map for the same
+     reason. */
+  var PHRASES = [
+    ["claude agent sdk", "Claude Agent SDK"],
+    ["claude for education", "Claude for Education"],
+    ["claude for excel", "Claude for Excel"],
+    ["claude for chrome", "Claude for Chrome"],
+    ["claude enterprise", "Claude Enterprise"],
+    ["claude desktop", "Claude Desktop"],
+    ["claude projects", "Claude Projects"],
+    ["claude project", "Claude Project"],
+    ["claude cowork", "Claude Cowork"],
+    ["claude skills", "Claude Skills"],
+    ["claude design", "Claude Design"],
+    ["claude academy", "Claude Academy"],
+    ["claude skill", "Claude Skill"],
+    ["claude code", "Claude Code"],
+    ["claude team", "Claude Team"],
+    ["claude api", "Claude API"],
+    ["claude max", "Claude Max"],
+    ["claude pro", "Claude Pro"],
+    ["google cloud", "Google Cloud"],
+    ["vertex ai", "Vertex AI"],
+    ["power bi", "Power BI"],
+    ["vs code", "VS Code"]
+  ];
 
   LC.sentence = function (s) {
     var t = String(s == null ? "" : s);
+    /* Only where the source is lower case, exactly as the word map does: a card that
+       already writes "Claude Code" is left alone, and one that writes "Claude code" is
+       not silently restyled either - the fix is for generated text, not for editing
+       somebody's prose on the way to the screen. */
+    PHRASES.forEach(function (pair) {
+      t = t.replace(new RegExp("\\b" + pair[0] + "\\b", "g"), pair[1]);
+    });
     t = t.replace(/[A-Za-z][A-Za-z.]*/g, function (w) {
       var hit = PROPER[w.toLowerCase()];
       return hit && w === w.toLowerCase() ? hit : w;
