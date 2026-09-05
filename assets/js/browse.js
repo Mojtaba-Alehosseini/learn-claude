@@ -21,6 +21,9 @@
     { key: "topics",    param: "topic",    label: "Topic",  labels: LC.TOPIC },
     { key: "formats",   param: "format",   label: "Format", labels: LC.FORMAT },
     { key: "costs",     param: "cost",     label: "Cost",   labels: LC.COST },
+    /* D10. The badge on every card, asked as a question. Its order is the badge's own
+       ranking, best-checked first, so the list reads the way the card does. */
+    { key: "tiers",     param: "checked",  label: "How well checked", labels: LC.TIER_LABELS },
     /* Single checkbox, not a picklist — "official" only has one meaningful state to
        filter on. It reuses the same axis machinery (matches/toggle/URL/chip) rather
        than a one-off branch, so it behaves like every other filter for free. */
@@ -28,7 +31,7 @@
   ];
 
   var items = [];
-  var sel = { roles: [], levels: [], times: [], topics: [], formats: [], costs: [], officials: [] };
+  var sel = { roles: [], levels: [], times: [], topics: [], formats: [], costs: [], tiers: [], officials: [] };
   var q = "";
   var sort = "best";
   var moreOpen = false;
@@ -80,6 +83,7 @@
               : a.key === "levels" ? [it.level]
               : a.key === "times" ? [it.time]
               : a.key === "formats" ? [it.format]
+              : a.key === "tiers" ? [it.tier]
               : a.key === "officials" ? [it.official ? "yes" : "no"]
               : [it.cost];
       var hit = false;

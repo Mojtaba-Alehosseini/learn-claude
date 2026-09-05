@@ -122,6 +122,11 @@
                      tip: "We found it and sorted it. Nobody has looked at the content yet." }
   };
 
+  /* The filter picklist for D10. Derived rather than typed: a second list of the same
+     four words is a second place to forget. */
+  LC.TIER_LABELS = {};
+  Object.keys(LC.TIER).forEach(function (k) { LC.TIER_LABELS[k] = LC.TIER[k].label; });
+
   LC.TIME_RANK = { "under-15min": 0, "under-1hr": 1, "half-day": 2, "multi-day": 3 };
 
   /* ---------------------------------------------------------- utilities ---- */
