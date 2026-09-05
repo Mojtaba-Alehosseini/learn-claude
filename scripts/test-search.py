@@ -148,10 +148,14 @@ SUITE = [
      "cites are ones that exist. Claude Researcher is this round's: its card "
      "is a source-first literature workflow, which is the habit that stops "
      "fabricated citations being written in the first place."),
-    ("researcher", "peer review", "bad",
-     "Peer and AI Review of Student Writing",
-     "wrong sense of the word - classroom peer feedback on undergraduate essays; "
-     "IEEE, which carries the one sentence a reviewer needs, is not in the top eight"),
+    ("researcher", "peer review", "ok",
+     ["Nature Portfolio"],
+     "Promoted while writing the failure table. The objection was the wrong "
+     "sense of the word - classroom peer feedback on undergraduate essays - "
+     "and IEEE nowhere in the top eight. Nature Portfolio's AI editorial "
+     "policy is third and its who_for names authors and reviewers for its "
+     "journals, which is the sense the researcher meant. Classroom peer "
+     "feedback still leads, and that stays in the table."),
     ("researcher", "how do i cite claude in a paper", "ok",
      "IEEE",
      ""),
@@ -185,10 +189,12 @@ SUITE = [
      "course about teaching AI fluency, which is not about marking work."),
 
     # --- a developer ------------------------------------------------------------
-    ("developer", "claude code hooks", "bad",
-     "Hooks reference",
-     "the top three tie to two decimal places so the order is file order; the top "
-     "result's own card says read the guide first, this is a lookup reference"),
+    ("developer", "claude code hooks", "content-gap",
+     "",
+     "The hooks GUIDE is not in this catalogue. The Hooks reference is, and it "
+     "leads - and its own card says to read the guide first, which is the "
+     "agent's objection and cannot be answered by ranking something that is "
+     "not here."),
     ("developer", "how do i stop claude touching my tests", "bad",
      "Red Green Refactor is OP With Claude Code",
      "the right answer is second; third is a career podcast the site's own card says "
@@ -207,9 +213,11 @@ SUITE = [
      "the file. Steering Claude Code is this round's: its card is about when "
      "to use CLAUDE.md against skills, hooks and subagents, so the file itself "
      "is its subject."),
-    ("developer", "claude code permissions", "bad",
-     "Claude Code Essentials",
-     "third result is Using Databricks for Data Analysis"),
+    ("developer", "claude code permissions", "content-gap",
+     "",
+     "No permissions reference in the catalogue. Twenty-one rows mention the "
+     "word in passing - a plugin install page, a Postgres MCP server - and "
+     "none of them is the page a developer wants when they type this."),
     # The top result here is right. The agent's objection was position 3 - Getting
     # Started with Claude for Financial Services, inside a three-way score tie - which
     # is the no-tie-break finding, recorded in 05-developer.md, not a wrong #1.
@@ -236,11 +244,11 @@ SUITE = [
      "Still wrong, and much closer: an analyst recipe leads where a generic "
      "prompting tutorial did. Postgres MCP Pro and the DuckDB MCP server, "
      "which are the answer to 'sql', are still not in the top three."),
-    ("data-analyst", "pivot table", "bad",
-     "Claude Code for Data Analysis",
-     "there is nothing here on pivot tables; instead of the honest empty state it "
-     "returns three items, one of them a skill for making Claude stop writing like "
-     "an AI"),
+    ("data-analyst", "pivot table", "content-gap",
+     "",
+     "Three rows mention pivot tables in passing and none is about them. The "
+     "agent said so at the time: there is nothing here, and the honest answer "
+     "is an empty result rather than three approximations."),
     ("data-analyst", "stop claude making up numbers", "ok",
      ["Reduce hallucinations"],
      "Promoted. The objection was an education marketing page first for a "
@@ -270,10 +278,14 @@ SUITE = [
      "product marketing and sales enablement rather than for a PM. Rule B has "
      "since read that card against its page and it carries `pm`; it builds a "
      "competitive comparison from scratch, which is the query."),
-    ("pm", "stakeholder update", "bad",
-     "Product Management Plugin",
-     "a journalism ethics code and a buy-side equity-analyst workflow in the top "
-     "three, both matched on the word update"),
+    ("pm", "stakeholder update", "content-gap",
+     "",
+     "Nothing here is about writing a stakeholder update. Six rows contain the "
+     "word stakeholder; the closest, the official PM plugin, teaches "
+     "installing a plugin and running slash commands. The suite's recorded "
+     "objection - a journalism ethics code and an equity-analyst workflow "
+     "matched on the word update - is gone, and what replaced it is a plugin "
+     "page, not an answer."),
     ("pm", "prioritisation", "content-gap",
      "Lenny's Product Skills for Claude Code",
      "Same hole as 'roadmap prioritisation', and the reason the British and "

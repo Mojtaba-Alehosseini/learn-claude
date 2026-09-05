@@ -171,13 +171,17 @@ Every candidate is Anthropic's own. No constraint can fix this; only material ca
 
 A reader who answers both questions this way is told we have nothing. `student\|builder`
 
-### Questions the catalogue cannot answer (6)
+### Questions the catalogue cannot answer (10)
 
 Queries from the suite that fail because nothing here is on the subject, not because the ranking is wrong. No stemmer, spelling pair or synonym can conjure a resource, so these are a harvest list rather than a search backlog. Generated from `scripts/test-search.py`; the judgement behind each one is in its reason there.
 
 | the role that asked | what they typed | why it cannot be answered |
 |---|---|---|
+| developer | claude code hooks | The hooks GUIDE is not in this catalogue. The Hooks reference is, and it leads - and its own card says to read the guide first, which is the agent's objection and cannot be answered by ranking something that is not here. |
+| developer | claude code permissions | No permissions reference in the catalogue. Twenty-one rows mention the word in passing - a plugin install page, a Postgres MCP server - and none of them is the page a developer wants when they type this. |
+| data-analyst | pivot table | Three rows mention pivot tables in passing and none is about them. The agent said so at the time: there is nothing here, and the honest answer is an empty result rather than three approximations. |
 | pm | roadmap prioritisation | Five rows contain 'prioritis'/'prioritiz' anywhere: a literature review, feedback themes, weekly prep, grant options and one PM skill pack whose card Attack 2 read and found is not about prioritisation. Nothing here is about prioritising a roadmap. |
+| pm | stakeholder update | Nothing here is about writing a stakeholder update. Six rows contain the word stakeholder; the closest, the official PM plugin, teaches installing a plugin and running slash commands. The suite's recorded objection - a journalism ethics code and an equity-analyst workflow matched on the word update - is gone, and what replaced it is a plugin page, not an answer. |
 | pm | prioritisation | Same hole as 'roadmap prioritisation', and the reason the British and American spellings now return the same two rows is step 4 working. Both rows are still about something else. |
 | pm | prioritization | The American spelling of a subject this catalogue does not cover. It returns the same rows as the British one now, which is the spelling fix landing on an empty shelf. |
 | designer | will ai design replace me | Nothing in the catalogue is about AI replacing designers: zero rows contain 'replace me' or 'replace design' in any field. The query returns 42 results because its other words are common, and not one of them is on the subject. |
