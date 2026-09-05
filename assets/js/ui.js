@@ -181,7 +181,17 @@
 
     var age = (Date.now() - Date.parse(LC.dateFloor(eff))) / 86400000;
     if (age > 365) {
-      out.note = "Published over a year ago — may not match Claude today";
+      /* D6. This used to REPLACE the date with the warning, so the one card where age
+         decides was the one card that hid the number. Six of the ten Attack 2 agents
+         found it, and the reason it matters is that the string covered 16 Aug 2023 and
+         12 Jun 2025 identically - three years and fifteen months reading the same.
+         The home page promises the date; the date is shown, and the warning stands
+         beside it. Where the age comes from an `updated` and the page never gave a
+         publication date, there is no number to show and the warning says only what it
+         knows. */
+      out.note = pub
+        ? "Published " + pub + " · over a year ago, may not match Claude today"
+        : "Over a year old — may not match Claude today";
       out.cls = "flag-outdated";
     } else if (pub) {
       out.note = "Published " + pub;

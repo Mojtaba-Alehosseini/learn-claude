@@ -123,17 +123,16 @@
        it. It now takes both from LC.freshness, the same source the card uses.
        It keeps the real date as well as the warning rather than swapping one for the
        other: the card has room for one and this page has room for both. */
+    /* One source for the date line, shared with the card. This used to rebuild it by
+       hand and drop both the Updated date and the staleness warning; M1 restored them
+       and printed the warning as a second paragraph. Since D6 the warning carries the
+       date itself, so there is nothing left to rebuild and nothing to print twice. */
     '<p class="provenance">' +
       LC.esc(fresh.checked) +
-      (LC.fmtDate(item.published)
-        ? ' · Published ' + LC.esc(LC.fmtDate(item.published))
-        : ' · No publish date given') +
+      ' · ' + '<span class="' + fresh.cls + '">' + LC.esc(fresh.note) + '</span>' +
       (fresh.updatedNote ? ' · ' + LC.esc(fresh.updatedNote) : '') +
       ' · Found through ' + LC.esc(item.source) +
     '</p>' +
-
-    (fresh.cls === 'flag-outdated'
-      ? '<p class="provenance flag-outdated">' + LC.esc(fresh.note) + '</p>' : '') +
 
     /* The escape hatch. Sits under the provenance line, in the same quiet type, because
        it belongs to the same conversation: here is what we know about this and when we
