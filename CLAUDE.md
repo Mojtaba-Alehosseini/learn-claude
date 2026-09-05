@@ -33,6 +33,8 @@ actually fits them instead of drowning in options.
   messages that state a count — are generated or measured, never typed.
   `scripts/measure.py` writes `docs/STATUS.md` on every build; docs point at it.
 - A commit does one job. If a file change serves two jobs, the second waits.
+- A round ends pushed. Local commits are not done. The deploy runs on push, and a live
+  site that lags the repo by a round is a site that lies about what we fixed.
 - Scratch files go in `tmp/` — gitignored — never outside the repo.
 
 ## Tech defaults (unless we decide otherwise)
