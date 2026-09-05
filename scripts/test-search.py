@@ -25,6 +25,16 @@ own header comment: eight self-authored benchmark sentences is not a search eval
 
 Each row records the agent's verdict on what it actually got:
 
+ACCEPTED ANSWERS
+----------------
+
+The fourth field is one title fragment, or a list of them when a row has been re-graded.
+A list means: the agent who wrote this query judged one answer right, a later round argued
+for another, and both are accepted rather than the second quietly replacing the first. The
+reason names what in each card makes it an answer. Ten strangers' judgement is the only
+outside opinion this project has, and a rebuild that grades itself against its own output
+is not measuring anything.
+
     ok   - an accepted answer is in the top three. This is asserted. Breaking it exits 1.
            The top three is what the reader sees and what the agents scored; asserting
            the first result alone was a stricter test than anyone agreed to, and it
@@ -125,11 +135,12 @@ SUITE = [
      "the site's own card calls the top result a mailing-list funnel where every "
      "post is behind a subscribe form, and ranks it first"),
     ("researcher", "hallucinated references", "ok",
-     "Claude Researcher",
-     "Re-judged 2026-09-06. Was recorded as Zotero, which connects Claude to a "
-     "reference library. The new first result is a source-first literature "
-     "review workflow, which is the direct answer to fabricated references "
-     "rather than the tool that stores real ones. Zotero is still second."),
+     ["Zotero", "Claude Researcher"],
+     "Two accepted answers. Zotero is the agent's: its card is about grounding "
+     "Claude in the reference library you already keep, so the references it "
+     "cites are ones that exist. Claude Researcher is this round's: its card "
+     "is a source-first literature workflow, which is the habit that stops "
+     "fabricated citations being written in the first place."),
     ("researcher", "peer review", "bad",
      "Peer and AI Review of Student Writing",
      "wrong sense of the word - classroom peer feedback on undergraduate essays; "
@@ -181,11 +192,12 @@ SUITE = [
      "eight results, second is a designer's Figma article matched on cheaper; the "
      "catalogue's own page on how context affects cost never appears"),
     ("developer", "claude.md", "ok",
-     "Steering Claude Code",
-     "Re-judged 2026-09-06. Was Best practices for Claude Code, which covers "
-     "CLAUDE.md among many things. The new first result is about when to use "
-     "CLAUDE.md against skills, hooks and subagents - the file itself is its "
-     "subject. Best practices is third, tied."),
+     ["Best practices for Claude Code", "Steering Claude Code"],
+     "Two accepted answers. Best practices is the agent's: its card covers "
+     "CLAUDE.md as part of a working setup, which is where most readers meet "
+     "the file. Steering Claude Code is this round's: its card is about when "
+     "to use CLAUDE.md against skills, hooks and subagents, so the file itself "
+     "is its subject."),
     ("developer", "claude code permissions", "bad",
      "Claude Code Essentials",
      "third result is Using Databricks for Data Analysis"),
@@ -193,11 +205,11 @@ SUITE = [
     # Started with Claude for Financial Services, inside a three-way score tie - which
     # is the no-tie-break finding, recorded in 05-developer.md, not a wrong #1.
     ("developer", "how much does claude code cost", "ok",
-     "Choose a Claude plan",
-     "Re-judged 2026-09-06. Was Plans & Pricing, which is now second on the "
-     "same score. Both answer the question and the reader gets a pricing page "
-     "either way; the Help Centre page is the one that says which plans "
-     "include Claude Code."),
+     ["Plans", "Choose a Claude plan"],
+     "Two accepted answers, tied on score. Plans & Pricing is the agent's: its "
+     "card is the pricing page. Choose a Claude plan is this round's: its card "
+     "names which plans include Claude Code, which is the question behind the "
+     "question."),
 
     # --- working with data ------------------------------------------------------
     ("data-analyst", "claude excel formulas", "bad",
@@ -226,11 +238,11 @@ SUITE = [
 
     # --- a product manager ------------------------------------------------------
     ("pm", "write a prd with ai", "ok",
-     "PRD from a problem statement",
-     "Re-judged 2026-09-06. Was Write a PRD with Claude Code, now second on "
-     "the same score. The new first result is a recipe that writes the PRD, "
-     "which is what the query asks for; the other is a course module about "
-     "doing it."),
+     ["Write a PRD with Claude Code", "PRD from a problem statement"],
+     "Two accepted answers, tied on score. Write a PRD with Claude Code is the "
+     "agent's: its card teaches the method as a course module. PRD from a "
+     "problem statement is this round's: its card is a recipe that produces "
+     "the PRD, which is what the query asked for."),
     ("pm", "claude for user research", "ok",
      "Claude Code for product managers",
      ""),
@@ -274,13 +286,12 @@ SUITE = [
      "design system",
      ""),
     ("designer", "accessibility", "ok",
-     "Design Systems in 2026",
-     "Re-judged 2026-09-06, and the closest call of the six. Was Design "
-     "plugin, which ships an accessibility-review skill and is now second on "
-     "the same score. The new first result carries accessibility in four "
-     "fields including what it teaches, against three, which is the tie-break "
-     "doing what it was built for. Either is a defensible first result and the "
-     "reader sees both."),
+     ["Design plugin", "Design Systems in 2026"],
+     "Two accepted answers, tied on score, and the closest call of the five. "
+     "Design plugin is the agent's: its card ships an accessibility-review "
+     "skill you can read line by line. Design Systems in 2026 is this round's: "
+     "its card carries accessibility in four fields including what it teaches, "
+     "which is why the tie-break put it first."),
     ("designer", "design critique", "ok",
      "Design plugin",
      ""),
@@ -488,7 +499,10 @@ def main():
         hits = rank(q, kw)
         top = by_id[hits[0][0]]["title"] if hits else ""
         top3 = [by_id[i]["title"] for i, _s in hits[:3]]
-        matched = bool(frag) and any(frag.lower() in t.lower() for t in top3)
+        # One fragment or several. Several means the row was re-graded and the agent's
+        # own answer was kept alongside ours - see ACCEPTED ANSWERS above.
+        accepted = frag if isinstance(frag, list) else [frag]
+        matched = any(a and any(a.lower() in t.lower() for t in top3) for a in accepted)
 
         if verdict == "content-gap":
             gap_n += 1
@@ -497,12 +511,12 @@ def main():
         elif verdict == "ok":
             ok_n += 1
             if matched:
-                at = next(n + 1 for n, t in enumerate(top3)
-                          if frag.lower() in t.lower())
+                at = min(n + 1 for n, t in enumerate(top3)
+                         for a in accepted if a and a.lower() in t.lower())
                 print("  ok    %-16s %-42s -> #%d %s"
                       % (role, q[:42], at, top3[at - 1][:41]))
             else:
-                fails.append((role, q, frag, top, len(hits)))
+                fails.append((role, q, " or ".join(a for a in accepted if a), top, len(hits)))
                 print("  FAIL  %-16s %-42s -> %s" % (role, q[:42], top[:44] or "(0 results)"))
         else:
             bad_n += 1
