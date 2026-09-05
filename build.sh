@@ -49,6 +49,9 @@ python3 scripts/measure.py --status
 python3 scripts/test-measure.py > /dev/null
 # Four sentences the site is not allowed to say again - see D2 in FIX-24.md.
 python3 scripts/test-copy-claims.py
+# The no-typed-numbers rule, reaching picks.json at last. A pick's reason ships on the
+# card, and eleven of them were counting pools that had moved underneath them.
+python3 scripts/check-typed-numbers.py | tail -1
 # Advisory, printed, never enforced: picks whose own card names another reader or
 # turns this one away. FIX-15's audit reported zero of these because it read the
 # pick's reason instead of the pick's card against the cell.
