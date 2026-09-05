@@ -550,6 +550,55 @@ DOMAINISH = re.compile(
     r"|au|ca|de|fr|nl|se|no|dk|fi|es|it|jp|cn|in|br|za|eu|tv|xyz|app|blog|news)$")
 
 
+# A note claiming less work than the tier claims. See R5 in docs/attack/FIX-25.md.
+#
+# "not opened by a person" is deliberately absent from both patterns. 267 rows carry
+# "Read via fetch 2026-08-29, not opened by a person" - honest provenance describing the
+# site's own model, not a contradiction. Catching it would have produced 267 warnings and
+# an advisory nobody reads twice.
+NOTE_NOTHING_OPENED = re.compile(
+    r"(metadata (?:and search summaries |and summaries )?only|summaries only"
+    r"|contents unverified|did not open|not inspected"
+    r"|search results (?:only|and secondary summaries only))", re.I)
+
+NOTE_NOT_IN_FULL = re.compile(
+    r"(not read(?: in full)?|not watched|not listened|did not read|have not read"
+    r"|read the headings|read partially|not reviewed)", re.I)
+
+
+def check_notes_against_tier(items, bad, warn):
+    """The field that recorded the truth gets to enforce it.
+
+    Through Attack 2 the notes said "Repo contents not reviewed", "Individual videos not
+    watched", "Metadata and summaries only" while the card printed a full verdict. The
+    provenance was right and invisible. So: a note claiming less than the tier claims is
+    a fault, and the direction of the fix is to open the page - never to soften the note.
+    """
+    for n, item in enumerate(items):
+        note = str(item.get("notes") or "")
+        if not note:
+            continue
+        tier = item.get("tier")
+
+        if tier == "ai-reviewed":
+            m = NOTE_NOTHING_OPENED.search(note) or NOTE_NOT_IN_FULL.search(note)
+            if m:
+                bad(n, item, "tier is ai-reviewed, which claims a machine read all of "
+                             "it, but notes say %r. Open it, or move the tier down."
+                             % m.group(0))
+        elif tier == "previewed":
+            for m in NOTE_NOTHING_OPENED.finditer(note):
+                # A note is a log. "At harvest: metadata and summaries only (superseded
+                # by the D1 verification below.)" records two true things about two
+                # different days, and only the second is true now. The window is narrow
+                # on purpose: the word has to cancel THIS clause, not turn up anywhere
+                # in a long note.
+                if "superseded" in note[m.end():m.end() + 90].lower():
+                    continue
+                warn(item, m.group(0))
+                break
+
+
 def check_publishers(items, bad):
     """Every host resolves to a name from the mapping, and no name is a bare domain."""
     add_source = load_publisher_rule()
@@ -601,6 +650,10 @@ def main(argv=None):
         errors.append("  row %-4d %-46s %s" % (row, title, msg))
 
     check_publishers(items, bad)
+
+    note_warnings = []
+    check_notes_against_tier(items, bad,
+                             lambda it, phrase: note_warnings.append((it, phrase)))
 
     seen_ids, seen_urls = {}, {}
 
@@ -887,6 +940,18 @@ def main(argv=None):
 
     # Both of these are advisory, printed before the verdict and never affecting it.
     report_monotony(items)
+
+    # R5. Printed beside the other advisory reports and never enforced on `previewed`:
+    # "metadata only" is a fair description of a skim, and a build that goes red on it
+    # teaches people to soften the note rather than open the page. On `ai-reviewed` the
+    # same phrase is an error, and that one is enforced in check_notes_against_tier.
+    if note_warnings:
+        print("Provenance notes claiming less than their tier "
+              "(printed, never enforced):")
+        for _it, _phrase in note_warnings:
+            print("  %-46s says %r"
+                  % (str(_it.get("title", ""))[:46], _phrase))
+        print()
     report_typed_numbers(paths_path, UI_JS)
 
     # See the docstring on role_breadth_warnings for why this can only ever be a warning.
