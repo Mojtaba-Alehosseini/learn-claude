@@ -25433,52 +25433,6 @@
     "id": "r-770072be75"
   },
   {
-    "title": "Build analysis from browser charts and folder data",
-    "url": "https://academy.claude.com/use-cases/build-analysis-from-browser-charts-and-folder-data",
-    "author": "Anthropic",
-    "source": "Anthropic Academy",
-    "official": true,
-    "roles": [
-      "data-analyst",
-      "business-founder"
-    ],
-    "level": "confident",
-    "topics": [
-      "cowork"
-    ],
-    "format": "docs",
-    "time": "under-15min",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "status": "live",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-29",
-    "summary": "Pulls quarterly revenue out of a folder of board decks, pulls GDP and CPI from FRED through the browser, and charts revenue growth against the macro environment.",
-    "who_for": "Finance or strategy staff who want revenue trends read against real macroeconomic data.",
-    "skip_if": "Needs Cowork on a paid plan plus Claude in Chrome added as a connector to read the FRED charts - and its own verification tip is the one worth keeping: open an original board deck and confirm the extracted figures before the chart goes in front of anyone.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Claims Chrome extracts underlying numbers from a rendered chart, not just visible labels.",
-    "prerequisites": [
-      "Claude Desktop with Cowork on a paid plan",
-      "Claude in Chrome connector",
-      "a folder of board decks"
-    ],
-    "teaches": [
-      "combine folder-based document data with live browser-read economic data into one chart",
-      "verify extracted figures against the original source before using them"
-    ],
-    "keywords": [
-      "revenue vs macro chart claude",
-      "cowork fred data analysis",
-      "claude in chrome extract chart data"
-    ],
-    "questions": [
-      "can cowork compare my revenue against economic data",
-      "can claude read numbers off a chart in my browser"
-    ],
-    "id": "r-cb2509ec19"
-  },
-  {
     "title": "Build customer personas",
     "url": "https://academy.claude.com/use-cases/build-customer-personas",
     "author": "Anthropic",
@@ -26004,51 +25958,6 @@
     "id": "r-dbad74772b"
   },
   {
-    "title": "Contract redlining",
-    "url": "https://academy.claude.com/use-cases/contract-playbook-review",
-    "author": "Anthropic",
-    "source": "Anthropic Academy",
-    "official": true,
-    "roles": [
-      "business-founder",
-      "pm"
-    ],
-    "level": "confident",
-    "topics": [
-      "cowork"
-    ],
-    "format": "docs",
-    "time": "under-15min",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "status": "live",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-29",
-    "summary": "Reviews a vendor agreement, NDA or SaaS contract clause-by-clause against your own contract playbook and produces a redlined version to send back to opposing counsel.",
-    "who_for": "In-house counsel or contract managers doing high-volume commercial contract review.",
-    "skip_if": "The Commercial Legal plugin has to be enabled once by a workspace admin on Team/Enterprise before you can use it - and the green/yellow/red rating only means something if you already have your own contract playbook document to compare against.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Slug and page title differ - the slug says 'playbook review', the page says 'redlining'.",
-    "prerequisites": [
-      "Claude Cowork",
-      "Commercial Legal plugin (admin-enabled)",
-      "your own contract playbook document"
-    ],
-    "teaches": [
-      "redline a contract clause-by-clause against your own playbook"
-    ],
-    "keywords": [
-      "contract redlining claude",
-      "cowork contract playbook review",
-      "claude for legal contract review"
-    ],
-    "questions": [
-      "can cowork redline a contract against our playbook",
-      "how do i enable the commercial legal plugin"
-    ],
-    "id": "r-55e622988a"
-  },
-  {
     "title": "Contract redlining and negotiation",
     "url": "https://academy.claude.com/use-cases/contract-redlining-and-negotiation",
     "author": "Anthropic",
@@ -26090,51 +25999,6 @@
       "how do i get negotiation talking points from a contract"
     ],
     "id": "r-fe08131b56"
-  },
-  {
-    "title": "Contract to ledger extraction",
-    "url": "https://academy.claude.com/use-cases/contract-to-ledger",
-    "author": "Anthropic",
-    "source": "Anthropic Academy",
-    "official": true,
-    "roles": [
-      "data-analyst",
-      "business-founder"
-    ],
-    "level": "confident",
-    "topics": [
-      "cowork"
-    ],
-    "format": "docs",
-    "time": "under-15min",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "status": "live",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-29",
-    "summary": "Pulls ASC 606 revenue-recognition fields out of executed contract PDFs into an intake sheet, flagging non-standard terms before anything posts to the general ledger.",
-    "who_for": "Revenue operations or accounting teams processing executed contracts into the GL.",
-    "skip_if": "Needs the Finance plugin plus Ironclad and NetSuite connected - it's built to catch exceptions before they hit the general ledger via a weekday-5pm scheduled job, so it's overbuilt for reviewing a single contract.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min.",
-    "prerequisites": [
-      "Claude Cowork",
-      "Ironclad and NetSuite connectors",
-      "Finance plugin (optional)"
-    ],
-    "teaches": [
-      "extract ASC 606 revenue-recognition fields from contracts and flag exceptions before GL posting"
-    ],
-    "keywords": [
-      "contract to ledger extraction claude",
-      "asc 606 automation cowork",
-      "revenue recognition contract extraction"
-    ],
-    "questions": [
-      "can cowork extract revenue recognition fields from contracts",
-      "how do i catch contract exceptions before they post to the gl"
-    ],
-    "id": "r-291b16de6a"
   },
   {
     "title": "Create a company newsletter",
@@ -26307,48 +26171,6 @@
       "does claude build sankey diagrams"
     ],
     "id": "r-7a7389177b"
-  },
-  {
-    "title": "Create a volunteer management system",
-    "url": "https://academy.claude.com/use-cases/create-a-volunteer-management-system",
-    "author": "Anthropic",
-    "source": "Anthropic Academy",
-    "official": true,
-    "roles": [
-      "business-founder"
-    ],
-    "level": "confident",
-    "topics": [
-      "chat-prompting"
-    ],
-    "format": "docs",
-    "time": "under-15min",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "status": "live",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-29",
-    "summary": "Builds a full volunteer program paperwork stack - role descriptions, onboarding, communication templates, tracking spreadsheet - for a nonprofit's volunteer program.",
-    "who_for": "Nonprofit staff professionalizing volunteer management as the program scales.",
-    "skip_if": "The two referenced PDFs are example inputs from the page's own worked example, not downloadable templates - you supply your organization's actual program details, or the ~15-page handbook it drafts will be generic.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Worked example is a tutoring nonprofit with 45 volunteers across 3 schools.",
-    "prerequisites": [
-      "your organization's program structure and existing materials"
-    ],
-    "teaches": [
-      "build a complete volunteer program documentation stack including a tracking workbook"
-    ],
-    "keywords": [
-      "volunteer management system claude",
-      "nonprofit volunteer handbook ai",
-      "volunteer tracking spreadsheet claude"
-    ],
-    "questions": [
-      "can claude build our volunteer management documentation",
-      "how do i create a volunteer tracking spreadsheet"
-    ],
-    "id": "r-3f9f3aede3"
   },
   {
     "title": "Create brand assets",
@@ -26564,95 +26386,6 @@
       "how do i test that a claude-made pdf form actually works"
     ],
     "id": "r-fc3679573c"
-  },
-  {
-    "title": "Create new hire onboarding guides",
-    "url": "https://academy.claude.com/use-cases/create-new-hire-onboarding-guides",
-    "author": "Anthropic",
-    "source": "Anthropic Academy",
-    "official": true,
-    "roles": [
-      "business-founder",
-      "non-technical"
-    ],
-    "level": "confident",
-    "topics": [
-      "chat-prompting"
-    ],
-    "format": "docs",
-    "time": "under-15min",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "status": "live",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-29",
-    "summary": "Combines standard company handbook material with one new hire's personal details into a personalized first-week welcome guide.",
-    "who_for": "HR or people-ops staff personalizing onboarding for each new hire instead of sending a generic packet.",
-    "skip_if": "Needs Google Calendar and Google Drive connected, plus your own handbook and logistics docs uploaded - the prompt explicitly asks for design taste ('a senior designer should look at this and think they have great taste'), so a bare-bones upload gets a bare-bones guide.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min.",
-    "prerequisites": [
-      "Google Calendar and Google Drive connectors",
-      "company handbook and role-specific materials"
-    ],
-    "teaches": [
-      "personalize a new hire's first-week welcome guide from standard handbook material"
-    ],
-    "keywords": [
-      "new hire onboarding guide claude",
-      "personalized onboarding ai",
-      "claude welcome guide new employee"
-    ],
-    "questions": [
-      "can claude create a personalized onboarding guide",
-      "how do i automate new hire welcome documents"
-    ],
-    "id": "r-b6d113b051"
-  },
-  {
-    "title": "M&A diligence",
-    "url": "https://academy.claude.com/use-cases/data-room-diligence",
-    "author": "Anthropic",
-    "source": "Anthropic Academy",
-    "official": true,
-    "roles": [
-      "business-founder",
-      "pm"
-    ],
-    "level": "confident",
-    "topics": [
-      "cowork"
-    ],
-    "format": "docs",
-    "time": "under-15min",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "status": "live",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-29",
-    "summary": "Reviews a virtual data room for an acquisition - extracts material contract provisions, flags issues, and drafts a diligence summary with every line cited to its source document.",
-    "who_for": "Corporate counsel or M&A deal teams running diligence on an acquisition.",
-    "skip_if": "Needs the Corporate Legal plugin, which a Team/Enterprise admin must enable once - and it's built as a recurring scheduled job re-running daily during a diligence window, so it's overbuilt for a single quick check.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Slug reads 'data-room-diligence' but the page title is 'M&A diligence.'",
-    "prerequisites": [
-      "Claude Cowork",
-      "Corporate Legal plugin (admin-enabled)",
-      "a data room and diligence request list"
-    ],
-    "teaches": [
-      "extract material contract provisions from a data room with source-cited diligence findings"
-    ],
-    "keywords": [
-      "m&a diligence claude",
-      "data room review ai",
-      "cowork acquisition diligence"
-    ],
-    "questions": [
-      "can cowork help with m&a due diligence",
-      "how do i cite sources automatically in a diligence summary"
-    ],
-    "id": "r-a742871628"
   },
   {
     "title": "Debate practice with feedback",
@@ -27134,52 +26867,6 @@
     "id": "r-d1b9252ab8"
   },
   {
-    "title": "Engagement survey to action plan",
-    "url": "https://academy.claude.com/use-cases/engagement-survey-themes",
-    "author": "Anthropic",
-    "source": "Anthropic Academy",
-    "official": true,
-    "roles": [
-      "business-founder",
-      "pm"
-    ],
-    "level": "confident",
-    "topics": [
-      "cowork"
-    ],
-    "format": "docs",
-    "time": "under-15min",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "status": "live",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-29",
-    "summary": "Turns raw open-text employee survey responses into a one-page People brief - top themes, anonymized supporting quotes, and a 30-day action plan per theme.",
-    "who_for": "HR or people-ops staff turning a raw survey export into an action plan.",
-    "skip_if": "Needs a raw survey CSV export plus an org roster, and it builds in an absolute rule to never attribute a quote to an individual - so it won't work from a summary someone already wrote up.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Separates 'loud-minority comments from broad signal' as a built-in safeguard.",
-    "prerequisites": [
-      "Claude Cowork",
-      "a raw survey CSV export",
-      "an org roster",
-      "Human Resources plugin (optional)"
-    ],
-    "teaches": [
-      "turn a raw employee survey export into anonymized themes with a 30-day action plan"
-    ],
-    "keywords": [
-      "engagement survey analysis claude",
-      "employee survey themes ai",
-      "cowork survey action plan"
-    ],
-    "questions": [
-      "can cowork analyze our employee engagement survey",
-      "how do i turn survey responses into an action plan anonymously"
-    ],
-    "id": "r-24a8ad4539"
-  },
-  {
     "title": "Evaluate a company from the science to the balance sheet",
     "url": "https://academy.claude.com/use-cases/evaluate-a-company-from-the-science-to-the-balance-sheet",
     "author": "Anthropic",
@@ -27221,52 +26908,6 @@
       "how does claude find contradictions across filings and trial data"
     ],
     "id": "r-573da45bcf"
-  },
-  {
-    "title": "Explain a variance",
-    "url": "https://academy.claude.com/use-cases/explain-a-variance",
-    "author": "Anthropic",
-    "source": "Anthropic Academy",
-    "official": true,
-    "roles": [
-      "data-analyst",
-      "business-founder"
-    ],
-    "level": "confident",
-    "topics": [
-      "cowork"
-    ],
-    "format": "docs",
-    "time": "under-15min",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "status": "live",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-29",
-    "summary": "Compares actuals against prior period and budget, and writes the variance explanation for each material line item.",
-    "who_for": "Finance/accounting staff drafting monthly variance commentary for close.",
-    "skip_if": "Needs the Finance plugin plus NetSuite connected, along with actuals/prior-period/budget files already in a working folder - and it's built to end as a recurring Monday job, so it's overbuilt for explaining one number once.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min.",
-    "prerequisites": [
-      "Claude Cowork",
-      "NetSuite connector",
-      "actuals/prior period/budget files",
-      "Finance plugin (optional)"
-    ],
-    "teaches": [
-      "draft monthly variance commentary comparing actuals to prior period and budget"
-    ],
-    "keywords": [
-      "variance commentary claude",
-      "monthly close variance explanation",
-      "cowork finance variance"
-    ],
-    "questions": [
-      "can cowork write our monthly variance commentary",
-      "how do i automate variance analysis at close"
-    ],
-    "id": "r-6636e79be0"
   },
   {
     "title": "Explore what Claude can do for you",
@@ -27351,51 +26992,6 @@
       "how do i build a voice of customer brief"
     ],
     "id": "r-3fab06e739"
-  },
-  {
-    "title": "Forecast & scenario modeling",
-    "url": "https://academy.claude.com/use-cases/forecast-scenarios",
-    "author": "Anthropic",
-    "source": "Anthropic Academy",
-    "official": true,
-    "roles": [
-      "data-analyst",
-      "business-founder"
-    ],
-    "level": "confident",
-    "topics": [
-      "cowork"
-    ],
-    "format": "docs",
-    "time": "under-15min",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "status": "live",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-29",
-    "summary": "Rolls an existing driver model forward four quarters into base/upside/downside scenarios with a written assumptions memo for leadership.",
-    "who_for": "FP&A staff producing a scenario forecast for leadership review.",
-    "skip_if": "Needs a driver model, headcount plan and assumptions doc already built - it rolls an existing model forward into three scenarios, it doesn't build the underlying driver model from scratch.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Recommends promoting the working folder to a Cowork project so the model and scheduled runs stay attached.",
-    "prerequisites": [
-      "Claude Cowork",
-      "an existing driver model, headcount plan and assumptions doc",
-      "Finance plugin (optional)"
-    ],
-    "teaches": [
-      "roll a driver model into base/upside/downside scenarios with an assumptions memo"
-    ],
-    "keywords": [
-      "scenario forecasting claude",
-      "base upside downside model",
-      "cowork fp&a forecast"
-    ],
-    "questions": [
-      "can cowork build scenario forecasts from our driver model",
-      "how do i produce a base upside downside forecast"
-    ],
-    "id": "r-da4dd886f8"
   },
   {
     "title": "Generate an AI policy",
@@ -27615,51 +27211,6 @@
     "id": "r-bee34f76e6"
   },
   {
-    "title": "Reconcile headcount",
-    "url": "https://academy.claude.com/use-cases/headcount-reconciliation",
-    "author": "Anthropic",
-    "source": "Anthropic Academy",
-    "official": true,
-    "roles": [
-      "data-analyst",
-      "business-founder"
-    ],
-    "level": "confident",
-    "topics": [
-      "cowork"
-    ],
-    "format": "docs",
-    "time": "under-15min",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "status": "live",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-29",
-    "summary": "Makes the HRIS roster, budget headcount plan, and payroll/GL agree on who is actually on the books, classifying every discrepancy by type.",
-    "who_for": "Finance or accounting staff reconciling headcount across HR and payroll systems.",
-    "skip_if": "Needs a Workday roster export, headcount plan, payroll register and cost-center map all in one folder - the output is a categorized discrepancy list, so it's only useful if those four sources genuinely disagree with each other.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Categories include unplanned hires, open-but-budgeted requisitions, and contractors miscoded as FTEs.",
-    "prerequisites": [
-      "Claude Cowork",
-      "Workday roster, headcount plan, payroll register, cost-center map",
-      "Gusto/NetSuite connectors (optional)"
-    ],
-    "teaches": [
-      "reconcile headcount across HRIS, budget and payroll with discrepancies categorized by type"
-    ],
-    "keywords": [
-      "headcount reconciliation claude",
-      "hris payroll reconciliation ai",
-      "cowork headcount discrepancy"
-    ],
-    "questions": [
-      "can cowork reconcile our headcount across systems",
-      "how do i categorize headcount discrepancies"
-    ],
-    "id": "r-8b7ac094da"
-  },
-  {
     "title": "Draft the incident postmortem",
     "url": "https://academy.claude.com/use-cases/incident-postmortem",
     "author": "Anthropic",
@@ -27705,51 +27256,6 @@
     "id": "r-7719f04e57"
   },
   {
-    "title": "Interview debrief synthesis",
-    "url": "https://academy.claude.com/use-cases/interview-debrief",
-    "author": "Anthropic",
-    "source": "Anthropic Academy",
-    "official": true,
-    "roles": [
-      "pm",
-      "business-founder"
-    ],
-    "level": "confident",
-    "topics": [
-      "cowork"
-    ],
-    "format": "docs",
-    "time": "under-15min",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "status": "live",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-29",
-    "summary": "Turns a panel's interview scorecards into a debrief showing where interviewers agreed, where they split, and what still needs resolving - deliberately never recommending hire or no-hire.",
-    "who_for": "Hiring teams preparing for a hiring discussion after a panel interview.",
-    "skip_if": "Needs a scorecard export, competency rubric PDF and interview plan in a working folder - and the prompt explicitly forbids Claude from recommending hire or no-hire, so it organizes evidence but never makes the call.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. The only page in its batch with a built-in refusal of its own obvious output.",
-    "prerequisites": [
-      "Claude Cowork",
-      "scorecard export, competency rubric, interview plan",
-      "Human Resources plugin (optional)"
-    ],
-    "teaches": [
-      "synthesize panel interview scorecards into agreement/disagreement/gaps without making the hire decision"
-    ],
-    "keywords": [
-      "interview debrief synthesis claude",
-      "panel interview scorecard analysis",
-      "cowork hiring debrief"
-    ],
-    "questions": [
-      "can cowork synthesize our panel interview scorecards",
-      "does claude decide who to hire"
-    ],
-    "id": "r-9782588d4d"
-  },
-  {
     "title": "Launch readiness sweep",
     "url": "https://academy.claude.com/use-cases/launch-readiness",
     "author": "Anthropic",
@@ -27793,51 +27299,6 @@
       "how do i track launch blockers automatically"
     ],
     "id": "r-334f360edc"
-  },
-  {
-    "title": "Legal research",
-    "url": "https://academy.claude.com/use-cases/legal-research-memo",
-    "author": "Anthropic",
-    "source": "Anthropic Academy",
-    "official": true,
-    "roles": [
-      "business-founder",
-      "pm"
-    ],
-    "level": "confident",
-    "topics": [
-      "cowork"
-    ],
-    "format": "docs",
-    "time": "under-15min",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "status": "live",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-29",
-    "summary": "Produces a structured research memo - question presented, short answer, discussion by authority, open issues - with verified citations rather than a pile of links.",
-    "who_for": "Litigation or research attorneys drafting a structured legal research memo.",
-    "skip_if": "The Litigation Legal plugin's source has to be enabled once by a workspace admin on Team/Enterprise plans - and real payoff is saving your customized version as your own reusable skill, so a single one-off run undersells it.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. The heaviest gating in its batch - Litigation Legal source, CoCounsel Legal connector, admin enablement.",
-    "prerequisites": [
-      "Claude Cowork",
-      "Litigation Legal plugin (admin-enabled)",
-      "CoCounsel Legal connector"
-    ],
-    "teaches": [
-      "draft a structured legal research memo with verified citations by authority"
-    ],
-    "keywords": [
-      "legal research memo claude",
-      "cowork legal research",
-      "structured research memo ai"
-    ],
-    "questions": [
-      "can cowork draft a legal research memo",
-      "how do i get verified citations in a legal memo"
-    ],
-    "id": "r-58b57b367e"
   },
   {
     "title": "Map your lit review mid-conversation to surface the underlying debate",
@@ -28108,97 +27569,6 @@
     "id": "r-0f870cfd55"
   },
   {
-    "title": "NDA triage at scale",
-    "url": "https://academy.claude.com/use-cases/nda-review",
-    "author": "Anthropic",
-    "source": "Anthropic Academy",
-    "official": true,
-    "roles": [
-      "business-founder",
-      "pm"
-    ],
-    "level": "confident",
-    "topics": [
-      "cowork"
-    ],
-    "format": "docs",
-    "time": "under-15min",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "status": "live",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-29",
-    "summary": "Screens an incoming NDA against your own playbook criterion by criterion - if it passes, routes it for signature; if not, lists only the exceptions so counsel reviews just those.",
-    "who_for": "In-house counsel or legal ops triaging a high volume of standard NDAs.",
-    "skip_if": "The Commercial Legal plugin's source has to be enabled once by a workspace admin - and it needs your own NDA playbook document to compare against, since a clean/exception routing decision has no meaning without one.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. A clean NDA produces a routing action, not a report - only deviations generate text.",
-    "prerequisites": [
-      "Claude Cowork",
-      "Commercial Legal plugin (admin-enabled)",
-      "an NDA playbook document",
-      "DocuSign connector (optional)"
-    ],
-    "teaches": [
-      "triage NDAs against a playbook, routing clean ones for signature and flagging only real exceptions"
-    ],
-    "keywords": [
-      "nda triage claude",
-      "nda review at scale",
-      "cowork legal contract triage"
-    ],
-    "questions": [
-      "can cowork triage our incoming ndas automatically",
-      "how do i route clean contracts for signature without a full review"
-    ],
-    "id": "r-6965832870"
-  },
-  {
-    "title": "Offer process",
-    "url": "https://academy.claude.com/use-cases/offer-process",
-    "author": "Anthropic",
-    "source": "Anthropic Academy",
-    "official": true,
-    "roles": [
-      "business-founder",
-      "pm"
-    ],
-    "level": "confident",
-    "topics": [
-      "cowork"
-    ],
-    "format": "docs",
-    "time": "under-15min",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "status": "live",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-29",
-    "summary": "Assembles a full offer package for a finalist in one pass - populates the offer letter, drafts the candidate email, and builds a short screenshare-ready HTML deck.",
-    "who_for": "Recruiters or hiring managers assembling an offer package for a finalist candidate.",
-    "skip_if": "Needs four specific files already prepared - the offer-letter template, candidate summary, comp approval sheet, and benefits overview - across four different formats (docx/pdf/xlsx/pdf), so there's real prep before the prompt does anything.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Produces three different artifact types from one prompt across four mixed input formats.",
-    "prerequisites": [
-      "Claude Cowork",
-      "offer-letter template, candidate summary, comp approval, benefits overview files",
-      "Human Resources plugin (optional)"
-    ],
-    "teaches": [
-      "assemble a full offer package - letter fields, candidate email, and a screenshare deck - in one pass"
-    ],
-    "keywords": [
-      "offer process automation claude",
-      "assemble job offer package",
-      "cowork recruiting offer"
-    ],
-    "questions": [
-      "can cowork assemble a job offer package for me",
-      "how do i draft an offer letter and candidate email together"
-    ],
-    "id": "r-c4fdca0423"
-  },
-  {
     "title": "On-call handoff brief",
     "url": "https://academy.claude.com/use-cases/oncall-handoff-brief",
     "author": "Anthropic",
@@ -28242,51 +27612,6 @@
       "how do i automate on-call shift handoffs"
     ],
     "id": "r-a2f1ea505c"
-  },
-  {
-    "title": "Open a new role",
-    "url": "https://academy.claude.com/use-cases/open-new-role",
-    "author": "Anthropic",
-    "source": "Anthropic Academy",
-    "official": true,
-    "roles": [
-      "business-founder",
-      "pm"
-    ],
-    "level": "confident",
-    "topics": [
-      "cowork"
-    ],
-    "format": "docs",
-    "time": "under-15min",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "status": "live",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-29",
-    "summary": "Replaces the hiring kickoff meeting with a structured intake interview - Claude questions you on ownership, skills, level and 90-day success, pushes back where vague, then writes the role spec.",
-    "who_for": "Hiring managers opening a new role who want a consistent spec without a kickoff meeting.",
-    "skip_if": "Needs a role spec template, leveling guide and team charter document in the working folder - the prompt is written to interrogate and push back on vague answers, so a rushed conversation won't get a tight role spec.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Deliverable includes a hand-off list of items still unresolved for the recruiter.",
-    "prerequisites": [
-      "Claude Cowork",
-      "role spec template, leveling guide, team charter",
-      "Human Resources plugin (optional)"
-    ],
-    "teaches": [
-      "run a structured intake interview to produce a consistent role spec without a kickoff meeting"
-    ],
-    "keywords": [
-      "open a new role claude",
-      "hiring intake interview ai",
-      "cowork role spec generator"
-    ],
-    "questions": [
-      "can cowork interview me to write a role spec",
-      "how do i skip the hiring kickoff meeting"
-    ],
-    "id": "r-4b9338b108"
   },
   {
     "title": "Organize files across your desktop",
@@ -28417,95 +27742,6 @@
     "id": "r-dde2b36a8c"
   },
   {
-    "title": "Organize your legal workflows using Projects",
-    "url": "https://academy.claude.com/use-cases/organize-your-legal-workflows-using-projects",
-    "author": "Anthropic",
-    "source": "Anthropic Academy",
-    "official": true,
-    "roles": [
-      "business-founder",
-      "pm"
-    ],
-    "level": "confident",
-    "topics": [
-      "chat-prompting"
-    ],
-    "format": "docs",
-    "time": "under-15min",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "status": "live",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-29",
-    "summary": "Sets up a Claude Project for high-volume contract review so your playbook, template and standard terms are uploaded once and referenced automatically on every review.",
-    "who_for": "Contract review teams doing high volume (worked example: about 30 NDAs a week) who re-explain standards every time.",
-    "skip_if": "Worth it mainly at volume - the worked example is about 30 NDAs a week - so for occasional one-off contract review the setup overhead (uploading a playbook, template and term lists once) outweighs the benefit.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Claude generates the Project's own standards guide and custom instructions from your uploaded materials.",
-    "prerequisites": [
-      "a Claude account with Projects",
-      "your playbook, template and term lists"
-    ],
-    "teaches": [
-      "set up a Claude Project that auto-references your review standards on every contract"
-    ],
-    "keywords": [
-      "claude projects for legal review",
-      "reuse contract playbook claude",
-      "organize legal workflows claude"
-    ],
-    "questions": [
-      "can claude remember our contract review standards automatically",
-      "how do i set up a claude project for high-volume contract review"
-    ],
-    "id": "r-b0a4f9e6dd"
-  },
-  {
-    "title": "Outside counsel management",
-    "url": "https://academy.claude.com/use-cases/outside-counsel-review",
-    "author": "Anthropic",
-    "source": "Anthropic Academy",
-    "official": true,
-    "roles": [
-      "business-founder",
-      "pm"
-    ],
-    "level": "confident",
-    "topics": [
-      "cowork"
-    ],
-    "format": "docs",
-    "time": "under-15min",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "status": "live",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-29",
-    "summary": "Reviews a law firm's billing against your billing guidelines, flags off-pattern time entries and matters drifting from budget, and drafts talking points for the relationship-partner call.",
-    "who_for": "Legal operations managing outside counsel spend - the buyer side of legal, not the practicing lawyer.",
-    "skip_if": "Needs your own billing guidelines document and a matter budget tracker in a local folder - it's written for the buyer side of legal (managing outside counsel spend), not for a practicing lawyer's own casework.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Connects to iManage/NetDocuments by name; deliverable is a negotiation aid, not just a variance report.",
-    "prerequisites": [
-      "billing guidelines document",
-      "matter budget tracker",
-      "iManage/NetDocuments connector (optional)"
-    ],
-    "teaches": [
-      "review outside counsel billing against your guidelines and prep talking points for a spend conversation"
-    ],
-    "keywords": [
-      "outside counsel spend review claude",
-      "legal billing guideline compliance",
-      "cowork legal ops spend"
-    ],
-    "questions": [
-      "can cowork review our outside counsel's billing",
-      "how do i flag budget drift on legal matters"
-    ],
-    "id": "r-c412347e82"
-  },
-  {
     "title": "Package your brand guidelines in a skill",
     "url": "https://academy.claude.com/use-cases/package-your-brand-guidelines-in-a-skill",
     "author": "Anthropic",
@@ -28592,51 +27828,6 @@
       "how do i avoid duplicating ui patterns"
     ],
     "id": "r-ee52358653"
-  },
-  {
-    "title": "Performance review administrator",
-    "url": "https://academy.claude.com/use-cases/performance-review-admin",
-    "author": "Anthropic",
-    "source": "Anthropic Academy",
-    "official": true,
-    "roles": [
-      "business-founder",
-      "pm"
-    ],
-    "level": "builder",
-    "topics": [
-      "cowork"
-    ],
-    "format": "docs",
-    "time": "under-15min",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "status": "live",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-29",
-    "summary": "Converts a company's written performance framework into one skill every people manager runs to gather input, score competencies, and draft the review.",
-    "who_for": "HR/people-ops teams standardizing how managers write performance reviews.",
-    "skip_if": "Needs your company's written performance framework document, rating definitions and a Gusto connector for roster data - the build prompt hard-constrains the skill to quote your rating definitions verbatim, so it's not generic performance-review advice.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Distributed as a skill every manager runs, not a single review.",
-    "prerequisites": [
-      "Claude Cowork",
-      "your performance framework document and rating definitions",
-      "Gusto connector"
-    ],
-    "teaches": [
-      "distribute a company's performance framework as a skill every manager can run"
-    ],
-    "keywords": [
-      "performance review skill claude",
-      "standardize performance reviews cowork",
-      "hr performance framework skill"
-    ],
-    "questions": [
-      "can cowork standardize how our managers write reviews",
-      "how do i turn our performance framework into a skill"
-    ],
-    "id": "r-a4a27f2135"
   },
   {
     "title": "Plan your career path",
@@ -28856,51 +28047,6 @@
     "id": "r-06f3de8071"
   },
   {
-    "title": "Prep scattered documents for a compliance audit",
-    "url": "https://academy.claude.com/use-cases/prep-scattered-documents-for-a-compliance-audit",
-    "author": "Anthropic",
-    "source": "Anthropic Academy",
-    "official": true,
-    "roles": [
-      "business-founder",
-      "pm"
-    ],
-    "level": "confident",
-    "topics": [
-      "chat-prompting"
-    ],
-    "format": "docs",
-    "time": "under-15min",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "status": "live",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-29",
-    "summary": "Takes a messy local folder of policies, contracts and records and produces a renamed, categorized, audit-ready collection with missing evidence identified against a named framework.",
-    "who_for": "Legal/compliance/GRC staff prepping documents ahead of an audit.",
-    "skip_if": "Needs Claude Desktop plus you supply the actual audit scope or control framework (SOC 2 in the worked example) - without a named framework to map against, there's nothing to sort the documents by.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Worked example sorts 156 documents and names the specific control gaps found.",
-    "prerequisites": [
-      "Claude Desktop",
-      "a folder of policy/contract/record documents",
-      "a named audit framework (e.g. SOC 2)"
-    ],
-    "teaches": [
-      "sort a messy document folder into an audit-ready collection mapped to a control framework"
-    ],
-    "keywords": [
-      "compliance audit document prep claude",
-      "soc 2 document mapping ai",
-      "cowork audit ready folder"
-    ],
-    "questions": [
-      "can claude prep our documents for a compliance audit",
-      "how do i map documents to soc 2 controls"
-    ],
-    "id": "r-4388a3f2a4"
-  },
-  {
     "title": "Prepare and plan from your calendar",
     "url": "https://academy.claude.com/use-cases/prepare-and-plan-from-your-calendar",
     "author": "Anthropic",
@@ -28943,51 +28089,6 @@
       "does claude in chrome book meeting rooms automatically"
     ],
     "id": "r-6a50113b4f"
-  },
-  {
-    "title": "Process batches of vendors with Cowork",
-    "url": "https://academy.claude.com/use-cases/process-batches-of-vendors-with-cowork",
-    "author": "Anthropic",
-    "source": "Anthropic Academy",
-    "official": true,
-    "roles": [
-      "business-founder",
-      "pm"
-    ],
-    "level": "confident",
-    "topics": [
-      "cowork"
-    ],
-    "format": "docs",
-    "time": "under-15min",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "status": "live",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-29",
-    "summary": "Onboards several vendors in one session - adds each to a tracker, generates contracts, and fills procurement portal intake forms in the browser via Claude in Chrome.",
-    "who_for": "Procurement or operations staff onboarding multiple vendors at once.",
-    "skip_if": "Needs Claude Desktop plus the Claude in Chrome extension already logged into your procurement portal - it combines local-file Cowork with live browser form-filling in one run, a heavier setup than either alone.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Produces a reviewable plan in the sidebar before acting, generating an MSA and NDA per vendor.",
-    "prerequisites": [
-      "Claude Desktop",
-      "Claude in Chrome connector",
-      "logged into the procurement portal"
-    ],
-    "teaches": [
-      "onboard multiple vendors in one session across a tracker, generated contracts, and browser intake forms"
-    ],
-    "keywords": [
-      "batch process vendors claude",
-      "cowork vendor onboarding",
-      "claude in chrome procurement forms"
-    ],
-    "questions": [
-      "can cowork onboard multiple vendors at once",
-      "how do i fill procurement portal forms with claude"
-    ],
-    "id": "r-9e54ee6e74"
   },
   {
     "title": "Pull metrics from analytics dashboards",
@@ -29077,51 +28178,6 @@
     "id": "r-c233c18727"
   },
   {
-    "title": "Reconcile and draft the journal entries",
-    "url": "https://academy.claude.com/use-cases/recon-journal-entries",
-    "author": "Anthropic",
-    "source": "Anthropic Academy",
-    "official": true,
-    "roles": [
-      "data-analyst",
-      "business-founder"
-    ],
-    "level": "confident",
-    "topics": [
-      "cowork"
-    ],
-    "format": "docs",
-    "time": "under-15min",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "status": "live",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-29",
-    "summary": "Reconciles intercompany balances across two subledgers at month-end close and drafts the correcting journal entries, sorted into timing/rounding/true-break buckets.",
-    "who_for": "Accounting teams doing month-end intercompany reconciliation.",
-    "skip_if": "Needs two subledger exports, an FX rate sheet and a JE template already in a working folder - matching is fuzzy on amount and reference after FX normalization, so it needs genuinely comparable data across both subledgers.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Only 'true breaks' get a drafted Dr/Cr entry with memo and support reference.",
-    "prerequisites": [
-      "Claude Cowork",
-      "two subledger exports, an FX rate sheet, a JE template",
-      "Finance plugin (optional)"
-    ],
-    "teaches": [
-      "reconcile intercompany balances and draft only the journal entries for genuine breaks"
-    ],
-    "keywords": [
-      "reconcile intercompany balances claude",
-      "draft journal entries ai",
-      "cowork month end close"
-    ],
-    "questions": [
-      "can cowork reconcile our intercompany balances",
-      "how do i draft journal entries automatically"
-    ],
-    "id": "r-48b52d65bc"
-  },
-  {
     "title": "Reconcile transactions across your accounts",
     "url": "https://academy.claude.com/use-cases/reconcile-transactions-across-your-accounts",
     "author": "Anthropic",
@@ -29163,51 +28219,6 @@
       "how do i export reconciled entries from claude"
     ],
     "id": "r-9fe7f776df"
-  },
-  {
-    "title": "Regulatory and compliance",
-    "url": "https://academy.claude.com/use-cases/regulatory-analysis",
-    "author": "Anthropic",
-    "source": "Anthropic Academy",
-    "official": true,
-    "roles": [
-      "business-founder",
-      "pm"
-    ],
-    "level": "confident",
-    "topics": [
-      "cowork"
-    ],
-    "format": "docs",
-    "time": "under-15min",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "status": "live",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-29",
-    "summary": "Reads a new regulation against your own products and policies, and drafts a compliance brief covering what changed, what applies to you, and what to do by when.",
-    "who_for": "Legal/compliance teams assessing the impact of a new regulation.",
-    "skip_if": "The Regulatory Legal plugin needs a Team/Enterprise admin to enable the Claude for Legal source first, and the initial /cold-start-interview indexing pass can take 10+ minutes on its own before you even start.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. /reg-feed-watcher filters regulatory feeds by a materiality threshold you set.",
-    "prerequisites": [
-      "Claude Cowork",
-      "Regulatory Legal plugin (admin-enabled)",
-      "the regulation PDF, product descriptions, current policies"
-    ],
-    "teaches": [
-      "draft a regulatory compliance brief with what changed, what applies, and deadlines"
-    ],
-    "keywords": [
-      "regulatory compliance brief claude",
-      "claude for legal regulatory analysis",
-      "cowork compliance review"
-    ],
-    "questions": [
-      "can cowork assess a new regulation's impact on us",
-      "how do i monitor regulatory feeds with claude"
-    ],
-    "id": "r-52af026126"
   },
   {
     "title": "Repurpose content across channels",
@@ -29547,51 +28558,6 @@
     "id": "r-5f968ae13d"
   },
   {
-    "title": "SOX & controls documentation",
-    "url": "https://academy.claude.com/use-cases/sox-controls-doc",
-    "author": "Anthropic",
-    "source": "Anthropic Academy",
-    "official": true,
-    "roles": [
-      "data-analyst",
-      "business-founder"
-    ],
-    "level": "confident",
-    "topics": [
-      "cowork"
-    ],
-    "format": "docs",
-    "time": "under-1hr",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "status": "live",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-29",
-    "summary": "Produces a SOX process narrative, a risk and control matrix, and a process flowchart from raw walkthrough notes, flagging any step where a control looks missing.",
-    "who_for": "Internal audit or SOX compliance staff documenting a process for the first time or updating it.",
-    "skip_if": "Needs raw walkthrough notes, an RCM template and the prior-year narrative already in a working folder - the page's own subtitle claims 'under an hour' while its duration chip says 10 minutes, a real internal inconsistency worth knowing before you plan time for it.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. Page chip says 10 min but subtitle says 'under an hour' - both are recorded here rather than silently picking one.",
-    "prerequisites": [
-      "Claude Cowork",
-      "walkthrough notes, RCM template, prior-year narrative",
-      "Finance plugin (optional)"
-    ],
-    "teaches": [
-      "produce a SOX process narrative, risk and control matrix, and flowchart from walkthrough notes"
-    ],
-    "keywords": [
-      "sox controls documentation claude",
-      "risk control matrix ai",
-      "cowork sox compliance"
-    ],
-    "questions": [
-      "can cowork document our sox controls",
-      "how do i build a risk and control matrix with claude"
-    ],
-    "id": "r-fce9525592"
-  },
-  {
     "title": "Write the sprint retro and on-call handoff",
     "url": "https://academy.claude.com/use-cases/sprint-retro-handoff",
     "author": "Anthropic",
@@ -29857,50 +28823,6 @@
       "how do i automatically log decisions from threads"
     ],
     "id": "r-a22aa59497"
-  },
-  {
-    "title": "Track discovery timelines and analyze patterns",
-    "url": "https://academy.claude.com/use-cases/track-discovery-timelines-and-analyze-patterns",
-    "author": "Anthropic",
-    "source": "Anthropic Academy",
-    "official": true,
-    "roles": [
-      "business-founder",
-      "pm"
-    ],
-    "level": "confident",
-    "topics": [
-      "chat-prompting"
-    ],
-    "format": "docs",
-    "time": "under-15min",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "status": "live",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-29",
-    "summary": "Works through discovery documents in a software contract dispute, builds a chronology, and spots patterns across the production - undocumented scope changes, response-time breaches.",
-    "who_for": "Litigation attorneys and paralegals reviewing a large discovery production.",
-    "skip_if": "Needs your own discovery documents uploaded (PDF/Word/Excel/email) - the worked example is a ~40-document software contract dispute, so it's built for real litigation volume, not a handful of files.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Worked example finds vendor invoices running 40% over contract amount and a missing formal change order.",
-    "prerequisites": [
-      "discovery documents (PDF/Word/Excel/email)",
-      "Gmail/Google Drive connectors (optional)"
-    ],
-    "teaches": [
-      "build a chronology and spot patterns across a large discovery production"
-    ],
-    "keywords": [
-      "discovery review claude",
-      "litigation document chronology ai",
-      "claude legal discovery patterns"
-    ],
-    "questions": [
-      "can claude help me review discovery documents",
-      "how do i build a chronology from a large document production"
-    ],
-    "id": "r-d07866943a"
   },
   {
     "title": "Turn emails into an event tracker",
@@ -30255,188 +29177,6 @@
     "id": "r-a898e7f400"
   },
   {
-    "title": "Validate reserves and draft filing narrative with Claude for Excel",
-    "url": "https://academy.claude.com/use-cases/validate-reserves-and-draft-filing-narrative-with-claude-for-excel",
-    "author": "Anthropic",
-    "source": "Anthropic Academy",
-    "official": true,
-    "roles": [
-      "data-analyst",
-      "business-founder"
-    ],
-    "level": "builder",
-    "topics": [
-      "chat-prompting"
-    ],
-    "format": "docs",
-    "time": "under-15min",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "status": "live",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-29",
-    "summary": "Runs a quarterly insurance reserve review - validates reserve workbook formulas, compares to the prior period, flags anomalies, then drafts the regulatory filing memo.",
-    "who_for": "Insurance actuarial staff preparing a quarterly reserve filing.",
-    "skip_if": "Needs a self-hosted NAIC custom MCP connector your organization sets up, plus Claude for Excel and Word add-ins - a narrow, heavily regulated insurance-actuarial workflow, not a general spreadsheet-review pattern.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Worked example names three concrete formula defects with dollar impact, e.g. a hard-coded development factor worth about $2.1M.",
-    "prerequisites": [
-      "Claude for Excel and Word add-ins",
-      "a self-hosted NAIC MCP connector",
-      "a reserve workbook and prior filing memo"
-    ],
-    "teaches": [
-      "validate insurance reserve workbook formulas and draft the regulatory filing narrative"
-    ],
-    "keywords": [
-      "insurance reserve validation claude",
-      "claude for excel actuarial",
-      "regulatory filing memo ai"
-    ],
-    "questions": [
-      "can claude validate our insurance reserve workbook",
-      "how do i draft a regulatory filing narrative with claude"
-    ],
-    "id": "r-a5a90e6d20"
-  },
-  {
-    "title": "Variance to exec slides",
-    "url": "https://academy.claude.com/use-cases/variance-exec-slides",
-    "author": "Anthropic",
-    "source": "Anthropic Academy",
-    "official": true,
-    "roles": [
-      "data-analyst",
-      "business-founder"
-    ],
-    "level": "confident",
-    "topics": [
-      "cowork"
-    ],
-    "format": "docs",
-    "time": "under-15min",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "status": "live",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-29",
-    "summary": "Builds three board-ready slides - headline, drivers, outlook - straight from the monthly or quarterly variance workbook.",
-    "who_for": "FP&A staff preparing CFO or board-level variance reporting.",
-    "skip_if": "Needs the Microsoft 365 connector plus a variance workbook, a prior-quarter deck template, and a materiality threshold already defined in the project instructions - the threshold is meant to be set once, not restated every month.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Materiality lives in project instructions so 'above our threshold' always means your number.",
-    "prerequisites": [
-      "Claude Cowork",
-      "Microsoft 365 connector",
-      "a variance workbook and prior-quarter deck",
-      "Finance plugin (optional)"
-    ],
-    "teaches": [
-      "build three board-ready variance slides directly from the variance workbook"
-    ],
-    "keywords": [
-      "variance to exec slides claude",
-      "board variance reporting ai",
-      "cowork cfo slides"
-    ],
-    "questions": [
-      "can cowork build our board variance slides",
-      "how do i automate cfo-level variance reporting"
-    ],
-    "id": "r-112311cb83"
-  },
-  {
-    "title": "Prep the vendor negotiation",
-    "url": "https://academy.claude.com/use-cases/vendor-negotiation",
-    "author": "Anthropic",
-    "source": "Anthropic Academy",
-    "official": true,
-    "roles": [
-      "business-founder",
-      "pm"
-    ],
-    "level": "confident",
-    "topics": [
-      "cowork"
-    ],
-    "format": "docs",
-    "time": "under-15min",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "status": "live",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-29",
-    "summary": "Before a contract renewal call, diffs the current agreement against the renewal proposal and produces a one-page negotiation brief with a pre-committed walk-away line.",
-    "who_for": "Operations or procurement staff prepping for a vendor renewal negotiation.",
-    "skip_if": "Needs a working folder with the current agreement, renewal proposal, usage export and comparable quotes - the prompt specifically demands a pre-committed walk-away line, so it needs you to actually decide that threshold, not just supply documents.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Also asks for 'three asks ranked by value' and the vendor's likely pushback.",
-    "prerequisites": [
-      "Claude Cowork",
-      "current agreement, renewal proposal, usage export, comparable quotes",
-      "Operations plugin (optional)"
-    ],
-    "teaches": [
-      "build a vendor negotiation brief with a pre-committed walk-away line and ranked asks"
-    ],
-    "keywords": [
-      "vendor negotiation prep claude",
-      "contract renewal negotiation brief",
-      "cowork procurement negotiation"
-    ],
-    "questions": [
-      "can cowork prep me for a vendor renewal negotiation",
-      "how do i build negotiation talking points from a contract diff"
-    ],
-    "id": "r-832eb694a1"
-  },
-  {
-    "title": "Vendor risk review",
-    "url": "https://academy.claude.com/use-cases/vendor-risk-review",
-    "author": "Anthropic",
-    "source": "Anthropic Academy",
-    "official": true,
-    "roles": [
-      "business-founder",
-      "pm"
-    ],
-    "level": "confident",
-    "topics": [
-      "cowork"
-    ],
-    "format": "docs",
-    "time": "under-15min",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "status": "live",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-29",
-    "summary": "Scores a vendor's security documents against your own risk framework and produces a go/no-go memo with required mitigations, citing the source for every finding.",
-    "who_for": "Operations, procurement or security/GRC staff reviewing a new vendor.",
-    "skip_if": "Needs your own risk framework PDF plus the vendor's SOC 2 report, security questionnaire, DPA and MSA all in one folder - the go/no-go memo only means something if your risk framework is already written down.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Can be scheduled weekdays at 9am to pick up new risk-review folders automatically.",
-    "prerequisites": [
-      "Claude Cowork",
-      "your risk framework document",
-      "vendor's SOC 2/questionnaire/DPA/MSA",
-      "Operations plugin (optional)"
-    ],
-    "teaches": [
-      "score a vendor's security posture against your risk framework with a cited go/no-go memo"
-    ],
-    "keywords": [
-      "vendor risk review claude",
-      "soc 2 vendor assessment ai",
-      "cowork security risk memo"
-    ],
-    "questions": [
-      "can cowork score a vendor's security risk for us",
-      "how do i get a go/no-go memo from vendor security documents"
-    ],
-    "id": "r-3efdd4d39e"
-  },
-  {
     "title": "Verify statistics from raw data",
     "url": "https://academy.claude.com/use-cases/verify-statistics-from-raw-data",
     "author": "Anthropic",
@@ -30650,48 +29390,6 @@
       "how do i weigh grant odds against award size"
     ],
     "id": "r-029e31b97b"
-  },
-  {
-    "title": "Workflow improvement planner",
-    "url": "https://academy.claude.com/use-cases/workflow-improvement-planner",
-    "author": "Anthropic",
-    "source": "Anthropic Academy",
-    "official": true,
-    "roles": [
-      "business-founder"
-    ],
-    "level": "basic",
-    "topics": [
-      "chat-prompting"
-    ],
-    "format": "docs",
-    "time": "under-15min",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "status": "live",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-29",
-    "summary": "Interviews you about a broken internal process through a 10-section form Claude builds - identification, current state, challenges, constraints, decision points - and outputs a structured brief.",
-    "who_for": "Nonprofit operations staff defining a workflow problem before designing an AI-powered fix.",
-    "skip_if": "The deliverable is a 10-section questionnaire artifact for you to fill in, not a finished improvement plan - Claude builds the form that interviews you, it doesn't answer the questions itself.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Sample input files are a donor report PDF and a volunteer intake form PDF.",
-    "prerequisites": [
-      "optional: relevant process documents to upload"
-    ],
-    "teaches": [
-      "use a Claude-built interview form to define a workflow problem before designing a fix"
-    ],
-    "keywords": [
-      "workflow improvement planner claude",
-      "process improvement questionnaire ai",
-      "nonprofit workflow diagnosis claude"
-    ],
-    "questions": [
-      "can claude help me diagnose a broken workflow",
-      "does claude build a form to interview me about a process problem"
-    ],
-    "id": "r-7388a2be11"
   },
   {
     "title": "Write an impact report",
@@ -31787,5 +30485,161 @@
     "language": "en",
     "notes": "Collection card, created 2026-09-06 under Rule C. It replaces eleven individual gallery rows whose who_for named a job this site has no role for - sales reps, account managers, account executives, sales leadership, customer success - while every one of them was tagged business-founder and pm. A founder with a sales team is a real reader for the menu; a sales rep is not a reader of this site at all.\n\nThe URL is the gallery's own department filter, opened and confirmed on 2026-09-06 to show exactly these eleven. Its H1 is \"Use cases for Sales\", which is where the title comes from.\n\nTier `previewed`: the family page was opened and its eleven entries read as a list. The recipes behind them were not opened one by one.\n\nThe absorbed rows and their skip_if lines, kept because they are the best writing those cards had:\n\nAccount research - Needs Cowork with the Sales plugin and Salesforce/Google Drive connected - the brief writes back into the account's own folder rather than returning it in chat, so there's nowhere to see the output without that folder set up.\n\nAccount tracking - Needs Cowork with Salesforce, Intercom and Google Drive connected, plus usage exports and a success plan already on file - the health score is only as good as those three inputs.\n\nBuild a battle card library - Needs the HubSpot connector and Web Search both turned on, and the page itself warns to verify the specific competitor numbers before sharing - the sample win-rate and deal-value figures are illustrative, not guaranteed accurate.\n\nCall prep - Needs a working folder with the actual mutual action plan, call notes and proposal for this specific account - a generic prep sheet with no account files behind it has nothing real to summarize.\n\nCreate a sales proposal presentation - Needs Google Drive connected plus Extended Thinking turned on, and your company logo uploaded for color extraction - without those the deck won't match your existing proposals or brand.\n\nCreate sales reports - Needs the HubSpot connector enabled plus a sales goals document as reference context - without the goals doc, the report has no target to measure performance against.\n\nLog sales calls to your CRM - Claude in Chrome needs a paid plan, and it works by borrowing your existing logged-in Calendar and Salesforce browser sessions rather than any API integration - so it needs you already logged into both in Chrome.\n\nPipeline reviews - Needs Salesforce and Google Drive connected plus a stage exit criteria reference document - scores deals against your own defined stage criteria, so it needs those criteria to already exist and be written down.\n\nPrepare for sales deals - Needs the HubSpot connector enabled in Settings > Capabilities - and its real value is mining unstructured call notes for patterns, so it needs your CRM to actually have detailed free-text notes, not just structured fields.\n\nRenewal risk audit - Needs a renewal book CSV, a product-usage CSV and QBR notes already in a working folder - the red/yellow/green score is only as good as those three inputs being current.\n\nTranscript theme extractor - Needs a working folder of transcript files, and its scheduled version specifically reports the delta against the prior quarter's themes - so a single run misses the comparison that makes it useful over time.",
     "id": "r-c91ab289d7"
+  },
+  {
+    "url": "https://academy.claude.com/use-cases?department=legal",
+    "title": "Use cases for Legal",
+    "source": "Anthropic Academy",
+    "official": true,
+    "author": "Anthropic",
+    "summary": "The Academy's use-case gallery filtered to its Legal department: recipes for NDA triage, contract playbook review, legal research memos, M&A data-room diligence, outside-counsel spend, discovery timelines, regulatory impact and audit prep. Most of them need one of the Claude for Legal plugins, which an admin enables once on a Team or Enterprise plan.",
+    "who_for": "Someone who owns a legal or compliance function and wants to see what is already written down before commissioning anything. The recipes are for counsel and legal ops; the decision to enable the plugin and hand them over is yours.",
+    "skip_if": "You have no legal function. This is a menu, not a lesson: nearly every recipe waits on a workspace admin enabling a Claude for Legal plugin on Team or Enterprise, and none of them teaches you anything about Claude itself.",
+    "teaches": [
+      "see what a legal team can hand to Claude before enabling anything",
+      "judge which repeated legal work is worth a plugin and an admin's time",
+      "compare ready-made legal workflows against the ones you already run"
+    ],
+    "questions": [
+      "what can claude do for a legal team",
+      "claude use cases for legal",
+      "claude for contract review",
+      "does claude have a legal plugin"
+    ],
+    "level": "confident",
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "roles": [
+      "business-founder"
+    ],
+    "topics": [
+      "chat-prompting",
+      "cowork"
+    ],
+    "tier": "previewed",
+    "status": "live",
+    "checked": "2026-09-06",
+    "published": "UNVERIFIED",
+    "language": "en",
+    "notes": "Collection card, created 2026-09-06 under Rule C. It replaces 9 individual gallery rows whose who_for named a job this site has no role for, while every one of them carried business-founder, pm or data-analyst - tags their own cards deny. Somebody who owns the function is a real reader for the menu; the staff the recipes are written for are not readers of this site.\n\nThe URL is the gallery's own department filter, opened on 2026-09-06, when it listed 9 entries.\n\nTier `previewed`: the department page was opened and its entries read as a list. The recipes behind them were not opened one by one.\n\nLevel, format, time and topics are taken from the rows absorbed, not chosen.\n\n1 of the absorbed recipes were not among what the department page listed on 2026-09-06, although each still answers at its own address. Their addresses, kept so the trail survives:\n\n  Regulatory and compliance - https://academy.claude.com/use-cases/regulatory-analysis\n\nThe absorbed rows and their skip_if lines, kept because they are the best writing those cards had:\n\nContract redlining - The Commercial Legal plugin has to be enabled once by a workspace admin on Team/Enterprise before you can use it - and the green/yellow/red rating only means something if you already have your own contract playbook document to compare against.\n\nLegal research - The Litigation Legal plugin's source has to be enabled once by a workspace admin on Team/Enterprise plans - and real payoff is saving your customized version as your own reusable skill, so a single one-off run undersells it.\n\nM&A diligence - Needs the Corporate Legal plugin, which a Team/Enterprise admin must enable once - and it's built as a recurring scheduled job re-running daily during a diligence window, so it's overbuilt for a single quick check.\n\nNDA triage at scale - The Commercial Legal plugin's source has to be enabled once by a workspace admin - and it needs your own NDA playbook document to compare against, since a clean/exception routing decision has no meaning without one.\n\nOrganize your legal workflows using Projects - Worth it mainly at volume - the worked example is about 30 NDAs a week - so for occasional one-off contract review the setup overhead (uploading a playbook, template and term lists once) outweighs the benefit.\n\nOutside counsel management - Needs your own billing guidelines document and a matter budget tracker in a local folder - it's written for the buyer side of legal (managing outside counsel spend), not for a practicing lawyer's own casework.\n\nPrep scattered documents for a compliance audit - Needs Claude Desktop plus you supply the actual audit scope or control framework (SOC 2 in the worked example) - without a named framework to map against, there's nothing to sort the documents by.\n\nRegulatory and compliance - The Regulatory Legal plugin needs a Team/Enterprise admin to enable the Claude for Legal source first, and the initial /cold-start-interview indexing pass can take 10+ minutes on its own before you even start.\n\nTrack discovery timelines and analyze patterns - Needs your own discovery documents uploaded (PDF/Word/Excel/email) - the worked example is a ~40-document software contract dispute, so it's built for real litigation volume, not a handful of files.",
+    "id": "r-6502c8e711"
+  },
+  {
+    "url": "https://academy.claude.com/use-cases?department=hr",
+    "title": "Use cases for HR",
+    "source": "Anthropic Academy",
+    "official": true,
+    "author": "Anthropic",
+    "summary": "The Academy's use-case gallery filtered to its HR department: recipes for opening a role, interview debriefs, offer packages, new-hire onboarding guides, engagement-survey action plans, performance-review standards and headcount reconciliation. Each one expects your own templates and rubrics in a folder first.",
+    "who_for": "Someone who owns hiring and people operations in a small company and wants to see the ready-made workflows before writing any. The recipes are for HR and recruiting staff; deciding which are worth the setup is yours.",
+    "skip_if": "You do not run hiring or people operations. This is a menu, not a lesson: every recipe wants your handbook, leveling guide, rubric or roster prepared in advance, and several want a calendar, Drive or payroll connector as well.",
+    "teaches": [
+      "see what people operations can hand to Claude before building anything",
+      "judge which hiring steps are worth writing a repeatable prompt for",
+      "compare ready-made HR workflows against the ones you already run"
+    ],
+    "questions": [
+      "what can claude do for hr",
+      "claude use cases for hiring",
+      "claude for performance reviews",
+      "how do recruiters use claude"
+    ],
+    "level": "confident",
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "roles": [
+      "business-founder"
+    ],
+    "topics": [
+      "chat-prompting",
+      "cowork"
+    ],
+    "tier": "previewed",
+    "status": "live",
+    "checked": "2026-09-06",
+    "published": "UNVERIFIED",
+    "language": "en",
+    "notes": "Collection card, created 2026-09-06 under Rule C. It replaces 7 individual gallery rows whose who_for named a job this site has no role for, while every one of them carried business-founder, pm or data-analyst - tags their own cards deny. Somebody who owns the function is a real reader for the menu; the staff the recipes are written for are not readers of this site.\n\nThe URL is the gallery's own department filter, opened on 2026-09-06, when it listed 6 entries.\n\nTier `previewed`: the department page was opened and its entries read as a list. The recipes behind them were not opened one by one.\n\nLevel, format, time and topics are taken from the rows absorbed, not chosen.\n\n1 of the absorbed recipes were not among what the department page listed on 2026-09-06, although each still answers at its own address. Their addresses, kept so the trail survives:\n\n  Reconcile headcount - https://academy.claude.com/use-cases/headcount-reconciliation\n\nThe absorbed rows and their skip_if lines, kept because they are the best writing those cards had:\n\nCreate new hire onboarding guides - Needs Google Calendar and Google Drive connected, plus your own handbook and logistics docs uploaded - the prompt explicitly asks for design taste ('a senior designer should look at this and think they have great taste'), so a bare-bones upload gets a bare-bones guide.\n\nEngagement survey to action plan - Needs a raw survey CSV export plus an org roster, and it builds in an absolute rule to never attribute a quote to an individual - so it won't work from a summary someone already wrote up.\n\nInterview debrief synthesis - Needs a scorecard export, competency rubric PDF and interview plan in a working folder - and the prompt explicitly forbids Claude from recommending hire or no-hire, so it organizes evidence but never makes the call.\n\nOffer process - Needs four specific files already prepared - the offer-letter template, candidate summary, comp approval sheet, and benefits overview - across four different formats (docx/pdf/xlsx/pdf), so there's real prep before the prompt does anything.\n\nOpen a new role - Needs a role spec template, leveling guide and team charter document in the working folder - the prompt is written to interrogate and push back on vague answers, so a rushed conversation won't get a tight role spec.\n\nPerformance review administrator - Needs your company's written performance framework document, rating definitions and a Gusto connector for roster data - the build prompt hard-constrains the skill to quote your rating definitions verbatim, so it's not generic performance-review advice.\n\nReconcile headcount - Needs a Workday roster export, headcount plan, payroll register and cost-center map all in one folder - the output is a categorized discrepancy list, so it's only useful if those four sources genuinely disagree with each other.",
+    "id": "r-2c9e680a6b"
+  },
+  {
+    "url": "https://academy.claude.com/use-cases?department=finance",
+    "title": "Use cases for Finance",
+    "source": "Anthropic Academy",
+    "official": true,
+    "author": "Anthropic",
+    "summary": "The Academy's use-case gallery filtered to its Finance department. The recipes gathered here are the close-and-controls end of it: variance commentary, intercompany reconciliation, contract-to-ledger extraction, scenario forecasts, SOX documentation, exec variance decks and an insurance reserve filing. Most need the Finance plugin and a ledger connector.",
+    "who_for": "Someone who owns the numbers in a small company and wants to see what an accounting or FP&A team could hand over before buying connectors. The recipes are for finance staff; the decision to wire the ledger up is yours.",
+    "skip_if": "You do not close books or own a budget. This is a menu, not a lesson: these recipes assume a working folder of actuals, budgets and templates already in place, and several assume NetSuite, Microsoft 365 or a self-hosted connector.",
+    "teaches": [
+      "see what a finance close can hand to Claude before buying a connector",
+      "judge which month-end work is worth wiring the ledger up for",
+      "compare ready-made finance workflows against the ones you already run"
+    ],
+    "questions": [
+      "what can claude do for finance",
+      "claude use cases for accounting",
+      "claude for month end close",
+      "claude netsuite connector"
+    ],
+    "level": "confident",
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "roles": [
+      "business-founder"
+    ],
+    "topics": [
+      "chat-prompting",
+      "cowork"
+    ],
+    "tier": "previewed",
+    "status": "live",
+    "checked": "2026-09-06",
+    "published": "UNVERIFIED",
+    "language": "en",
+    "notes": "Collection card, created 2026-09-06 under Rule C. It replaces 8 individual gallery rows whose who_for named a job this site has no role for, while every one of them carried business-founder, pm or data-analyst - tags their own cards deny. Somebody who owns the function is a real reader for the menu; the staff the recipes are written for are not readers of this site.\n\nThe URL is the gallery's own department filter, opened on 2026-09-06, when it listed 12 entries.\n\nTier `previewed`: the department page was opened and its entries read as a list. The recipes behind them were not opened one by one.\n\nLevel, format, time and topics are taken from the rows absorbed, not chosen.\n\n3 of the absorbed recipes were not among what the department page listed on 2026-09-06, although each still answers at its own address. Their addresses, kept so the trail survives:\n\n  SOX & controls documentation - https://academy.claude.com/use-cases/sox-controls-doc\n  Validate reserves and draft filing narrative with Claude for Excel - https://academy.claude.com/use-cases/validate-reserves-and-draft-filing-narrative-with-claude-for-excel\n  Variance to exec slides - https://academy.claude.com/use-cases/variance-exec-slides\n\nThe absorbed rows and their skip_if lines, kept because they are the best writing those cards had:\n\nBuild analysis from browser charts and folder data - Needs Cowork on a paid plan plus Claude in Chrome added as a connector to read the FRED charts - and its own verification tip is the one worth keeping: open an original board deck and confirm the extracted figures before the chart goes in front of anyone.\n\nContract to ledger extraction - Needs the Finance plugin plus Ironclad and NetSuite connected - it's built to catch exceptions before they hit the general ledger via a weekday-5pm scheduled job, so it's overbuilt for reviewing a single contract.\n\nExplain a variance - Needs the Finance plugin plus NetSuite connected, along with actuals/prior-period/budget files already in a working folder - and it's built to end as a recurring Monday job, so it's overbuilt for explaining one number once.\n\nForecast & scenario modeling - Needs a driver model, headcount plan and assumptions doc already built - it rolls an existing model forward into three scenarios, it doesn't build the underlying driver model from scratch.\n\nReconcile and draft the journal entries - Needs two subledger exports, an FX rate sheet and a JE template already in a working folder - matching is fuzzy on amount and reference after FX normalization, so it needs genuinely comparable data across both subledgers.\n\nSOX & controls documentation - Needs raw walkthrough notes, an RCM template and the prior-year narrative already in a working folder - the page's own subtitle claims 'under an hour' while its duration chip says 10 minutes, a real internal inconsistency worth knowing before you plan time for it.\n\nValidate reserves and draft filing narrative with Claude for Excel - Needs a self-hosted NAIC custom MCP connector your organization sets up, plus Claude for Excel and Word add-ins - a narrow, heavily regulated insurance-actuarial workflow, not a general spreadsheet-review pattern.\n\nVariance to exec slides - Needs the Microsoft 365 connector plus a variance workbook, a prior-quarter deck template, and a materiality threshold already defined in the project instructions - the threshold is meant to be set once, not restated every month.",
+    "id": "r-85317b8faf"
+  },
+  {
+    "url": "https://academy.claude.com/use-cases?department=operations",
+    "title": "Use cases for Operations",
+    "source": "Anthropic Academy",
+    "official": true,
+    "author": "Anthropic",
+    "summary": "The Academy's use-case gallery filtered to its Operations department: recipes for vendor risk review, renewal negotiation prep, onboarding vendors in batches, a volunteer management system and a workflow-improvement questionnaire. Vendor work dominates it, and two entries are written for nonprofits.",
+    "who_for": "Someone who owns operations or procurement in a small organisation and wants the ready-made vendor workflows before writing any. The recipes are for ops and procurement staff; deciding which are worth the folder of documents is yours.",
+    "skip_if": "You buy nothing and manage no vendors. This is a menu, not a lesson: every recipe wants contracts, quotes, questionnaires or security reports gathered in one folder first, and two of them are written for nonprofit programme staff.",
+    "teaches": [
+      "see what vendor and operations work can be handed to Claude",
+      "judge which procurement steps are worth a repeatable prompt",
+      "compare ready-made operations workflows against the ones you run"
+    ],
+    "questions": [
+      "what can claude do for operations",
+      "claude use cases for procurement",
+      "claude for vendor review",
+      "claude for nonprofit operations"
+    ],
+    "level": "confident",
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "roles": [
+      "business-founder"
+    ],
+    "topics": [
+      "chat-prompting",
+      "cowork"
+    ],
+    "tier": "previewed",
+    "status": "live",
+    "checked": "2026-09-06",
+    "published": "UNVERIFIED",
+    "language": "en",
+    "notes": "Collection card, created 2026-09-06 under Rule C. It replaces 5 individual gallery rows whose who_for named a job this site has no role for, while every one of them carried business-founder, pm or data-analyst - tags their own cards deny. Somebody who owns the function is a real reader for the menu; the staff the recipes are written for are not readers of this site.\n\nThe URL is the gallery's own department filter, opened on 2026-09-06, when it listed 7 entries.\n\nTier `previewed`: the department page was opened and its entries read as a list. The recipes behind them were not opened one by one.\n\nLevel, format, time and topics are taken from the rows absorbed, not chosen.\n\nThe absorbed rows and their skip_if lines, kept because they are the best writing those cards had:\n\nCreate a volunteer management system - The two referenced PDFs are example inputs from the page's own worked example, not downloadable templates - you supply your organization's actual program details, or the ~15-page handbook it drafts will be generic.\n\nPrep the vendor negotiation - Needs a working folder with the current agreement, renewal proposal, usage export and comparable quotes - the prompt specifically demands a pre-committed walk-away line, so it needs you to actually decide that threshold, not just supply documents.\n\nProcess batches of vendors with Cowork - Needs Claude Desktop plus the Claude in Chrome extension already logged into your procurement portal - it combines local-file Cowork with live browser form-filling in one run, a heavier setup than either alone.\n\nVendor risk review - Needs your own risk framework PDF plus the vendor's SOC 2 report, security questionnaire, DPA and MSA all in one folder - the go/no-go memo only means something if your risk framework is already written down.\n\nWorkflow improvement planner - The deliverable is a 10-section questionnaire artifact for you to fill in, not a finished improvement plan - Claude builds the form that interviews you, it doesn't answer the questions itself.",
+    "id": "r-6f2bd65118"
   }
 ]

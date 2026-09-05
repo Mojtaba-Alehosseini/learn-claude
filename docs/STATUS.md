@@ -11,13 +11,13 @@ THE-PROJECT.md and README point at this file rather than repeating it.
 
 | | |
 |---|---|
-| Resources | **625** |
+| Resources | **600** |
 | Distinct publishers | 171 |
 | Distinct hosts | 129 |
 | Learning paths | **7**, 36 steps |
-| Anthropic's own | 380 of 625 — **61%** |
-| No publish date (`UNVERIFIED`) | 479 of 625 — 77% |
-| Carrying an `updated` date | 96 of 625 — 15% |
+| Anthropic's own | 355 of 600 — **59%** |
+| No publish date (`UNVERIFIED`) | 454 of 600 — 76% |
+| Carrying an `updated` date | 96 of 600 — 16% |
 
 **Where every date came from.** `date_source` is required on any row carrying a
 real date; a row with no date needs none, because "we do not know" is the whole
@@ -29,7 +29,7 @@ statement.
 | `metadata` — parsed from JSON-LD or a meta tag | 60 |
 | `upload` — a video platform's upload date | 71 |
 | `intercom` — the Help Center's template | 33 |
-| `(none)` — no real date — `UNVERIFIED` | 435 |
+| `(none)` — no real date — `UNVERIFIED` | 410 |
 
 **How thoroughly we have checked**
 
@@ -37,16 +37,16 @@ statement.
 |---|---|---|---|
 | `reviewed` | Read in full | **0** | 0% |
 | `ai-reviewed` | Read by AI | **98** | 16% |
-| `previewed` | Skimmed | **524** | 84% |
+| `previewed` | Skimmed | **499** | 83% |
 | `listed` | Found only | **3** | 0% |
 
-**Format:** 297 docs · 124 article · 101 video · 58 course · 32 repo · 7 hands-on · 6 podcast.
+**Format:** 272 docs · 124 article · 101 video · 58 course · 32 repo · 7 hands-on · 6 podcast.
 
-**Level:** 245 confident · 178 basic · 106 never-used · 96 builder.
+**Level:** 223 confident · 177 basic · 106 never-used · 94 builder.
 
-**Cost:** 573 free · 26 free-account · 16 subscription · 10 paid-once.
+**Cost:** 548 free · 26 free-account · 16 subscription · 10 paid-once.
 
-**Status:** 622 live · 3 outdated.
+**Status:** 597 live · 3 outdated.
 
 ## "Start with these three"
 
@@ -69,15 +69,15 @@ relaxes): `non-technical|builder` (1 pub, 2 items), `teacher|builder` (2 pub, 2 
 
 | role | never-used | basic | confident | builder |
 |---|---|---|---|---|
-| `non-technical` | 63 / 20p / 18x | 70 / 27p / 25x | 19 / 6p / 4x | 2 / 1p / 0x |
+| `non-technical` | 63 / 20p / 18x | 70 / 27p / 25x | 18 / 6p / 4x | 2 / 1p / 0x |
 | `student` | 42 / 21p / 18x | 20 / 13p / 11x | 10 / 6p / 5x | 0 / 0p / 0x |
 | `researcher` | 18 / 5p / 2x | 20 / 16p / 13x | 32 / 13p / 11x | 6 / 3p / 2x |
 | `teacher` | 30 / 13p / 9x | 25 / 19p / 16x | 8 / 3p / 2x | 2 / 2p / 1x |
 | `developer` | 7 / 4p / 1x | 19 / 11p / 8x | 41 / 17p / 16x | 56 / 20p / 24x |
-| `data-analyst` | 7 / 4p / 1x | 19 / 14p / 12x | 42 / 10p / 7x | 15 / 5p / 10x |
-| `pm` | 12 / 8p / 5x | 42 / 15p / 15x | 77 / 23p / 25x | 8 / 4p / 3x |
+| `data-analyst` | 7 / 4p / 1x | 19 / 14p / 12x | 34 / 10p / 7x | 14 / 5p / 10x |
+| `pm` | 12 / 8p / 5x | 42 / 15p / 15x | 61 / 23p / 25x | 7 / 4p / 3x |
 | `designer` | 8 / 6p / 5x | 11 / 8p / 6x | 23 / 15p / 13x | 7 / 6p / 5x |
-| `business-founder` | 41 / 14p / 10x | 65 / 23p / 21x | 85 / 8p / 6x | 16 / 3p / 3x |
+| `business-founder` | 41 / 14p / 10x | 64 / 23p / 21x | 63 / 8p / 6x | 14 / 3p / 3x |
 | `writer-marketer` | 20 / 9p / 7x | 35 / 24p / 22x | 16 / 7p / 4x | 3 / 2p / 3x |
 
 ## Live resources the freshness rule excludes from every pool
