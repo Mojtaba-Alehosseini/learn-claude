@@ -211,14 +211,18 @@
        catalogue existed, and how-we-check.html says so two clicks away. Eight of ten
        Attack 2 agents found the contradiction and all ten found it somewhere.
        scripts/test-copy-claims.py now bans the old wording, including here.
-       What replaces it is three claims that are each true, and both numbers are counted
-       rather than typed: every row carries a checked date, every row carries a skip_if
-       (rule 2), and `listed` is the one tier that means nobody opened it. */
-    var opened = items.filter(function (it) { return it.tier !== "listed"; }).length;
+
+       The first replacement still said "every one checked", which is the same word in
+       a smaller coat, and then subtracted three in front of the reader. What ships now
+       claims two things and both are true of all 635 with no caveat: every row carries
+       a reason to skip it, because rule 2 makes skip_if mandatory, and every row
+       carries the date we last looked. How far we actually got is an accounting fact
+       and lives with the rest of the accounting, beside the tier tally on
+       how-we-check.html. */
     el.tally.textContent = (state.role || state.level)
       ? LC.countText(n) + " match so far."
-      : LC.countText(items.length) + ". Every one checked and given a reason to " +
-        "skip it \u2014 " + opened + " of them opened.";
+      : LC.countText(items.length) + ", each with a reason to skip it and the date " +
+        "we last looked.";
 
     /* Only does work on the first render, when fillRow builds the buttons. After that
        the same nodes stay in place and keep the mark they already have. */

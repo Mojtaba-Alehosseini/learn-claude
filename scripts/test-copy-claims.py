@@ -52,10 +52,22 @@ BANNED = [
 
 # (the required substring, which file it belongs on)
 REQUIRED = [
-    ("Every one checked and given a reason to ", os.path.join("assets", "js", "home.js")),
+    # Was "Every one checked and given a reason to " until 2026-09-06. "Checked" is the
+    # exact word Attack 2 caught carrying the false claim, and putting it back in a
+    # smaller sentence was the same fault in a smaller size. The line also subtracted
+    # three in front of the reader - "632 of them opened" - which made a visitor do
+    # arithmetic to discover what the missing three were. What is required now claims
+    # only what is true of all 635 without a caveat.
+    # Stops before the string break in home.js - the sentence is concatenated over
+    # two literals and a substring test does not see across that.
+    ("each with a reason to skip it and the date",
+     os.path.join("assets", "js", "home.js")),
     ("We would rather read fewer resources in full", "how-we-check.html"),
     ("read as far as the label says", "how-we-check.html"),
     ("something whose page we cannot open", "how-we-check.html"),
+    # The split the front screen gave up. Required here so "it moved to the method page"
+    # cannot quietly become "it went away".
+    ("have been opened; the", "how-we-check.html"),
 ]
 
 

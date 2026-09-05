@@ -181,6 +181,14 @@
   if (none.length) {
     s += " Nothing is " + none.join(" or ") + " yet, and the cards say so.";
   }
+  /* The 632/3 split. It was briefly on the front screen, where it made a visitor do
+     subtraction to discover what the missing three were; here it sits against the
+     ladder that explains what "opened" means. Generated, like everything else on this
+     page - `listed` is the one tier whose definition is that nobody opened it. */
+  var unopened = items.filter(function (x) { return x.tier === "listed"; }).length;
+  s += " " + (items.length - unopened) + " of the " + items.length +
+       " have been opened; the " + unopened + " that have not are the ones labelled " +
+       window.LC.TIER.listed.label + ", and they carry no summary and no verdict.";
   document.getElementById("tally").textContent = s;
 
   /* Same source as the tally above, computed the same way for the same reason: the
