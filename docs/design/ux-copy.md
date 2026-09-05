@@ -458,6 +458,17 @@ Provenance line at the bottom:
 
 ---
 
+### What search can and cannot do *(how-we-check.html)*
+
+> Search finds what we hold, and nothing else. It reads the title, the hidden questions and keywords, what a resource teaches, who it is for and who should skip it - so a sentence in your own words usually lands. It will not tell you which of three results is best; that is what "Start with these three" is for, on the Browse page, where a role and a level are chosen. And when we have nothing on your subject, you get nothing back and a line saying so. That is a gap in the shelves, not a trick of the ranking, and the ones we know about are listed in STATUS.md under "Questions the catalogue cannot answer".
+
+Kept verbatim from section 6 of `docs/specs/2026-09-06-search-rebuild.md`, which is the
+spec that says plainly what the search rebuild would not fix. A limit a reader can
+discover for themselves is better written down where they are already reading about how
+the site works, and the last sentence points at a generated list rather than a promise.
+
+---
+
 ## Empty, loading, and error states
 
 | State | Copy |
