@@ -42,7 +42,13 @@ PAUSE = 0.7          # 100 rpm allowed; stay comfortably under
 
 # How much a match in each field is worth. A question match means the person asked
 # almost exactly what this resource answers, so it outranks everything.
-WEIGHTS = {"questions": 5, "keywords": 3, "teaches": 2, "title": 2, "who_for": 1}
+# `skip_if` joined at weight 1 in FIX-27, below every field that says what a resource
+# teaches. A skip line is what a thing is NOT for, so it should be able to find a page for
+# somebody who typed their problem in the resource's own words - "stop claude inventing
+# pixel values" is a phrase that exists only in a skip line - and it should never outrank
+# a page that teaches the thing.
+WEIGHTS = {"questions": 5, "keywords": 3, "teaches": 2, "title": 2, "who_for": 1,
+           "skip_if": 1.5}
 
 STOP = set("""a an and are as at be but by can do does for from get go had has have how i
 if in into is it its me my not of on or our so than that the their them then there these
