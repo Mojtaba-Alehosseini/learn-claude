@@ -4,13 +4,13 @@
       "role": "designer",
       "level": "basic",
       "picked_by": "ai",
-      "picked_on": "2026-08-31",
-      "pool_size": 10,
-      "fingerprint": "sha1:f40183c30fcd9645",
+      "picked_on": "2026-09-06",
+      "pool_size": 11,
+      "fingerprint": "sha1:188558d978cd0052",
       "picks": [
         {
           "url": "https://artofstyleframe.com/blog/claude-for-designers-2026/",
-          "reason": "Four of the ten candidates are about Claude Design specifically; this is the only one that maps the whole surface before committing you to any of it, and the only one whose notes name concrete failure modes - invented pixel values, and Claude calling 3:1 contrast acceptable when it is not.",
+          "reason": "Four of the eleven candidates are about Claude Design specifically; this is the only one that maps the whole surface before committing you to any of it, and the only one whose notes name concrete failure modes - invented pixel values, and Claude calling 3:1 contrast acceptable when it is not.",
           "subject": "an honest map of where Claude helps and hurts design work"
         },
         {
@@ -44,9 +44,9 @@
       "role": "non-technical",
       "level": "basic",
       "picked_by": "ai",
-      "picked_on": "2026-09-04",
-      "pool_size": 72,
-      "fingerprint": "sha1:89da10f9a52c76ac",
+      "picked_on": "2026-09-06",
+      "pool_size": 70,
+      "fingerprint": "sha1:e24198731df0290c",
       "picks": [
         {
           "url": "https://claude.com/blog/best-practices-for-prompt-engineering",
@@ -84,13 +84,13 @@
       "role": "business-founder",
       "level": "builder",
       "picked_by": "ai",
-      "picked_on": "2026-08-31",
-      "pool_size": 78,
-      "fingerprint": "sha1:5464944ea5de243c",
+      "picked_on": "2026-09-06",
+      "pool_size": 14,
+      "fingerprint": "sha1:f829399e13da2ef6",
       "picks": [
         {
           "url": "https://every.to/guides/ai-product-management-guide",
-          "reason": "The only candidate of 78 we have read in full, and the only one that asks a founder to change how they work rather than adding a fifteenth 15-minute workflow - it even refuses readers honestly, telling you to stop and instrument your product first.",
+          "reason": "The only candidate of 14 we have read in full, and the only one that asks a founder to change how they work rather than adding another 15-minute workflow - it even refuses readers honestly, telling you to stop and instrument your product first.",
           "subject": "restructuring how a founder works around agents"
         },
         {
@@ -100,14 +100,15 @@
         },
         {
           "url": "https://academy.claude.com/courses/introduction-to-model-context-protocol",
-          "reason": "Seventy-six of these 78 are Anthropic's own single-workflow pages; this is the one that goes underneath them to the integration layer itself, and it tells you to skip it if the one-click connectors already cover you.",
+          "reason": "Eleven of these fourteen candidates are Anthropic's own pages; this is the one that goes underneath them to the integration layer itself, and it tells you to skip it if the one-click connectors already cover you.",
           "subject": "how the integration layer works underneath"
         }
       ],
       "runners_up": [
         {
           "url": "https://academy.claude.com/tutorials/scaling-workflows-with-claude-cowork-at-your-organization",
-          "reason": "The strongest of the 76 Academy pages for a founder past the pilot stage, and it names a real product gap instead of glossing it - it loses only because one Academy slot was available and MCP goes deeper."
+          "reason": "Levelled to `confident` under Rule A on 2026-09-06 - its card describes running a recipe or using a connector someone else built, not building one - so it left this pool on a definition rather than on merit.",
+          "cause": "re-levelled-out-of-the-pool"
         },
         {
           "url": "https://academy.claude.com/use-cases/package-your-brand-guidelines-in-a-skill",
@@ -120,9 +121,9 @@
       "role": "designer",
       "level": "never-used",
       "picked_by": "ai",
-      "picked_on": "2026-09-04",
-      "pool_size": 7,
-      "fingerprint": "sha1:c5861c6caaad0a5d",
+      "picked_on": "2026-09-06",
+      "pool_size": 8,
+      "fingerprint": "sha1:9b87d8cfba615e81",
       "picks": [
         {
           "url": "https://www.nngroup.com/articles/ai-prototyping/",
@@ -159,9 +160,9 @@
       "role": "designer",
       "level": "builder",
       "picked_by": "ai",
-      "picked_on": "2026-08-31",
-      "pool_size": 11,
-      "fingerprint": "sha1:48f581d30aad7563",
+      "picked_on": "2026-09-06",
+      "pool_size": 7,
+      "fingerprint": "sha1:cc53512c558f1551",
       "picks": [
         {
           "url": "https://github.com/anthropics/knowledge-work-plugins/tree/main/design/skills",
@@ -175,14 +176,15 @@
         },
         {
           "url": "https://academy.claude.com/use-cases/brand-guidelines-skill",
-          "reason": "Eight of eleven candidates run a workflow once; this is the build that keeps working after you stop - a shared skill that enforces brand rules and refuses off-brand output, rather than another report to read.",
+          "reason": "Two of the seven candidates end in a shared skill rather than a document, and this is the one that enforces - a shared skill that enforces brand rules and refuses off-brand output, rather than another report to read.",
           "subject": "building an org-wide skill that refuses off-brand output"
         }
       ],
       "runners_up": [
         {
           "url": "https://academy.claude.com/use-cases/pattern-consistency-audit",
-          "reason": "The other durable build in the pool - the audit becomes a reusable /pattern-audit skill - edged out because the brand skill enforces while this one only reports."
+          "reason": "Levelled to `confident` under Rule A on 2026-09-06 - its card describes running a recipe or using a connector someone else built, not building one - so it left this pool on a definition rather than on merit.",
+          "cause": "re-levelled-out-of-the-pool"
         },
         {
           "url": "https://cianfrani.dev/posts/a-better-figma-mcp/",
@@ -190,7 +192,8 @@
         },
         {
           "url": "https://academy.claude.com/use-cases/clickable-prototype",
-          "reason": "Operational by its own admission - it emits a prototype file and teaches nothing about what to test once you have it."
+          "reason": "Levelled to `confident` under Rule A on 2026-09-06 - its card describes running a recipe or using a connector someone else built, not building one - so it left this pool on a definition rather than on merit.",
+          "cause": "re-levelled-out-of-the-pool"
         }
       ]
     },
@@ -198,9 +201,9 @@
       "role": "designer",
       "level": "confident",
       "picked_by": "ai",
-      "picked_on": "2026-09-04",
-      "pool_size": 19,
-      "fingerprint": "sha1:4222cd696c067e77",
+      "picked_on": "2026-09-06",
+      "pool_size": 23,
+      "fingerprint": "sha1:eecf5815813a2e21",
       "picks": [
         {
           "url": "https://www.builder.io/blog/claude-code-for-designers",
@@ -225,11 +228,13 @@
         },
         {
           "url": "https://help.figma.com/hc/en-us/articles/32132100833559-Guide-to-the-Figma-MCP-server",
-          "reason": "The right pre-wiring read, but it stops before installation by its own admission, and its setup sibling needs a terminal this level does not assume."
+          "reason": "Levelled to `builder` under Rule A on 2026-09-06 - its card describes authoring the thing rather than running it - so it left this pool on a definition rather than on merit.",
+          "cause": "re-levelled-out-of-the-pool"
         },
         {
           "url": "https://www.designsystemscollective.com/design-systems-in-2026-turn-your-system-into-a-claude-skill-3dd4d8bf5feb",
-          "reason": "The system-as-skill idea one level early - worth the time only if you already have a system worth encoding, and Medium's meter may close it before the end."
+          "reason": "Levelled to `builder` under Rule A on 2026-09-06 - its card describes authoring the thing rather than running it - so it left this pool on a definition rather than on merit.",
+          "cause": "re-levelled-out-of-the-pool"
         }
       ],
       "note": "Two picks share the primary topic chat-prompting because the vocabulary has no topic for Claude Design the product - the same blindness the designer|basic note records. The subjects are a design-system setup inside one product and a delegation-judgment method spanning all of them; swapping either for a topic-distinct candidate (the ux-writing repo, the Figma MCP docs) would have traded fit for a field."
@@ -238,18 +243,18 @@
       "role": "non-technical",
       "level": "never-used",
       "picked_by": "ai",
-      "picked_on": "2026-09-04",
-      "pool_size": 66,
-      "fingerprint": "sha1:cbd4990d680147fd",
+      "picked_on": "2026-09-06",
+      "pool_size": 63,
+      "fingerprint": "sha1:f7615848e30ea2a1",
       "picks": [
         {
           "url": "https://academy.claude.com/use-cases/explore-what-claude-can-do-for-you",
-          "reason": "The only candidate of 51 with a genuinely zero-prerequisite start - you describe your job and it maps the capabilities to you, where everything else orients you to the product in general.",
+          "reason": "The only candidate of 65 with a genuinely zero-prerequisite start - you describe your job and it maps the capabilities to you, where everything else orients you to the product in general.",
           "subject": "a personalized map of what Claude can do for your job"
         },
         {
           "url": "https://www.youtube.com/watch?v=r2vYObllqJU",
-          "reason": "Four beginner walkthrough videos in this pool, and this is the calm, current one - recorded April 2026, from outside the building, and honest that it stops at the basics rather than pretending to be a course.",
+          "reason": "The calm, current beginner walkthrough - recorded April 2026, from outside the building, and honest that it stops at the basics rather than pretending to be a course.",
           "subject": "a calm first walkthrough of the interface"
         },
         {
@@ -261,7 +266,7 @@
       "runners_up": [
         {
           "url": "https://academy.claude.com/tutorials/why-do-ai-models-hallucinate",
-          "reason": "The failure-mode step first-timers skip, but every safety candidate in this pool is Anthropic Academy's and that slot went to the personalized front door - it waits at step 5 of the first-week path instead."
+          "reason": "The failure-mode step first-timers skip, but the one Academy slot this pool allows went to the personalized front door - it waits at step 5 of the first-week path instead."
         },
         {
           "url": "https://support.claude.com/en/articles/8114491-get-started-with-claude",
@@ -278,9 +283,9 @@
       "role": "non-technical",
       "level": "confident",
       "picked_by": "ai",
-      "picked_on": "2026-09-04",
-      "pool_size": 14,
-      "fingerprint": "sha1:36c50ceded349ae4",
+      "picked_on": "2026-09-06",
+      "pool_size": 18,
+      "fingerprint": "sha1:23abfb06b027c2b5",
       "picks": [
         {
           "url": "https://academy.claude.com/tutorials/teach-claude-your-way-of-working-using-skills",
@@ -305,7 +310,8 @@
         },
         {
           "url": "https://academy.claude.com/use-cases/map-your-understanding-and-build-lessons-from-the-gaps",
-          "reason": "The most original page in the pool, but it needs Opus 4.6 with Extended Thinking, and its Academy slot was taken by the one habit-changer everything else depends on."
+          "reason": "Rule B dropped `non-technical` on 2026-09-06: its own who_for names self-directed learners, which is this site's `student`, so it left this pool on its own card's words rather than on merit.",
+          "cause": "re-tagged-out-of-the-pool"
         },
         {
           "url": "https://academy.claude.com/tutorials/using-research",
@@ -317,9 +323,9 @@
       "role": "student",
       "level": "never-used",
       "picked_by": "ai",
-      "picked_on": "2026-09-04",
-      "pool_size": 36,
-      "fingerprint": "sha1:285dd14c0e689e15",
+      "picked_on": "2026-09-06",
+      "pool_size": 42,
+      "fingerprint": "sha1:75197a2b95590ea4",
       "picks": [
         {
           "url": "https://www.digital.pitt.edu/news/pantherbytes-blog/claude-education-made-learning",
@@ -357,9 +363,9 @@
       "role": "student",
       "level": "basic",
       "picked_by": "ai",
-      "picked_on": "2026-09-04",
-      "pool_size": 19,
-      "fingerprint": "sha1:40a195b6829830b9",
+      "picked_on": "2026-09-06",
+      "pool_size": 20,
+      "fingerprint": "sha1:4eb24c9560d50f65",
       "picks": [
         {
           "url": "https://academy.claude.com/tutorials/imagine-with-claude-student-guide",
@@ -396,14 +402,14 @@
       "role": "student",
       "level": "confident",
       "picked_by": "ai",
-      "picked_on": "2026-09-04",
-      "pool_size": 9,
-      "fingerprint": "sha1:31200a0b07668981",
+      "picked_on": "2026-09-06",
+      "pool_size": 10,
+      "fingerprint": "sha1:676952befb59c181",
       "picks": [
         {
-          "url": "https://academy.claude.com/use-cases/verify-statistics-from-raw-data",
-          "reason": "The rarest skill in the pool: recomputing a paper's statistics from the authors' own raw data before leaning on it - and its card is honest that this needs the manuscript and the raw data together, not the paper's text alone.",
-          "subject": "recomputing a paper's statistics before citing it"
+          "url": "https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/reduce-hallucinations",
+          "reason": "Held back on 2026-09-04 only because it is step 1 of the research path and would have displaced something no path carries. Rule B removed that something from this pool on 2026-09-06, so the objection lapsed and the verification slot was empty - and this is the only candidate here anybody has read in full. Anthropic's own playbook for confidently-wrong output: let Claude say it does not know, ground answers in direct quotes, restrict it to the data you gave it. Its own card says it assumes no coding, which is why it sits at this level rather than one above.",
+          "subject": "the guardrails that stop confidently-wrong answers"
         },
         {
           "url": "https://www.youtube.com/watch?v=GWtx-d3dALQ",
@@ -418,16 +424,17 @@
       ],
       "runners_up": [
         {
+          "url": "https://academy.claude.com/use-cases/verify-statistics-from-raw-data",
+          "reason": "Held a slot here until 2026-09-06, when Rule B dropped its `student` tag: its own who_for names academic researchers checking a paper's reproducibility before relying on it. It ships in researcher|confident, where the card and the cell agree.",
+          "cause": "re-tagged-out-of-the-pool"
+        },
+        {
           "url": "https://academy.claude.com/use-cases/chart-your-data-before-you-commit",
-          "reason": "The same epistemic muscle as the statistics pick one step earlier - it lost the Academy slot to the rarer thing, recomputation against raw data."
+          "reason": "The same epistemic muscle one step earlier - check the shape of the data before you commit to a claim - but the verification slot went to the guardrails read, which covers every subject rather than charting alone."
         },
         {
           "url": "https://www.youtube.com/watch?v=ldwjRjx8xIQ",
           "reason": "The right next surface for file-heavy research, but it needs a paid plan and local-file habits the three picks do not assume."
-        },
-        {
-          "url": "https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/reduce-hallucinations",
-          "reason": "Already step 1 of the research path, where its guardrails come in order - here it would displace something no path carries."
         }
       ]
     },
@@ -435,9 +442,9 @@
       "role": "researcher",
       "level": "never-used",
       "picked_by": "ai",
-      "picked_on": "2026-09-05",
-      "pool_size": 19,
-      "fingerprint": "sha1:ca1f50504075a8f0",
+      "picked_on": "2026-09-06",
+      "pool_size": 18,
+      "fingerprint": "sha1:acec632d6e0c59d3",
       "picks": [
         {
           "url": "https://academy.claude.com/courses/claude-101",
@@ -476,9 +483,9 @@
       "role": "researcher",
       "level": "basic",
       "picked_by": "ai",
-      "picked_on": "2026-09-04",
-      "pool_size": 19,
-      "fingerprint": "sha1:7d2db1a0931d5f56",
+      "picked_on": "2026-09-06",
+      "pool_size": 20,
+      "fingerprint": "sha1:cf3798256a37484b",
       "picks": [
         {
           "url": "https://academy.claude.com/use-cases/plan-your-literature-review",
@@ -516,9 +523,9 @@
       "role": "researcher",
       "level": "confident",
       "picked_by": "ai",
-      "picked_on": "2026-09-05",
-      "pool_size": 20,
-      "fingerprint": "sha1:3da36457484ea344",
+      "picked_on": "2026-09-06",
+      "pool_size": 32,
+      "fingerprint": "sha1:fa6754eed2c432d2",
       "picks": [
         {
           "url": "https://effortlessacademic.com/connect-and-integrate-your-local-zotero-library-with-claude-cowork/",
@@ -596,9 +603,9 @@
       "role": "teacher",
       "level": "never-used",
       "picked_by": "ai",
-      "picked_on": "2026-09-05",
-      "pool_size": 28,
-      "fingerprint": "sha1:6c29e7b01dcee608",
+      "picked_on": "2026-09-06",
+      "pool_size": 30,
+      "fingerprint": "sha1:8bb5e5743afd8af1",
       "picks": [
         {
           "url": "https://academy.claude.com/courses/ai-fluency-for-k-12-educators",
@@ -635,9 +642,9 @@
       "role": "teacher",
       "level": "basic",
       "picked_by": "ai",
-      "picked_on": "2026-08-31",
-      "pool_size": 18,
-      "fingerprint": "sha1:bac58aece83b00dc",
+      "picked_on": "2026-09-06",
+      "pool_size": 25,
+      "fingerprint": "sha1:7ecb27adb9608d54",
       "picks": [
         {
           "url": "https://phillipalcock.substack.com/p/claude-for-teachers",
@@ -675,9 +682,9 @@
       "role": "teacher",
       "level": "confident",
       "picked_by": "ai",
-      "picked_on": "2026-09-05",
-      "pool_size": 9,
-      "fingerprint": "sha1:0fd1d1c98b40690f",
+      "picked_on": "2026-09-06",
+      "pool_size": 8,
+      "fingerprint": "sha1:7b28b81c8775ec8a",
       "picks": [
         {
           "url": "https://howtoteachwithai.substack.com/p/43-claude-skills-that-give-you-the",
@@ -787,9 +794,9 @@
       "role": "developer",
       "level": "confident",
       "picked_by": "ai",
-      "picked_on": "2026-09-04",
-      "pool_size": 37,
-      "fingerprint": "sha1:151d95110d5485e6",
+      "picked_on": "2026-09-06",
+      "pool_size": 41,
+      "fingerprint": "sha1:a367a1ebd63dfd81",
       "picks": [
         {
           "url": "https://code.claude.com/docs/en/best-practices",
@@ -827,9 +834,9 @@
       "role": "developer",
       "level": "builder",
       "picked_by": "ai",
-      "picked_on": "2026-09-04",
-      "pool_size": 57,
-      "fingerprint": "sha1:47b690d64f7fa3fa",
+      "picked_on": "2026-09-06",
+      "pool_size": 56,
+      "fingerprint": "sha1:33932c6826a61c23",
       "picks": [
         {
           "url": "https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models",
@@ -907,9 +914,9 @@
       "role": "data-analyst",
       "level": "basic",
       "picked_by": "ai",
-      "picked_on": "2026-09-05",
+      "picked_on": "2026-09-06",
       "pool_size": 19,
-      "fingerprint": "sha1:2fa0375d6650f7d4",
+      "fingerprint": "sha1:5194bcfec445cba5",
       "picks": [
         {
           "url": "https://claude.com/docs/office-agents/excel",
@@ -946,9 +953,9 @@
       "role": "data-analyst",
       "level": "confident",
       "picked_by": "ai",
-      "picked_on": "2026-09-04",
-      "pool_size": 22,
-      "fingerprint": "sha1:a1ccbf213a3e9dc7",
+      "picked_on": "2026-09-06",
+      "pool_size": 34,
+      "fingerprint": "sha1:0adae33a16b1ed2f",
       "picks": [
         {
           "url": "https://www.qwe.edu.pl/tutorial/claude-csv-data-analysis/",
@@ -973,7 +980,8 @@
         },
         {
           "url": "https://towardsdatascience.com/4-lines-you-must-include-in-your-claude-skill/",
-          "reason": "The sharpest small fix in the pool - stopping fluent output from overstating the numbers - but it lands only after a first skill, which the DataCamp pick teaches."
+          "reason": "Levelled to `builder` under Rule A on 2026-09-06 - its card describes authoring the thing rather than running it - so it left this pool on a definition rather than on merit.",
+          "cause": "re-levelled-out-of-the-pool"
         },
         {
           "url": "https://academy.claude.com/tutorials/prompting-strategies-for-financial-analysis",
@@ -986,12 +994,12 @@
       "level": "builder",
       "picked_by": "ai",
       "picked_on": "2026-09-06",
-      "pool_size": 15,
-      "fingerprint": "sha1:9800151895ab354b",
+      "pool_size": 14,
+      "fingerprint": "sha1:b6f9ee5488efb835",
       "picks": [
         {
           "url": "https://github.com/anthropics/claude-cookbooks/blob/main/managed_agents/data_analyst_agent.ipynb",
-          "reason": "The one candidate that ends with something reusable for any dataset - hand it data, get a narrative report - where thirty of thirty-three candidates run one predefined workflow.",
+          "reason": "The one candidate that ends with something reusable for any dataset - hand it data, get a narrative report - where the rest of this pool is servers to install and source to read.",
           "subject": "an agent that turns datasets into narrative reports"
         },
         {
@@ -1001,14 +1009,15 @@
         },
         {
           "url": "https://www.youtube.com/watch?v=cGuyrANVi4A",
-          "reason": "Four MCP servers sit in this pool and none of them explains the protocol they implement - this is the one that does, which is what you need before choosing between them or writing a fifth.",
+          "reason": "Six MCP servers sit in this pool and none of them explains the protocol they implement - this is the one that does, which is what you need before choosing between them or writing a fifth.",
           "subject": "how MCP works, before picking a server"
         }
       ],
       "runners_up": [
         {
           "url": "https://academy.claude.com/use-cases/build-financial-models",
-          "reason": "The most ambitious page here, and the heaviest gate in its own batch by its own admission - three paid connectors and a waitlist."
+          "reason": "Levelled to `confident` under Rule A on 2026-09-06 - its card describes running a recipe or using a connector someone else built, not building one - so it left this pool on a definition rather than on merit.",
+          "cause": "re-levelled-out-of-the-pool"
         },
         {
           "url": "https://academy.claude.com/use-cases/answer-the-adhoc",
@@ -1106,9 +1115,9 @@
       "role": "pm",
       "level": "confident",
       "picked_by": "ai",
-      "picked_on": "2026-09-04",
-      "pool_size": 53,
-      "fingerprint": "sha1:be0de3b3aea3b3e4",
+      "picked_on": "2026-09-06",
+      "pool_size": 61,
+      "fingerprint": "sha1:d69341a036e41d0f",
       "picks": [
         {
           "url": "https://claude.com/blog/product-management-on-the-ai-exponential",
@@ -1147,8 +1156,8 @@
       "level": "builder",
       "picked_by": "ai",
       "picked_on": "2026-09-06",
-      "pool_size": 10,
-      "fingerprint": "sha1:ed8ae442998b3d52",
+      "pool_size": 7,
+      "fingerprint": "sha1:7c58e769b174e0c3",
       "picks": [
         {
           "url": "https://every.to/guides/ai-product-management-guide",
@@ -1169,7 +1178,8 @@
       "runners_up": [
         {
           "url": "https://academy.claude.com/tutorials/scaling-workflows-with-claude-cowork-at-your-organization",
-          "reason": "The org-rollout view, edged out because this cell is one PM's own build, not the organisation's."
+          "reason": "Levelled to `confident` under Rule A on 2026-09-06 - its card describes running a recipe or using a connector someone else built, not building one - so it left this pool on a definition rather than on merit.",
+          "cause": "re-levelled-out-of-the-pool"
         },
         {
           "url": "https://academy.claude.com/use-cases/ask-the-company",
@@ -1188,9 +1198,9 @@
       "role": "business-founder",
       "level": "never-used",
       "picked_by": "ai",
-      "picked_on": "2026-09-04",
-      "pool_size": 42,
-      "fingerprint": "sha1:bb1bd969ac68c4ab",
+      "picked_on": "2026-09-06",
+      "pool_size": 41,
+      "fingerprint": "sha1:23f5b4c303ffd127",
       "picks": [
         {
           "url": "https://privacy.claude.com/en/articles/10023580-is-my-data-used-for-model-training",
@@ -1227,9 +1237,9 @@
       "role": "business-founder",
       "level": "basic",
       "picked_by": "ai",
-      "picked_on": "2026-09-05",
-      "pool_size": 65,
-      "fingerprint": "sha1:d5e54c9f26415d58",
+      "picked_on": "2026-09-06",
+      "pool_size": 64,
+      "fingerprint": "sha1:b504f8d8cf5e603c",
       "picks": [
         {
           "url": "https://wotai.co/blog/claude-for-small-business",
@@ -1267,9 +1277,9 @@
       "role": "business-founder",
       "level": "confident",
       "picked_by": "ai",
-      "picked_on": "2026-09-04",
-      "pool_size": 48,
-      "fingerprint": "sha1:74d404350fc88911",
+      "picked_on": "2026-09-06",
+      "pool_size": 63,
+      "fingerprint": "sha1:73672f4dcf97c616",
       "picks": [
         {
           "url": "https://academy.claude.com/tutorials/teach-claude-your-way-of-working-using-skills",
@@ -1298,7 +1308,7 @@
         },
         {
           "url": "https://academy.claude.com/use-cases/quickly-prep-for-your-week",
-          "reason": "Strong on its own, but forty-one candidates here run one task each, and the picks are a policy, a system and source you can audit - each of which outlasts a single workflow."
+          "reason": "Strong on its own, but twenty-three of the sixty-three candidates here run one task each, and the picks are a policy, a system and source you can audit - each of which outlasts a single workflow."
         }
       ],
       "note": "Two picks share the primary topic skills, and the subjects are opposite halves of one habit: the Academy tutorial is about authoring a skill so your own instructions stick, the small-business repo is about reading the source of skills somebody else wrote before you trust them with the books. Authoring and auditing, not the same subject under one field value."
@@ -1307,9 +1317,9 @@
       "role": "writer-marketer",
       "level": "never-used",
       "picked_by": "ai",
-      "picked_on": "2026-09-04",
-      "pool_size": 19,
-      "fingerprint": "sha1:7f5b5c14a16fe1d4",
+      "picked_on": "2026-09-06",
+      "pool_size": 20,
+      "fingerprint": "sha1:1f1e96c69a55c4e6",
       "picks": [
         {
           "url": "https://academy.claude.com/courses/claude-101",
@@ -1347,9 +1357,9 @@
       "role": "writer-marketer",
       "level": "basic",
       "picked_by": "ai",
-      "picked_on": "2026-09-05",
-      "pool_size": 34,
-      "fingerprint": "sha1:46b63ea1c7b79ab6",
+      "picked_on": "2026-09-06",
+      "pool_size": 35,
+      "fingerprint": "sha1:fafd79981a6e40a6",
       "picks": [
         {
           "url": "https://restructurednews.substack.com/p/claude-editor",
@@ -1383,9 +1393,9 @@
       "role": "writer-marketer",
       "level": "confident",
       "picked_by": "ai",
-      "picked_on": "2026-08-31",
-      "pool_size": 7,
-      "fingerprint": "sha1:3adf51ad01a6bf6c",
+      "picked_on": "2026-09-06",
+      "pool_size": 16,
+      "fingerprint": "sha1:7b4a3ffccfb689b9",
       "picks": [
         {
           "url": "https://academy.claude.com/courses/ai-fluency-for-creative-work",

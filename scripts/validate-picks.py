@@ -156,6 +156,10 @@ RUNNER_CAUSES = {
     # was redefined did not lose an argument, and the record should not imply it
     # did.
     "re-levelled-out-of-the-pool",
+    # Added 2026-09-06 with Rule B. A pick that leaves because a role tag its own card
+    # denies was dropped did not lose an argument either - and it is a different fault
+    # from a level being redefined, so it gets its own word.
+    "re-tagged-out-of-the-pool",
 }
 
 
