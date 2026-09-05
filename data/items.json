@@ -25049,8 +25049,8 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "business-founder",
-      "data-analyst"
+      "data-analyst",
+      "writer-marketer"
     ],
     "level": "confident",
     "topics": [
@@ -25065,7 +25065,7 @@
     "published": "UNVERIFIED",
     "checked": "2026-08-29",
     "summary": "Compares fundraising return across email, events, direct mail, social and corporate sponsorship for a regional nonprofit, using two years of quarterly data.",
-    "who_for": "Nonprofit development staff deciding which fundraising channels to invest in or cut.",
+    "who_for": "Marketers and analysts deciding which channels get next year's budget. The worked example is a nonprofit's events, email and direct mail.",
     "skip_if": "The page's own category chip says Marketing, but the actual content is nonprofit development work (email, events, direct mail, corporate sponsorship) - a mismatch worth knowing if you're browsing by role.",
     "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Names Benevity and Blackbaud connectors as MCP options alongside plain CSV/Excel upload.",
     "prerequisites": [
@@ -25222,8 +25222,8 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "business-founder",
-      "pm"
+      "designer",
+      "writer-marketer"
     ],
     "level": "confident",
     "topics": [
@@ -25238,7 +25238,7 @@
     "published": "UNVERIFIED",
     "checked": "2026-08-29",
     "summary": "Claude Opus 5 reads a folder of image exports at high resolution to flag off-brand colors, outdated logos, and missing legal copy, grouped by violation type.",
-    "who_for": "Brand or marketing ops teams checking a batch of asset exports before they ship.",
+    "who_for": "Designers and marketers checking a batch of exports against the brand rules before they ship.",
     "skip_if": "Needs Cowork with Claude Opus 5 specifically selected, and accuracy depends on Opus 5's stated vision limit of up to 2,576 pixels on the long edge - very high-res exports may exceed what it can read clearly.",
     "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Worked example audits 200 files, finds 11 violations, and separates borderline findings into a 'less certain' block.",
     "prerequisites": [
@@ -25410,7 +25410,7 @@
     "published": "UNVERIFIED",
     "checked": "2026-08-29",
     "summary": "Merges Slack mentions, Notion tasks and a live web dashboard into one morning briefing, surfacing priorities and connections that scanning each platform separately would miss.",
-    "who_for": "A team lead or ops person juggling Slack, Notion and a metrics dashboard every morning.",
+    "who_for": "Anyone whose morning starts in Slack, Notion and a dashboard, and who wants one briefing instead of three tabs.",
     "skip_if": "Runs on Anthropic's servers by default so it's ready with your laptop closed - the page itself tells you to switch to running locally instead if the material in Slack/Notion is sensitive.",
     "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Explicitly requests threads you are NOT in as part of the briefing.",
     "prerequisites": [
@@ -26066,7 +26066,7 @@
     "published": "UNVERIFIED",
     "checked": "2026-08-29",
     "summary": "Builds a personal portfolio site from a resume and project write-ups, deployed live via Netlify without writing code.",
-    "who_for": "Job seekers or creatives who want a live portfolio site without learning web development.",
+    "who_for": "Anyone who wants a live page - a portfolio, a CV, a one-pager - without learning web development.",
     "skip_if": "A Netlify account is needed only for the actual deploy step - and it explicitly warns against 'AI-looking gradients,' suggesting you package your own aesthetic preferences into a reusable Skill so later pages stay consistent.",
     "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min.",
     "prerequisites": [
@@ -26152,7 +26152,7 @@
     "published": "UNVERIFIED",
     "checked": "2026-08-29",
     "summary": "Turns a long written procedure document into an interactive visual flow diagram - specifically a Sankey diagram where line width encodes volume across paths.",
-    "who_for": "Operations or customer success staff turning a written playbook into a visual process map.",
+    "who_for": "Anyone with a written procedure nobody reads who wants a diagram of it instead.",
     "skip_if": "The output is a Sankey diagram where line width encodes volume across paths, not a simple box-and-arrow flowchart - a different deliverable than the title suggests if you just want a basic process diagram.",
     "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Worked example turns a 42-page onboarding playbook into a diagram with clickable phase cards.",
     "prerequisites": [
@@ -26366,7 +26366,7 @@
     "published": "UNVERIFIED",
     "checked": "2026-08-29",
     "summary": "Turns a static document into a fillable PDF with real form fields - dropdowns, checkboxes, text fields - that people can fill out in any PDF reader.",
-    "who_for": "Event and administration staff producing registration or intake forms.",
+    "who_for": "Anyone who sends out a form and gets back typed emails and scans. The worked example is a conference registration form.",
     "skip_if": "The chat preview only renders the visual design, not the working form behavior - you have to download the PDF and open it in a real reader to confirm the fields are actually fillable.",
     "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Worked example is a multi-page conference registration form.",
     "prerequisites": [
@@ -26479,8 +26479,7 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "developer",
-      "pm"
+      "developer"
     ],
     "level": "confident",
     "topics": [
@@ -26495,7 +26494,7 @@
     "published": "UNVERIFIED",
     "checked": "2026-08-29",
     "summary": "Turns scattered notes into a complete engineering design doc or RFC with prior art and trade-offs filled in - worked example is migrating an event pipeline from batch to streaming.",
-    "who_for": "Tech leads or architects turning rough notes into a structured RFC.",
+    "who_for": "Engineers, tech leads and architects turning rough notes into a structured RFC.",
     "skip_if": "Needs a working folder with your own RFC template, past RFCs and architecture diagrams - without real prior art to draw on, the 'prior art and trade-offs' section has nothing to pull from.",
     "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Scheduled version checks an RFCs/inbox folder weekdays at 9am and converts new one-pagers into structured drafts.",
     "prerequisites": [
@@ -27015,7 +27014,7 @@
     "published": "UNVERIFIED",
     "checked": "2026-08-29",
     "summary": "Writes an organization-specific AI usage policy for a nonprofit - data privacy, approved/prohibited uses, staff guidelines - plus a full implementation workbook.",
-    "who_for": "Nonprofit leadership drafting AI governance for the first time.",
+    "who_for": "A business owner or nonprofit executive director writing the organisation's first AI policy without paying a consultant.",
     "skip_if": "Best with your existing policies (privacy policy, code of ethics) uploaded as a starting point - and the real output beyond the policy text is a full implementation workbook (intake workflow, risk matrix, training tracker), more than a one-page AI policy.",
     "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Worked example is a 75-staff, 200-volunteer youth mental health organization.",
     "prerequisites": [
@@ -27058,7 +27057,7 @@
     "published": "UNVERIFIED",
     "checked": "2026-08-29",
     "summary": "Pulls project status from email, Slack, meeting notes and calendar into one tracker, reconciling conflicting self-reported status against what other sources actually show.",
-    "who_for": "Project leads tracking status across scattered sources who need a reality check, not just a summary.",
+    "who_for": "A project or product manager who has to say where things stand, and wants the evidence pulled from email, Slack and meeting notes rather than asked for again.",
     "skip_if": "Needs Google Drive, Gmail, Google Calendar and Slack all connected and toggled on - and its real value is reconciling conflicting status reports against each other, so it needs genuinely inconsistent sources to show what it's for.",
     "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Worked example shows a teammate's self-reported '80% done' corrected to 45% based on separate 1-on-1 notes.",
     "prerequisites": [
@@ -27748,8 +27747,8 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "business-founder",
-      "designer"
+      "designer",
+      "writer-marketer"
     ],
     "level": "builder",
     "topics": [
@@ -27764,7 +27763,7 @@
     "published": "UNVERIFIED",
     "checked": "2026-08-29",
     "summary": "Converts brand guidelines (colors, fonts, spacing, application rules) into a reusable Claude Skill so every deck, doc or spreadsheet Claude makes comes out on-brand.",
-    "who_for": "Marketing or brand ops teams wanting brand-consistent output without re-specifying it each time.",
+    "who_for": "Designers and marketers who want brand-consistent output without re-specifying the rules in every request.",
     "skip_if": "Needs Skills and file creation enabled in claude.ai settings plus your own real brand guidelines to encode - the finished skill ships as a ZIP with Python utility modules, more engineering than a simple style prompt.",
     "notes": "Read via fetch 2026-08-29, not opened by a person. 20 min. Uses Anthropic's own brand (hex codes, Poppins/Lora typography) as its worked example.",
     "prerequisites": [
@@ -27922,8 +27921,7 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "student",
-      "non-technical"
+      "student"
     ],
     "level": "basic",
     "topics": [
@@ -27938,7 +27936,7 @@
     "published": "UNVERIFIED",
     "checked": "2026-08-29",
     "summary": "Turns an uploaded consulting case into a live practice session - Claude builds a real spreadsheet model with formulas, frameworks and a dashboard, then reviews your reasoning.",
-    "who_for": "Consulting or strategy job candidates practicing case interviews.",
+    "who_for": "Students and job candidates practising case interviews with feedback after each answer.",
     "skip_if": "Needs your own case materials uploaded to start from - the value of storing cases in a Project with Memory (to spot recurring framework gaps) only shows up after multiple practice sessions, not the first one.",
     "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Builds a real spreadsheet model, not just a chat quiz - plus a separate practice guide of key questions.",
     "prerequisites": [
@@ -28157,7 +28155,7 @@
     "published": "UNVERIFIED",
     "checked": "2026-08-29",
     "summary": "Turns next week's Outlook calendar and inbox into a prioritized prep document, detecting overbooking patterns and finding focus-time blocks.",
-    "who_for": "Managers with a meeting-heavy calendar who want a prioritized weekly prep document.",
+    "who_for": "Anyone with a meeting-heavy week who wants the prep done before Monday.",
     "skip_if": "Needs the Microsoft 365 connector enabled - it reads your Outlook calendar and inbox specifically, so it won't help if your calendar and mail live somewhere else.",
     "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Detects overbooking patterns and triages email into urgent vs. medium priority.",
     "prerequisites": [
@@ -28347,88 +28345,6 @@
     "id": "r-6b298d11c7"
   },
   {
-    "title": "See what your campaign goal actually requires",
-    "url": "https://academy.claude.com/use-cases/see-what-your-campaign-goal-actually-requires",
-    "author": "Anthropic",
-    "source": "Anthropic Academy",
-    "official": true,
-    "roles": [
-      "business-founder",
-      "non-technical"
-    ],
-    "level": "never-used",
-    "topics": [
-      "chat-prompting"
-    ],
-    "format": "docs",
-    "time": "under-15min",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "status": "live",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-29",
-    "summary": "Turns a capital campaign dollar goal into a gift pyramid inline - how many gifts per tier and how many qualified prospects that realistically takes, with a live-dragging slider.",
-    "who_for": "Nonprofit fundraising staff planning a capital campaign.",
-    "skip_if": "Built specifically around capital-campaign gift-pyramid math (3-to-1 and 4-to-1 prospect ratios) - a narrow nonprofit fundraising pattern, not a general goal-planning tool.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Tiers labeled Thin/Watch/Healthy against a typical pipeline.",
-    "prerequisites": [],
-    "teaches": [
-      "build an interactive gift pyramid showing prospect-to-gift ratios for a campaign goal"
-    ],
-    "keywords": [
-      "gift pyramid claude",
-      "capital campaign planning ai",
-      "nonprofit fundraising prospect math"
-    ],
-    "questions": [
-      "can claude build a gift pyramid for our campaign goal",
-      "how many prospects do i need per gift tier"
-    ],
-    "id": "r-4f799af1e6"
-  },
-  {
-    "title": "See why donor retention beats acquisition, in chat with Claude",
-    "url": "https://academy.claude.com/use-cases/see-why-donor-retention-beats-acquisition",
-    "author": "Anthropic",
-    "source": "Anthropic Academy",
-    "official": true,
-    "roles": [
-      "business-founder",
-      "non-technical"
-    ],
-    "level": "never-used",
-    "topics": [
-      "chat-prompting"
-    ],
-    "format": "docs",
-    "time": "under-15min",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "status": "live",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-29",
-    "summary": "Builds a five-year donor projection with sliders for retention and acquisition, showing why a small retention gain beats doubling acquisition spend.",
-    "who_for": "Nonprofit fundraising staff arguing for retention investment over acquisition spend.",
-    "skip_if": "The real lesson is prompt phrasing, not fundraising strategy - wording like 'let me play with the numbers' is what makes Claude build interactive sliders instead of a static chart, and it warns real donor behavior varies by gift size and channel.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. 'Save as Artifact' keeps the sliders live for later use.",
-    "prerequisites": [],
-    "teaches": [
-      "build an interactive five-year donor projection to compare retention vs acquisition investment"
-    ],
-    "keywords": [
-      "donor retention vs acquisition claude",
-      "nonprofit donor projection artifact",
-      "claude interactive slider chart"
-    ],
-    "questions": [
-      "can claude show why donor retention matters more than acquisition",
-      "how do i get claude to build interactive sliders instead of a static chart"
-    ],
-    "id": "r-17c8b75fa5"
-  },
-  {
     "title": "See your theory of change in chat with Claude",
     "url": "https://academy.claude.com/use-cases/see-your-theory-of-change-in-chat-with-claude",
     "author": "Anthropic",
@@ -28535,7 +28451,7 @@
     "published": "UNVERIFIED",
     "checked": "2026-08-29",
     "summary": "Chases leads across scattered tools, surfaces what no single source shows on its own, and builds a board deck around the through-line - assuming sources will disagree and reconciling them.",
-    "who_for": "Chiefs of staff or business operations leads building a board deck from disagreeing internal sources.",
+    "who_for": "Anyone building a deck from sources that disagree. The worked example is a revenue number that differs between the finance report and the dashboard.",
     "skip_if": "Needs Claude Desktop with Claude Opus 4.6 specifically, at least one connected source (Slack, Drive or email), and Claude in Chrome for live dashboard checks - the prompt assumes your sources will disagree with each other and asks Claude to work out which is current.",
     "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Closing instruction: 'Make an argument, not a summary.'",
     "prerequisites": [
@@ -28847,7 +28763,7 @@
     "published": "UNVERIFIED",
     "checked": "2026-08-29",
     "summary": "Mines scattered email replies from invited conference speakers for names, topics, time preferences and A/V needs, assembling a tracker that also flags logistically complex sessions.",
-    "who_for": "Event coordinators or program chairs tracking speaker logistics from email replies.",
+    "who_for": "Anyone whose event logistics live in an email thread - speakers, dates, A/V - and who wants them in one tracker.",
     "skip_if": "Needs the Gmail integration enabled and toggled on in the chat bar, and it's built around mining scattered email replies - so it needs the relevant emails to actually already be sitting in that inbox.",
     "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Worked example flags panels with multiple presenters and sessions needing rehearsal for live demos.",
     "prerequisites": [
@@ -29021,7 +28937,7 @@
     "published": "UNVERIFIED",
     "checked": "2026-08-29",
     "summary": "Dictates rough meeting-prep thoughts by voice while commuting, then Claude researches competitor practices and an internal planning doc to produce a one-page prep summary at your desk.",
-    "who_for": "Product or business staff prepping for a meeting during a commute.",
+    "who_for": "A product manager or business owner who thinks on the commute and wants the research done by the time they sit down. The worked example is an onboarding-abandonment teardown.",
     "skip_if": "Needs Web Search enabled plus your own internal planning documents uploaded - the payoff is research grounded in an internal doc (naming a colleague's specific objection), not generic competitor research.",
     "notes": "Read via fetch 2026-08-29, not opened by a person. 20 min, the longest in its batch. Starts by voice on mobile, finishes on desktop.",
     "prerequisites": [
@@ -29241,7 +29157,7 @@
     "published": "UNVERIFIED",
     "checked": "2026-08-29",
     "summary": "Turns a spreadsheet of quarterly program statistics into an Excel dashboard and an 8-10 slide board-meeting deck, with cross-tab analysis by demographic and location.",
-    "who_for": "Nonprofit program evaluation staff producing board-ready reporting.",
+    "who_for": "A business owner or executive director who has to show a board what the programme achieved, starting from a spreadsheet.",
     "skip_if": "Needs an XLSX or CSV with columns for metrics, time periods and program names, plus code execution and file creation enabled in settings - built for nonprofit program/board reporting specifically.",
     "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Follow-up prompt cross-tabs satisfaction and completion rates by age group and zip code.",
     "prerequisites": [
@@ -29310,7 +29226,6 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "pm",
       "business-founder"
     ],
     "level": "confident",
@@ -29326,7 +29241,7 @@
     "published": "UNVERIFIED",
     "checked": "2026-08-29",
     "summary": "On Sunday night, walks next week's calendar and produces one document with context and a drafted agenda for every meeting, flagging the three you most need to prep for.",
-    "who_for": "Executive assistants, chiefs of staff, or any manager with a heavy meeting load.",
+    "who_for": "A business owner or manager whose Monday starts with a calendar they have not read yet.",
     "skip_if": "Needs the Google Calendar connector required, plus Slack/Drive/Gmail optional, and a Week-of-<date> output folder set up - designed to accumulate through the week into a Friday retro, so a single Sunday run only shows part of its value.",
     "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. The Week-of-<date> folder accumulates the brief, per-meeting agendas and notes into one Friday retro.",
     "prerequisites": [
@@ -29413,7 +29328,7 @@
     "published": "UNVERIFIED",
     "checked": "2026-08-29",
     "summary": "Turns a year of raw program data and participant outcomes into a full annual impact report in several audience-specific versions - foundation, donor, and board cuts.",
-    "who_for": "Nonprofit program directors or fundraising staff writing an annual impact report.",
+    "who_for": "The owner or executive director of a small organisation writing its annual impact report from programme data.",
     "skip_if": "The page explicitly tells you to upload raw program data, not pre-summarized reports - patterns visible across a complete dataset disappear in a summary, so a tidy pre-made summary defeats the point.",
     "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Worked example is an after-school tutoring nonprofit, 347 students across 3 Seattle sites.",
     "prerequisites": [
