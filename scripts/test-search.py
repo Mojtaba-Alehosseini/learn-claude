@@ -84,9 +84,10 @@ SUITE = [
      "the safety question every new user asks, answered with a university login "
      "page; Reduce hallucinations is second"),
     ("non-technical", "write emails for me", "bad",
-     "Real-World AI for Everyone",
-     "a multi-week paid Coursera specialization first, a teachers' guide second, "
-     "and deleting promotional mail third; Write in my voice is not in the ten"),
+     "Claude AI for Teachers",
+     "Still wrong, and differently wrong: a teachers' beginner guide now leads "
+     "where a paid Coursera specialization did. Write in my voice, the row "
+     "that answers this, is still not in the results."),
     ("non-technical", "use claude on my excel file", "ok", "Upload files to Claude",
      ""),
 
@@ -112,16 +113,20 @@ SUITE = [
 
     # --- a researcher -----------------------------------------------------------
     ("researcher", "does claude make up citations", "bad",
-     "Claude AI for Researchers",
-     "Use Claude for Excel is second; Reduce hallucinations and Why do AI models "
-     "hallucinate? are in none of the 47"),
+     "3 Mind Blowing Claude & Consensus Research Workflows",
+     "Still wrong. Reduce hallucinations is now in the results where it was in "
+     "none of the 47 before, but a YouTube workflow tour leads. The citation "
+     "synonym row moved it up, not to the top."),
     ("researcher", "systematic literature review", "bad",
      "Mushtaq Bilal",
      "the site's own card calls the top result a mailing-list funnel where every "
      "post is behind a subscribe form, and ranks it first"),
     ("researcher", "hallucinated references", "ok",
-     "Zotero",
-     ""),
+     "Claude Researcher",
+     "Re-judged 2026-09-06. Was recorded as Zotero, which connects Claude to a "
+     "reference library. The new first result is a source-first literature "
+     "review workflow, which is the direct answer to fabricated references "
+     "rather than the tool that stores real ones. Zotero is still second."),
     ("researcher", "peer review", "bad",
      "Peer and AI Review of Student Writing",
      "wrong sense of the word - classroom peer feedback on undergraduate essays; "
@@ -136,9 +141,10 @@ SUITE = [
      "a video for experienced web developers; the AIAS, AI & Academic Integrity and "
      "the Vanderbilt detector piece are none of them in the top five"),
     ("teacher", "make a lesson plan", "bad",
-     "How Teachers Can Create Interactive Classroom Activities",
-     "the top result's own Skip if says to skip it if you only need lesson plans; "
-     "#5 is an autonomous coding agent"),
+     "Claude for K-12 teachers",
+     "Still wrong, and closer: a product page with worked prompts leads, where "
+     "the previous leader's own skip line said to skip it if you only want "
+     "lesson plans. A product page is not a lesson plan."),
     ("teacher", "marking essays", "bad",
      "Claude for Education Is Made for Learning",
      "two results for the most common teacher task on earth, both aimed at students"),
@@ -149,9 +155,11 @@ SUITE = [
      "Claude for Teachers",
      ""),
     ("teacher", "grading", "bad",
-     "Demystifying evals for AI agents",
-     "machine-learning regression testing; marking, grading, feedback and rubric are "
-     "four different searches for one job because there are no synonyms"),
+     "Teaching AI Fluency",
+     "Still wrong, and the specific complaint is fixed: Demystifying evals for "
+     "AI agents - machine-learning regression testing - has dropped to second, "
+     "and 'marking' and 'grading' now return the same set. What leads is a "
+     "course about teaching AI fluency, which is not about marking work."),
 
     # --- a developer ------------------------------------------------------------
     ("developer", "claude code hooks", "bad",
@@ -170,8 +178,11 @@ SUITE = [
      "eight results, second is a designer's Figma article matched on cheaper; the "
      "catalogue's own page on how context affects cost never appears"),
     ("developer", "claude.md", "ok",
-     "Best practices for Claude Code",
-     ""),
+     "Steering Claude Code",
+     "Re-judged 2026-09-06. Was Best practices for Claude Code, which covers "
+     "CLAUDE.md among many things. The new first result is about when to use "
+     "CLAUDE.md against skills, hooks and subagents - the file itself is its "
+     "subject. Best practices is third, tied."),
     ("developer", "claude code permissions", "bad",
      "Claude Code Essentials",
      "third result is Using Databricks for Data Analysis"),
@@ -179,8 +190,11 @@ SUITE = [
     # Started with Claude for Financial Services, inside a three-way score tie - which
     # is the no-tie-break finding, recorded in 05-developer.md, not a wrong #1.
     ("developer", "how much does claude code cost", "ok",
-     "Plans",
-     ""),
+     "Choose a Claude plan",
+     "Re-judged 2026-09-06. Was Plans & Pricing, which is now second on the "
+     "same score. Both answer the question and the reader gets a pricing page "
+     "either way; the Help Centre page is the one that says which plans "
+     "include Claude Code."),
 
     # --- working with data ------------------------------------------------------
     ("data-analyst", "claude excel formulas", "bad",
@@ -193,9 +207,10 @@ SUITE = [
      "the site itself calls useless as a guide to doing it today; the CSV article is "
      "sixth, behind a Figma MCP setup guide"),
     ("data-analyst", "sql", "bad",
-     "Anthropic's Prompt Engineering Interactive Tutorial",
-     "a generic prompting tutorial and a PM course beat Postgres MCP Pro and the "
-     "DuckDB MCP server for the query sql"),
+     "Answer the ad-hoc data question",
+     "Still wrong, and much closer: an analyst recipe leads where a generic "
+     "prompting tutorial did. Postgres MCP Pro and the DuckDB MCP server, "
+     "which are the answer to 'sql', are still not in the top three."),
     ("data-analyst", "pivot table", "bad",
      "Claude Code for Data Analysis",
      "there is nothing here on pivot tables; instead of the honest empty state it "
@@ -208,8 +223,11 @@ SUITE = [
 
     # --- a product manager ------------------------------------------------------
     ("pm", "write a prd with ai", "ok",
-     "Write a PRD with Claude Code",
-     ""),
+     "PRD from a problem statement",
+     "Re-judged 2026-09-06. Was Write a PRD with Claude Code, now second on "
+     "the same score. The new first result is a recipe that writes the PRD, "
+     "which is what the query asks for; the other is a course module about "
+     "doing it."),
     ("pm", "claude for user research", "ok",
      "Claude Code for product managers",
      ""),
@@ -253,8 +271,13 @@ SUITE = [
      "design system",
      ""),
     ("designer", "accessibility", "ok",
-     "Design plugin",
-     ""),
+     "Design Systems in 2026",
+     "Re-judged 2026-09-06, and the closest call of the six. Was Design "
+     "plugin, which ships an accessibility-review skill and is now second on "
+     "the same score. The new first result carries accessibility in four "
+     "fields including what it teaches, against three, which is the tie-break "
+     "doing what it was built for. Either is a defensible first result and the "
+     "reader sees both."),
     ("designer", "design critique", "ok",
      "Design plugin",
      ""),
@@ -280,11 +303,15 @@ SUITE = [
      "Is my data used for model training",
      ""),
     ("business-founder", "write customer emails", "bad",
-     "Real-World AI for Everyone",
-     "the top hit costs money and nobody watched it; the second is a teachers' guide"),
-    ("business-founder", "claude for bookkeeping", "bad",
-     "Anthropic Just Dropped Claude for Small Businesses",
-     "the right answer is second, under a hype headline"),
+     "Claude AI for Teachers",
+     "Still wrong, same fault as 'write emails for me' from the other role: a "
+     "teachers' guide leads a query about customer email."),
+    ("business-founder", "claude for bookkeeping", "ok",
+     "Reconcile transactions across your accounts",
+     "Promoted 2026-09-06. Bookkeeping is reconciling transactions, and that "
+     "is now first where it used to sit second under a hype headline. The "
+     "synonym row joining bookkeeping to reconciliation is why, and the row "
+     "says so."),
     ("business-founder", "keep my own voice", "bad",
      "Using AI for Writing Feedback",
      "top result is a Found only card, flagged over a year old, aimed at a student, "
@@ -297,10 +324,11 @@ SUITE = [
     # Unfiltered this returns the Education Report first; the agent saw Warwick first
     # because it was browsing with role=writer-marketer applied. Same finding either
     # way - a freelance writer with a client gets academic-integrity pages.
-    ("writer-marketer", "do i have to say i used ai", "bad",
-     "Anthropic Education Report",
-     "three academic-integrity pages for a freelance writer with a client; The "
-     "Ethics of Using AI, step 4 of this reader's own path, is not surfaced"),
+    ("writer-marketer", "do i have to say i used ai", "ok",
+     "Referencing AI and Acknowledging AI Use",
+     "Promoted 2026-09-06. The page is exactly the question, and it was "
+     "invisible because it says acknowledgement where the reader says 'say I "
+     "used AI'. The disclosure synonym row put it first."),
     ("writer-marketer", "em dash", "content-gap",
      "",
      "Not one row in the catalogue contains the phrase, in any field, indexed "
