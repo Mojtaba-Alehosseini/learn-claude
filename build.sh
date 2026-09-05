@@ -53,6 +53,10 @@ python3 scripts/test-copy-claims.py
 # turns this one away. FIX-15's audit reported zero of these because it read the
 # pick's reason instead of the pick's card against the cell.
 python3 scripts/audit-pick-contradictions.py | tail -1
+# Advisory too: cards whose own prose puts them in a lower time bucket than their
+# chip. The no-typed-numbers rule reached docs and UI strings but never the
+# catalogue, and Attack 2 found the gap three times.
+python3 scripts/audit-time-chips.py | tail -1
 
 echo
 echo "Done. Open index.html."
