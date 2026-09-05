@@ -88,6 +88,9 @@ jobs:
       - name: Check search still answers the sentences visitors typed
         run: python3 scripts/test-search.py
 
+      - name: Check the trust copy still says what the data supports
+        run: python3 scripts/test-copy-claims.py
+
       # Copy only what the browser asks for. scripts/, docs/, research/ and prompts/
       # stay in the repo but do not need to be served.
       - name: Assemble the site

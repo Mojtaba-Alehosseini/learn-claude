@@ -70,7 +70,9 @@ Three links. No dropdowns. No tabs.
 ### Footer
 
 > Not affiliated with Anthropic. We link to other people's work and say what we think of it.
-> Everything here was checked by hand. The date is on every resource.
+> Every one checked and given a reason to skip it. The date is on every resource.
+> (Never "checked by hand": the tier that means a person checked the notes has a count
+> of zero. D2, 2026-09-05.)
 
 Columns: **The directory** (Browse · Paths) · **About** (How we check · Why we say skip · Contact) · **Built with** (Sources · Changelog).
 
@@ -360,13 +362,15 @@ Provenance line at the bottom:
 
 **Opening:**
 
-> We would rather have 70 resources we can vouch for than 700 we cannot.
+> We would rather read fewer resources in full than list more we have only skimmed.
+> Today the count read in full is zero, and the label on every card says how far we got.
 
 **Sections**
 
 **What we do**
 
-> We find material, read it, and write two things: who it helps, and who should skip it.
+> We find material, read as far as the label says, and write two things: who it helps,
+> and who should skip it.
 > Then we write down the date. When something drifts out of date, the date says so before
 > we do.
 
@@ -381,7 +385,8 @@ Provenance line at the bottom:
 
 **What we will not do**
 
-> We do not copy anyone's description. We do not list something we cannot open. We do not
+> We do not copy anyone's description. We do not list something whose page we cannot
+> open. A paid course is opened at its sales page; the label says so. We do not
 > take money to rank a resource. We are not affiliated with Anthropic.
 
 **About Claude certification**

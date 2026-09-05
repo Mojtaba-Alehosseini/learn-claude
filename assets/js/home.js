@@ -205,9 +205,20 @@
       return (!state.role || it.roles.indexOf(state.role) !== -1) &&
              (!state.level || it.level === state.level);
     }).length;
+    /* This line used to claim the catalogue had been checked by a hand, which was the
+       first thing a visitor read and the one sentence the site could not support: the
+       tier that means a person checked the notes has had a count of zero since the
+       catalogue existed, and how-we-check.html says so two clicks away. Eight of ten
+       Attack 2 agents found the contradiction and all ten found it somewhere.
+       scripts/test-copy-claims.py now bans the old wording, including here.
+       What replaces it is three claims that are each true, and both numbers are counted
+       rather than typed: every row carries a checked date, every row carries a skip_if
+       (rule 2), and `listed` is the one tier that means nobody opened it. */
+    var opened = items.filter(function (it) { return it.tier !== "listed"; }).length;
     el.tally.textContent = (state.role || state.level)
       ? LC.countText(n) + " match so far."
-      : LC.countText(items.length) + ", checked by hand.";
+      : LC.countText(items.length) + ". Every one checked and given a reason to " +
+        "skip it \u2014 " + opened + " of them opened.";
 
     /* Only does work on the first render, when fillRow builds the buttons. After that
        the same nodes stay in place and keep the mark they already have. */

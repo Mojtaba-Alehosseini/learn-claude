@@ -47,6 +47,8 @@ echo "6/6  measured status, and the freshness exclusions"
 # resource from every pool for ten months without one step going red.
 python3 scripts/measure.py --status
 python3 scripts/test-measure.py > /dev/null
+# Four sentences the site is not allowed to say again - see D2 in FIX-24.md.
+python3 scripts/test-copy-claims.py
 
 echo
 echo "Done. Open index.html."
