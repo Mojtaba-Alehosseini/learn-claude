@@ -62,6 +62,7 @@ FLOOR_FRACTION = 0.30
 FLOOR_ABSOLUTE = 2.0
 PREFIX_WEIGHT = 0.3    # retired with the prefix bonus; kept so the constant list reads
 STEM_WEIGHT = 0.5      # an expansion scores below the word the person typed
+TIE = 0.001            # scores within this of each other are a tie, not an order
 
 
 # role, query, verdict, expected-or-observed top title fragment, the agent's reason
@@ -305,6 +306,7 @@ def rank(query, kw):
     n = len(kw["ids"])
     scores = [0.0] * n
     exact = [False] * n
+    cover = [0] * n          # how many distinct query words this item matched outright
     q = query.lower()
 
     for w in words(query):
@@ -314,6 +316,7 @@ def rank(query, kw):
             if idf >= MIN_IDF_SCORE:
                 for i, weight in posts:
                     scores[i] += weight * idf
+                    cover[i] += 1
                     if idf > MIN_IDF_ADMIT:
                         exact[i] = True
         # The stem expansion, replacing the 5-char prefix bonus whose own comment called
@@ -345,7 +348,11 @@ def rank(query, kw):
         return []
     floor = max(best * FLOOR_FRACTION, FLOOR_ABSOLUTE)
     keep = [i for i in range(n) if exact[i] and scores[i] >= floor]
-    keep.sort(key=lambda i: -scores[i])
+    # Scores are floats built by addition, so "equal" means equal to a tolerance rather
+    # than bit-identical. Everything inside TIE of each other is ordered by the
+    # precomputed tie-break: tier, then how recently checked, then title.
+    tb = kw.get("tiebreak") or list(range(n))
+    keep.sort(key=lambda i: (-round(scores[i] / TIE), -cover[i], tb[i]))
     return [(kw["ids"][i], scores[i]) for i in keep]
 
 

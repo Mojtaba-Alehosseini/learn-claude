@@ -199,9 +199,20 @@
        within a reasonable fraction of the best hit. */
     var floor = Math.max(best * 0.30, 2.0);
 
+    /* Scores are floats built by addition, so "equal" means equal to a tolerance. Inside
+       that tolerance the order comes from index.tiebreak, computed once at build time -
+       tier, then how recently checked, then title. Two sort implementations deciding a
+       tie for themselves is how Python and this file came to disagree about which member
+       of the "hallucinated references" tie was first. */
+    var TIE = 0.001;
+    var tb = index.tiebreak || null;
     var keep = [];
     for (var b = 0; b < n; b++) if (exact[b] && scores[b] >= floor) keep.push(b);
-    keep.sort(function (x, y) { return scores[y] - scores[x]; });
+    keep.sort(function (x, y) {
+      var bx = Math.round(scores[x] / TIE), by = Math.round(scores[y] / TIE);
+      if (bx !== by) return by - bx;
+      return tb ? tb[x] - tb[y] : x - y;
+    });
 
     var byId = Object.create(null), order = [];
     for (var c = 0; c < keep.length; c++) {

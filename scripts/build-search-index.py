@@ -93,6 +93,31 @@ def build_keywords(items):
     return idx, phrases
 
 
+TIER_RANK = {"reviewed": 0, "ai-reviewed": 1, "previewed": 2, "listed": 3}
+
+
+def build_tiebreak(items):
+    """One integer per item: its place in the order equal scores fall back on.
+
+    Tier first, because "best checked first" is already the default sort a reader was
+    shown; then the more recently checked, because a stale look is weaker evidence than a
+    fresh one; then the title, which decides nothing but decides it the same way twice.
+
+    Precomputed here so that no comparison is written twice in two languages. A tie broken
+    differently by Python and by the browser is the same bug as no tie-break at all.
+    """
+    order = sorted(range(len(items)), key=lambda i: (
+        TIER_RANK.get(items[i].get("tier"), 9),
+        items[i].get("checked") and (10 ** 9 - int(str(items[i]["checked"]).replace("-", "")))
+        or 10 ** 9,
+        str(items[i].get("title", "")).lower(),
+    ))
+    rank = [0] * len(items)
+    for place, i in enumerate(order):
+        rank[i] = place
+    return rank
+
+
 def build_stems(idx):
     """stem -> [the words that share it], for stems that hold more than one word.
 
@@ -166,6 +191,7 @@ def main():
 
     idx, phrases = build_keywords(items)
     stems, groups = build_stems(idx)
+    tiebreak = build_tiebreak(items)
     # Postings are integer positions because that keeps the file small, but a position
     # is only meaningful against the exact list it was built from. Shipping the id list
     # alongside lets the browser check it is reading the index it thinks it is — the
@@ -178,6 +204,7 @@ def main():
         "weights": WEIGHTS,
         "words": idx,
         "stems": stems,
+        "tiebreak": tiebreak,
         "phrases": phrases,
     }, open(KW_OUT, "w", encoding="utf-8"), separators=(",", ":"))
     print(f"keyword index: {len(idx)} words, {len(phrases)} phrases "
