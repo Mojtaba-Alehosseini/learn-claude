@@ -69,10 +69,18 @@ Three links. No dropdowns. No tabs.
 
 ### Footer
 
-> Not affiliated with Anthropic. We link to other people's work and say what we think of it.
-> Every one checked and given a reason to skip it. The date is on every resource.
-> (Never "checked by hand": the tier that means a person checked the notes has a count
-> of zero. D2, 2026-09-05.)
+> Learn Claude is an independent directory. It is not affiliated with Anthropic.
+> Every entry says who it is for, who should skip it, and when we last checked it.
+
+This is what `index.html` ships, word for word. It claims three things the data can
+prove row by row - a reader, a skip line, a date - and no level of checking at all.
+
+Until 2026-09-06 this entry prescribed a sentence beginning "Every one checked", which is
+the claim D2 killed on the front page in a smaller coat, and it warned against the old
+tagline by quoting the tagline. Both are gone: a banned sentence must not survive in the
+one file whose purpose is to be copied from. The four killed sentences live in
+`scripts/test-copy-claims.py`, which is allowed to hold them because it is the thing that
+refuses them.
 
 Columns: **The directory** (Browse · Paths) · **About** (How we check · Why we say skip · Contact) · **Built with** (Sources · Changelog).
 

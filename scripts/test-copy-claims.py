@@ -24,16 +24,33 @@ import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# Everything a reader can reach. data/*.js are generated mirrors of items.json, and the
-# catalogue's own prose is checked by validate-catalogue.py, not here.
-SURFACES = [
-    "index.html", "browse.html", "paths.html", "resource.html", "how-we-check.html",
-    os.path.join("assets", "js", "home.js"),
-    os.path.join("assets", "js", "browse.js"),
-    os.path.join("assets", "js", "ui.js"),
-    os.path.join("assets", "js", "resource.js"),
-    os.path.join("assets", "js", "paths.js"),
-]
+def surfaces():
+    """Every shipped file a killed sentence could come back in.
+
+    This used to be ten paths typed by hand, which covered the pages and scripts that
+    existed the day it was written and nothing since. A list of files to check is a list
+    somebody has to remember to update, and the copy deck - where the killed sentences are
+    written down for re-use - was never on it.
+
+    data/*.js are generated mirrors of items.json and are skipped: the catalogue's own
+    prose is one build step away from being rewritten, and validate-catalogue.py owns it.
+    """
+    found = []
+    for name in sorted(os.listdir(ROOT)):
+        if name.endswith(".html"):
+            found.append(name)
+    js = os.path.join(ROOT, "assets", "js")
+    if os.path.isdir(js):
+        for name in sorted(os.listdir(js)):
+            if name.endswith(".js"):
+                found.append(os.path.join("assets", "js", name))
+    deck = os.path.join("docs", "design", "ux-copy.md")
+    if os.path.exists(os.path.join(ROOT, deck)):
+        found.append(deck)
+    return found
+
+
+SURFACES = surfaces()
 
 # (the banned substring, why it was killed)
 BANNED = [
@@ -106,8 +123,8 @@ def main():
         print("wanted, change this file in the same commit and say why.")
         return 1
 
-    print("Copy claims: %d banned sentence(s) absent, %d replacement(s) present."
-          % (len(BANNED), len(REQUIRED)))
+    print("Copy claims: %d file(s) read, %d banned sentence(s) absent, "
+          "%d replacement(s) present." % (len(SURFACES), len(BANNED), len(REQUIRED)))
     return 0
 
 
