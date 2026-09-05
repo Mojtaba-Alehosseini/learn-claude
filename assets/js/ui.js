@@ -87,7 +87,15 @@
         "Only two here \u2014 everything else at this level comes from the same publisher.",
       "rule-carried-third-refused":
         "Only two here \u2014 no third candidate got through the rules without repeating " +
-        "a publisher or a format."
+        "a publisher or a format.",
+      /* R4. The cell above was blaming its shortlist for something its rules
+         did: with three publishers the cap is one pick each, and if those
+         publishers offer fewer formats between them than the format rule wants,
+         no legal third pick exists. That is the rules disagreeing with each
+         other and it should not read as a thin shelf. */
+      "constraints-jointly-unsatisfiable":
+        "Only two here \u2014 a third would have to repeat a publisher or a format, " +
+        "and the rules allow neither."
     },
     /* Three or fewer to choose from is not a shortlist, and calling it one would be the
        page flattering itself. */

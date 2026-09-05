@@ -102,6 +102,8 @@ is a near-monoculture), and hiding it would hide exactly what constraint 1 measu
 """
 
 import importlib.util
+import collections
+import itertools
 import json
 import os
 import re
@@ -132,7 +134,13 @@ PC = _pick_candidates()
 # A two-pick cell must say which of these put it there. Never a bare count of two:
 # "only two" is a fact about the catalogue or about the shortlist, and which one it is
 # changes what a reader should conclude.
-TWO_PICK_CAUSES = ("publisher-thin", "rule-carried-third-refused")
+# `constraints-jointly-unsatisfiable` added 2026-09-06 (R4). It is not the shortlist
+# refusing a third pick, it is the rules refusing one: with three publishers the cap
+# is one each, and if those publishers offer fewer formats between them than the
+# format rule wants, no legal third pick exists at all. Blaming the shortlist for
+# that made the cell read as thin when it was the constraints disagreeing.
+TWO_PICK_CAUSES = ("publisher-thin", "rule-carried-third-refused",
+                   "constraints-jointly-unsatisfiable")
 
 
 # Optional on a runner-up, and machine-readable so a class of mistake can be counted
@@ -163,15 +171,54 @@ def allowed_picks(pool):
     return 2, 2
 
 
+def max_distinct_formats(pool, k, max_per_pub):
+    """The most distinct formats any LEGAL k-item selection from this pool can span.
+
+    "Legal" means within the per-publisher cap, which is the whole point: the old code
+    counted formats across the pool and ignored the cap, so it could demand a spread no
+    permitted selection can reach. teacher|confident is the case that exposed it - three
+    publishers, cap of one each, and two of the three publish only articles, so every
+    legal three-pick set spans two formats while the rule asked for three.
+
+    Exact, not estimated. The search runs over distinct (publisher, format) pairs rather
+    than items, because two items sharing both contribute nothing new: a pool of eighty
+    rarely has more than thirty pairs, and choosing three from thirty is four thousand
+    combinations.
+    """
+    pairs = sorted({(x.get("source", ""), x.get("format")) for x in pool})
+    if not pairs or k <= 0:
+        return 0
+    best = 0
+    for combo in itertools.combinations(pairs, min(k, len(pairs))):
+        counts = collections.Counter(pub for pub, _f in combo)
+        if any(c > max_per_pub for c in counts.values()):
+            continue
+        best = max(best, len({f for _p, f in combo}))
+        if best == min(k, len({f for _p, f in pairs})):
+            break
+    return best
+
+
 def expected_two_pick_cause(pool):
     """Which cause a two-pick cell must declare, given its pool.
 
     One publisher means the pool itself caps the cell at two - `publisher-thin`.
-    Two or more means the pool could have carried three, so the missing third is the
-    shortlist's doing - `rule-carried-third-refused`.
+
+    Otherwise, ask whether a legal three-pick set could satisfy the format rule at all.
+    Where it cannot - three publishers, cap of one each, and only two formats reachable -
+    the missing third is the rules disagreeing with each other, not a shortlist being
+    fussy: `constraints-jointly-unsatisfiable`.
+
+    Everything else is the shortlist's doing - `rule-carried-third-refused`.
     """
     pubs = {x.get("source", "") for x in pool}
-    return "publisher-thin" if len(pubs) < 2 else "rule-carried-third-refused"
+    if len(pubs) < 2:
+        return "publisher-thin"
+    max_per_pub, ceiling = allowed_picks(pool)
+    if max_distinct_formats(pool, ceiling, max_per_pub) < ceiling and \
+            len({x.get("format") for x in pool}) >= ceiling:
+        return "constraints-jointly-unsatisfiable"
+    return "rule-carried-third-refused"
 
 
 def check_cell(key, cell, pool, items_by_url):
@@ -298,10 +345,14 @@ def check_cell(key, cell, pool, items_by_url):
         of_fmt = lambda x: x.get("format")
         in_pool = {of_fmt(x) for x in pool}
         in_picks = [of_fmt(it) for it in pick_items]
-        want = min(len(pick_items), len(in_pool))
+        # The most a LEGAL selection can span, not the most the pool contains. See
+        # max_distinct_formats: the old line ignored the publisher cap and could demand
+        # a spread no permitted set of picks can reach.
+        want = max_distinct_formats(pool, len(pick_items), max_per_pub)
         if len(set(in_picks)) < want:
-            err("picks span %d formats where the pool offers %d and %d picks could "
-                "span %d" % (len(set(in_picks)), len(in_pool), len(pick_items), want))
+            err("picks span %d formats where %d picks under a cap of %d per publisher "
+                "could span %d (the pool holds %d formats in all)"
+                % (len(set(in_picks)), len(pick_items), max_per_pub, want, len(in_pool)))
 
         # Constraint 4. Shared primary topic: justified, forced, or a fault.
         prim = lambda x: (x.get("topics") or [None])[0]
