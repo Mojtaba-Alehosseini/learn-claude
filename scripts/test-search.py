@@ -42,8 +42,12 @@ file sees, and the finding is unchanged either way.
 
 import json
 import math
+import os
 import re
 import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from stem import stem  # noqa: E402
 
 ITEMS = "data/items.json"
 KW = "data/search-keywords.json"
@@ -56,7 +60,8 @@ MIN_IDF_SCORE = 0.05   # below this a word is in almost everything and means not
 MIN_IDF_ADMIT = 0.7    # below this a word may rank a resource but not admit it
 FLOOR_FRACTION = 0.30
 FLOOR_ABSOLUTE = 2.0
-PREFIX_WEIGHT = 0.3
+PREFIX_WEIGHT = 0.3    # retired with the prefix bonus; kept so the constant list reads
+STEM_WEIGHT = 0.5      # an expansion scores below the word the person typed
 
 
 # role, query, verdict, expected-or-observed top title fragment, the agent's reason
@@ -292,6 +297,7 @@ SUITE = [
 
 
 def words(s):
+    """Raw words. The stem expansion happens in rank(), at half weight. See stem.py."""
     return [w for w in re.findall(r"[a-z0-9]+", s.lower()) if w not in STOP and len(w) > 1]
 
 
@@ -310,12 +316,23 @@ def rank(query, kw):
                     scores[i] += weight * idf
                     if idf > MIN_IDF_ADMIT:
                         exact[i] = True
-        if len(w) > 5:
-            head = w[:5]
-            for k, p2 in kw["words"].items():
-                if k != w and k[:5] == head:
-                    for i, weight in p2:
-                        scores[i] += weight * PREFIX_WEIGHT
+        # The stem expansion, replacing the 5-char prefix bonus whose own comment called
+        # it a stand-in. Ranks, never admits: a morphological cousin may lift a resource
+        # the reader's own word already found, and may not put one in front of them on
+        # its own.
+        # One union across the whole stem group, scored once. Per-cousin IDF would pay a
+        # rare inflection ("hallucinated", in two items) far more than the family is
+        # worth, and the group is what the reader actually meant.
+        union = {}
+        for cousin in kw.get("stems", {}).get(stem(w), []):
+            for i, weight in kw["words"].get(cousin, []):
+                if weight > union.get(i, 0):
+                    union[i] = weight
+        if union:
+            idf2 = math.log(n / len(union))
+            if idf2 >= MIN_IDF_SCORE:
+                for i, weight in union.items():
+                    scores[i] += weight * idf2 * STEM_WEIGHT
 
     for phrase, ids in kw["phrases"].items():
         if phrase in q:

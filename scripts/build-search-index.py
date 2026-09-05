@@ -30,6 +30,9 @@ import time
 import urllib.request
 import urllib.error
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from stem import stem  # noqa: E402
+
 ITEMS = "data/items.json"
 KW_OUT = "data/search-keywords.json"
 VEC_OUT = "data/search-vectors.json"
@@ -47,6 +50,7 @@ this to up us was we were what when where which who why will with you your""".sp
 
 
 def words(s):
+    """Tokenise. Raw words, not stems - see build_keywords for where stemming happens."""
     return [w for w in re.findall(r"[a-z0-9]+", s.lower()) if w not in STOP and len(w) > 1]
 
 
@@ -87,6 +91,25 @@ def build_keywords(items):
         for word, w in seen.items():
             idx.setdefault(word, []).append([i, w])
     return idx, phrases
+
+
+def build_stems(idx):
+    """stem -> [the words that share it], for stems that hold more than one word.
+
+    A second, smaller map beside the raw one. The query side reads the raw word at full
+    weight and this at half, so `hallucinations` can reach a page that only says
+    `hallucinated` without `design` and `designer` becoming the same word for ranking.
+
+    Stems holding a single word are skipped: the raw lookup already covers them, and they
+    are three quarters of the vocabulary.
+    """
+    groups = {}
+    for word in idx:
+        groups.setdefault(stem(word), []).append(word)
+    # Member words, not postings. Duplicating the postings under the stem cost 106 KB and
+    # bought nothing the query side cannot do by unioning the raw lists it already has.
+    out = {s: sorted(m) for s, m in groups.items() if len(m) > 1}
+    return out, out
 
 
 def embed(key, text, task):
@@ -142,6 +165,7 @@ def main():
         x.setdefault("id", f"item-{i:04d}")
 
     idx, phrases = build_keywords(items)
+    stems, groups = build_stems(idx)
     # Postings are integer positions because that keeps the file small, but a position
     # is only meaningful against the exact list it was built from. Shipping the id list
     # alongside lets the browser check it is reading the index it thinks it is — the
@@ -153,10 +177,18 @@ def main():
         "ids": [x["id"] for x in items],
         "weights": WEIGHTS,
         "words": idx,
+        "stems": stems,
         "phrases": phrases,
     }, open(KW_OUT, "w", encoding="utf-8"), separators=(",", ":"))
     print(f"keyword index: {len(idx)} words, {len(phrases)} phrases "
           f"-> {KW_OUT} ({os.path.getsize(KW_OUT)/1024:.0f} KB)")
+
+    # A minimum stem of 3 merges hard, so what it merged is printed rather than trusted.
+    big = sorted(groups.items(), key=lambda kv: -len(kv[1]))
+    print(f"  stems: {len(stems)} groups over {len(idx)} words "
+          f"({sum(len(v) for v in groups.values())} words are in a group)")
+    for s, members in big[:6]:
+        print("    %-12s %s" % (s, ", ".join(members)))
 
     if "--keywords" in args:
         return

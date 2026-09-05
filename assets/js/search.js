@@ -30,6 +30,63 @@
   var index = null;
   var loading = null;
 
+  /* The stemmer, mirrored from scripts/stem.py rule for rule. Both sides must agree or
+     the index and the query stop meeting: scripts/test-search-runtimes.js runs all 57
+     suite queries through both and fails the build if a single top three differs.
+
+     The two rules that were argued, in the same words as the spec: the -ate family is
+     REMOVED rather than mapped to "at", because mapping leaves "citation" at "citat"
+     while cite/cited/citing reach "cit"; and the minimum stem is 3, not 4, because
+     "citation" -> "cit" is three characters. The third column is the minimum a rule may
+     leave, which is 4 for the short -ate members so that "cheated" reaches "cheat"
+     instead of "che". */
+  var MIN_STEM = 3;
+  var RULES = [
+    ["ational", "ate", 3], ["ization", "ize", 3], ["isation", "ize", 3],
+    ["iveness", "ive", 3], ["fulness", "ful", 3], ["ousness", "ous", 3],
+    ["ations", "", 3], ["ation", "", 3],
+    ["ating", "", 4], ["ated", "", 4], ["ates", "", 4], ["ate", "", 4],
+    ["ions", "", 3], ["ion", "", 3],
+    ["edly", "", 3], ["ies", "y", 3], ["ing", "", 3], ["ise", "ize", 3],
+    ["ed", "", 3], ["es", "", 3], ["s", "", 3], ["e", "", 3]
+  ];
+  var IRREGULAR = {
+    made: "mak", making: "mak", make: "mak", makes: "mak",
+    wrote: "writ", written: "writ",
+    ran: "run", run: "run", running: "run", runs: "run",
+    found: "find", finding: "find", finds: "find", find: "find",
+    taught: "teach", teaching: "teach", teaches: "teach", teach: "teach"
+  };
+  var DOUBLED = /([bdfgklmnprt])\1$/;
+
+  function stem(word) {
+    var w = String(word).toLowerCase();
+    if (Object.prototype.hasOwnProperty.call(IRREGULAR, w)) return IRREGULAR[w];
+    if (w.length <= MIN_STEM) return w;
+    for (var pass = 0; pass < 4; pass++) {
+      var before = w;
+      for (var i = 0; i < RULES.length; i++) {
+        var suffix = RULES[i][0], replacement = RULES[i][1], floor = RULES[i][2];
+        if (w.length < suffix.length) continue;
+        if (w.slice(w.length - suffix.length) !== suffix) continue;
+        var cut = w.slice(0, w.length - suffix.length) + replacement;
+        if (cut.length < Math.max(MIN_STEM, floor)) continue;
+        if (replacement === "" && (suffix === "ing" || suffix === "ed") &&
+            DOUBLED.test(cut)) {
+          cut = cut.slice(0, -1);
+        }
+        w = cut;
+        break;
+      }
+      if (w === before) break;
+    }
+    return w;
+  }
+
+  /* An expansion scores below the word the person typed. Same factor, same sentence, as
+     the spec and as scripts/test-search.py. */
+  var STEM_WEIGHT = 0.5;
+
   function words(s) {
     var out = [], m = String(s).toLowerCase().match(/[a-z0-9]+/g) || [];
     for (var i = 0; i < m.length; i++) {
@@ -95,16 +152,29 @@
           if (idf > 0.7) exact[posts[j][0]] = 1;   // only a selective word admits
         }
       }
-      /* Someone types "prompting" and the keyword is "prompt". Worth a third of an
-         exact hit — enough to surface the resource, not enough to outrank a real match. */
-      if (w.length > 5) {
-        var head = w.slice(0, 5);
-        for (var k in index.words) {
-          if (k === w) continue;
-          if (k.slice(0, 5) === head) {
-            var p2 = index.words[k];
-            for (var m2 = 0; m2 < p2.length; m2++) scores[p2[m2][0]] += p2[m2][1] * 0.3;
-          }
+      /* Someone types "hallucinations" and the page says "hallucinated". The stem map
+         holds only stems covering more than one word, and a stem hit ranks without
+         admitting: a morphological cousin may lift a resource the reader's own word
+         already found, and may never put one in front of them on its own. This replaces
+         a 5-char prefix bonus whose own comment called it a stand-in for stemming. */
+      /* One union across the whole stem group, scored once. Per-cousin IDF would pay a
+         rare inflection far more than the family is worth. */
+      var cousins = (index.stems && index.stems[stem(w)]) || [];
+      var union = Object.create(null), any = false;
+      for (var c2 = 0; c2 < cousins.length; c2++) {
+        var p2 = index.words[cousins[c2]];
+        if (!p2) continue;
+        for (var m2 = 0; m2 < p2.length; m2++) {
+          var pi = p2[m2][0];
+          if (!(pi in union) || p2[m2][1] > union[pi]) { union[pi] = p2[m2][1]; any = true; }
+        }
+      }
+      if (any) {
+        var count = 0, kk;
+        for (kk in union) count++;
+        var idf2 = Math.log(n / count);
+        if (idf2 >= 0.05) {
+          for (kk in union) scores[kk] += union[kk] * idf2 * STEM_WEIGHT;
         }
       }
     }
