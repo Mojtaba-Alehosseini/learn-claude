@@ -379,7 +379,12 @@
           '</div>' + icon +
         '</div>' +
         '<div class="chip-row" style="margin-top:var(--space-12)">' + LC.chips(item) + '</div>' +
-        '<p class="card-for"><strong>For:</strong> ' + LC.esc(item.who_for) + '</p>' +
+        /* A stripped card has no who_for at all. Under D1 a `listed` row carries a
+           title, a link, a publisher and a format - the tier says nobody opened it, so
+           there is nothing to say about who it helps. */
+        (item.who_for
+          ? '<p class="card-for"><strong>For:</strong> ' + LC.esc(item.who_for) + '</p>'
+          : '') +
         '<p class="card-skip"><span class="label">Skip if:</span> ' +
            LC.esc(item.skip_if) + '</p>' +
         pathLine +

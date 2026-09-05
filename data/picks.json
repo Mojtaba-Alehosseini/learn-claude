@@ -706,23 +706,18 @@
       "level": "confident",
       "picked_by": "ai",
       "picked_on": "2026-09-05",
-      "pool_size": 8,
-      "fingerprint": "sha1:ec1ca140304cc92d",
+      "pool_size": 9,
+      "fingerprint": "sha1:0fd1d1c98b40690f",
       "picks": [
         {
           "url": "https://howtoteachwithai.substack.com/p/43-claude-skills-that-give-you-the",
-          "reason": "The only candidate written for a teacher who already knows what a Skill is, and the only non-Anthropic voice in the pool - forty-three worked answers to the question this level actually has, which is how to stop repeating yourself.",
+          "reason": "The only candidate written for a teacher who already knows what a Skill is - forty-three worked answers to the question this level actually has, which is how to stop repeating yourself.",
           "subject": "reusable skills for a semester's repetition"
         },
         {
           "url": "https://academy.claude.com/courses/teaching-ai-fluency",
           "reason": "The one candidate about the job change rather than the tool - designing assignments and assessment for students who have AI - and its strongest lessons are exactly there.",
           "subject": "teaching and assessing AI itself, not just using it"
-        },
-        {
-          "url": "https://academy.claude.com/use-cases/adapt-a-standard-textbook-page-to-every-reading-level",
-          "reason": "The classroom craft task with the widest reach in the pool - every teacher differentiates, where the alternatives serve one subject's typesetting or one syllabus shape.",
-          "subject": "differentiating one lesson across reading levels"
         }
       ],
       "runners_up": [
@@ -731,11 +726,16 @@
           "reason": "The delivery kit, but its own notes require the Educators course first and an audience of adults to train - a narrower door than either Academy pick."
         },
         {
-          "url": "https://academy.claude.com/use-cases/plan-your-syllabus-see-which-weeks-are-locked",
-          "reason": "The most original university tool here, edged out because differentiation serves every classroom while dependency-mapping serves those free to reorder."
+          "url": "https://academy.claude.com/use-cases/adapt-a-standard-textbook-page-to-every-reading-level",
+          "reason": "Real classroom craft with the widest reach of the Academy recipes, and it lost the slot to the cap rather than to a better recipe: three publishers in the pool means one Academy pick, and the fluency course covers more of the job."
+        },
+        {
+          "url": "https://annamills.substack.com/p/ai-feedback-customized-for-student",
+          "reason": "Research-tested prompts an instructor can deploy, and the pool's third publisher - it lost to the rules, not to quality. Every legal third pick here is an article, and the two picks above already span the only two formats this pool can reach under the publisher cap. Its who_for also names a student on a card whose own notes say the prompts are written for instructors."
         }
       ],
-      "note": "Two picks share Anthropic Academy's publisher slot? No - the cap here is two per publisher because the pool has two publishers, and that is what this cell ships. It was briefly two picks on 2026-09-04, when a student-facing Northeastern guide became eligible and looked like a third publisher. The guide was opened on 2026-09-05: written by a student, for students, with nothing for an instructor. Its `teacher` tag was wrong, not the cell, so the tag came off and the third pick came back."
+      "note": "Re-cut twice by the same mechanism, and the two cases are worth telling apart. On 2026-09-04 a student-facing Northeastern guide became eligible and looked like a third publisher; opened on 2026-09-05 it turned out to be written by a student for students with nothing for an instructor, so its `teacher` tag came off - the tag was wrong, not the cell, and the third pick came back. On 2026-09-05 the PAIRR prompts came out of `listed` under D1 and became a real third publisher. That one is genuinely for instructors, so the tag stays and the cap tightens to one per publisher. But Anna Mills and Doan Winkel each publish only articles here, so every legal three-pick set spans two formats and the format rule wants three. The two rules cannot both be met at three picks in this pool, so the cell ships two and says so.",
+      "two_pick_cause": "rule-carried-third-refused"
     },
     "developer|never-used": {
       "role": "developer",

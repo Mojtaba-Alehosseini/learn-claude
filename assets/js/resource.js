@@ -75,7 +75,10 @@
       '<p class="meta" style="margin-top:var(--space-8)">' +
         LC.publisher(item) + author + '</p>' +
       '<div class="chip-row" style="margin-top:var(--space-16)">' + LC.chips(item) + '</div>' +
-      '<p class="prose" style="margin-top:var(--space-24)">' + LC.esc(item.summary) + '</p>' +
+      (item.summary
+        ? '<p class="prose" style="margin-top:var(--space-24)">' +
+          LC.esc(item.summary) + '</p>'
+        : '') +
     '</div>' +
 
     '<div class="resource-actions">' +
@@ -98,8 +101,10 @@
 
     list("What it teaches", item.teaches) +
 
-    '<section class="section"><h2 class="h2">Who it\'s for</h2>' +
-      '<p class="prose">' + LC.esc(item.who_for) + '</p></section>' +
+    (item.who_for
+      ? '<section class="section"><h2 class="h2">Who it\'s for</h2>' +
+        '<p class="prose">' + LC.esc(item.who_for) + '</p></section>'
+      : '') +
 
     '<section class="section"><h2 class="h2">Skip it if</h2>' +
       '<p class="prose">' + LC.esc(item.skip_if) + '</p></section>' +

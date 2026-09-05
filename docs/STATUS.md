@@ -37,8 +37,8 @@ statement.
 |---|---|---|---|
 | `reviewed` | Read in full | **0** | 0% |
 | `ai-reviewed` | Read by AI | **98** | 15% |
-| `previewed` | Skimmed | **501** | 79% |
-| `listed` | Found only | **36** | 6% |
+| `previewed` | Skimmed | **534** | 84% |
+| `listed` | Found only | **3** | 0% |
 
 **Format:** 307 docs · 124 article · 101 video · 58 course · 32 repo · 7 hands-on · 6 podcast.
 
@@ -53,8 +53,8 @@ statement.
 | | |
 |---|---|
 | Cells with picks | **37** of 40 |
-| Picks | 109 |
-| Runners-up recorded | 106 |
+| Picks | 108 |
+| Runners-up recorded | 107 |
 
 **Cells with three or fewer candidates** (shown as-is, no picks): `teacher|builder` (2), `writer-marketer|builder` (3)
 
@@ -63,22 +63,22 @@ statement.
 **Pools with zero non-Anthropic material:** `non-technical|builder` (8 items, 1 publisher)
 
 **Publisher-thin pools** (fewer than 3 publishers, so the no-two-from-one rule
-relaxes): `non-technical|builder` (1 pub, 8 items), `teacher|confident` (2 pub, 8 items), `teacher|builder` (2 pub, 2 items), `data-analyst|builder` (2 pub, 33 items), `writer-marketer|builder` (2 pub, 3 items)
+relaxes): `non-technical|builder` (1 pub, 8 items), `teacher|builder` (2 pub, 2 items), `data-analyst|builder` (2 pub, 37 items), `writer-marketer|builder` (2 pub, 3 items)
 
 ## Per cell — eligible / publishers / non-Anthropic
 
 | role | never-used | basic | confident | builder |
 |---|---|---|---|---|
 | `non-technical` | 66 / 20p / 18x | 72 / 27p / 25x | 14 / 6p / 4x | 8 / 1p / 0x |
-| `student` | 36 / 16p / 13x | 19 / 11p / 9x | 9 / 5p / 4x | 0 / 0p / 0x |
-| `researcher` | 19 / 5p / 2x | 19 / 15p / 12x | 20 / 13p / 11x | 20 / 3p / 2x |
-| `teacher` | 28 / 12p / 8x | 18 / 12p / 9x | 8 / 2p / 1x | 2 / 2p / 1x |
-| `developer` | 7 / 4p / 1x | 19 / 11p / 8x | 37 / 18p / 19x | 57 / 18p / 17x |
-| `data-analyst` | 7 / 4p / 1x | 19 / 13p / 11x | 22 / 12p / 10x | 33 / 2p / 3x |
-| `pm` | 12 / 8p / 5x | 42 / 15p / 15x | 53 / 23p / 25x | 55 / 3p / 2x |
+| `student` | 42 / 21p / 18x | 21 / 13p / 11x | 10 / 6p / 5x | 0 / 0p / 0x |
+| `researcher` | 19 / 5p / 2x | 20 / 16p / 13x | 20 / 13p / 11x | 20 / 3p / 2x |
+| `teacher` | 30 / 13p / 9x | 25 / 19p / 16x | 9 / 3p / 2x | 2 / 2p / 1x |
+| `developer` | 7 / 4p / 1x | 19 / 11p / 8x | 39 / 18p / 20x | 61 / 18p / 20x |
+| `data-analyst` | 7 / 4p / 1x | 20 / 14p / 12x | 22 / 12p / 10x | 37 / 2p / 7x |
+| `pm` | 12 / 8p / 5x | 42 / 15p / 15x | 53 / 23p / 25x | 56 / 4p / 3x |
 | `designer` | 7 / 6p / 5x | 10 / 8p / 6x | 19 / 16p / 15x | 11 / 4p / 3x |
-| `business-founder` | 42 / 14p / 10x | 65 / 23p / 21x | 48 / 8p / 6x | 78 / 3p / 2x |
-| `writer-marketer` | 19 / 9p / 7x | 34 / 23p / 21x | 7 / 7p / 4x | 3 / 2p / 3x |
+| `business-founder` | 42 / 14p / 10x | 65 / 23p / 21x | 48 / 8p / 6x | 79 / 3p / 3x |
+| `writer-marketer` | 19 / 9p / 7x | 35 / 24p / 22x | 7 / 7p / 4x | 3 / 2p / 3x |
 
 ## Live resources the freshness rule excludes from every pool
 
@@ -86,12 +86,14 @@ A real `published` date more than 365 days old. These still appear in Browse wit
 the outdated flag; they are kept out of "Start with these three" because a
 comparative recommendation should not point at something a year stale.
 
-**11 excluded.**
+**15 excluded.**
 
 | item | publisher | published | days | level |
 |---|---|---|---|---|
+| Guidance on AI detection, and why we're disabling Turnitin | Vanderbilt University | 2023-08-16 | 1116 | basic |
 | AI prompt engineering: A deep dive | Anthropic | 2024-09-05 | 730 | confident |
 | Tips for building AI agents | Anthropic | 2025-02-13 | 569 | builder |
+| Anthropic Education Report: How University Students Use Cl | Anthropic | 2025-04-08 | 515 | basic |
 | Mastering Claude Code in 30 minutes | Anthropic | 2025-05-22 | 471 | confident |
 | Lesson 1: Introduction to AI Fluency \| AI Fluency: Framewo | Anthropic | 2025-06-12 | 450 | never-used |
 | Lesson 2B: The 4D Framework \| AI Fluency: Framework & Foun | Anthropic | 2025-06-12 | 450 | never-used |
@@ -101,6 +103,8 @@ comparative recommendation should not point at something a year stale.
 | Claude for Small Business (Back-Office AI, honest review) | Eigent AI | 2025-07-29 | 403 | basic |
 | Prompting 101 \| Code w/ Claude | Anthropic | 2025-07-31 | 401 | basic |
 | Claude Code best practices \| Code w/ Claude | Anthropic | 2025-07-31 | 401 | confident |
+| Using AI for Writing Feedback | Northeastern University | 2025-08-01 | 400 | basic |
+| Anthropic Education Report: how educators use Claude | Anthropic | 2025-08-27 | 374 | basic |
 
 ## Needs a person
 

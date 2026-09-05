@@ -57,6 +57,29 @@ DUPE_SLUGS = os.path.join(ROOT, "data", "duplicate-slugs.txt")
 REQUIRED = ["url", "title", "source", "summary", "who_for", "skip_if", "checked",
             "tier", "status", "level", "format", "time", "cost", "roles", "topics", "id"]
 
+# ...except on a `listed` row, where summary and who_for must be ABSENT. See LISTED_BANNED.
+REQUIRED_LISTED = [f for f in REQUIRED if f not in ("summary", "who_for")]
+
+# D1, 2026-09-05. `listed` prints "Nobody has looked at the content yet." For months every
+# one of the 36 rows wearing it also carried a summary, a who_for, a skip_if and three
+# "what it teaches" bullets - claims that can only come from reading. Eight of the ten
+# Attack 2 agents found it and six named it the thing that would make them leave, because
+# a badge that is false once makes the other three worth nothing.
+#
+# All 36 were then opened. 33 were accurate and moved to `previewed`, which is what they
+# had earned. Three were not: one summarised an episode behind a paywall nobody heard, one
+# said "nothing here reviews the code it writes" about a repo that runs typecheck and tests
+# before committing, and one attributed a FERPA argument to an article that never makes it.
+#
+# So the tier now means what it says, and this is what keeps it meaning that. A listed row
+# carries a title, a link, a publisher, a format - and one skip_if, because rule 2 stands
+# and "we have not opened this one" is a true reason to skip.
+# prerequisites is on this list too: D1 says the card keeps "title, link, publisher,
+# format, and one fixed skip_if", and "Basic understanding of FERPA" is a claim about
+# the inside of a page the tier says nobody opened, exactly like the rest.
+LISTED_BANNED = ("summary", "who_for", "teaches", "questions", "prerequisites")
+LISTED_SKIP_IF = "You want something we have read. We have not opened this one yet."
+
 LIST_FIELDS = {"roles", "topics"}
 
 # The one vocabulary with no map in ui.js. The site never lists these — it only asks
@@ -525,7 +548,18 @@ def main(argv=None):
 
     for n, item in enumerate(items):
         # 1. required fields, present and not empty
-        for f in REQUIRED:
+        # D1: a listed row may not carry a verdict.
+        if item.get("tier") == "listed":
+            said = [f for f in LISTED_BANNED if item.get(f)]
+            if said:
+                bad(n, item, "tier is listed, which prints \"Nobody has looked at the "
+                             "content yet\" - so it may not carry %s. Open it and move it "
+                             "to previewed, or strip it." % ", ".join(said))
+            if (item.get("skip_if") or "").strip() != LISTED_SKIP_IF:
+                bad(n, item, "a listed row's skip_if must be exactly %r, and this one is "
+                             "%r" % (LISTED_SKIP_IF, (item.get("skip_if") or "")[:60]))
+
+        for f in (REQUIRED_LISTED if item.get("tier") == "listed" else REQUIRED):
             v = item.get(f)
             if f in LIST_FIELDS:
                 empty = not isinstance(v, list) or len(v) == 0
