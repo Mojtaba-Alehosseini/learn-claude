@@ -523,6 +523,62 @@ def load_id_rule():
     return mod.make_id, mod.norm, mod.host
 
 
+def load_publisher_rule():
+    """add-source.py's own mapping, loaded rather than copied.
+
+    D15: a publisher name is a gate, not a lookup. The August fix mapped 49 hosts and was
+    right; it simply never ran again. 282 rows arrived afterwards and nobody held them to
+    it, so a browse page shipped "Und" for the University of North Dakota and "Open on
+    Und" on the resource page beneath it. Two Attack 2 agents found that one without
+    being told to look.
+
+    Copying the mapping here would recreate the fault one file over, so the real one is
+    imported. If add-source.py changes, this changes with it.
+    """
+    path = os.path.join(ROOT, "scripts", "add-source.py")
+    spec = importlib.util.spec_from_file_location("add_source", path)
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
+
+
+# A name that is really a domain. The four that hid here were mapped to their own
+# hostname to stop the fallback producing "Pl" and "Vc" - which fixed the mangling and
+# left a bare domain where a publisher belongs, the same fault one step later.
+DOMAINISH = re.compile(
+    r"^[a-z0-9][a-z0-9.-]*\.(com|org|net|io|dev|ai|co|edu|gov|world|cloud|me|pl|uk"
+    r"|au|ca|de|fr|nl|se|no|dk|fi|es|it|jp|cn|in|br|za|eu|tv|xyz|app|blog|news)$")
+
+
+def check_publishers(items, bad):
+    """Every host resolves to a name from the mapping, and no name is a bare domain."""
+    add_source = load_publisher_rule()
+    mapped = {h for h, _name, _off in add_source.NAMES}
+    platforms = tuple(add_source.PLATFORMS)
+
+    for n, item in enumerate(items):
+        host = urlparse(item.get("url", "")).netloc.lower()
+        if host.startswith("www."):
+            host = host[4:]
+        if not host:
+            continue
+
+        on_platform = any(host == d or host.endswith("." + d) for d in platforms)
+        in_map = any(host == h or host.endswith("." + h) for h in mapped)
+        if not (on_platform or in_map):
+            bad(n, item, "host %r is not in add-source.py's mapping, so its publisher "
+                         "name comes from the fallback. Add the name the publisher uses "
+                         "for itself." % host)
+
+        # A real publisher name that happens to end in a suffix carries a capital
+        # somewhere - Builder.io, freeCodeCamp.org, Journalism.co.uk. A bare hostname
+        # does not. That one test separates them without a second list to maintain.
+        src = str(item.get("source") or "")
+        if DOMAINISH.match(src) and src == src.lower():
+            bad(n, item, "source %r is a domain, not a publisher name. A reader sees "
+                         "this as \"Open on %s\"." % (src, src))
+
+
 # ---------------------------------------------------------------- checks ----
 
 def main(argv=None):
@@ -543,6 +599,8 @@ def main(argv=None):
     def bad(row, item, msg):
         title = str(item.get("title", ""))[:44] or "(no title)"
         errors.append("  row %-4d %-46s %s" % (row, title, msg))
+
+    check_publishers(items, bad)
 
     seen_ids, seen_urls = {}, {}
 

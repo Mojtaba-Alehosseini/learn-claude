@@ -94,18 +94,28 @@ NAMES = [
     ("journalism.co.uk", "Journalism.co.uk", False),
     ("learning-claude.com", "Learning Claude", False),
     ("libguides.princeton.edu", "Princeton University Library", False),
+    # Was printing "Und" - and "Open on Und" on the resource page. Two Attack 2
+    # agents hit it. The breadcrumb reads "University of North Dakota > Research
+    # Guides > Chester Fritz Library"; the library is already in `author`.
+    ("libguides.und.edu", "University of North Dakota", False),
     ("libguides.stkate.edu", "St. Catherine University Library", False),
     ("libguides.tulane.edu", "Tulane University Libraries", False),
     ("localizelikeapro.com", "Localize Like A Pro", False),
     ("lszabo.me", "Laszlo Szabo", False),
-    ("mcpservers.org", "mcpservers.org", False),
+    # Was printing "Master". Its own logo and copyright line say "Master.dev".
+    ("master.dev", "Master.dev", False),
+    # These four were mapped to their own domain to stop prettify() producing "Pl"
+    # and friends. That solved the mangling and left a bare domain where a
+    # publisher name belongs, which is the same fault one step later. Names read
+    # off each site on 2026-09-05.
+    ("mcpservers.org", "Awesome MCP Servers", False),
     ("modelcontextprotocol.io", "Model Context Protocol", False),
     ("monash.edu", "Monash University", False),
     ("niemanlab.org", "Nieman Lab", False),
     ("permissionless.krispuckett.com", "Kris Puckett", False),
-    ("prodmgmt.world", "prodmgmt.world", False),
+    ("prodmgmt.world", "Prodmgmt World", False),
     ("productschool.com", "Product School", False),
-    ("ranthebuilder.cloud", "ranthebuilder.cloud", False),
+    ("ranthebuilder.cloud", "Ran the Builder", False),
     ("reforge.com", "Reforge", False),
     ("sachinrekhi.com", "Sachin Rekhi", False),
     ("snyk.io", "Snyk", False),
@@ -159,7 +169,7 @@ NAMES = [
     ("eric.ed.gov", "ERIC", False),
     ("europa.eu", "European Commission", False),
     ("education.gov.au", "Australian Department of Education", False),
-    ("qwe.edu.pl", "qwe.edu.pl", False),
+    ("qwe.edu.pl", "QWE AI Academy", False),
     ("harvard.edu", "Harvard University", False),
     ("mit.edu", "MIT", False),
     ("stanford.edu", "Stanford University", False),

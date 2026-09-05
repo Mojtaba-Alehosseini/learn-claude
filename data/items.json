@@ -1398,7 +1398,7 @@
     "checked": "2026-08-20",
     "status": "live",
     "notes": "Curated to official/first-party servers, which are the lower-security-risk choice.",
-    "source": "mcpservers.org",
+    "source": "Awesome MCP Servers",
     "official": false,
     "id": "r-23979203c3",
     "keywords": [
@@ -2572,7 +2572,7 @@
     "checked": "2026-08-19",
     "status": "live",
     "notes": "Lesser-known source but technically accurate on the two-modes trap — the core correctness risk. Tools assumed: Claude.ai, CSV.",
-    "source": "qwe.edu.pl",
+    "source": "QWE AI Academy",
     "official": false,
     "id": "r-e638b25bdd",
     "keywords": [
@@ -7370,7 +7370,7 @@
     "title": "Craft a Professional AI Developer Setup (Cursor & Claude Code)",
     "url": "https://master.dev/courses/pro-ai/",
     "author": "Steve Kinney",
-    "source": "Master",
+    "source": "Master.dev",
     "official": false,
     "roles": [
       "developer"
@@ -9572,7 +9572,7 @@
     "checked": "2026-09-05",
     "status": "live",
     "notes": "Originally published December 2025, updated 2026-04-24. Treat the original date as a warning: check any command syntax against current Claude Code docs. Dates set from the page's own metadata 2026-09-05 (meta article:published_time=2025-12-20; json-ld dateModified=2026-04-24). updated (none) -> 2026-04-24. Nothing had recorded where the previous value came from.",
-    "source": "prodmgmt.world",
+    "source": "Prodmgmt World",
     "official": false,
     "id": "r-feff6f0299",
     "keywords": [
@@ -14977,7 +14977,7 @@
     "checked": "2026-09-05",
     "status": "live",
     "notes": "Author's primary audience is developers; the writing-voice content is a secondary application of a coding workflow, so parts may be more elaborate than a non-technical writer needs. Dates set from the page's own metadata 2026-09-05 (meta article:published_time=2026-04-23; meta article:modified_time=2026-04-23). updated (none) -> 2026-04-23. Nothing had recorded where the previous value came from.",
-    "source": "ranthebuilder.cloud",
+    "source": "Ran the Builder",
     "official": false,
     "id": "r-7f8fb0cc8e",
     "keywords": [
@@ -32139,7 +32139,7 @@
     "title": "AI: Artificial Intelligence Resources: Claude",
     "url": "https://libguides.und.edu/ai-resources/claude",
     "author": "Chester Fritz Library",
-    "source": "Und",
+    "source": "University of North Dakota",
     "roles": [
       "researcher",
       "student",

@@ -218,7 +218,7 @@ CASES = [
     # notices, and the allowance file is what stops it becoming a nuisance.
     ("the same title on two different hosts",
      lambda i, p: i[1].update({"title": i[0]["title"],
-                               "url": "https://example.org/" + i[1]["id"],
+                               "url": "https://www.udemy.com/" + i[1]["id"],
                                "id": i[1]["id"]}),
      "the same title on 2 hosts"),
 
@@ -237,19 +237,24 @@ CASES = [
     # the real catalogue past it on 2026-08-29 - one had "(Academy)" appended to its
     # title, nothing else different. This is the check that should have caught them.
     ("the same URL ending on two different hosts",
-     lambda i, p: (i[0].update({"url": "https://example.org/a/shared-slug-xyz",
-                                "id": make_id("https://example.org/a/shared-slug-xyz")}),
-                   i[1].update({"url": "https://example.net/b/shared-slug-xyz",
-                                "id": make_id("https://example.net/b/shared-slug-xyz")})),
+     lambda i, p: (i[0].update({"url": "https://www.coursera.org/a/shared-slug-xyz",
+                                "id": make_id("https://www.coursera.org/a/shared-slug-xyz")}),
+                   i[1].update({"url": "https://www.udemy.com/b/shared-slug-xyz",
+                                "id": make_id("https://www.udemy.com/b/shared-slug-xyz")})),
      "URL ending"),
 
     # Same trailing segment, same host: a URL problem the rules above already cover, not
     # this one's business. Must not double-report.
+    #
+    # Real hosts rather than example.org since D15 (2026-09-05), which makes an unmapped
+    # host a catalogue fault: a fixture that trips an unrelated rule reports the wrong
+    # failure. What these two cases measure is same-host versus cross-host, and that is
+    # unchanged - this pair shares one host, the pair above uses two.
     ("the same URL ending twice on one host - not this rule's business",
-     lambda i, p: (i[0].update({"url": "https://example.org/a/shared-slug-xyz",
-                                "id": make_id("https://example.org/a/shared-slug-xyz")}),
-                   i[1].update({"url": "https://example.org/b/shared-slug-xyz",
-                                "id": make_id("https://example.org/b/shared-slug-xyz")})),
+     lambda i, p: (i[0].update({"url": "https://www.coursera.org/a/shared-slug-xyz",
+                                "id": make_id("https://www.coursera.org/a/shared-slug-xyz")}),
+                   i[1].update({"url": "https://www.coursera.org/b/shared-slug-xyz",
+                                "id": make_id("https://www.coursera.org/b/shared-slug-xyz")})),
      None),
 
     # The case the rule exists to get right without also getting this wrong. Every video
@@ -260,8 +265,8 @@ CASES = [
     ("a youtube.com video does not falsely collide with an unrelated /watch page",
      lambda i, p: (i[0].update({"url": "https://www.youtube.com/watch?v=AAAAAAAAAAA",
                                 "id": make_id("https://www.youtube.com/watch?v=AAAAAAAAAAA")}),
-                   i[1].update({"url": "https://example.org/some/path/watch",
-                                "id": make_id("https://example.org/some/path/watch")})),
+                   i[1].update({"url": "https://www.coursera.org/some/path/watch",
+                                "id": make_id("https://www.coursera.org/some/path/watch")})),
      None),
 
     # The consequence of the lstrip bug, at catalogue level, which is the half a unit
