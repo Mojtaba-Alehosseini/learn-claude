@@ -46,8 +46,8 @@
       "level": "basic",
       "picked_by": "ai",
       "picked_on": "2026-09-06",
-      "pool_size": 69,
-      "fingerprint": "sha1:ec1b06326378618e",
+      "pool_size": 67,
+      "fingerprint": "sha1:d5006a7d1bce8b44",
       "picks": [
         {
           "url": "https://claude.com/blog/best-practices-for-prompt-engineering",
@@ -87,8 +87,8 @@
       "level": "builder",
       "picked_by": "ai",
       "picked_on": "2026-09-06",
-      "pool_size": 13,
-      "fingerprint": "sha1:83ad3bfa34a5c7f0",
+      "pool_size": 14,
+      "fingerprint": "sha1:41cd835860a9113c",
       "picks": [
         {
           "url": "https://every.to/guides/ai-product-management-guide",
@@ -207,8 +207,8 @@
       "level": "confident",
       "picked_by": "ai",
       "picked_on": "2026-09-06",
-      "pool_size": 24,
-      "fingerprint": "sha1:68c7d3166f1f5ed1",
+      "pool_size": 22,
+      "fingerprint": "sha1:f00b9b2835d1c11f",
       "picks": [
         {
           "url": "https://www.builder.io/blog/claude-code-for-designers",
@@ -250,8 +250,8 @@
       "level": "never-used",
       "picked_by": "ai",
       "picked_on": "2026-09-06",
-      "pool_size": 61,
-      "fingerprint": "sha1:c06732629623145a",
+      "pool_size": 59,
+      "fingerprint": "sha1:f126ce2b8a93b709",
       "picks": [
         {
           "url": "https://academy.claude.com/use-cases/explore-what-claude-can-do-for-you",
@@ -291,8 +291,8 @@
       "level": "confident",
       "picked_by": "ai",
       "picked_on": "2026-09-06",
-      "pool_size": 18,
-      "fingerprint": "sha1:23abfb06b027c2b5",
+      "pool_size": 17,
+      "fingerprint": "sha1:e1ef0f8c95485c6e",
       "picks": [
         {
           "url": "https://academy.claude.com/tutorials/teach-claude-your-way-of-working-using-skills",
@@ -619,8 +619,8 @@
       "level": "never-used",
       "picked_by": "ai",
       "picked_on": "2026-09-06",
-      "pool_size": 30,
-      "fingerprint": "sha1:8bb5e5743afd8af1",
+      "pool_size": 29,
+      "fingerprint": "sha1:84fca40d4013eaf5",
       "picks": [
         {
           "url": "https://academy.claude.com/courses/ai-fluency-for-k-12-educators",
@@ -978,8 +978,8 @@
       "level": "confident",
       "picked_by": "ai",
       "picked_on": "2026-09-06",
-      "pool_size": 34,
-      "fingerprint": "sha1:0adae33a16b1ed2f",
+      "pool_size": 35,
+      "fingerprint": "sha1:c321db247a6452cf",
       "picks": [
         {
           "url": "https://www.qwe.edu.pl/tutorial/claude-csv-data-analysis/",
@@ -1103,9 +1103,9 @@
       "role": "pm",
       "level": "basic",
       "picked_by": "ai",
-      "picked_on": "2026-09-04",
-      "pool_size": 42,
-      "fingerprint": "sha1:eae9f973e6aa6046",
+      "picked_on": "2026-09-06",
+      "pool_size": 41,
+      "fingerprint": "sha1:44cc5da55bcc5509",
       "picks": [
         {
           "url": "https://www.enterpret.com/guides/claude-for-product-managers-synthesizing-user-research",
@@ -1137,15 +1137,15 @@
           "reason": "Nobody should skip it, says its own card - it is step 4 of the PM path, sequenced where it belongs."
         }
       ],
-      "claims_checked_on": "2026-09-04"
+      "claims_checked_on": "2026-09-06"
     },
     "pm|confident": {
       "role": "pm",
       "level": "confident",
       "picked_by": "ai",
       "picked_on": "2026-09-06",
-      "pool_size": 58,
-      "fingerprint": "sha1:09fd1baef528ec7d",
+      "pool_size": 55,
+      "fingerprint": "sha1:606fce6b26aa1fbd",
       "picks": [
         {
           "url": "https://claude.com/blog/product-management-on-the-ai-exponential",
@@ -1185,8 +1185,8 @@
       "level": "builder",
       "picked_by": "ai",
       "picked_on": "2026-09-06",
-      "pool_size": 7,
-      "fingerprint": "sha1:7c58e769b174e0c3",
+      "pool_size": 5,
+      "fingerprint": "sha1:51873a5bb97abaf2",
       "picks": [
         {
           "url": "https://every.to/guides/ai-product-management-guide",
