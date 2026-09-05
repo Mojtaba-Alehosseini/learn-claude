@@ -99,6 +99,82 @@ def build_keywords(items):
     return idx, phrases
 
 
+# The two families that cannot be applied blindly. Left alone, "-or/-our" turns `for`
+# into `four` and "-re/-er" turns `here` into `heer`.
+OUR_OR = ["color", "behavior", "favor", "flavor", "honor", "humor", "labor",
+          "neighbor", "rumor", "savor", "endeavor", "harbor", "vapor", "armor"]
+RE_ER = ["center", "meter", "theater", "fiber", "liter", "caliber", "somber",
+         "specter", "luster"]
+
+
+def spelling_variants(word):
+    """Every other spelling of this word an English-speaking reader might type."""
+    out = set()
+    if word.endswith("ize"):
+        out.add(word[:-3] + "ise")
+    if word.endswith("ise"):
+        out.add(word[:-3] + "ize")
+    if word.endswith("ization"):
+        out.add(word[:-7] + "isation")
+    if word.endswith("isation"):
+        out.add(word[:-7] + "ization")
+    if word.endswith("yze"):
+        out.add(word[:-3] + "yse")
+    if word.endswith("yse"):
+        out.add(word[:-3] + "yze")
+    if word.endswith("yzing"):
+        out.add(word[:-5] + "ysing")
+    if word.endswith("ysing"):
+        out.add(word[:-5] + "yzing")
+    for stem_ in OUR_OR:
+        if word.startswith(stem_):
+            out.add(word.replace(stem_, stem_[:-2] + "our", 1))
+        if word.startswith(stem_[:-2] + "our"):
+            out.add(word.replace(stem_[:-2] + "our", stem_, 1))
+    for stem_ in RE_ER:
+        if word.startswith(stem_):
+            out.add(word.replace(stem_, stem_[:-2] + "re", 1))
+        if word.startswith(stem_[:-2] + "re"):
+            out.add(word.replace(stem_[:-2] + "re", stem_, 1))
+    # modelling/modeling, travelled/traveled, labelling/labeling. Only the -el- pattern:
+    # a blind single-l rule produced "assemblling" from "assembling" and "bilers" from
+    # "billers" on the first run, which is what the printed list is for.
+    for tail in ("ing", "ed", "er", "ers"):
+        if word.endswith("ell" + tail):
+            out.add(word[:-len(tail) - 3] + "el" + tail)
+        elif word.endswith("el" + tail):
+            out.add(word[:-len(tail) - 2] + "ell" + tail)
+    out.discard(word)
+    return out
+
+
+def build_spelling(idx):
+    """any form a reader might type -> every indexed form that means the same thing.
+
+    Groups, not corrections. `prioritisation` and `prioritization` are both in this
+    catalogue, in two posting lists, so a reader typing one of them sees half the
+    material - which is cause 3 - and a map that skipped pairs already indexed would skip
+    the whole fault.
+    """
+    groups = {}
+    for word in idx:
+        forms = {word} | spelling_variants(word)
+        key = min(forms)
+        groups.setdefault(key, set()).update(forms)
+    # A form is only worth mapping when the group holds something the raw lookup misses:
+    # either another indexed spelling, or the typed form is not indexed at all.
+    out = {}
+    for forms in groups.values():
+        indexed = sorted(f for f in forms if f in idx)
+        if not indexed:
+            continue
+        for f in sorted(forms):
+            if f in indexed and len(indexed) < 2:
+                continue          # only itself: the raw lookup already does this
+            out[f] = indexed
+    return out
+
+
 TIER_RANK = {"reviewed": 0, "ai-reviewed": 1, "previewed": 2, "listed": 3}
 
 
@@ -198,6 +274,7 @@ def main():
     idx, phrases = build_keywords(items)
     stems, groups = build_stems(idx)
     tiebreak = build_tiebreak(items)
+    spelling = build_spelling(idx)
     # Postings are integer positions because that keeps the file small, but a position
     # is only meaningful against the exact list it was built from. Shipping the id list
     # alongside lets the browser check it is reading the index it thinks it is — the
@@ -211,6 +288,7 @@ def main():
         "words": idx,
         "stems": stems,
         "tiebreak": tiebreak,
+        "spelling": spelling,
         "phrases": phrases,
     }, open(KW_OUT, "w", encoding="utf-8"), separators=(",", ":"))
     print(f"keyword index: {len(idx)} words, {len(phrases)} phrases "
@@ -222,6 +300,19 @@ def main():
           f"({sum(len(v) for v in groups.values())} words are in a group)")
     for s, members in big[:6]:
         print("    %-12s %s" % (s, ", ".join(members)))
+
+    # Written out as well as indexed, so a wrong pair is a line in a file somebody can
+    # read rather than a regex somebody has to re-derive.
+    with open("data/spelling-pairs.json", "w", encoding="utf-8") as f:
+        json.dump({"generated": "scripts/build-search-index.py",
+                   "pairs": dict(sorted(spelling.items()))}, f,
+                  ensure_ascii=False, indent=1)
+        f.write("\n")
+    both = sum(1 for v in spelling.values() if len(v) > 1)
+    print(f"  spelling: {len(spelling)} forms mapped, {both} of them to a group this "
+          f"catalogue holds under more than one spelling -> data/spelling-pairs.json")
+    for k in sorted(spelling, key=lambda k: (-len(spelling[k]), k))[:6]:
+        print("    %-18s -> %s" % (k, ", ".join(spelling[k])))
 
     if "--keywords" in args:
         return

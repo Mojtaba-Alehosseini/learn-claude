@@ -1,0 +1,255 @@
+{
+ "generated": "scripts/build-search-index.py",
+ "pairs": {
+  "analyse": [
+   "analyse",
+   "analyze"
+  ],
+  "analysing": [
+   "analyzing"
+  ],
+  "analyze": [
+   "analyse",
+   "analyze"
+  ],
+  "authorisation": [
+   "authorization"
+  ],
+  "behavior": [
+   "behavior",
+   "behaviour"
+  ],
+  "behavioral": [
+   "behavioral",
+   "behavioural"
+  ],
+  "behaviour": [
+   "behavior",
+   "behaviour"
+  ],
+  "behavioural": [
+   "behavioral",
+   "behavioural"
+  ],
+  "behaviours": [
+   "behaviors"
+  ],
+  "categorise": [
+   "categorize"
+  ],
+  "center": [
+   "center",
+   "centre"
+  ],
+  "centerd": [
+   "centred"
+  ],
+  "centre": [
+   "center",
+   "centre"
+  ],
+  "colour": [
+   "color"
+  ],
+  "concize": [
+   "concise"
+  ],
+  "containerisation": [
+   "containerization"
+  ],
+  "containerize": [
+   "containerise"
+  ],
+  "criticise": [
+   "criticize"
+  ],
+  "customisation": [
+   "customization"
+  ],
+  "customise": [
+   "customize"
+  ],
+  "digitise": [
+   "digitize"
+  ],
+  "enterprize": [
+   "enterprise"
+  ],
+  "exercize": [
+   "exercise"
+  ],
+  "feler": [
+   "feller"
+  ],
+  "honour": [
+   "honor"
+  ],
+  "humanise": [
+   "humanize"
+  ],
+  "labeled": [
+   "labelled"
+  ],
+  "labouratories": [
+   "laboratories"
+  ],
+  "labouratory": [
+   "laboratory"
+  ],
+  "levelling": [
+   "leveling"
+  ],
+  "litreacy": [
+   "literacy"
+  ],
+  "litreal": [
+   "literal"
+  ],
+  "litreally": [
+   "literally"
+  ],
+  "litreature": [
+   "literature"
+  ],
+  "localisation": [
+   "localization"
+  ],
+  "metre": [
+   "meter"
+  ],
+  "modeling": [
+   "modeling",
+   "modelling"
+  ],
+  "modelled": [
+   "modeled"
+  ],
+  "modelling": [
+   "modeling",
+   "modelling"
+  ],
+  "neighbours": [
+   "neighbors"
+  ],
+  "noize": [
+   "noise"
+  ],
+  "normalise": [
+   "normalize"
+  ],
+  "optimisation": [
+   "optimization"
+  ],
+  "optimise": [
+   "optimize"
+  ],
+  "organisation": [
+   "organisation",
+   "organization"
+  ],
+  "organise": [
+   "organise",
+   "organize"
+  ],
+  "organization": [
+   "organisation",
+   "organization"
+  ],
+  "organize": [
+   "organise",
+   "organize"
+  ],
+  "otherwize": [
+   "otherwise"
+  ],
+  "parallelisation": [
+   "parallelization"
+  ],
+  "parallelise": [
+   "parallelize"
+  ],
+  "personalisation": [
+   "personalization"
+  ],
+  "precize": [
+   "precise"
+  ],
+  "prioritisation": [
+   "prioritisation",
+   "prioritization"
+  ],
+  "prioritise": [
+   "prioritize"
+  ],
+  "prioritization": [
+   "prioritisation",
+   "prioritization"
+  ],
+  "pseudonymize": [
+   "pseudonymise"
+  ],
+  "raize": [
+   "raise"
+  ],
+  "recognise": [
+   "recognise",
+   "recognize"
+  ],
+  "recognize": [
+   "recognise",
+   "recognize"
+  ],
+  "revize": [
+   "revise"
+  ],
+  "seling": [
+   "selling"
+  ],
+  "sise": [
+   "size"
+  ],
+  "specialisation": [
+   "specialization"
+  ],
+  "speling": [
+   "spelling"
+  ],
+  "standardisation": [
+   "standardization"
+  ],
+  "standardise": [
+   "standardize"
+  ],
+  "summarisation": [
+   "summarization"
+  ],
+  "summarise": [
+   "summarise",
+   "summarize"
+  ],
+  "summarize": [
+   "summarise",
+   "summarize"
+  ],
+  "synthesise": [
+   "synthesise",
+   "synthesize"
+  ],
+  "synthesize": [
+   "synthesise",
+   "synthesize"
+  ],
+  "teling": [
+   "telling"
+  ],
+  "theater": [
+   "theatre"
+  ],
+  "visualisation": [
+   "visualization"
+  ],
+  "visualise": [
+   "visualize"
+  ]
+ }
+}

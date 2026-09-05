@@ -138,18 +138,33 @@
 
     for (var i = 0; i < qw.length; i++) {
       var w = qw[i];
-      var posts = index.words[w];
+      /* Every indexed spelling of the reader's word, scored once as one term. The same
+         word spelled the other way is still the reader's word: full weight, and it admits
+         like any exact match. Only synonyms are halved. */
+      var forms = (index.spelling && index.spelling[w]) || [w];
+      var merged = Object.create(null), mn = 0;
+      for (var f = 0; f < forms.length; f++) {
+        var fp = index.words[forms[f]];
+        if (!fp) continue;
+        for (var g = 0; g < fp.length; g++) {
+          if (!(fp[g][0] in merged)) mn++;
+          if (!(fp[g][0] in merged) || fp[g][1] > merged[fp[g][0]]) {
+            merged[fp[g][0]] = fp[g][1];
+          }
+        }
+      }
+      var posts = mn ? merged : null;
       if (posts) {
         /* Inverse document frequency. On a site where every resource is about Claude,
            the word "claude" appears in nearly all of them and tells us nothing, while
            "citations" appears in a handful and tells us almost everything. Without this
            the common words dominate and a precise question returns most of the
            catalogue. */
-        var idf = Math.log(n / posts.length);
+        var idf = Math.log(n / mn);
         if (idf < 0.05) continue;          // in almost everything: pure noise
-        for (var j = 0; j < posts.length; j++) {
-          scores[posts[j][0]] += posts[j][1] * idf;
-          if (idf > 0.7) exact[posts[j][0]] = 1;   // only a selective word admits
+        for (var pj in posts) {
+          scores[pj] += posts[pj] * idf;
+          if (idf > 0.7) exact[pj] = 1;    // only a selective word admits
         }
       }
       /* Someone types "hallucinations" and the page says "hallucinated". The stem map

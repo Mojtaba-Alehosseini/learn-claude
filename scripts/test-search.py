@@ -310,11 +310,19 @@ def rank(query, kw):
     q = query.lower()
 
     for w in words(query):
-        posts = kw["words"].get(w)
+        # Every indexed spelling of the reader's word, scored once as one term. The same
+        # word spelled the other way is still the reader's word: full weight, and it
+        # admits like any exact match. Only synonyms are halved.
+        forms = kw.get("spelling", {}).get(w) or [w]
+        posts = {}
+        for form in forms:
+            for i, weight in kw["words"].get(form, []):
+                if weight > posts.get(i, 0):
+                    posts[i] = weight
         if posts:
             idf = math.log(n / len(posts))
             if idf >= MIN_IDF_SCORE:
-                for i, weight in posts:
+                for i, weight in posts.items():
                     scores[i] += weight * idf
                     cover[i] += 1
                     if idf > MIN_IDF_ADMIT:
