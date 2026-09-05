@@ -71,7 +71,22 @@
     heading3: "Start with these three",
     heading2: "Start with these two",
     by: "picked by AI",
-    rest: "Everything else for you"
+    rest: "Everything else for you",
+
+    /* D7. A thin cell used to swap the numeral in the heading and say nothing, or drop
+       the block entirely and say nothing at all - which reads as a gap rather than a
+       decision. Keyed on the cause already recorded in picks.json, so the sentence
+       cannot drift from the reason the validator enforces. */
+    why: {
+      "publisher-thin":
+        "Only two here \u2014 everything else at this level comes from the same publisher.",
+      "rule-carried-third-refused":
+        "Only two here \u2014 no third candidate got through the rules without repeating " +
+        "a publisher or a format."
+    },
+    /* Three or fewer to choose from is not a shortlist, and calling it one would be the
+       page flattering itself. */
+    tooFew: "Too few to pick from \u2014 these are all of them."
   };
 
   /* Order is fixed and meaningful: most thoroughly checked first. */

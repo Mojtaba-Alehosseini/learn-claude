@@ -255,12 +255,16 @@
      one role and exactly one level, nothing else narrowing the list. Any further
      filter or a search could exclude a pick, and a block recommending something the
      reader just filtered out would be the page contradicting itself. */
+  function atCell() {
+    if (q.trim()) return false;
+    if (sel.roles.length !== 1 || sel.levels.length !== 1) return false;
+    return !(sel.times.length || sel.topics.length || sel.formats.length ||
+             sel.costs.length || sel.officials.length);
+  }
+
   function picksCell() {
     if (!window.LC_PICKS || !window.LC_PICKS.cells) return null;
-    if (q.trim()) return null;
-    if (sel.roles.length !== 1 || sel.levels.length !== 1) return null;
-    if (sel.times.length || sel.topics.length || sel.formats.length ||
-        sel.costs.length || sel.officials.length) return null;
+    if (!atCell()) return null;
     return window.LC_PICKS.cells[sel.roles[0] + "|" + sel.levels[0]] || null;
   }
 
@@ -269,7 +273,15 @@
      stays, the total on the count line is unchanged. */
   function renderPicks(out) {
     var cell = picksCell();
-    if (!cell) { el.picks.innerHTML = ""; return {}; }
+    if (!cell) {
+      /* D7. Three cells have no picks because there was nothing to pick from. Saying
+         nothing made the block look broken; the 0-result state already speaks, so this
+         only has to cover the 1-to-3 case above it. */
+      el.picks.innerHTML = (atCell() && out.length > 0 && out.length <= 3)
+        ? '<p class="picks-why picks-why-alone">' + LC.esc(LC.PICKS_UI.tooFew) + '</p>'
+        : "";
+      return {};
+    }
 
     var byUrl = {};
     out.forEach(function (it) { byUrl[it.url] = it; });
@@ -279,6 +291,9 @@
     if (shown.length < 2) { el.picks.innerHTML = ""; return {}; }
 
     var heading = shown.length === 2 ? LC.PICKS_UI.heading2 : LC.PICKS_UI.heading3;
+    /* Only when the shortfall is the picker's, not this reader's filtering. */
+    var why = (shown.length === 2 && shown.length === cell.picks.length)
+      ? LC.PICKS_UI.why[cell.two_pick_cause] : "";
     var picked = {};
     var cards = shown.map(function (p) {
       var it = byUrl[p.url];
@@ -305,6 +320,7 @@
           '<span class="picks-meta">' + LC.esc(LC.PICKS_UI.by) + ' · ' +
             LC.esc(LC.fmtDate(cell.picked_on)) + '</span>' +
         '</div>' +
+        (why ? '<p class="picks-why">' + LC.esc(why) + '</p>' : '') +
         '<div class="card-list">' + cards + '</div>' +
       '</section>' +
       '<h2 class="h2 picks-rest">' + LC.esc(LC.PICKS_UI.rest) + ' (' +

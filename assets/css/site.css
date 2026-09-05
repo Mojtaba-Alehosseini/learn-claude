@@ -411,6 +411,19 @@ button, .btn, .nav-link, .filter-option { min-height: var(--tap-min); }
 
 a.card-path:hover { text-decoration: underline; }
 
+/* D7. The line a thin picks cell uses to say why it is thin. Same quiet type as
+   the "picked by AI" label beside the heading, because it belongs to the same
+   conversation: here is what we chose, and here is what stopped us choosing more. */
+.picks-why {
+  margin-top: var(--space-8);
+  font: var(--weight-regular) var(--text-caption)/var(--leading-caption) var(--font-sans);
+  letter-spacing: var(--tracking-caption);
+  color: var(--text-secondary);
+}
+
+/* With no block above it, it needs the space the heading would have taken. */
+.picks-why-alone { margin-top: var(--space-16); }
+
 /* -------------------------------------------------------------- browse ---- */
 
 .browse-grid {

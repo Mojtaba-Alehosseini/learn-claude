@@ -66,9 +66,14 @@ def main():
             # data/picks.json in the repository. The browser gets only what the picks
             # block renders. Same reasoning as STRIP_FROM_MIRROR above: shipping our
             # workings to every reader is publishing them.
+            # two_pick_cause crosses because D7 makes the block SAY why it is thin,
+            # and the sentence is keyed on the cause the validator already enforces.
+            # A cause invented in the browser could drift from the one in the file; a
+            # cause carried across cannot.
             data = {"cells": {
                 key: {"picked_by": c.get("picked_by"),
                       "picked_on": c.get("picked_on"),
+                      "two_pick_cause": c.get("two_pick_cause"),
                       "picks": [{"url": q["url"], "reason": q["reason"]}
                                 for q in c.get("picks", [])]}
                 for key, c in (data.get("cells") or {}).items()}}

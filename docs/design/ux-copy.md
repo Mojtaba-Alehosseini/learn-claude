@@ -196,10 +196,26 @@ list — the landing state of the home page's two questions. Any further filter 
 search hides the block: it must never recommend something the reader just excluded.
 
 **Heading:** `Start with these three` — or `Start with these two` when the cell holds
-two picks. One cell does (non-technical + built things with it): its candidate pool has
-a single publisher, and the publisher cap holds that cell at two rather than let three
-same-source picks masquerade as a choice. The heading must always agree with the count;
-a "three" heading over two cards is the page miscounting in its own voice.
+two picks. Three cells do. The heading must always agree with the count; a "three"
+heading over two cards is the page miscounting in its own voice.
+
+**Why it is thin** *(D7, 2026-09-05)* — a heading that swaps its numeral and says nothing
+reads as a gap in a spreadsheet rather than a decision; four Attack 2 agents said so. So a
+thin cell says why, in one line under the heading, keyed on the `two_pick_cause` the
+validator already enforces so the sentence cannot drift from the reason:
+
+> `publisher-thin` → Only two here — everything else at this level comes from the same
+> publisher.
+>
+> `rule-carried-third-refused` → Only two here — no third candidate got through the rules
+> without repeating a publisher or a format.
+
+And where there was never a shortlist at all — a pool of three or fewer, so no picks block
+exists — the line stands on its own above the results:
+
+> Too few to pick from — these are all of them.
+
+The 0-result state already speaks for itself and is left alone.
 
 **Label:** `picked by AI · 31 Aug 2026` — the honesty label, same ladder as the tier
 badges. Nothing may imply a person chose these. The date is `picked_on` from
