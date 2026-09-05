@@ -1,0 +1,56 @@
+{
+ "version": 1,
+ "note": "Query-time expansion only. Never written into the index, so a row deleted here takes effect on the next page load rather than the next build. Every row carries the reason it exists, and scripts/validate-synonyms.py refuses one that does not. Single words only: the expansion is matched against one query word at a time, so a multi-word term could never fire.",
+ "entries": [
+  {
+   "terms": ["grading", "grade", "marking", "mark", "assessment", "assessing"],
+   "why": "Attack 2's teacher typed 'marking essays' and got two results, both written for students, while 'grading' returned three, top of them 'Demystifying evals for AI agents'. The catalogue writes American; British and Irish teachers mark. Same act, two words, and the reader has no way to know which one we chose.",
+   "added": "2026-09-06"
+  },
+  {
+   "terms": ["essay", "essays", "paper", "papers", "assignment", "assignments"],
+   "why": "A student writes an essay, a lecturer sets an assignment, and an academic publishes a paper. All three appear in this catalogue's cards for the same object - a piece of written work being marked or checked - and the suite has queries in all three voices.",
+   "added": "2026-09-06"
+  },
+  {
+   "terms": ["citation", "citations", "reference", "references", "bibliography", "sources"],
+   "why": "Cause 1's half. 'hallucinated references' and 'does claude make up citations' are the same question asked twice, and the pages answering it use whichever word their author preferred. Zotero's card says reference library; Anthropic's says citations.",
+   "added": "2026-09-06"
+  },
+  {
+   "terms": ["spreadsheet", "spreadsheets", "excel", "xlsx", "csv"],
+   "why": "The data-analyst role scored 0 of 5 in the suite, and two of those five are this: 'claude excel formulas' and 'can claude read my csv'. Our cards say spreadsheet where the reader says Excel, and Claude for Excel is a product name that only appears in some of them.",
+   "added": "2026-09-06"
+  },
+  {
+   "terms": ["cheating", "cheat", "plagiarism", "plagiarising", "plagiarizing", "misconduct"],
+   "why": "'is it cheating to use claude for my essay' and 'can students cheat with claude' are asked by a student and a teacher about the same rule. The pages that answer it are written in institutional language - academic misconduct, plagiarism - which is precisely the language a worried student does not have.",
+   "added": "2026-09-06"
+  },
+  {
+   "terms": ["roadmap", "prioritisation", "prioritization", "prioritise", "prioritize", "backlog"],
+   "why": "The PM role's three failing queries are all this word in different clothes. A roadmap is the artefact, prioritisation is the act, the backlog is what is being prioritised, and no card uses all three.",
+   "added": "2026-09-06"
+  },
+  {
+   "terms": ["bookkeeping", "accounting", "invoicing", "invoice", "invoices", "ledger", "reconciliation"],
+   "why": "'claude for bookkeeping' and 'claude for invoices' come from the same reader on the same afternoon. The finance cards say reconciliation and ledger because that is what the recipes do; the person running the business says bookkeeping.",
+   "added": "2026-09-06"
+  },
+  {
+   "terms": ["hallucination", "hallucinations", "hallucinate", "fabrication", "confabulation", "made-up", "invented"],
+   "why": "The stemmer joins the hallucination family to itself but cannot reach the words people use instead. 'stop claude making things up' and 'stop claude making up numbers' are two of the suite's failures, and the page that answers them is titled Reduce hallucinations.",
+   "added": "2026-09-06"
+  },
+  {
+   "terms": ["lesson", "lessons", "curriculum", "syllabus", "coursework"],
+   "why": "'make a lesson plan' returned a product page. A teacher plans lessons, writes a syllabus and delivers a curriculum, and the cards use whichever word the publisher used.",
+   "added": "2026-09-06"
+  },
+  {
+   "terms": ["disclosure", "disclose", "acknowledgement", "acknowledgment", "declaring", "declaration", "attribution"],
+   "why": "The writer-marketer scored 1 of 4, and two of the failures ask when you have to say you used AI. The pages call it acknowledgement or declaration because that is what journals and universities call it. Nobody types that.",
+   "added": "2026-09-06"
+  }
+ ]
+}

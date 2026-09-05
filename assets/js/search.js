@@ -86,6 +86,7 @@
   /* An expansion scores below the word the person typed. Same factor, same sentence, as
      the spec and as scripts/test-search.py. */
   var STEM_WEIGHT = 0.5;
+  var SYNONYM_WEIGHT = 0.5;
 
   function words(s) {
     var out = [], m = String(s).toLowerCase().match(/[a-z0-9]+/g) || [];
@@ -134,6 +135,10 @@
     var n = index.ids.length;
     var scores = new Float64Array(n);
     var exact = new Uint8Array(n);   // did this resource match a whole query word?
+    /* How many fields the query's words appeared in, added up. It never touches the
+       score: it breaks ties, where "figma in six fields" beats "figma in three" and the
+       max weight the index stores cannot tell them apart. */
+    var depth = new Int32Array(n);
     var qw = words(q);
 
     for (var i = 0; i < qw.length; i++) {
@@ -142,15 +147,15 @@
          word spelled the other way is still the reader's word: full weight, and it admits
          like any exact match. Only synonyms are halved. */
       var forms = (index.spelling && index.spelling[w]) || [w];
-      var merged = Object.create(null), mn = 0;
+      var merged = Object.create(null), deep = Object.create(null), mn = 0;
       for (var f = 0; f < forms.length; f++) {
         var fp = index.words[forms[f]];
         if (!fp) continue;
         for (var g = 0; g < fp.length; g++) {
-          if (!(fp[g][0] in merged)) mn++;
-          if (!(fp[g][0] in merged) || fp[g][1] > merged[fp[g][0]]) {
-            merged[fp[g][0]] = fp[g][1];
-          }
+          var gi = fp[g][0], gd = fp[g].length > 2 ? fp[g][2] : 1;
+          if (!(gi in merged)) mn++;
+          if (!(gi in merged) || fp[g][1] > merged[gi]) merged[gi] = fp[g][1];
+          if (!(gi in deep) || gd > deep[gi]) deep[gi] = gd;
         }
       }
       var posts = mn ? merged : null;
@@ -164,6 +169,7 @@
         if (idf < 0.05) continue;          // in almost everything: pure noise
         for (var pj in posts) {
           scores[pj] += posts[pj] * idf;
+          depth[pj] += deep[pj] || 1;
           if (idf > 0.7) exact[pj] = 1;    // only a selective word admits
         }
       }
@@ -172,6 +178,29 @@
          admitting: a morphological cousin may lift a resource the reader's own word
          already found, and may never put one in front of them on its own. This replaces
          a 5-char prefix bonus whose own comment called it a stand-in for stemming. */
+      /* A synonym is somebody else's word for the same thing, so it ranks at half and
+         never admits: it can lift a page the reader's own words already found, and can
+         never put one in front of them on its own. The table is data/synonyms.json, one
+         written reason per row. */
+      var syns = (index.synonyms && index.synonyms[w]) || [];
+      var sacc = Object.create(null), sn = 0;
+      for (var s1 = 0; s1 < syns.length; s1++) {
+        var sp = index.words[syns[s1]];
+        if (!sp) continue;
+        for (var s2 = 0; s2 < sp.length; s2++) {
+          if (!(sp[s2][0] in sacc)) sn++;
+          if (!(sp[s2][0] in sacc) || sp[s2][1] > sacc[sp[s2][0]]) {
+            sacc[sp[s2][0]] = sp[s2][1];
+          }
+        }
+      }
+      if (sn) {
+        var sidf = Math.log(n / sn);
+        if (sidf >= 0.05) {
+          for (var sk in sacc) scores[sk] += sacc[sk] * sidf * SYNONYM_WEIGHT;
+        }
+      }
+
       /* One union across the whole stem group, scored once. Per-cousin IDF would pay a
          rare inflection far more than the family is worth. */
       var cousins = (index.stems && index.stems[stem(w)]) || [];
@@ -226,6 +255,7 @@
     keep.sort(function (x, y) {
       var bx = Math.round(scores[x] / TIE), by = Math.round(scores[y] / TIE);
       if (bx !== by) return by - bx;
+      if (depth[x] !== depth[y]) return depth[y] - depth[x];
       return tb ? tb[x] - tb[y] : x - y;
     });
 

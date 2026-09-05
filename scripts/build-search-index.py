@@ -81,12 +81,17 @@ def build_keywords(items):
     phrases = {}
     for i, x in enumerate(items):
         seen = {}
+        depth = {}
         for field, w in WEIGHTS.items():
             val = x.get(field, "")
             texts = val if isinstance(val, list) else [val]
+            hit = set()
             for t in texts:
                 for word in words(str(t)):
                     seen[word] = max(seen.get(word, 0), w)
+                    hit.add(word)
+            for word in hit:
+                depth[word] = depth.get(word, 0) + 1
             # keep multi-word keywords whole as well — "claude code" should beat
             # "claude" plus "code" appearing separately
             if field in ("keywords", "questions"):
@@ -95,7 +100,12 @@ def build_keywords(items):
                     if " " in t and len(t) < 40:
                         phrases.setdefault(t, []).append(i)
         for word, w in seen.items():
-            idx.setdefault(word, []).append([i, w])
+            # A third element only where it says something: the number of fields this
+            # word appeared in. It never touches the score - it breaks ties, where
+            # "figma in six fields" beats "figma in three" and max weight cannot tell
+            # them apart.
+            f = depth.get(word, 1)
+            idx.setdefault(word, []).append([i, w] if f < 2 else [i, w, f])
     return idx, phrases
 
 
@@ -172,6 +182,30 @@ def build_spelling(idx):
             if f in indexed and len(indexed) < 2:
                 continue          # only itself: the raw lookup already does this
             out[f] = indexed
+    return out
+
+
+SYN_FILE = "data/synonyms.json"
+
+
+def load_synonyms(idx):
+    """word -> the other words in its group, for words this catalogue actually holds.
+
+    The table is written and justified by hand in data/synonyms.json and checked by
+    scripts/validate-synonyms.py. Here it is only flattened: a term the index has never
+    seen is dropped, because expanding to a word with no postings is work that produces
+    nothing.
+    """
+    if not os.path.exists(SYN_FILE):
+        return {}
+    doc = json.load(open(SYN_FILE, encoding="utf-8"))
+    out = {}
+    for entry in doc.get("entries") or []:
+        terms = [t for t in entry.get("terms") or [] if t in idx]
+        if len(terms) < 2:
+            continue
+        for t in terms:
+            out[t] = [o for o in terms if o != t]
     return out
 
 
@@ -275,6 +309,7 @@ def main():
     stems, groups = build_stems(idx)
     tiebreak = build_tiebreak(items)
     spelling = build_spelling(idx)
+    synonyms = load_synonyms(idx)
     # Postings are integer positions because that keeps the file small, but a position
     # is only meaningful against the exact list it was built from. Shipping the id list
     # alongside lets the browser check it is reading the index it thinks it is — the
@@ -289,6 +324,7 @@ def main():
         "stems": stems,
         "tiebreak": tiebreak,
         "spelling": spelling,
+        "synonyms": synonyms,
         "phrases": phrases,
     }, open(KW_OUT, "w", encoding="utf-8"), separators=(",", ":"))
     print(f"keyword index: {len(idx)} words, {len(phrases)} phrases "
@@ -313,6 +349,8 @@ def main():
           f"catalogue holds under more than one spelling -> data/spelling-pairs.json")
     for k in sorted(spelling, key=lambda k: (-len(spelling[k]), k))[:6]:
         print("    %-18s -> %s" % (k, ", ".join(spelling[k])))
+    print(f"  synonyms: {len(synonyms)} words expand at query time "
+          f"(data/synonyms.json, every row with its reason)")
 
     if "--keywords" in args:
         return

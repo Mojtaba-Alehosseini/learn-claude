@@ -62,6 +62,7 @@ FLOOR_FRACTION = 0.30
 FLOOR_ABSOLUTE = 2.0
 PREFIX_WEIGHT = 0.3    # retired with the prefix bonus; kept so the constant list reads
 STEM_WEIGHT = 0.5      # an expansion scores below the word the person typed
+SYNONYM_WEIGHT = 0.5   # an expansion scores below the word the person typed
 TIE = 0.001            # scores within this of each other are a tie, not an order
 
 
@@ -307,6 +308,7 @@ def rank(query, kw):
     scores = [0.0] * n
     exact = [False] * n
     cover = [0] * n          # how many distinct query words this item matched outright
+    depth = [0] * n          # in how many fields, added up over the query's words
     q = query.lower()
 
     for w in words(query):
@@ -315,30 +317,48 @@ def rank(query, kw):
         # admits like any exact match. Only synonyms are halved.
         forms = kw.get("spelling", {}).get(w) or [w]
         posts = {}
+        deep = {}
         for form in forms:
-            for i, weight in kw["words"].get(form, []):
+            for p in kw["words"].get(form, []):
+                i, weight = p[0], p[1]
                 if weight > posts.get(i, 0):
                     posts[i] = weight
+                deep[i] = max(deep.get(i, 0), p[2] if len(p) > 2 else 1)
         if posts:
             idf = math.log(n / len(posts))
             if idf >= MIN_IDF_SCORE:
                 for i, weight in posts.items():
                     scores[i] += weight * idf
                     cover[i] += 1
+                    depth[i] += deep.get(i, 1)
                     if idf > MIN_IDF_ADMIT:
                         exact[i] = True
         # The stem expansion, replacing the 5-char prefix bonus whose own comment called
         # it a stand-in. Ranks, never admits: a morphological cousin may lift a resource
         # the reader's own word already found, and may not put one in front of them on
         # its own.
+        # A synonym is somebody else's word for the same thing, so it ranks at half and
+        # never admits: it can lift a page the reader's own words already found, and can
+        # never put one in front of them on its own.
+        syn = {}
+        for other in kw.get("synonyms", {}).get(w, []):
+            for p in kw["words"].get(other, []):
+                if p[1] > syn.get(p[0], 0):
+                    syn[p[0]] = p[1]
+        if syn:
+            sidf = math.log(n / len(syn))
+            if sidf >= MIN_IDF_SCORE:
+                for i, weight in syn.items():
+                    scores[i] += weight * sidf * SYNONYM_WEIGHT
+
         # One union across the whole stem group, scored once. Per-cousin IDF would pay a
         # rare inflection ("hallucinated", in two items) far more than the family is
         # worth, and the group is what the reader actually meant.
         union = {}
         for cousin in kw.get("stems", {}).get(stem(w), []):
-            for i, weight in kw["words"].get(cousin, []):
-                if weight > union.get(i, 0):
-                    union[i] = weight
+            for p in kw["words"].get(cousin, []):
+                if p[1] > union.get(p[0], 0):
+                    union[p[0]] = p[1]
         if union:
             idf2 = math.log(n / len(union))
             if idf2 >= MIN_IDF_SCORE:
@@ -360,7 +380,7 @@ def rank(query, kw):
     # than bit-identical. Everything inside TIE of each other is ordered by the
     # precomputed tie-break: tier, then how recently checked, then title.
     tb = kw.get("tiebreak") or list(range(n))
-    keep.sort(key=lambda i: (-round(scores[i] / TIE), -cover[i], tb[i]))
+    keep.sort(key=lambda i: (-round(scores[i] / TIE), -depth[i], -cover[i], tb[i]))
     return [(kw["ids"][i], scores[i]) for i in keep]
 
 
