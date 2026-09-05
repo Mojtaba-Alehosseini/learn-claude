@@ -608,6 +608,36 @@ def check_who_for_roster(items, warn):
             warn(item, named, who)
 
 
+PRICE_FIELDS = ("price_amount", "price_currency", "price_checked")
+
+
+def check_prices(items, bad):
+    """D9. A price a reader can act on, or no price at all.
+
+    The date is not optional. A price is the fastest-rotting fact on a card, and the whole
+    reason this is a field rather than a sentence in the summary is that a sentence cannot
+    carry the day it was true.
+    """
+    for n, item in enumerate(items):
+        has = [f for f in PRICE_FIELDS if item.get(f) not in (None, "")]
+        if not has:
+            continue
+        if item.get("cost") in ("free", "free-account"):
+            bad(n, item, "carries a price but its cost is %r. A free resource with a "
+                         "price is one of the two wrong." % item.get("cost"))
+        if "price_amount" in has and not isinstance(item.get("price_amount"), (int, float)):
+            bad(n, item, "price_amount = %r is not a number" % item.get("price_amount"))
+        if "price_amount" in has and "price_checked" not in has:
+            bad(n, item, "has a price and no price_checked. A price without the day it "
+                         "was read is a number that was true once and is printed for ever.")
+        cur = item.get("price_currency")
+        if "price_amount" in has and not (isinstance(cur, str) and len(cur) == 3
+                                          and cur.isupper()):
+            bad(n, item, "price_currency = %r is not a three-letter code" % cur)
+        if "price_checked" in has and not DATE.match(str(item.get("price_checked"))):
+            bad(n, item, "price_checked = %r is not YYYY-MM-DD" % item.get("price_checked"))
+
+
 def check_notes_against_tier(items, bad, warn):
     """The field that recorded the truth gets to enforce it.
 
@@ -692,6 +722,7 @@ def main(argv=None):
         errors.append("  row %-4d %-46s %s" % (row, title, msg))
 
     check_publishers(items, bad)
+    check_prices(items, bad)
 
     note_warnings = []
     check_notes_against_tier(items, bad,

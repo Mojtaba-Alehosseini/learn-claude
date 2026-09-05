@@ -438,10 +438,27 @@
     return " · " + LC.esc(a);
   };
 
+  /* D9. Beside the cost chip, never instead of it: "subscription" and "from $2,999" are
+     different facts and a reader needs both. "From", because a page that prints one number
+     often has tiers behind it and the printed one is the smallest, and a reader who sees an
+     exact figure and meets a different one at the checkout stops believing the rest of the
+     card. Only four rows have it: a price is recorded only where the page prints the same
+     number for every reader, which rules out every marketplace that prices by country and
+     by sale. */
+  LC.price = function (item) {
+    if (!item.price_amount || !item.price_currency) return "";
+    var sym = { USD: "$", EUR: "€", GBP: "£", DKK: "kr " }[item.price_currency];
+    var n = String(item.price_amount).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return "from " + (sym ? sym + n : n + " " + item.price_currency);
+  };
+
   LC.chips = function (item) {
-    return [LC.FORMAT[item.format] || item.format,
-            LC.TIME[item.time] || item.time,
-            LC.COST[item.cost] || item.cost]
+    var out = [LC.FORMAT[item.format] || item.format,
+               LC.TIME[item.time] || item.time,
+               LC.COST[item.cost] || item.cost];
+    var p = LC.price(item);
+    if (p) out.push(p);
+    return out
       .map(function (c) { return '<span class="chip">' + LC.esc(c) + '</span>'; })
       .join("");
   };
