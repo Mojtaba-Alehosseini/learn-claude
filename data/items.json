@@ -24873,96 +24873,6 @@
     "id": "r-e1fdecd477"
   },
   {
-    "title": "Account research",
-    "url": "https://academy.claude.com/use-cases/account-research-brief",
-    "author": "Anthropic",
-    "source": "Anthropic Academy",
-    "official": true,
-    "roles": [
-      "business-founder",
-      "pm"
-    ],
-    "level": "confident",
-    "topics": [
-      "cowork"
-    ],
-    "format": "docs",
-    "time": "under-15min",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "status": "live",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-29",
-    "summary": "Cowork pulls Salesforce history, recent news, a 10-K, exec LinkedIn posts and last call notes into a one-page account brief with three call openers.",
-    "who_for": "Sales reps prepping for a call who want CRM history and public signals in one place instead of five tabs.",
-    "skip_if": "Needs Cowork with the Sales plugin and Salesforce/Google Drive connected - the brief writes back into the account's own folder rather than returning it in chat, so there's nowhere to see the output without that folder set up.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Uses a fictional account (Northwind) as its worked example.",
-    "prerequisites": [
-      "Claude Cowork",
-      "Salesforce connector",
-      "Sales plugin (optional)"
-    ],
-    "teaches": [
-      "build a one-page account brief from CRM history, public signals and call notes"
-    ],
-    "keywords": [
-      "cowork account research",
-      "sales account brief",
-      "claude account research"
-    ],
-    "questions": [
-      "can cowork build me an account brief before a sales call",
-      "how do i pull crm and news into one summary"
-    ],
-    "id": "r-f27b435b17"
-  },
-  {
-    "title": "Account tracking",
-    "url": "https://academy.claude.com/use-cases/account-tracking",
-    "author": "Anthropic",
-    "source": "Anthropic Academy",
-    "official": true,
-    "roles": [
-      "business-founder",
-      "pm"
-    ],
-    "level": "confident",
-    "topics": [
-      "cowork"
-    ],
-    "format": "docs",
-    "time": "under-15min",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "status": "live",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-29",
-    "summary": "Cowork scores account health as red/yellow/green from usage data, open support tickets, NPS and the success plan, with this week's two actions.",
-    "who_for": "Account managers who want a weekly health check instead of a gut-feel read on each account.",
-    "skip_if": "Needs Cowork with Salesforce, Intercom and Google Drive connected, plus usage exports and a success plan already on file - the health score is only as good as those three inputs.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Scheduled version runs every Monday at 7am per account.",
-    "prerequisites": [
-      "Claude Cowork",
-      "Salesforce and Intercom connectors",
-      "Sales plugin (optional)"
-    ],
-    "teaches": [
-      "score account health as red/yellow/green from usage, tickets, NPS and the success plan"
-    ],
-    "keywords": [
-      "cowork account health score",
-      "account tracking claude",
-      "red yellow green account health"
-    ],
-    "questions": [
-      "can cowork track account health automatically",
-      "how do i score account risk with claude"
-    ],
-    "id": "r-5545ec31d8"
-  },
-  {
     "title": "Recap your ad performance",
     "url": "https://academy.claude.com/use-cases/ad-performance-recap",
     "author": "Anthropic",
@@ -25448,50 +25358,6 @@
     "id": "r-95967eff05"
   },
   {
-    "title": "Build a battle card library",
-    "url": "https://academy.claude.com/use-cases/build-a-battle-card-library",
-    "author": "Anthropic",
-    "source": "Anthropic Academy",
-    "official": true,
-    "roles": [
-      "business-founder",
-      "pm"
-    ],
-    "level": "confident",
-    "topics": [
-      "chat-prompting"
-    ],
-    "format": "docs",
-    "time": "under-15min",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "status": "live",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-29",
-    "summary": "Pulls closed-lost deals mentioning named competitors from HubSpot, researches those competitors on the web, and builds a dashboard of talk tracks, objection handlers and positioning.",
-    "who_for": "Sales teams building competitive battlecards from real loss data instead of guesswork.",
-    "skip_if": "Needs the HubSpot connector and Web Search both turned on, and the page itself warns to verify the specific competitor numbers before sharing - the sample win-rate and deal-value figures are illustrative, not guaranteed accurate.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. A screenshot of your own site is used purely to match the artifact's colors and fonts to your brand.",
-    "prerequisites": [
-      "HubSpot connector",
-      "Web Search enabled"
-    ],
-    "teaches": [
-      "build a competitive battlecard dashboard from closed-lost deal data and web research"
-    ],
-    "keywords": [
-      "build battle cards claude",
-      "competitive battlecard dashboard",
-      "sales competitor research claude"
-    ],
-    "questions": [
-      "can claude build competitive battle cards from our crm data",
-      "how do i research competitors for sales enablement"
-    ],
-    "id": "r-d4d3fca2b6"
-  },
-  {
     "title": "Build a custom bucket list",
     "url": "https://academy.claude.com/use-cases/build-a-custom-bucket-list-app",
     "author": "Anthropic",
@@ -25751,52 +25617,6 @@
       "how accurate is a claude-built anatomy reference app"
     ],
     "id": "r-4469069e4b"
-  },
-  {
-    "title": "Call prep",
-    "url": "https://academy.claude.com/use-cases/call-prep-sheet",
-    "author": "Anthropic",
-    "source": "Anthropic Academy",
-    "official": true,
-    "roles": [
-      "business-founder",
-      "pm"
-    ],
-    "level": "confident",
-    "topics": [
-      "cowork"
-    ],
-    "format": "docs",
-    "time": "under-15min",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "status": "live",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-29",
-    "summary": "Writes a one-page sales call prep sheet from the CRM record, call transcripts and the mutual action plan, with two or three specific asks to make on the call.",
-    "who_for": "Sales reps who want a plan for the call, not just a recap of where the deal stands.",
-    "skip_if": "Needs a working folder with the actual mutual action plan, call notes and proposal for this specific account - a generic prep sheet with no account files behind it has nothing real to summarize.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Scheduled version runs every weekday at 7:30am for each external meeting on the calendar.",
-    "prerequisites": [
-      "Claude Cowork",
-      "Salesforce connector",
-      "Sales plugin (optional)",
-      "a working folder with the account's files"
-    ],
-    "teaches": [
-      "build a call prep sheet that includes specific asks, not just a status recap"
-    ],
-    "keywords": [
-      "sales call prep sheet claude",
-      "cowork call prep",
-      "claude call prep automation"
-    ],
-    "questions": [
-      "can cowork prep me for a sales call automatically",
-      "how do i get claude to suggest what to ask on a call"
-    ],
-    "id": "r-3962e03165"
   },
   {
     "title": "Build a campaign brief",
@@ -26507,51 +26327,6 @@
     "id": "r-7a7389177b"
   },
   {
-    "title": "Create a sales proposal presentation",
-    "url": "https://academy.claude.com/use-cases/create-a-sales-proposal-presentation",
-    "author": "Anthropic",
-    "source": "Anthropic Academy",
-    "official": true,
-    "roles": [
-      "business-founder",
-      "pm"
-    ],
-    "level": "confident",
-    "topics": [
-      "chat-prompting"
-    ],
-    "format": "docs",
-    "time": "under-15min",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "status": "live",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-29",
-    "summary": "Turns discovery notes, RFPs, competitive analysis and past proposals into a client proposal deck, refined over rounds of feedback while keeping earlier decisions in context.",
-    "who_for": "Account executives or business development staff building a client-facing proposal deck.",
-    "skip_if": "Needs Google Drive connected plus Extended Thinking turned on, and your company logo uploaded for color extraction - without those the deck won't match your existing proposals or brand.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Worked example is a 7-slide healthcare-prospect deck.",
-    "prerequisites": [
-      "Google Drive integration",
-      "Extended Thinking enabled",
-      "your company logo"
-    ],
-    "teaches": [
-      "synthesize scattered documents into a branded, iteratively-refined proposal deck"
-    ],
-    "keywords": [
-      "sales proposal deck claude",
-      "client proposal presentation ai",
-      "claude sales deck from rfp"
-    ],
-    "questions": [
-      "can claude build a sales proposal deck for me",
-      "how do i get claude to match my company's branding"
-    ],
-    "id": "r-c338e819ef"
-  },
-  {
     "title": "Create a volunteer management system",
     "url": "https://academy.claude.com/use-cases/create-a-volunteer-management-system",
     "author": "Anthropic",
@@ -26852,50 +26627,6 @@
       "how do i automate new hire welcome documents"
     ],
     "id": "r-b6d113b051"
-  },
-  {
-    "title": "Create sales reports",
-    "url": "https://academy.claude.com/use-cases/create-sales-reports",
-    "author": "Anthropic",
-    "source": "Anthropic Academy",
-    "official": true,
-    "roles": [
-      "business-founder",
-      "pm"
-    ],
-    "level": "confident",
-    "topics": [
-      "chat-prompting"
-    ],
-    "format": "docs",
-    "time": "under-15min",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "status": "live",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-29",
-    "summary": "Pulls Q4 CRM metrics, analyzes segment breakdown/win rates/sales cycle trends, and produces an executive-ready report with embedded chart images.",
-    "who_for": "Sales leadership or revenue operations producing an executive-facing performance report.",
-    "skip_if": "Needs the HubSpot connector enabled plus a sales goals document as reference context - without the goals doc, the report has no target to measure performance against.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Charts render as embedded PNGs built into the layout rather than looking pasted in.",
-    "prerequisites": [
-      "HubSpot connector",
-      "a sales goals document"
-    ],
-    "teaches": [
-      "build an executive-ready sales report with trend analysis and embedded charts"
-    ],
-    "keywords": [
-      "sales report claude",
-      "executive sales report ai",
-      "claude hubspot sales analysis"
-    ],
-    "questions": [
-      "can claude build a sales performance report from hubspot",
-      "how do i analyze crm trends with claude"
-    ],
-    "id": "r-0c1d71e757"
   },
   {
     "title": "M&A diligence",
@@ -28134,50 +27865,6 @@
     "id": "r-58b57b367e"
   },
   {
-    "title": "Log sales calls to your CRM",
-    "url": "https://academy.claude.com/use-cases/log-sales-calls-to-your-crm",
-    "author": "Anthropic",
-    "source": "Anthropic Academy",
-    "official": true,
-    "roles": [
-      "business-founder",
-      "pm"
-    ],
-    "level": "confident",
-    "topics": [
-      "agents"
-    ],
-    "format": "docs",
-    "time": "under-15min",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "status": "live",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-29",
-    "summary": "Claude in Chrome reads your calendar, matches attendees to Salesforce contacts, and drafts activity logs for each call for you to approve before anything is created.",
-    "who_for": "Sales reps keeping CRM activity logs up to date after a day of calls.",
-    "skip_if": "Claude in Chrome needs a paid plan, and it works by borrowing your existing logged-in Calendar and Salesforce browser sessions rather than any API integration - so it needs you already logged into both in Chrome.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Nothing is written to Salesforce until you approve.",
-    "prerequisites": [
-      "Claude in Chrome (paid plan)",
-      "logged into Google Calendar and Salesforce"
-    ],
-    "teaches": [
-      "draft CRM activity logs from calendar and Salesforce data, approved before creation"
-    ],
-    "keywords": [
-      "log sales calls to crm claude",
-      "claude in chrome salesforce",
-      "automate crm activity logging"
-    ],
-    "questions": [
-      "can claude log my sales calls to salesforce automatically",
-      "does claude in chrome need a salesforce api key"
-    ],
-    "id": "r-79adf355e3"
-  },
-  {
     "title": "Map your lit review mid-conversation to surface the underlying debate",
     "url": "https://academy.claude.com/use-cases/map-your-lit-review-mid-conversation",
     "author": "Anthropic",
@@ -28978,52 +28665,6 @@
     "id": "r-a4a27f2135"
   },
   {
-    "title": "Pipeline reviews",
-    "url": "https://academy.claude.com/use-cases/pipeline-review",
-    "author": "Anthropic",
-    "source": "Anthropic Academy",
-    "official": true,
-    "roles": [
-      "business-founder",
-      "pm"
-    ],
-    "level": "confident",
-    "topics": [
-      "cowork"
-    ],
-    "format": "docs",
-    "time": "under-15min",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "status": "live",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-29",
-    "summary": "Scores each open opportunity against stage exit criteria weekly, flags at-risk deals with a one-line reason, and writes the manager-ready review doc.",
-    "who_for": "Sales managers or reps running a weekly pipeline review.",
-    "skip_if": "Needs Salesforce and Google Drive connected plus a stage exit criteria reference document - scores deals against your own defined stage criteria, so it needs those criteria to already exist and be written down.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Scheduled Monday 8am run so the review exists before the meeting starts.",
-    "prerequisites": [
-      "Claude Cowork",
-      "Salesforce and Google Drive connectors",
-      "stage exit criteria document",
-      "Sales plugin (optional)"
-    ],
-    "teaches": [
-      "score pipeline opportunities against stage exit criteria and flag at-risk deals"
-    ],
-    "keywords": [
-      "pipeline review claude",
-      "sales stage exit criteria scoring",
-      "cowork weekly pipeline review"
-    ],
-    "questions": [
-      "can cowork score our sales pipeline against stage criteria",
-      "how do i automate a weekly pipeline review"
-    ],
-    "id": "r-e2e55589df"
-  },
-  {
     "title": "Plan your career path",
     "url": "https://academy.claude.com/use-cases/plan-your-career-path",
     "author": "Anthropic",
@@ -29330,49 +28971,6 @@
     "id": "r-6a50113b4f"
   },
   {
-    "title": "Prepare for sales deals",
-    "url": "https://academy.claude.com/use-cases/prepare-for-sales-deals",
-    "author": "Anthropic",
-    "source": "Anthropic Academy",
-    "official": true,
-    "roles": [
-      "business-founder",
-      "pm"
-    ],
-    "level": "confident",
-    "topics": [
-      "chat-prompting"
-    ],
-    "format": "docs",
-    "time": "under-15min",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "status": "live",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-29",
-    "summary": "Pulls comparable closed deals from the CRM, including free-text call notes, and turns the pattern into talking points for an upcoming sales conversation.",
-    "who_for": "Sales reps prepping for a conversation using pattern-matched past deals.",
-    "skip_if": "Needs the HubSpot connector enabled in Settings > Capabilities - and its real value is mining unstructured call notes for patterns, so it needs your CRM to actually have detailed free-text notes, not just structured fields.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Worked example returns 9 comparable deals with names of reps who handled the same objection.",
-    "prerequisites": [
-      "HubSpot connector enabled"
-    ],
-    "teaches": [
-      "find comparable past deals and objection-handling patterns for an upcoming sales conversation"
-    ],
-    "keywords": [
-      "prepare for sales deal claude",
-      "comparable deals crm analysis",
-      "claude sales talking points"
-    ],
-    "questions": [
-      "can claude find comparable past deals for my sales prep",
-      "how do i mine crm notes for sales patterns"
-    ],
-    "id": "r-044461a722"
-  },
-  {
     "title": "Process batches of vendors with Cowork",
     "url": "https://academy.claude.com/use-cases/process-batches-of-vendors-with-cowork",
     "author": "Anthropic",
@@ -29637,52 +29235,6 @@
       "how do i monitor regulatory feeds with claude"
     ],
     "id": "r-52af026126"
-  },
-  {
-    "title": "Renewal risk audit",
-    "url": "https://academy.claude.com/use-cases/renewal-risk-audit",
-    "author": "Anthropic",
-    "source": "Anthropic Academy",
-    "official": true,
-    "roles": [
-      "business-founder",
-      "pm"
-    ],
-    "level": "confident",
-    "topics": [
-      "cowork"
-    ],
-    "format": "docs",
-    "time": "under-15min",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "status": "live",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-29",
-    "summary": "Scores every account renewing in the next 90 days for risk on usage trend, sentiment, and open commitments, published as a live filterable artifact.",
-    "who_for": "Customer success or sales teams prioritizing which renewals to work first.",
-    "skip_if": "Needs a renewal book CSV, a product-usage CSV and QBR notes already in a working folder - the red/yellow/green score is only as good as those three inputs being current.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Scheduled to rerun every Monday at 7am.",
-    "prerequisites": [
-      "Claude Cowork",
-      "renewal book CSV, product-usage CSV, QBR notes",
-      "Salesforce connector",
-      "Sales plugin (optional)"
-    ],
-    "teaches": [
-      "score upcoming renewals for risk on usage, sentiment and open commitments"
-    ],
-    "keywords": [
-      "renewal risk audit claude",
-      "score account renewal risk",
-      "cowork customer success renewals"
-    ],
-    "questions": [
-      "can cowork score our renewal risk automatically",
-      "how do i prioritize which renewals to work first"
-    ],
-    "id": "r-62e1be4df3"
   },
   {
     "title": "Repurpose content across channels",
@@ -30380,52 +29932,6 @@
       "how do i build a chronology from a large document production"
     ],
     "id": "r-d07866943a"
-  },
-  {
-    "title": "Transcript theme extractor",
-    "url": "https://academy.claude.com/use-cases/transcript-themes",
-    "author": "Anthropic",
-    "source": "Anthropic Academy",
-    "official": true,
-    "roles": [
-      "business-founder",
-      "pm"
-    ],
-    "level": "confident",
-    "topics": [
-      "cowork"
-    ],
-    "format": "docs",
-    "time": "under-15min",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "status": "live",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-29",
-    "summary": "Reads every call transcript in a folder, clusters what customers said into themes, and reports each with a count, best quote, and which accounts said it.",
-    "who_for": "Sales/CS teams feeding product and marketing voice-of-customer input.",
-    "skip_if": "Needs a working folder of transcript files, and its scheduled version specifically reports the delta against the prior quarter's themes - so a single run misses the comparison that makes it useful over time.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Scheduled every Monday 9am when a new quarterly folder appears.",
-    "prerequisites": [
-      "Claude Cowork",
-      "a folder of call transcripts",
-      "Sales plugin (optional)",
-      "Salesforce/Google Drive connectors (optional)"
-    ],
-    "teaches": [
-      "cluster call transcript content into counted, quoted, attributed themes"
-    ],
-    "keywords": [
-      "transcript theme extraction claude",
-      "voice of customer from calls",
-      "cowork call transcript analysis"
-    ],
-    "questions": [
-      "can cowork extract themes from our call transcripts",
-      "how do i track voice of customer themes over time"
-    ],
-    "id": "r-0806ea63e9"
   },
   {
     "title": "Turn emails into an event tracker",
@@ -32278,5 +31784,43 @@
     "checked": "2026-09-04",
     "prerequisites": [],
     "id": "r-84289d43e5"
+  },
+  {
+    "url": "https://academy.claude.com/use-cases?department=sales",
+    "title": "Use cases for Sales",
+    "source": "Anthropic Academy",
+    "official": true,
+    "author": "Anthropic",
+    "summary": "The Academy's use-case gallery filtered to its Sales department: eleven recipes for account research, call prep, pipeline review, proposal decks, sales reports, battlecards, renewal risk and CRM logging. Each is ten to fifteen minutes of setup for one repeated task.",
+    "who_for": "Someone who runs a sales function and wants to see what is already written down before anyone builds anything. The recipes are for the reps; the decision about whether to hand them over is yours.",
+    "skip_if": "You do not run a sales function. This is a menu, not a lesson: every recipe needs Cowork with Salesforce or HubSpot connected, and none of them teaches you anything about Claude itself.",
+    "teaches": [
+      "see what a sales team can hand to Claude before building anything",
+      "judge which repeated sales tasks are worth a connector",
+      "compare eleven ready-made workflows against the ones you already have"
+    ],
+    "questions": [
+      "what can claude do for a sales team",
+      "claude use cases for sales",
+      "should my sales team use claude cowork",
+      "how do sales reps use claude"
+    ],
+    "level": "confident",
+    "format": "docs",
+    "time": "under-15min",
+    "cost": "free",
+    "roles": [
+      "business-founder"
+    ],
+    "topics": [
+      "cowork"
+    ],
+    "tier": "previewed",
+    "status": "live",
+    "checked": "2026-09-06",
+    "published": "UNVERIFIED",
+    "language": "en",
+    "notes": "Collection card, created 2026-09-06 under Rule C. It replaces eleven individual gallery rows whose who_for named a job this site has no role for - sales reps, account managers, account executives, sales leadership, customer success - while every one of them was tagged business-founder and pm. A founder with a sales team is a real reader for the menu; a sales rep is not a reader of this site at all.\n\nThe URL is the gallery's own department filter, opened and confirmed on 2026-09-06 to show exactly these eleven. Its H1 is \"Use cases for Sales\", which is where the title comes from.\n\nTier `previewed`: the family page was opened and its eleven entries read as a list. The recipes behind them were not opened one by one.\n\nThe absorbed rows and their skip_if lines, kept because they are the best writing those cards had:\n\nAccount research - Needs Cowork with the Sales plugin and Salesforce/Google Drive connected - the brief writes back into the account's own folder rather than returning it in chat, so there's nowhere to see the output without that folder set up.\n\nAccount tracking - Needs Cowork with Salesforce, Intercom and Google Drive connected, plus usage exports and a success plan already on file - the health score is only as good as those three inputs.\n\nBuild a battle card library - Needs the HubSpot connector and Web Search both turned on, and the page itself warns to verify the specific competitor numbers before sharing - the sample win-rate and deal-value figures are illustrative, not guaranteed accurate.\n\nCall prep - Needs a working folder with the actual mutual action plan, call notes and proposal for this specific account - a generic prep sheet with no account files behind it has nothing real to summarize.\n\nCreate a sales proposal presentation - Needs Google Drive connected plus Extended Thinking turned on, and your company logo uploaded for color extraction - without those the deck won't match your existing proposals or brand.\n\nCreate sales reports - Needs the HubSpot connector enabled plus a sales goals document as reference context - without the goals doc, the report has no target to measure performance against.\n\nLog sales calls to your CRM - Claude in Chrome needs a paid plan, and it works by borrowing your existing logged-in Calendar and Salesforce browser sessions rather than any API integration - so it needs you already logged into both in Chrome.\n\nPipeline reviews - Needs Salesforce and Google Drive connected plus a stage exit criteria reference document - scores deals against your own defined stage criteria, so it needs those criteria to already exist and be written down.\n\nPrepare for sales deals - Needs the HubSpot connector enabled in Settings > Capabilities - and its real value is mining unstructured call notes for patterns, so it needs your CRM to actually have detailed free-text notes, not just structured fields.\n\nRenewal risk audit - Needs a renewal book CSV, a product-usage CSV and QBR notes already in a working folder - the red/yellow/green score is only as good as those three inputs being current.\n\nTranscript theme extractor - Needs a working folder of transcript files, and its scheduled version specifically reports the delta against the prior quarter's themes - so a single run misses the comparison that makes it useful over time.",
+    "id": "r-c91ab289d7"
   }
 ]

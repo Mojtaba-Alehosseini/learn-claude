@@ -566,6 +566,37 @@ NOTE_NOT_IN_FULL = re.compile(
     r"|read the headings|read partially|not reviewed)", re.I)
 
 
+# Jobs the front door does not offer. Rule B (2026-09-06): a who_for naming one of
+# these is naming a reader who cannot reach the card, which is how the role filter came
+# to return sales recipes to product managers. The list is the use-case gallery's own
+# department vocabulary plus the obvious synonyms, because that is where the rows came
+# from and it is the shape the catalogue actually has.
+OFF_ROSTER = {
+    "sales": (r"\bsales (?:rep|team|leader|manager|engineer)s?\b|\baccount executives?\b"
+              r"|\baccount managers?\b|\brevenue operations\b|\bcustomer success\b"),
+    "legal": r"\bin-house counsel\b|\blegal ops\b|\bparalegals?\b|\battorneys?\b",
+    "hr": r"\brecruiters?\b|\bhiring managers?\b|\bhr\b|\bpeople[- ]ops\b",
+    "finance": (r"\bequity research analysts?\b|\baccountants?\b|\bcontrollers?\b"
+                r"|\binvestment bank\w*\b|\bactuari\w+\b|\bauditors?\b"),
+    "support": r"\bsupport (?:rep|team|agent)s?\b|\bhelp ?desk\b",
+    "operations": r"\bprocurement\b|\bvendor manage\w*\b|\bcompliance officers?\b",
+    "clinical": (r"\bmedical coders?\b|\bbilling specialists?\b|\bclinicians?\b"
+                 r"|\bcredentialing staff\b|\bprior authorization\b"),
+}
+OFF_ROSTER = {k: re.compile(v, re.I) for k, v in OFF_ROSTER.items()}
+
+
+def check_who_for_roster(items, warn):
+    """Rule B. A who_for naming a job the front door does not offer."""
+    for item in items:
+        who = str(item.get("who_for") or "")
+        if not who:
+            continue
+        named = [family for family, rx in OFF_ROSTER.items() if rx.search(who)]
+        if named:
+            warn(item, named, who)
+
+
 def check_notes_against_tier(items, bad, warn):
     """The field that recorded the truth gets to enforce it.
 
@@ -654,6 +685,10 @@ def main(argv=None):
     note_warnings = []
     check_notes_against_tier(items, bad,
                              lambda it, phrase: note_warnings.append((it, phrase)))
+
+    roster_warnings = []
+    check_who_for_roster(items, lambda it, fams, who:
+                         roster_warnings.append((it, fams, who)))
 
     seen_ids, seen_urls = {}, {}
 
@@ -940,6 +975,19 @@ def main(argv=None):
 
     # Both of these are advisory, printed before the verdict and never affecting it.
     report_monotony(items)
+
+    # Rule B. Printed, never enforced, on the same footing as the Puckett check it
+    # extends: the fix is to read the page and decide who the card is really for, not to
+    # make a build go green.
+    if roster_warnings:
+        print("who_for names a job the front door does not offer (%d) - Rule B, "
+              "printed, never enforced:" % len(roster_warnings))
+        for _it, _fams, _who in roster_warnings[:20]:
+            print("  %-44s %-10s %s"
+                  % (str(_it.get("title", ""))[:44], "/".join(_fams), _who[:60]))
+        if len(roster_warnings) > 20:
+            print("  ... and %d more" % (len(roster_warnings) - 20))
+        print()
 
     # R5. Printed beside the other advisory reports and never enforced on `previewed`:
     # "metadata only" is a fair description of a skim, and a build that goes red on it
