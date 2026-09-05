@@ -85,7 +85,9 @@ certification paragraph was praised by five agents by name.
 ### 2.2 Search fails plain-English questions. **10 of 10.**
 Every agent, sections 8 of every file.
 
-Fifty queries, in fifty visitors' own words. Scores the agents gave themselves:
+Fifty-seven queries, ten visitors, each in their own words - the count is the row count
+of `SUITE` in `scripts/test-search.py`, where all 57 now live. Scores the agents gave
+themselves:
 
 | Role | Useful top-three slots |
 |---|---|
