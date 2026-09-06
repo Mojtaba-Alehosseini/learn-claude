@@ -172,9 +172,13 @@ SUITE = [
      "Still wrong, and closer: a product page with worked prompts leads, where "
      "the previous leader's own skip line said to skip it if you only want "
      "lesson plans. A product page is not a lesson plan."),
-    ("teacher", "marking essays", "bad",
-     "Claude for Education Is Made for Learning",
-     "two results for the most common teacher task on earth, both aimed at students"),
+    ("teacher", "marking essays", "ok",
+     ["Using AI for Writing Feedback"],
+     "Promoted 2026-09-06 by the synonym table. The objection was two results, both "
+     "written for students, for the most common teacher task there is. The row that "
+     "answers it is Using AI for Writing Feedback, whose card contains none of marking, "
+     "grading or essays - its word is feedback - and it is second now that feedback is "
+     "in the grading row and a synonym is allowed to admit."),
     ("teacher", "ai policy for school", "ok",
      "Australian Framework for Generative AI in Schools",
      ""),
@@ -436,6 +440,8 @@ def rank(query, kw):
             if sidf >= MIN_IDF_SCORE:
                 for i, weight in syn.items():
                     scores[i] += weight * sidf * SYNONYM_WEIGHT
+                    if sidf > MIN_IDF_ADMIT:
+                        exact[i] = True
 
         # One union across the whole stem group, scored once. Per-cousin IDF would pay a
         # rare inflection ("hallucinated", in two items) far more than the family is

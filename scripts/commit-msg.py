@@ -41,10 +41,16 @@ import os
 import re
 import sys
 
-WORDS = (r"one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|thirteen|"
+# `one` is missing here on purpose and present in RATIO below. It is an article and a
+# pronoun far more often than a quantity - "one thing a synonym cannot do", "one way to
+# read it" - and this hook's own first message was rejected for one of those. A guard
+# that cries wolf gets switched off.
+WORDS = (r"two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|thirteen|"
          r"fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|twenty|thirty|forty|"
          r"fifty|sixty|seventy|eighty|ninety|hundred")
 NUM = r"(?:%s|\d[\d,]*)" % WORDS
+# In "N of M" the word is unambiguous: "one of the five" is a measurement every time.
+RATIO = r"(?:one|%s|\d[\d,]*)" % WORDS
 
 # The nouns this repository counts. A number beside one of these is a measurement being
 # retyped from memory.
@@ -57,8 +63,8 @@ PATTERNS = [
     re.compile(r"\b%s\s+(?:[a-z-]+\s+){0,2}(?:%s)\b" % (NUM, COUNTED), re.I),
     # "rows: 23", "queries — 12"
     re.compile(r"\b(?:%s)\b[^\n]{0,3}[:—-]\s*%s\b" % (COUNTED, NUM), re.I),
-    # "35 of 57", "four of the five"
-    re.compile(r"\b%s\s+of\s+(?:the\s+)?%s\b" % (NUM, NUM), re.I),
+    # "35 of 57", "four of the five", "one of the five"
+    re.compile(r"\b%s\s+of\s+(?:the\s+)?%s\b" % (RATIO, RATIO), re.I),
     # "suite 22 -> 24"
     re.compile(r"\b%s\s*(?:->|→)\s*%s\b" % (NUM, NUM)),
 ]

@@ -197,7 +197,15 @@
       if (sn) {
         var sidf = Math.log(n / sn);
         if (sidf >= 0.05) {
-          for (var sk in sacc) scores[sk] += sacc[sk] * sidf * SYNONYM_WEIGHT;
+          for (var sk in sacc) {
+            scores[sk] += sacc[sk] * sidf * SYNONYM_WEIGHT;
+            /* A synonym admits, where a stem does not. Every vocabulary failure in
+               FIX-28's table is a row containing none of the reader's words, and a
+               rank-only expansion cannot surface a row that is not in the results - it
+               can only reorder rows that are. Half weight still, so it can never outrank
+               the word the reader typed, and the same selectivity gate as any word. */
+            if (sidf > 0.7) exact[sk] = 1;
+          }
         }
       }
 
