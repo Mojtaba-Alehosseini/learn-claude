@@ -598,6 +598,20 @@ a.card-path:hover { text-decoration: underline; }
   max-width: 40ch;
 }
 
+/* D10. The disclosure line, first in the footer and a shade louder than the note under
+   it, because it is the one sentence a reader is owed before they trust a judgement
+   rather than after. Still a footer line: a banner on every page is a site apologising
+   for itself once per visit.
+
+   Colour comes from the footer, not from the page. The first version set
+   --text-primary here, which is the dark ink of the light canvas, and the sentence
+   disappeared into a black footer with only its link showing - caught by looking at the
+   page rather than at the DOM, which is the whole reason to look. */
+.footer-who {
+  color: var(--text-on-invert);
+  margin-bottom: var(--space-8);
+}
+
 /* D7. The sort sits with the list it governs. Right-aligned so it reads as a control on
    that row rather than a second field under the search box. */
 .sort-row {
