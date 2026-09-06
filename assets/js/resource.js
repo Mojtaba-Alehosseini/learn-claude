@@ -14,12 +14,24 @@
   var LC = window.LC;
   var out = document.getElementById("content");
 
+  /* FIX-33: the canonical home of a resource is /r/<id>/, which is served with its
+     own title so a pasted link says what it is. Anything already pasted anywhere still
+     works and arrives here, so this hands it over. `replace` rather than `assign`: the
+     back button should return to where the reader came from, not to a redirect. */
+  (function canonicalise() {
+    var id = LC.param("id");
+    if (id && location.search && !window.LC_ROUTE) {
+      location.replace(LC.ROOT + "r/" + encodeURIComponent(id) + "/");
+    }
+  }());
+
   var item = LC.byId(LC.param("id"));
 
   if (!item) {
     out.innerHTML = '<h1 class="h1">Not found</h1>' +
       '<div class="empty prose"><strong>We could not find that resource.</strong>' +
-      'It may have been removed. <a href="browse.html">Browse everything</a> instead.</div>';
+      'It may have been removed. <a href="' + LC.at("browse.html") +
+      '">Browse everything</a> instead.</div>';
     return;
   }
 
@@ -34,10 +46,10 @@
       var r = new URL(document.referrer);
       if (r.origin === location.origin && /(^|\/)browse\.html$/.test(r.pathname) &&
           r.search) {
-        return "browse.html" + r.search;
+        return LC.at("browse.html") + r.search;
       }
     } catch (e) { /* no referrer, or not a URL we can read */ }
-    return "browse.html";
+    return LC.at("browse.html");
   }
 
   var fresh = LC.freshness(item);
@@ -58,7 +70,7 @@
     pathBlock = item.paths.map(function (p) {
       return '<section class="section"><h2 class="h2">Where this fits</h2>' +
         '<p class="prose">This is step ' + p.step + ' of ' + p.of + ' in ' +
-        '<a href="paths.html?id=' + LC.esc(p.path) + '">' +
+        '<a href="' + LC.at("paths.html") + '?id=' + LC.esc(p.path) + '">' +
         LC.esc(p.pathTitle || p.path) + '</a>. The order matters — the path says why.</p>' +
         '</section>';
     }).join("");
@@ -114,7 +126,8 @@
 
     '<section class="section"><h2 class="h2">How we checked this one</h2>' +
       '<p class="prose"><strong>' + LC.esc(tier.label) + '.</strong> ' +
-      LC.esc(tier.tip) + ' <a href="how-we-check.html">How we check</a>.</p></section>' +
+      LC.esc(tier.tip) + ' <a href="' + LC.at("how-we-check.html") +
+      '">How we check</a>.</p></section>' +
 
     /* This line used to rebuild the dates by hand and drop two things the card
        already showed: the Updated date, which 96 items carry and which for 44 of them

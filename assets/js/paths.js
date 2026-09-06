@@ -40,8 +40,8 @@
 
   function pathCard(p, role) {
     var rows = stepsWithItems(p);
-    var href = "paths.html?id=" + encodeURIComponent(p.id) +
-               (role ? "&role=" + encodeURIComponent(role) : "");
+    var href = LC.pathHref(p.id) +
+               (role ? "?role=" + encodeURIComponent(role) : "");
     return '<article class="path-header">' +
       '<h2 class="h2"><a href="' + LC.esc(href) + '">' + LC.esc(p.title) + '</a></h2>' +
       '<p class="prose" style="margin-top:var(--space-8)">' + LC.esc(p["for"]) + '</p>' +
@@ -99,7 +99,8 @@
               '<strong>There is no path for ' + LC.esc(label) + ' yet.</strong>' +
               'A path is only published once every step in it has been checked, and we ' +
               'have not finished one for you. Browse by role instead — ' +
-              '<a href="browse.html?role=' + encodeURIComponent(role) + '">' +
+              '<a href="' + LC.at("browse.html") + '?role=' +
+              encodeURIComponent(role) + '">' +
               'everything we have for ' + LC.esc(label) + '</a>.</div>';
     }
 
@@ -147,7 +148,7 @@
     return '' +
       '<div class="sp-item"><article class="sp-card">' +
         '<div class="sp-tile" data-format="' + LC.esc(it.format) + '">' +
-          '<img src="assets/icons/formats/' + LC.esc(it.format) +
+          '<img src="' + LC.at("assets/icons/formats/") + LC.esc(it.format) +
             '-alpha.png" alt="">' +
           mark + costChip + timeChip +
         '</div>' +
@@ -198,7 +199,8 @@
     var qs = role ? "?role=" + encodeURIComponent(role) : "";
 
     /* "← All paths" said how to leave and not where you were. */
-    var html = '<p class="meta"><a href="paths.html' + qs + '">Paths</a> / ' +
+    var html = '<p class="meta"><a href="' + LC.at("paths.html") + qs +
+               '">Paths</a> / ' +
       LC.esc(p.title) + '</p>' +
       '<h1 class="h1" style="margin-top:var(--space-16)">' + LC.esc(p.title) + '</h1>' +
       '<p class="lede" style="margin-top:var(--space-16)">' + LC.esc(p.intro) + '</p>' +
@@ -222,6 +224,15 @@
 
   /* -------------------------------------------------------------------- go ---- */
 
+  /* Same as resource.js: the path's canonical home is /p/<slug>/. Only a bare
+     ?id= redirects - ?id=&role= is a filtered view of a path and stays where it is. */
+  (function canonicalise() {
+    var p = new URLSearchParams(location.search);
+    if (p.get("id") && p.toString() === "id=" + encodeURIComponent(p.get("id"))) {
+      location.replace(LC.ROOT + "p/" + encodeURIComponent(p.get("id")) + "/");
+    }
+  }());
+
   var id = LC.param("id");
   /* Carried through from Browse and from the two questions, so the index can answer
      "is any of this for me" instead of leaving the reader to guess. Ignored unless it
@@ -236,7 +247,8 @@
     out.innerHTML = '<h1 class="h1">Paths</h1>' +
       '<div class="empty prose"><strong>This path isn\'t ready.</strong>' +
       'We only publish a path once every step in it has been checked. ' +
-      '<a href="paths.html' + (role ? "?role=" + encodeURIComponent(role) : "") +
+      '<a href="' + LC.at("paths.html") +
+      (role ? "?role=" + encodeURIComponent(role) : "") +
       '">See the paths that are ready</a>.</div>';
     return;
   }

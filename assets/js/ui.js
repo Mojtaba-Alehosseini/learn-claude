@@ -373,7 +373,8 @@
 
   LC.badgeLink = function (tier) {
     var key = LC.tierKey(tier), t = LC.TIER[key];
-    return '<a class="badge ' + t.cls + '" href="how-we-check.html#tier-' + key + '"' +
+    return '<a class="badge ' + t.cls + '" href="' + LC.at("how-we-check.html") +
+           '#tier-' + key + '"' +
            ' title="' + LC.esc(t.tip) + '"' +
            ' aria-describedby="tierdesc-' + key + '">' +
            LC.esc(t.label) + '</a>';
@@ -424,7 +425,8 @@
     catch (e) { return ""; }
     var slug = marks[host];
     if (!slug) return "";
-    return '<span class="sp-chip sp-mark"><img src="assets/icons/publishers/' +
+    return '<span class="sp-chip sp-mark"><img src="' +
+           LC.at("assets/icons/publishers/") +
            LC.esc(slug) + '.png" alt="" width="16" height="16"></span>';
   };
 
@@ -463,7 +465,14 @@
       .join("");
   };
 
-  LC.href = function (item) { return "resource.html?id=" + encodeURIComponent(item.id); };
+  /* The canonical URL of a resource, and the only place the scheme is written.
+     FIX-33 moved it from resource.html?id=<id> to /r/<id>/ so that a pasted link has a
+     served title; the query form still works and redirects here. */
+  LC.href = function (item) { return LC.ROOT + "r/" + encodeURIComponent(item.id) + "/"; };
+  LC.cellHref = function (role, level) {
+    return LC.ROOT + "c/" + encodeURIComponent(role) + "/" + encodeURIComponent(level) + "/";
+  };
+  LC.pathHref = function (slug) { return LC.ROOT + "p/" + encodeURIComponent(slug) + "/"; };
 
   /* Where a reader tells us something is wrong.
      how-we-check.html has said "Found something wrong? Tell us." since the site went up,
@@ -485,7 +494,7 @@
       lines = [
         "Resource: " + item.title,
         "Link:     " + item.url,
-        "Our page: " + SITE + "resource.html?id=" + item.id,
+        "Our page: " + SITE + "r/" + item.id + "/",
         "",
         "What is wrong? A dead link, a description that does not match, something out of",
         "date, or written for someone else. A sentence is plenty.",
@@ -528,7 +537,7 @@
          column, so it is the most eye-catching thing on the card, and it went
          nowhere - while the resource page linked the identical string. Two
          affordances for one string; now one. */
-      pathLine = '<a class="card-path" href="paths.html?id=' +
+      pathLine = '<a class="card-path" href="' + LC.at("paths.html") + '?id=' +
                  encodeURIComponent(p.path) + '">Step ' + p.step + ' of ' + p.of +
                  ' in ' + LC.esc(p.pathTitle || p.path) + '</a>';
     }
@@ -618,9 +627,22 @@
     return null;
   };
 
+  /* The generated share pages carry no query string: /r/r-abc123/ is the id, and
+     /c/teacher/never-used/ is the role and the level. Rather than teach four page
+     scripts about routes, the route is seeded into window.LC_ROUTE by one inline script
+     and read here, so every caller keeps asking for "id" and gets it either way. */
   LC.param = function (name) {
-    return new URLSearchParams(location.search).get(name) || "";
+    var q = new URLSearchParams(location.search).get(name);
+    if (q) return q;
+    var route = window.LC_ROUTE || {};
+    return route[name] || "";
   };
+
+  /* How far this page is from the site root. "" on the five hand-written pages, "../../"
+     on /r/<id>/ and /p/<slug>/, "../../../" on /c/<role>/<level>/. Every internal link a
+     script writes goes through it. Set by the generated page before its scripts run. */
+  LC.ROOT = window.LC_ROOT || "";
+  LC.at = function (rel) { return LC.ROOT + rel; };
 
   window.LC = LC;
 

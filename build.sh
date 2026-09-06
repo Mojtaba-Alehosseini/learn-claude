@@ -94,8 +94,16 @@ gate 1 python3 scripts/check-self-retrieval.py
 gate 1 python3 scripts/test-gap-claims.py
 
 echo
-echo "5b/7 sitemap, generated rather than typed"
-gate 0 python3 scripts/build-sitemap.py
+echo "5b/7 the pages people send, each with its own served title"
+# One HTML file per resource, cell and path, so a pasted link previews as the thing it
+# is. All ten Attack 3 agents found the shared title; see the spec and FIX-33.
+gate 1 python3 scripts/build-og-card.py
+gate 1 python3 scripts/build-share-pages.py
+# The sitemap reads the generator's manifest, so it can only list pages that exist.
+gate 1 python3 scripts/build-sitemap.py
+# And the built HTML is read back, because the tab title is right on every page whether
+# or not the served one is - which is exactly how the placeholder shipped for months.
+gate 1 python3 scripts/check-share-pages.py
 
 echo
 echo "6/7  data as loadable javascript"

@@ -143,6 +143,21 @@ def plant_typed_count_in_a_doc(root):
     return "typed a live catalogue count into THE-PROJECT.md"
 
 
+def plant_missing_og_title(root):
+    """A generated share page with its og:title stripped. The whole share chain is
+    invisible from a browser - the tab title is written by JavaScript and is correct
+    whatever the served head says - so the only way to know it still works is to read
+    the built HTML, and the only way to know THAT still works is to break one."""
+    import glob
+    hits = sorted(glob.glob(os.path.join(root, "r", "*", "index.html")))
+    if not hits:
+        raise AssertionError("no share pages to plant in; did the generator run?")
+    text = io.open(hits[0], encoding="utf-8").read()
+    io.open(hits[0], "w", encoding="utf-8").write(
+        re.sub(r'<meta property="og:title"[^>]*>\n', "", text, count=1))
+    return "stripped og:title from %s" % os.path.basename(os.path.dirname(hits[0]))
+
+
 def plant_synonym_without_reason(root):
     """Every synonym carries the reason it exists, like every skip_if."""
     p = os.path.join(root, "data", "synonyms.json")
@@ -176,6 +191,8 @@ FAULTS = [
      "check-typed-numbers.py"),
     ("a live count typed into a document", plant_typed_count_in_a_doc,
      "state a count with no date beside it"),
+    ("a share page with no og:title", plant_missing_og_title,
+     "has no og:title"),
 ]
 
 

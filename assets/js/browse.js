@@ -45,8 +45,30 @@
 
   /* ----------------------------------------------------------- URL state ---- */
 
+  /* browse.html?role=X&level=Y is a cell, and a cell has a served page. Anything
+     else - another filter, a query, a sort - is a view, not a share unit, and stays
+     here. Narrow on purpose: a redirect that fired on a filtered list would take a
+     reader somewhere they did not ask to go. */
+  (function canonicalise() {
+    if (window.LC_ROUTE) return;
+    var p = new URLSearchParams(location.search);
+    var keys = Array.from(p.keys()).sort();
+    if (keys.length === 2 && keys[0] === "level" && keys[1] === "role" &&
+        LC.ROLE[p.get("role")] && LC.LEVEL[p.get("level")]) {
+      location.replace(LC.ROOT + "c/" + encodeURIComponent(p.get("role")) + "/" +
+                       encodeURIComponent(p.get("level")) + "/");
+    }
+  }());
+
+  /* A cell page at /c/<role>/<level>/ has no query string; its two values arrive in
+     window.LC_ROUTE instead. Reading them here rather than teaching every axis about
+     routes keeps one code path: after this function the page cannot tell how it was
+     reached. See docs/specs/2026-09-07-share-chain.md. */
   function readURL() {
     var p = new URLSearchParams(location.search);
+    var route = window.LC_ROUTE || {};
+    if (route.role && !p.get("role")) p.set("role", route.role);
+    if (route.level && !p.get("level")) p.set("level", route.level);
     AXES.forEach(function (a) {
       var v = p.get(a.param);
       sel[a.key] = v ? v.split(",").filter(function (x) { return a.labels[x]; }) : [];
@@ -65,7 +87,22 @@
     if (q) p.set("q", q);
     if (sort !== "best") p.set("sort", sort);
     var s = p.toString();
+    /* On a cell page the route already says the role and the level, so writing them
+       back as a query would dirty the canonical URL the reader is about to copy. Only
+       a filter the route does not carry earns a query string here. */
+    var route = window.LC_ROUTE || {};
+    if (route.role && route.level) {
+      var only = sel.roles.length === 1 && sel.roles[0] === route.role &&
+                 sel.levels.length === 1 && sel.levels[0] === route.level &&
+                 !q && sort === "best" && !anyOtherThanRoleAndLevel();
+      if (only) { history.replaceState(null, "", location.pathname); return; }
+    }
     history.replaceState(null, "", s ? "?" + s : location.pathname);
+  }
+
+  function anyOtherThanRoleAndLevel() {
+    return sel.times.length || sel.topics.length || sel.formats.length ||
+           sel.costs.length || sel.officials.length || sel.tiers.length;
   }
 
   /* ----------------------------------------------------------- filtering ---- */
@@ -227,11 +264,14 @@
               ? (multi ? "Try fewer words, or clear" : "Clear") +
                 " the role filter to search all " + items.length + "."
               : (multi
-                  ? 'Try fewer words, or <a href="browse.html">browse everything</a>'
-                  : '<a href="browse.html">Browse everything</a>') + " instead.");
+                  ? 'Try fewer words, or <a href="' + LC.at("browse.html") +
+                    '">browse everything</a>'
+                  : '<a href="' + LC.at("browse.html") +
+                    '">Browse everything</a>') + " instead.");
     } else if (sel.roles.length && !anyOtherThanRole()) {
       msg = "<strong>We have not covered this role yet.</strong>" +
-            "It's on the list. <a href=\"browse.html\">Browse everything</a> instead.";
+            "It's on the list. <a href=\"" + LC.at("browse.html") +
+            "\">Browse everything</a> instead.";
     } else if (sel.roles.length === 1 && sel.levels.length === 1 &&
                !sel.times.length && !sel.topics.length && !sel.formats.length &&
                !sel.costs.length && !sel.officials.length) {
@@ -249,9 +289,10 @@
               ? "The level below has " + countAtLevel(below0) + ". " +
                 offerHTML(below0) + " Or "
               : "Loosen the level, or ") +
-            '<a href="browse.html?role=' + encodeURIComponent(sel.roles[0]) + '">' +
+            '<a href="' + LC.at("browse.html") + '?role=' +
+            encodeURIComponent(sel.roles[0]) + '">' +
             "see everything for this role</a>, or " +
-            '<a href="browse.html">browse everything</a>.';
+            '<a href="' + LC.at("browse.html") + '">browse everything</a>.';
     } else {
       msg = "<strong>Nothing matches all of those.</strong>" +
             "Try removing one filter — time is usually the one to loosen.";
@@ -437,8 +478,13 @@
     var picked = renderPicks(out);
     var rest = out.filter(function (it) { return !picked[it.id]; });
     el.results.innerHTML = rest.map(function (it) { return LC.card(it); }).join("");
-    document.title = "Browse " + out.length + " Claude resource" +
-                     (out.length === 1 ? "" : "s") + " — Learn Claude";
+    /* A cell page was served a title naming the role and the level, which is the point
+       of it; overwriting that with a count would throw away the thing this page exists
+       for the moment its own script ran. */
+    if (!(window.LC_ROUTE && window.LC_ROUTE.role)) {
+      document.title = "Browse " + out.length + " Claude resource" +
+                       (out.length === 1 ? "" : "s") + " — Learn Claude";
+    }
     writeURL();
   }
 

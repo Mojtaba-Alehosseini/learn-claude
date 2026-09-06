@@ -19,6 +19,7 @@ silently and stays wrong. So this generates it, `lastmod` comes from each row's 
 """
 
 import io
+import collections
 import json
 import os
 import sys
@@ -47,14 +48,16 @@ def main():
     checked = sorted(x["checked"] for x in items if x.get("checked"))
     newest = checked[-1] if checked else ""
 
-    rows = []
-    for p in PAGES:
-        rows.append((BASE + p, newest))
-    for p in paths:
-        rows.append((BASE + "paths.html?id=" + p["id"], newest))
-    for x in items:
-        # resource.html is one page; the id is what a crawler needs to see them all.
-        rows.append((BASE + "resource.html?id=" + x["id"], x.get("checked") or newest))
+    # Canonical URLs only. FIX-33 gave every resource, cell and path a served page with
+    # its own title, and a sitemap listing the query forms would point a crawler at the
+    # pages that redirect - and at a title that says "Resource — Learn Claude".
+    #
+    # Which pages exist is the generator's answer, read from its manifest rather than
+    # worked out again here. A sitemap that computes its own list is a sitemap that can
+    # list a page nobody generated.
+    share = load("share-pages.json")["pages"]
+    rows = [(BASE + p, newest) for p in PAGES]
+    rows += [(BASE + p["rel"], p["lastmod"] or newest) for p in share]
 
     lines = ['<?xml version="1.0" encoding="UTF-8"?>',
              '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
@@ -67,8 +70,11 @@ def main():
     with io.open(OUT, "w", encoding="utf-8", newline="\n") as f:
         f.write("\n".join(lines))
 
-    print("sitemap.xml: %d urls (%d pages, %d paths, %d resources), newest lastmod %s"
-          % (len(rows), len(PAGES), len(paths), len(items), newest))
+    kinds = collections.Counter(p["kind"] for p in share)
+    print("sitemap.xml: %d canonical urls (%d pages, %d paths, %d cells, %d resources), "
+          "newest lastmod %s"
+          % (len(rows), len(PAGES), kinds["path"], kinds["cell"], kinds["resource"],
+             newest))
     return 0
 
 

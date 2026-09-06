@@ -109,6 +109,10 @@ jobs:
           cp index.html browse.html paths.html resource.html how-we-check.html _site/
           cp favicon.svg robots.txt sitemap.xml _site/
           cp -r assets data _site/
+          # The generated share pages: one directory per resource, cell and path. They
+          # are gitignored like data/*.js, for the same reason - a generated file
+          # committed alongside its source is two copies to disagree.
+          cp -r r c p _site/
           touch _site/.nojekyll
 
       - uses: actions/upload-pages-artifact@v3

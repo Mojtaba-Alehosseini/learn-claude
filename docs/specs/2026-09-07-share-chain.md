@@ -5,7 +5,7 @@ before any code is written.**
 
 ## 1. What is broken
 
-Every one of the 588 resource pages serves the same `<title>` and the same `og:title`:
+Every resource page serves the same `<title>` and the same `og:title`, and the count is in [STATUS.md](../STATUS.md):
 
     <title>Resource — Learn Claude</title>
     <meta property="og:title" content="Resource — Learn Claude">
@@ -53,8 +53,8 @@ extension to leak an implementation detail into something people paste.
 
 - `<title>` and `og:title`: the site's own words for the cell, built from the same maps the
   interface uses — *Claude for a teacher who has never used it — Learn Claude*.
-- `og:description`: the three picks' titles, comma-separated, prefixed with *Start with*.
-  Where a cell has two picks or none, the description says what the cell says.
+- `og:description`: the cell's picks, by title, comma-separated, prefixed with *Start with*.
+  Where a cell is short of picks or has none, the description says what the cell says.
 - The teacher's closing answer was *"send the beginner cell to colleagues"*. A cell is a
   share unit, so it gets a page.
 
