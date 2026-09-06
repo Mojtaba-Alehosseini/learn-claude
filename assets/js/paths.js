@@ -175,8 +175,15 @@
               '<a class="btn btn-primary" href="' + LC.esc(href) + '">' +
               'Start with this</a></p>'
             : "") +
+          /* updatedNote as well as note. Attack 2 found the resource page dropping the
+             Updated date and fixed it there as M1; this surface kept the same bug for
+             two more rounds and Attack 3's analyst found it. A path is the one place
+             built for a reader who cannot judge a resource themselves, so it was the
+             worst surface to hide the freshest date the site holds. */
           '<p class="sp-foot">' + LC.badge(it.tier) +
             '<span>' + LC.esc(fresh.checked) + '</span>' +
+            (fresh.updatedNote
+              ? '<span>' + LC.esc(fresh.updatedNote) + '</span>' : '') +
             (fresh.note ? '<span class="' + fresh.cls + '">' + LC.esc(fresh.note) +
                           '</span>' : '') +
           '</p>' +

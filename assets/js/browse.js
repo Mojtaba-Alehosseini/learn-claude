@@ -311,9 +311,18 @@
       offer.more + '. ' + offerHTML(offer.below) + '</div>';
   }
 
+  /* Every axis except role. Attack 3: `tiers` was missing, because D10 added the
+     axis and nothing told the function that reasons about axes. The cost was the worst
+     sentence on the site - browse.html?role=X&checked=reviewed answered "We have not
+     covered this role yet" to a business owner with 153 resources, and to a developer
+     with more. Nothing is `reviewed`, so the filter empties every role, and the message
+     blamed the filter that was set rather than the one that emptied the result.
+
+     If an axis is ever added again, this is the function to add it to. */
   function anyOtherThanRole() {
     return sel.levels.length || sel.times.length || sel.topics.length ||
-           sel.formats.length || sel.costs.length || sel.officials.length;
+           sel.formats.length || sel.costs.length || sel.officials.length ||
+           sel.tiers.length;
   }
 
   /* "Start with these three" — only where the two front-door questions land: exactly

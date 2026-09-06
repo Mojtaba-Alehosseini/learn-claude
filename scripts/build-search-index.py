@@ -193,20 +193,33 @@ def load_synonyms(idx):
     """word -> the other words in its group, for words this catalogue actually holds.
 
     The table is written and justified by hand in data/synonyms.json and checked by
-    scripts/validate-synonyms.py. Here it is only flattened: a term the index has never
-    seen is dropped, because expanding to a word with no postings is work that produces
-    nothing.
+    scripts/validate-synonyms.py. Here it is only flattened.
+
+    A term is dropped as a TARGET when the index has never seen it, because expanding to
+    a word with no postings is work that produces nothing. It is NOT dropped as a KEY.
+    That distinction was missing and it killed the exact case the table exists for: FIX-32
+    added student/pupil/learner because Attack 3's teacher typed "is it safe to put pupil
+    names into Claude" and got two small-business courses and a GitHub Action. `pupil`
+    appears nowhere in the catalogue - that is the whole point - so the old rule refused it
+    a key and the new row expanded nothing. The reader's word being absent is the reason
+    to have a synonym, not a reason to discard one.
+
+    The row is still required to be useful: validate-synonyms.py refuses a row unless at
+    least two of its terms are in the index, so every key here reaches something.
     """
     if not os.path.exists(SYN_FILE):
         return {}
     doc = json.load(open(SYN_FILE, encoding="utf-8"))
     out = {}
     for entry in doc.get("entries") or []:
-        terms = [t for t in entry.get("terms") or [] if t in idx]
-        if len(terms) < 2:
+        terms = entry.get("terms") or []
+        targets = [t for t in terms if t in idx]
+        if len(targets) < 2:
             continue
         for t in terms:
-            out[t] = [o for o in terms if o != t]
+            others = [o for o in targets if o != t]
+            if others:
+                out[t] = others
     return out
 
 

@@ -598,7 +598,14 @@
       c.paths = byId[x.id] || [];
       c.tierRank = (LC.TIER[x.tier] || LC.TIER.listed).rank;
       c.timeRank = LC.TIME_RANK[x.time] != null ? LC.TIME_RANK[x.time] : 9;
-      c.sortDate = x.published && x.published !== "UNVERIFIED" ? x.published : "0000";
+      /* "Newest first" means the newest date the card shows, and a card can show two.
+         Attack 3: six of ten agents found the control inverted, because this read
+         `published` alone - so a doc updated three days ago sat below one published in
+         2024, and the site's own "over a year ago" flag appeared on the first two rows
+         under a control labelled newest. The reader is sorting by what is on the card. */
+      var pub = x.published && x.published !== "UNVERIFIED" ? x.published : "";
+      var upd = x.updated && x.updated !== "UNVERIFIED" ? x.updated : "";
+      c.sortDate = (upd > pub ? upd : pub) || "0000";
       return c;
     });
   };
