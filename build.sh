@@ -9,6 +9,13 @@
 # <script> tags rather than fetch(), so the site works straight from the folder.
 
 set -e
+# Every gate in this file is piped through `tail` so the output stays short, and a
+# pipeline's status is the last command's - so `tail` was returning 0 over the top of
+# every failing check, and had been since the first one was added. The suite exited 1 on
+# eight regressions in FIX-30 and this file said "Done. Open index.html." CI ran the same
+# command without the pipe and caught it. A gate that only the server enforces is a gate
+# you find out about after you push.
+set -o pipefail
 cd "$(dirname "$0")"
 
 echo "1/6  stable ids (derived from URL, never from list position)"
