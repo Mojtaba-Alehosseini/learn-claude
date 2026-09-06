@@ -490,3 +490,89 @@ admin. The alternative to removing them is a healthcare collection card and a
 finance one, which is what Rule C did for the gallery, and building those was not
 what this round was asked to do.
 
+
+---
+
+# The rescue decisions, re-run under the fixed patterns
+
+FIX-30: *"Re-run the tightened check against every rescue decision in the Rule B logs.
+Any row whose replacement tags were justified only by a match the fixed pattern no longer
+makes is reopened, and the page decides again. Log the result beside the original."*
+
+Rescue is Rule B's dangerous branch. Every other branch either drops a tag or leaves the
+row alone; rescue **replaces** the row's tags with what the card names. FIX-29 found five
+patterns matching inside another word, and it found all five in this branch.
+
+`tmp/rescue_reaudit.py` loads each revision's own audit script and the catalogue it ran
+on, computes the rescue set under the patterns of the day, then recomputes it under
+today's.
+
+| run | rescue proposals under the patterns of the day |
+|---|---|
+| FIX-25 `6506724` | 30 |
+| FIX-26 `6ccbc69` | 15 |
+| FIX-28 `15bb819` | 15 |
+| **rests on a match the fixed patterns no longer make** | **16, which are 6 distinct rows** |
+
+## The six
+
+| row | rescued to | the dead match |
+|---|---|---|
+| Design Systems in 2026: Turn Your System into a Claude Skill | `business-founder` | `owner` inside "Design-system owners" |
+| Claude Cowork Tutorial: How to Use Anthropic's AI Desktop Agent | `developer` | `coder` inside "Non-coders" |
+| Complete Guide to Claude Cowork (Claude Code for Everyone) | `developer` | `developer` inside "Non-developers" |
+| Lesson 7: Effective prompting techniques (Deep Dive) | `developer` | `developer` inside "Non-developers" |
+| Using the CMS Coverage Connector in Claude | `developer` | `coder` inside "Medical coders" |
+| Getting started with Claude Cowork | `developer` | `developer` inside "Non-developers" |
+
+Every one of them would have been a serious error. Four would have tagged a page written
+for people who do not code as a developer page. One would have moved a design-system
+article to the business owner. One would have filed a Medicare billing connector under
+engineering.
+
+## Not one of them was applied
+
+`tmp/rescue_applied.py` compares each row's tags at the revision the decision was made
+against its tags today.
+
+| row | tags then | tags now |
+|---|---|---|
+| Design Systems in 2026 | `designer` | `designer` — unchanged |
+| Claude Cowork Tutorial | `data-analyst,non-technical` | unchanged |
+| Complete Guide to Claude Cowork | `data-analyst,non-technical,researcher,writer-marketer` | unchanged |
+| Lesson 7: Effective prompting techniques | `non-technical,researcher,student,teacher,writer-marketer` | unchanged |
+| Getting started with Claude Cowork | `business-founder,non-technical,pm,writer-marketer` | unchanged |
+| Using the CMS Coverage Connector | `non-technical,researcher` | removed from the catalogue in FIX-29 |
+
+The rescue branch prints; applying it is a judgement made row by row, and in every one of
+these six the judgement was no. The damage from the loose patterns is zero, and it is zero
+because a person read the rows rather than because the machine was right.
+
+Nothing to reopen: there is no replacement tag to send back to the page, because no
+replacement was ever made.
+
+## What the re-run found that nobody asked for
+
+The tightened patterns do not merely stop rescuing these rows. They stop seeing them.
+
+| row | what the tightened patterns say the card names |
+|---|---|
+| Design Systems in 2026 | nobody |
+| Claude Cowork Tutorial | nobody |
+| Complete Guide to Claude Cowork | nobody |
+| Lesson 7: Effective prompting techniques | nobody |
+| Getting started with Claude Cowork | nobody |
+
+Two holes, each the shadow of a fix:
+
+- `designer` matches `design system` with a space. The card says **Design-system owners**
+  with a hyphen, and `(?<!system )owner` now blocks the other half. A card that names a
+  designer twice names nobody.
+- `non-technical` matches `not a coder` but not **non-developer** or **non-coder** — the
+  two forms the catalogue actually uses. The lookbehinds correctly stopped these cards
+  being read as developer pages and left nothing in their place.
+
+These rows survive today only because a card naming nobody falls into the leave-alone
+bucket that FIX-16 established. They are tagged correctly and the machine cannot say why,
+which is the same condition that let the loose patterns run for three rounds. The next
+commit closes both holes and adds the cards to `test-role-buckets.py`.
