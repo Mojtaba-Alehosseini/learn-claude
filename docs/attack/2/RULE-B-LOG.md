@@ -574,5 +574,16 @@ Two holes, each the shadow of a fix:
 
 These rows survive today only because a card naming nobody falls into the leave-alone
 bucket that FIX-16 established. They are tagged correctly and the machine cannot say why,
-which is the same condition that let the loose patterns run for three rounds. The next
-commit closes both holes and adds the cards to `test-role-buckets.py`.
+which is the same condition that let the loose patterns run for three rounds.
+
+The next commit closes both, and not in the same way. `design[- ]system` is a one-word
+fix: a design-system owner is a designer and the hyphen was hiding it. The other four are
+not a missing role word. Adding non-developer to `non-technical` was tried first and it
+made things worse: the four cards then named exactly one role, which moved them out of the
+leave-alone bucket and into the drop bucket, and Rule B proposed stripping
+`writer-marketer`, `researcher`, `data-analyst` and `pm` off four rows that genuinely
+serve them. A card that tells you which job it is *not* for has not told you which job it
+is for. So non-developer, non-coder and not-a-programmer join the situation list, which is
+FIX-29's own ruling applied to a phrase it did not have in front of it. Rule B now reports
+zero rows carrying a tag their card denies, where before the fix it reported zero because
+it could not see these rows at all.

@@ -65,6 +65,36 @@ OCCUPATIONS = [
     ("School teachers with no computer-science background.", "names a role"),
 ]
 
+# The shadow the FIX-29 lookbehinds left. Each of these cards is real, each names its
+# reader plainly to a person, and after the lookbehinds landed the patterns read every one
+# of them as naming nobody - which is the leave-alone bucket, so nothing on the site went
+# wrong and nothing said anything either. FIX-30 found them by re-running the rescue
+# branch. Four are situations: a card that says which job it is not for has not said which
+# job it is for. The fifth names a job, and the hyphen was hiding it.
+BLINDED_SITUATIONS = [
+    "Non-developers whose work sits in folders of documents and spreadsheets instead of "
+    "in a chat window.",
+    "Non-coders deciding whether Cowork is worth switching to, who want to see failure "
+    "modes as well as demos.",
+    "Non-developers who want real prompting technique without any API or code talk.",
+    "Non-developers who want prompt templates and a folder setup they can copy today.",
+]
+
+BLINDED_ROLES = [
+    ("Design-system owners who want Claude to respect their system consistently.",
+     "designer"),
+]
+
+# And the matches those fixes must not bring back. A lookbehind that stops working is how
+# this started.
+STILL_BLOCKED = [
+    ("Non-developers whose work sits in folders of documents and spreadsheets.",
+     "developer"),
+    ("Non-coders deciding whether Cowork is worth switching to.", "developer"),
+    ("Medical coders, billers, and prior authorization specialists.", "developer"),
+    ("Design-system owners who want Claude to respect their system.", "business-founder"),
+]
+
 
 def main():
     failures = []
@@ -90,6 +120,30 @@ def main():
         else:
             print("  ok    %-46s -> %s" % (who[:46], b))
 
+    for who in BLINDED_SITUATIONS:
+        b = bucket(who)
+        if b != "neutral":
+            failures.append((who, b, "not-a-developer is a state, not a job"))
+            print("  FAIL  %-62s -> %s" % (who[:62], b))
+        else:
+            print("  ok    stays a situation: %s" % who[:52])
+    for who, want in BLINDED_ROLES:
+        named = {r for r, rx in rb.ROLE_WORDS.items() if rx.search(who)}
+        if want not in named:
+            failures.append((who, ",".join(sorted(named)) or "(nobody)",
+                             "must name %s" % want))
+            print("  FAIL  %-62s names %s"
+                  % (who[:62], ",".join(sorted(named)) or "(nobody)"))
+        else:
+            print("  ok    names %-12s %s" % (want, who[:46]))
+    for who, blocked in STILL_BLOCKED:
+        named = {r for r, rx in rb.ROLE_WORDS.items() if rx.search(who)}
+        if blocked in named:
+            failures.append((who, blocked, "must NOT name %s" % blocked))
+            print("  FAIL  %-62s still names %s" % (who[:62], blocked))
+        else:
+            print("  ok    never %-11s %s" % (blocked, who[:46]))
+
     print()
     if failures:
         print("%d routing fault(s):" % len(failures))
@@ -97,8 +151,11 @@ def main():
             print("  %r" % who)
             print("      went to %r; %s" % (got, why))
         return 1
-    print("%d situations, %d attributive uses and %d occupations all routed correctly."
-          % (len(SITUATIONS), len(ATTRIBUTIVE), len(OCCUPATIONS)))
+    print("%d situations, %d attributive uses, %d occupations, %d cards the lookbehinds "
+          "had blinded and %d matches that must stay blocked, all correct."
+          % (len(SITUATIONS) + len(BLINDED_SITUATIONS), len(ATTRIBUTIVE),
+             len(OCCUPATIONS) + len(BLINDED_ROLES), len(BLINDED_SITUATIONS)
+             + len(BLINDED_ROLES), len(STILL_BLOCKED)))
     return 0
 
 

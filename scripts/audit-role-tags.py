@@ -108,7 +108,10 @@ ROLE_WORDS = {
     "developer": r"(?<!non-)developer|(?<!non-)engineer|programmer|"
                  r"(?<!non-)(?<!medical )coder|devops|\bsre\b|on-call|"
                  r"technical team|software team",
-    "designer": r"designer|design team|design system|\bux\b|\bui\b",
+    # design[- ]system, because the catalogue writes it both ways and FIX-30 found
+    # "Design-system owners" naming nobody: the hyphen missed here and (?<!system )owner
+    # correctly blocked the other half.
+    "designer": r"designer|design team|design[- ]system|\bux\b|\bui\b",
     "data-analyst": r"analyst|data scientist|data team|analytics",
     # content only where it is a job, not wherever the word appears.
     "writer-marketer": r"writer|marketer|copywriter|journalist|editor|"
@@ -138,7 +141,17 @@ SITUATION = re.compile(
     # A learner is a state, not a job. "Methodical learners who want a single long
     # course" was being rescued into `student`, which would have replaced three
     # tags on a general beginner course.
-    r"|\blearners?\b|\bmethodical\b", re.I)
+    r"|\blearners?\b|\bmethodical\b"
+    # Not-a-developer is a state described by what the reader is not, and it is the
+    # phrase this catalogue actually uses: "Non-developers whose work sits in folders",
+    # "Non-coders deciding whether Cowork is worth switching to". FIX-29's lookbehinds
+    # correctly stopped these being read as developer pages; FIX-30 found they then named
+    # nobody, and were surviving on the leave-alone bucket by accident. Naming them a
+    # situation is the FIX-16 answer and it is now said out loud: a card that tells you
+    # which job it is *not* for has not told you which job it is for, and stripping its
+    # other tags on the strength of that would delete four real audiences.
+    r"|\bnon[- ]developers?\b|\bnon[- ]coders?\b|\bnon[- ]engineers?\b"
+    r"|\bnot a (?:developer|coder|programmer|engineer)\b", re.I)
 
 # An off-roster word used attributively is subject matter, not a reader: "patient data" is
 # what the work is about, "patients" is who the work is for.
