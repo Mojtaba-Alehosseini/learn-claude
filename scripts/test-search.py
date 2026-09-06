@@ -208,17 +208,23 @@ SUITE = [
      "first. A harvested row that does not surface for the question it was "
      "harvested for is a finding, so it is recorded here as a ranking failure "
      "rather than left looking like a hole in the shelves."),
-    ("developer", "how do i stop claude touching my tests", "bad",
-     "Red Green Refactor is OP With Claude Code",
-     "the right answer is second; third is a career podcast the site's own card says "
-     "has almost nothing you can copy into your terminal"),
+    ("developer", "how do i stop claude touching my tests", "ok",
+     ["Claude Code settings and permission rules"],
+     "Promoted. The answer to this question is a deny rule, and the settings page is "
+     "third. What leads is worth writing down rather than hiding: a connector for "
+     "reading your own lab results, matched on `tests` meaning a blood test. The "
+     "reader's word is not the catalogue's word here and no ranking change fixes that; "
+     "what fixes it is that the page they want is on the screen."),
     ("developer", "mcp server oauth", "ok",
      "Build an MCP Server from Scratch",
      ""),
     ("developer", "reduce token usage", "bad",
-     "A Guide to Claude Code 2.0",
-     "eight results, second is a designer's Figma article matched on cheaper; the "
-     "catalogue's own page on how context affects cost never appears"),
+     "A Better (and Cheaper) Figma MCP",
+     "Still wrong and it has moved. The Figma article now leads outright - it does "
+     "teach cutting token consumption, so it is not absurd, but it is a designer's "
+     "workaround for one tool. The page a developer wants is Maximizing the value of "
+     "your Claude Code sessions, which explains what a turn costs and which actions "
+     "reset the cache, and it is not in the results at all."),
     ("developer", "claude.md", "ok",
      ["Best practices for Claude Code", "Steering Claude Code"],
      "Two accepted answers. Best practices is the agent's: its card covers "
@@ -249,15 +255,20 @@ SUITE = [
      "official Excel doc. The video is still second; the official doc is "
      "third, and both are on the screen."),
     ("data-analyst", "can claude read my csv", "bad",
-     "Upload files to Claude",
-     "second is about Claude in Chrome reading Amplitude and Stripe; third is a page "
-     "the site itself calls useless as a guide to doing it today; the CSV article is "
-     "sixth, behind a Figma MCP setup guide"),
-    ("data-analyst", "sql", "bad",
-     "Answer the ad-hoc data question",
-     "Still wrong, and much closer: an analyst recipe leads where a generic "
-     "prompting tutorial did. Postgres MCP Pro and the DuckDB MCP server, "
-     "which are the answer to 'sql', are still not in the top three."),
+     "Introduction to Claude Analysis",
+     "Moved, and the whole gap is one field. The course that leads holds `csv` in a "
+     "question at weight 5; Upload files to Claude, the page that answers it, holds "
+     "`csv` only in its keywords at weight 3, and that difference is the entire "
+     "eleven points between them. The word is not missing from the card - it is in the "
+     "wrong field. The Honest Guide to CSV analysis is now third, which is a real "
+     "improvement on the Figma setup guide that used to sit there."),
+    ("data-analyst", "sql", "ok",
+     ["MotherDuck / DuckDB MCP Server", "Postgres MCP Pro"],
+     "Promoted. The previous reason named the answer itself - 'Postgres MCP Pro and "
+     "the DuckDB MCP server, which are the answer to sql, are still not in the top "
+     "three' - and the DuckDB server now leads outright. Postgres MCP Pro is seventh "
+     "of eight, so the answer is on the screen once rather than twice; that is the "
+     "next thing to improve here, not this row's verdict."),
     ("data-analyst", "pivot table", "ok",
      ["How to use Claude in Excel for HR", "Claude Code for Data Analysis"],
      "Was recorded as a content gap. FIX-30 opened the pages and the claim was "
@@ -369,9 +380,14 @@ SUITE = [
      "Is my data used for model training",
      ""),
     ("business-founder", "write customer emails", "bad",
-     "Claude AI for Teachers",
-     "Still wrong, same fault as 'write emails for me' from the other role: a "
-     "teachers' guide leads a query about customer email."),
+     "Anthropic Just Dropped Claude for Small Businesses (31 Skills)",
+     "Moved, and the teachers' guide is gone from the top - the questions rewrite did "
+     "that. What leads now is a video walking the small-business skill set, which does "
+     "include customer email among a dozen other things. Write in my voice is second. "
+     "Neither is a page about writing to a customer, and the honest reading is that "
+     "this catalogue does not hold one; the next round should open the closest pages "
+     "and settle it under the gap rule rather than leaving it recorded as a ranking "
+     "fault."),
     ("business-founder", "claude for bookkeeping", "ok",
      "Reconcile transactions across your accounts",
      "Promoted 2026-09-06. Bookkeeping is reconciling transactions, and that "
@@ -379,9 +395,13 @@ SUITE = [
      "synonym row joining bookkeeping to reconciliation is why, and the row "
      "says so."),
     ("business-founder", "keep my own voice", "bad",
-     "Using AI for Writing Feedback",
-     "top result is a Found only card, flagged over a year old, aimed at a student, "
-     "on a card that tells you to go find a human instead"),
+     "Understanding Claude's Personalization Features",
+     "Moved, and the student writing-feedback page the agent objected to is gone from "
+     "the top. What replaced it is the official page on where voice rules live - "
+     "preferences, project instructions, styles - which is closer than what it "
+     "replaced and still not what a founder means by keeping their own voice. Write in "
+     "my voice is the page that answers it and it is twelfth, behind four rows tied "
+     "on score that the tie-break happened to order above it."),
 
     # --- a writer ---------------------------------------------------------------
     ("writer-marketer", "make my writing not sound like ai", "ok",
