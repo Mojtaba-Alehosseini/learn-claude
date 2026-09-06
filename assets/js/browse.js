@@ -38,7 +38,7 @@
 
   var el = {};
   ["clearAll", "filtersPrimary", "filtersMore", "moreToggle", "moreGlyph", "q", "sort",
-   "appliedChips", "count", "notice", "results", "empty", "picks", "thin",
+   "appliedChips", "count", "notice", "results", "empty", "picks", "thin", "sortLabel",
    "openSheet", "closeSheet",
    "sheet", "sheetBody", "sheetConfirm"].forEach(function (id) {
     el[id] = document.getElementById(id);
@@ -519,6 +519,12 @@
     renderEmpty(out.length);
     renderThin(out.length);
     var picked = renderPicks(out);
+    /* D7. Which list this control sorts, said out loud. With a picks block above it,
+       the picks are not in its scope and the heading directly above it says so. */
+    if (el.sortLabel) {
+      el.sortLabel.textContent = Object.keys(picked).length ? "Sort everything else"
+                                                            : "Sort";
+    }
     var rest = out.filter(function (it) { return !picked[it.id]; });
     el.results.innerHTML = rest.map(function (it) { return LC.card(it); }).join("");
     /* A cell page was served a title naming the role and the level, which is the point

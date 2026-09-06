@@ -598,6 +598,14 @@ a.card-path:hover { text-decoration: underline; }
   max-width: 40ch;
 }
 
+/* D7. The sort sits with the list it governs. Right-aligned so it reads as a control on
+   that row rather than a second field under the search box. */
+.sort-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: var(--space-16);
+}
+
 /* D2. What the search could not find, said above the results rather than nowhere.
    Quiet: it is a caveat on a list that still has answers in it, not an error. Same
    measure as the count above it so the two read as one block. */
