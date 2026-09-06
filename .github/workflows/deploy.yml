@@ -88,6 +88,16 @@ jobs:
       - name: Check search still answers the sentences visitors typed
         run: python3 scripts/test-search.py
 
+      # The bite test for the thing that runs the bite tests. Every validator here proves
+      # it catches its own faults; not one of them proved build.sh could see the catch,
+      # and for an unknown number of rounds it could not - every gate was piped through
+      # `tail`, whose status is what the shell saw. This plants a fault, runs the whole
+      # build in a copy, and asserts it goes red at the gate meant to catch it. It is slow
+      # on purpose: it runs the real build, because anything faster would be testing
+      # something other than what runs.
+      - name: Check the build can see its own gates fail
+        run: python3 scripts/test-gates.py
+
       - name: Check the trust copy still says what the data supports
         run: python3 scripts/test-copy-claims.py
 
