@@ -1463,6 +1463,38 @@
         }
       ],
       "claims_checked_on": "2026-09-06"
+    },
+    "writer-marketer|builder": {
+      "role": "writer-marketer",
+      "level": "builder",
+      "picked_by": "ai",
+      "picked_on": "2026-09-06",
+      "pool_size": 4,
+      "fingerprint": "sha1:49b8c6e9001feac7",
+      "picks": [
+        {
+          "url": "https://github.com/conorbronsdon/avoid-ai-writing",
+          "reason": "The only candidate that does this role's own recurring job automatically - auditing a draft for the words and patterns that read as AI - and the only one whose whole word table and rewrite rules can be read and changed before you trust them.",
+          "subject": "an installable audit that strips AI tells from a draft"
+        },
+        {
+          "url": "https://ranthebuilder.cloud/blog/how-i-use-claude-cowork-to-write-with-ai-in-my-voice/",
+          "reason": "The only candidate that shows a whole working setup rather than one component - the instruction file, the style guide that bans AI phrasing, the drafting skill - file by file, by somebody writing in their own voice at the end of it.",
+          "subject": "a complete voice-preserving project, file by file"
+        },
+        {
+          "url": "https://academy.claude.com/use-cases/package-your-brand-guidelines-in-a-skill",
+          "reason": "The marketer's half of this role, and the only candidate about making rules apply to everything Claude produces rather than to one draft: typography, colour and application rules encoded once so every deck and document comes out on brand.",
+          "subject": "brand rules enforced across everything Claude makes"
+        }
+      ],
+      "runners_up": [
+        {
+          "url": "https://github.com/jamditis/claude-skills-journalism",
+          "reason": "Journalism-specific guardrails, readable and installable, and the closest thing here to a newsroom's own standards - but it serves one trade inside this role where the picks serve the whole of it."
+        }
+      ],
+      "claims_checked_on": "2026-09-06"
     }
   }
 }

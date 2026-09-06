@@ -82,6 +82,14 @@ CASES = [
      lambda i, p: p["cells"][first_cell(p)].update({"runners_up": []}),
      "record of what lost"),
 
+    # A pool at the minimum leaves one candidate unpicked, and the rule bends to that
+    # rather than demanding a loser be invented - but it does not bend to nothing. The
+    # cell that made this rule real, writer-marketer|builder, passes with its one; with
+    # none it must still fail. See the comment on the rule in validate-picks.py.
+    ("a minimum pool records none of what lost",
+     lambda i, p: p["cells"]["writer-marketer|builder"].update({"runners_up": []}),
+     "belongs in the record"),
+
     # Constraint 1. Rewrite every pick's publisher to one name — three from one
     # publisher is never legal, whatever the pool looks like.
     ("three picks from one publisher",

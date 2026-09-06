@@ -311,10 +311,20 @@ def check_cell(key, cell, pool, items_by_url):
         if not str(p.get("subject") or "").strip():
             err("pick %s has no subject line — the self-check cannot have run" % u)
 
-    # Runners-up: the falsifiability record. 2 or 3, each with a reason.
-    if not 2 <= len(runners) <= 3:
-        err("%d runners-up recorded — the record of what lost needs 2 or 3"
-            % len(runners))
+    # Runners-up: the falsifiability record. 2 or 3, each with a reason - unless the pool
+    # cannot supply that many, in which case everything that lost is the whole record and
+    # demanding more would mean inventing a loser. FIX-30 hit this on the first cell to
+    # sit exactly at MIN_POOL: four candidates, three picked, one left. The old rule was
+    # unsatisfiable there, and a rule that cannot be met is a rule that gets ignored.
+    lost = max(0, len(pool) - len(picks)) if pool else None
+    want = 2 if lost is None else min(2, lost)
+    if len(runners) > 3 or len(runners) < want:
+        if lost is not None and lost < 2:
+            err("%d runners-up recorded — the pool leaves %d candidate(s) unpicked and "
+                "every one of them belongs in the record" % (len(runners), lost))
+        else:
+            err("%d runners-up recorded — the record of what lost needs 2 or 3"
+                % len(runners))
     for r in runners:
         if r.get("url") not in items_by_url:
             err("runner-up %s is not in the catalogue" % r.get("url"))

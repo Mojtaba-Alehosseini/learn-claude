@@ -52,9 +52,9 @@ statement.
 
 | | |
 |---|---|
-| Cells with picks | **36** of 40 |
-| Picks | 107 |
-| Runners-up recorded | 105 |
+| Cells with picks | **37** of 40 |
+| Picks | 110 |
+| Runners-up recorded | 106 |
 
 **Cells with three or fewer candidates** (shown as-is, no picks): `non-technical|builder` (2), `teacher|builder` (2)
 
