@@ -253,3 +253,86 @@ repair arrived tangled with three other changes. A gate checked at the end of a 
 not a gate; it is a hope. If a step cannot hold the line on its own, it is not finished,
 and the honest move is to keep working on it rather than to write the breakage into the
 message.
+
+---
+
+## 8. Amendment 6, proposed by FIX-30 and not built this round
+
+**The phrase bonus pays the vaguer keyword.** `build-search-index.py` keeps every
+multi-word `keywords` and `questions` string whole, and `rank()` adds a flat +6 when
+`phrase in q` — when the row's stored string is a **substring of the query**. So a row is
+paid for writing *less* than the reader typed and paid nothing for writing *more*.
+
+FIX-30 was asked to find out why the hooks guide harvested last round is sixth for "claude
+code hooks". The arithmetic, from `tmp/trace2.py`:
+
+| | Hooks reference (Claude Code) | Automate actions with hooks (Claude Code) |
+|---|---|---|
+| `hooks` exact | questions, w5 × 3.74 = **18.7** | questions, w5 × 3.74 = **18.7** |
+| `hooks` stem | +9.0 | +9.0 |
+| `code` exact | questions, w5 × 1.10 = **5.5** | keywords, w3 × 1.10 = **3.3** |
+| `code` stem | +2.6 | +1.6 |
+| `claude` exact + stem | +0.5 | +0.3 |
+| phrase bonus | `claude code hooks` fires: **+6.0** | nothing fires: **0** |
+| **total** | **42.4** | **32.9** |
+
+The two rows match `hooks` identically. The whole 9.5-point gap is made of things that
+have nothing to do with the subject: 6.0 of it is the phrase bonus, and 3.4 is the
+difference between holding "claude" and "code" in `questions` rather than in `keywords`.
+
+The reference page earns the bonus because its keyword is the string `claude code hooks`,
+which is what the reader typed. The guide earns nothing - and it is not because its
+keywords are worse. Its keyword is `claude code hooks guide`: the query plus one word, the
+same subject said slightly more precisely. Being longer than the query is the whole of its
+disqualification. Three other rows on this query hold a phrase that contains it -
+`claude code hooks and skills`, `claude code hooks in twenty minutes`, `claude code hooks
+reference` - and every one of those strings earns nothing.
+
+**It is general, not one row's wording, and it is two faults rather than one.**
+`tmp/phrasescan.py` walks the suite; seven of the fifty-seven queries have this shape.
+
+*Fault A - a phrase longer than the query is worth nothing.*
+
+- **"claude code hooks"** — above. The guide's `claude code hooks guide` pays zero.
+- **"peer review"** — *Nature Portfolio's AI editorial policy* holds `peer review ai
+  policy` and fires no phrase at all. *Peer and AI Review of Student Writing* holds the
+  bare `peer review`, is paid +6, and wins. This is a recorded suite failure whose
+  accepted answer is the Nature page.
+- **"design system"** — *Design system drift review* holds `design system drift review`
+  and `design system drift claude`, fires neither, and is paid nothing. Three rows holding
+  the bare `design system` are paid +6.
+
+*Fault B - the bonus is flat and additive, so short keywords stack.*
+
+- **"claude code permissions"** — *Claude Code Essentials (ExamPro full course)* holds
+  both `claude code` and `claude code permissions`, so it fires twice and collects **+12**.
+  *Claude Code settings and permission rules*, which is the page about the subject, holds
+  `claude code permissions` and collects +6. Twelve against six, and the course takes
+  first place. The course is not wrong for the query; it is winning on arithmetic that
+  rewards holding a vague keyword *as well as* a precise one.
+
+
+
+**What the amendment should be, argued rather than assumed.** The obvious repair —
+also pay a phrase that *contains* the query — is not obviously right, because "claude code
+hooks in twenty minutes" containing "claude code hooks" is a good sign while "build it from
+our actual design system" containing "design system" is noise. Three candidates, for the
+next round to measure rather than for this one to pick:
+
+1. **Symmetric containment, scaled by overlap, and paid once.** Pay
+   `6 × (words in common ÷ words in the longer string)`, taking each row's best phrase
+   only. "claude code hooks guide" against "claude code hooks" pays 4.5; "claude code"
+   against the same query pays 4.0; "build it from our actual design system" against
+   "design system" pays 1.7. Fault A and fault B both close, and nothing needs a new list.
+2. **Pay the longest matching phrase only, per row.** The smallest change that closes
+   fault B on its own, and it also fixes the em-dash shape where one row holds both
+   "em dash" and "em dashes" and is paid for both.
+3. **Drop the flat +6 and let the field weights decide.** The bonus was added before
+   `skip_if` was indexed and before the stem expansion; it may be paying for a problem two
+   later mechanisms already solved. Removal is measurable in one line.
+
+**The gate is the same as every other step here: no `ok` query becomes `bad`, and the
+number is recorded per commit.** Whichever candidate is built, the suite is the judge, and
+if none of the three improves the number then the finding is written down and the bonus
+stays as it is. FIX-30 deliberately changed nothing here: tuning a weight to move one
+query is how a search stops being measurable.
