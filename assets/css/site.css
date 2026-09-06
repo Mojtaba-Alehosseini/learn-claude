@@ -571,6 +571,33 @@ a.card-path:hover { text-decoration: underline; }
   color: var(--text-primary);
 }
 
+/* D6. The badge on a card is a button now, so that a phone reader can reach the one
+   sentence that says what "Skimmed" means. It has to look exactly like the span it
+   replaced: no button chrome, no pointer change beyond the hand, and the same box the
+   tier classes already paint. */
+.badge-tap {
+  font: inherit;
+  border: 0;
+  padding: inherit;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* The definition, opened by a tap, next to the thing it defines. Deliberately plain:
+   it is a sentence, not a tooltip pretending to be a component. */
+.tier-pop {
+  display: block;
+  margin-top: var(--space-8);
+  padding: var(--space-8) var(--space-12);
+  background: var(--surface-raised, #faf9f5);
+  border: 1px solid var(--border-subtle, #cccbc8);
+  border-radius: var(--radius-8, 8px);
+  font: var(--weight-regular) var(--text-body-sm)/var(--leading-body-sm) var(--font-sans);
+  color: var(--text-primary);
+  max-width: 40ch;
+}
+
 /* D2. What the search could not find, said above the results rather than nowhere.
    Quiet: it is a caveat on a list that still has answers in it, not an error. Same
    measure as the count above it so the two read as one block. */

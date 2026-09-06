@@ -365,10 +365,20 @@
      committed to the item, and a route to the definition is worth one stop. */
   LC.tierKey = function (tier) { return LC.TIER[tier] ? tier : "listed"; };
 
+  /* D6. On a card this was a <span title>, and a title tooltip opens on hover and
+     nowhere else - not on tap, not on keyboard focus. Seven of Attack 3's ten agents
+     found "Skimmed" undefined on a phone, on the site's own second pillar.
+
+     A button, not a link: a link would add a focus stop to every card, which is the
+     cost D11 refused on purpose and seven Attack 2 agents praised the absence of.
+     tabindex="-1" keeps it out of the tab order, so a keyboard reader still reaches the
+     meaning the way D11 gave them - aria-describedby on the title link - and a sighted
+     phone reader can now tap it. Both halves of that trade, kept. */
   LC.badge = function (tier) {
     var key = LC.tierKey(tier), t = LC.TIER[key];
-    return '<span class="badge ' + t.cls + '" title="' + LC.esc(t.tip) + '">' +
-           LC.esc(t.label) + '</span>';
+    return '<button type="button" class="badge badge-tap ' + t.cls + '" tabindex="-1" ' +
+           'data-tier="' + LC.esc(key) + '" aria-hidden="true" title="' +
+           LC.esc(t.tip) + '">' + LC.esc(t.label) + '</button>';
   };
 
   LC.badgeLink = function (tier) {
@@ -654,6 +664,29 @@
      script writes goes through it. Set by the generated page before its scripts run. */
   LC.ROOT = window.LC_ROOT || "";
   LC.at = function (rel) { return LC.ROOT + rel; };
+
+  /* D6. Tapping a card's badge shows what it means, next to the badge, without
+     leaving the page. One delegated listener rather than one per card - a browse page
+     draws dozens of them. The panel is removed on the next tap anywhere, which is what
+     a reader expects of something that opened by being poked. */
+  LC.tierPop = function (btn) {
+    var open = document.querySelector(".tier-pop");
+    if (open) open.remove();
+    if (!btn || (open && open.dataset.forTier === btn.dataset.tier)) return;
+    var t = LC.TIER[LC.tierKey(btn.dataset.tier)];
+    if (!t) return;
+    var pop = document.createElement("span");
+    pop.className = "tier-pop";
+    pop.dataset.forTier = btn.dataset.tier;
+    pop.textContent = t.label + ": " + t.tip;
+    btn.insertAdjacentElement("afterend", pop);
+  };
+
+  document.addEventListener("click", function (e) {
+    var btn = e.target.closest && e.target.closest(".badge-tap");
+    if (btn) { e.preventDefault(); e.stopPropagation(); }
+    LC.tierPop(btn);
+  });
 
   window.LC = LC;
 
