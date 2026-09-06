@@ -815,8 +815,8 @@
       "level": "confident",
       "picked_by": "ai",
       "picked_on": "2026-09-06",
-      "pool_size": 37,
-      "fingerprint": "sha1:18d410159275a2c3",
+      "pool_size": 38,
+      "fingerprint": "sha1:6e0b2e2c22d3a704",
       "picks": [
         {
           "url": "https://code.claude.com/docs/en/best-practices",
@@ -856,8 +856,8 @@
       "level": "builder",
       "picked_by": "ai",
       "picked_on": "2026-09-06",
-      "pool_size": 54,
-      "fingerprint": "sha1:cd50245e1816c526",
+      "pool_size": 55,
+      "fingerprint": "sha1:f20f0c717f20676f",
       "picks": [
         {
           "url": "https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models",
