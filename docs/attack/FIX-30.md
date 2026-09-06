@@ -13,28 +13,39 @@ treatment and one re-pick.
 Both columns are the same fifty-seven queries, the same accepted answers, the same
 top-three rule, graded by `tmp/measure.py` against the round-start commit `6021258`.
 
-| role | before | after |
-|---|---|---|
-| business-founder | 4 of 6 | 3 of 6 |
-| data-analyst | 3 of 5 | 3 of 5 |
-| designer | 5 of 7 | **7 of 7** |
-| developer | 5 of 7 | 5 of 7 |
-| non-technical | 4 of 5 | 2 of 5 |
-| pm | 6 of 7 | 6 of 7 |
-| researcher | 4 of 5 | 3 of 5 |
-| student | 4 of 5 | 3 of 5 |
-| teacher | 4 of 6 | 3 of 6 |
-| writer-marketer | 4 of 4 | 4 of 4 |
-| **total** | **43 of 57** | **39 of 57** |
+| role | before | mid-round | after |
+|---|---|---|---|
+| business-founder | 4 of 6 | 3 of 6 | 4 of 6 |
+| data-analyst | 3 of 5 | 3 of 5 | **4 of 5** |
+| designer | 5 of 7 | 7 of 7 | **7 of 7** |
+| developer | 5 of 7 | 5 of 7 | 5 of 7 |
+| non-technical | 4 of 5 | 2 of 5 | 4 of 5 |
+| pm | 6 of 7 | 6 of 7 | **7 of 7** |
+| researcher | 4 of 5 | 3 of 5 | 4 of 5 |
+| student | 4 of 5 | 3 of 5 | 4 of 5 |
+| teacher | 4 of 6 | 3 of 6 | 4 of 6 |
+| writer-marketer | 4 of 4 | 4 of 4 | 4 of 4 |
+| **total** | **43 of 57** | **39 of 57** | **47 of 57** |
 
-**The rewrite cost four net, and eight gross.** Four queries were won — three by the gap
-re-check and one because `sql` finally returns the DuckDB server — and eight were lost, all
-of them by the questions rewrite.
+The middle column is not decoration. **It is where I pushed the round**, and the round's
+real finding lives in the difference between it and the third.
 
-That is the round's real finding and it needs to be said plainly rather than buried under
-the four wins: **rewriting the questions in the reader's words made the suite worse.**
+The questions rewrite lost eight queries and won four, for 39. I wrote that up as the
+honest result, argued in this file that fixing the eight would be buying them with the
+answer sheet, committed it, and pushed. The deploy went red: `test-search.py` exits 1 on a
+regression, and the gate Morteza set in FIX-27 - *no `ok` query becomes `bad`* - had been
+broken since the second commit of the round.
 
-## The eight, one at a time
+I had run the build eight times and it said `Done. Open index.html.` every time. Every
+check in `build.sh` is piped through `tail` to keep the output short, and a pipeline's
+exit status is the last command's, so `tail` had been returning zero over the top of every
+failing gate since the first one was added. `set -o pipefail` is now on the second line of
+the file, and the first thing it caught, after the suite, was a second gate that had also
+been failing quietly: two pick reasons counting a pool.
+
+The third column is the round after the gate was honoured.
+
+## The eight the rewrite lost, one at a time
 
 `tmp/qdiff.py` prints the old and new question set for every query that changed side.
 Reading them, the eight split two ways.
@@ -57,20 +68,39 @@ files; I wrote "spreadsheet". Every one of those is a word on the page that I re
 with a near-synonym because I was writing in the reader's voice and forgot that the
 reader's voice includes the noun.
 
-**They are not fixed this round, deliberately.** Fixing the five the suite named would be
-buying five queries with the answer sheet, and it would leave the same error untouched
-everywhere the suite happens not to look. The fix has a shape and it is suite-blind: a
-check that reads each row's page-derived fields — title, summary, `teaches` — and names
-every significant word in them that the row's `questions` never use. That finds the five,
-and it finds the ones nobody typed a query for. It belongs in the next round.
+**They are fixed, and I had argued they should not be.** The paragraph that stood here
+said fixing the five the suite named would be buying five queries with the answer sheet.
+That argument is not wrong about the risk and it was wrong about the rule: the gate does
+not permit a query that used to pass to stop passing while I write an essay about why. The
+words went back - *essay*, *peer*, *cite*, *competitor*, *excel*, *formulas*, and with
+them *remember* and *cost* - each in a sentence a person would type rather than in the
+suite's wording, which `check-questions.py` still refuses. All eight pass.
+
+Two of them needed the singular, which is a finding in its own right. I first wrote "so it
+remembers my style guide" and "what each plan costs a month". A plural in the card and a
+singular in the query meet only through the stemmer, which ranks at half weight and never
+admits, so the Projects row was not in the results for "make claude remember my stuff" at
+all - not low, absent. `remembers` is held by one row in the catalogue and `remember` by
+two, and the reader typed the one the card did not have.
+
+The risk the old paragraph named is real and it survives the fix: these eight were found
+because the suite pointed at them, and the same error is untouched wherever no query
+happens to look. **The suite-blind version of this check is still owed** - read each row's
+page-derived fields, title and summary and `teaches`, and name every significant word in
+them that the row's `questions` never use. That finds the eight without being told, and it
+finds the ones nobody typed a query for.
 
 ## What else the measurement says
 
 The `before` column is itself higher than FIX-29 reported, and for an honest reason: seven
 rows that were graded `content-gap` are now graded `ok`, so both columns are scored on
-them. Under the round-start rule the number would have read 38 → 30. Under today's rule it
-reads 43 → 39. Same catalogue, same code, different question asked — which is why the
-column header names the commit.
+them. Under the round-start rule the number would have read 38 at the start and 30 at the
+low point. Under today's rule it reads 43, 39 and 47. Same catalogue, same code, different
+question asked - which is why the column header names the commit.
+
+Of the four the round won outright, three came from the gap re-check - `typography`,
+`will ai design replace me` and `roadmap prioritisation` - and one from `sql` finally
+returning the DuckDB server. The other four points are eight losses undone.
 
 ---
 
@@ -89,7 +119,9 @@ flagged one near-miss — "keep it in our own voice" against the suite's "keep m
 **The contamination note from FIX-29 still stands and this round makes it concrete.** Three
 of the eight losses are rows that had been holding the query. A suite graded against data
 written with the suite in view was measuring its own reflection, and part of the 43 is
-still that reflection.
+still that reflection. The rewrite cut the questions carrying a three-word-or-longer suite
+query from seven to three, and the three that remain are the subject-naming question the
+new rule requires.
 
 ## The twenty read cold
 
@@ -279,6 +311,15 @@ ruling and I had to be shown it by the tool.
 `claude code`" — and left it in the file. It was fixed before the commit, but a draft that
 argues with itself in front of the reader is not a spec.
 
+**I pushed a round with the gate broken, and wrote a paragraph defending it.** The suite
+had been exiting 1 since the second commit. I did not see it because `build.sh` pipes every
+check through `tail` and a pipeline reports the last command's status, so the build said
+`Done.` eight times over eight failing runs. That is the worst thing in this round: not
+that the rewrite lost queries, but that I had no idea it had, and reasoned my way to a
+principled-sounding explanation for a number I should have treated as an alarm. The
+deploy caught it. A gate only the server enforces is a gate you find out about after you
+push.
+
 ## Whether it was in CLAUDE.md
 
 The word-dropping is not in CLAUDE.md and it is close to something that is: *"Say why an
@@ -292,9 +333,14 @@ page — and I made seven of them from summaries. `test-search.py` now enforces 
 rule that already existed.
 
 **Not in CLAUDE.md and it should be:** a check whose rule cannot be satisfied is a check
-that will be worked around. Two of them fired this round — the runners-up record demanding
-more losers than the pool has, and a `content-gap` verdict with no way to record what was
-ruled out. Both were fixed rather than bypassed, but only because there was time.
+that will be worked around, and a check whose failure cannot be seen is not a check at all.
+Both happened this round. The runners-up record demanded more losers than the pool has, and
+a `content-gap` verdict had no way to record what was ruled out; both were fixed rather
+than bypassed. And every gate in `build.sh` had been unenforced since the first one was
+written, because of a pipe.
+
+*Verify before claiming done: run it, open it, check the links* is already in CLAUDE.md.
+I ran it. What I did not do is check that running it could fail.
 
 Shell hygiene held except once: a heredoc carrying a JSON file failed to close, and per the
 rule I wrote it with the file tool instead of retrying the heredoc.
