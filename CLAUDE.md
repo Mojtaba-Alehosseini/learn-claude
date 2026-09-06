@@ -36,6 +36,9 @@ actually fits them instead of drowning in options.
 - Commit messages describe the job. Counts live in the round record.
 - A round ends pushed. Local commits are not done. The deploy runs on push, and a live
   site that lags the repo by a round is a site that lies about what we fixed.
+- A check whose failure cannot be seen is not a check. Every gate has a bite test: plant
+  its failure, run the build, watch it go red.
+- A failing gate is fixed or reverted before push. It is never explained.
 - Scratch files go in `tmp/` — gitignored — never outside the repo.
 
 ## Tech defaults (unless we decide otherwise)
