@@ -52,7 +52,6 @@
     return LC.at("browse.html");
   }
 
-  var fresh = LC.freshness(item);
   var author = LC.authorLine(item);
 
   function list(title, arr) {
@@ -141,9 +140,10 @@
        and printed the warning as a second paragraph. Since D6 the warning carries the
        date itself, so there is nothing left to rebuild and nothing to print twice. */
     '<p class="provenance">' +
-      LC.esc(fresh.checked) +
-      ' · ' + '<span class="' + fresh.cls + '">' + LC.esc(fresh.note) + '</span>' +
-      (fresh.updatedNote ? ' · ' + LC.esc(fresh.updatedNote) : '') +
+      LC.freshParts(item).map(function (p) {
+        return p.cls ? '<span class="' + p.cls + '">' + LC.esc(p.text) + '</span>'
+                     : LC.esc(p.text);
+      }).join(' · ') +
       ' · Found through ' + LC.esc(item.source) +
     '</p>' +
 

@@ -200,6 +200,32 @@
     return d.length === 7 ? d + "-01" : d;
   };
 
+  /* Every surface that draws a resource shows the same three facts about its
+     freshness: when we checked it, what its publication date means, and when the page
+     itself was last revised. They were assembled three times, in three orders, and each
+     surface dropped whichever part its author forgot - M1 restored one on the resource
+     page, and the path page kept the same bug for two more rounds.
+
+     One order, decided once: what we did, then what the page says about itself, then how
+     recently it moved. The caller wraps each part in whatever its layout needs and
+     cannot drop one by not naming it. scripts/test-fresh-line.py holds the list of
+     surfaces and fails if any of them stops asking. */
+  LC.freshParts = function (item) {
+    var f = LC.freshness(item);
+    var parts = [{ text: f.checked, cls: "" }];
+    if (f.note) { parts.push({ text: f.note, cls: f.cls }); }
+    if (f.updatedNote) { parts.push({ text: f.updatedNote, cls: "" }); }
+    return parts;
+  };
+
+  /* The same parts as spans, which is what two of the three surfaces want. */
+  LC.freshSpans = function (item) {
+    return LC.freshParts(item).map(function (p) {
+      return '<span' + (p.cls ? ' class="' + p.cls + '"' : '') + '>' +
+             LC.esc(p.text) + '</span>';
+    }).join("");
+  };
+
   LC.freshness = function (item) {
     var out = { checked: "Checked " + LC.fmtDate(item.checked), note: "", cls: "",
                 updatedNote: "" };
@@ -548,7 +574,6 @@
      heaviest because it is the judgment nobody else on the internet gives you. */
   LC.card = function (item, opts) {
     opts = opts || {};
-    var fresh = LC.freshness(item);
     var author = LC.authorLine(item);
 
     var pathLine = "";
@@ -596,11 +621,7 @@
         '<p class="card-skip"><span class="label">Skip if:</span> ' +
            LC.esc(item.skip_if) + '</p>' +
         pathLine +
-        '<div class="card-foot">' +
-          '<span>' + LC.esc(fresh.checked) + '</span>' +
-          (fresh.note ? '<span class="' + fresh.cls + '">' + LC.esc(fresh.note) + '</span>' : '') +
-          (fresh.updatedNote ? '<span>' + LC.esc(fresh.updatedNote) + '</span>' : '') +
-        '</div>' +
+        '<div class="card-foot">' + LC.freshSpans(item) + '</div>' +
       '</article>';
   };
 

@@ -113,6 +113,11 @@ gate 0 python3 scripts/build-data-js.py
 # was never in the ranking function - it was in the trigger, and the ranking test passed
 # happily throughout.
 gate 1 node scripts/test-browse-query.js
+# Every surface that draws a resource asks for the freshness line rather than
+# assembling one. A fix applied to one of three copies is not a fix: the resource
+# page was fixed for dropping the Updated date and the path page kept the same bug
+# for two more rounds.
+gate 1 python3 scripts/test-fresh-line.py
 
 echo
 echo "7/7  measured status, the picks, and the freshness exclusions"

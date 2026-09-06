@@ -189,6 +189,21 @@ def plant_superseded_path_step(root):
     return "pointed a path step at a superseded document"
 
 
+def plant_a_surface_that_builds_its_own_freshness_line(root):
+    """A surface goes back to assembling the freshness line itself.
+
+    This is how the bug arrived the first time: the path page named the parts it wanted,
+    named two of the three, and shipped that way for two rounds after the same fault had
+    been fixed on the resource page."""
+    p = os.path.join(root, "assets", "js", "paths.js")
+    text = io.open(p, encoding="utf-8").read()
+    call = "LC.freshSpans(it)"
+    assert call in text, "the path step no longer asks for the line"
+    io.open(p, "w", encoding="utf-8").write(
+        text.replace(call, "'<span>' + LC.esc(LC.freshness(it).checked) + '</span>'", 1))
+    return "made the path page assemble its own freshness line again"
+
+
 def plant_synonym_without_reason(root):
     """Every synonym carries the reason it exists, like every skip_if."""
     p = os.path.join(root, "data", "synonyms.json")
@@ -222,6 +237,9 @@ FAULTS = [
      "check-typed-numbers.py"),
     ("a live count typed into a document", plant_typed_count_in_a_doc,
      "state a count with no date beside it"),
+    ("a surface building its own freshness line",
+     plant_a_surface_that_builds_its_own_freshness_line,
+     "never asks for the freshness line"),
     ("a path step the catalogue knows is superseded", plant_superseded_path_step,
      "superseded step"),
     ("share pages keeping their placeholder head",
