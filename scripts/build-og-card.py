@@ -21,7 +21,10 @@ import os
 import re
 import sys
 
-from PIL import Image, ImageDraw, ImageFont
+try:
+    from PIL import Image, ImageDraw, ImageFont
+except ImportError:                                        # pragma: no cover
+    Image = None
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TOKENS = os.path.join(ROOT, "assets", "css", "tokens.css")
@@ -37,6 +40,20 @@ def token(name, fallback):
 
 
 def main():
+    # Pillow is the one thing in this repository that is not the standard library, and
+    # the deploy runner deliberately installs nothing - "Every build script uses the
+    # standard library only" is written into deploy.yml and was true until this file.
+    # So the card is a committed artefact and this is its regenerator: it runs wherever
+    # Pillow happens to exist and steps aside where it does not. What the build actually
+    # enforces is that the file is there, in check-share-pages.py.
+    #
+    # The cost is real and worth stating: on a machine without Pillow, a colour token can
+    # move and the card will not follow. Whoever changes tokens.css runs this.
+    if Image is None:
+        print("og card: Pillow is not installed here, so assets/og-card.png is left as "
+              "committed. Run this after changing tokens.css or the typeface.")
+        return 0
+
     paper = token("ivory-medium", "#f0eee6")
     ink = token("slate-dark", "#141413")
     clay = token("clay", "#d97757")
