@@ -164,13 +164,18 @@ files. A summary point with no parent is deleted.
 
 ## Already known — do not present these as new
 
-**This list is refreshed every round, and the refresh is part of the round.** It was not,
-once. Attack 3 ran with the Attack 1 version still here - "4 roles have no path", "0 of 353
-are reviewed", "171 of 353 have no publish date" - and a designer checked, found seven
-paths, and reported the briefing as stale. An attacker correcting its own instructions is
-the method working and the plan failing. **Refresh this list and `00-facts.md` together, or
-neither.**
+**The numbered half of this list is generated.** It used to say it was refreshed every
+round, and it was refreshed by remembering to refresh it. Attack 3 then ran with the
+Attack 1 version still in place - "4 roles have no path", "0 of 353 are reviewed", "171 of
+353 have no publish date" - and a designer checked, found seven paths, and reported the
+briefing itself as stale. An attacker correcting its own instructions is the method working
+and the plan failing.
 
-The current list lives in [`00-facts.md`](00-facts.md) under "Already known", where it sits
-beside the figures that date it, rather than here where it aged for two rounds. An agent
-may confirm or sharpen anything on it; the value is in what is *not* on it.
+`scripts/build-attack-facts.py` now writes it on every build, from the same measurement
+that writes `docs/STATUS.md`. A round that forgets cannot happen. The half with no number
+in it - the decisions, not the data - is written out in that script, because no
+measurement can produce it.
+
+The list lives in [`00-facts.md`](00-facts.md) under "Already known", where it sits beside
+the figures that date it, rather than here where it aged for two rounds. An agent may
+confirm or sharpen anything on it; the value is in what is *not* on it.

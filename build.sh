@@ -127,6 +127,10 @@ echo "7/7  measured status, the picks, and the freshness exclusions"
 # resource from every pool for ten months without one step going red.
 gate 20 python3 scripts/measure.py --status
 gate 0 python3 scripts/test-measure.py
+# The attack briefing's "Already known" list, from the same measurement. It used to
+# be refreshed by remembering to refresh it, and Attack 3 ran on the Attack 1
+# version - an agent checked the briefing's own numbers and found them stale.
+gate 1 python3 scripts/build-attack-facts.py
 # The picks are a committed model judgment, and they rot two ways: a stale pool (warned,
 # dated, ships) and a dead or ineligible pick (fails). CI checked these and this file
 # did not, so a wrong pick reached the server before it reached the person who made it.
