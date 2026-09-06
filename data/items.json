@@ -1895,14 +1895,7 @@
       "leverage code execution for reproducible calculations on csv files"
     ],
     "updated": "2026-06-21",
-    "date_source": "metadata",
-    "paths": [
-      {
-        "path": "numbers-you-can-defend",
-        "step": 3,
-        "of": 5
-      }
-    ]
+    "date_source": "metadata"
   },
   {
     "title": "Introduction to Claude Analysis",
@@ -2530,8 +2523,8 @@
     "paths": [
       {
         "path": "numbers-you-can-defend",
-        "step": 5,
-        "of": 5
+        "step": 4,
+        "of": 4
       }
     ]
   },
@@ -2589,8 +2582,8 @@
     "paths": [
       {
         "path": "numbers-you-can-defend",
-        "step": 4,
-        "of": 5
+        "step": 3,
+        "of": 4
       }
     ]
   },
@@ -14389,13 +14382,6 @@
     "teaches": [
       "evaluate case-by-case ethical use of ai in professional writing",
       "understand early journalistic guidelines regarding ai bylines"
-    ],
-    "paths": [
-      {
-        "path": "writing-you-sign",
-        "step": 4,
-        "of": 4
-      }
     ]
   },
   {
@@ -14446,6 +14432,13 @@
       "adapt professional journalistic codes for ai usage",
       "verify ai-assisted reporting work correctly",
       "hold newsroom staff accountable for automated content"
+    ],
+    "paths": [
+      {
+        "path": "writing-you-sign",
+        "step": 4,
+        "of": 4
+      }
     ]
   },
   {
@@ -19230,7 +19223,7 @@
       {
         "path": "numbers-you-can-defend",
         "step": 1,
-        "of": 5
+        "of": 4
       }
     ]
   },
@@ -19293,7 +19286,7 @@
       {
         "path": "numbers-you-can-defend",
         "step": 2,
-        "of": 5
+        "of": 4
       }
     ]
   },

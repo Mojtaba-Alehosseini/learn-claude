@@ -170,6 +170,25 @@ def plant_head_the_generator_cannot_find(root):
     return "moved the head anchor in resource.html so the generator misses it"
 
 
+def plant_superseded_path_step(root):
+    """A path sequences a document the catalogue knows is out of date.
+
+    Planted in the generator's input for the same reason as the head fault above:
+    data/paths.json is generated, so editing it heals on the next build. The path
+    literal inside build-paths.py is where a step is actually chosen.
+
+    The URL planted here is the one this rule was written for - the analysis tool launch
+    blog, whose own skip line says the feature is being replaced. It was step 3 of the
+    analyst path until the rule found it."""
+    p = os.path.join(root, "scripts", "build-paths.py")
+    text = io.open(p, encoding="utf-8").read()
+    good = '"url": "https://www.qwe.edu.pl/tutorial/claude-csv-data-analysis/"'
+    assert good in text, "the analyst path's third step has moved"
+    io.open(p, "w", encoding="utf-8").write(
+        text.replace(good, '"url": "https://claude.com/blog/analysis-tool"', 1))
+    return "pointed a path step at a superseded document"
+
+
 def plant_synonym_without_reason(root):
     """Every synonym carries the reason it exists, like every skip_if."""
     p = os.path.join(root, "data", "synonyms.json")
@@ -203,6 +222,8 @@ FAULTS = [
      "check-typed-numbers.py"),
     ("a live count typed into a document", plant_typed_count_in_a_doc,
      "state a count with no date beside it"),
+    ("a path step the catalogue knows is superseded", plant_superseded_path_step,
+     "superseded step"),
     ("share pages keeping their placeholder head",
      plant_head_the_generator_cannot_find,
      "serves the shell's placeholder"),

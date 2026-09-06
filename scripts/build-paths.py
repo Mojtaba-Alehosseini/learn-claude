@@ -29,6 +29,7 @@ Writes:
 """
 
 import json
+import re
 import sys
 
 ITEMS = "data/items.json"
@@ -138,10 +139,14 @@ PATHS = [
              "why": "Only now is this useful. It is the treatment for the symptoms in step "
              "2 — read in the other order it is a list of fixes for problems you have not "
              "learned to see yet."},
-            {"url": "https://ethicscentral.org/the-ethics-of-using-ai/",
+            {"url": "https://www.spj.org/spj-ethics-code-revision-project-2026/",
              "why": "Last, and last on purpose: everything above makes the work harder to "
              "detect, which is exactly why disclosure has to be the step you finish on. "
-             "Craft is what you owe the page. This is what you owe the reader."},
+             "Craft is what you owe the page. This is what you owe the reader. The "
+             "profession's current position, not its old one: the 2026 revision adds "
+             "language on verifying AI-assisted work and keeps the byline accountable "
+             "whatever produced the draft. The 2023 statement it replaces is still in "
+             "the catalogue if you want to see how fast this moved."},
         ],
     },
     {
@@ -231,20 +236,16 @@ PATHS = [
              "reading the retention terms afterwards changes nothing. Anthropic's own "
              "numbers, and narrow ones — consumer plans only, and the page never once "
              "says the word attachment."},
-            {"url": "https://claude.com/blog/analysis-tool",
-             "why": "Now the idea the rest of the path rests on: Claude can run real code "
-             "against your file instead of reasoning about the numbers in prose. Here for "
-             "the concept and not the click-path — it is nearly two years old and the "
-             "feature has since been renamed to Code execution and file creation, which "
-             "lives under Settings then Capabilities and can be switched off."},
             {"url": "https://www.qwe.edu.pl/tutorial/claude-csv-data-analysis/",
-             "why": "Fourth, because step 3 is only half of it: Claude has that "
-             "code-running mode and does not always reach for it. This is where a "
-             "capability becomes a habit, and it is the step that explains every total "
+             "why": "Now the idea the rest of the path rests on, and the reason it is one "
+             "step rather than two: Claude handles a CSV in two different ways — reading "
+             "the numbers as prose, or running real code over them — and it does not "
+             "always reach for the second. This is where that becomes a habit rather "
+             "than a fact you have read, and it is the step that explains every total "
              "that has ever come back confidently wrong."},
             {"url": "https://ccforeveryone.com/guides/claude-code-for-data-analysts",
              "why": "This one needs a terminal, so stop here if that is not your working "
-             "day — the four steps above stand on their own and an analyst who lives in "
+             "day — the steps above stand on their own and an analyst who lives in "
              "Excel has already got the whole point. If it is, this is where checking "
              "becomes reproducible: rerunnable scripts over silent cell edits, argued "
              "from Panko's finding that 94% of spreadsheets already contain errors."},
@@ -330,6 +331,17 @@ def _load_norm():
 
 norm = _load_norm()
 
+# D8. A path is the site telling someone what to do next, so a step that the catalogue
+# itself knows is out of date is the worst row on the site: the sequence lends it an
+# authority the card never claimed. Attack 3's writer followed the writer path to the
+# end and finished on a 2023 position statement, believing it current. The row's own
+# skip line said it predates the 2026 revision - and a path page does not render skip
+# lines, so the sentence that would have saved them was written and never shown.
+#
+# Two signals, because the catalogue records this in two places: the status field, and
+# the skip line where an editor said it in words.
+SUPERSEDED = re.compile(r"\b(superseded|replaced|no longer)\b", re.I)
+
 
 def main():
     items = json.load(open(ITEMS, encoding="utf-8"))
@@ -350,6 +362,7 @@ def main():
         costs = set()
         weakest = 3
         too_thin = []
+        stale = []
         for n, s in enumerate(p["steps"], 1):
             x = by_url.get(norm(s["url"]))
             if not x:
@@ -357,6 +370,13 @@ def main():
                 continue
             if RANK[x["tier"]] < MIN_TIER:
                 too_thin.append(f"step {n} is '{x['tier']}' — {x['title'][:50]}")
+            if x.get("status") == "outdated":
+                stale.append(f"step {n} is flagged outdated — {x['title'][:50]}")
+            else:
+                hit = SUPERSEDED.search(x.get("skip_if") or "")
+                if hit:
+                    stale.append(f"step {n} says '{hit.group(0)}' in its skip line "
+                                 f"— {x['title'][:50]}")
             minutes += MINUTES.get(x["time"], 45)
             costs.add(x["cost"])
             weakest = min(weakest, RANK[x["tier"]])
@@ -379,6 +399,11 @@ def main():
         if too_thin:
             problems.append(f"{p['id']}: below '{list(RANK)[::-1][MIN_TIER]}' — "
                             + "; ".join(too_thin))
+            continue
+
+        # An error, not a warning. Swap the step for the current document, or drop it.
+        if stale:
+            problems.append(f"{p['id']}: superseded step — " + "; ".join(stale))
             continue
 
         hours = minutes / 60
@@ -427,11 +452,16 @@ def main():
               f"· weakest step is '{p['weakest_tier']}'")
         for s in p["steps"]:
             print(f"     {s['step']}. [{s['time']:11}] {s['title'][:56]}")
+    print(f"\n{len(out)} path(s) -> {OUT}")
     if problems:
+        # FIX-31's rule, applied to this file. Until now a rejected path printed
+        # "NOT PUBLISHED", exited 0, and simply disappeared from the site - the failure
+        # mode where the check works perfectly and nobody ever learns that it fired. The
+        # D8 rule below it would have been invisible in exactly that way.
         print("\nNOT PUBLISHED:")
         for m in problems:
             print("   " + m)
-    print(f"\n{len(out)} path(s) -> {OUT}")
+        sys.exit("a path was rejected. Fix the step or drop it - it cannot ship silent.")
 
 
 if __name__ == "__main__":
