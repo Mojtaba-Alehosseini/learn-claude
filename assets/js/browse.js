@@ -304,8 +304,20 @@
             "see everything for this role</a>, or " +
             '<a href="' + LC.at("browse.html") + '">browse everything</a>.';
     } else {
+      /* "time is usually the one to loosen" was printed to people with no time filter
+         set. Attack 3's designer read it with a topic and a format chosen and wrote down
+         that the advice could not be followed. The rest of this page counts before it
+         offers - the level-below line runs the filters and prints the real number - so
+         this one counts too. */
+      var best = looseningWorth();
       msg = "<strong>Nothing matches all of those.</strong>" +
-            "Try removing one filter — time is usually the one to loosen.";
+            (best
+              ? "Without “" + LC.esc(best.label) + "” there " +
+                (best.n === 1 ? "is 1" : "are " + best.n) + ". " + dropHTML(best)
+              : "Every one of those is doing the emptying. " +
+                '<a href="' + LC.at("browse.html") + '?role=' +
+                encodeURIComponent(sel.roles[0] || "") + '">See everything for this ' +
+                "role</a> instead.");
     }
     el.empty.innerHTML = '<div class="empty prose">' + msg + '</div>';
   }
@@ -333,6 +345,37 @@
     var n = items.filter(function (it) { return matches(it, null); }).length;
     sel.levels = keep;
     return n;
+  }
+
+  /* Which single filter is worth dropping, measured the same way countAtLevel measures
+     its offer: clear one axis, count, put it back. Ties go to the axis furthest down
+     AXES, because the first three are the front-door questions a reader answered on
+     purpose and the ones below are the ones they added while narrowing. */
+  function looseningWorth() {
+    var best = null;
+    AXES.forEach(function (a) {
+      /* Never the role. It is the front-door question a reader answered on purpose, and
+         "drop your job" is not advice - dropping it here turned a designer's dead end
+         into eight results for everybody. The way out of a role that has nothing is the
+         link this sentence already offers. */
+      if (a.key === "roles" || !sel[a.key].length) return;
+      var keep = sel[a.key];
+      sel[a.key] = [];
+      var n = items.filter(function (it) { return matches(it, lastRanked); }).length;
+      sel[a.key] = keep;
+      if (n && (!best || n >= best.n)) {
+        best = { key: a.key, n: n,
+                 label: keep.length === 1 ? a.labels[keep[0]] : a.label };
+      }
+    });
+    return best;
+  }
+
+  /* The button needs a handler of its own: data-axis toggles one value and data-remove
+     removes one value, and this clears a whole axis. */
+  function dropHTML(best) {
+    return '<button type="button" class="btn btn-secondary" data-drop="' + best.key +
+           '">Drop “' + LC.esc(best.label) + '”</button>';
   }
 
   function offerHTML(below) {
@@ -550,6 +593,8 @@
     if (opt) { toggle(opt.dataset.axis, opt.dataset.value); return; }
     var rm = e.target.closest("[data-remove]");
     if (rm) { toggle(rm.dataset.remove, rm.dataset.value); return; }
+    var dr = e.target.closest("[data-drop]");
+    if (dr) { sel[dr.dataset.drop] = []; render(); return; }
   });
 
   el.moreToggle.addEventListener("click", function () { moreOpen = !moreOpen; render(); });
