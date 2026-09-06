@@ -62,3 +62,50 @@ cannot reach this card, because the card's word is "feedback" and that is in no 
 the four are two places out of sight. The one at 21 is Vanderbilt's AI-detector page for a
 student asking whether their university will know - the highest-stakes query in the suite,
 and the row was made reachable at all only in FIX-26.
+
+---
+
+## After FIX-29
+
+Three of the table's rows are closed and one is reclassified.
+
+| query | was | now |
+|---|---|---|
+| writer-marketer, em dash | content gap | **passing** - and it was never a gap. Wikipedia's Signs of AI writing, already in the catalogue, has a section headed "Overuse of em dashes". The card never used the words. |
+| developer, claude code permissions | content gap | **passing** - the settings page was harvested from the Claude Code docs. |
+| teacher, marking essays | vocabulary | **passing** - the grading synonym row gained `feedback`, and synonyms were allowed to admit. |
+| developer, claude code hooks | content gap | **ranking** - the guide was harvested and comes sixth for its own question while the reference stays first. |
+
+### What is left
+
+| role | query | first result today |
+|---|---|---|
+| non-technical | write emails for me | Claude AI for Teachers: Complete Beginner's Guide to Getti |
+| student | will my university know i used ai | Generative AI and Academic Integrity |
+| researcher | does claude make up citations | 3 Mind Blowing Claude & Consensus Research Workflows | No  |
+| teacher | make a lesson plan | Claude for K-12 teachers - product page with worked prompt |
+| teacher | grading | Teaching AI Fluency (Anthropic Academy) |
+| developer | claude code hooks | Hooks reference (Claude Code) |
+| developer | how do i stop claude touching my tests | Red Green Refactor is OP With Claude Code |
+| developer | reduce token usage | A Guide to Claude Code 2.0 and getting better at using cod |
+| data-analyst | can claude read my csv | Upload files to Claude (Help Center) |
+| data-analyst | sql | Answer the ad-hoc data question |
+| business-founder | write customer emails | Claude AI for Teachers: Complete Beginner's Guide to Getti |
+| business-founder | keep my own voice | Using AI for Writing Feedback |
+
+### Still content gaps
+
+| role | query |
+|---|---|
+| data-analyst | pivot table |
+| pm | roadmap prioritisation |
+| pm | stakeholder update |
+| pm | prioritisation |
+| pm | prioritization |
+| designer | will ai design replace me |
+| designer | typography |
+
+Walked in FIX-29 and empty: the Help Centre's Claude-in-Excel articles hold no pivot tables; the Academy's use-case gallery, Product department, holds neither roadmap nor stakeholder. Typography and "will ai design replace me" were not walked this round.
+
+The vocabulary failures that remain are the ones the questions rewrite is for, and that rewrite is waiting at its checkpoint.
+
