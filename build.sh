@@ -43,6 +43,9 @@ python3 scripts/test-role-buckets.py | tail -1
 # questions[] is the highest-weighted field and the suite is the judge; a query written
 # into the data would be a pass bought with the answer sheet.
 python3 scripts/check-questions.py | tail -1
+# A content gap says the catalogue holds nothing. Every gap recorded before FIX-30 was
+# written from cards and every one was wrong; a gap now carries the pages it opened.
+python3 scripts/test-gap-claims.py | tail -1
 
 echo
 echo "4b/6 sitemap, generated rather than typed"

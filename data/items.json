@@ -21140,6 +21140,7 @@
       "claude in excel for headcount planning",
       "trace a reference error across tabs",
       "write a formula from a plain description",
+      "build a pivot table by describing what i want in it",
       "i inherited a compensation model"
     ],
     "id": "r-c54106432e"
@@ -27680,7 +27681,8 @@
       "your own brand guidelines"
     ],
     "teaches": [
-      "package brand guidelines into a reusable Skill that keeps generated output on-brand"
+      "package brand guidelines into a reusable Skill that keeps generated output on-brand",
+      "set the typography - heading and body typefaces, weights and fallback fonts - that Claude applies to every file it makes"
     ],
     "keywords": [
       "package brand guidelines as skill",
@@ -27690,8 +27692,8 @@
     "questions": [
       "brand guidelines packaged as a skill",
       "stop re-explaining our colours and fonts",
-      "make every deck come out on brand",
-      "one place for the rules that everything follows"
+      "set our typography once and have it stick",
+      "make every deck come out on brand"
     ],
     "id": "r-14a4f7d474"
   },

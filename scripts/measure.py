@@ -170,9 +170,9 @@ def content_gaps():
         spec.loader.exec_module(mod)
     except SystemExit:
         return []
-    return [(role, q, (why or "").strip())
-            for role, q, verdict, _frag, why in getattr(mod, "SUITE", [])
-            if verdict == "content-gap"]
+    return [(row[0], row[1], (row[4] or "").strip())
+            for row in getattr(mod, "SUITE", [])
+            if row[2] == "content-gap"]
 
 
 def pct(a, b):

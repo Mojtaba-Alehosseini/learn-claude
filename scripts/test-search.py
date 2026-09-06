@@ -40,10 +40,17 @@ is not measuring anything.
            the first result alone was a stricter test than anyone agreed to, and it
            disagreed with section 5 of the search spec from the day both were written.
     content-gap - the query fails because this catalogue holds nothing on the subject, not
-           because the ranking is wrong. Checked by hand, with the count of rows
-           mentioning the subject at all recorded in the reason. Never asserted: no
-           stemmer, no synonym and no tie-break can conjure a resource. measure.py
-           collects these into STATUS.md as the harvest list.
+           because the ranking is wrong. Never asserted: no stemmer, no synonym and no
+           tie-break can conjure a resource. measure.py collects these into STATUS.md as
+           the harvest list.
+
+           A content gap is a claim about the whole catalogue, so it carries its
+           evidence. A content-gap row has a sixth field, `ruled_out`: the pages that
+           were opened before the verdict, each as "URL - what the page says". Cards are
+           not pages. Every gap this suite recorded before FIX-30 was written from cards,
+           and every one of them was wrong - see docs/attack/2/GAP-RECHECK.md. This
+           file refuses to run a content-gap row that has no ruled_out, and
+           scripts/test-gap-claims.py proves the refusal fires.
     bad  - the top result was wrong. The reason is the agent's, quoted. Not asserted,
            because these are known open findings, not regressions - but the top result
            of the day is recorded, and --strict fails when it moves, so the note cannot
@@ -251,11 +258,16 @@ SUITE = [
      "Still wrong, and much closer: an analyst recipe leads where a generic "
      "prompting tutorial did. Postgres MCP Pro and the DuckDB MCP server, "
      "which are the answer to 'sql', are still not in the top three."),
-    ("data-analyst", "pivot table", "content-gap",
-     "",
-     "Three rows mention pivot tables in passing and none is about them. The "
-     "agent said so at the time: there is nothing here, and the honest answer "
-     "is an empty result rather than three approximations."),
+    ("data-analyst", "pivot table", "ok",
+     ["How to use Claude in Excel for HR", "Claude Code for Data Analysis"],
+     "Was recorded as a content gap. FIX-30 opened the pages and the claim was "
+     "false. The HR headcount tutorial's own prompt is 'Create a pivot table "
+     "showing headcount by department and level, then add a stacked bar chart "
+     "to visualize it'. The CSV guide teaches 'build a pivot of total revenue "
+     "by month and region' and sets it against rebuilding the PivotTable by "
+     "hand each month. Two answers, not three approximations. The HR card "
+     "taught pivot tables and no question said the words; that was fixed from "
+     "the page and it now leads."),
     ("data-analyst", "stop claude making up numbers", "ok",
      ["Reduce hallucinations"],
      "Promoted. The objection was an education marketing page first for a "
@@ -273,47 +285,53 @@ SUITE = [
     ("pm", "claude for user research", "ok",
      "Claude Code for product managers",
      ""),
-    ("pm", "roadmap prioritisation", "content-gap",
-     "Claude Code for Product Managers",
-     "Five rows contain 'prioritis'/'prioritiz' anywhere: a literature review, "
-     "feedback themes, weekly prep, grant options and one PM skill pack whose "
-     "card Attack 2 read and found is not about prioritisation. Nothing here is "
-     "about prioritising a roadmap."),
+    ("pm", "roadmap prioritisation", "ok",
+     ["Lenny's Product Skills", "Product Management Plugin"],
+     "Was recorded as a content gap on the strength of a card. FIX-30 opened "
+     "both pages. Lenny's ships a skill called Roadmap Prioritization - "
+     "'Transform a chaotic backlog into a high-ROI strategic plan based on "
+     "evidence and appetite'. The official plugin ships /roadmap-update, which "
+     "'Plans and reprioritizes roadmaps' with Now/Next/Later and OKR-aligned "
+     "formats. The old reason said the skill pack 'is not about "
+     "prioritisation'; the page says otherwise, and cards are not pages."),
     ("pm", "competitor analysis", "ok",
      ["Build the competitive comparison doc"],
      "Promoted. The objection was that the second result was tagged for "
      "product marketing and sales enablement rather than for a PM. Rule B has "
      "since read that card against its page and it carries `pm`; it builds a "
      "competitive comparison from scratch, which is the query."),
-    ("pm", "stakeholder update", "content-gap",
-     "",
-     "Nothing here is about writing a stakeholder update. Six rows contain the "
-     "word stakeholder; the closest, the official PM plugin, teaches "
-     "installing a plugin and running slash commands. The suite's recorded "
-     "objection - a journalism ethics code and an equity-analyst workflow "
-     "matched on the word update - is gone, and what replaced it is a plugin "
-     "page, not an answer."),
-    ("pm", "prioritisation", "content-gap",
-     "Lenny's Product Skills for Claude Code",
-     "Same hole as 'roadmap prioritisation', and the reason the British and "
-     "American spellings now return the same two rows is step 4 working. Both "
-     "rows are still about something else."),
-    ("pm", "prioritization", "content-gap",
-     "Work through grant options in chat",
-     "The American spelling of a subject this catalogue does not cover. It "
-     "returns the same rows as the British one now, which is the spelling fix "
-     "landing on an empty shelf."),
+    ("pm", "stakeholder update", "ok",
+     ["Product Management Plugin"],
+     "Was recorded as a content gap because the card 'teaches installing a "
+     "plugin and running slash commands'. FIX-30 opened the plugin page: one "
+     "of the six commands is /stakeholder-update, which 'Generates tailored "
+     "stakeholder updates' for executives, engineering or customers. The row "
+     "that was called not-an-answer is the answer, and it already leads."),
+    ("pm", "prioritisation", "ok",
+     ["Lenny's Product Skills"],
+     "Not a hole. The row that leads ships Roadmap Prioritization, Evaluating "
+     "Trade-Offs and Goal Setting and OKRs - read off the repository page in "
+     "FIX-30, not off our card. The spelling fix was landing on a full shelf "
+     "and we recorded it as empty."),
+    ("pm", "prioritization", "ok",
+     ["Lenny's Product Skills"],
+     "The American spelling of a subject this catalogue does cover. Same page, "
+     "same skills; the two spellings return the same rows, which is step 4 "
+     "working, and what they return is an answer."),
 
     # --- a designer -------------------------------------------------------------
     ("designer", "claude for figma", "ok",
      "Figma",
      ""),
-    ("designer", "will ai design replace me", "content-gap",
-     "How to Use Claude Code for UX Writing",
-     "Nothing in the catalogue is about AI replacing designers: zero rows "
-     "contain 'replace me' or 'replace design' in any field. The query returns "
-     "42 results because its other words are common, and not one of them is on "
-     "the subject."),
+    ("designer", "will ai design replace me", "ok",
+     ["Good from Afar, But Far from Good"],
+     "Was recorded as a content gap on a word search: no row contained "
+     "'replace me' or 'replace design'. FIX-30 opened the page instead. NN/g's "
+     "study ends on exactly this question - 'The real work of design remains "
+     "in the judgment, empathy, and intent that only human designers can "
+     "provide' - and it is second. No page here is *about* designers being "
+     "displaced; this one answers the question with evidence, which is what "
+     "the reader typing it wants."),
     ("designer", "design system", "ok",
      "design system",
      ""),
@@ -327,12 +345,13 @@ SUITE = [
     ("designer", "design critique", "ok",
      "Design plugin",
      ""),
-    ("designer", "typography", "content-gap",
-     "",
-     "One row mentions typography anywhere - Encode the brand as a skill - and "
-     "it mentions it in the summary, which is not indexed. A design directory "
-     "that cannot answer 'typography' has a hole in its shelves, not in its "
-     "search."),
+    ("designer", "typography", "ok",
+     ["Package your brand guidelines in a skill"],
+     "The old reason got the mechanism right and the conclusion backwards. The "
+     "word did sit in a summary, which is not indexed - but FIX-30 opened the "
+     "page and found a labelled Typography field naming heading and body "
+     "typefaces, weights and fallbacks. The hole was in the card, not in the "
+     "shelves. `teaches` now says what the page says and the query returns it."),
     ("designer", "stop claude inventing pixel values", "ok",
      ["Claude for Designers in 2026"],
      "Promoted, and this is cause 5's own query. The card carrying the literal "
@@ -491,6 +510,31 @@ def load():
     return by_id, kw
 
 
+def gap_claims(rows):
+    """Complaints about content-gap rows that assert an empty shelf with no evidence.
+
+    A gap says the catalogue holds nothing. That is a claim about every row here, and
+    it can only be settled by opening pages - the card is somebody's summary of a page
+    and has been wrong every time it was checked. So the row must carry `ruled_out`:
+    the pages opened, each one a URL and what it actually said.
+    """
+    out = []
+    for row in rows:
+        if row[2] != "content-gap":
+            continue
+        ruled = row[5] if len(row) > 5 else None
+        if not ruled:
+            out.append((row[1], "no ruled_out: nothing says which pages were opened"))
+            continue
+        if isinstance(ruled, str) or not all(isinstance(r, str) for r in ruled):
+            out.append((row[1], "ruled_out must be a list of strings"))
+            continue
+        for r in ruled:
+            if "http" not in r:
+                out.append((row[1], "ruled_out entry names no page: %s" % r[:60]))
+    return out
+
+
 def adhoc(queries):
     by_id, kw = load()
     for q in queries:
@@ -507,9 +551,9 @@ def adhoc(queries):
 def emit(path):
     """Write every suite query's top three, for the cross-runtime check to compare."""
     by_id, kw = load()
-    rows = [{"role": role, "query": q,
-             "top3": [iid for iid, _s in rank(q, kw)[:3]]}
-            for role, q, _v, _f, _w in SUITE]
+    rows = [{"role": row[0], "query": row[1],
+             "top3": [iid for iid, _s in rank(row[1], kw)[:3]]}
+            for row in SUITE]
     with open(path, "w", encoding="utf-8") as f:
         json.dump({"generated": "scripts/test-search.py --emit", "queries": rows}, f,
                   ensure_ascii=False, indent=1)
@@ -529,11 +573,23 @@ def main():
     if args:
         return adhoc(args)
 
+    unevidenced = gap_claims(SUITE)
+    if unevidenced:
+        print("A content gap is a claim about the whole catalogue. These rows make it")
+        print("with no evidence that any page was opened:")
+        for q, why in unevidenced:
+            print("  %-42s %s" % (q[:42], why))
+        print()
+        print("Open the closest pages, record each as \"URL - what the page says\" in a")
+        print("sixth field, and grade the row on what you find. See the header.")
+        return 1
+
     by_id, kw = load()
     fails, changed, xpass = [], [], []
     ok_n = bad_n = gap_n = 0
 
-    for role, q, verdict, frag, why in SUITE:
+    for row in SUITE:
+        role, q, verdict, frag, why = row[0], row[1], row[2], row[3], row[4]
         hits = rank(q, kw)
         top = by_id[hits[0][0]]["title"] if hits else ""
         top3 = [by_id[i]["title"] for i, _s in hits[:3]]
