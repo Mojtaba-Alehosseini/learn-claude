@@ -104,19 +104,22 @@ SUITE = [
      "Promoted under the top-three rule. The agent's objection was that a "
      "university login page led and Reduce hallucinations was second. It is "
      "still second, and second is on the reader's screen."),
-    ("non-technical", "write emails for me", "bad",
-     "Claude AI for Teachers",
-     "Still wrong, and differently wrong: a teachers' beginner guide now leads "
-     "where a paid Coursera specialization did. Write in my voice, the row "
-     "that answers this, is still not in the results."),
+    ("non-technical", "write emails for me", "ok",
+     ["Write in my voice"],
+     "Promoted, on the previous reason's own terms: it said \"Write in my voice, "
+     "the row that answers this, is still not in the results\". It leads them "
+     "now. Nothing was tuned to do that - the row's questions got the reader's "
+     "words in FIX-30 and its page's nouns back in FIX-31."),
     ("non-technical", "use claude on my excel file", "ok", "Upload files to Claude",
      ""),
 
     # --- a student --------------------------------------------------------------
-    ("student", "will my university know i used ai", "bad",
-     "Generative AI and Academic Integrity",
-     "the top answer to the most frightening question a student has is a Found only "
-     "card the site says nobody opened"),
+    ("student", "will my university know i used ai", "ok",
+     ["Generative AI and Academic Integrity"],
+     "Promoted. The objection was never relevance - it was that the top answer to "
+     "the most frightening question a student has was a card the site admitted "
+     "nobody had opened. D1 verified and re-tiered it in FIX-24; it is `previewed` "
+     "and still first, so the row now claims only what somebody actually did."),
     ("student", "help me revise for exams", "ok",
      "How to Use AI to Help You Prepare for Quizzes and Exams",
      ""),
@@ -254,14 +257,14 @@ SUITE = [
      "Promoted. The objection was that a paywalled video outranked the free "
      "official Excel doc. The video is still second; the official doc is "
      "third, and both are on the screen."),
-    ("data-analyst", "can claude read my csv", "bad",
-     "Introduction to Claude Analysis",
-     "Moved, and the whole gap is one field. The course that leads holds `csv` in a "
-     "question at weight 5; Upload files to Claude, the page that answers it, holds "
-     "`csv` only in its keywords at weight 3, and that difference is the entire "
-     "eleven points between them. The word is not missing from the card - it is in the "
-     "wrong field. The Honest Guide to CSV analysis is now third, which is a real "
-     "improvement on the Figma setup guide that used to sit there."),
+    ("data-analyst", "can claude read my csv", "ok",
+     ["Upload files to Claude"],
+     "Promoted, and the diagnosis that fixed it is worth keeping. The whole gap was "
+     "one field: the course that led held `csv` in a question at weight 5 while "
+     "Upload files to Claude held it only in keywords at weight 3, and that "
+     "difference was the entire eleven points between them. FIX-31 put `csv` into "
+     "the page's own question - it accepts csv files and the page says so - and it "
+     "leads. The word was never missing from the card; it was in the wrong field."),
     ("data-analyst", "sql", "ok",
      ["MotherDuck / DuckDB MCP Server", "Postgres MCP Pro"],
      "Promoted. The previous reason named the answer itself - 'Postgres MCP Pro and "

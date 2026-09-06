@@ -352,11 +352,13 @@ data, so they are never written by hand.
 
 ## 11. What is weak, said plainly
 
-**598 resources and 36 path steps.** "Start with these three" now covers 36 of the 40
-cells with 107 comparative picks, so a person filtering to "not a coder / used it a
-little" is told which three to open first instead of being handed 72 cards in file order.
-What remains uneven is everything below that block: three picks are ranked, and the other
-69 in that cell are not.
+**The picks block covers most cells and nothing below it is ranked.** The counts - how
+many resources, how many path steps, how many cells carry picks - are in
+[STATUS.md](STATUS.md), regenerated on every build, because this paragraph carried typed
+ones for three rounds and every one of them had rotted by FIX-31. A person filtering to
+"not a coder / used it a little" is told which three to open first instead of being handed
+the whole cell in file order. What remains uneven is everything below that block: three
+picks are ranked, and the rest of the cell is not.
 
 **Three quarters of the catalogue has no publication date we can stand behind, and that
 number went UP on purpose.** On 5 September 2026 every row carrying a date was checked
@@ -373,20 +375,38 @@ unsupported and `UNVERIFIED` is deliberately not stale. One of them is a 2023 ar
 host that blocks us. The rule that refuses to round up cuts both ways, and this is the
 side that costs something.
 
+**Search answers most of what strangers typed at it, and the rest is written down.** Ten
+hostile readers typed fifty-seven sentences at this site in September 2026 and most of them
+failed. Four rounds of work later, fifty of the fifty-seven put an answer somebody accepted
+in the top three, and no role is below half — the target the
+[search spec](specs/2026-09-06-search-rebuild.md) set, in the terms it set them. The seven
+that still fail are not a mystery: each is traced to a cause in
+[the failure table](attack/2/SEARCH-FAILURES.md), two of them to one general fault in how
+the phrase bonus is paid and two to another in how an inflection is scored, both written up
+as spec amendments rather than tuned away. The measured figures live in
+[STATUS.md](STATUS.md) and are regenerated on every build; the number above is not typed
+anywhere a reader sees it.
+
+Two things about that number are weaker than it looks. It is measured on the top three
+rather than the first result, which is what the readers scored but is a generous rule. And
+part of the earlier improvement was a debt being repaid rather than ground gained: the
+field the search leans on hardest had been written by somebody who had read the test, and
+rewriting it blind made the number fall before it rose.
+
 **83% of the catalogue is "Skimmed".** We read an outline. That is honestly labelled, but
 it is a weaker claim than the site's own pitch implies, and the strongest label is still
 empty.
 
 **The advanced end is thin, and many of the catalogue's `builder` rows left it on purpose.**
-`builder` now holds 94 rows, down from 182, because Rule A stopped counting somebody
+`builder` shrank by more than half in FIX-25, because Rule A stopped counting somebody
 else's recipe as something you built. That is the honest number rather than a worse one:
 two thirds of the old `builder` was Cowork recipes with connectors attached.
 
-What is underneath has not changed shape. `developer|builder` holds 58 items from 20
-publishers, 16 of them independent. `non-technical|builder` holds two rows, both from
-Anthropic, with no independent voice at all. `business-founder|builder` holds 13 from 3
-publishers. `student|builder` is empty. The advanced end is not thin in general; it is thin for everyone who does not
-write code, and Rule A made that visible rather than causing it.
+What is underneath has not changed shape. `developer|builder` holds most of it, from
+twenty publishers. `non-technical|builder` holds two rows, both from Anthropic, with no
+independent voice at all. `student|builder` is empty. The advanced end is not thin in
+general; it is thin for everyone who does not write code, and Rule A made that visible
+rather than causing it. The current figures per cell are in [STATUS.md](STATUS.md).
 
 **The catalogue is 59% Anthropic's own writing, and that figure fell for a bad reason.**
 It was 61.4% on 5 September 2026 and was recorded in the backlog as decided knowingly.

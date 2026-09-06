@@ -109,3 +109,50 @@ Walked in FIX-29 and empty: the Help Centre's Claude-in-Excel articles hold no p
 
 The vocabulary failures that remain are the ones the questions rewrite is for, and that rewrite is waiting at its checkpoint.
 
+
+---
+
+# The final table — FIX-31
+
+The search work started in FIX-27 with a spec and ends here. Seven queries of the
+fifty-seven still return the wrong thing at the top; every one has been traced rather than
+guessed at, and every trace is reproducible with `tmp/trace2.py`.
+
+Three that were in this table are gone, each promoted on the previous entry's own terms
+rather than on a new judgement: **write emails for me** (its reason said the row that
+answers it "is still not in the results" - it leads them now), **will my university know i
+used ai** (the objection was that the answer was a card nobody had opened; D1 re-tiered it
+and it is `previewed`), and **can claude read my csv** (the recorded accepted answer is
+first). The content gaps are gone too, and not because they were solved: every one of them
+was a claim made from a card, and the pages said otherwise - `GAP-RECHECK.md`.
+
+| role | query | what leads | where the answer sits | cause |
+|---|---|---|---|---|
+| developer | claude code hooks | Hooks reference (Claude Code) | *Automate actions with hooks* 6th of 49 | the phrase bonus. Both match `hooks` identically; the entire gap is a flat +6 for holding a string that is a **substring of the query**, plus which field holds "claude" and "code". Spec amendment 6. |
+| developer | reduce token usage | A Better (and Cheaper) Figma MCP | *Maximizing the value of your Claude Code sessions* 8th of 10 | vocabulary. The page that explains what a turn costs says "cost", "budget" and "cache"; the reader says "reduce token usage". Its own page's words are not the reader's here, and the round did not invent a bridge. |
+| teacher | grading | Teaching AI Fluency | *Using AI for Writing Feedback* reaches the query **only** through the synonym row | the expansion ceiling. The leader holds the literal word `grading` in keywords: 15.8. The answer holds no form of it and arrives on the synonym alone, at half weight: 6.2. Nothing in the current design can close nineteen points with an expansion. Spec amendment 7. |
+| researcher | does claude make up citations | 3 Mind Blowing Claude & Consensus Research Workflows | *Reduce hallucinations* 29th of 43 | the same ceiling. The citation synonym lifted it into the results and cannot lift it to the top, because the leader holds the reader's own words in its questions. |
+| business-founder | keep my own voice | Understanding Claude's Personalization Features | *Write in my voice* 13th of 70 | one common verb. Both rows hold `voice` in a question at weight 5 - 17.2 each, identical. The whole difference is `keep`, which the personalisation page happens to hold in a question and the row named *Write in my voice* does not. This is the ranking working: two matched words beat one. |
+| business-founder | write customer emails | Anthropic Just Dropped Claude for Small Businesses | *Write in my voice* 2nd of 27 | probably not a ranking fault at all. Nothing here is a page **about** writing to a customer; the leader lists customer email among a dozen prebuilt skills and the runner-up is about voice. **Gap candidate** - and under the FIX-30 rule a gap is a claim, so it needs its pages opened before it can be recorded as one. |
+| teacher | make a lesson plan | How Teachers Can Create Interactive Classroom Activities | *Agent Skills for K-12 Teachers* 2nd of 70, shipping a `k12-lesson-planning` skill | also a gap candidate. The closest rows are a skills repository and an argument **against** the lesson-plan-in-one-prompt habit. Neither is a page that helps a teacher write one. Same rule: open the pages first. |
+
+## What the table says as a whole
+
+Two of the seven are one general fault, already written up as **spec amendment 6**: the
+phrase bonus pays a row for holding a string shorter than what the reader typed, and pays
+nothing for a longer, more exact one.
+
+Two more are a second general fault, which becomes **spec amendment 7**: an expansion -
+stem or synonym - scores at half weight and never admits, so a row that reaches a query
+only through one can never beat a row holding the literal word. That rule is right for a
+synonym, which is somebody else's word. It is doubtful for an inflection: `remember` and
+`remembers`, `formula` and `formulas` are the same word, and FIX-31 had to repair two rows
+by hand for exactly that reason. The amendment asks whether an inflection should be
+treated as the word itself.
+
+Two are gap candidates that cannot be recorded as gaps until their pages are opened, which
+is the rule FIX-30 wrote after every previous gap turned out to be false.
+
+**One is not a fault.** *keep my own voice* loses on a matched verb, which is the ranking
+doing its job. Fixing it would mean writing the query's words into a card, and the guard
+that refuses that exists for a reason.

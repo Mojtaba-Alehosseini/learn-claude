@@ -157,6 +157,31 @@ first keystroke, and served gzipped; raw bytes are not what a phone downloads or
 Stated properly, the budget is **150 KB transferred**, and the index is at 146 KB against
 103 KB before this round. The build prints both numbers on every run.
 
+### The final size, FIX-31
+
+|  | at this spec's close | now |
+|---|---|---|
+| `data/search-keywords.json`, raw | 507 KB | 567 KB |
+| the same file gzipped, which is what a phone downloads | 146 KB | **166 KB** |
+| indexed words | 4,878 | 4,971 |
+| stem groups | 1,000 covering 2,491 words | 1,017 covering 2,564 words |
+| spelling forms mapped | 76 | 81 |
+| synonym words | 52 | 92 |
+| phrases | 4,059 | 5,201 |
+
+**The index is over the 150 KB budget this section set, at 166 KB transferred, and the
+cause is not the search rebuild.** Almost none of the growth is machinery: stem groups,
+spelling forms and synonyms together added a few dozen entries. The phrases grew by more
+than a thousand, and every one of those is a `questions[]` string, because the phrase map
+keeps each question whole. FIX-30 rewrote every row's questions and FIX-31 lengthened some
+of them; the index grew with the catalogue's own prose.
+
+That is a budget decision rather than a bug, and it is stated here rather than quietly
+exceeded. Amendment 6 is the place it gets settled: two of the three candidate repairs to
+the phrase bonus - paying only a row's longest matching phrase, or dropping the flat bonus
+- would let the phrase map shrink, and one of them may remove it entirely. Whoever builds
+that amendment should measure the transferred size in the same commit.
+
 **The phrase map was measured by removal, and it stays.** It is the largest section after
 the postings - 4,059 entries, 123 KB raw and 35 KB gzipped, a quarter of the transferred
 file - and building without it takes the suite from 24 to 23. One query needs it:
@@ -199,6 +224,50 @@ the verdict, and the fragment that must appear in the top three.
 Every query that changed verdict was re-read by hand before the round closed, because a
 query can pass for the wrong reason; thirteen were, and the judgement on each is written
 into its suite row.
+
+### The final numbers, FIX-31
+
+Three rounds later, and on a stricter definition than the table above used: `tmp/measure.py`
+grades **top three, today's accepted answers, both columns** - the round-start commit's own
+ranker and index on one side and today's on the other, so the only thing that differs is
+the work being measured.
+
+| role | FIX-29 close | FIX-31 close |
+|---|---|---|
+| business-founder | 4 of 6 | 5 of 6 |
+| data-analyst | 3 of 5 | 5 of 5 |
+| designer | 5 of 7 | 7 of 7 |
+| developer | 5 of 7 | 5 of 7 |
+| non-technical | 5 of 5 | 5 of 5 |
+| pm | 6 of 7 | 7 of 7 |
+| researcher | 4 of 5 | 4 of 5 |
+| student | 5 of 5 | 5 of 5 |
+| teacher | 4 of 6 | 4 of 6 |
+| writer-marketer | 4 of 4 | 4 of 4 |
+| **total** | **45 of 57** | **50 of 57** |
+
+**The target set in this section - 40 of 57 and no role below half - is met, and so is the
+second half of it:** the lowest role is `teacher` at 4 of 6, and `data-analyst`, the role
+this spec said had to move most, is 5 of 5.
+
+Two cautions belong beside that number and not underneath it.
+
+**It is not the same measurement as the 22 and the 24 above.** Those were counted when six
+rows were graded `content-gap` and excluded; every one of those gaps was re-checked in
+FIX-30 against the pages and every one was false, so all of them are graded now. A number
+that grades more rows is not comparable to one that graded fewer, which is why the columns
+name their commits.
+
+**Part of the earlier numbers was contamination.** FIX-29 found that the `questions` field
+had been written by somebody who had read the suite; FIX-30 rewrote it blind and the number
+fell before it rose. Some of what looks like improvement here is that debt being repaid.
+
+### The failure table stays
+
+Seven queries still return the wrong thing at the top, each traced to a cause:
+`docs/attack/2/SEARCH-FAILURES.md`. Two are spec amendment 6, two are spec amendment 7,
+two are gap candidates awaiting the page-opening the gap rule now demands, and one is the
+ranking working correctly on a query where two matched words beat one.
 
 ---
 
