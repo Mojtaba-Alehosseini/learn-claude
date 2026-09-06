@@ -48,10 +48,20 @@ OUT_DIRS = ("r", "c", "p")
 # sentence of Skip if: is appended. See section 2 of the spec.
 SHORT = 120
 
-# What a preview actually shows, measured on opengraph.xyz against the built pages
-# rather than taken from memory: X and LinkedIn truncate a title past about 60
-# characters, and most previews cut a description around 200. Over those limits the
-# reader sees an ellipsis where the judgement should be.
+# What a preview actually shows. The title figure holds: X and LinkedIn truncate past
+# about 60 characters, and every generated title is inside it.
+#
+# The description figure does not. This comment used to say "most previews cut a
+# description around 200", and that number was written from memory while claiming to be
+# measured. Pasting three live pages into opengraph.xyz on 2026-09-07 got the real
+# answer: previews often show about 125 characters and truncate the rest on mobile, and
+# the resource page was flagged for it at 128.
+#
+# 200 is kept for now, and the reason is a trade rather than an oversight. The For: line
+# has a median length of 104 characters, so a 125 cap keeps most of them whole - but the
+# Skip if: sentence the spec appends would then almost never fit, and losing the second
+# half of every description is the larger loss. docs/attack/FIX-33-unfurl.md holds the
+# measurement; the number moves when that trade is ruled, not before.
 TITLE_MAX = 60
 DESC_MAX = 200
 
