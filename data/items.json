@@ -728,7 +728,7 @@
     "questions": [
       "plans and pricing",
       "which plan should i buy",
-      "what do i get for the money",
+      "the monthly cost of each plan",
       "the current price and limits"
     ],
     "teaches": [
@@ -1579,7 +1579,7 @@
     "questions": [
       "claude for excel add-in",
       "can it work inside my spreadsheet",
-      "why is this formula wrong",
+      "why are my formulas wrong",
       "change an assumption and keep the model intact"
     ],
     "teaches": [
@@ -11322,7 +11322,7 @@
     "questions": [
       "nature journals ai policy",
       "what must i declare about ai in my methods",
-      "can ai review a manuscript",
+      "can a peer reviewer put a manuscript into ai",
       "the rules before i submit"
     ],
     "teaches": [
@@ -12000,7 +12000,7 @@
     ],
     "questions": [
       "ask ai for feedback not a rewrite",
-      "nobody can read my draft before the deadline",
+      "nobody can read my essay before the deadline",
       "criticism that leaves the words mine",
       "how do i ask for honest comments"
     ],
@@ -12314,7 +12314,7 @@
       "departmental ai rules"
     ],
     "questions": [
-      "how to acknowledge ai use in a citation",
+      "cite ai in apa mla or harvard style",
       "how much does a disclosure need to say",
       "the rules differ between my two courses",
       "a real example not a one-line note"
@@ -14163,7 +14163,7 @@
     ],
     "questions": [
       "create and manage a project",
-      "put my style guide where it will be used",
+      "so it will remember my style guide next time",
       "upload reference documents once",
       "the exact steps to set one up"
     ],
@@ -19207,7 +19207,7 @@
     ],
     "questions": [
       "upload a file to claude",
-      "how do i get my spreadsheet in front of it",
+      "get my excel or csv file in front of it",
       "which file types does it take",
       "how big can a file be"
     ],
@@ -25779,7 +25779,7 @@
     "questions": [
       "build a competitive comparison document",
       "where do we win and where do we lose",
-      "a deck and a feature matrix from their materials",
+      "a deck and a feature matrix from a competitor's own materials",
       "keep the comparison up to date"
     ],
     "id": "r-dbad74772b"

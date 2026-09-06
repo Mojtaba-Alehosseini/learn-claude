@@ -296,7 +296,7 @@
       "picks": [
         {
           "url": "https://academy.claude.com/tutorials/teach-claude-your-way-of-working-using-skills",
-          "reason": "Written for the complaint this level actually has - you keep giving Claude the same instructions and they keep not sticking - and it is about the habit itself rather than a workflow that happens to end in a skill. Two rows arrived in this pool on 2026-09-06 that do end in a customised skill, which is why this sentence no longer claims to be the only one.",
+          "reason": "Written for the complaint this level actually has - you keep giving Claude the same instructions and they keep not sticking - and it is about the habit itself rather than a workflow that happens to end in a skill. Rows arrived in this pool on 2026-09-06 that do end in a customised skill, which is why this sentence no longer claims to be the only one.",
           "subject": "making your instructions stick as a reusable skill"
         },
         {
@@ -1046,7 +1046,7 @@
         },
         {
           "url": "https://academy.claude.com/use-cases/build-financial-models",
-          "reason": "Levelled to `confident` under Rule A on 2026-09-06 - its card describes running a recipe or using a connector someone else built, not building one - so it left this pool on a definition rather than on merit. Two other rows left this pool the same way on the same day for the same reason; the record keeps one of them rather than three copies of one sentence.",
+          "reason": "Levelled to `confident` under Rule A on 2026-09-06 - its card describes running a recipe or using a connector someone else built, not building one - so it left this pool on a definition rather than on merit. Other rows left this pool the same way on the same day for the same reason; the record keeps one of them rather than a copy of one sentence for each.",
           "cause": "re-levelled-out-of-the-pool"
         },
         {
