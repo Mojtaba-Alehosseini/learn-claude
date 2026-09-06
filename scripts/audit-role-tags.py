@@ -114,9 +114,16 @@ ROLE_WORDS = {
     "designer": r"designer|design team|design[- ]system|\bux\b|\bui\b",
     "data-analyst": r"analyst|data scientist|data team|analytics",
     # content only where it is a job, not wherever the word appears.
+    # writes a lot|for a living|...: a reader can be named by what they do rather than
+    # what they are called, and every other entry here is a job title. "Anyone who writes
+    # a lot of internal communication" is a writer, and Rule B had no way to hear it -
+    # two attacks in a row missed the row because of it. Qualified by frequency on
+    # purpose: a bare \bwrites?\b matches 32 rows in this catalogue and \bwriting\b
+    # matches 34, and nearly all of them are developers writing code or skills.
     "writer-marketer": r"writer|marketer|copywriter|journalist|editor|"
                        r"content (marketer|designer|writer|strateg|team)|"
-                       r"content marketing|communications|marketing team",
+                       r"content marketing|communications|marketing team|"
+                       r"writes? (a lot|for a living|professionally|all day|every day)",
     "non-technical": r"anyone|everyone|non-technical|not a coder|office|"
                      r"somebody|no technical background",
 }
@@ -193,18 +200,41 @@ def main():
         if gallery_only and not it["url"].startswith(GALLERY):
             continue
         who = str(it.get("who_for") or "")
-        if not who or NEUTRAL.match(who):
+        if not who:
             continue
+        # FIX-16's ruling is about the DROP direction: a card naming nobody in particular
+        # must not lose the tags it has. It was implemented as `continue`, which also
+        # silenced the ADD direction on 168 rows - including "Write in my voice", whose
+        # card opens "Anyone who writes a lot of internal communication" and carried no
+        # writer tag through two attacks. Neutral now means "keep every tag", not "do not
+        # look".
+        neutral_card = bool(NEUTRAL.match(who))
 
         # Two questions, two pieces of evidence. See ADDING A TAG above.
         named = {r for r, rx in ROLE_WORDS.items() if rx.search(who)}
         card = who + " " + str(it.get("skip_if") or "")
         named_anywhere = {r for r, rx in ROLE_WORDS.items() if rx.search(card)}
         tags = it.get("roles") or []
-        keep = [r for r in tags if r in named]
-        lose = [r for r in tags if r not in named]
+        keep = tags if neutral_card else [r for r in tags if r in named]
+        lose = [] if neutral_card else [r for r in tags if r not in named]
         add = sorted(named - set(tags))
         add_anywhere = sorted(named_anywhere - set(tags))
+
+        if neutral_card:
+            # Suggestions only. Six rows land here today and five of them are wrong -
+            # "newsroom ownership" read as an owner, "doesn't have design skills" read as
+            # a designer. That is the cost of the direction that cannot delete anything,
+            # and it is the right side to be wrong on: a bad suggestion is read and
+            # ignored, a missing one is a reader who never finds the page.
+            # "Anyone who ..." naming non-technical is the opening-word test restating
+            # itself, and it accounts for most of what this branch would print. Dropping
+            # it leaves the suggestions a person would actually read.
+            worth = [r for r in add_anywhere if r != "non-technical"]
+            if worth:
+                suggested.append((it, worth, [r for r in worth if r not in add]))
+            else:
+                neutral.append(it)
+            continue
 
         if not named:
             # Ruling 2, in order: a situation beats an off-roster word, and an off-roster

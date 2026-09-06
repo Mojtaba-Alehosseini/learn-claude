@@ -27436,9 +27436,10 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "non-technical",
       "business-founder",
-      "pm"
+      "non-technical",
+      "pm",
+      "writer-marketer"
     ],
     "level": "builder",
     "topics": [

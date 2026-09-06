@@ -1468,9 +1468,9 @@
       "role": "writer-marketer",
       "level": "builder",
       "picked_by": "ai",
-      "picked_on": "2026-09-06",
-      "pool_size": 4,
-      "fingerprint": "sha1:49b8c6e9001feac7",
+      "picked_on": "2026-09-07",
+      "pool_size": 5,
+      "fingerprint": "sha1:a1445a24bb7808b5",
       "picks": [
         {
           "url": "https://github.com/conorbronsdon/avoid-ai-writing",
@@ -1484,7 +1484,7 @@
         },
         {
           "url": "https://academy.claude.com/use-cases/package-your-brand-guidelines-in-a-skill",
-          "reason": "The marketer's half of this role, and the only candidate about making rules apply to everything Claude produces rather than to one draft: typography, colour and application rules encoded once so every deck and document comes out on brand.",
+          "reason": "The marketer's half of this role, and the only candidate whose rules govern how the work looks rather than how it sounds: typography, colour and application rules encoded once so every deck and document comes out on brand, instead of being re-specified in every request.",
           "subject": "brand rules enforced across everything Claude makes"
         }
       ],
@@ -1492,9 +1492,13 @@
         {
           "url": "https://github.com/jamditis/claude-skills-journalism",
           "reason": "Journalism-specific guardrails, readable and installable, and the closest thing here to a newsroom's own standards - but it serves one trade inside this role where the picks serve the whole of it."
+        },
+        {
+          "url": "https://academy.claude.com/use-cases/my-voice",
+          "reason": "The same idea as the second pick in its shortest form - a skill built from your own sent mail so drafts stop sounding generic - and it loses to that pick rather than to the others, because a builder wants the setup shown file by file and this shows the finished recipe. It also needs your sent mail connected before it does anything, which the second pick does not."
         }
       ],
-      "claims_checked_on": "2026-09-06"
+      "claims_checked_on": "2026-09-07"
     }
   }
 }

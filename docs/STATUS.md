@@ -2,7 +2,7 @@
      this file, and a number typed here would be silently replaced. Change the
      data, then run ./build.sh. -->
 
-# Status — measured 2026-09-06
+# Status — measured 2026-09-07
 
 Every figure below is computed from `data/` at build time. Nothing here is typed.
 THE-PROJECT.md and README point at this file rather than repeating it.
@@ -14,7 +14,7 @@ THE-PROJECT.md and README point at this file rather than repeating it.
 | Resources | **588** |
 | Distinct publishers | 171 |
 | Distinct hosts | 129 |
-| Learning paths | **7**, 36 steps |
+| Learning paths | **7**, 35 steps |
 | Anthropic's own | 343 of 588 — **58%** |
 | No publish date (`UNVERIFIED`) | 442 of 588 — 75% |
 | Carrying an `updated` date | 96 of 588 — 16% |
@@ -54,7 +54,7 @@ statement.
 |---|---|
 | Cells with picks | **37** of 40 |
 | Picks | 110 |
-| Runners-up recorded | 106 |
+| Runners-up recorded | 107 |
 
 **Cells with three or fewer candidates** (shown as-is, no picks): `non-technical|builder` (2), `teacher|builder` (2)
 
@@ -78,7 +78,7 @@ relaxes): `non-technical|builder` (1 pub, 2 items), `teacher|builder` (2 pub, 2 
 | `pm` | 11 / 7p / 4x | 40 / 15p / 15x | 52 / 21p / 24x | 4 / 4p / 3x |
 | `designer` | 8 / 6p / 5x | 11 / 8p / 6x | 22 / 13p / 11x | 7 / 6p / 5x |
 | `business-founder` | 37 / 13p / 9x | 61 / 22p / 20x | 45 / 7p / 5x | 9 / 3p / 2x |
-| `writer-marketer` | 20 / 9p / 6x | 35 / 24p / 22x | 23 / 10p / 6x | 4 / 3p / 3x |
+| `writer-marketer` | 20 / 9p / 6x | 35 / 24p / 22x | 23 / 10p / 6x | 5 / 3p / 3x |
 
 ## Live resources the freshness rule excludes from every pool
 
@@ -90,21 +90,21 @@ comparative recommendation should not point at something a year stale.
 
 | item | publisher | published | days | level |
 |---|---|---|---|---|
-| Guidance on AI detection, and why we're disabling Turnitin | Vanderbilt University | 2023-08-16 | 1117 | basic |
-| AI prompt engineering: A deep dive | Anthropic | 2024-09-05 | 731 | confident |
-| Tips for building AI agents | Anthropic | 2025-02-13 | 570 | builder |
-| Anthropic Education Report: How University Students Use Cl | Anthropic | 2025-04-08 | 516 | basic |
-| Mastering Claude Code in 30 minutes | Anthropic | 2025-05-22 | 472 | confident |
-| Lesson 1: Introduction to AI Fluency \| AI Fluency: Framewo | Anthropic | 2025-06-12 | 451 | never-used |
-| Lesson 2B: The 4D Framework \| AI Fluency: Framework & Foun | Anthropic | 2025-06-12 | 451 | never-used |
-| Lesson 7: Effective prompting techniques (Deep Dive) \| AI  | Anthropic | 2025-06-12 | 451 | basic |
-| The Model Context Protocol (MCP) | Anthropic | 2025-06-16 | 447 | builder |
-| Advancing Claude for Education | Anthropic | 2025-07-09 | 424 | basic |
-| Claude for Small Business (Back-Office AI, honest review) | Eigent AI | 2025-07-29 | 404 | basic |
-| Prompting 101 \| Code w/ Claude | Anthropic | 2025-07-31 | 402 | basic |
-| Claude Code best practices \| Code w/ Claude | Anthropic | 2025-07-31 | 402 | confident |
-| Using AI for Writing Feedback | Northeastern University | 2025-08-01 | 401 | basic |
-| Anthropic Education Report: how educators use Claude | Anthropic | 2025-08-27 | 375 | basic |
+| Guidance on AI detection, and why we're disabling Turnitin | Vanderbilt University | 2023-08-16 | 1118 | basic |
+| AI prompt engineering: A deep dive | Anthropic | 2024-09-05 | 732 | confident |
+| Tips for building AI agents | Anthropic | 2025-02-13 | 571 | builder |
+| Anthropic Education Report: How University Students Use Cl | Anthropic | 2025-04-08 | 517 | basic |
+| Mastering Claude Code in 30 minutes | Anthropic | 2025-05-22 | 473 | confident |
+| Lesson 1: Introduction to AI Fluency \| AI Fluency: Framewo | Anthropic | 2025-06-12 | 452 | never-used |
+| Lesson 2B: The 4D Framework \| AI Fluency: Framework & Foun | Anthropic | 2025-06-12 | 452 | never-used |
+| Lesson 7: Effective prompting techniques (Deep Dive) \| AI  | Anthropic | 2025-06-12 | 452 | basic |
+| The Model Context Protocol (MCP) | Anthropic | 2025-06-16 | 448 | builder |
+| Advancing Claude for Education | Anthropic | 2025-07-09 | 425 | basic |
+| Claude for Small Business (Back-Office AI, honest review) | Eigent AI | 2025-07-29 | 405 | basic |
+| Prompting 101 \| Code w/ Claude | Anthropic | 2025-07-31 | 403 | basic |
+| Claude Code best practices \| Code w/ Claude | Anthropic | 2025-07-31 | 403 | confident |
+| Using AI for Writing Feedback | Northeastern University | 2025-08-01 | 402 | basic |
+| Anthropic Education Report: how educators use Claude | Anthropic | 2025-08-27 | 376 | basic |
 
 ## Needs a person
 
@@ -157,7 +157,7 @@ stale. Opening one either restores its date or confirms it should go.
 
 | item | date we had | age it implied |
 |---|---|---|
-| The Ethics of Using AI | 2023-02-01 | 1313 days |
+| The Ethics of Using AI | 2023-02-01 | 1314 days |
 
 ### Cells with no independent material (1)
 

@@ -42,6 +42,18 @@ def first_cell(picks):
     return next(iter(sorted(picks["cells"])))
 
 
+def min_pool_cell(picks):
+    """The cell whose pool leaves fewer than two candidates unpicked.
+
+    Found, not named. This is a property of the data on the day the test runs, and the
+    row that has it changes whenever a tag changes."""
+    for k in sorted(picks["cells"]):
+        c = picks["cells"][k]
+        if (c.get("pool_size") or 0) - len(c["picks"]) < 2:
+            return k
+    raise SystemExit("no cell sits at the minimum pool - this fault has no subject")
+
+
 def cell_pick_item(items, picks, which=0):
     """The catalogue row behind pick `which` of the first cell."""
     cell = picks["cells"][first_cell(picks)]
@@ -84,10 +96,10 @@ CASES = [
 
     # A pool at the minimum leaves one candidate unpicked, and the rule bends to that
     # rather than demanding a loser be invented - but it does not bend to nothing. The
-    # cell that made this rule real, writer-marketer|builder, passes with its one; with
-    # none it must still fail. See the comment on the rule in validate-picks.py.
+    # cell that made this rule real passes with its one; with none it must still fail.
+    # See the comment on the rule in validate-picks.py.
     ("a minimum pool records none of what lost",
-     lambda i, p: p["cells"]["writer-marketer|builder"].update({"runners_up": []}),
+     lambda i, p: p["cells"][min_pool_cell(p)].update({"runners_up": []}),
      "belongs in the record"),
 
     # Constraint 1. Rewrite every pick's publisher to one name — three from one
