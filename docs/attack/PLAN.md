@@ -164,12 +164,13 @@ files. A summary point with no parent is deleted.
 
 ## Already known — do not present these as new
 
-They are in `00-facts.md` and I found them before this exercise. An agent may confirm or
-sharpen them, but the value is in what is *not* on this list.
+**This list is refreshed every round, and the refresh is part of the round.** It was not,
+once. Attack 3 ran with the Attack 1 version still here - "4 roles have no path", "0 of 353
+are reviewed", "171 of 353 have no publish date" - and a designer checked, found seven
+paths, and reported the briefing as stale. An attacker correcting its own instructions is
+the method working and the plan failing. **Refresh this list and `00-facts.md` together, or
+neither.**
 
-- 4 roles have no path: data-analyst, pm, designer, writer-marketer
-- designer is the thinnest role at 29, and has 1 resource at never-used
-- 0 of 353 are `reviewed` — the best badge is empty
-- "Found something wrong? Tell us." has no way to tell anyone
-- 171 of 353 have no publish date
-- Nothing re-checks the links; every `checked` date is August 2026
+The current list lives in [`00-facts.md`](00-facts.md) under "Already known", where it sits
+beside the figures that date it, rather than here where it aged for two rounds. An agent
+may confirm or sharpen anything on it; the value is in what is *not* on it.
