@@ -431,6 +431,254 @@ SUITE = [
      "skill docs, because 'clients' in the index meant MCP clients. The MCP "
      "noise is now second, with author guidelines for AI-generated text first "
      "and the acknowledgement page third."),
+    # === Attack 3, 2026-09-06 ================================================
+    # Fifty sentences typed at the live site by ten agents, one per role, none of
+    # which had read this file, `data/`, or each other. Written without sight of the
+    # instrument, which is the only thing that makes them worth anything - see
+    # docs/attack/PLAN.md, "The suite, and why an agent may not see it". The verdict
+    # in each row is the verdict its author gave, unedited.
+
+    # --- not a coder ------------------------------------------------------------
+    ("non-technical", "how do i use claude to take notes in my meetings", "bad",
+     "Prepare and plan from your calendar",
+     "Attack 3. Thirty-one hits and not one of them takes a note. The site matched "
+     "the word meetings and ignored notes; all three answers need connectors this "
+     "reader does not have."),
+    ("non-technical", "is it safe to upload work documents to claude", "bad",
+     "Anthropic Claude for Absolute Beginners",
+     "Attack 3. The right card - How long do you store my data?, whose own For line "
+     "reads 'Anyone about to paste work data into Claude' - came ninth. The agent "
+     "asked in the card's own words and got the card ninth."),
+    ("non-technical", "how do i stop claude from making things up", "ok",
+     ["Reduce hallucinations"],
+     "Attack 3. First, and exactly right. The agent's complaint is the rest of the "
+     "shelf: a SKILL.md article and Claude Code permission rules, so two of three "
+     "answers to a non-coder are for programmers."),
+    ("non-technical", "can claude write emails in my own writing style", "ok",
+     ["Write in my voice"],
+     "Attack 3, and the agent's best result of five."),
+    ("non-technical", "i have never used claude what should i do first", "ok",
+     ["Get started with Claude"],
+     "Attack 3. The agent's objection is third place: Claude Code 101 looks like the "
+     "official 101 to a beginner and is written for engineers. Note the accept is a "
+     "prefix of two titles, and either satisfies it."),
+
+    # --- a student --------------------------------------------------------------
+    ("student", "will my professor know i used claude for my essay", "ok",
+     ["Documenting Your AI Use"],
+     "Attack 3. The defensive record is first. The one page actually about detection "
+     "- the Turnitin guidance - is absent from all twenty results."),
+    ("student", "how do i cite claude in my apa reference list", "ok",
+     ["Referencing AI and Acknowledging AI Use"],
+     "Attack 3, and the agent's best result of five."),
+    ("student", "is claude free for students", "bad",
+     "AI Fluency for students",
+     "Attack 3. Thirty-four results and none of the top three says what Claude "
+     "costs; Choose a Claude plan is seventeenth."),
+    ("student", "i want claude to explain my lecture notes not write the essay for me",
+     "ok", ["AI-Powered Flashcards with Claude Projects"],
+     "Attack 3. Usable, but Using Claude Learning Mode to Study - the one card about "
+     "Claude teaching rather than producing - did not appear."),
+    ("student", "can claude help me revise for an exam without doing it for me", "ok",
+     ["How to Use AI to Help You Prepare for Quizzes and Exams"],
+     "Attack 3. First and third are precisely right; second is a small-business page "
+     "in a twelve-result set."),
+
+    # --- a researcher -----------------------------------------------------------
+    ("researcher",
+     "how do i stop claude from making up references in my literature review", "ok",
+     ["Claude Researcher"],
+     "Attack 3. The agent asked this three ways; this is the wording that worked. "
+     "Reduce hallucinations, which the researcher path labels 'Start with this' for "
+     "exactly this fear, was absent from all fifty-eight results of a third "
+     "wording."),
+    ("researcher",
+     "does my journal require me to declare that i used ai in the methods section",
+     "ok", ["ICMJE"],
+     "Attack 3. The three bodies that would actually rule on it, in a defensible "
+     "order - the agent's best result from the site."),
+    ("researcher", "can claude read the pdfs in my zotero library", "ok",
+     ["zotero-mcp"],
+     "Attack 3. Exact, and it put the GUI installer beside the terminal project, "
+     "answering the question the agent had not asked yet."),
+    ("researcher", "is it safe to upload an unpublished manuscript i am peer reviewing",
+     "ok", ["Nature Portfolio"],
+     "Attack 3, and it barely earns the verdict: Nature's policy does cover "
+     "reviewers, but second place is a classroom podcast matched on peer and "
+     "review."),
+    ("researcher",
+     "how do i check whether the statistics in a paper are actually reproducible",
+     "ok", ["Verify statistics from raw data"],
+     "Attack 3. First is precisely the task and its skip line names what the reader "
+     "must have first."),
+
+    # --- a teacher --------------------------------------------------------------
+    ("teacher", "how do i mark 30 essays faster without uploading my students work",
+     "bad", "Claude for Education Is Made for Learning",
+     "Attack 3. Nothing about marking or feedback: two university policy pages and a "
+     "product-manager document. The PAIRR feedback prompts, which are the answer, "
+     "did not appear."),
+    ("teacher", "is it safe to put pupil names into claude", "bad",
+     "AI Fluency for Small Businesses",
+     "Attack 3, and the sharpest vocabulary failure of the round. A child-data "
+     "question returns two small-business courses and a GitHub Action; the right "
+     "card is fifteenth. `pupil` alone returns nothing and `student` returns "
+     "thirty-six, and inside a sentence the other words rescue the query into "
+     "confident wrong results with no signal that it failed."),
+    ("teacher", "i need to write an ai policy for my school department", "ok",
+     ["Using AI in education settings"],
+     "Attack 3. The first two are national-level documents the teacher could cite; "
+     "the third is a newsroom."),
+    ("teacher", "make me a lesson plan and worksheet for year 9", "ok",
+     ["Claude AI for Teachers"],
+     "Attack 3. Genuinely usable, but third place is a personal-finance card, and "
+     "Adapt a standard textbook page to every reading level - the perfect hit - did "
+     "not surface."),
+    ("teacher", "how do i stop my students handing in work claude wrote", "ok",
+     ["AI in assignment design"],
+     "Attack 3. Second is the correct professional answer, design the assignment "
+     "differently. First and third are a Cowork onboarding page and a developer "
+     "permissions reference."),
+
+    # --- a developer ------------------------------------------------------------
+    ("developer", "how do i stop claude code from running git push without asking",
+     "ok", ["Claude Code settings and permission rules"],
+     "Attack 3. Exactly right and first."),
+    ("developer", "what does a hook actually receive and can it block a tool call",
+     "ok", ["Hooks reference"],
+     "Attack 3. First, with the CampusX deep dive second - the agent read both."),
+    ("developer", "how much does a long claude code session cost in tokens", "ok",
+     ["How context affects"],
+     "Attack 3. Answered, but Maximizing the value of your Claude Code sessions - "
+     "the card whose own path note is about which commands destroy the prompt cache "
+     "- was not in the results."),
+    ("developer", "should i use the agent sdk or just call the messages api myself",
+     "ok", ["You Can Build The Craziest"],
+     "Attack 3. Right answer, wrong rank: the card whose For line is literally this "
+     "question came second."),
+    ("developer", "how do i run claude code in ci without a human approving each step",
+     "ok", ["Claude Code Headless"],
+     "Attack 3. The answer is second; first is a generic overview, and seventy-eight "
+     "of five hundred and eighty-eight came back for a question this specific."),
+
+    # --- working with data ------------------------------------------------------
+    ("data-analyst", "why does claude give me a different total every time i ask", "ok",
+     ["How does Claude handle mathematical equations"],
+     "Attack 3, and it scrapes the pass: second is genuinely on the question. The "
+     "card written for exactly this did not reach the top three."),
+    ("data-analyst", "clean up a messy spreadsheet with duplicate customer names",
+     "bad", "Introduction to Claude Analysis",
+     "Attack 3. Thirty-six results and not one of the top three mentions cleaning, "
+     "deduplication or messy data."),
+    ("data-analyst", "is it safe to upload our company sales data to claude", "bad",
+     "AI Fluency for Small Businesses",
+     "Attack 3. The catalogue holds How long do you store my data?, whose For line "
+     "names this reader, and did not return it in the top three. Three roles asked a "
+     "data-safety question this round and all three were sent somewhere else."),
+    ("data-analyst", "get claude to write sql against our data warehouse", "ok",
+     ["MotherDuck"],
+     "Attack 3. Twelve results, tightly scoped, top two exactly right. Postgres MCP "
+     "Pro - the obvious answer for a Postgres warehouse - is not among them."),
+    ("data-analyst", "join two csv files and check the join did not drop rows", "ok",
+     ["Excel-Free Answers From CSVs"],
+     "Attack 3. Four results out of five hundred and eighty-eight, which the agent "
+     "called honest narrowing rather than padding."),
+
+    # --- a product manager ------------------------------------------------------
+    ("pm", "how do i turn a pile of user interviews into themes without reading them "
+     "all again", "ok", ["Synthesize user interviews into findings"],
+     "Attack 3. The answer, in the reader's words, first try."),
+    ("pm", "can i write a prd with claude if i cannot code", "bad",
+     "Claude Code for Product Managers",
+     "Attack 3, and the clearest evidence in the round that the index cannot read a "
+     "negation. The agent said 'cannot code' and got three results for a "
+     "command-line tool: the word code matched Claude Code."),
+    ("pm", "what should i tell my team about pasting customer data into claude", "bad",
+     "Claude for Small Business (Back-Office AI, honest review)",
+     "Attack 3. Not one result about data, privacy or safety, while the site owns "
+     "Use Claude Cowork safely and How long do you store my data? - the agent had "
+     "seen both on Paths minutes earlier."),
+    ("pm", "how do i stop writing the weekly status update myself", "ok",
+     ["Generate project status reports"],
+     "Attack 3. Exact."),
+    ("pm", "how do i get claude to remember our product context instead of "
+     "re-explaining it every time", "bad",
+     "Claude for Localization: Stop Starting Every Project from Zero",
+     "Attack 3. The answer is Projects and the site holds several Projects cards. "
+     "First place is a localization post that matched the literal word Project in "
+     "its title."),
+
+    # --- a designer -------------------------------------------------------------
+    ("designer", "how do i stop claude from inventing spacing values that are not in "
+     "my design system", "ok", ["Design Systems in 2026"],
+     "Attack 3. First and third are right; second is a journalism-ethics article "
+     "bridged only by the word standards."),
+    ("designer", "can claude read my figma file", "ok",
+     ["Guide to the Figma MCP server"],
+     "Attack 3. A perfect top three, and then seventy-two results of which only four "
+     "mention Figma - the tail is the finding, not the head."),
+    ("designer", "is it worth letting ai do the first round of ui mockups", "ok",
+     ["Claude Design: The Complete Guide"],
+     "Attack 3, saved by third place. The site's own first pick for a designer at "
+     "this exact question - Good from Afar, But Far from Good - was absent from all "
+     "nineteen results, while the keyword 'AI prototyping' returns it first."),
+    ("designer", "how do i write better error messages and empty states", "ok",
+     ["ux-writing-skill"],
+     "Attack 3. First is right; second is a keyword collision - the reader asked "
+     "about writing error messages and was given Claude's own troubleshooting page."),
+    ("designer", "what does claude get wrong about accessibility", "bad",
+     "Design plugin (official)",
+     "Attack 3. All three answer a different question - how to run an accessibility "
+     "check - and the card whose skip line literally says 'Claude calling 3:1 "
+     "contrast acceptable when it is not' is absent from fifty-five results."),
+
+    # --- running a business -----------------------------------------------------
+    ("business-founder", "how much is this going to cost me every month", "bad",
+     "How context affects Claude's performance and cost",
+     "Attack 3. All three are about somebody else's cost - API tokens, cloud "
+     "infrastructure, code notebooks."),
+    ("business-founder", "is my customer data safe if i paste it into claude", "ok",
+     ["How long do you store my data?"],
+     "Attack 3, and it passes on second place. The same question worded as 'does "
+     "Anthropic train on the files I upload' puts the site's own first pick for this "
+     "worry at the top; this wording buries it."),
+    ("business-founder", "can it write my quotes and invoices for me", "ok",
+     ["Small Business plugin"],
+     "Attack 3. Two of three on the right shelf."),
+    ("business-founder", "i have nobody in it can i set this up myself", "bad",
+     "Claude Managed Agents",
+     "Attack 3, and the agent's worst of five: server-hosted agents, the most "
+     "technical thing on the site, handed to a question that opens 'I have nobody in "
+     "IT'. The answer sat sixth."),
+    ("business-founder", "what should i use it for first in a small company", "ok",
+     ["AI Fluency for Small Businesses"],
+     "Attack 3, the agent's best of five - all three on the subject, at the level, "
+     "for the situation. What the search can do when the wording happens to match."),
+
+    # --- a writer ---------------------------------------------------------------
+    ("writer-marketer", "how do i stop claude from making my writing sound like ai",
+     "ok", ["How to Stop Claude Writing Like an AI"],
+     "Attack 3. The answer near-verbatim, with the site's best voice resource first "
+     "- and the agent noted the irony that the role filter will not show them that "
+     "first card."),
+    ("writer-marketer", "do i have to tell my client i used ai to write this", "bad",
+     "Support incident postmortem",
+     "Attack 3. A support-incident recipe and a journalist's CLAUDE.md for a "
+     "disclosure question, with a Claude Code article fourth. The site holds five "
+     "disclosure documents and one scraped in."),
+    ("writer-marketer", "is it safe to paste a clients unpublished draft into claude",
+     "ok", ["How long do you store my data?"],
+     "Attack 3. First is exactly right - retention and training are the answer."),
+    ("writer-marketer", "will an editor be able to tell a machine wrote this", "bad",
+     "Claude, Editor",
+     "Attack 3. First matched the word editor in the opposite sense - using Claude "
+     "as an editor - and second and third are Claude Code install guides. "
+     "Wikipedia's Signs of AI writing, which is the answer, did not appear."),
+    ("writer-marketer", "what should i put in my contract about using ai", "bad",
+     "Compare and analyze competing options",
+     "Attack 3. Second is about redlining somebody else's contract, not an AI-use "
+     "clause in your own. Thirty confident-looking cards and the site never said the "
+     "shelf was empty."),
 ]
 
 
