@@ -20195,8 +20195,8 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "data-analyst",
-      "business-founder"
+      "non-technical",
+      "data-analyst"
     ],
     "level": "confident",
     "topics": [
@@ -20211,16 +20211,17 @@
     "published": "UNVERIFIED",
     "checked": "2026-08-29",
     "summary": "Three end-to-end financial workflows - equity analysis, competitive research, portfolio review - run through a three-phase approach of retrieving data, analysing it, and producing a deliverable, using real tickers throughout.",
-    "who_for": "Investment professionals who already have Daloopa, S&P Global or FactSet access and want a template for turning that data into a finished deliverable.",
+    "who_for": "Anyone with a data-heavy piece of work to produce who wants a shape for it: set up a project, gather the data, analyse it, then build the deliverable. The worked example is an investment memo and the method is not about finance.",
     "skip_if": "Every workflow needs separately licensed data subscriptions - Daloopa, S&P Global, FactSet - already connected; nothing here works without them. The page also admits its own limit: PowerPoint output needs manual formatting for anything complex or firm-specific.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. 20 min read, the longest text tutorial checked in this batch.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 20 min read, the longest text tutorial checked in this batch.\n\nKept 2026-09-06 under FIX-29's door: The three named phases are the page's own structure and the setup section is about projects and reference documents, not about finance. Its examples call Daloopa and FactSet, which most readers will not have - and the method survives without them.",
     "prerequisites": [
       "a Claude Project",
       "licensed access to Daloopa, S&P Global or FactSet"
     ],
     "teaches": [
-      "run a three-phase workflow: retrieve, analyse, produce a deliverable",
-      "build equity analysis, competitive research and portfolio review workflows"
+      "set up a project as the workspace for a piece of analysis",
+      "run any data-heavy job as retrieve, then analyse, then produce",
+      "turn an analysis into a memo, a deck or a model rather than a chat log"
     ],
     "keywords": [
       "financial analysis with claude",
@@ -20998,52 +20999,6 @@
     "id": "r-c54106432e"
   },
   {
-    "title": "How to use the Clinical Trial Protocol Draft Generation sample skill with Claude",
-    "url": "https://academy.claude.com/tutorials/how-to-use-the-clinical-trial-protocol-draft-generation-sample-skill-with-claude",
-    "author": "Anthropic",
-    "source": "Anthropic Academy",
-    "official": true,
-    "roles": [
-      "researcher"
-    ],
-    "level": "confident",
-    "topics": [
-      "skills",
-      "mcp"
-    ],
-    "format": "docs",
-    "time": "under-15min",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "status": "live",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-29",
-    "summary": "A sample skill that searches FDA guidances to classify a device or drug and its regulatory pathway, queries OpenFDA and ClinicalTrials.gov for predicate devices and comparable trials, calculates sample sizes, and only then drafts a phase 2/3 protocol on the formal FDA/NIH template.",
-    "who_for": "Regulatory affairs staff at a pharma or device company who want a starting draft rather than a blank page.",
-    "skip_if": "This is a sample skill meant to be customised, not a finished tool - the page's own instruction is to read the README before using it, and it carries no regulatory or medical-liability disclaimer beyond that.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. 4 min read. Installs from a GitHub release ZIP or via Claude Code plugin marketplace anthropics/life-sciences.",
-    "prerequisites": [
-      "a claude.ai account or Claude Code",
-      "Team/Enterprise ownership for an org-wide install"
-    ],
-    "teaches": [
-      "classify a product's FDA regulatory pathway from initial documentation",
-      "pull predicate devices and comparable trials from OpenFDA and ClinicalTrials.gov",
-      "generate a draft protocol on the formal FDA/NIH template"
-    ],
-    "keywords": [
-      "clinical trial protocol skill",
-      "fda regulatory pathway claude",
-      "phase 2 phase 3 protocol draft"
-    ],
-    "questions": [
-      "can claude draft a clinical trial protocol",
-      "how do i determine an fda regulatory pathway with claude"
-    ],
-    "id": "r-ab8bf64651"
-  },
-  {
     "title": "How to use the FHIR Developer agent skill with Claude Code",
     "url": "https://academy.claude.com/tutorials/how-to-use-the-fhir-developer-agent-skill-with-claude-code",
     "author": "Anthropic",
@@ -21603,50 +21558,6 @@
     "id": "r-d3a0d18ea7"
   },
   {
-    "title": "Using Chronograph for portfolio monitoring",
-    "url": "https://academy.claude.com/tutorials/using-chronograph-for-portfolio-monitoring",
-    "author": "Anthropic",
-    "source": "Anthropic Academy",
-    "official": true,
-    "roles": [
-      "data-analyst",
-      "business-founder"
-    ],
-    "level": "confident",
-    "topics": [
-      "mcp"
-    ],
-    "format": "docs",
-    "time": "under-15min",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "status": "live",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-29",
-    "summary": "Setting up the Chronograph connector for private-equity portfolio monitoring - tracking exposures, performance metrics, and portfolio data inside Claude.",
-    "who_for": "Private equity portfolio and investment teams who already use Chronograph and want it reachable from Claude.",
-    "skip_if": "Needs your own Chronograph account arranged directly with Chronograph, not Anthropic - and even then, Claude 'cannot access documents, custom fields, or metrics that require a Primary Metric Type label,' so parts of your own data stay invisible.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Setup split into an Organization Owner path and an Individual User path.",
-    "prerequisites": [
-      "a Chronograph account",
-      "MCP server access arranged with Chronograph"
-    ],
-    "teaches": [
-      "connect Chronograph to Claude for PE portfolio monitoring"
-    ],
-    "keywords": [
-      "chronograph connector claude",
-      "portfolio monitoring claude",
-      "chronograph mcp"
-    ],
-    "questions": [
-      "how do i connect chronograph to claude",
-      "can claude access all my chronograph data"
-    ],
-    "id": "r-34b80958cf"
-  },
-  {
     "title": "Using Claude Code Remote Control",
     "url": "https://academy.claude.com/tutorials/using-claude-code-remote-control",
     "author": "Anthropic",
@@ -21733,90 +21644,6 @@
       "how does cowork cite its sources"
     ],
     "id": "r-e11187754a"
-  },
-  {
-    "title": "Using the Medidata Connector in Claude",
-    "url": "https://academy.claude.com/tutorials/using-the-medidata-connector-in-claude",
-    "author": "Anthropic",
-    "source": "Anthropic Academy",
-    "official": true,
-    "roles": [
-      "researcher"
-    ],
-    "level": "builder",
-    "topics": [
-      "mcp"
-    ],
-    "format": "docs",
-    "time": "under-15min",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "status": "live",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-29",
-    "summary": "Connecting Medidata, a commercial clinical-trial platform, to Claude for platform support and predicting site enrollment rates for trial planning.",
-    "who_for": "Clinical feasibility leads, study managers, and site selection specialists on a Medidata platform account.",
-    "skip_if": "Site Ranking, the predictive half of this connector, needs a separate Intelligent Trials/Study Feasibility subscription beyond a regular Medidata account - and the page's own MCP documentation link is a literal unresolved placeholder, printed as '[link]' twice.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. 3 min read. Installs from the anthropics/life-sciences plugin marketplace.",
-    "prerequisites": [
-      "a Medidata platform account",
-      "Intelligent Trials/Study Feasibility subscription for Site Ranking"
-    ],
-    "teaches": [
-      "use Medidata platform help and site-ranking predictions from inside Claude"
-    ],
-    "keywords": [
-      "medidata connector claude",
-      "clinical trial site selection",
-      "medidata mcp"
-    ],
-    "questions": [
-      "can claude connect to medidata",
-      "how do i predict clinical trial site enrollment"
-    ],
-    "id": "r-0db119275a"
-  },
-  {
-    "title": "Using the NPI Registry Connector in Claude",
-    "url": "https://academy.claude.com/tutorials/using-the-npi-registry-connector-in-claude",
-    "author": "Anthropic",
-    "source": "Anthropic Academy",
-    "official": true,
-    "roles": [
-      "researcher",
-      "non-technical"
-    ],
-    "level": "never-used",
-    "topics": [
-      "mcp"
-    ],
-    "format": "docs",
-    "time": "under-15min",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "status": "live",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-29",
-    "summary": "Connecting the free US government NPI Registry (CMS NPPES) to Claude to validate, look up, and search healthcare provider credentials.",
-    "who_for": "Healthcare administrators, credentialing staff, and healthcare recruiters who need to verify a provider's National Provider Identifier.",
-    "skip_if": "Free public registry, no account needed - skip only if you don't work with US healthcare provider identifiers; it validates and looks up NPI numbers, nothing else.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Names three tools: npi_validate (runs a Luhn check-digit test locally), npi_lookup, npi_search. Installs from the anthropics/healthcare plugin marketplace.",
-    "prerequisites": [],
-    "teaches": [
-      "validate and look up US healthcare provider NPI numbers from inside Claude"
-    ],
-    "keywords": [
-      "npi registry connector",
-      "validate npi number claude",
-      "healthcare provider lookup"
-    ],
-    "questions": [
-      "can claude validate an npi number",
-      "how do i look up a healthcare provider's npi"
-    ],
-    "id": "r-1ddea3148e"
   },
   {
     "title": "Using the Open Targets Connector in Claude",
@@ -22705,52 +22532,6 @@
     "id": "r-4e09474dae"
   },
   {
-    "title": "Claude Enterprise Administrator Guide",
-    "url": "https://academy.claude.com/tutorials/claude-enterprise-administrator-guide",
-    "author": "Anthropic",
-    "source": "Anthropic Academy",
-    "official": true,
-    "roles": [
-      "business-founder",
-      "pm"
-    ],
-    "level": "builder",
-    "topics": [
-      "chat-prompting"
-    ],
-    "format": "docs",
-    "time": "under-1hr",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "status": "live",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-29",
-    "summary": "A four-phase Claude Enterprise deployment guide with concrete adoption targets (70% weekly active, 3+ hours saved per user per week) and a 100+ link appendix organized by category.",
-    "who_for": "An Enterprise admin planning SSO/SCIM setup, Claude Code seat allocation, and org-wide adoption targets.",
-    "skip_if": "Needs Claude Enterprise plus Owner/Primary Owner console access - shares nearly the same four-phase rollout template as its Cowork sibling guide, so read one, not both, unless you specifically need the seat-type rules or the link appendix this one adds.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. 20 min, the largest page in its batch (~34k chars). States spend limits 'default to $0.'",
-    "prerequisites": [
-      "Claude Enterprise",
-      "Owner or Primary Owner rights",
-      "SAML 2.0 or OIDC for SSO"
-    ],
-    "teaches": [
-      "plan a four-phase Claude Enterprise rollout with concrete adoption targets",
-      "allocate Claude Code seats by seat type"
-    ],
-    "keywords": [
-      "claude enterprise admin guide",
-      "claude enterprise rollout",
-      "claude enterprise sso scim"
-    ],
-    "questions": [
-      "how do we roll out claude enterprise",
-      "what adoption targets should we set for claude"
-    ],
-    "id": "r-94dd4d8b10"
-  },
-  {
     "title": "Claude for financial services overview",
     "url": "https://academy.claude.com/tutorials/claude-for-financial-services-overview",
     "author": "Anthropic",
@@ -23145,49 +22926,6 @@
     "id": "r-56149c993a"
   },
   {
-    "title": "How to use the Prior Auth Review sample skill with Claude",
-    "url": "https://academy.claude.com/tutorials/how-to-use-the-prior-auth-review-sample-skill-with-claude-2ggy8",
-    "author": "Anthropic",
-    "source": "Anthropic Academy",
-    "official": true,
-    "roles": [
-      "non-technical",
-      "researcher"
-    ],
-    "level": "confident",
-    "topics": [
-      "skills"
-    ],
-    "format": "docs",
-    "time": "under-15min",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "status": "live",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-29",
-    "summary": "A sample skill for payer clinical reviewers: reads a prior-authorization packet, checks it against NPI Registry, ICD-10, CMS Coverage Database and CPT Codes, and summarizes the medical-necessity argument.",
-    "who_for": "Payer clinical reviewers wanting a starting point to reduce time to initial recommendation.",
-    "skip_if": "A sample skill meant to be customized before real use, not a finished tool - its four reference checks are explicitly 'to be verified by a human reviewer.'",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. 3 min. This is the one healthcare/payer page among the life-sciences skill tutorials - installs from the anthropics/healthcare marketplace, not life-sciences.",
-    "prerequisites": [
-      "Claude.ai with Skills enabled, or Claude Code with the healthcare plugin marketplace"
-    ],
-    "teaches": [
-      "run a prior-authorization request through provider, code and coverage checks with human verification"
-    ],
-    "keywords": [
-      "prior auth review skill claude",
-      "prior authorization ai",
-      "payer clinical review skill"
-    ],
-    "questions": [
-      "can claude help review prior authorization requests",
-      "what does the prior auth review skill check"
-    ],
-    "id": "r-1fdd7bd5a5"
-  },
-  {
     "title": "How to use the Scientific Problem Selection Skill with Claude",
     "url": "https://academy.claude.com/tutorials/how-to-use-the-scientific-problem-selection-skill-with-claude",
     "author": "Anthropic",
@@ -23358,50 +23096,6 @@
       "how accurate are claude's generated study visuals"
     ],
     "id": "r-591713bde9"
-  },
-  {
-    "title": "Install financial services plugins for Claude Cowork",
-    "url": "https://academy.claude.com/tutorials/install-financial-services-plugins-for-cowork",
-    "author": "Anthropic",
-    "source": "Anthropic Academy",
-    "official": true,
-    "roles": [
-      "data-analyst",
-      "business-founder"
-    ],
-    "level": "builder",
-    "topics": [
-      "cowork"
-    ],
-    "format": "docs",
-    "time": "under-15min",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "status": "live",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-29",
-    "summary": "Installing Anthropic's open-source financial services plugins for Cowork - 7 slash-command skills and 11 named MCP data connectors (Daloopa, Morningstar, S&P Global, FactSet, and more).",
-    "who_for": "Financial modeling, equity research, investment banking, private equity or wealth management teams setting up Cowork.",
-    "skip_if": "The plugin install is free, but the 11 data connectors it lists mostly need their own separate paid subscription or API key - installing the plugin alone gets you the slash commands, not live data.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. 3 min. Lists /comps, /dcf, /earnings, /one-pager, /ic-memo, /source, /client-review, /ppt-template.",
-    "prerequisites": [
-      "Claude Desktop app with Cowork",
-      "separate paid accounts for the data connectors you use"
-    ],
-    "teaches": [
-      "install Anthropic's financial services plugin marketplace into Cowork"
-    ],
-    "keywords": [
-      "cowork financial services plugin",
-      "install finance plugins cowork",
-      "cowork finance connectors"
-    ],
-    "questions": [
-      "how do i install financial plugins in cowork",
-      "what finance data connectors work with cowork"
-    ],
-    "id": "r-f0a6d1c495"
   },
   {
     "title": "Intro to Projects",
@@ -23718,7 +23412,7 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "pm",
+      "non-technical",
       "business-founder"
     ],
     "level": "confident",
@@ -23734,16 +23428,18 @@
     "published": "UNVERIFIED",
     "checked": "2026-08-29",
     "summary": "Cowork pulls everything worth knowing about an account into one brief before a first sales call, using prebuilt account-research and call-summary skills you customize for your company.",
-    "who_for": "An account executive who wants to walk into a first call already knowing the account.",
+    "who_for": "Anyone setting up Cowork properly for the first time: a plugin, the connectors it draws on, a working folder it can write into, and a skill customised to your own words. The worked example is a call brief.",
     "skip_if": "Needs the Sales plugin installed plus your own CRM, warehouse and call-recording connectors - the real teaching point is rewriting the prebuilt skill for your company, not using it out of the box.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min, video plus written steps. Recommends validating by running it on an account you already know well.",
+    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min, video plus written steps. Recommends validating by running it on an account you already know well.\n\nKept 2026-09-06 under FIX-29's door: The page is a four-step Cowork setup - plugin, connectors, working folder, customise - and it links to Get started in three steps and the Intro to Cowork course. The sales brief is what it demonstrates on.",
     "prerequisites": [
       "Claude Cowork",
       "Sales plugin",
       "CRM/warehouse/call-recording connectors"
     ],
     "teaches": [
-      "build a pre-call account research brief with Cowork and validate it against a known account"
+      "install a plugin and connect the tools its skill draws on",
+      "give Cowork a working folder it reads from and writes into",
+      "customise a packaged skill to your own company and format"
     ],
     "keywords": [
       "cowork sales account research",
@@ -23887,93 +23583,6 @@
       "does claude respect my databricks permissions"
     ],
     "id": "r-f14ef0bf7f"
-  },
-  {
-    "title": "Using Egnyte for data room management with Claude",
-    "url": "https://academy.claude.com/tutorials/using-egnyte-for-data-room-management-with-claude",
-    "author": "Anthropic",
-    "source": "Anthropic Academy",
-    "official": true,
-    "roles": [
-      "business-founder",
-      "pm"
-    ],
-    "level": "confident",
-    "topics": [
-      "mcp"
-    ],
-    "format": "docs",
-    "time": "under-15min",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "status": "live",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-29",
-    "summary": "Connecting Egnyte for secure document search, analysis and retrieval across a data room, with four named server tools including ask_document and summarize_document.",
-    "who_for": "M&A and legal teams doing contract review, due diligence or policy compliance over a data room.",
-    "skip_if": "Needs a specific paid Egnyte tier by name - Essential, Elite or Ultimate on Gen 4, or Enterprise with the Co-Pilot add-on on Gen 3 - lower tiers don't qualify at all.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. The only page in its batch written as vendor-neutral MCP documentation that also names ChatGPT as a compatible client.",
-    "prerequisites": [
-      "an Egnyte account on a qualifying tier"
-    ],
-    "teaches": [
-      "search, ask questions of, and summarize documents in an Egnyte data room from Claude"
-    ],
-    "keywords": [
-      "egnyte connector claude",
-      "data room management claude",
-      "egnyte mcp"
-    ],
-    "questions": [
-      "how do i connect egnyte to claude",
-      "what egnyte plan do i need for the claude connector"
-    ],
-    "id": "r-e05d12e007"
-  },
-  {
-    "title": "Using FactSet for comprehensive financial research",
-    "url": "https://academy.claude.com/tutorials/using-factset-for-comprehensive-financial-research",
-    "author": "Anthropic",
-    "source": "Anthropic Academy",
-    "official": true,
-    "roles": [
-      "data-analyst",
-      "business-founder"
-    ],
-    "level": "confident",
-    "topics": [
-      "mcp"
-    ],
-    "format": "docs",
-    "time": "under-15min",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "status": "live",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-29",
-    "summary": "Connecting FactSet for pricing, fundamentals, analyst estimates, M&A data, supply-chain relationships and ownership data - currently in early access.",
-    "who_for": "Investment professionals who already rely on FactSet's institutional-grade coverage.",
-    "skip_if": "Early access only - there's no public connector URL, you can't even get one without a FactSet representative reaching out to you first.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Unusually honest that ownership data 'typically has a quarterly lag due to filing requirements.'",
-    "prerequisites": [
-      "a FactSet subscription",
-      "an invitation from a FactSet representative"
-    ],
-    "teaches": [
-      "understand FactSet's data coverage available through Claude, and its known staleness limits"
-    ],
-    "keywords": [
-      "factset connector claude",
-      "factset financial research",
-      "factset mcp"
-    ],
-    "questions": [
-      "how do i get access to the factset connector for claude",
-      "what data does the factset connector cover"
-    ],
-    "id": "r-abcd6628cb"
   },
   {
     "title": "Using LSEG for financial market data analysis",
@@ -24788,51 +24397,6 @@
       "does the function connector give medical advice"
     ],
     "id": "r-ade17796f6"
-  },
-  {
-    "title": "Using the HealthEx Connector in Claude",
-    "url": "https://academy.claude.com/tutorials/using-the-healthex-connector-in-claude",
-    "author": "Anthropic",
-    "source": "Anthropic Academy",
-    "official": true,
-    "roles": [
-      "non-technical"
-    ],
-    "level": "never-used",
-    "topics": [
-      "mcp"
-    ],
-    "format": "docs",
-    "time": "under-15min",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "status": "live",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-29",
-    "summary": "Connecting Claude to your own aggregated personal health records from all your care providers, through CLEAR biometric identity verification.",
-    "who_for": "Patients managing a chronic condition or coordinating care across multiple providers.",
-    "skip_if": "The hardest identity gate in this whole batch - Claude Max only, US-based, plus government-ID biometric verification through CLEAR before you can connect your own patient records.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. HIPAA and SOC2 compliant; record retrieval takes 10-30 minutes; consent is explicit, task-scoped and revocable.",
-    "prerequisites": [
-      "Claude Max",
-      "US location",
-      "CLEAR biometric ID verification",
-      "a HealthEx account (currently free)"
-    ],
-    "teaches": [
-      "connect your own aggregated health records from multiple providers to Claude"
-    ],
-    "keywords": [
-      "healthex connector claude",
-      "personal health records claude",
-      "healthex mcp"
-    ],
-    "questions": [
-      "how do i connect my health records to claude",
-      "what identity verification does healthex require"
-    ],
-    "id": "r-6479cdb63b"
   },
   {
     "title": "Using the ICD-10 Connector in Claude",
