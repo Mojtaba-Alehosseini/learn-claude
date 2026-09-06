@@ -84,6 +84,43 @@ Written as someone who is <role>, at <date>. Site version: <git short sha>.
 
 **Agents find. Agents do not fix.** No edits to any file outside `docs/attack/`.
 
+## The suite, and why an agent may not see it
+
+`scripts/test-search.py` holds every search query this project has ever been judged on,
+with the verdict each one got. **An attacking agent is never shown it, never told it
+exists, and never reads a file under `scripts/` or `data/`.** It types what its role would
+type, at the live site, and reports what it got.
+
+That is not politeness. It is the only reason the number means anything.
+
+The suite is the instrument the search work is steered by. Every query already in it has
+been read, argued over and in some cases had a card rewritten around it. A query written
+by somebody who has seen the suite is a query written to pass. FIX-29 found exactly that
+in the catalogue's own `questions[]` field - it had been written by somebody who had read
+the test - and the honest rewrite made the number fall before it rose.
+
+**So every query an attacker types is a hold-out**, in the strict sense: written without
+sight of the instrument, judged on what the live site returned, and only afterwards added
+to the suite with the verdict its author gave it. The suite grows by exactly the queries
+it could not have anticipated.
+
+**The number will drop when they are added, and that drop is the honest new baseline.**
+A suite that only ever grows by queries the site already answers is a suite measuring its
+own reflection. Report the number before and after the additions, and never quietly hold
+a failing query out.
+
+Two rules follow from this and both are load-bearing:
+
+- **The agent's verdict is the verdict.** Not re-graded later to make a number better. If
+  a round disagrees with an agent, it argues in the suite row's reason and keeps the
+  agent's original answer beside its own - see the accepted-answers note in
+  `scripts/test-search.py`.
+- **No check inside the build can replace this.** `scripts/check-self-retrieval.py` asks
+  every row its own questions, and it passes on a catalogue whose questions have just been
+  damaged - measured against the state FIX-30 pushed with eight suite queries broken, it
+  reported nothing. A row is very good at finding itself with its own words. Only a
+  stranger's words find out whether the words are right.
+
 ## Running order
 
 Two batches of five, so nothing overloads and I can check the first five before

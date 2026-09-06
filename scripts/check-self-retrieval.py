@@ -26,6 +26,18 @@ enough. A row is expected to be findable by the question that names its subject;
 reader's-words questions may legitimately be answered better by another row, because a
 reader's phrasing describes a need rather than a page.
 
+WHAT IT CANNOT SEE, SAID PLAINLY
+
+**It cannot see a rewrite.** This was measured, not assumed: run against the exact
+catalogue FIX-30 pushed with eight suite queries broken, every row was still findable by
+its own questions and this check reported nothing. A row is very good at retrieving itself
+with its own words, whatever those words are. What it catches is a row whose questions
+describe something else - a real fault, and a different one.
+
+The thing that catches a rewrite is a stranger's words: the suite in
+`scripts/test-search.py`, and the attacking agents who write hold-out queries without ever
+seeing it. See `docs/attack/PLAN.md`.
+
 WHY IT WARNS RATHER THAN FAILS
 
 Rows genuinely compete. Three rows about synthesising customer feedback cannot all be
