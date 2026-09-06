@@ -38,7 +38,8 @@
 
   var el = {};
   ["clearAll", "filtersPrimary", "filtersMore", "moreToggle", "moreGlyph", "q", "sort",
-   "appliedChips", "count", "results", "empty", "picks", "thin", "openSheet", "closeSheet",
+   "appliedChips", "count", "notice", "results", "empty", "picks", "thin",
+   "openSheet", "closeSheet",
    "sheet", "sheetBody", "sheetConfirm"].forEach(function (id) {
     el[id] = document.getElementById(id);
   });
@@ -128,14 +129,23 @@
       if (!hit) return false;
     }
     if (!q.trim()) return true;
-    if (ranked) return ranked.byId[it.id] !== undefined;
-    /* Until the index has loaded, fall back to plain substring so typing is never dead. */
-    var hay = (it.title + " " + it.summary + " " + it.who_for + " " + it.source).toLowerCase();
-    return q.toLowerCase().split(/\s+/).every(function (t) { return hay.indexOf(t) !== -1; });
+    /* D2. There used to be a substring fallback here so that typing was "never dead".
+       Measured on the live site across twelve suite queries, its top result differed
+       from the ranked one eight times and it showed an empty page five times - for
+       about a second, and then the real answer replaced it. A wrong answer that
+       corrects itself is worse than a wait, because the reader has already started
+       reading. While the index is loading the page says "Searching…" and shows
+       nothing. */
+    return ranked ? ranked.byId[it.id] !== undefined : false;
   }
+
+  /* The ranking for the current query, or null while the index is still on its way.
+     Held on the module so render() can tell "no results" from "not searched yet". */
+  var lastRanked = null;
 
   function results() {
     var ranked = (q.trim() && window.LCSearch) ? window.LCSearch.rank(q) : null;
+    lastRanked = ranked;
     var out = items.filter(function (it) { return matches(it, ranked); });
 
     out.sort(function (a, b) {
@@ -360,6 +370,38 @@
      blamed the filter that was set rather than the one that emptied the result.
 
      If an axis is ever added again, this is the function to add it to. */
+  /* D2. Two sentences the search owes the reader, in the place they will read first.
+
+     "No match for X - showing results for the other words." A word this index has never
+     seen contributes nothing, and the remaining words go on to return a confident list
+     that has no bearing on the missing one. Attack 3's teacher typed "is it safe to put
+     pupil names into Claude" and got two small-business courses and a GitHub Action,
+     with no signal that `pupil` had failed. Asked on its own the site was already
+     honest; inside a sentence it was not.
+
+     "Searching…" while the index loads, because the alternative was a substring guess
+     that disagreed with the real answer eight times out of twelve. */
+  function renderNotice(ranked) {
+    if (!q.trim()) { el.notice.innerHTML = ""; return; }
+    if (!ranked) {
+      el.notice.innerHTML = '<p class="notice">Searching…</p>';
+      return;
+    }
+    var missing = ranked.missing || [];
+    if (!missing.length || missing.length === (q.trim().split(/\s+/).length)) {
+      /* Every word missing is the empty-result case, which renderEmpty already says
+         plainly. This line is for the half-miss nobody could see. */
+      el.notice.innerHTML = "";
+      return;
+    }
+    el.notice.innerHTML =
+      '<p class="notice">No match for ' +
+      missing.map(function (w) {
+        return "\u201c<bdi>" + LC.esc(w) + "</bdi>\u201d";
+      }).join(", ") +
+      ' \u2014 showing results for the other words.</p>';
+  }
+
   function anyOtherThanRole() {
     return sel.levels.length || sel.times.length || sel.topics.length ||
            sel.formats.length || sel.costs.length || sel.officials.length ||
@@ -472,6 +514,7 @@
     var out = results();
     renderFilters();
     renderChips();
+    renderNotice(lastRanked);
     renderCount(out.length);
     renderEmpty(out.length);
     renderThin(out.length);

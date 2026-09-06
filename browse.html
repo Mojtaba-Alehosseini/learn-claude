@@ -66,6 +66,10 @@
       <div class="chip-row" id="appliedChips" style="margin-bottom:var(--space-16)"></div>
 
       <p class="result-count" id="count" aria-live="polite" role="status"></p>
+      <!-- D2: what the search could not find, and "Searching…" while the index
+           loads. aria-live so a screen reader hears the miss rather than being
+           handed a confident list built without one of the reader's words. -->
+      <div id="notice" aria-live="polite"></div>
       <div id="thin"></div>
 
       <div id="picks"></div>

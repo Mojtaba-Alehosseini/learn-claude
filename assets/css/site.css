@@ -571,6 +571,17 @@ a.card-path:hover { text-decoration: underline; }
   color: var(--text-primary);
 }
 
+/* D2. What the search could not find, said above the results rather than nowhere.
+   Quiet: it is a caveat on a list that still has answers in it, not an error. Same
+   measure as the count above it so the two read as one block. */
+.notice {
+  margin-top: var(--space-8);
+  font: var(--weight-regular) var(--text-body-sm)/var(--leading-body-sm) var(--font-sans);
+  color: var(--text-secondary);
+  max-width: var(--measure);
+  overflow-wrap: anywhere;
+}
+
 .empty {
   padding: var(--space-48) 0;
   max-width: var(--measure);

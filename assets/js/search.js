@@ -125,8 +125,10 @@
     return loading;
   }
 
-  /* Returns { byId: {id: score}, order: [id, ...] } best first, or null when the index
-     is not ready. Callers fall back to plain substring matching until then. */
+  /* Returns { byId, order, missing } - the scores, the ids best first, and the query
+     words this index has never seen. Null while the index is still loading; a caller
+     that gets null shows "Searching…" rather than guessing, because a guess that
+     disagrees with the answer arriving a second later is worse than a wait. */
   function rank(query) {
     if (!index) return null;
     var q = String(query || "").toLowerCase().trim();
@@ -140,9 +142,15 @@
        max weight the index stores cannot tell them apart. */
     var depth = new Int32Array(n);
     var qw = words(q);
+    /* D2. Which of the reader's words this index has never seen - after spelling,
+       synonyms and stems have all had their turn. A word in here contributed nothing to
+       the result, and the reader is entitled to know that before they trust the list.
+       See browse.js, where it becomes a sentence. */
+    var missing = [];
 
     for (var i = 0; i < qw.length; i++) {
       var w = qw[i];
+      var found = false;
       /* Every indexed spelling of the reader's word, scored once as one term. The same
          word spelled the other way is still the reader's word: full weight, and it admits
          like any exact match. Only synonyms are halved. */
@@ -160,6 +168,7 @@
       }
       var posts = mn ? merged : null;
       if (posts) {
+        found = true;
         /* Inverse document frequency. On a site where every resource is about Claude,
            the word "claude" appears in nearly all of them and tells us nothing, while
            "citations" appears in a handful and tells us almost everything. Without this
@@ -195,6 +204,7 @@
         }
       }
       if (sn) {
+        found = true;
         var sidf = Math.log(n / sn);
         if (sidf >= 0.05) {
           for (var sk in sacc) {
@@ -222,6 +232,7 @@
         }
       }
       if (any) {
+        found = true;
         var count = 0, kk;
         for (kk in union) count++;
         var idf2 = Math.log(n / count);
@@ -229,6 +240,7 @@
           for (kk in union) scores[kk] += union[kk] * idf2 * STEM_WEIGHT;
         }
       }
+      if (!found) missing.push(w);
     }
 
     /* A whole phrase appearing in the query is a much stronger signal than its words
@@ -242,7 +254,7 @@
 
     var best = 0;
     for (var a = 0; a < n; a++) if (scores[a] > best) best = scores[a];
-    if (!best) return { byId: {}, order: [] };
+    if (!best) return { byId: {}, order: [], missing: missing };
 
     /* Two gates, and the first matters more. A prefix hit may *rank* a resource but
        must never *admit* one on its own, or "stop claude inventing fake citations"
@@ -273,7 +285,7 @@
       byId[id] = scores[keep[c]];
       order.push(id);
     }
-    return { byId: byId, order: order };
+    return { byId: byId, order: order, missing: missing };
   }
 
   /* Guards against the index being built from a different items.json than the page
