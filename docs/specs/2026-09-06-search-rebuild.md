@@ -169,18 +169,76 @@ Stated properly, the budget is **150 KB transferred**, and the index is at 146 K
 | synonym words | 52 | 92 |
 | phrases | 4,059 | 5,201 |
 
-**The index is over the 150 KB budget this section set, at 166 KB transferred, and the
-cause is not the search rebuild.** Almost none of the growth is machinery: stem groups,
-spelling forms and synonyms together added a few dozen entries. The phrases grew by more
-than a thousand, and every one of those is a `questions[]` string, because the phrase map
-keeps each question whole. FIX-30 rewrote every row's questions and FIX-31 lengthened some
-of them; the index grew with the catalogue's own prose.
+The index grew past the 150 KB figure this section set. Almost none of the growth is
+machinery: stem groups, spelling forms and synonyms together added a few dozen entries.
+The phrases grew by more than a thousand, and every one of those is a `questions[]`
+string, because the phrase map keeps each question whole. FIX-30 rewrote every row's
+questions and FIX-31 lengthened some of them; the index grew with the catalogue's own
+prose.
 
-That is a budget decision rather than a bug, and it is stated here rather than quietly
-exceeded. Amendment 6 is the place it gets settled: two of the three candidate repairs to
-the phrase bonus - paying only a row's longest matching phrase, or dropping the flat bonus
-- would let the phrase map shrink, and one of them may remove it entirely. Whoever builds
-that amendment should measure the transferred size in the same commit.
+### Amendment 8: the budget is a time, and the size is only what produced it
+
+**A number nobody has measured is not a budget.** 150 KB was typed into this spec, never
+tested against a reader, and the round that exceeded it nearly cut content to satisfy it.
+What a reader feels is not bytes; it is how long they wait after typing. So the budget is
+restated as that wait, measured in the browser on the live site.
+
+**Measured on `browse.html`, live, 6 September 2026.**
+
+| | |
+|---|---|
+| bytes the server actually sends for the index | **176,934** (`encodedBodySize`, compressed) |
+| the same file uncompressed | 580,840 |
+| typing pause before anything runs | 150 ms, from `TYPING_PAUSE` in `browse.js` |
+| parsing the index | **26 ms** cold, 4 ms on a repeat |
+| keystroke to results, index already loaded | **159, 164, 164, 166, 159 ms** over five queries |
+| so ranking and redrawing 588 rows | **9-16 ms** |
+
+The steady-state cost of a keystroke is the typing pause plus about twelve milliseconds.
+Every keystroke after the first is effectively instant, and no plausible index size
+changes that, because the index is already in memory.
+
+**The first keystroke is the only one that pays for the file**, and only once per visit.
+Modelled at 1.6 Mbit/s with a 150 ms round trip - a slow 4G phone - over the bytes
+measured above:
+
+    150 ms typing pause + 1,035 ms network + 26 ms parse + ~14 ms rank and draw
+    = about 1.2 seconds to a ranked answer, once, on the first search of a session.
+
+**The budget is: under 1.5 seconds to a ranked answer on a slow 4G phone, on the first
+search of a session, and under 200 ms on every keystroke after it.** Both are met at
+176,934 bytes. That size is recorded as what produced the time, not as a limit of its own.
+
+Nothing is cut. **If the time were bad, what would be cut is the phrase map** - it is
+5,201 entries holding every `questions[]` string whole, it is the largest single part of
+the file, and amendment 6 already argues on ranking grounds that two of its three
+candidate repairs would shrink or remove it. That is the lever, and it is named here so
+that nobody reaches for the catalogue's content instead.
+
+### What the measurement found that the size never would have
+
+Until the index lands, `browse.js` falls back to plain substring matching over title,
+summary, `who_for` and source, so that typing is never dead. On a fast connection nobody
+sees it. On the modelled slow phone it is what the reader looks at for about a second, and
+**it is usually not the answer.**
+
+Measured over twelve queries taken from the suite, comparing the fallback's first result
+with the ranked first result:
+
+| | |
+|---|---|
+| queries where the fallback shows **nothing at all** | **5 of 12** |
+| queries where the fallback's top result **differs** from the ranked one | **8 of 12** |
+
+"grading", "write emails for me", "make a lesson plan", "how much does claude cost" and
+"can claude read my csv" all render **"0 resources"** for that second before the real
+answer replaces it. A reader on a train who types a question and reads "0 resources" has
+been told the site does not have it, and some of them will stop there.
+
+That is a bigger cost than the file size and it was invisible while the budget was a
+number. It is a finding, not a fix: the repair might be a spinner, a held render, or
+shipping a tiny always-loaded first-pass index, and choosing between those needs the
+attack's evidence about what readers actually do. Recorded here; not built.
 
 **The phrase map was measured by removal, and it stays.** It is the largest section after
 the postings - 4,059 entries, 123 KB raw and 35 KB gzipped, a quarter of the transferred
