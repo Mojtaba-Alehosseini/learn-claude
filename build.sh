@@ -38,6 +38,8 @@ node scripts/test-search-runtimes.js tmp/py-top3.json | tail -1
 python3 scripts/validate-synonyms.py
 # The stemmer's word families, taken from the failing suite lines.
 python3 scripts/test-stem.py | tail -1
+# Which bucket Rule B sends a card to, on the sentences that were getting it wrong.
+python3 scripts/test-role-buckets.py | tail -1
 
 echo
 echo "4b/6 sitemap, generated rather than typed"

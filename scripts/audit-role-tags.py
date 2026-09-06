@@ -110,6 +110,26 @@ ROLE_WORDS = {k: re.compile(v, re.I) for k, v in ROLE_WORDS.items()}
 NEUTRAL = re.compile(r"^\s*(anyone|any\b|someone|somebody|people who|everyone|whoever|"
                      r"those who|a reader|teams?\b)", re.I)
 
+# A situation is not an occupation. "Complete beginners who have never opened Claude",
+# "someone who has just been cut off mid-task", "anyone about to trust Claude with patient
+# data" describe a state a reader is in, and the state is the audience. FIX-29 added this
+# because the second of those is not caught by NEUTRAL's opening-word test and the third
+# would have been routed to Rule C - the branch that ends in removal - by the word
+# `patient`.
+SITUATION = re.compile(
+    r"\bbeginners?\b|\bfirst[- ]timers?\b|\bnewcomers?\b|\bnew to (?:claude|ai|this)\b"
+    r"|\bnever (?:used|opened|touched|tried|written|run)\b|\bno experience\b"
+    r"|\bjust been cut off\b|\babout to (?:trust|start|try|buy|pay|commit)\b"
+    r"|\bhas not (?:yet )?(?:used|opened|tried)\b|\bwho has never\b"
+    r"|\banyone (?:who|about|with|in)\b|\bsomeone (?:who|about|with)\b", re.I)
+
+# An off-roster word used attributively is subject matter, not a reader: "patient data" is
+# what the work is about, "patients" is who the work is for.
+ATTRIBUTIVE = re.compile(
+    r"\b(patients?|clinicians?|paralegals?|attorneys?|recruiters?|accountants?)\s+"
+    r"(data|records?|notes?|information|files?|documents?|results?|charts?|questions?)\b",
+    re.I)
+
 
 def off_roster():
     """The job vocabulary validate-catalogue.py already keeps, borrowed rather than
@@ -157,7 +177,11 @@ def main():
         add_anywhere = sorted(named_anywhere - set(tags))
 
         if not named:
-            jobs = [f for f, rx in OFF.items() if rx.search(who)]
+            # Ruling 2, in order: a situation beats an off-roster word, and an off-roster
+            # word used attributively is not an audience at all.
+            plain = ATTRIBUTIVE.sub(" ", who)
+            jobs = [] if SITUATION.search(who) else \
+                [f for f, rx in OFF.items() if rx.search(plain)]
             if not jobs:
                 # Names a situation, not an occupation. FIX-16: leave it alone.
                 neutral.append(it)
