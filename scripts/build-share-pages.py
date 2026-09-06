@@ -48,6 +48,13 @@ OUT_DIRS = ("r", "c", "p")
 # sentence of Skip if: is appended. See section 2 of the spec.
 SHORT = 120
 
+# What a preview actually shows, measured on opengraph.xyz against the built pages
+# rather than taken from memory: X and LinkedIn truncate a title past about 60
+# characters, and most previews cut a description around 200. Over those limits the
+# reader sees an ellipsis where the judgement should be.
+TITLE_MAX = 60
+DESC_MAX = 200
+
 
 def load(name):
     with io.open(os.path.join(ROOT, "data", name), encoding="utf-8") as f:
@@ -57,6 +64,27 @@ def load(name):
 def esc(s):
     return (str(s or "").replace("&", "&amp;").replace("<", "&lt;")
             .replace(">", "&gt;").replace('"', "&quot;"))
+
+
+def fit(text, limit):
+    """Cut on a word boundary, and only when there is something to cut."""
+    text = " ".join(str(text or "").split())
+    if len(text) <= limit:
+        return text
+    cut = text[:limit - 1]
+    if " " in cut:
+        cut = cut[:cut.rindex(" ")]
+    return cut.rstrip(" ,;:.") + "\u2026"
+
+
+def suffixed(title):
+    """`… — Learn Claude` where it fits, and the bare title where it does not.
+
+    og:site_name already carries "Learn Claude", so the suffix is a courtesy rather than
+    information - and spending fifteen of sixty characters on it is how a title that
+    named the thing ends up truncated before it gets there."""
+    full = "%s — Learn Claude" % title
+    return full if len(full) <= TITLE_MAX else fit(title, TITLE_MAX)
 
 
 def first_sentence(s):
@@ -151,8 +179,8 @@ def main():
 
     for x in items:
         write_page("r/%s" % x["id"], res_shell, 2,
-                   "%s — Learn Claude" % x["title"],
-                   resource_description(x),
+                   suffixed(x["title"]),
+                   fit(resource_description(x), DESC_MAX),
                    "%sr/%s/" % (SITE, x["id"]),
                    {"id": x["id"]}, og_type="article")
 
@@ -167,16 +195,17 @@ def main():
                     "Everything we have checked for %s who has %s."
                     % (role_label, level_label))
             write_page("c/%s/%s" % (role, level), br_shell, 3,
-                       "Claude for %s who has %s — Learn Claude"
-                       % (role_label, level_label),
-                       desc, "%sc/%s/%s/" % (SITE, role, level),
+                       suffixed("Claude for %s who has %s"
+                                % (role_label, level_label)),
+                       fit(desc, DESC_MAX),
+                       "%sc/%s/%s/" % (SITE, role, level),
                        {"role": role, "level": level})
             n_cells += 1
 
     for p in paths:
         write_page("p/%s" % p["id"], pa_shell, 2,
-                   "%s — Learn Claude" % p["title"],
-                   str(p.get("for") or "").strip(),
+                   suffixed(p["title"]),
+                   fit(p.get("for"), DESC_MAX),
                    "%sp/%s/" % (SITE, p["id"]),
                    {"id": p["id"]})
 
