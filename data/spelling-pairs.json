@@ -6,14 +6,16 @@
    "analyze"
   ],
   "analysing": [
+   "analysing",
    "analyzing"
   ],
   "analyze": [
    "analyse",
    "analyze"
   ],
-  "authorisation": [
-   "authorization"
+  "analyzing": [
+   "analysing",
+   "analyzing"
   ],
   "behavior": [
    "behavior",
@@ -22,6 +24,10 @@
   "behavioral": [
    "behavioral",
    "behavioural"
+  ],
+  "behaviors": [
+   "behaviors",
+   "behaviours"
   ],
   "behaviour": [
    "behavior",
@@ -32,10 +38,8 @@
    "behavioural"
   ],
   "behaviours": [
-   "behaviors"
-  ],
-  "categorise": [
-   "categorize"
+   "behaviors",
+   "behaviours"
   ],
   "center": [
    "center",
@@ -48,8 +52,16 @@
    "center",
    "centre"
   ],
+  "color": [
+   "color",
+   "colour"
+  ],
+  "colors": [
+   "colours"
+  ],
   "colour": [
-   "color"
+   "color",
+   "colour"
   ],
   "concize": [
    "concise"
@@ -60,16 +72,23 @@
   "containerize": [
    "containerise"
   ],
-  "criticise": [
-   "criticize"
-  ],
   "customisation": [
    "customization"
   ],
   "customise": [
+   "customise",
+   "customize"
+  ],
+  "customize": [
+   "customise",
    "customize"
   ],
   "digitise": [
+   "digitise",
+   "digitize"
+  ],
+  "digitize": [
+   "digitise",
    "digitize"
   ],
   "enterprize": [
@@ -89,9 +108,6 @@
   ],
   "labeled": [
    "labelled"
-  ],
-  "labouratories": [
-   "laboratories"
   ],
   "labouratory": [
    "laboratory"
@@ -171,6 +187,12 @@
   "personalisation": [
    "personalization"
   ],
+  "personalize": [
+   "personalise"
+  ],
+  "practize": [
+   "practise"
+  ],
   "precize": [
    "precise"
   ],
@@ -218,18 +240,23 @@
    "standardization"
   ],
   "standardise": [
+   "standardise",
+   "standardize"
+  ],
+  "standardize": [
+   "standardise",
    "standardize"
   ],
   "summarisation": [
+   "summarisation",
    "summarization"
   ],
   "summarise": [
-   "summarise",
    "summarize"
   ],
-  "summarize": [
-   "summarise",
-   "summarize"
+  "summarization": [
+   "summarisation",
+   "summarization"
   ],
   "synthesise": [
    "synthesise",
@@ -244,6 +271,9 @@
   ],
   "theater": [
    "theatre"
+  ],
+  "traveling": [
+   "travelling"
   ],
   "visualisation": [
    "visualization"
