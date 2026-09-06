@@ -370,7 +370,7 @@
     "questions": [
       "install the claude for small business plugin",
       "the exact steps to set it up",
-      "connect our accounting and crm",
+      "connect quickbooks paypal and hubspot",
       "what comes with it once installed"
     ],
     "teaches": [
@@ -1829,7 +1829,8 @@
       "interactive prompt engineering tutorial",
       "learn prompting properly with exercises",
       "keep my data separate from my instructions",
-      "practise rather than read"
+      "practise rather than read",
+      "write prompts that produce correct sql"
     ],
     "teaches": [
       "structure prompts to clearly separate instructions from context and data",
@@ -1885,7 +1886,7 @@
     "questions": [
       "the analysis tool in claude",
       "why do the numbers come out right now",
-      "an exact answer from a spreadsheet file",
+      "an exact answer from a csv",
       "when to use it instead of just asking"
     ],
     "teaches": [
@@ -2407,7 +2408,7 @@
     ],
     "questions": [
       "lines worth putting in every skill",
-      "polished output hiding a weak conclusion",
+      "a polished report hiding a weak conclusion",
       "define what counts as significant",
       "stop it making claims the data does not support"
     ],
@@ -2883,7 +2884,7 @@
     "questions": [
       "the official design plugin",
       "ready-made design workflows",
-      "critique accessibility and handoff in one install",
+      "ux writing, critique, accessibility and handoff in one install",
       "official rather than community skills"
     ],
     "teaches": [
@@ -3003,7 +3004,7 @@
     "questions": [
       "prototyping and ux in claude design",
       "the honest overview of what it does",
-      "connect it to our codebase for realistic mockups",
+      "connect our production codebase for realistic mockups",
       "hand a design off to be built"
     ],
     "teaches": [
@@ -3119,7 +3120,7 @@
       "set up a design system in claude design",
       "feed it our brand once",
       "every project comes out on brand",
-      "import figma exports and brand documents"
+      "import figma exports, tokens and components"
     ],
     "teaches": [
       "import figma exports brand pdfs and assets into claude design",
@@ -3473,7 +3474,7 @@
     ],
     "questions": [
       "claude code for designers",
-      "production quality interface work from a designer",
+      "production quality ui from a designer",
       "give it our design system as context",
       "figma work through the terminal"
     ],
@@ -3701,7 +3702,7 @@
     ],
     "questions": [
       "claude for designers",
-      "where does it actually help my design work",
+      "does it help with ux copy and reviewing screens",
       "where does it get in the way",
       "an honest orientation before i start"
     ],
@@ -3820,7 +3821,7 @@
     ],
     "questions": [
       "a ux writing skill",
-      "consistent error messages and buttons",
+      "consistent microcopy for errors and buttons",
       "enforce interface copy standards automatically",
       "the same rules across the tools we use"
     ],
@@ -4059,7 +4060,8 @@
       "a designer's first build with claude code",
       "have it interview me into a spec",
       "get something live my family can open",
-      "the first step i keep putting off"
+      "the first step i keep putting off",
+      "connect figma to claude code"
     ],
     "teaches": [
       "use claude to draft a product requirements document from scratch",
@@ -4175,7 +4177,7 @@
     "questions": [
       "best practices for claude code",
       "i use it daily and still get mediocre results",
-      "quality drops as the session goes on",
+      "the context window fills and quality drops",
       "how should i structure a task"
     ],
     "teaches": [
@@ -4993,7 +4995,7 @@
       "what a claude code turn actually costs",
       "i burn through my limit and cannot see why",
       "keep the cache from resetting",
-      "which actions are expensive"
+      "which actions burn the most tokens"
     ],
     "teaches": [
       "preserve prompt caching during a claude code session",
@@ -5289,7 +5291,7 @@
     ],
     "questions": [
       "agent skills course",
-      "one format that works everywhere",
+      "one reusable format that works everywhere",
       "run the same skill in four places",
       "build a skill from scratch properly"
     ],
@@ -5728,7 +5730,7 @@
       "code with claude conference recordings",
       "hear it from the people who built it",
       "how do teams run agents in production",
-      "the reasoning behind the features"
+      "the reasoning behind claude code, the agent sdk and mcp"
     ],
     "teaches": [
       "understand the design reasoning behind claude code",
@@ -5891,7 +5893,7 @@
       "prompt engineering best practices",
       "my answers come out generic",
       "a short ordered list of fixes",
-      "get clean structured output every time"
+      "get clean json out every time"
     ],
     "prerequisites": [
       "basic familiarity with claude chat or api"
@@ -6016,7 +6018,7 @@
     ],
     "questions": [
       "install claude code",
-      "the right command for my operating system",
+      "the right cli install command for my operating system",
       "set it up inside my editor",
       "first run on windows"
     ],
@@ -6309,7 +6311,7 @@
     "questions": [
       "runnable code recipes from anthropic",
       "working code i can modify",
-      "retrieval classification and summarisation examples",
+      "retrieval classification and customer service agents",
       "notebooks organised by the job not the feature"
     ],
     "prerequisites": [
@@ -6639,7 +6641,7 @@
     "questions": [
       "mcp course from anthropic",
       "how do i build my own mcp server",
-      "learn mcp client and server in one go",
+      "learn mcp tools resources and prompts in one go",
       "how do i test an mcp server i wrote"
     ],
     "prerequisites": [
@@ -6700,7 +6702,8 @@
       "a hands-on claude cowork report",
       "what happens on a folder with hundreds of files",
       "show me where it fails not only the demo",
-      "rename convert and compress files in bulk"
+      "rename convert and compress files in bulk",
+      "where its browser automation breaks"
     ],
     "prerequisites": [],
     "teaches": [
@@ -6813,7 +6816,7 @@
     "questions": [
       "claude code essentials full course",
       "one long guided video over the whole tool",
-      "authentication and permissions covered",
+      "authentication on bedrock and vertex covered",
       "rewind fork and compact a session"
     ],
     "prerequisites": [
@@ -7564,7 +7567,8 @@
       "how claude code actually behaves",
       "what does a subagent inherit",
       "someone who left and came back",
-      "mechanism rather than a feature list"
+      "mechanism rather than a feature list",
+      "manage token usage across a long session"
     ],
     "prerequisites": [
       "prior experience using claude code",
@@ -7618,7 +7622,7 @@
       "durable ai prompts for teaching"
     ],
     "questions": [
-      "a durable teaching setup rather than one-off prompts",
+      "a k12 classroom setup rather than one-off prompts",
       "stop asking for a lesson plan in one prompt",
       "put my teaching context somewhere permanent",
       "track student progress by process not marks"
@@ -7735,7 +7739,7 @@
       "ai accuracy basics"
     ],
     "questions": [
-      "what claude can and cannot do",
+      "what claude can do and its limitations",
       "what should i not trust it with",
       "where does it get things wrong",
       "set my expectations before real work"
@@ -8720,7 +8724,8 @@
       "a review of claude from an ordinary user",
       "should i pay for the subscription",
       "is it worth the hype",
-      "explained without developer language"
+      "explained without developer language",
+      "what extended thinking actually does"
     ],
     "teaches": [
       "evaluate whether claude pro meets your needs",
@@ -8883,7 +8888,7 @@
       "official product management plugin",
       "commands for specs roadmaps and updates",
       "install it rather than write my own prompts",
-      "pull context from the tools we already use"
+      "pull context from slack notion and linear"
     ],
     "teaches": [
       "install the official product management plugin",
@@ -9234,7 +9239,7 @@
       "moving from cowork to claude code",
       "i keep hitting the ceiling of cowork",
       "what carries over and what changes",
-      "explore a codebase safely first"
+      "use plan mode to explore a codebase safely"
     ],
     "teaches": [
       "navigate the transition from cowork to claude code",
@@ -9356,7 +9361,8 @@
       "product management run with agents",
       "stop writing tickets entirely",
       "a strategy document built by interview",
-      "a daily metrics report from our analytics"
+      "a daily metrics report from our analytics",
+      "running a whole product solo"
     ],
     "teaches": [
       "interview claude to build a strategy markdown file",
@@ -9940,7 +9946,7 @@
     ],
     "questions": [
       "pm skills and plugins for claude cowork",
-      "where do i get ready-made product management workflows",
+      "ready-made product management commands and workflows",
       "how do i write a product spec faster",
       "can something pressure-test my spec before review"
     ],
@@ -10216,7 +10222,8 @@
       "certification for shipping ai products",
       "move into an ai product role",
       "i need a portfolio project and an eval story",
-      "a live cohort rather than videos"
+      "a live cohort rather than videos",
+      "rag and agentic rag with evals"
     ],
     "teaches": [
       "build and ship ai products using claude code",
@@ -10552,7 +10559,7 @@
     "questions": [
       "what a project is in claude",
       "i keep re-pasting the same background",
-      "somewhere to keep reference files",
+      "a knowledge base for my reference files",
       "instructions that stay between chats"
     ],
     "teaches": [
@@ -11219,7 +11226,7 @@
     "questions": [
       "claude for academic writing and research",
       "i am not technical and i work in academia",
-      "can it help screen papers for a systematic review",
+      "screen the literature for a systematic review",
       "approachable guidance for research writing"
     ],
     "teaches": [
@@ -11478,7 +11485,7 @@
     "questions": [
       "ai fluency course for students",
       "how do i use it to learn rather than to cheat",
-      "the official view of good ai use",
+      "the 4d framework applied to student life",
       "using ai for career planning as a student"
     ],
     "teaches": [
@@ -11529,7 +11536,8 @@
       "claude for education at my university",
       "my university just switched it on",
       "what do i get that a free account does not",
-      "i cannot log in with my campus account"
+      "i cannot log in with my campus account",
+      "what the usage limits are on a campus account"
     ],
     "teaches": [
       "access and use university claude for education features",
@@ -12628,7 +12636,7 @@
       "the four parts of a usable prompt",
       "i have never thought about how i phrase it",
       "the smallest change that improves my results",
-      "academic examples to copy"
+      "academic examples a student can copy"
     ],
     "teaches": [
       "write structured prompts with four core parts",
@@ -12790,7 +12798,8 @@
       "peer review and ai feedback on student writing",
       "why is my class being taught this way",
       "does ai feedback actually help my writing",
-      "the research behind the approach"
+      "the research behind the approach",
+      "feedback for writers whose first language is not english"
     ],
     "teaches": [
       "understand the research behind combining peer review and AI feedback",
@@ -13100,7 +13109,8 @@
       "claude for teachers announcement",
       "am i eligible for the free offer",
       "what exactly do teachers get",
-      "lesson planning built in"
+      "lesson planning built in",
+      "is it ferpa compliant"
     ],
     "teaches": [
       "understand eligibility and benefits of Claude for Teachers",
@@ -13356,7 +13366,8 @@
       "practical first steps for educators",
       "have it interview me about my role first",
       "which student work should stay human",
-      "starting from nothing"
+      "starting from nothing",
+      "projects and artifacts for a teacher"
     ],
     "teaches": [
       "run an onboarding interview prompt for your teaching role",
@@ -13509,7 +13520,7 @@
       "claude skills for college teaching",
       "the same jobs come round every semester",
       "give feedback against a rubric at scale",
-      "stop rebuilding course materials every year"
+      "stop rebuilding the syllabus and materials every year"
     ],
     "teaches": [
       "build reusable Claude Skills for semester-long courses",
@@ -13961,7 +13972,7 @@
     ],
     "questions": [
       "eu ethical guidance for ai in schools",
-      "does this tool comply with our data law",
+      "does this tool meet our data privacy law",
       "what am i allowed to use with pupils",
       "principles that match the law i work under"
     ],
@@ -14216,8 +14227,8 @@
     "questions": [
       "projects in claude cowork",
       "stop re-explaining the same long job",
-      "keep instructions and files together for weeks",
-      "work that runs for months not one chat"
+      "keep instructions and a local folder together for weeks",
+      "recurring work that runs for months not one chat"
     ],
     "teaches": [
       "combine local folder context with persistent project instructions in cowork",
@@ -15015,7 +15026,7 @@
     "questions": [
       "a journalist's rules for using claude",
       "how do i stop it inventing quotes",
-      "what should my own ground rules be",
+      "what should my own claude md say",
       "do i have to tell readers i used ai"
     ],
     "teaches": [
@@ -15120,10 +15131,10 @@
       "claud"
     ],
     "questions": [
-      "claude course with a certificate",
+      "claude comprehensive guide on coursera",
       "structured lessons with marking at the end",
       "copywriting and marketing with ai",
-      "something to show for finishing it"
+      "a certified course with something to show for it"
     ],
     "teaches": [
       "use structured prompting for marketing and copywriting tasks",
@@ -15601,8 +15612,8 @@
       "prompt quality framework"
     ],
     "questions": [
-      "the four competencies of ai fluency",
-      "words for judging my own ai use",
+      "the 4d framework of ai fluency",
+      "the four competencies, in words i can use",
       "was that a good result or did i get lucky",
       "the second lesson of the course"
     ],
@@ -15839,7 +15850,7 @@
     "questions": [
       "what claude code is",
       "how is it different from the chat window",
-      "an agent that edits files and runs commands",
+      "an agent that reads the codebase, edits files and runs commands",
       "the mental model before i install it"
     ],
     "prerequisites": [],
@@ -16184,7 +16195,8 @@
       "claude code beyond the basics",
       "how do we get a whole team using it the same way",
       "what belongs in a claude md file",
-      "how do i package our conventions so everyone gets them"
+      "how do i package our conventions so everyone gets them",
+      "run it in auto mode without it going wrong"
     ],
     "prerequisites": [
       "shipping daily with claude code",
@@ -16582,7 +16594,7 @@
     "questions": [
       "claude code course for data work",
       "a full course that is not about building apps",
-      "set up mcp for data workflows",
+      "set up mcp servers for data workflows",
       "hooks and skills for analysis rather than software"
     ],
     "prerequisites": [
@@ -16792,7 +16804,7 @@
     "questions": [
       "how claude code breaks work into tasks",
       "shape the breakdown instead of fighting it",
-      "run several agents on one job",
+      "orchestrate subagents on one job",
       "the layer underneath the commands"
     ],
     "prerequisites": [
@@ -17776,7 +17788,7 @@
     ],
     "questions": [
       "full claude tutorial in under twenty minutes",
-      "a map of what the product can do",
+      "projects artifacts and file uploads in one map",
       "features i have probably missed",
       "one sitting and then i am off"
     ],
@@ -17890,7 +17902,7 @@
       "full claude tutorial for beginners",
       "a long course i can follow along with",
       "take me through everything slowly",
-      "nothing skipped and nothing assumed"
+      "every feature shown and nothing skipped"
     ],
     "prerequisites": [],
     "teaches": [
@@ -18272,7 +18284,7 @@
     ],
     "questions": [
       "claude for researchers",
-      "screen papers and draft a methods section",
+      "screen literature and draft a methods section",
       "pair it with a search tool for real citations",
       "every feature explained in academic terms"
     ],
@@ -18479,7 +18491,7 @@
     ],
     "questions": [
       "claude for teachers beginner guide",
-      "differentiate a worksheet for my class",
+      "differentiate a worksheet for my high school class",
       "write parent emails faster",
       "examples from teaching not from an office"
     ],
@@ -18592,7 +18604,7 @@
     ],
     "questions": [
       "claude design reviewed by a designer",
-      "is the design output any good",
+      "is the ui it makes any good",
       "will it hold together as a system",
       "an honest opinion rather than a feature tour"
     ],
@@ -18975,7 +18987,7 @@
       "claude for small business setup",
       "how do i set this up for my business",
       "what do i do first after signing up",
-      "fastest way from signup to something useful"
+      "connect our company documents and get something useful"
     ],
     "prerequisites": [],
     "teaches": [
@@ -20057,7 +20069,8 @@
       "claude code subagents",
       "my session runs out of room",
       "split a big job across several helpers",
-      "give each part its own context"
+      "give each part its own context",
+      "build one with the agents command"
     ],
     "id": "r-185e71d34e"
   },
@@ -21233,7 +21246,7 @@
     "questions": [
       "rolling out claude cowork across an organisation",
       "the pilot worked so what now",
-      "control which team reaches which system",
+      "limit which team reaches which system",
       "governance before we go wide"
     ],
     "id": "r-529b6c65e3"
@@ -21373,7 +21386,7 @@
       "claude tag tasks in slack",
       "what can i actually ask it to do in a channel",
       "when does it answer without being tagged",
-      "give me real examples not a chat partner"
+      "open a pull request from a channel"
     ],
     "id": "r-0fcc607c0b"
   },
@@ -21505,7 +21518,8 @@
       "the four properties of ai",
       "why is it brilliant at one thing and hopeless at another",
       "what does it not know",
-      "a first mental model"
+      "a first mental model",
+      "where its limitations come from"
     ],
     "id": "r-985113a138"
   },
@@ -21590,7 +21604,7 @@
     ],
     "questions": [
       "what a token is",
-      "why did that cost so much",
+      "why is my usage bill so high",
       "predict how much text will use",
       "why the limit moved"
     ],
@@ -22560,7 +22574,7 @@
       "can i trust what ai tells me",
       "how much should i believe the answer",
       "it sounds confident and i cannot tell",
-      "the two ways it goes wrong"
+      "hallucination and sycophancy explained simply"
     ],
     "id": "r-4c75fa41f0"
   },
@@ -24152,7 +24166,7 @@
       "s&p global mcp"
     ],
     "questions": [
-      "s and p global data in claude",
+      "s and p global data through kensho",
       "pull market and fundamental data",
       "map suppliers customers and partners",
       "competitor lists from filings"
@@ -24287,7 +24301,7 @@
     ],
     "questions": [
       "benevity connector for charity data",
-      "research a charity anywhere in the world",
+      "research nonprofits worldwide",
       "check an organisation before we donate",
       "no account needed"
     ],
@@ -25319,7 +25333,7 @@
       "claude for excel investment analysis"
     ],
     "questions": [
-      "build an investment model",
+      "build a financial or investment model",
       "scenarios and risk in one workbook",
       "a model ready for the committee",
       "pull the inputs from connected data"
@@ -26909,7 +26923,8 @@
       "write an ai usage policy",
       "we need rules for staff using ai",
       "what should an ai policy actually say",
-      "draft a policy without hiring a consultant"
+      "draft a policy without hiring a consultant",
+      "a workbook for putting the policy in place"
     ],
     "id": "r-13ab6fa70b"
   },
@@ -27091,7 +27106,8 @@
       "handle a request from my phone",
       "the file is on my desktop and i am not there",
       "draft a reply and post it after i approve",
-      "my computer is at home"
+      "my computer is at home",
+      "what cowork dispatch does"
     ],
     "id": "r-bee34f76e6"
   },
@@ -27227,7 +27243,7 @@
       "claude lit review visualization"
     ],
     "questions": [
-      "map the debate across a pile of papers",
+      "map the debate across a literature review",
       "who agrees with whom and about what",
       "where is the field actually divided",
       "see the argument structure not a summary"
@@ -27783,7 +27799,7 @@
     ],
     "questions": [
       "plan a career move",
-      "what skills am i missing for these jobs",
+      "what skill gaps do these jobs show",
       "compare my cv against real postings",
       "a timeline and people to contact"
     ],
@@ -28920,7 +28936,7 @@
     ],
     "questions": [
       "turn commute time into prep time",
-      "talk out my thoughts while travelling",
+      "dictate on mobile while travelling",
       "have the research done before i sit down",
       "a briefing grounded in our own documents"
     ],
@@ -30048,7 +30064,7 @@
       "make a usage limit go further",
       "i run out before the week ends",
       "must i pay more or can i work differently",
-      "batch questions instead of asking one at a time"
+      "batch questions into one message instead of several"
     ],
     "notes": "Opened via fetch 2026-09-04. Page prints 2026-06-02. Tagged basic rather than never-used: it assumes a reader who has already hit a limit and knows what a Project is. Migrated 2026-09-05: Intercom never prints a publication date, so the 2026-06-02 written into `published` was a last-updated date all along. Moved to `updated`; `published` is UNVERIFIED, which is what the page supports.",
     "author": "Anthropic",
@@ -30098,7 +30114,7 @@
     ],
     "questions": [
       "claude cowork on web desktop and mobile",
-      "do i need to install the desktop app",
+      "do i need the desktop app for local files and the browser",
       "does it keep working when i shut the laptop",
       "which features only work in one place"
     ],
@@ -30250,7 +30266,7 @@
       "ai tools compared"
     ],
     "questions": [
-      "claude next to the other ai tools",
+      "claude next to chatgpt and the other ai tools",
       "which tool should i open first for research",
       "a short neutral summary from a library",
       "what is it weak at for academic work"
@@ -30418,7 +30434,7 @@
     "questions": [
       "claude use cases for legal work",
       "what can a legal team hand over",
-      "triage an agreement without reading every clause",
+      "triage an nda or a contract without reading every clause",
       "before we commission anything of our own"
     ],
     "level": "confident",
@@ -30647,7 +30663,7 @@
       "claude code permissions and settings",
       "how do i stop it running things without asking",
       "where did that permission get saved",
-      "can i keep it out of one folder"
+      "write a rule that keeps it out of a folder"
     ],
     "published": "UNVERIFIED",
     "checked": "2026-09-06",
