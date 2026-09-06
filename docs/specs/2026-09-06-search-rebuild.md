@@ -172,9 +172,8 @@ Stated properly, the budget is **150 KB transferred**, and the index is at 146 K
 The index grew past the 150 KB figure this section set. Almost none of the growth is
 machinery: stem groups, spelling forms and synonyms together added a few dozen entries.
 The phrases grew by more than a thousand, and every one of those is a `questions[]`
-string, because the phrase map keeps each question whole. FIX-30 rewrote every row's
-questions and FIX-31 lengthened some of them; the index grew with the catalogue's own
-prose.
+string, because the phrase map keeps each question whole. Those questions were rewritten
+and then lengthened over two rounds; the index grew with the catalogue's own prose.
 
 ### Amendment 8: the budget is a time, and the size is only what produced it
 
@@ -210,7 +209,7 @@ search of a session, and under 200 ms on every keystroke after it.** Both are me
 176,934 bytes. That size is recorded as what produced the time, not as a limit of its own.
 
 Nothing is cut. **If the time were bad, what would be cut is the phrase map** - it is
-5,201 entries holding every `questions[]` string whole, it is the largest single part of
+in September 2026 it was 5,201 entries holding every `questions[]` string whole, the largest single part of
 the file, and amendment 6 already argues on ranking grounds that two of its three
 candidate repairs would shrink or remove it. That is the lever, and it is named here so
 that nobody reaches for the catalogue's content instead.
@@ -231,8 +230,8 @@ with the ranked first result:
 | queries where the fallback's top result **differs** from the ranked one | **8 of 12** |
 
 "grading", "write emails for me", "make a lesson plan", "how much does claude cost" and
-"can claude read my csv" all render **"0 resources"** for that second before the real
-answer replaces it. A reader on a train who types a question and reads "0 resources" has
+"can claude read my csv" all render **`0 resources`** for that second before the real
+answer replaces it. A reader on a train who types a question and reads `0 resources` has
 been told the site does not have it, and some of them will stop there.
 
 That is a bigger cost than the file size and it was invisible while the budget was a
@@ -241,7 +240,7 @@ shipping a tiny always-loaded first-pass index, and choosing between those needs
 attack's evidence about what readers actually do. Recorded here; not built.
 
 **The phrase map was measured by removal, and it stays.** It is the largest section after
-the postings - 4,059 entries, 123 KB raw and 35 KB gzipped, a quarter of the transferred
+the postings - in September 2026, 4,059 entries at 123 KB raw and 35 KB gzipped, a quarter of the transferred
 file - and building without it takes the suite from 24 to 23. One query needs it:
 `is claude free`, from the non-technical reader, where the phrase "is claude free" is
 matched whole against the plan page's own question list. No query is hurt by it.
@@ -339,7 +338,7 @@ the catalogue cannot answer**, with the role that asked. That list is the harves
 it is generated, and nobody types it.
 
 - **`em dash` returns nothing because the catalogue holds nothing.** No row mentions it in
-  any indexed field. A synonym cannot conjure a resource. Four rows discuss AI writing
+  any indexed field. A synonym cannot conjure a resource. Several rows discuss AI writing
   tells generally, and the honest fix is either an editorial note on one of them or an
   admission that we do not cover it.
 - **`typography` returns almost nothing for the same reason.** One row mentions it. A
@@ -403,7 +402,7 @@ code hooks". The arithmetic, from `tmp/trace2.py`:
 | phrase bonus | `claude code hooks` fires: **+6.0** | nothing fires: **0** |
 | **total** | **42.4** | **32.9** |
 
-The two rows match `hooks` identically. The whole 9.5-point gap is made of things that
+Both rows match `hooks` identically. The whole 9.5-point gap is made of things that
 have nothing to do with the subject: 6.0 of it is the phrase bonus, and 3.4 is the
 difference between holding "claude" and "code" in `questions` rather than in `keywords`.
 
@@ -411,7 +410,7 @@ The reference page earns the bonus because its keyword is the string `claude cod
 which is what the reader typed. The guide earns nothing - and it is not because its
 keywords are worse. Its keyword is `claude code hooks guide`: the query plus one word, the
 same subject said slightly more precisely. Being longer than the query is the whole of its
-disqualification. Three other rows on this query hold a phrase that contains it -
+disqualification. The other rows on this query that hold a phrase containing it -
 `claude code hooks and skills`, `claude code hooks in twenty minutes`, `claude code hooks
 reference` - and every one of those strings earns nothing.
 
@@ -426,7 +425,7 @@ reference` - and every one of those strings earns nothing.
   bare `peer review`, is paid +6, and wins. This is a recorded suite failure whose
   accepted answer is the Nature page.
 - **"design system"** — *Design system drift review* holds `design system drift review`
-  and `design system drift claude`, fires neither, and is paid nothing. Three rows holding
+  and `design system drift claude`, fires neither, and is paid nothing. The rows holding
   the bare `design system` are paid +6.
 
 *Fault B - the bonus is flat and additive, so short keywords stack.*

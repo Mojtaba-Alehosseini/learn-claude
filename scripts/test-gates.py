@@ -132,6 +132,17 @@ def plant_evidence_free_gap(root):
     return "declared a content gap with no pages behind it"
 
 
+def plant_typed_count_in_a_doc(root):
+    """A live count in a document a reader reads. The rule has existed since August
+    and docs/ had never been inside any check - FIX-31 found THE-PROJECT.md claiming a
+    catalogue size two rounds old."""
+    p = os.path.join(root, "docs", "THE-PROJECT.md")
+    text = io.open(p, encoding="utf-8").read()
+    io.open(p, "w", encoding="utf-8").write(
+        text + "\n\nThe catalogue holds 999 resources and 42 paths.\n")
+    return "typed a live catalogue count into THE-PROJECT.md"
+
+
 def plant_synonym_without_reason(root):
     """Every synonym carries the reason it exists, like every skip_if."""
     p = os.path.join(root, "data", "synonyms.json")
@@ -163,6 +174,8 @@ FAULTS = [
      "validate-picks.py"),
     ("a typed count in a pick's reason", plant_typed_count,
      "check-typed-numbers.py"),
+    ("a live count typed into a document", plant_typed_count_in_a_doc,
+     "state a count with no date beside it"),
 ]
 
 

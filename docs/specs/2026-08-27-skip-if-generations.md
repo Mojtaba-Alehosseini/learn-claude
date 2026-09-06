@@ -2,7 +2,7 @@
 
 Two attack agents found this independently by different methods: the data-analyst by
 length, the writer by punctuation. Both were right and both saw part of it. Measured
-across all 352 entries, grouped by the date the entry was checked:
+across all 352 entries as they stood in August 2026, grouped by the date the entry was checked:
 
 | checked | rows | median chars | mean | opens "Skip" | em dash | tautologies |
 |---|---|---|---|---|---|---|
@@ -19,7 +19,7 @@ Reproduce with the script at the bottom of this file.
 It is not two clean generations. There are two separate splits that happen to overlap.
 
 **A quality split.** 19 and 20 August are the weak days: medians of 38 and 50 characters
-against 164 and 130 later. **72 entries, 20% of the catalogue.** Eight of those are
+against 164 and 130 later. **72 entries in August 2026, a fifth of the catalogue.** Eight of those are
 tautologies of the form "you don't use X" — a line that tells a reader nothing they did
 not already know from the title:
 
@@ -35,15 +35,15 @@ not already know from the title:
 median is 90 — but 58% of its lines use an em dash and only 1 of 65 opens with the word
 "Skip". By 22 August, 99% open with "Skip" and 3% use an em dash. So 18 August is
 well-written in a different voice, while 19 and 20 August are simply thin. Judging the
-catalogue by punctuation alone would wrongly condemn 65 good entries.
+catalogue by punctuation alone would wrongly condemn 65 good entries of the August 2026 catalogue.
 
-Which is why the visible symptom is what it is: 16 of the student's 41 cards and 18 of
+Which is why the visible symptom is what it is: in August 2026, 16 of the student's 41 cards and 18 of
 the writer's 41 render as "Skip if: Skip if …", because the later convention stores the
 label inside the value and the card prints the label too.
 
 ## Not rewritten
 
-72 entries is a fifth of the catalogue and `Skip if:` is the product. Rewriting them is
+That is a fifth of the August 2026 catalogue and `Skip if:` is the product. Rewriting them is
 a content decision and it is Morteza's. This file exists so the size of the job is known
 before anyone starts it.
 

@@ -15,11 +15,11 @@ Measured from the five that exist, so this is not an invented standard:
 | pm-without-engineering | 5 | about 2 hours | 5 basic |
 | research-with-claude | 5 | about 2 hours | 2 basic, 3 confident |
 
-Five or six steps, about two hours, and a first step a reader can actually take.
+A handful of steps, about two hours, and a first step a reader can actually take.
 
 ## data-analyst — yes, and the thing that changed is small
 
-45 resources: 5 never-used, 21 basic, 12 confident, 7 builder.
+45 resources in August 2026: 5 never-used, 21 basic, 12 confident, 7 builder.
 
 The role was never short of material. It was short of a **first step**. All three of its
 never-used entries were general Claude courses — Claude 101, Claude 101 (DataCamp), AI
@@ -33,7 +33,7 @@ Both additions are first steps and both are about this reader's own work:
 
 A spine now exists: get the file in, know what happens to it, then the analysis tool,
 then the two-modes trap (Claude reads a CSV two ways and only one runs the arithmetic),
-then a practical tips course. Five steps, under two hours, all free.
+then a practical tips course. Five steps as built in August 2026, under two hours, all free.
 
 The weak point to name when the path is built: the strongest correctness material in this
 role — the CSV honest guide, Panko's 94% — sits at `confident`, and the honest opening
@@ -42,7 +42,7 @@ weakness and it belongs in the path's own text rather than being smoothed over.
 
 ## designer — no, and the additions did not change it
 
-33 resources: 3 never-used, 9 basic, 18 confident, 3 builder. The counts look adequate.
+33 resources in August 2026: 3 never-used, 9 basic, 18 confident, 3 builder. The counts look adequate.
 They are not, because of what the basic tier contains:
 
 | basic designer resource | what it is really about |
@@ -65,7 +65,7 @@ Claude Design, Claude Code. That is a Claude Design tutorial wearing the word "p
 designer who does critique, research and systems work would finish it having learned to
 generate mockups.
 
-The never-used tier is worse. Three entries: a listed course about AI limits that is not
+The never-used tier is worse. In August 2026, three entries: a listed course about AI limits that is not
 about design, a roundup article of other people's courses, and a Claude Design first-look
 video. One of the three is tightly scoped. None is a starting point for a designer.
 
@@ -90,7 +90,7 @@ without a path, and the site says so rather than shipping a path that misleads.
 
 # Re-measured 2026-08-28, after searching the three named gaps
 
-**data-analyst: path built** (`numbers-you-can-defend`, 5 steps, ~2 hours, free).
+**data-analyst: path built** in August 2026 (`numbers-you-can-defend`, 5 steps, ~2 hours, free).
 
 **designer: still no — but the gap is now small and specific, and it is not "more
 content".**
@@ -133,12 +133,12 @@ A path is now constructible and I got as far as writing it out:
 4. AI Can't Replace Real Research — the boundary on that work
 5. Testing AI with Real Design Scenarios — judge what comes back
 
-Five steps, about two hours, free, not one Claude Design tutorial. It passes the stated
+Five steps as shipped in August 2026, about two hours, free, not one Claude Design tutorial. It passes the stated
 test: every step teaches design work.
 
 **It still fails the test that matters.** Ask what a designer could do differently on
 Monday: two real skills — synthesise feedback, test a tool against a real task — and three
-judgements. Compare the writing path, which is four skills in five steps. Every other path
+judgements. Compare the writing path, which was four skills across its steps in August 2026. Every other path
 on the site has a *making* spine and this one has research synthesis and nothing else.
 
 It would be a path about **judging AI's design output**. That is a real and useful thing.
@@ -147,7 +147,7 @@ would tell a designer this is what Claude is for them.
 
 ## What would change the answer
 
-Two resources, and they are the same two named a day ago:
+Two resources in August 2026, and they are the same two named a day earlier:
 
 1. **Design critique of your own work at `basic`.** Give Claude a screenshot or a Figma
    frame and get feedback worth having. The new step 4 is evaluation criteria for testing

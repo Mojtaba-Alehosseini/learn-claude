@@ -35,7 +35,7 @@ Team or Enterprise."*
 
 ## What changed on 2026-08-27
 
-Fourteen entries. Every one was tested with an unauthenticated request, and the ambiguous
+Fourteen entries in August 2026. Every one was tested with an unauthenticated request, and the ambiguous
 ones were opened in a real browser as well.
 
 **Eleven moved to `free`** — four from `subscription`, seven from `free-account`. All

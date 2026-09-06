@@ -24,7 +24,7 @@ It is not affiliated with Anthropic. The footer says so on every page.
 ## 2. What we aim for
 
 There are already many lists of Claude tutorials. A list is easy. A list is also close to
-useless, because a list does not tell you which of the forty links is for you.
+useless, because a list does not tell you which of its links is for you.
 
 So the product is not the links. **The product is the judgment attached to each link.**
 
@@ -60,7 +60,7 @@ every cell's pool with its publisher and non-Anthropic counts, the thin and empt
 the live resources the freshness rule excludes, and the last link check.
 
 This section used to hold those figures written out. They rotted twice in three rounds —
-once in START-HERE.md, which said "353 resources, 3 paths" long after both were wrong,
+once in START-HERE.md, which said `353 resources, 3 paths` long after both were wrong,
 and then here, four days after that fix shipped with a note saying a second copy of a
 figure is how one stale file becomes two. Discipline was not the fix. Generation is.
 
@@ -98,7 +98,7 @@ cannot deploy. The rules that matter most:
   agree that it is in that path. This exists because path steps once pointed at list
   positions, the catalogue grew, and every path silently re-pointed at the wrong things.
 - **8** — the `reviewed` allowance.
-- **10** — the same title on two hosts. One course harvested twice becomes two cards; the
+- **10** — the same title on more than one host. One course harvested twice becomes a duplicate; the
   developer path once advertised "about 6 hours" because the build picked the wrong copy
   of step 1.
 - **11** — the same trailing URL segment on two hosts. Added August 2026 after four
@@ -151,7 +151,7 @@ state so a filtered view can be shared or bookmarked. On a phone the filters bec
 sheet with a keyboard trap. Search is keyword matching over hidden fields weighted by IDF
 — no API call, because a static page cannot hold a key.
 
-**`paths.html` — the seven routes.** A path is an ordered set of 5–6 resources. What makes
+**`paths.html` — the routes.** A path is a short ordered set of resources, and how many there are is in [STATUS.md](STATUS.md). What makes
 it a path and not a playlist: **every step carries a `why` that explains its position, not
 its content.** *"Now open the thing itself and do one real task. Reading about it any
 longer is procrastination."* Times and costs are computed from the steps, never typed.
@@ -163,7 +163,7 @@ filled in.
 **`how-we-check.html` — the method.** What the four levels mean, what we will not do, and
 the live tally — read from the data, so this page cannot quietly become a lie.
 
-### The seven paths
+### The paths
 
 | path | for | steps | time |
 |---|---|---|---|
@@ -211,7 +211,7 @@ and the paths, then mirrors everything into `data/*.js`.
 
 There is a matching lesson about shared helpers. `lstrip("www.")` removes any leading run
 of `w` and `.` characters, so `weather.com` becomes `eather.com`. That bug was copied into
-three host-normalising functions before being fixed into one. **Two copies of a helper is
+several host-normalising functions before being fixed into one. **Two copies of a helper is
 how one bug becomes three.**
 
 ---
@@ -281,7 +281,7 @@ by that verification — including a font weight I had measured through the wron
 
 **The Academy harvest, August 2026.** We held 5 of Claude Academy's resources and did not
 know it. The cause was method, not access: the harvest had been search-driven, so it never
-walked the Academy's own index. 291 resources were added — 24 courses, 119 tutorials, 146
+walked the Academy's own index. In August 2026 it added 291 resources — 24 courses, 119 tutorials, 146
 use cases. The catalogue went from 354 to 618 after duplicate merges.
 
 One measurement from that run is worth keeping. The 291 `skip_if` lines written in a single
@@ -290,7 +290,7 @@ share their opening words against 12%. Written fast, graded better. Nobody predi
 
 **Cleanup.** Seven format icons shipped named `-alpha.png` with zero transparent pixels.
 Five duplicate pairs from the migration. The `lstrip` bug in three places. A weekly job now
-re-checks all 637 links.
+re-checks every link in the catalogue; the count and the date of the last run are in [STATUS.md](STATUS.md).
 
 ---
 
@@ -298,7 +298,7 @@ re-checks all 637 links.
 
 **Both picks decisions are closed** (31 August 2026). Kept here as the record:
 
-1. **Thin pools.** Ruled: at most 2 picks from one publisher when the pool holds fewer
+1. **Thin pools.** Ruled: a single publisher may supply at most a pair of the picks when the pool holds fewer
    than 3, and the build prints every publisher-thin cell so the relaxation is never
    silent. `data-analyst|builder` ships 2+1; `non-technical|builder` ships two.
 
@@ -369,7 +369,7 @@ what matters here, and it is worse-looking and more honest.
 
 Two consequences, both real, and the second is a cost rather than a win. A resource whose
 stored date was nine months too recent is now correctly flagged as over a year old and has
-left every picks pool. And three resources that were correctly excluded as old are back in
+left every picks pool. And resources that were correctly excluded as old are back in
 the pools — not because they got newer, but because their date turned out to be
 unsupported and `UNVERIFIED` is deliberately not stale. One of them is a 2023 article on a
 host that blocks us. The rule that refuses to round up cuts both ways, and this is the
@@ -403,7 +403,7 @@ else's recipe as something you built. That is the honest number rather than a wo
 two thirds of the old `builder` was Cowork recipes with connectors attached.
 
 What is underneath has not changed shape. `developer|builder` holds most of it, from
-twenty publishers. `non-technical|builder` holds two rows, both from Anthropic, with no
+publishers from across the roster. `non-technical|builder` holds a pair of rows, both from Anthropic, with no
 independent voice at all. `student|builder` is empty. The advanced end is not thin in
 general; it is thin for everyone who does not write code, and Rule A made that visible
 rather than causing it. The current figures per cell are in [STATUS.md](STATUS.md).
@@ -412,16 +412,16 @@ rather than causing it. The current figures per cell are in [STATUS.md](STATUS.m
 It was 61.4% on 5 September 2026 and was recorded in the backlog as decided knowingly.
 Then D12 measured what those rows were doing: 148 single-recipe gallery pages, most of
 them tagged for readers their own cards named somebody else for. Rules A, B and C removed
-40 of them into five collection cards and dropped two outright, and every row that left
+most of them into collection cards and dropped two outright, and every row that left
 was Anthropic's. A composition figure that improves because rows nobody could use were
 removed is an accounting correction, not a win, and it is written up as one in
 [the gallery-collections spec](specs/2026-09-06-gallery-collections.md).
 
 A supply survey on 4 September 2026 (`research/2026-09-04-advanced-end-supply-survey.md`)
-walked five publishers and found **five plausible non-coder candidates** — two DataCamp
+walked five publishers that September and found **five plausible non-coder candidates** — two DataCamp
 code-alongs, a Coursera Cowork course, a Maven cohort, and an agent-skills course — all
 paid or sign-up-gated. Against the previous harvest's yield of four from nine after
-opening, that is perhaps two or three shippable entries: enough to give
+opening, that is perhaps a handful of shippable entries: enough to give
 `non-technical|builder` its first independent voice, not enough for a harvest round.
 
 **And the survey was taken half-blind.** Two of the seven indexes cannot be walked by
@@ -436,7 +436,7 @@ without being asked the question.
 Every number in this section was measured on 6 September 2026. The live ones are in
 [STATUS.md](STATUS.md); none of these is a figure to quote tomorrow.
 
-**Roles are uneven.** 178 entries for someone running a business, 50 for a designer.
+**Roles are uneven.** The business owner has several times what the designer has; the per-role figures are in [STATUS.md](STATUS.md).
 
 **No human has ever used this site.** Ten AI agents have attacked it and found a great deal.
 That is not the same thing. Three real people — a teacher, a student, a writer — would
@@ -475,8 +475,9 @@ claiming done — run it, open it, check the links.
 | `scripts/` | build, validate, check |
 | `data/` | the catalogue, the paths, and the two duplicate-allowance files |
 
-One warning: **`docs/START-HERE.md` is stale.** It still says 353 resources and 3 paths. It
-was written to bootstrap a new session and has not been updated in thirteen rounds. Read
+One note on **`docs/START-HERE.md`**: it deliberately carries no figures of its own and
+points at STATUS.md, because it used to bootstrap a session with numbers that were wrong
+by the time anyone read them. Read
 this file instead, or fix that one.
 
 ---

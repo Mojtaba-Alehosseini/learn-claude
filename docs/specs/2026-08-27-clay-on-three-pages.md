@@ -6,7 +6,7 @@ as the record of what was proposed and why.**
 
 Two things below are wrong and are left uncorrected, because a proposal edited after the
 fact stops being a record. The single-path URL is `paths.html?id=…`, not `?p=…`. And the
-catalogue held 347 resources the day this was written; the call to action that shipped
+catalogue held 347 resources the day this was written in August 2026; the call to action that shipped
 reads the count from the data and never hardcodes it.
 
 ---
@@ -35,13 +35,13 @@ desktop never sees it. So the count is 2 of 5 on desktop and 3 of 5 on a phone.
 **browse.html — none, and that is the honest answer.** Browse is a filtering surface.
 Every control on it is a filter, and a filter is not an action, it is a continuous
 adjustment. The one thing a reader does after filtering is open a card, and the cards are
-already the whole page — painting one of 347 cards clay would be a lie about which one
+already the whole page — painting one card of the several hundred clay would be a lie about which one
 matters. The nearest real candidate is **Clear all filters**, which appears when filters
 are on. That is a destructive action, and clay on this site means *go*, not *undo*.
 
 **paths.html — "Start this path", on a path card.** This is the strongest of the three.
 A path is a sequence with a first step, so there genuinely is one thing to press, and
-right now the page offers five equal-weight cards and no verb. But there are five paths,
+right now the page offers equal-weight cards and no verb. But there are five paths in August 2026,
 so a single clay button on the index would have to sit somewhere other than the cards —
 the rule is one per page, not one per card. On the single-path view (`paths.html?p=…`)
 the case is cleaner still: one path, one first step, one button.

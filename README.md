@@ -80,7 +80,7 @@ ratio, which cells are thin or empty, and what the last link check found.
 
 Three things that file will not tell you, because they are judgments rather than counts:
 
-- **0 resources are `reviewed`.** Nobody has finished a course end to end. That is the
+- **Nothing is `reviewed` yet.** Nobody has finished a course end to end, and the tier tally in [docs/STATUS.md](docs/STATUS.md) says so on every build. That is the
   honest gap in the site's promise, and the cards say so.
 - **"Start with these three" is picked by a model, not a person**, labelled as such on
   every block, with the date it was picked and the runners-up recorded in `data/picks.json`.

@@ -73,7 +73,7 @@ One thing is missing. Nothing stops the Tab key from leaving the sheet.
 
 Measured at 375 px with the sheet open: 403 focusable elements sit outside the sheet and
 all of them still take focus. A person who presses Tab past "Show resources" lands on the
-site header, then on the 353 cards behind the panel. The panel is `position: fixed` and
+site header, then on the cards behind the panel - 353 of them in August 2026. The panel is `position: fixed` and
 covers the screen, so the focus ring is under it and cannot be seen.
 
 `aria-modal="true"` does not do this. It tells a screen reader to keep its virtual cursor
@@ -87,14 +87,14 @@ Fix: keep Tab inside the sheet while it is open. About twelve lines in
 These were tested and passed. They are listed because they are easy to break later.
 
 - Contrast: every other text and background pair on all five pages meets AA.
-- The result count announces. `aria-live="polite"` says "132 resources" when the search
+- The result count announces. `aria-live="polite"` says `132 resources` when the search
   changes the number. This is the part that is most often missing, and it is here.
 - One `main`, one `header`, one `nav`, one `footer` on every page.
 - The skip link is the first focusable element and its target exists.
 - Heading order never skips a level.
 - Every link, button and form control has an accessible name.
 - No positive `tabindex`. Tab order follows the DOM, and the DOM follows the screen.
-- No duplicate ids, on any page, including the 353 generated cards.
+- No duplicate ids, on any page, including every generated card - 353 of them in August 2026.
 - Every control is at least 44 px tall, so target size passes with room to spare.
 - `prefers-reduced-motion` is honoured.
 - The focus ring is `2px solid #141413` at 2 px offset, and the footer swaps it to ivory

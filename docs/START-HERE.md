@@ -13,7 +13,7 @@ is, what it holds, what is decided, what is open, and every number measured from
 rather than remembered. Then `CLAUDE.md` for how I work and `README.md` for the rules that
 are easy to break and expensive to fix.
 
-**This file deliberately carries no numbers.** It used to say "353 resources, 3 paths" and
+**This file deliberately carries no numbers.** It used to say `353 resources, 3 paths` and
 was wrong within a week, because a second copy of a figure is how one stale file becomes
 two. Counts live in THE-PROJECT.md, and THE-PROJECT.md says how it measured them.
 
