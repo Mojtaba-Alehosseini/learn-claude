@@ -41,7 +41,12 @@ import tempfile
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SKIP_DIRS = {".git", "tmp", "node_modules", "_site", "reference", "scratch-icons",
              "__pycache__"}
-SKIP_EXT = {".pdf", ".png", ".jpg", ".jpeg", ".webp", ".mp4", ".woff", ".woff2"}
+# Images are skipped to keep the copy small, EXCEPT the ones the build checks for. The
+# og card is a committed artefact - the deploy runner has no Pillow to regenerate it -
+# and check-share-pages.py fails without it, so a copy that dropped it made the control
+# build red for a reason that had nothing to do with any planted fault. CI found that,
+# which is this file working on itself.
+SKIP_EXT = {".pdf", ".jpg", ".jpeg", ".webp", ".mp4"}
 
 
 # --- the faults ------------------------------------------------------------------
@@ -143,19 +148,26 @@ def plant_typed_count_in_a_doc(root):
     return "typed a live catalogue count into THE-PROJECT.md"
 
 
-def plant_missing_og_title(root):
-    """A generated share page with its og:title stripped. The whole share chain is
-    invisible from a browser - the tab title is written by JavaScript and is correct
-    whatever the served head says - so the only way to know it still works is to read
-    the built HTML, and the only way to know THAT still works is to break one."""
-    import glob
-    hits = sorted(glob.glob(os.path.join(root, "r", "*", "index.html")))
-    if not hits:
-        raise AssertionError("no share pages to plant in; did the generator run?")
-    text = io.open(hits[0], encoding="utf-8").read()
-    io.open(hits[0], "w", encoding="utf-8").write(
-        re.sub(r'<meta property="og:title"[^>]*>\n', "", text, count=1))
-    return "stripped og:title from %s" % os.path.basename(os.path.dirname(hits[0]))
+def plant_head_the_generator_cannot_find(root):
+    """The share pages keep their placeholder head.
+
+    Editing a generated page proves nothing: the build regenerates it two steps before
+    it checks it, so the fault heals itself. The first attempt at this test did exactly
+    that and went green - which is the failure mode it was written to catch, arriving in
+    the test instead of the product.
+
+    So the fault goes in the generator's INPUT. build-share-pages.py finds the block to
+    replace by matching from <title> to og:type in the shell; move that anchor and the
+    replacement silently does nothing, every generated page keeps the shell's
+    placeholder, and 588 pages go back to being called "Resource — Learn Claude". That
+    is the real way this breaks: somebody edits resource.html and nobody notices."""
+    p = os.path.join(root, "resource.html")
+    text = io.open(p, encoding="utf-8").read()
+    assert '<meta property="og:type"' in text, "the shell has no og:type to move"
+    io.open(p, "w", encoding="utf-8").write(
+        text.replace('<meta property="og:type" content="article">',
+                     '<meta property="og-type" content="article">', 1))
+    return "moved the head anchor in resource.html so the generator misses it"
 
 
 def plant_synonym_without_reason(root):
@@ -191,8 +203,9 @@ FAULTS = [
      "check-typed-numbers.py"),
     ("a live count typed into a document", plant_typed_count_in_a_doc,
      "state a count with no date beside it"),
-    ("a share page with no og:title", plant_missing_og_title,
-     "has no og:title"),
+    ("share pages keeping their placeholder head",
+     plant_head_the_generator_cannot_find,
+     "serves the shell's placeholder"),
 ]
 
 
