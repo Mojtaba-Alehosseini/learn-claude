@@ -46,8 +46,8 @@
       "level": "basic",
       "picked_by": "ai",
       "picked_on": "2026-09-06",
-      "pool_size": 67,
-      "fingerprint": "sha1:d5006a7d1bce8b44",
+      "pool_size": 62,
+      "fingerprint": "sha1:a39232b0a1d28179",
       "picks": [
         {
           "url": "https://claude.com/blog/best-practices-for-prompt-engineering",
@@ -87,8 +87,8 @@
       "level": "builder",
       "picked_by": "ai",
       "picked_on": "2026-09-06",
-      "pool_size": 14,
-      "fingerprint": "sha1:41cd835860a9113c",
+      "pool_size": 9,
+      "fingerprint": "sha1:bbe3c46026a1dc3f",
       "picks": [
         {
           "url": "https://every.to/guides/ai-product-management-guide",
@@ -250,8 +250,8 @@
       "level": "never-used",
       "picked_by": "ai",
       "picked_on": "2026-09-06",
-      "pool_size": 59,
-      "fingerprint": "sha1:f126ce2b8a93b709",
+      "pool_size": 50,
+      "fingerprint": "sha1:7384a835ed8c4bbc",
       "picks": [
         {
           "url": "https://academy.claude.com/use-cases/explore-what-claude-can-do-for-you",
@@ -292,11 +292,11 @@
       "picked_by": "ai",
       "picked_on": "2026-09-06",
       "pool_size": 17,
-      "fingerprint": "sha1:e1ef0f8c95485c6e",
+      "fingerprint": "sha1:b3082d55d45cfc83",
       "picks": [
         {
           "url": "https://academy.claude.com/tutorials/teach-claude-your-way-of-working-using-skills",
-          "reason": "The habit-changer the rest of the pool depends on: someone at this level is re-explaining themselves daily, and this is the only candidate about making instructions permanent rather than running one more task.",
+          "reason": "Written for the complaint this level actually has - you keep giving Claude the same instructions and they keep not sticking - and it is about the habit itself rather than a workflow that happens to end in a skill. Two rows arrived in this pool on 2026-09-06 that do end in a customised skill, which is why this sentence no longer claims to be the only one.",
           "subject": "making your instructions stick as a reusable skill"
         },
         {
@@ -332,8 +332,8 @@
       "level": "never-used",
       "picked_by": "ai",
       "picked_on": "2026-09-06",
-      "pool_size": 42,
-      "fingerprint": "sha1:75197a2b95590ea4",
+      "pool_size": 40,
+      "fingerprint": "sha1:65fa635e6e3a46b9",
       "picks": [
         {
           "url": "https://www.digital.pitt.edu/news/pantherbytes-blog/claude-education-made-learning",
@@ -413,8 +413,8 @@
       "level": "confident",
       "picked_by": "ai",
       "picked_on": "2026-09-06",
-      "pool_size": 10,
-      "fingerprint": "sha1:676952befb59c181",
+      "pool_size": 9,
+      "fingerprint": "sha1:2ecc358a44de8565",
       "picks": [
         {
           "url": "https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/reduce-hallucinations",
@@ -454,8 +454,8 @@
       "level": "never-used",
       "picked_by": "ai",
       "picked_on": "2026-09-06",
-      "pool_size": 18,
-      "fingerprint": "sha1:acec632d6e0c59d3",
+      "pool_size": 17,
+      "fingerprint": "sha1:46c3efe85c34bd12",
       "picks": [
         {
           "url": "https://academy.claude.com/courses/claude-101",
@@ -496,8 +496,8 @@
       "level": "basic",
       "picked_by": "ai",
       "picked_on": "2026-09-06",
-      "pool_size": 20,
-      "fingerprint": "sha1:cf3798256a37484b",
+      "pool_size": 19,
+      "fingerprint": "sha1:e56fb335e323189c",
       "picks": [
         {
           "url": "https://academy.claude.com/use-cases/plan-your-literature-review",
@@ -537,8 +537,8 @@
       "level": "confident",
       "picked_by": "ai",
       "picked_on": "2026-09-06",
-      "pool_size": 34,
-      "fingerprint": "sha1:12960f8188bcd256",
+      "pool_size": 31,
+      "fingerprint": "sha1:37135825d6f58c30",
       "picks": [
         {
           "url": "https://effortlessacademic.com/connect-and-integrate-your-local-zotero-library-with-claude-cowork/",
@@ -578,7 +578,7 @@
       "picked_by": "ai",
       "picked_on": "2026-09-06",
       "pool_size": 6,
-      "fingerprint": "sha1:edc6d0d620b77fa6",
+      "fingerprint": "sha1:a134ff2d9c60ca2c",
       "picks": [
         {
           "url": "https://effortlessacademic.com/claude-skills-for-academics-beginner-tutorial-part-2/",
@@ -619,8 +619,8 @@
       "level": "never-used",
       "picked_by": "ai",
       "picked_on": "2026-09-06",
-      "pool_size": 29,
-      "fingerprint": "sha1:84fca40d4013eaf5",
+      "pool_size": 26,
+      "fingerprint": "sha1:cbe444d3a20ffe28",
       "picks": [
         {
           "url": "https://academy.claude.com/courses/ai-fluency-for-k-12-educators",
@@ -659,8 +659,8 @@
       "level": "basic",
       "picked_by": "ai",
       "picked_on": "2026-09-06",
-      "pool_size": 25,
-      "fingerprint": "sha1:7ecb27adb9608d54",
+      "pool_size": 24,
+      "fingerprint": "sha1:6b0c6d88c2f7f8aa",
       "picks": [
         {
           "url": "https://phillipalcock.substack.com/p/claude-for-teachers",
@@ -736,9 +736,9 @@
       "role": "developer",
       "level": "never-used",
       "picked_by": "ai",
-      "picked_on": "2026-08-31",
-      "pool_size": 7,
-      "fingerprint": "sha1:ef73c155da402bef",
+      "picked_on": "2026-09-06",
+      "pool_size": 6,
+      "fingerprint": "sha1:84b9df8b5e50137a",
       "picks": [
         {
           "url": "https://www.youtube.com/watch?v=fl1DSmwQKKY",
@@ -767,7 +767,7 @@
         }
       ],
       "note": "All three picks are claude-code-primary. The pool's other primaries are a token-pricing page and two single-purpose connectors (Blender, ICD-10) - none of them a first door for a developer. The subjects are the idea, the install, and the course.",
-      "claims_checked_on": "2026-08-31"
+      "claims_checked_on": "2026-09-06"
     },
     "developer|basic": {
       "role": "developer",
@@ -815,8 +815,8 @@
       "level": "confident",
       "picked_by": "ai",
       "picked_on": "2026-09-06",
-      "pool_size": 41,
-      "fingerprint": "sha1:a367a1ebd63dfd81",
+      "pool_size": 37,
+      "fingerprint": "sha1:18d410159275a2c3",
       "picks": [
         {
           "url": "https://code.claude.com/docs/en/best-practices",
@@ -856,8 +856,8 @@
       "level": "builder",
       "picked_by": "ai",
       "picked_on": "2026-09-06",
-      "pool_size": 56,
-      "fingerprint": "sha1:33932c6826a61c23",
+      "pool_size": 54,
+      "fingerprint": "sha1:cd50245e1816c526",
       "picks": [
         {
           "url": "https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models",
@@ -978,8 +978,8 @@
       "level": "confident",
       "picked_by": "ai",
       "picked_on": "2026-09-06",
-      "pool_size": 35,
-      "fingerprint": "sha1:c321db247a6452cf",
+      "pool_size": 33,
+      "fingerprint": "sha1:9495f7e6f0f5acf6",
       "picks": [
         {
           "url": "https://www.qwe.edu.pl/tutorial/claude-csv-data-analysis/",
@@ -1019,8 +1019,8 @@
       "level": "builder",
       "picked_by": "ai",
       "picked_on": "2026-09-06",
-      "pool_size": 14,
-      "fingerprint": "sha1:b6f9ee5488efb835",
+      "pool_size": 12,
+      "fingerprint": "sha1:a113b146aae2542b",
       "picks": [
         {
           "url": "https://github.com/anthropics/claude-cookbooks/blob/main/managed_agents/data_analyst_agent.ipynb",
@@ -1033,20 +1033,20 @@
           "subject": "authoring a skill, not running one"
         },
         {
-          "url": "https://www.youtube.com/watch?v=cGuyrANVi4A",
-          "reason": "The MCP servers in this pool never explain the protocol they implement - this is the one that does, which is what you need before choosing between them or writing a fifth.",
-          "subject": "how MCP works, before picking a server"
+          "url": "https://www.youtube.com/watch?v=40k3SIwlFVM",
+          "reason": "The servers in this pool are things to install - Postgres, DuckDB, Tableau, ClaudeR - and this is the one that ends with your own running on your own machine. An analyst who has hit the edge of what somebody else's connector exposes needs the build, not another install.",
+          "subject": "building your own MCP server rather than installing someone else's"
         }
       ],
       "runners_up": [
         {
-          "url": "https://academy.claude.com/use-cases/build-financial-models",
-          "reason": "Levelled to `confident` under Rule A on 2026-09-06 - its card describes running a recipe or using a connector someone else built, not building one - so it left this pool on a definition rather than on merit.",
-          "cause": "re-levelled-out-of-the-pool"
+          "url": "https://www.youtube.com/watch?v=cGuyrANVi4A",
+          "reason": "Held the third slot until 2026-09-06, when Rule B trimmed `data-analyst` from it: its card is written for developers who keep hearing MCP and want the concept before they build. It left this pool on its own card's words rather than on merit.",
+          "cause": "re-tagged-out-of-the-pool"
         },
         {
-          "url": "https://academy.claude.com/use-cases/answer-the-adhoc",
-          "reason": "Levelled to `confident` under Rule A on 2026-09-06 - its card describes running a recipe or using a connector someone else built, not building one - so it left this pool on a definition rather than on merit.",
+          "url": "https://academy.claude.com/use-cases/build-financial-models",
+          "reason": "Levelled to `confident` under Rule A on 2026-09-06 - its card describes running a recipe or using a connector someone else built, not building one - so it left this pool on a definition rather than on merit. Two other rows left this pool the same way on the same day for the same reason; the record keeps one of them rather than three copies of one sentence.",
           "cause": "re-levelled-out-of-the-pool"
         },
         {
@@ -1062,9 +1062,9 @@
       "role": "pm",
       "level": "never-used",
       "picked_by": "ai",
-      "picked_on": "2026-09-04",
-      "pool_size": 12,
-      "fingerprint": "sha1:d79a22a385c6d2ea",
+      "picked_on": "2026-09-06",
+      "pool_size": 11,
+      "fingerprint": "sha1:a8e4a2e92b6f4322",
       "picks": [
         {
           "url": "https://www.youtube.com/watch?v=0vZ_UVLhSQQ",
@@ -1097,15 +1097,15 @@
         }
       ],
       "note": "Two picks share chat-prompting as primary topic. The pool's safety primary is a half-day course shell around fifteen minutes of content, and its claude-code primary is subscription-gated - the two chat picks are different kinds of first step, a walkthrough and a curriculum.",
-      "claims_checked_on": "2026-09-04"
+      "claims_checked_on": "2026-09-06"
     },
     "pm|basic": {
       "role": "pm",
       "level": "basic",
       "picked_by": "ai",
       "picked_on": "2026-09-06",
-      "pool_size": 41,
-      "fingerprint": "sha1:44cc5da55bcc5509",
+      "pool_size": 40,
+      "fingerprint": "sha1:cc66ad09fa70d86b",
       "picks": [
         {
           "url": "https://www.enterpret.com/guides/claude-for-product-managers-synthesizing-user-research",
@@ -1144,8 +1144,8 @@
       "level": "confident",
       "picked_by": "ai",
       "picked_on": "2026-09-06",
-      "pool_size": 55,
-      "fingerprint": "sha1:606fce6b26aa1fbd",
+      "pool_size": 52,
+      "fingerprint": "sha1:1441cec4cd2803df",
       "picks": [
         {
           "url": "https://claude.com/blog/product-management-on-the-ai-exponential",
@@ -1185,8 +1185,8 @@
       "level": "builder",
       "picked_by": "ai",
       "picked_on": "2026-09-06",
-      "pool_size": 5,
-      "fingerprint": "sha1:51873a5bb97abaf2",
+      "pool_size": 4,
+      "fingerprint": "sha1:f1f418ed5e0fdbae",
       "picks": [
         {
           "url": "https://every.to/guides/ai-product-management-guide",
@@ -1229,8 +1229,8 @@
       "level": "never-used",
       "picked_by": "ai",
       "picked_on": "2026-09-06",
-      "pool_size": 39,
-      "fingerprint": "sha1:78fc9f00d4494dc2",
+      "pool_size": 37,
+      "fingerprint": "sha1:5b5b2a00c3e59e99",
       "picks": [
         {
           "url": "https://privacy.claude.com/en/articles/10023580-is-my-data-used-for-model-training",
@@ -1269,8 +1269,8 @@
       "level": "basic",
       "picked_by": "ai",
       "picked_on": "2026-09-06",
-      "pool_size": 64,
-      "fingerprint": "sha1:b504f8d8cf5e603c",
+      "pool_size": 61,
+      "fingerprint": "sha1:0f4194c441efde0e",
       "picks": [
         {
           "url": "https://wotai.co/blog/claude-for-small-business",
@@ -1310,8 +1310,8 @@
       "level": "confident",
       "picked_by": "ai",
       "picked_on": "2026-09-06",
-      "pool_size": 61,
-      "fingerprint": "sha1:df9b2315b2ba61de",
+      "pool_size": 45,
+      "fingerprint": "sha1:94fe7f1d3e8f6073",
       "picks": [
         {
           "url": "https://academy.claude.com/tutorials/teach-claude-your-way-of-working-using-skills",
@@ -1351,8 +1351,8 @@
       "level": "never-used",
       "picked_by": "ai",
       "picked_on": "2026-09-06",
-      "pool_size": 21,
-      "fingerprint": "sha1:c91ab134b37a0393",
+      "pool_size": 20,
+      "fingerprint": "sha1:800ec3bf57ca09e3",
       "picks": [
         {
           "url": "https://academy.claude.com/courses/claude-101",
@@ -1429,8 +1429,8 @@
       "level": "confident",
       "picked_by": "ai",
       "picked_on": "2026-09-06",
-      "pool_size": 22,
-      "fingerprint": "sha1:2fcbc184848611cc",
+      "pool_size": 23,
+      "fingerprint": "sha1:150dc9dfc03e6295",
       "picks": [
         {
           "url": "https://academy.claude.com/courses/ai-fluency-for-creative-work",
