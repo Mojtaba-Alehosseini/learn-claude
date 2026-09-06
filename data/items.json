@@ -8048,10 +8048,10 @@
       "beginner guide"
     ],
     "questions": [
-      "what is claude cowork",
-      "when should i use claude chat versus cowork",
-      "how do i start using cowork for the first time",
-      "what kind of tasks can i give to cowork"
+      "what should i try first",
+      "when do i use the chat window and when the desktop app",
+      "what kind of work can i hand over",
+      "which of my weekly jobs is worth automating first"
     ],
     "teaches": [
       "pick your first repetitive weekly task to delegate to cowork",
@@ -9931,9 +9931,10 @@
       "cursor pm skills"
     ],
     "questions": [
-      "how to write a prd using claude code",
-      "where to get pm frameworks for claude",
-      "how to chain product management commands in claude"
+      "where do i get ready-made product management workflows",
+      "how do i write a product spec faster",
+      "can something pressure-test my spec before review",
+      "install commands instead of writing prompts every time"
     ],
     "teaches": [
       "execute discovery and strategy workflows using named methods",
@@ -12646,9 +12647,10 @@
       "student help"
     ],
     "questions": [
-      "is it cheating to use ai for my essay",
-      "what are the rules for using generative ai at university",
-      "how does the university handle ai generated text"
+      "is using ai on an essay cheating",
+      "will i get in trouble for using ai on coursework",
+      "what are my university's rules on ai",
+      "must i declare ai use when i hand work in"
     ],
     "teaches": [
       "understand university rules on generative ai use",
@@ -14882,9 +14884,10 @@
       "claud"
     ],
     "questions": [
-      "what is it like to use claude as a book editor",
-      "how to get feedback on a book proposal from claude",
-      "can claude help edit long manuscripts"
+      "can ai give useful feedback on my draft",
+      "how do i get comments on structure rather than spelling",
+      "what happens if i let it edit a long piece of writing",
+      "will it flatten my voice"
     ],
     "teaches": [
       "use claude for developmental editing on long documents",
@@ -16221,10 +16224,10 @@
       "llm agents"
     ],
     "questions": [
-      "what is the difference between a workflow and an ai agent",
-      "how to write prompts for ai agents",
-      "what are common failure modes when building ai agents",
-      "when should i build an agent instead of a single prompt"
+      "when should i build an agent instead of just one prompt",
+      "why does my agent keep looping",
+      "how do i write a system prompt for an agent",
+      "what makes an agent different from a workflow"
     ],
     "prerequisites": [
       "experience building with llm apis and prompt engineering"
@@ -18861,9 +18864,10 @@
       "anthropic"
     ],
     "questions": [
-      "how to set up claude for a small business from scratch",
-      "how do i connect my business documents to claude",
-      "quickest way to get started with claude for work"
+      "how do i set this up for my business",
+      "what do i do first after signing up",
+      "how do i give it my company documents",
+      "fastest way from signup to something useful"
     ],
     "prerequisites": [],
     "teaches": [
@@ -21434,8 +21438,10 @@
       "troubleshoot claude skill"
     ],
     "questions": [
-      "why isn't my claude code skill triggering",
-      "how do i debug a claude skill"
+      "my skill is not being picked up",
+      "why does claude ignore the skill i wrote",
+      "how do i debug a skill that fails halfway through",
+      "it works sometimes and not others"
     ],
     "id": "r-007962aad0"
   },
@@ -22970,8 +22976,10 @@
       "scvi-tools bundle"
     ],
     "questions": [
-      "which scvi-tools model should i use",
-      "can claude help tune single-cell analysis parameters"
+      "which model should i use for single cell data",
+      "how do i choose parameters for batch integration",
+      "annotate cell types without reading the whole manual",
+      "can claude help with single cell analysis"
     ],
     "id": "r-012770a3f2"
   },
@@ -23100,8 +23108,9 @@
       "claude projects overview"
     ],
     "questions": [
-      "what is claude projects",
-      "how do projects organize my conversations"
+      "how do i stop repeating the same background every time",
+      "what is a project and why would i use one",
+      "can i keep related chats together"
     ],
     "id": "r-052958c979"
   },
@@ -28742,8 +28751,9 @@
       "claude interactive grant chart"
     ],
     "questions": [
-      "can claude help me decide which grants to pursue",
-      "how do i weigh grant odds against award size"
+      "which grants are worth applying for",
+      "how do i compare funders on effort against payoff",
+      "help me decide where to spend my application time"
     ],
     "id": "r-029e31b97b"
   },

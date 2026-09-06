@@ -40,6 +40,9 @@ python3 scripts/validate-synonyms.py
 python3 scripts/test-stem.py | tail -1
 # Which bucket Rule B sends a card to, on the sentences that were getting it wrong.
 python3 scripts/test-role-buckets.py | tail -1
+# questions[] is the highest-weighted field and the suite is the judge; a query written
+# into the data would be a pass bought with the answer sheet.
+python3 scripts/check-questions.py | tail -1
 
 echo
 echo "4b/6 sitemap, generated rather than typed"
