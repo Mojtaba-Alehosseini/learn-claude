@@ -1,18 +1,16 @@
-# Ground truth for Attack 2
+# Ground truth for Attack 3
 
-**Site version attacked: `5c7372d`. Written 2026-09-05.**
+**Site version attacked: `9deb0db`. Written 2026-09-06.**
 
 ## Where the numbers are
 
-**[docs/STATUS.md](../STATUS.md).** Every count this file used to hold by hand is
-generated there on every build: catalogue size, publishers, the tier ladder, formats,
-levels, costs, the official ratio, the `UNVERIFIED` count, the `date_source`
-provenance table, the full per-cell grid with publisher and non-Anthropic counts, the
-thin and empty cells, the freshness exclusions, and the last link check.
+**[docs/STATUS.md](../STATUS.md).** Every count is generated there on every build:
+catalogue size, publishers, the tier ladder, formats, levels, costs, the official ratio,
+the `UNVERIFIED` count, the `date_source` provenance table, the full per-cell grid with
+publisher and non-Anthropic counts, the thin and empty cells, the freshness exclusions,
+and the last link check.
 
-The August version of this file wrote those out by hand and every one of them is now
-wrong — it says 353 resources and 3 paths. That is the whole reason this section is a
-pointer. **If an agent's number disagrees with STATUS.md, STATUS.md wins.**
+**If an agent's number disagrees with STATUS.md, STATUS.md wins.**
 
 For the per-role, per-level view a visitor actually gets on screen:
 
@@ -23,31 +21,77 @@ It reproduces Browse's default sort, so row 1 is the first card on the page.
 
 ---
 
-## What changed since Attack 1 — the things an attacker should know exist
+## What changed since Attack 2 — spend real time on these
 
-Attack 1 ran on a site with 353 resources, 3 paths, no picks block and no date
-provenance. Everything below is new since then. It is listed so that an agent does not
-waste its hour rediscovering that a feature exists — the value is in judging whether
-it *works*.
+Attack 2 ran on `5c7372d` in September 2026. Everything below has changed since. It is
+listed so an agent does not spend its hour rediscovering that a thing exists; **the value
+is entirely in judging whether it works.**
 
-- **"Start with these three"** on Browse: when a visitor sets exactly one role and one
-  level and nothing else, a block appears above the results naming three resources to
-  open first, each with a one-sentence reason, labelled `picked by AI · <date>`. It
-  covers 37 of the 40 role-and-level cells. Two cells ship **two** picks, not three,
-  with a heading that says two. One cell is empty and says so.
-- **A second date line.** Cards can now show `Updated <date>` as well as, or instead
-  of, `Published <date>`. A page that gives only a revision date shows "No publish
-  date given" *and* an Updated line.
-- **Month-only dates.** A card may say `Updated May 2026` with no day, because that is
-  all its page prints.
-- **Three quarters of cards now say "No publish date given."** That number went up
-  deliberately: every stored date was checked against its own page and any that could
-  not be traced was cleared.
-- **Card links changed shape.** The whole card is still one click target, but the link
-  is now the title alone rather than the entire card.
-- **Seven paths**, one for every role — Attack 1 found four roles with none.
-- **A repaired path.** `writing-you-sign` lost a step when its resource vanished and
-  is now four steps.
+### Tags and levels were rebuilt on a rule
+
+- **`builder` now means you built something.** Rule A stopped counting "ran somebody
+  else's recipe" as building, and the level lost more than half its rows. Ask: does the
+  level filter return people like you, or other people's jobs?
+- **Every role tag now has to be true of the card.** Rule B reads each card's own
+  `who_for` line and drops a tag the line denies. Ask the same question of the role
+  filter, and especially of "not a coder".
+- Both rules moved rows in both directions. A row you would expect may be gone from a
+  cell, and a row you would not expect may have arrived.
+
+### Five collection cards
+
+Sales, Legal, HR, Finance and Operations. Each stands in for a family of single-recipe
+pages that were removed individually. **Does a founder understand what one of these is
+before clicking it? Does anybody else trip over them?**
+
+### Search was rebuilt
+
+A stemmer, a spelling map, synonyms, a tie-break, and `skip_if` in the index. **Type five
+questions in your own words - the way you would actually type them, not keywords - and
+judge the top three each time.** Then ask the same question a second way, in different
+words, and say whether the site agrees with itself.
+
+### Cards that were stripped
+
+Three rows are tiered `listed` and now carry a title, a link and one fixed skip line and
+nothing else, because nobody has opened the page. **Do they read as honest, or as broken?**
+
+### How well checked, as a filter
+
+The tier ladder is a filter on Browse, and the definition of each tier is meant to be
+reachable from a card without a mouse. **Can you find out what your badge means?**
+
+### The thin-level offer
+
+`teacher` + `builder` is one of the thin cells. There is a one-click line offering
+something else. **Does it make sense, and would you take it?**
+
+### Date lines
+
+Cards can show `Published`, `Updated`, both, a month with no day, or "No publish date
+given", and anything over a year old carries a note beside the date. **Does the site look
+maintained or abandoned?**
+
+### Prices
+
+Four rows are paid and carry a price chip, with a cost chip beside it. **Is it clear what
+you would pay before you click?**
+
+### Who "we" is
+
+The site names one person and Claude. **Does that raise your trust or lower it?**
+
+### The picks block
+
+"Start with these three" was re-picked. Some cells ship two picks with a heading that
+says two; one cell is empty and says so. **Read the reasons. Would you open those three?**
+
+### The four Attack 2 deferred, now in scope
+
+- **The social preview title.** Share a link the way you would share it.
+- **The home attract loop.** Watch the home page without touching anything.
+- **The sort control.** Change it and say whether the order means what the label says.
+- **Paths above beginner level.** Look for a route at *your* level, not at the start.
 
 ---
 
@@ -55,24 +99,31 @@ it *works*.
 
 An agent may sharpen or contradict these. It earns nothing by rediscovering them.
 
-- **0 resources are `reviewed`.** The top badge on the ladder is empty by design and
-  only a person can change it.
+- **Nothing is `reviewed`.** The top badge on the ladder is empty by design and only a
+  person can change it.
 - **The report link needs a GitHub account.** Most of the audience does not have one.
-- **The catalogue is 61% Anthropic's own material**, stated on `how-we-check.html`.
-- **`non-technical|builder` has no independent material at all** and `student|builder`
-  is empty.
-- **21 items sit on hosts that refuse automated checking**, so their links are
-  confirmed by a person or not at all.
+- **Most of the catalogue is Anthropic's own material**, stated on `how-we-check.html`.
+- **`non-technical|builder` has almost nothing independent** and `student|builder` is
+  empty.
+- **Some hosts refuse automated checking**, so their links are confirmed by a person or
+  not at all.
 - **No analytics, no tracking, no accounts.** By design, and not an oversight.
+- **Three quarters of cards say "No publish date given."** That went up on purpose: every
+  stored date was checked against its own page and any that could not be traced was
+  cleared.
 
 ---
 
 ## The rule that has not changed
 
-**No number may be invented.** Every figure comes from STATUS.md, a command shown in
-the file, or the live site. "Probably", "likely" and "seems" are banned in findings
-and allowed only in the opinion section.
+**No number may be invented.** Every figure comes from STATUS.md, a command shown in the
+file, or the live site. "Probably", "likely" and "seems" are banned in findings and
+allowed only in the opinion section.
 
 **A finding is a claim.** It carries the URL, what was done, what was seen, what a
 reasonable person expected instead, and who it harms. An attacker who cannot reproduce
-something does not report it.
+something does not report it. **Severity is judged by harm to a reader, never by how easy
+it would be to fix.**
+
+**The closing question.** Every agent answers it in its own words, last, in its own file:
+*would you come back to this site, and what one thing would make you?*
