@@ -564,7 +564,7 @@
     }
 
     var icon = '<span class="card-icon" aria-hidden="true" style="background:url(\'' +
-               'assets/icons/formats/' + LC.esc(item.format) +
+               LC.at('assets/icons/formats/') + LC.esc(item.format) +
                '-alpha.png\') center/contain no-repeat"></span>';
 
     /* An <article> holding ONE link, not one <a> wrapped round everything.

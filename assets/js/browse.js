@@ -179,7 +179,7 @@
     if (a.icons) {
       var lv = sel.levels[0] || "never-used";
       icon = '<span class="filter-icon" aria-hidden="true" style="background-image:url(\'' +
-             'assets/icons/roles/' + value + '/' + lv + '.png\')"></span>';
+             LC.at("assets/icons/roles/") + value + '/' + lv + '.png\')"></span>';
     }
     return '<button type="button" class="filter-option" role="checkbox" ' +
            'aria-checked="' + on + '" data-axis="' + a.key + '" data-value="' + value + '">' +
