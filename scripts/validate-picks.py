@@ -68,7 +68,7 @@ rule existed and are not re-run for it - re-picking a cell to apply a tie-break 
 would not have changed the outcome is churn, and where it would have changed the outcome
 we would be reversing a judgment on a rule that did not exist when it was made.
 
-## The four constraints, and how each degrades
+## The five constraints, and how each degrades
 
 Checked here in code, not trusted from the picking step — the picker is re-asked until
 these pass, and this file is what "pass" means:
@@ -95,6 +95,20 @@ these pass, and this file is what "pass" means:
                   Either way it is printed on every run. A "Claude Design" cluster still
                   hides inside one topic — that is what the subject self-check is for;
                   code checks what code can see and makes the rest auditable.
+
+  5. audience     A pick's `who_for` may not name a roster role other than the cell's
+                  own while leaving the cell's own unnamed. Attack 3's student, having
+                  answered both front-door questions, met a first pick reading "For: Any
+                  analyst worried about confidently-wrong output" - a card addressed to
+                  another job, on the shelf built for theirs. The row was tagged for the
+                  student too; the sentence was the thing that was wrong.
+                  Degrades into a note where the line names this role AND another:
+                  `who_for` belongs to the item and not to the cell, so a resource that
+                  genuinely serves two jobs cannot be reworded to satisfy one cell
+                  without breaking the other, and the only way to satisfy a strict
+                  version is to stop picking cross-role resources at all. Those are
+                  printed on every run instead, so the strict version can be judged from
+                  a list.
 
 The publisher-thin cells are printed on every run, pass or fail. The relaxation must
 never be silent: a cell running under the cap is a fact about the catalogue (the pool
@@ -129,6 +143,23 @@ def _pick_candidates():
 
 
 PC = _pick_candidates()
+
+
+def _role_words():
+    """The role vocabulary, from the file that owns it.
+
+    audit-role-tags.py answers "does this card name this role's reader?" for the whole
+    catalogue, and every lookbehind in those patterns was put there by a row it decided
+    wrongly. Constraint 5 asks the same question of one card, so it asks with the same
+    words."""
+    path = os.path.join(ROOT, "scripts", "audit-role-tags.py")
+    spec = importlib.util.spec_from_file_location("audit_role_tags", path)
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod.ROLE_WORDS
+
+
+ROLE_WORDS = _role_words()
 
 
 # A two-pick cell must say which of these put it there. Never a bare count of two:
@@ -393,6 +424,24 @@ def check_cell(key, cell, pool, items_by_url):
             err("picks span %d formats where %d picks under a cap of %d per publisher "
                 "could span %d (the pool holds %d formats in all)"
                 % (len(set(in_picks)), len(pick_items), max_per_pub, want, len(in_pool)))
+
+        # Constraint 5. A pick may not tell this reader it is for somebody else.
+        # non-technical is left out: its vocabulary is anyone/everyone/somebody, which
+        # names an absence of specialism rather than a competing job.
+        for n, it in enumerate(pick_items, 1):
+            who = str(it.get("who_for") or "")
+            if not who:
+                continue
+            named = {r for r, rx in ROLE_WORDS.items() if rx.search(who)}
+            others = sorted(named - {cell["role"], "non-technical"})
+            if not others:
+                continue
+            if cell["role"] in named:
+                notes.append("  %-28s pick %d serves %s as well — %s"
+                             % (key, n, "/".join(others), it["title"][:40]))
+            else:
+                err("pick %d says it is for %s and never for this reader: %r"
+                    % (n, "/".join(others), who[:80]))
 
         # Constraint 4. Shared primary topic: justified, forced, or a fault.
         prim = lambda x: (x.get("topics") or [None])[0]

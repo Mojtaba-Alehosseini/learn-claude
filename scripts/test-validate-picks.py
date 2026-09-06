@@ -102,6 +102,14 @@ CASES = [
      lambda i, p: p["cells"][min_pool_cell(p)].update({"runners_up": []}),
      "belongs in the record"),
 
+    # Constraint 5. The card tells this reader it is for somebody else. first_cell is
+    # business-founder, so a who_for naming only a teacher names another role and never
+    # this one - which is the shape Attack 3's student met.
+    ("a pick addressed to another role",
+     lambda i, p: cell_pick_item(i, p, 0).update(
+         {"who_for": "A classroom teacher planning next term."}),
+     "never for this reader"),
+
     # Constraint 1. Rewrite every pick's publisher to one name — three from one
     # publisher is never legal, whatever the pool looks like.
     ("three picks from one publisher",

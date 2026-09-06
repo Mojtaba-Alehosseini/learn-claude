@@ -1614,7 +1614,7 @@
     "language": "en",
     "tier": "ai-reviewed",
     "summary": "Anthropic's verification playbook: allow Claude to say 'I don't know', ground answers in direct quotes, use best-of-N and chain-of-thought verification, and restrict to provided data.",
-    "who_for": "Any analyst worried about confidently-wrong output. Assumes no coding.",
+    "who_for": "Anyone whose work falls apart when a claim is confidently wrong - an analyst, a student or a researcher. Assumes no coding.",
     "skip_if": "You want data-specific step-by-step recipes rather than general guardrails.",
     "published": "UNVERIFIED",
     "checked": "2026-08-19",
