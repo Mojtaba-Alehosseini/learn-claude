@@ -448,8 +448,7 @@
     "url": "https://github.com/anthropics/knowledge-work-plugins/tree/main/small-business",
     "author": "Anthropic",
     "roles": [
-      "business-founder",
-      "developer"
+      "business-founder"
     ],
     "level": "confident",
     "topics": [
@@ -1332,7 +1331,7 @@
     "language": "en",
     "tier": "previewed",
     "summary": "Teaches you to build MCP servers and clients from scratch in Python to connect Claude to external tools and data.",
-    "who_for": "Technical owners, consultants, or in-house devs who need custom integrations beyond the built-in connectors.",
+    "who_for": "Technical owners, consultants, or in-house developers who need custom integrations rather than the built-in connectors.",
     "skip_if": "You build the servers here rather than install them, in Python, from scratch. Half a day well spent if you want to know how MCP works underneath, and entirely skippable if you only want Claude connected to something - the one-click connectors already do that.",
     "published": "UNVERIFIED",
     "checked": "2026-09-05",
@@ -1379,7 +1378,6 @@
     "url": "https://mcpservers.org/remote-mcp-servers",
     "author": "mcpservers.org",
     "roles": [
-      "developer",
       "business-founder"
     ],
     "level": "confident",
@@ -2793,7 +2791,8 @@
     "url": "https://github.com/IMNMV/ClaudeR",
     "author": "IMNMV",
     "roles": [
-      "data-analyst"
+      "data-analyst",
+      "researcher"
     ],
     "level": "builder",
     "topics": [
@@ -2806,7 +2805,7 @@
     "language": "en",
     "tier": "previewed",
     "summary": "Connects RStudio to Claude (and other agents) via MCP, with a built-in reproducible statistical-analysis protocol and a 'Reviewer Zero' mode that audits statistical claims against your R code.",
-    "who_for": "R users and quantitative researchers wanting reproducible, auditable analysis. Assumes R/RStudio.",
+    "who_for": "R users, analysts and quantitative researchers wanting reproducible, auditable analysis. Assumes R and RStudio.",
     "skip_if": "Wiring, not a tool you install. It wants R and RStudio already working. Setup itself is no longer the barrier: the installer is zero-config through uvx and writes the MCP entry for you — budget half a day, most of it setup.",
     "published": "UNVERIFIED",
     "checked": "2026-08-19",
@@ -3920,8 +3919,7 @@
     "url": "https://www.youtube.com/watch?v=nPyxVMd1LIA",
     "author": "Dive Club / Ridd",
     "roles": [
-      "designer",
-      "pm"
+      "designer"
     ],
     "level": "confident",
     "topics": [
@@ -6306,7 +6304,7 @@
     "language": "en",
     "tier": "previewed",
     "summary": "Anthropic's own library of runnable Jupyter notebooks, organised by job rather than by feature: classification, retrieval-augmented generation, summarisation, tool use with a worked customer-service agent, vision and chart reading, PDF handling, JSON mode, moderation filters, prompt caching, automated evals and a cost-optimisation walkthrough that measures pass rate against cost per task. Newer folders cover the Agent SDK, managed agents, skills and observability.",
-    "who_for": "Developers who learn by running and modifying working code, and anyone who needs a defensible starting point for a specific capability instead of a blank file.",
+    "who_for": "Developers and notebook-native analysts who learn by running and modifying working code, and anyone who needs a defensible starting point for a specific capability.",
     "skip_if": "You do not have an API key with credits - the notebooks call the paid API, and reading them without running them gives you far less than the time costs.",
     "published": "UNVERIFIED",
     "checked": "2026-08-21",
@@ -6574,8 +6572,7 @@
     "source": "Coursera",
     "official": false,
     "roles": [
-      "writer-marketer",
-      "non-technical"
+      "writer-marketer"
     ],
     "level": "never-used",
     "topics": [
@@ -6992,7 +6989,6 @@
     "official": false,
     "roles": [
       "pm",
-      "non-technical",
       "designer"
     ],
     "level": "basic",
@@ -7050,9 +7046,7 @@
     "source": "Lenny's Newsletter",
     "official": false,
     "roles": [
-      "non-technical",
-      "pm",
-      "business-founder"
+      "non-technical"
     ],
     "level": "never-used",
     "topics": [
@@ -7162,8 +7156,7 @@
     "source": "Aakash Gupta",
     "official": false,
     "roles": [
-      "pm",
-      "non-technical"
+      "pm"
     ],
     "level": "basic",
     "topics": [
@@ -9072,8 +9065,7 @@
     "url": "https://ccforpms.com/cowork",
     "author": "Carl Vellotti (The Full Stack PM)",
     "roles": [
-      "pm",
-      "non-technical"
+      "pm"
     ],
     "level": "basic",
     "topics": [
@@ -9375,9 +9367,7 @@
     "url": "https://github.com/EveryInc/compound-engineering-plugin",
     "author": "Every Media (Kieran Klaassen, Marcus Moretti)",
     "roles": [
-      "pm",
-      "developer",
-      "business-founder"
+      "pm"
     ],
     "level": "builder",
     "topics": [
@@ -9618,8 +9608,7 @@
     "url": "https://www.enterpret.com/guides/claude-for-product-managers-synthesizing-user-research",
     "author": "Enterpret",
     "roles": [
-      "pm",
-      "researcher"
+      "pm"
     ],
     "level": "basic",
     "topics": [
@@ -11479,8 +11468,7 @@
     "url": "https://support.claude.com/en/articles/11139144-use-claude-for-education-at-your-university",
     "author": "Anthropic Help Center",
     "roles": [
-      "student",
-      "teacher"
+      "student"
     ],
     "level": "never-used",
     "topics": [
@@ -11691,8 +11679,7 @@
     "url": "https://claude.com/solutions/education",
     "author": "Anthropic",
     "roles": [
-      "student",
-      "teacher"
+      "student"
     ],
     "level": "never-used",
     "topics": [
@@ -12001,8 +11988,7 @@
     "url": "https://www.digital.pitt.edu/news/pantherbytes-blog/claude-education-made-learning",
     "author": "Pitt Digital, University of Pittsburgh",
     "roles": [
-      "student",
-      "non-technical"
+      "student"
     ],
     "level": "never-used",
     "topics": [
@@ -12382,7 +12368,7 @@
     "language": "en",
     "tier": "previewed",
     "summary": "Princeton's page on when and how to disclose AI use in research and scholarship. It covers both student coursework and publication, and points at two external declaration generators rather than carrying templates of its own.",
-    "who_for": "A final-year or postgraduate student whose work may end up in a thesis or a submitted paper, where publisher rules also apply.",
+    "who_for": "A postgraduate student or early-career researcher whose work may end up in a thesis or a submitted paper, where a publisher's rules also apply.",
     "skip_if": "You are writing ordinary coursework. The Melbourne, Warwick or Tulane pages give you more usable templates for that.",
     "published": "UNVERIFIED",
     "checked": "2026-09-05",
@@ -13690,7 +13676,7 @@
     "language": "en",
     "tier": "previewed",
     "summary": "A university's public explanation for switching off Turnitin's AI detector: at its own submission volume the false-positive rate would have wrongly flagged thousands of papers a year, and Turnitin would not explain how the score is produced.",
-    "who_for": "Teachers and heads of department at any level who are being pushed to adopt an AI detector and need a credible institution's reasoning to point at.",
+    "who_for": "Teachers and heads of department being pushed to adopt an AI detector and needing a credible institutional refusal - and the students most likely to be wrongly accused by one, whom the page addresses directly.",
     "skip_if": "You want current accuracy numbers - this is from August 2023 and the figures have moved since. Skip if you want an alternative to detection; it does not give you one. And never treat any detector score as proof against a student - false accusations fall hardest on non-native English writers.",
     "published": "2023-08-16",
     "checked": "2026-09-05",
@@ -15388,9 +15374,7 @@
     "source": "Anthropic",
     "official": true,
     "roles": [
-      "business-founder",
-      "data-analyst",
-      "pm"
+      "data-analyst"
     ],
     "level": "basic",
     "topics": [
@@ -15462,7 +15446,7 @@
     "language": "en",
     "tier": "previewed",
     "summary": "Opens Anthropic's free AI Fluency course, made with Prof. Rick Dakan and Prof. Joseph Feller, by arguing that the skill worth learning is collaboration with AI, not the technology behind it.",
-    "who_for": "People starting the AI Fluency course, and teachers deciding whether to set it for a class.",
+    "who_for": "Anyone starting the AI Fluency course, and teachers deciding whether to set it for a class.",
     "skip_if": "You want hands-on Claude technique, because this lesson only sets up the course frame and teaches no prompting.",
     "published": "2025-06-12",
     "checked": "2026-09-05",
@@ -15676,9 +15660,7 @@
     "source": "Anthropic",
     "official": true,
     "roles": [
-      "developer",
-      "pm",
-      "data-analyst"
+      "developer"
     ],
     "level": "basic",
     "topics": [
@@ -15742,8 +15724,7 @@
     "source": "Anthropic",
     "official": true,
     "roles": [
-      "developer",
-      "student"
+      "developer"
     ],
     "level": "never-used",
     "topics": [
@@ -16205,8 +16186,7 @@
     "source": "Anthropic",
     "official": true,
     "roles": [
-      "developer",
-      "pm"
+      "developer"
     ],
     "level": "builder",
     "topics": [
@@ -17242,8 +17222,7 @@
     "source": "Google Cloud Tech",
     "official": false,
     "roles": [
-      "developer",
-      "data-analyst"
+      "developer"
     ],
     "level": "builder",
     "topics": [
@@ -17566,8 +17545,7 @@
     "source": "Ryan & Matt Data Science",
     "official": false,
     "roles": [
-      "data-analyst",
-      "developer"
+      "data-analyst"
     ],
     "level": "confident",
     "topics": [
@@ -18225,7 +18203,7 @@
     "language": "en",
     "tier": "previewed",
     "summary": "A working professor showing the tools he genuinely uses, not a reviewer speculating. Nine minutes on where Claude sits alongside other tools in a real publishing workflow - drafting, restructuring arguments, responding to reviewers - and, importantly, where he refuses to use it. The credibility of the source is the main reason to watch.",
-    "who_for": "Academics who want to see how a published researcher actually integrates Claude, including the boundaries he sets around it.",
+    "who_for": "Academics and research students who want to see how a published researcher actually integrates Claude into a working stack, boundaries included.",
     "skip_if": "You need step-by-step instructions - this is a workflow overview and assumes you can operate the tools yourself. Not useful outside academic writing.",
     "published": "2026-07-22",
     "checked": "2026-09-05",
@@ -18314,8 +18292,7 @@
     "source": "Andy Stapleton",
     "official": false,
     "roles": [
-      "researcher",
-      "student"
+      "researcher"
     ],
     "level": "confident",
     "topics": [
@@ -18416,8 +18393,7 @@
     "source": "RoarTech Education",
     "official": false,
     "roles": [
-      "teacher",
-      "non-technical"
+      "teacher"
     ],
     "level": "basic",
     "topics": [
@@ -18477,8 +18453,7 @@
     "official": false,
     "roles": [
       "designer",
-      "non-technical",
-      "business-founder"
+      "non-technical"
     ],
     "level": "basic",
     "topics": [
@@ -18533,8 +18508,7 @@
     "source": "Nehmat Gereige | AI-Design Professor",
     "official": false,
     "roles": [
-      "designer",
-      "non-technical"
+      "designer"
     ],
     "level": "never-used",
     "topics": [
@@ -18694,8 +18668,7 @@
     "source": "The Nerdy Novelist",
     "official": false,
     "roles": [
-      "writer-marketer",
-      "non-technical"
+      "writer-marketer"
     ],
     "level": "basic",
     "topics": [
@@ -18749,8 +18722,7 @@
     "source": "Ben AI",
     "official": false,
     "roles": [
-      "writer-marketer",
-      "business-founder"
+      "writer-marketer"
     ],
     "level": "confident",
     "topics": [
@@ -18856,8 +18828,7 @@
     "source": "Harry Davies",
     "official": false,
     "roles": [
-      "business-founder",
-      "non-technical"
+      "business-founder"
     ],
     "level": "never-used",
     "topics": [
@@ -18965,8 +18936,7 @@
     "source": "Anthropic",
     "official": true,
     "roles": [
-      "writer-marketer",
-      "business-founder"
+      "writer-marketer"
     ],
     "level": "basic",
     "topics": [
@@ -19284,7 +19254,7 @@
     "published": "2026-04-27",
     "checked": "2026-09-05",
     "summary": "Seven and a half thousand words separating which of the three Claude surfaces suits which research job: claude.ai for desk research and interview guides, Cowork for holding one coding taxonomy across sessions, Claude Code for forty transcripts at once with a verbatim quote and a confidence rating behind every code.",
-    "who_for": "A researcher already using Claude for single transcripts who has hit the point where the synthesis has to hold across a whole study.",
+    "who_for": "A user researcher already using Claude for single transcripts who has hit the point where the synthesis has to hold across a whole study.",
     "skip_if": "Its sharpest line is also its warning: statistical coherence is not research validity, and a synthesis that smooths over an edge case has failed at the finding level. If you want a tool that hands you themes to present, this guide will spend most of its length arguing you out of that.",
     "notes": "Read via fetch on 2026-08-27, not opened by a person. Named author, 20 years in UX research; she promotes her own consultancies on the page but nothing is gated and there is no course funnel. Updated 2026-07-27. Says plainly that Cowork has no BAA coverage in any configuration and that Claude Code needs zero-data-retention set explicitly, and tells you to pseudonymise before pasting because a face and a voice identify someone as surely as a name. Dates set from the page's own metadata 2026-09-05 (meta article:published_time=2026-04-27; meta article:modified_time=2026-07-22). updated (none) -> 2026-07-22. Nothing had recorded where the previous value came from.",
     "prerequisites": [
@@ -20914,8 +20884,7 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "data-analyst",
-      "business-founder"
+      "data-analyst"
     ],
     "level": "confident",
     "topics": [
@@ -20960,7 +20929,6 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "business-founder",
       "data-analyst"
     ],
     "level": "confident",
@@ -21521,8 +21489,7 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "data-analyst",
-      "business-founder"
+      "data-analyst"
     ],
     "level": "confident",
     "topics": [
@@ -22538,8 +22505,7 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "data-analyst",
-      "business-founder"
+      "data-analyst"
     ],
     "level": "confident",
     "topics": [
@@ -22887,8 +22853,7 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "researcher",
-      "developer"
+      "researcher"
     ],
     "level": "builder",
     "topics": [
@@ -23060,8 +23025,7 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "student",
-      "teacher"
+      "student"
     ],
     "level": "basic",
     "topics": [
@@ -23237,8 +23201,7 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "data-analyst",
-      "business-founder"
+      "data-analyst"
     ],
     "level": "confident",
     "topics": [
@@ -23503,8 +23466,7 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "data-analyst",
-      "business-founder"
+      "data-analyst"
     ],
     "level": "builder",
     "topics": [
@@ -23547,8 +23509,7 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "data-analyst",
-      "developer"
+      "data-analyst"
     ],
     "level": "confident",
     "topics": [
@@ -23591,8 +23552,7 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "data-analyst",
-      "business-founder"
+      "data-analyst"
     ],
     "level": "confident",
     "topics": [
@@ -23635,8 +23595,7 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "data-analyst",
-      "business-founder"
+      "data-analyst"
     ],
     "level": "confident",
     "topics": [
@@ -23679,8 +23638,7 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "data-analyst",
-      "business-founder"
+      "data-analyst"
     ],
     "level": "builder",
     "topics": [
@@ -23722,8 +23680,7 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "data-analyst",
-      "business-founder"
+      "data-analyst"
     ],
     "level": "confident",
     "topics": [
@@ -23766,8 +23723,7 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "data-analyst",
-      "business-founder"
+      "data-analyst"
     ],
     "level": "confident",
     "topics": [
@@ -23853,8 +23809,7 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "data-analyst",
-      "business-founder"
+      "data-analyst"
     ],
     "level": "confident",
     "topics": [
@@ -24108,8 +24063,7 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "business-founder",
-      "non-technical"
+      "writer-marketer"
     ],
     "level": "confident",
     "topics": [
@@ -24124,7 +24078,7 @@
     "published": "UNVERIFIED",
     "checked": "2026-08-29",
     "summary": "Connecting Raiser's Edge NXT to access donor records and gift history and draft personalized donor communications, with a review-before-sending safeguard.",
-    "who_for": "Fundraising staff who already use Raiser's Edge NXT and want Claude to draft donor communications.",
+    "who_for": "Fundraising and communications staff who already use Raiser's Edge NXT and want Claude to draft donor letters and appeals.",
     "skip_if": "Needs a Blackbaud marketplace admin to install and approve scopes before an org owner or individual can even connect - not a self-serve setup for one person.",
     "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. The only connector in its batch that writes (drafts thank-you notes), with an explicit 'review before sending' tip.",
     "prerequisites": [
@@ -24197,8 +24151,7 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "business-founder",
-      "non-technical"
+      "researcher"
     ],
     "level": "never-used",
     "topics": [
@@ -24213,7 +24166,7 @@
     "published": "UNVERIFIED",
     "checked": "2026-08-29",
     "summary": "Connecting Candid's database of 1.9M+ US-weighted nonprofits and foundations, built from IRS filings, for grant discovery and sector analysis.",
-    "who_for": "Grant seekers and researchers focused on US-registered 501(c)(3) organizations.",
+    "who_for": "Researchers and grant seekers looking up US-registered 501(c)(3) organisations in Candid's database.",
     "skip_if": "Explicitly in beta with 'core functionality available' rather than finished, and its coverage is US-weighted - skip if you need international nonprofit data (Benevity covers that instead).",
     "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Has the Philanthropy Classification System taxonomy and four transparency seal levels (Platinum/Gold/Silver/Bronze).",
     "prerequisites": [
@@ -24295,7 +24248,7 @@
     "published": "UNVERIFIED",
     "checked": "2026-08-29",
     "summary": "Free access to the NIH/NLM registry of 500,000+ clinical trials across 221 countries - search trials, sponsors, investigators, and benchmark endpoints against similar trials.",
-    "who_for": "Clinical research coordinators, protocol writers and regulatory affairs professionals.",
+    "who_for": "Researchers, clinical research coordinators and protocol writers searching the public trials registry from inside Claude.",
     "skip_if": "Free and fully open, no account needed - skip only if trial registry data genuinely isn't what you're researching.",
     "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Uses ClinicalTrials.gov API v2; supports phase filters PHASE1-PHASE4 and medical synonym expansion.",
     "prerequisites": [],
@@ -24312,47 +24265,6 @@
       "how do i benchmark trial endpoints with claude"
     ],
     "id": "r-7fba0e936a"
-  },
-  {
-    "title": "Using the CMS Coverage Connector in Claude",
-    "url": "https://academy.claude.com/tutorials/using-the-cms-coverage-connector-in-claude",
-    "author": "Anthropic",
-    "source": "Anthropic Academy",
-    "official": true,
-    "roles": [
-      "non-technical",
-      "researcher"
-    ],
-    "level": "never-used",
-    "topics": [
-      "mcp"
-    ],
-    "format": "docs",
-    "time": "under-15min",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "status": "live",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-29",
-    "summary": "Searching Medicare Part B coverage policies, National and Local Coverage Determinations, and billing articles from the CMS Coverage Database, free and instant.",
-    "who_for": "Medical coders, billers, and prior authorization specialists checking whether Medicare will pay for a service.",
-    "skip_if": "Covers Medicare Part B only, by the page's own explicit statement - it does not include Part D drug formularies or Part A inpatient hospital coverage, so it can't answer questions about either.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. 15 min. Uses CMS Coverage API v1; get_contractors finds the regional Medicare Administrative Contractor.",
-    "prerequisites": [],
-    "teaches": [
-      "search Medicare Part B coverage policies and billing articles via Claude"
-    ],
-    "keywords": [
-      "cms coverage connector claude",
-      "medicare part b coverage claude",
-      "cms coverage mcp"
-    ],
-    "questions": [
-      "can claude check if medicare covers a service",
-      "does the cms connector cover medicare part d"
-    ],
-    "id": "r-ed49348746"
   },
   {
     "title": "Using the Function Connector in Claude",
@@ -24397,48 +24309,6 @@
       "does the function connector give medical advice"
     ],
     "id": "r-ade17796f6"
-  },
-  {
-    "title": "Using the ICD-10 Connector in Claude",
-    "url": "https://academy.claude.com/tutorials/using-the-icd-10-connector-in-claude",
-    "author": "Anthropic",
-    "source": "Anthropic Academy",
-    "official": true,
-    "roles": [
-      "non-technical",
-      "developer"
-    ],
-    "level": "never-used",
-    "topics": [
-      "mcp"
-    ],
-    "format": "docs",
-    "time": "under-15min",
-    "cost": "free",
-    "language": "en",
-    "tier": "previewed",
-    "status": "live",
-    "published": "UNVERIFIED",
-    "checked": "2026-08-29",
-    "summary": "A locally stored 2026 ICD-10-CM/PCS code database for search, validation and hierarchy exploration - over 550 diagnosis code changes for FY2026, effective through Sep 2026.",
-    "who_for": "Medical coders and billing specialists validating diagnosis and procedure codes.",
-    "skip_if": "A fixed local reference database (2026 codes), not a live registry - and it makes one distinction worth knowing before you rely on it: category headers like 'E11' are organizational groupings and are NOT billable, only fully specified codes are.",
-    "notes": "Read via fetch 2026-08-29, not opened by a person. 5 min. get_hierarchy on 'E11' returns all 117 Type 2 diabetes codes.",
-    "prerequisites": [],
-    "teaches": [
-      "search, validate and explore ICD-10-CM/PCS code hierarchies in Claude",
-      "distinguish a billable fully-specified code from a non-billable category header"
-    ],
-    "keywords": [
-      "icd-10 connector claude",
-      "icd-10 code validation claude",
-      "icd-10 mcp"
-    ],
-    "questions": [
-      "can claude validate an icd-10 code",
-      "is an icd-10 category header billable"
-    ],
-    "id": "r-e1fdecd477"
   },
   {
     "title": "Recap your ad performance",
@@ -28626,8 +28496,7 @@
     "source": "Anthropic Academy",
     "official": true,
     "roles": [
-      "designer",
-      "researcher"
+      "designer"
     ],
     "level": "confident",
     "topics": [
@@ -28642,7 +28511,7 @@
     "published": "UNVERIFIED",
     "checked": "2026-08-29",
     "summary": "Turns a stack of raw interview transcripts into a themed findings document with attributed participant quotes, genuine synthesis of data you already collected.",
-    "who_for": "UX researchers synthesizing already-collected interview transcripts into findings.",
+    "who_for": "UX researchers synthesising already-collected interview transcripts into findings.",
     "skip_if": "Needs the raw transcripts, discussion guide and participant roster already collected in one folder - and it has no step that checks quotes back against the transcripts, so quote-fidelity verification is left entirely to you.",
     "notes": "Read via fetch 2026-08-29, not opened by a person. 10 min. Can be scheduled to re-run after every interview day. Tip: add 'flag anything you're not confident about.'",
     "prerequisites": [
@@ -29749,8 +29618,7 @@
     "source": "Coursera",
     "roles": [
       "designer",
-      "non-technical",
-      "writer-marketer"
+      "non-technical"
     ],
     "level": "never-used",
     "topics": [
@@ -29844,9 +29712,7 @@
     "author": "Harvard Library",
     "source": "Harvard University",
     "roles": [
-      "researcher",
-      "student",
-      "teacher"
+      "researcher"
     ],
     "level": "never-used",
     "topics": [

@@ -80,9 +80,11 @@ GALLERY = "https://academy.claude.com/use-cases/"
 # The reader each role names. Generous, because a false drop deletes a real audience and
 # a false keep only leaves the status quo.
 ROLE_WORDS = {
+    # (?<!system )owner: a design-system owner is not a business owner, and the
+    # unqualified word was rescuing a designer row into business-founder.
     "business-founder": r"business owner|founder|entrepreneur|small[- ]business|"
-                        r"solo|freelanc|executive director|owner|proprietor|"
-                        r"running a business|smb\b",
+                        r"solo|freelanc|executive director|(?<!system )owner|"
+                        r"proprietor|running a business|smb\b",
     "pm": r"product manager|product owner|product team|product people|product lead|\bpm\b|"
           r"product marketing",
     # \btutor\b, not tutor: "tutorial" is not a teacher.
@@ -90,10 +92,21 @@ ROLE_WORDS = {
                r"school|\btutor\b",
     "student": r"student|undergrad|coursework|learner|pupil",
     # (?<!data )scientist: a data scientist is this site's data-analyst.
-    "researcher": r"researcher|academic|postdoc|scholar|\bphd\b|(?<!data )scientist|"
-                  r"principal investigator",
-    # (?<!non-)coder: "non-coder" is the opposite of the reader this names.
-    "developer": r"developer|engineer|programmer|(?<!non-)coder|devops|\bsre\b|on-call|"
+    # (?<!ux )researcher: a UX researcher is this site's designer, not its
+    # academic. "The UX Researcher's Guide to Claude" was being rescued into
+    # `researcher` and out of `designer`, which is backwards.
+    "researcher": r"(?<!ux )researcher|academic|postdoc|scholar|\bphd\b|"
+                  r"(?<!data )scientist|principal investigator",
+    # (?<!non-)coder: "non-coder" is the opposite of the reader this names. And
+    # (?<!medical )coder, because "medical coders" are a clinical job that this pattern was
+    # quietly filing as engineers - found in FIX-29 while reading the last 51 rows.
+    # Three lookbehinds, each found by a row the pattern decided wrongly:
+    # "Non-developers whose work sits in folders" was filed as developers,
+    # "non-coder" means the opposite of this reader, and "medical coders" are a
+    # clinical job. A pattern that matches inside another word decides rows
+    # nobody meant it to.
+    "developer": r"(?<!non-)developer|(?<!non-)engineer|programmer|"
+                 r"(?<!non-)(?<!medical )coder|devops|\bsre\b|on-call|"
                  r"technical team|software team",
     "designer": r"designer|design team|design system|\bux\b|\bui\b",
     "data-analyst": r"analyst|data scientist|data team|analytics",
@@ -121,7 +134,11 @@ SITUATION = re.compile(
     r"|\bnever (?:used|opened|touched|tried|written|run)\b|\bno experience\b"
     r"|\bjust been cut off\b|\babout to (?:trust|start|try|buy|pay|commit)\b"
     r"|\bhas not (?:yet )?(?:used|opened|tried)\b|\bwho has never\b"
-    r"|\banyone (?:who|about|with|in)\b|\bsomeone (?:who|about|with)\b", re.I)
+    r"|\banyone (?:who|about|with|in)\b|\bsomeone (?:who|about|with)\b"
+    # A learner is a state, not a job. "Methodical learners who want a single long
+    # course" was being rescued into `student`, which would have replaced three
+    # tags on a general beginner course.
+    r"|\blearners?\b|\bmethodical\b", re.I)
 
 # An off-roster word used attributively is subject matter, not a reader: "patient data" is
 # what the work is about, "patients" is who the work is for.

@@ -86,3 +86,21 @@ If the roster ever gains a role - a clinician, an investment analyst, an IT admi
 - **Was written for:** An Enterprise admin planning SSO/SCIM setup, Claude Code seat allocation, and org-wide adoption targets.
 - **skip_if:** Needs Claude Enterprise plus Owner/Primary Owner console access - shares nearly the same four-phase rollout template as its Cowork sibling guide, so read one, not both, unless you specifically need the seat-type rules or the link appendix this one adds.
 
+
+### Using the ICD-10 Connector in Claude
+
+- **URL:** https://academy.claude.com/tutorials/using-the-icd-10-connector-in-claude
+- **Publisher:** Anthropic Academy
+- **Tier when removed:** previewed
+- **Was written for:** Medical coders and billing specialists validating diagnosis and procedure codes.
+- **skip_if:** A fixed local reference database (2026 codes), not a live registry - and it makes one distinction worth knowing before you rely on it: category headers like 'E11' are organizational groupings and are NOT billable, only fully specified codes are.
+- **Why:** Medical coders and billing specialists validating diagnosis and procedure codes. A clinical connector, out of scope for the same reason as the ten in ruling 1 - and it was only surviving because the developer pattern matched the word `coder`.
+
+### Using the CMS Coverage Connector in Claude
+
+- **URL:** https://academy.claude.com/tutorials/using-the-cms-coverage-connector-in-claude
+- **Publisher:** Anthropic Academy
+- **Tier when removed:** previewed
+- **Was written for:** Medical coders, billers, and prior authorization specialists checking whether Medicare will pay for a service.
+- **skip_if:** Covers Medicare Part B only, by the page's own explicit statement - it does not include Part D drug formularies or Part A inpatient hospital coverage, so it can't answer questions about either.
+- **Why:** Medical coders, billers and prior authorization specialists checking whether Medicare will pay for a service. The same clinical scope as the ten in ruling 1, surfaced once the developer pattern stopped matching "medical coders".
