@@ -193,12 +193,14 @@ SUITE = [
      "course about teaching AI fluency, which is not about marking work."),
 
     # --- a developer ------------------------------------------------------------
-    ("developer", "claude code hooks", "content-gap",
-     "",
-     "The hooks GUIDE is not in this catalogue. The Hooks reference is, and it "
-     "leads - and its own card says to read the guide first, which is the "
-     "agent's objection and cannot be answered by ranking something that is "
-     "not here."),
+    ("developer", "claude code hooks", "bad",
+     "Hooks reference (Claude Code)",
+     "No longer a content gap and not yet an answer. The hooks GUIDE was "
+     "harvested on 2026-09-06 - the page the reference itself tells you to "
+     "read first - and it comes sixth for this query while the reference stays "
+     "first. A harvested row that does not surface for the question it was "
+     "harvested for is a finding, so it is recorded here as a ranking failure "
+     "rather than left looking like a hole in the shelves."),
     ("developer", "how do i stop claude touching my tests", "bad",
      "Red Green Refactor is OP With Claude Code",
      "the right answer is second; third is a career podcast the site's own card says "
@@ -217,11 +219,12 @@ SUITE = [
      "the file. Steering Claude Code is this round's: its card is about when "
      "to use CLAUDE.md against skills, hooks and subagents, so the file itself "
      "is its subject."),
-    ("developer", "claude code permissions", "content-gap",
-     "",
-     "No permissions reference in the catalogue. Twenty-one rows mention the "
-     "word in passing - a plugin install page, a Postgres MCP server - and "
-     "none of them is the page a developer wants when they type this."),
+    ("developer", "claude code permissions", "ok",
+     ["Claude Code settings and permission rules"],
+     "Promoted 2026-09-06 by the harvest. The catalogue had no permissions "
+     "reference at all - twenty-one rows mentioned the word in passing - and "
+     "now holds the settings page that defines allow, ask and deny. It is "
+     "third."),
     # The top result here is right. The agent's objection was position 3 - Getting
     # Started with Claude for Financial Services, inside a three-way score tie - which
     # is the no-tie-break finding, recorded in 05-developer.md, not a wrong #1.
@@ -373,12 +376,13 @@ SUITE = [
      "Promoted 2026-09-06. The page is exactly the question, and it was "
      "invisible because it says acknowledgement where the reader says 'say I "
      "used AI'. The disclosure synonym row put it first."),
-    ("writer-marketer", "em dash", "content-gap",
-     "",
-     "Not one row in the catalogue contains the phrase, in any field, indexed "
-     "or not. Four rows discuss AI writing tells in general and none of them "
-     "names this one. A synonym cannot conjure a resource; this is a harvest "
-     "job."),
+    ("writer-marketer", "em dash", "ok",
+     ["Signs of AI writing"],
+     "Promoted 2026-09-06, and it was never a content gap. The walk went to "
+     "the page rather than to the card: Wikipedia's Signs of AI writing has a "
+     "section headed 'Overuse of em dashes'. The answer was on the shelf and "
+     "our card never used the words, which is a vocabulary failure wearing a "
+     "gap's clothes. The card now carries them and the row is first."),
     ("writer-marketer", "ghostwriting for clients disclosure", "ok",
      ["IEEE", "Referencing AI and Acknowledging AI Use"],
      "Promoted. The objection was that two of the top four were Claude Code "

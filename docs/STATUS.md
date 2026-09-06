@@ -11,13 +11,13 @@ THE-PROJECT.md and README point at this file rather than repeating it.
 
 | | |
 |---|---|
-| Resources | **586** |
+| Resources | **588** |
 | Distinct publishers | 171 |
 | Distinct hosts | 129 |
 | Learning paths | **7**, 36 steps |
-| Anthropic's own | 341 of 586 — **58%** |
-| No publish date (`UNVERIFIED`) | 440 of 586 — 75% |
-| Carrying an `updated` date | 96 of 586 — 16% |
+| Anthropic's own | 343 of 588 — **58%** |
+| No publish date (`UNVERIFIED`) | 442 of 588 — 75% |
+| Carrying an `updated` date | 96 of 588 — 16% |
 
 **Where every date came from.** `date_source` is required on any row carrying a
 real date; a row with no date needs none, because "we do not know" is the whole
@@ -29,24 +29,24 @@ statement.
 | `metadata` — parsed from JSON-LD or a meta tag | 60 |
 | `upload` — a video platform's upload date | 71 |
 | `intercom` — the Help Center's template | 33 |
-| `(none)` — no real date — `UNVERIFIED` | 396 |
+| `(none)` — no real date — `UNVERIFIED` | 398 |
 
 **How thoroughly we have checked**
 
 | level | shown as | count | share |
 |---|---|---|---|
 | `reviewed` | Read in full | **0** | 0% |
-| `ai-reviewed` | Read by AI | **98** | 17% |
-| `previewed` | Skimmed | **485** | 83% |
+| `ai-reviewed` | Read by AI | **100** | 17% |
+| `previewed` | Skimmed | **485** | 82% |
 | `listed` | Found only | **3** | 1% |
 
-**Format:** 258 docs · 124 article · 101 video · 58 course · 32 repo · 7 hands-on · 6 podcast.
+**Format:** 260 docs · 124 article · 101 video · 58 course · 32 repo · 7 hands-on · 6 podcast.
 
-**Level:** 218 confident · 177 basic · 100 never-used · 91 builder.
+**Level:** 219 confident · 177 basic · 100 never-used · 92 builder.
 
-**Cost:** 534 free · 26 free-account · 16 subscription · 10 paid-once.
+**Cost:** 536 free · 26 free-account · 16 subscription · 10 paid-once.
 
-**Status:** 583 live · 3 outdated.
+**Status:** 585 live · 3 outdated.
 
 ## "Start with these three"
 
@@ -73,7 +73,7 @@ relaxes): `non-technical|builder` (1 pub, 2 items), `teacher|builder` (2 pub, 2 
 | `student` | 40 / 20p / 17x | 21 / 14p / 12x | 9 / 5p / 4x | 0 / 0p / 0x |
 | `researcher` | 17 / 5p / 2x | 19 / 15p / 12x | 31 / 15p / 13x | 6 / 3p / 3x |
 | `teacher` | 26 / 12p / 8x | 24 / 19p / 16x | 8 / 3p / 2x | 2 / 2p / 1x |
-| `developer` | 6 / 4p / 1x | 19 / 11p / 8x | 37 / 15p / 13x | 54 / 20p / 23x |
+| `developer` | 6 / 4p / 1x | 19 / 11p / 8x | 38 / 15p / 13x | 55 / 20p / 23x |
 | `data-analyst` | 7 / 4p / 1x | 19 / 14p / 12x | 33 / 10p / 7x | 12 / 4p / 9x |
 | `pm` | 11 / 7p / 4x | 40 / 15p / 15x | 52 / 21p / 24x | 4 / 4p / 3x |
 | `designer` | 8 / 6p / 5x | 11 / 8p / 6x | 22 / 13p / 11x | 7 / 6p / 5x |
@@ -171,14 +171,12 @@ Every candidate is Anthropic's own. No constraint can fix this; only material ca
 
 A reader who answers both questions this way is told we have nothing. `student\|builder`
 
-### Questions the catalogue cannot answer (10)
+### Questions the catalogue cannot answer (7)
 
 Queries from the suite that fail because nothing here is on the subject, not because the ranking is wrong. No stemmer, spelling pair or synonym can conjure a resource, so these are a harvest list rather than a search backlog. Generated from `scripts/test-search.py`; the judgement behind each one is in its reason there.
 
 | the role that asked | what they typed | why it cannot be answered |
 |---|---|---|
-| developer | claude code hooks | The hooks GUIDE is not in this catalogue. The Hooks reference is, and it leads - and its own card says to read the guide first, which is the agent's objection and cannot be answered by ranking something that is not here. |
-| developer | claude code permissions | No permissions reference in the catalogue. Twenty-one rows mention the word in passing - a plugin install page, a Postgres MCP server - and none of them is the page a developer wants when they type this. |
 | data-analyst | pivot table | Three rows mention pivot tables in passing and none is about them. The agent said so at the time: there is nothing here, and the honest answer is an empty result rather than three approximations. |
 | pm | roadmap prioritisation | Five rows contain 'prioritis'/'prioritiz' anywhere: a literature review, feedback themes, weekly prep, grant options and one PM skill pack whose card Attack 2 read and found is not about prioritisation. Nothing here is about prioritising a roadmap. |
 | pm | stakeholder update | Nothing here is about writing a stakeholder update. Six rows contain the word stakeholder; the closest, the official PM plugin, teaches installing a plugin and running slash commands. The suite's recorded objection - a journalism ethics code and an equity-analyst workflow matched on the word update - is gone, and what replaced it is a plugin page, not an answer. |
@@ -186,7 +184,6 @@ Queries from the suite that fail because nothing here is on the subject, not bec
 | pm | prioritization | The American spelling of a subject this catalogue does not cover. It returns the same rows as the British one now, which is the spelling fix landing on an empty shelf. |
 | designer | will ai design replace me | Nothing in the catalogue is about AI replacing designers: zero rows contain 'replace me' or 'replace design' in any field. The query returns 42 results because its other words are common, and not one of them is on the subject. |
 | designer | typography | One row mentions typography anywhere - Encode the brand as a skill - and it mentions it in the summary, which is not indexed. A design directory that cannot answer 'typography' has a hole in its shelves, not in its search. |
-| writer-marketer | em dash | Not one row in the catalogue contains the phrase, in any field, indexed or not. Four rows discuss AI writing tells in general and none of them names this one. A synonym cannot conjure a resource; this is a harvest job. |
 
 ## Links
 

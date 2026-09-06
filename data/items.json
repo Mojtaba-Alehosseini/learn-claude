@@ -14236,7 +14236,7 @@
     "published": "UNVERIFIED",
     "checked": "2026-08-18",
     "status": "live",
-    "notes": "Descriptive, not prescriptive — the page itself warns that no single sign proves AI authorship; use it as a pattern-matching aid, not a detector.",
+    "notes": "Descriptive, not prescriptive — the page itself warns that no single sign proves AI authorship; use it as a pattern-matching aid, not a detector.\n\nFIX-29: 'em dash' was recorded as a content gap - no row in the catalogue contained the phrase. Walking the page found a section headed \"Overuse of em dashes\". The answer was already here and the card never said the words, which makes it a vocabulary failure rather than a hole in the shelves.",
     "source": "Wikipedia",
     "official": false,
     "id": "r-d84a7c8cbe",
@@ -14250,12 +14250,16 @@
       "humanize ai text checklist",
       "editorial check for ai",
       "anthropic",
-      "claud"
+      "claud",
+      "em dash",
+      "em dashes"
     ],
     "questions": [
       "how can you tell if an article was written by ai",
       "what are the most common words used by ai writers",
-      "how do i edit ai text so it sounds human"
+      "how do i edit ai text so it sounds human",
+      "is the em dash a sign of ai writing",
+      "why does ai use so many dashes"
     ],
     "teaches": [
       "identify common vocabulary and sentence patterns of ai-generated text",
@@ -30003,5 +30007,103 @@
     "language": "en",
     "notes": "Collection card, created 2026-09-06 under Rule C. It replaces 5 individual gallery rows whose who_for named a job this site has no role for, while every one of them carried business-founder, pm or data-analyst - tags their own cards deny. Somebody who owns the function is a real reader for the menu; the staff the recipes are written for are not readers of this site.\n\nThe URL is the gallery's own department filter, opened on 2026-09-06, when it listed 7 entries.\n\nTier `previewed`: the department page was opened and its entries read as a list. The recipes behind them were not opened one by one.\n\nLevel, format, time and topics are taken from the rows absorbed, not chosen.\n\nThe absorbed rows and their skip_if lines, kept because they are the best writing those cards had:\n\nCreate a volunteer management system - The two referenced PDFs are example inputs from the page's own worked example, not downloadable templates - you supply your organization's actual program details, or the ~15-page handbook it drafts will be generic.\n\nPrep the vendor negotiation - Needs a working folder with the current agreement, renewal proposal, usage export and comparable quotes - the prompt specifically demands a pre-committed walk-away line, so it needs you to actually decide that threshold, not just supply documents.\n\nProcess batches of vendors with Cowork - Needs Claude Desktop plus the Claude in Chrome extension already logged into your procurement portal - it combines local-file Cowork with live browser form-filling in one run, a heavier setup than either alone.\n\nVendor risk review - Needs your own risk framework PDF plus the vendor's SOC 2 report, security questionnaire, DPA and MSA all in one folder - the go/no-go memo only means something if your risk framework is already written down.\n\nWorkflow improvement planner - The deliverable is a 10-section questionnaire artifact for you to fill in, not a finished improvement plan - Claude builds the form that interviews you, it doesn't answer the questions itself.",
     "id": "r-6f2bd65118"
+  },
+  {
+    "title": "Automate actions with hooks (Claude Code)",
+    "url": "https://code.claude.com/docs/en/hooks-guide",
+    "author": "Anthropic",
+    "source": "Claude Code docs",
+    "official": true,
+    "roles": [
+      "developer"
+    ],
+    "level": "builder",
+    "topics": [
+      "claude-code",
+      "agents"
+    ],
+    "format": "docs",
+    "time": "under-1hr",
+    "cost": "free",
+    "language": "en",
+    "tier": "ai-reviewed",
+    "summary": "The guide the hooks reference tells you to read first: what a hook is, the shapes they come in - a shell command, a prompt, an agent - and worked examples that format a file after every edit or send a desktop notification when Claude wants attention.",
+    "who_for": "Someone who has watched Claude Code do the same avoidable thing twice and wants it stopped by a rule rather than by asking again.",
+    "skip_if": "You want every event schema and exit code - that is the reference, and it is a different page. The /hooks menu here is read-only, so you will be editing a settings file by hand or asking Claude to edit it.",
+    "teaches": [
+      "add a hook that runs a command after Claude edits a file",
+      "choose between a command hook, a prompt hook and an agent hook",
+      "get Claude to write the hook by describing what you want"
+    ],
+    "keywords": [
+      "claude code hooks guide",
+      "automate after edit",
+      "format on save",
+      "desktop notification claude code",
+      "prompt hook",
+      "agent hook",
+      "settings json hooks",
+      "run a command automatically"
+    ],
+    "questions": [
+      "how do i make claude run something after every edit",
+      "can i get a notification when it needs me",
+      "how do hooks actually work",
+      "stop it doing the same thing wrong twice"
+    ],
+    "published": "UNVERIFIED",
+    "checked": "2026-09-06",
+    "status": "live",
+    "notes": "Harvested 2026-09-06 to answer the content gap 'claude code hooks'. The catalogue held the hooks reference, whose own card says to read the guide first, and did not hold the guide. Fetched and read in full; no person has read it end to end, so the tier is ai-reviewed. The page prints no publication date, so published stays UNVERIFIED.",
+    "id": "r-a0ff8517d0"
+  },
+  {
+    "title": "Claude Code settings and permission rules",
+    "url": "https://code.claude.com/docs/en/settings",
+    "author": "Anthropic",
+    "source": "Claude Code docs",
+    "official": true,
+    "roles": [
+      "developer"
+    ],
+    "level": "confident",
+    "topics": [
+      "claude-code",
+      "safety"
+    ],
+    "format": "docs",
+    "time": "under-1hr",
+    "cost": "free",
+    "language": "en",
+    "tier": "ai-reviewed",
+    "summary": "Where Claude Code's settings live and what they hold, including the permission rules - allow, ask and deny - that decide what it runs without asking, how rules from your organisation merge with yours, and why a path in a rule does not anchor where you expect.",
+    "who_for": "Someone who has clicked 'yes, and don't ask again' once too often and wants to see what that wrote down, or who needs Claude Code kept away from part of a repository.",
+    "skip_if": "You want to enforce something Claude cannot talk itself out of. A permission rule is a gate; a hook is a guarantee, and that is the other page.",
+    "teaches": [
+      "read and edit the settings file Claude Code writes for you",
+      "write allow, ask and deny rules for tools and commands",
+      "know how your rules merge with an organisation's"
+    ],
+    "keywords": [
+      "claude code permissions",
+      "allow deny rules",
+      "settings json",
+      "dont ask again",
+      "restrict claude code",
+      "permission scopes",
+      "organisation policy",
+      "sandbox paths"
+    ],
+    "questions": [
+      "how do i stop it running things without asking",
+      "where did that permission get saved",
+      "can i keep it out of one folder",
+      "why is my rule not matching"
+    ],
+    "published": "UNVERIFIED",
+    "checked": "2026-09-06",
+    "status": "live",
+    "notes": "Harvested 2026-09-06 to answer the content gap 'claude code permissions'. The catalogue had no permissions reference at all: twenty-one rows mentioned the word in passing and none of them was the page. Fetched and read in full; no person has read it end to end, so the tier is ai-reviewed. The page prints no publication date, so published stays UNVERIFIED.",
+    "id": "r-3007ca1afd"
   }
 ]
