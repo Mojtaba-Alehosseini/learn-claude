@@ -67,7 +67,7 @@
   };
   /* The two that carry a name after a colon. %s takes the name, title-cased. */
   LC.NEEDS_PREFIX = {
-    "data-subscription": "needs a %s subscription",
+    "data-subscription": "needs %s subscription",
     "connector": ""
   };
   LC.FORMAT = {
@@ -531,6 +531,85 @@
     return "from " + (sym ? sym + n : n + " " + item.price_currency);
   };
 
+  /* A slug is lowercase and hyphenated so that a validator can check it. A company name
+     is neither. Title-casing the slug gets Daloopa and Databricks right and gets Lseg,
+     Pitchbook and S And P Global wrong, so the ones that do not title-case are written
+     out. A name here is a name somebody has to type once; the alternative is a
+     catalogue that misspells its own sources. */
+  LC.NEEDS_NAMES = {
+    "lseg": "LSEG", "pitchbook": "PitchBook", "s-and-p-global": "S&P Global",
+    "google-drive": "Google Drive"
+  };
+
+  LC.needsName = function (slug) {
+    if (LC.NEEDS_NAMES[slug]) { return LC.NEEDS_NAMES[slug]; }
+    return String(slug).split("-").map(function (w) {
+      return w.charAt(0).toUpperCase() + w.slice(1);
+    }).join(" ");
+  };
+
+  /* "a LSEG subscription" is how a template writes it and not how anybody says it. The
+     article follows the sound, not the letter: a leading vowel takes "an", and so does an
+     initialism whose first letter is read as one - LSEG, S&P, MCP, NHS. PitchBook is not
+     an initialism, so it keeps "a". */
+  LC.article = function (name) {
+    var first = String(name).charAt(0);
+    if ("AEIOUaeiou".indexOf(first) !== -1) { return "an"; }
+    var head = String(name).split(/[^A-Za-z&]/)[0];
+    if (head.length > 1 && head === head.toUpperCase() &&
+        "AEFHILMNORSX".indexOf(first.toUpperCase()) !== -1) {
+      return "an";
+    }
+    return "a";
+  };
+
+  LC.needsLabel = function (v) {
+    var parts = String(v).split(":"), base = parts[0], slug = parts[1];
+    if (slug && LC.NEEDS_PREFIX.hasOwnProperty(base)) {
+      var name = LC.needsName(slug);
+      return LC.NEEDS_PREFIX[base].replace("%s", LC.article(name) + " " + name);
+    }
+    return LC.NEEDS[base] || "";
+  };
+
+  /* One chip, not three. A card's chip row already carries format, time and cost, and a
+     row that needs a paid plan AND a data subscription AND a Mac would push the cost off
+     the line on a phone. The order is what costs a reader most to find out late: the
+     plan, then the subscription, then the machine. The resource page lists them all. */
+  LC.needsChip = function (item) {
+    var needs = item.needs || [];
+    var order = ["paid-claude-plan", "data-subscription", "mac", "windows"];
+    for (var i = 0; i < order.length; i++) {
+      for (var j = 0; j < needs.length; j++) {
+        if (String(needs[j]).split(":")[0] === order[i]) {
+          var label = LC.needsLabel(needs[j]);
+          if (label) {
+            return '<span class="chip chip-needs">' + LC.esc(label) + '</span>';
+          }
+        }
+      }
+    }
+    return "";
+  };
+
+  /* Every needs value in the reader's own words, for the resource page, where there is
+     room for all of them. */
+  LC.needsLines = function (item) {
+    return (item.needs || []).map(function (v) {
+      var parts = String(v).split(":"), base = parts[0], name = LC.needsName(parts[1] || "");
+      return ({
+        "paid-claude-plan": "a paid Claude plan - Pro, Max, Team or Enterprise",
+        "mac": "a Mac",
+        "windows": "Windows",
+        "github-account": "a GitHub account",
+        "api-key": "an Anthropic API key",
+        "data-subscription": LC.article(name) + " " + name +
+                             " subscription, paid separately",
+        "connector": "the " + name + " connector switched on"
+      })[base] || v;
+    });
+  };
+
   LC.chips = function (item) {
     var out = [LC.FORMAT[item.format] || item.format,
                LC.TIME[item.time] || item.time,
@@ -539,7 +618,7 @@
     if (p) out.push(p);
     return out
       .map(function (c) { return '<span class="chip">' + LC.esc(c) + '</span>'; })
-      .join("");
+      .join("") + LC.needsChip(item);
   };
 
   /* The canonical URL of a resource, and the only place the scheme is written.

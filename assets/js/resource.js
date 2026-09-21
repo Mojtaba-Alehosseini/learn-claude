@@ -121,6 +121,10 @@
       '<p class="prose">' + LC.esc(item.skip_if) + '</p></section>' +
 
     list("Before this", item.prerequisites) +
+    /* D4. Everything the row needs, including the values that get no chip - a connector
+       is free to switch on, a GitHub account is free, an API key is a developer's own
+       arrangement - so the card stays short and the page stays complete. */
+    list("Also needs", LC.needsLines(item)) +
     pathBlock +
 
     '<section class="section"><h2 class="h2">How we checked this one</h2>' +

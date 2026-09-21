@@ -349,7 +349,8 @@ Order of information on every card:
 1. Badge — how we checked it
 2. Title
 3. Source and author
-4. Three chips: format · time · cost
+4. Chips: format · time · cost, and one needs chip where the row has something
+   rendered — *free · needs a paid Claude plan*
 5. Who it's for
 6. Skip if
 7. Footer: checked date, plus a flag if it looks old
