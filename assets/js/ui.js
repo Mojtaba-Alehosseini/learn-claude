@@ -483,12 +483,16 @@
      card. Only four rows have it: a price is recorded only where the page prints the same
      number for every reader, which rules out every marketplace that prices by country and
      by sale. */
-  /* D5. Eight of Attack 3's ten agents hit a paid row with no price and read it as an
-     omission. It is a rule: a price is recorded only where the page prints the same
-     number for every reader, which rules out every marketplace pricing by country. The
-     rule is right and it was invisible, so a paid row with no price now says why in the
-     chip's own place rather than leaving a hole where the number should be. */
-  LC.PRICE_VARIES = "price varies by country — check the page";
+  /* D5, reworded in FIX-34. Eight of Attack 3's ten agents hit a paid row with no
+     price and read it as an omission. It is a rule - a price is recorded only where the
+     page prints the same number for every reader - and the rule was invisible, so the
+     chip now speaks in the place the number would have been.
+
+     It used to say "price varies by country — check the page". True of the pay-once
+     rows; a guess about the subscriptions, which are priced by seat and by plan as much
+     as by country. The chip now says only what it knows: where the number is. Why we do
+     not copy it is the method page's job. */
+  LC.PRICE_VARIES = "price on the page";
 
   LC.price = function (item) {
     if (item.cost !== "free" && item.cost !== "free-account" &&

@@ -305,6 +305,14 @@ cannot hold "free, sign-up needed" and "1 hour" in the same 200px corner. "Free"
 also redundant — every value in this row that is not `free` is a sign-up or a payment,
 so pairing one with the word "free" answers a question the chip was not asked.
 
+**Paid, no price recorded:** `price on the page`
+
+A price is recorded only where the page prints the same number for every reader. Where it
+does not, the chip says where the number is and nothing more. FIX-33 wrote "price varies
+by country — check the page"; FIX-34 cut it to four words, because "by country" was true
+for the pay-once rows and a guess for the subscriptions, which are priced by seat and by
+plan. Why we do not copy the number lives on `how-we-check.html`, with the other rules.
+
 **Format labels:** video · course · docs · article · hands-on · podcast · code
 
 **Topic labels:** chat and prompting · Claude Code · Cowork · Skills · connectors · agents · API · limits and safety
