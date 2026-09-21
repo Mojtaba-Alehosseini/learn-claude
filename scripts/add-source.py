@@ -17,6 +17,12 @@ import re
 import sys
 import collections
 
+if hasattr(sys.stdout, "reconfigure"):
+    # Windows consoles default to cp1252, and this catalogue is full of
+    # em-dashes and curly quotes. Without this a script dies printing its own
+    # finding.
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
 ITEMS = "data/items.json"
 
 # Longest match wins, so put specific hosts before their parent domain.

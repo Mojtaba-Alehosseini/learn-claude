@@ -43,6 +43,12 @@ from urllib.parse import urljoin
 
 from PIL import Image
 
+if hasattr(sys.stdout, "reconfigure"):
+    # Windows consoles default to cp1252, and this catalogue is full of
+    # em-dashes and curly quotes. Without this a script dies printing its own
+    # finding.
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
 DEST = "assets/icons/publishers"
 MANIFEST = "data/publisher-marks.json"
 MIN_SIZE = 32

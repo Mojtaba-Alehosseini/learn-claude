@@ -72,6 +72,12 @@ import re
 import sys
 from collections import defaultdict
 
+if hasattr(sys.stdout, "reconfigure"):
+    # Windows consoles default to cp1252, and this catalogue is full of
+    # em-dashes and curly quotes. Without this a script dies printing its own
+    # finding.
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 P = os.path.join(ROOT, "data", "items.json")
 FAM = os.path.join(ROOT, "data", "use-case-departments.json")

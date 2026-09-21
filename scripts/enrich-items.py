@@ -30,6 +30,12 @@ import time
 import urllib.request
 import urllib.error
 
+if hasattr(sys.stdout, "reconfigure"):
+    # Windows consoles default to cp1252, and this catalogue is full of
+    # em-dashes and curly quotes. Without this a script dies printing its own
+    # finding.
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
 ITEMS = "data/items.json"
 MODEL = "gemini-flash-latest"   # lite is the fallback, not the default
 BATCH = 10         # items per request. Bigger batches drift and drop fields.

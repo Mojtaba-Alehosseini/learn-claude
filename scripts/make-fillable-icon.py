@@ -32,6 +32,12 @@ import os
 from collections import deque
 from PIL import Image
 
+if hasattr(sys.stdout, "reconfigure"):
+    # Windows consoles default to cp1252, and this catalogue is full of
+    # em-dashes and curly quotes. Without this a script dies printing its own
+    # finding.
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
 BG     = (0xF0, 0xEE, 0xE6)
 LIGHT  = (0xFA, 0xF9, 0xF5)
 ACCENT = (0xE3, 0xDA, 0xCC)

@@ -19,6 +19,13 @@ Run it after anything that edits data/*.json. build-all.sh does this for you.
 
 import json
 import os
+import sys
+
+if hasattr(sys.stdout, "reconfigure"):
+    # Windows consoles default to cp1252, and this catalogue is full of
+    # em-dashes and curly quotes. Without this a script dies printing its own
+    # finding.
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 # Fields no JavaScript on the site reads. Measured 2026-08-27 by grepping assets/js for
 # every key in items.json: these seven are 192 KB of the 610 KB every visitor downloads,

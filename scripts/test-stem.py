@@ -19,6 +19,12 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from stem import stem  # noqa: E402
 
+if hasattr(sys.stdout, "reconfigure"):
+    # Windows consoles default to cp1252, and this catalogue is full of
+    # em-dashes and curly quotes. Without this a script dies printing its own
+    # finding.
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
 # (the query this comes from, the words that must reach one stem)
 FAMILIES = [
     ("does claude make up citations / hallucinations",

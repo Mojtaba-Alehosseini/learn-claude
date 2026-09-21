@@ -21,6 +21,12 @@ import sys
 import os
 from PIL import Image
 
+if hasattr(sys.stdout, "reconfigure"):
+    # Windows consoles default to cp1252, and this catalogue is full of
+    # em-dashes and curly quotes. Without this a script dies printing its own
+    # finding.
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
 # Anthropic palette. See docs/specs/2026-08-19-directory-spec.md section 14.
 BG     = (0xF0, 0xEE, 0xE6)   # ivory medium — page canvas
 LIGHT  = (0xFA, 0xF9, 0xF5)   # ivory light  — unaccented shapes

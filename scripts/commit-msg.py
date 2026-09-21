@@ -41,6 +41,12 @@ import os
 import re
 import sys
 
+if hasattr(sys.stdout, "reconfigure"):
+    # Windows consoles default to cp1252, and this catalogue is full of
+    # em-dashes and curly quotes. Without this a script dies printing its own
+    # finding.
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
 # `one` is missing here on purpose and present in RATIO below. It is an article and a
 # pronoun far more often than a quantity - "one thing a synonym cannot do", "one way to
 # read it" - and this hook's own first message was rejected for one of those. A guard

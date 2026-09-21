@@ -20,6 +20,12 @@ import re
 import sys
 import collections
 
+if hasattr(sys.stdout, "reconfigure"):
+    # Windows consoles default to cp1252, and this catalogue is full of
+    # em-dashes and curly quotes. Without this a script dies printing its own
+    # finding.
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
 ALLOWED = {
     "level": {"never-used", "basic", "confident", "builder"},
     "format": {"video", "course", "docs", "article", "hands-on", "podcast", "repo"},

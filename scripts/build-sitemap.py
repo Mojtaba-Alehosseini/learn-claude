@@ -25,6 +25,12 @@ import os
 import sys
 from xml.sax.saxutils import escape
 
+if hasattr(sys.stdout, "reconfigure"):
+    # Windows consoles default to cp1252, and this catalogue is full of
+    # em-dashes and curly quotes. Without this a script dies printing its own
+    # finding.
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE = "https://mojtaba-alehosseini.github.io/learn-claude/"
 PAGES = ["", "browse.html", "paths.html", "how-we-check.html"]
