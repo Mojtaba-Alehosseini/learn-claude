@@ -47,6 +47,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ITEMS = os.path.join(ROOT, "data", "items.json")
 PATHS = os.path.join(ROOT, "data", "paths.json")
 UI_JS = os.path.join(ROOT, "assets", "js", "ui.js")
+DECK = os.path.join(ROOT, "docs", "design", "ux-copy.md")
 STABLE_IDS = os.path.join(ROOT, "scripts", "stable-ids.py")
 ALLOWANCE = os.path.join(ROOT, "data", "reviewed-allowance.txt")
 DUPE_TITLES = os.path.join(ROOT, "data", "duplicate-titles.txt")
@@ -611,6 +612,59 @@ def check_who_for_roster(items, warn):
 PRICE_FIELDS = ("price_amount", "price_currency", "price_checked")
 
 
+NEEDS_SLUG = re.compile(r"^[a-z0-9-]+$")
+# The deck's needs table, and only that table: every other table in the file is a
+# vocabulary too, and a regex over the whole deck would let `free` through as a needs
+# value because the cost table happens to list it.
+DECK_SECTION = re.compile(r"\*\*Needs labels\*\*(.*?)(?=\n\*\*[A-Z])", re.S)
+DECK_ROW = re.compile(r"^\| `([a-z-]+)(?::<name>)?` \|", re.M)
+
+
+def load_needs_vocabulary(ui_src, deck_path):
+    """What may appear in `needs`: the keys the interface can render, and the words the
+    copy deck gives a reason for. Both, because either alone is a way to drift.
+
+    The interface alone would let a value ship that nobody wrote down a reason for, which
+    is how `cost` was filled two different ways by the same hand for a month. The deck
+    alone would let a value ship that no surface can draw."""
+    fixed = js_object_keys(ui_src, "NEEDS")
+    prefixed = js_object_keys(ui_src, "NEEDS_PREFIX")
+    deck = open(deck_path, encoding="utf-8").read()
+    m = DECK_SECTION.search(deck)
+    if not m:
+        raise SystemExit(
+            "%s has no **Needs labels** section. The vocabulary grows there, with a "
+            "reason, before it is used." % deck_path)
+    return fixed, prefixed, set(DECK_ROW.findall(m.group(1)))
+
+
+def check_needs(items, bad, vocab):
+    """D4. What a resource needs is not what it costs, and it is a closed list."""
+    fixed, prefixed, in_deck = vocab
+    for n, item in enumerate(items):
+        needs = item.get("needs")
+        if needs in (None, []):
+            continue
+        if not isinstance(needs, list):
+            bad(n, item, "needs is %r - it is a list of values or it is absent"
+                % type(needs).__name__)
+            continue
+        for v in needs:
+            base, sep, slug = str(v).partition(":")
+            if sep:
+                known = base in prefixed and bool(NEEDS_SLUG.match(slug))
+            else:
+                known = base in fixed
+            if not known:
+                bad(n, item, "needs value %r is not in the vocabulary. ui.js defines "
+                             "LC.NEEDS %s and LC.NEEDS_PREFIX %s, and a prefixed value "
+                             "wants a lowercase slug after the colon."
+                    % (v, sorted(fixed), sorted(prefixed)))
+            elif base not in in_deck:
+                bad(n, item, "needs value %r has no row in the copy deck. The word gets "
+                             "its reason written down before it gets used." % v)
+
+
 def check_prices(items, bad):
     """D9. A price a reader can act on, or no price at all.
 
@@ -710,6 +764,9 @@ def main(argv=None):
     items_path = argv[0] if len(argv) > 0 else ITEMS
     paths_path = argv[1] if len(argv) > 1 else PATHS
     allowance_path = argv[2] if len(argv) > 2 else ALLOWANCE
+    # Same reason as the three above: the needs vocabulary is half in the copy deck, and
+    # a rule that reads a file the tests cannot replace is a rule the tests cannot prove.
+    deck_path = argv[3] if len(argv) > 3 else DECK
 
     vocab = load_vocabularies()
     make_id, norm, host = load_id_rule()
@@ -723,6 +780,8 @@ def main(argv=None):
 
     check_publishers(items, bad)
     check_prices(items, bad)
+    check_needs(items, bad,
+                load_needs_vocabulary(open(UI_JS, encoding="utf-8").read(), deck_path))
 
     note_warnings = []
     check_notes_against_tier(items, bad,

@@ -44,6 +44,32 @@
     "free": "free", "free-account": "sign-up needed",
     "paid-once": "pay once", "subscription": "subscription"
   };
+
+  /* FIX-34 D4. What a resource needs before it is any use to you, which is a different
+     question from what it costs to open. The cost chip was answering the second while
+     readers asked the first: analyst cards read `free` and needed a paid data
+     subscription, and one read `free` four lines above "Before this - Paid Claude plan".
+
+     A value earns a chip label here when having it costs money or rules a machine out.
+     The rest have an empty label on purpose: they are recorded, because a reader still
+     has to go and get them, and the resource page lists them under "Also needs" instead
+     of spending a card's chip row on something free to switch on.
+
+     The vocabulary grows in docs/design/ux-copy.md first, with a reason;
+     validate-catalogue.py reads both this and the deck, and rejects a value missing from
+     either. */
+  LC.NEEDS = {
+    "paid-claude-plan": "needs a paid Claude plan",
+    "mac": "Mac only",
+    "windows": "Windows only",
+    "github-account": "",
+    "api-key": ""
+  };
+  /* The two that carry a name after a colon. %s takes the name, title-cased. */
+  LC.NEEDS_PREFIX = {
+    "data-subscription": "needs a %s subscription",
+    "connector": ""
+  };
   LC.FORMAT = {
     "video": "video", "course": "course", "docs": "docs", "article": "article",
     "hands-on": "hands-on", "podcast": "podcast", "repo": "code"

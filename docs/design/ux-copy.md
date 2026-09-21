@@ -313,6 +313,26 @@ by country — check the page"; FIX-34 cut it to four words, because "by country
 for the pay-once rows and a guess for the subscriptions, which are priced by seat and by
 plan. Why we do not copy the number lives on `how-we-check.html`, with the other rules.
 
+**Needs labels** — what you must already have, which is not what it costs. Spec:
+[`specs/2026-09-07-needs-field.md`](../specs/2026-09-07-needs-field.md).
+
+| Value | Chip | Why it is in the vocabulary |
+|---|---|---|
+| `paid-claude-plan` | needs a paid Claude plan | a card read `free` four lines above "Before this — Paid Claude plan" |
+| `mac` | Mac only | Cowork and Claude Design shipped Mac-first, and a Windows reader learns that at install |
+| `windows` | Windows only | the mirror of `mac`, in the list so that neither platform is the unstated default |
+| `data-subscription:<name>` | needs a `<Name>` subscription | analyst cards read `free` while needing LSEG, Daloopa or Databricks |
+| `connector:<name>` | *(no chip)* | a connector is free to switch on; it belongs under "Also needs" on the page |
+| `github-account` | *(no chip)* | free, and the report link already asks for one |
+| `api-key` | *(no chip)* | a developer's own arrangement, and every row that needs one says so already |
+
+A value earns a chip when having it costs money or rules a reader's machine out. The rest
+are recorded, because a reader still has to go and get them, and shown on the resource
+page rather than on the card.
+
+Adding a value means adding a row here, with its reason, first. `validate-catalogue.py`
+reads this table: a value with no row is rejected.
+
 **Format labels:** video · course · docs · article · hands-on · podcast · code
 
 **Topic labels:** chat and prompting · Claude Code · Cowork · Skills · connectors · agents · API · limits and safety

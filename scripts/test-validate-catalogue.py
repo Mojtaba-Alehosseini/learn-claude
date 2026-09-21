@@ -13,6 +13,7 @@ Exit 1 if any rule fails to catch its fault, or if the untouched catalogue is re
 
 import copy
 import importlib.util
+import io
 import json
 import os
 import shutil
@@ -67,21 +68,31 @@ HOST_CASES = [
 ]
 
 
-def run(items, paths, tmp, allowance=0):
-    """Write the three inputs out and run the validator over them.
+DECK = os.path.join(ROOT, "docs", "design", "ux-copy.md")
+
+
+def run(items, paths, tmp, allowance=0, deck=None):
+    """Write the inputs out and run the validator over them.
 
     The allowance goes to a temporary file too. Testing it against the committed one
     could only ever prove that `reviewed` is rejected; passing our own proves the other
     half — that raising the number by hand is what lets it through.
+
+    The copy deck is the same story. Half the `needs` rule is "the word has a reason
+    written down", and a rule that reads a file the tests cannot replace is a rule the
+    tests cannot prove. `deck` is the deck's text; None means the real one.
     """
     ip = os.path.join(tmp, "items.json")
     pp = os.path.join(tmp, "paths.json")
     ap = os.path.join(tmp, "allowance.txt")
+    dp = os.path.join(tmp, "ux-copy.md")
     json.dump(items, open(ip, "w", encoding="utf-8"), ensure_ascii=False)
     json.dump(paths, open(pp, "w", encoding="utf-8"), ensure_ascii=False)
     open(ap, "w", encoding="utf-8").write("# written by the tests" + os.linesep
                                           + str(allowance) + os.linesep)
-    r = subprocess.run([sys.executable, VALIDATOR, ip, pp, ap],
+    text = deck if deck is not None else io.open(DECK, encoding="utf-8").read()
+    io.open(dp, "w", encoding="utf-8").write(text)
+    r = subprocess.run([sys.executable, VALIDATOR, ip, pp, ap, dp],
                        capture_output=True, text=True, encoding="utf-8", errors="replace")
     return r.returncode, (r.stdout or "") + (r.stderr or "")
 
@@ -113,6 +124,35 @@ CASES = [
      lambda i, p: i[0].update(
          {"skip_if": "N/A - always verify pricing here rather than in third-party posts."}),
      "skip_if says nothing"),
+
+    # D4. `needs` is a closed vocabulary with a reason per word, and both halves of that
+    # are testable: the interface has to be able to draw it, and the deck has to say why
+    # it exists.
+    ("needs holds a value outside the vocabulary",
+     lambda i, p: i[0].update({"needs": ["paid-plan"]}),
+     "not in the vocabulary"),
+
+    ("needs holds a prefixed value with a malformed slug",
+     lambda i, p: i[0].update({"needs": ["data-subscription:LSEG Workspace"]}),
+     "not in the vocabulary"),
+
+    ("needs is a string rather than a list",
+     lambda i, p: i[0].update({"needs": "paid-claude-plan"}),
+     "it is a list of values or it is absent"),
+
+    # The other half of the same rule: the interface can draw it and the deck never said
+    # why it exists. That is the drift the deck is for - `cost` was filled two different
+    # ways by the same hand for a month before it was written down.
+    ("needs holds a value the copy deck gives no reason for",
+     lambda i, p: i[0].update({"needs": ["paid-claude-plan"]}),
+     "no row in the copy deck",
+     0,
+     lambda deck: deck.replace(
+         "| `paid-claude-plan` | needs a paid Claude plan |", "", 1)),
+
+    ("needs, well-formed",
+     lambda i, p: i[0].update({"needs": ["paid-claude-plan", "connector:google-drive"]}),
+     None),
 
     ("skip_if opens with TBD",
      lambda i, p: i[0].update({"skip_if": "TBD: nobody has written this one yet."}),
@@ -380,10 +420,14 @@ def main():
         for case in CASES:
             name, break_it, phrase = case[0], case[1], case[2]
             allowance = case[3] if len(case) > 3 else 0   # reviewed cases set their own
+            # A fifth element rewrites the copy deck. Only the needs rule reads it, and
+            # only the deck half of that rule can be broken any other way.
+            bend_deck = case[4] if len(case) > 4 else None
             items = copy.deepcopy(good_items)
             paths = copy.deepcopy(good_paths)
             break_it(items, paths)
-            code, out = run(items, paths, tmp, allowance)
+            deck = bend_deck(io.open(DECK, encoding="utf-8").read()) if bend_deck else None
+            code, out = run(items, paths, tmp, allowance, deck)
 
             if phrase is None:
                 if code == 0:
