@@ -7,11 +7,23 @@ The bite test for the thing that runs the bite tests.
 
 WHY THIS EXISTS
 
+A gate fails in two ways.
+
+Its status is swallowed - a pipe, a `|| true`, a subshell whose exit is dropped. That is
+what FIX-31 audited, and it was the whole of the problem then: every gate was piped
+through `tail`, a pipeline reports the last command's status, and `tail` never fails. The
+search suite exited 1 on eight broken queries and the build printed "Done. Open
+index.html." The deploy found it, which is the wrong place to find it.
+
+Or it never had a status to swallow. build-paths.py printed "NOT PUBLISHED", returned
+zero, and let a rejected path disappear from the site with the build green - and
+build-data-js.py printed "missing - skipped" for a file the site cannot open without.
+FIX-34 audited that half, script by script, and the table is in docs/attack/FIX-34.md.
+
+Audit both. A script that cannot say no is not a gate, however loudly it prints.
+
 Every validator in scripts/ has a test that proves it catches its own faults. Not one of
-them proved that `build.sh` could see the catch. For an unknown number of rounds it could
-not: every gate was piped through `tail`, a pipeline reports the last command's status, and
-`tail` never fails. The search suite exited 1 on eight broken queries and the build printed
-"Done. Open index.html." The deploy found it, which is the wrong place to find it.
+them proved that `build.sh` could see the catch.
 
 So this plants a fault, runs the whole build, and asserts it goes red. It is deliberately
 crude - a copy of the working tree per fault, a real `./build.sh` in it, and the exit
@@ -232,6 +244,28 @@ def plant_a_description_past_the_cap(root):
     return "removed the generator's cut and gave a row a long For: line"
 
 
+def plant_a_mirror_source_that_vanished(root):
+    """The site's data mirror loses one of its five sources.
+
+    Every one of them is loaded by a <script> tag at startup: items.js is the catalogue,
+    picks.js is the picks block, search-keywords.js is the search. build-data-js.py used
+    to print "missing - skipped" and carry on, which deployed a site whose Browse page
+    was empty and whose build was green.
+
+    Planted on publisher-marks.json, and the choice took two tries. Four of the five are
+    read by a gate that runs earlier - items.json by the validator, paths.json by the
+    path builder, picks.json and search-keywords.json by the share-page generator - so
+    removing any of those goes red for a reason that has nothing to do with the mirror,
+    and this harness refuses a fault that trips the wrong gate. publisher-marks.json is
+    read here and nowhere else in the build.
+
+    It is also the mildest of the five, which is the point: the page degrades rather than
+    breaking, and a rule that only fired on the fatal ones would let the build ship a
+    page whose script tag asks for a file nobody wrote."""
+    os.remove(os.path.join(root, "data", "publisher-marks.json"))
+    return "removed the one mirror source no earlier gate reads"
+
+
 def plant_synonym_without_reason(root):
     """Every synonym carries the reason it exists, like every skip_if."""
     p = os.path.join(root, "data", "synonyms.json")
@@ -268,6 +302,8 @@ FAULTS = [
     ("a surface building its own freshness line",
      plant_a_surface_that_builds_its_own_freshness_line,
      "never asks for the freshness line"),
+    ("a mirror source that vanished", plant_a_mirror_source_that_vanished,
+     "every one of these is a file the site loads"),
     ("a served description past the cap", plant_a_description_past_the_cap,
      "and the cap is"),
     ("a path step the catalogue knows is superseded", plant_superseded_path_step,
