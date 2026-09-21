@@ -61,7 +61,13 @@ def cell_pick_item(items, picks, which=0):
     return next(x for x in items if x["url"] == url)
 
 
-# (name, break_it(items, picks), phrase-or-None). None = must still pass (exit 0).
+# Two sentinels, because "must still ship" and "must still ship AND warn" are different
+# claims and one of them used to stand for both. A case whose third element is None is a
+# change the validator must accept in silence; STALE is a change it must accept while
+# saying so.
+STALE = "\x00 must warn about drift"
+
+# (name, break_it(items, picks), phrase | None | STALE).
 CASES = [
     ("a picked resource goes dead",
      lambda i, p: cell_pick_item(i, p).update({"status": "dead"}),
@@ -163,6 +169,22 @@ CASES = [
     # a non-picked candidate. Warned, dated, shipped.
     ("pool drift is a warning, not an error",
      lambda i, p: _drift(i, p),
+     STALE),
+
+    # Constraint 5, the middle version, and both halves of it. Naming another role AS
+    # WELL passes: `who_for` belongs to the item and a resource that serves two jobs
+    # cannot be reworded to suit one cell without breaking the other.
+    ("a pick naming this reader and another",
+     lambda i, p: cell_pick_item(i, p, 0).update(
+         {"who_for": "Business owners and product managers who ship without a team."}),
+     None),
+
+    # And naming nobody in particular passes, even where a role word is in the sentence.
+    # "Anyone who has to hand a designer a brief" is addressed to anyone; reading it as a
+    # designer's card is how a rule starts rejecting the cards it was written to protect.
+    ("a pick for anyone that mentions another role in passing",
+     lambda i, p: cell_pick_item(i, p, 0).update(
+         {"who_for": "Anyone who has to hand a designer a brief and wants it to land."}),
      None),
 ]
 
@@ -201,15 +223,15 @@ def main():
             break_it(items, picks)
             code, out = run(items, picks, tmp)
 
-            if phrase is None:
-                if code == 0 and "stale" in out:
-                    print("ok    %s" % name)
-                elif code == 0:
+            if phrase is None or phrase is STALE:
+                if code != 0:
+                    print("FAIL  %s — rejected but should have shipped" % name)
+                    failures.append(name + ":\n" + out)
+                elif phrase is STALE and "stale" not in out:
                     print("FAIL  %s — passed but never said stale" % name)
                     failures.append(name + ": no stale warning\n" + out)
                 else:
-                    print("FAIL  %s — rejected but should have shipped" % name)
-                    failures.append(name + ":\n" + out)
+                    print("ok    %s" % name)
                 continue
 
             if code == 0:

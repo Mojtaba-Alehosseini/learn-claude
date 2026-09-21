@@ -96,19 +96,20 @@ these pass, and this file is what "pass" means:
                   hides inside one topic — that is what the subject self-check is for;
                   code checks what code can see and makes the rest auditable.
 
-  5. audience     A pick's `who_for` may not name a roster role other than the cell's
-                  own while leaving the cell's own unnamed. Attack 3's student, having
-                  answered both front-door questions, met a first pick reading "For: Any
-                  analyst worried about confidently-wrong output" - a card addressed to
-                  another job, on the shelf built for theirs. The row was tagged for the
-                  student too; the sentence was the thing that was wrong.
-                  Degrades into a note where the line names this role AND another:
-                  `who_for` belongs to the item and not to the cell, so a resource that
-                  genuinely serves two jobs cannot be reworded to satisfy one cell
-                  without breaking the other, and the only way to satisfy a strict
-                  version is to stop picking cross-role resources at all. Those are
-                  printed on every run instead, so the strict version can be judged from
-                  a list.
+  5. audience     A pick's `who_for` must name this cell's role, or name nobody in
+                  particular. Attack 3's student, having answered both front-door
+                  questions, met a first pick reading "For: Any analyst worried about
+                  confidently-wrong output" - a card addressed to another job, on the
+                  shelf built for theirs. The row was tagged for the student too; the
+                  sentence was the thing that was wrong.
+                  Naming other roles as well is fine, and that is the whole of the
+                  degradation: "Researchers and graduate students" passes in both cells,
+                  because `who_for` belongs to the item and not to the cell. A resource
+                  that genuinely serves two jobs cannot be reworded to suit one cell
+                  without breaking the other, so a rule that rejected those would end in
+                  a catalogue that picks nothing cross-role. Naming only somebody else
+                  fails. Ruled in FIX-34, after the strict version was measured against
+                  the catalogue and found to reject twenty picks doing nothing wrong.
 
 The publisher-thin cells are printed on every run, pass or fail. The relaxation must
 never be silent: a cell running under the cap is a fact about the catalogue (the pool
@@ -151,15 +152,17 @@ def _role_words():
     audit-role-tags.py answers "does this card name this role's reader?" for the whole
     catalogue, and every lookbehind in those patterns was put there by a row it decided
     wrongly. Constraint 5 asks the same question of one card, so it asks with the same
-    words."""
+    words - and the same test for a card that names nobody in particular, which
+    FIX-16 settled and constraint 5 has to honour, or it rejects "Anyone who ..." for
+    mentioning a designer in passing."""
     path = os.path.join(ROOT, "scripts", "audit-role-tags.py")
     spec = importlib.util.spec_from_file_location("audit_role_tags", path)
     mod = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(mod)
-    return mod.ROLE_WORDS
+    return mod.ROLE_WORDS, mod.NEUTRAL
 
 
-ROLE_WORDS = _role_words()
+ROLE_WORDS, NEUTRAL = _role_words()
 
 
 # A two-pick cell must say which of these put it there. Never a bare count of two:
@@ -425,21 +428,19 @@ def check_cell(key, cell, pool, items_by_url):
                 "could span %d (the pool holds %d formats in all)"
                 % (len(set(in_picks)), len(pick_items), max_per_pub, want, len(in_pool)))
 
-        # Constraint 5. A pick may not tell this reader it is for somebody else.
-        # non-technical is left out: its vocabulary is anyone/everyone/somebody, which
-        # names an absence of specialism rather than a competing job.
+        # Constraint 5. A pick names this reader, or nobody in particular.
+        # Two exemptions, and each was found by a card the rule would have decided
+        # wrongly. A `who_for` opening "Anyone who ..." is addressed to everybody, so a
+        # designer named in passing inside one is not an audience - FIX-16's test, reused
+        # here rather than restated. And non-technical is never "somebody else": its
+        # vocabulary is anyone/everyone/somebody, an absence of specialism, not a job.
         for n, it in enumerate(pick_items, 1):
             who = str(it.get("who_for") or "")
-            if not who:
+            if not who or NEUTRAL.match(who):
                 continue
             named = {r for r, rx in ROLE_WORDS.items() if rx.search(who)}
             others = sorted(named - {cell["role"], "non-technical"})
-            if not others:
-                continue
-            if cell["role"] in named:
-                notes.append("  %-28s pick %d serves %s as well — %s"
-                             % (key, n, "/".join(others), it["title"][:40]))
-            else:
+            if others and cell["role"] not in named:
                 err("pick %d says it is for %s and never for this reader: %r"
                     % (n, "/".join(others), who[:80]))
 
