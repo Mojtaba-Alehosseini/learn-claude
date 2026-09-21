@@ -78,6 +78,45 @@ def measure(today=None):
             if pool and len(pubs) < 3:
                 pubthin.append((key, len(pubs), len(pool)))
 
+    # D3. Where each role's ladder runs out. No new mechanism: the pools and the picks
+    # are already here, and the only new question is how many of a cell's picks name this
+    # reader in their own For: line. A cell with picks that all address somebody else is
+    # a rung a reader cannot stand on, which is the thing part 11 kept saying in prose
+    # and never measured.
+    art = _load("audit_role_tags", os.path.join(ROOT, "scripts", "audit-role-tags.py"))
+    by_url = {x["url"]: x for x in items}
+    ladder, runs_out = {}, {}
+    for role in pc.ROLES:
+        ladder[role] = {}
+        for level in pc.LEVELS:
+            key = "%s|%s" % (role, level)
+            cell_picks = (picks.get(key) or {}).get("picks") or []
+            specific = 0
+            for p in cell_picks:
+                who = str((by_url.get(p["url"]) or {}).get("who_for") or "")
+                # The same test constraint 5 applies: a card addresses this reader when
+                # it names their role, or when it names nobody in particular. The first
+                # version of this counted only the named ones, and four roles came out
+                # "running out" at never-used - where a beginner card saying "Anyone who
+                # has never opened Claude" is exactly the right card. A measurement that
+                # contradicts the rule the site enforces is measuring the wrong thing.
+                if art.NEUTRAL.match(who) or art.ROLE_WORDS[role].search(who):
+                    specific += 1
+            ladder[role][level] = {"eligible": cells[key]["eligible"],
+                                   "picks": len(cell_picks), "role_specific": specific}
+        # The first rung with no picks, or none that name this reader. None means the
+        # ladder reaches the top.
+        runs_out[role] = next((lv for lv in pc.LEVELS
+                               if ladder[role][lv]["picks"] == 0
+                               or ladder[role][lv]["role_specific"] == 0), None)
+
+    # "Skip if you ..." - does the line finish the sentence the card starts? A style
+    # question the developer's closing answer raised in Attack 3. Measured here so the
+    # round that decides it argues from a number rather than an impression.
+    completes = re.compile(r"^\s*you(r|'re|'ve|'ll)?\b", re.I)
+    skip_total = sum(1 for x in items if x.get("skip_if"))
+    skip_completes = sum(1 for x in items if completes.match(x.get("skip_if") or ""))
+
     # Live resources the freshness rule keeps out of every pool. Silent exclusion is how
     # a good resource disappeared for ten months without one step going red.
     excluded = []
@@ -146,6 +185,10 @@ def measure(today=None):
         "date_source": dict(Counter(i.get("date_source") or "(none)" for i in items)),
         "cells": cells,
         "cells_with_picks": len(picks),
+        "ladder": ladder,
+        "runs_out": runs_out,
+        "skip_total": skip_total,
+        "skip_completes": skip_completes,
         "picks": sum(len(c["picks"]) for c in picks.values()),
         "runners_up": sum(len(c["runners_up"]) for c in picks.values()),
         "thin_cells": thin,
@@ -207,6 +250,9 @@ def render(m, pc):
       % (m["unverified"], m["resources"], pct(m["unverified"], m["resources"])))
     w("| Carrying an `updated` date | %d of %d — %d%% |"
       % (m["with_updated"], m["resources"], pct(m["with_updated"], m["resources"])))
+    w("| Skip lines that finish \"Skip if you…\" | %d of %d — %d%% |"
+      % (m["skip_completes"], m["skip_total"],
+         pct(m["skip_completes"], m["skip_total"])))
     w("")
     w("**Where every date came from.** `date_source` is required on any row carrying a")
     w("real date; a row with no date needs none, because \"we do not know\" is the whole")
@@ -271,6 +317,27 @@ def render(m, pc):
             row.append("%d / %dp / %dx" % (c["eligible"], c["publishers"],
                                            c["non_anthropic"]))
         w("| `%s` | %s |" % (role, " | ".join(row)))
+    w("")
+
+    w("## Per role — where the ladder runs out")
+    w("")
+    w("Picks per cell, and how many of them address this reader in their own `For:` line")
+    w("— naming the role, or naming nobody in particular, which is the same test the")
+    w("picks validator applies. A role runs out at the first rung with no picks, or with")
+    w("none that address the reader: a pick written for somebody else is a rung you")
+    w("cannot stand on.")
+    w("")
+    w("| role | %s | runs out at |" % " | ".join(pc.LEVELS))
+    w("|---|%s---|" % ("---|" * len(pc.LEVELS)))
+    for role in pc.ROLES:
+        row = ["%d / %d" % (m["ladder"][role][lv]["picks"],
+                            m["ladder"][role][lv]["role_specific"])
+               for lv in pc.LEVELS]
+        w("| `%s` | %s | %s |"
+          % (role, " | ".join(row),
+             "`%s`" % m["runs_out"][role] if m["runs_out"][role] else "**it does not**"))
+    w("")
+    w("Each cell reads *picks / of those, addressed to this reader*.")
     w("")
 
     w("## Live resources the freshness rule excludes from every pool")

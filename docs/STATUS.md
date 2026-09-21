@@ -18,6 +18,7 @@ THE-PROJECT.md and README point at this file rather than repeating it.
 | Anthropic's own | 343 of 588 — **58%** |
 | No publish date (`UNVERIFIED`) | 442 of 588 — 75% |
 | Carrying an `updated` date | 96 of 588 — 16% |
+| Skip lines that finish "Skip if you…" | 268 of 588 — 46% |
 
 **Where every date came from.** `date_source` is required on any row carrying a
 real date; a row with no date needs none, because "we do not know" is the whole
@@ -79,6 +80,29 @@ relaxes): `non-technical|builder` (1 pub, 2 items), `teacher|builder` (2 pub, 2 
 | `designer` | 8 / 6p / 5x | 11 / 8p / 6x | 22 / 13p / 11x | 7 / 6p / 5x |
 | `business-founder` | 37 / 13p / 9x | 61 / 22p / 20x | 45 / 7p / 5x | 9 / 3p / 2x |
 | `writer-marketer` | 20 / 9p / 6x | 35 / 24p / 22x | 23 / 10p / 6x | 5 / 3p / 3x |
+
+## Per role — where the ladder runs out
+
+Picks per cell, and how many of them address this reader in their own `For:` line
+— naming the role, or naming nobody in particular, which is the same test the
+picks validator applies. A role runs out at the first rung with no picks, or with
+none that address the reader: a pick written for somebody else is a rung you
+cannot stand on.
+
+| role | never-used | basic | confident | builder | runs out at |
+|---|---|---|---|---|---|
+| `non-technical` | 3 / 2 | 3 / 3 | 3 / 3 | 0 / 0 | `builder` |
+| `student` | 3 / 3 | 3 / 3 | 3 / 3 | 0 / 0 | `builder` |
+| `researcher` | 3 / 3 | 3 / 3 | 3 / 2 | 3 / 3 | **it does not** |
+| `teacher` | 3 / 3 | 3 / 3 | 2 / 2 | 0 / 0 | `builder` |
+| `developer` | 3 / 3 | 3 / 3 | 3 / 3 | 3 / 3 | **it does not** |
+| `data-analyst` | 3 / 3 | 3 / 2 | 3 / 3 | 3 / 3 | **it does not** |
+| `pm` | 3 / 3 | 3 / 3 | 3 / 3 | 3 / 3 | **it does not** |
+| `designer` | 3 / 3 | 3 / 3 | 3 / 3 | 3 / 3 | **it does not** |
+| `business-founder` | 3 / 3 | 3 / 3 | 3 / 2 | 3 / 3 | **it does not** |
+| `writer-marketer` | 3 / 3 | 3 / 3 | 3 / 3 | 3 / 3 | **it does not** |
+
+Each cell reads *picks / of those, addressed to this reader*.
 
 ## Live resources the freshness rule excludes from every pool
 

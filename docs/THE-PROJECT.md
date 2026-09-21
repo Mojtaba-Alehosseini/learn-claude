@@ -436,7 +436,36 @@ without being asked the question.
 Every number in this section was measured on 6 September 2026. The live ones are in
 [STATUS.md](STATUS.md); none of these is a figure to quote tomorrow.
 
-**Roles are uneven.** The business owner has several times what the designer has; the per-role figures are in [STATUS.md](STATUS.md).
+**Roles are uneven, and each one runs out somewhere.** The figures are in
+[STATUS.md](STATUS.md) under *Per role — where the ladder runs out*, regenerated on every
+build. A role runs out at the first rung with no picks, or with none addressed to that
+reader; the per-cell pool sizes sit in the table above it. One sentence each, and they are
+about the shape rather than the size:
+
+- **Not a coder** climbs to `confident` and stops: the `builder` cell has a pair of rows,
+  both Anthropic's own, and no picks.
+- **Student** stops at `builder` too, and harder — that cell is empty.
+- **Teacher** stops at `builder`, with the same pair-of-rows problem as the non-coder, and
+  its `confident` cell is already short of a full picks block.
+- **Researcher** reaches the top, on a `builder` pool that is small enough to be one
+  publisher's bad week away from not doing so.
+- **Data analyst** reaches the top, and its `builder` shelf is the second-deepest here.
+- **Product manager** reaches the top on the thinnest `builder` pool of those that get
+  there: a full picks block drawn from barely more candidates than it picks.
+- **Designer** reaches the top, and the pool behind it is mostly independent voices rather
+  than Anthropic's.
+- **Business owner** reaches the top with the widest spread of levels below it, which is
+  why it looks larger than every other role.
+- **Writer and marketer** reaches the top on a pool that only became a pool this month.
+- **Developer is the exception, and it should be named as one.** It reaches `builder` like
+  six others, but its pool is an order of magnitude deeper than any of theirs. Every claim
+  on this site about the advanced end being usable is, underneath, a claim about one
+  role's shelf. The other six reach the top on pools small enough that a single
+  retirement moves them.
+
+That last line is the honest version of "the advanced end is thin for everyone who does
+not write code". The ladder reaches the top for most roles; it reaches it narrowly, and
+for one role it reaches it with room to spare.
 
 **No human has ever used this site.** Ten AI agents have attacked it and found a great deal.
 That is not the same thing. Three real people — a teacher, a student, a writer — would

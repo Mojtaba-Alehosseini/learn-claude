@@ -85,6 +85,23 @@ def main():
     neg = [k for k in INT_KEYS if isinstance(m.get(k), int) and m[k] < 0]
     check(not neg, "no count is negative")
 
+    # D3 and the skip measurement. Shape, not value: a ladder that stops covering a role
+    # or a level is the drift worth catching, and a count of skip lines that exceeds the
+    # number of skip lines is arithmetic gone wrong.
+    lad = m.get("ladder") or {}
+    check(set(lad) == set(pc.ROLES), "`ladder` covers every role")
+    check(all(set(v) == set(pc.LEVELS) for v in lad.values()),
+          "`ladder` covers every level of every role")
+    check(all(c["role_specific"] <= c["picks"]
+              for v in lad.values() for c in v.values()),
+          "picks addressed to the reader never outnumber the picks")
+    check(all(v is None or v in pc.LEVELS for v in (m.get("runs_out") or {}).values()),
+          "`runs_out` names a level or nothing")
+    check(set(m.get("runs_out") or {}) == set(pc.ROLES),
+          "`runs_out` answers for every role")
+    check(m.get("skip_completes", -1) <= m.get("skip_total", -1),
+          "skip lines that finish the sentence never outnumber the skip lines")
+
     gen = m.get("generated")
     ok_gen = isinstance(gen, str)
     if ok_gen:
