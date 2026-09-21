@@ -39,12 +39,6 @@ largest collision groups, and a person reads them once.
 
 import re
 
-if hasattr(sys.stdout, "reconfigure"):
-    # Windows consoles default to cp1252, and this catalogue is full of
-    # em-dashes and curly quotes. Without this a script dies printing its own
-    # finding.
-    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
-
 MIN_STEM = 3
 
 # Applied longest first, to a fixed point. A rule fires only if what is left is at least
