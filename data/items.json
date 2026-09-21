@@ -382,6 +382,9 @@
     "prerequisites": [
       "claude desktop app installed",
       "claude pro max or team subscription"
+    ],
+    "needs": [
+      "paid-claude-plan"
     ]
   },
   {
@@ -1591,6 +1594,9 @@
     "prerequisites": [
       "paid claude plan",
       "working knowledge of microsoft excel"
+    ],
+    "needs": [
+      "paid-claude-plan"
     ]
   },
   {
@@ -3066,7 +3072,10 @@
       "claude account"
     ],
     "updated": "2026-08-06",
-    "date_source": "intercom"
+    "date_source": "intercom",
+    "needs": [
+      "paid-claude-plan"
+    ]
   },
   {
     "title": "Set up your design system in Claude Design",
@@ -3125,7 +3134,10 @@
       "existing design system brand assets or figma files to import"
     ],
     "updated": "2026-08-06",
-    "date_source": "intercom"
+    "date_source": "intercom",
+    "needs": [
+      "paid-claude-plan"
+    ]
   },
   {
     "title": "Claude Code and Figma: Set up the MCP server",
@@ -20539,7 +20551,12 @@
       "what data does it connect to",
       "what happens after we sign up"
     ],
-    "id": "r-37a35b4864"
+    "id": "r-37a35b4864",
+    "needs": [
+      "paid-claude-plan",
+      "data-subscription:daloopa",
+      "data-subscription:s-and-p-global"
+    ]
   },
   {
     "title": "Getting Started with Claude for Life Sciences",
@@ -23805,7 +23822,11 @@
       "this number looks wrong and i need the source",
       "ten years of history for a company"
     ],
-    "id": "r-b32e19f042"
+    "id": "r-b32e19f042",
+    "needs": [
+      "data-subscription:daloopa",
+      "connector:daloopa"
+    ]
   },
   {
     "title": "Using Databricks for Data Analysis",
@@ -23850,7 +23871,11 @@
       "keep our existing permissions in force",
       "query a catalogue without writing sql"
     ],
-    "id": "r-f14ef0bf7f"
+    "id": "r-f14ef0bf7f",
+    "needs": [
+      "data-subscription:databricks",
+      "connector:databricks"
+    ]
   },
   {
     "title": "Using LSEG for financial market data analysis",
@@ -23895,7 +23920,11 @@
       "build a curve and price a bond",
       "calculation tools not research documents"
     ],
-    "id": "r-8fd56d4623"
+    "id": "r-8fd56d4623",
+    "needs": [
+      "data-subscription:lseg",
+      "connector:lseg"
+    ]
   },
   {
     "title": "Using Moody's for financial analysis",
@@ -24073,7 +24102,11 @@
       "who invested and at what stage",
       "benchmark against comparable companies"
     ],
-    "id": "r-9213856444"
+    "id": "r-9213856444",
+    "needs": [
+      "data-subscription:pitchbook",
+      "connector:pitchbook"
+    ]
   },
   {
     "title": "Using Research",
@@ -24430,7 +24463,11 @@
       "look up a donor's giving history",
       "personalise appeals without exporting the database"
     ],
-    "id": "r-37460d60db"
+    "id": "r-37460d60db",
+    "needs": [
+      "data-subscription:blackbaud",
+      "connector:blackbaud"
+    ]
   },
   {
     "title": "Using the Blender Connector in Claude",
@@ -25331,7 +25368,12 @@
       "a model ready for the committee",
       "pull the inputs from connected data"
     ],
-    "id": "r-ee8a08ce90"
+    "id": "r-ee8a08ce90",
+    "needs": [
+      "paid-claude-plan",
+      "data-subscription:daloopa",
+      "data-subscription:s-and-p-global"
+    ]
   },
   {
     "title": "Build interactive diagram tools",
@@ -26648,7 +26690,12 @@
       "write it in our house format",
       "an ic-ready draft out of connected data"
     ],
-    "id": "r-419e3b3529"
+    "id": "r-419e3b3529",
+    "needs": [
+      "paid-claude-plan",
+      "data-subscription:daloopa",
+      "data-subscription:s-and-p-global"
+    ]
   },
   {
     "title": "Elevate Claude's design using skills",
