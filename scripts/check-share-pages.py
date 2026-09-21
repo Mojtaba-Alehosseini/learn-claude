@@ -17,12 +17,19 @@ So this reads the built HTML rather than trusting the builder, and it is a gate:
 goes red.
 """
 
+import importlib.util
 import io
 import json
 import html as htmllib
 import os
 import re
 import sys
+
+if hasattr(sys.stdout, "reconfigure"):
+    # Windows consoles default to cp1252, and this catalogue is full of
+    # em-dashes and curly quotes. Without this a script dies printing its own
+    # finding.
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = "https://mojtaba-alehosseini.github.io/learn-claude/"
@@ -33,6 +40,21 @@ PLACEHOLDERS = ("Resource — Learn Claude", "Browse — Learn Claude",
 def load(name):
     with io.open(os.path.join(ROOT, "data", name), encoding="utf-8") as f:
         return json.load(f)
+
+
+def _desc_max():
+    """The generator's own cap, read rather than restated.
+
+    A second copy of the number is a second thing to forget: the round that moves the cap
+    would move one of them and this file would go on agreeing with the old one."""
+    p = os.path.join(ROOT, "scripts", "build-share-pages.py")
+    spec = importlib.util.spec_from_file_location("build_share_pages", p)
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod.DESC_MAX
+
+
+DESC_MAX = _desc_max()
 
 
 def meta(html, prop):
@@ -71,8 +93,12 @@ def main():
         if title and og and title[:40] not in htmllib.unescape(og):
             faults.append("%s says %r, which is not its own title" % (rel, og[:60]))
 
-        if not meta(html, "og:description"):
+        desc = htmllib.unescape(meta(html, "og:description") or "")
+        if not desc:
             faults.append("%s has no og:description" % rel)
+        elif len(desc) > DESC_MAX:
+            faults.append("%s has a description of %d characters, and the cap is %d"
+                          % (rel, len(desc), DESC_MAX))
         if not meta(html, "og:image"):
             faults.append("%s has no og:image" % rel)
 

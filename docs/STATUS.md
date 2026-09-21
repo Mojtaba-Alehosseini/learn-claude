@@ -2,7 +2,7 @@
      this file, and a number typed here would be silently replaced. Change the
      data, then run ./build.sh. -->
 
-# Status — measured 2026-09-07
+# Status — measured 2026-09-21
 
 Every figure below is computed from `data/` at build time. Nothing here is typed.
 THE-PROJECT.md and README point at this file rather than repeating it.
@@ -73,7 +73,7 @@ relaxes): `non-technical|builder` (1 pub, 2 items), `teacher|builder` (2 pub, 2 
 | `student` | 40 / 20p / 17x | 21 / 14p / 12x | 9 / 5p / 4x | 0 / 0p / 0x |
 | `researcher` | 17 / 5p / 2x | 19 / 15p / 12x | 31 / 15p / 13x | 6 / 3p / 3x |
 | `teacher` | 26 / 12p / 8x | 24 / 19p / 16x | 8 / 3p / 2x | 2 / 2p / 1x |
-| `developer` | 6 / 4p / 1x | 19 / 11p / 8x | 38 / 15p / 13x | 55 / 20p / 23x |
+| `developer` | 6 / 4p / 1x | 19 / 11p / 8x | 38 / 15p / 13x | 54 / 20p / 23x |
 | `data-analyst` | 7 / 4p / 1x | 19 / 14p / 12x | 33 / 10p / 7x | 12 / 4p / 9x |
 | `pm` | 11 / 7p / 4x | 40 / 15p / 15x | 52 / 21p / 24x | 4 / 4p / 3x |
 | `designer` | 8 / 6p / 5x | 11 / 8p / 6x | 22 / 13p / 11x | 7 / 6p / 5x |
@@ -86,25 +86,26 @@ A real `published` date more than 365 days old. These still appear in Browse wit
 the outdated flag; they are kept out of "Start with these three" because a
 comparative recommendation should not point at something a year stale.
 
-**15 excluded.**
+**16 excluded.**
 
 | item | publisher | published | days | level |
 |---|---|---|---|---|
-| Guidance on AI detection, and why we're disabling Turnitin | Vanderbilt University | 2023-08-16 | 1118 | basic |
-| AI prompt engineering: A deep dive | Anthropic | 2024-09-05 | 732 | confident |
-| Tips for building AI agents | Anthropic | 2025-02-13 | 571 | builder |
-| Anthropic Education Report: How University Students Use Cl | Anthropic | 2025-04-08 | 517 | basic |
-| Mastering Claude Code in 30 minutes | Anthropic | 2025-05-22 | 473 | confident |
-| Lesson 1: Introduction to AI Fluency \| AI Fluency: Framewo | Anthropic | 2025-06-12 | 452 | never-used |
-| Lesson 2B: The 4D Framework \| AI Fluency: Framework & Foun | Anthropic | 2025-06-12 | 452 | never-used |
-| Lesson 7: Effective prompting techniques (Deep Dive) \| AI  | Anthropic | 2025-06-12 | 452 | basic |
-| The Model Context Protocol (MCP) | Anthropic | 2025-06-16 | 448 | builder |
-| Advancing Claude for Education | Anthropic | 2025-07-09 | 425 | basic |
-| Claude for Small Business (Back-Office AI, honest review) | Eigent AI | 2025-07-29 | 405 | basic |
-| Prompting 101 \| Code w/ Claude | Anthropic | 2025-07-31 | 403 | basic |
-| Claude Code best practices \| Code w/ Claude | Anthropic | 2025-07-31 | 403 | confident |
-| Using AI for Writing Feedback | Northeastern University | 2025-08-01 | 402 | basic |
-| Anthropic Education Report: how educators use Claude | Anthropic | 2025-08-27 | 376 | basic |
+| Guidance on AI detection, and why we're disabling Turnitin | Vanderbilt University | 2023-08-16 | 1132 | basic |
+| AI prompt engineering: A deep dive | Anthropic | 2024-09-05 | 746 | confident |
+| Tips for building AI agents | Anthropic | 2025-02-13 | 585 | builder |
+| Anthropic Education Report: How University Students Use Cl | Anthropic | 2025-04-08 | 531 | basic |
+| Mastering Claude Code in 30 minutes | Anthropic | 2025-05-22 | 487 | confident |
+| Lesson 1: Introduction to AI Fluency \| AI Fluency: Framewo | Anthropic | 2025-06-12 | 466 | never-used |
+| Lesson 2B: The 4D Framework \| AI Fluency: Framework & Foun | Anthropic | 2025-06-12 | 466 | never-used |
+| Lesson 7: Effective prompting techniques (Deep Dive) \| AI  | Anthropic | 2025-06-12 | 466 | basic |
+| The Model Context Protocol (MCP) | Anthropic | 2025-06-16 | 462 | builder |
+| Advancing Claude for Education | Anthropic | 2025-07-09 | 439 | basic |
+| Claude for Small Business (Back-Office AI, honest review) | Eigent AI | 2025-07-29 | 419 | basic |
+| Prompting 101 \| Code w/ Claude | Anthropic | 2025-07-31 | 417 | basic |
+| Claude Code best practices \| Code w/ Claude | Anthropic | 2025-07-31 | 417 | confident |
+| Using AI for Writing Feedback | Northeastern University | 2025-08-01 | 416 | basic |
+| Anthropic Education Report: how educators use Claude | Anthropic | 2025-08-27 | 390 | basic |
+| Writing effective tools for agents - with agents | Anthropic | 2025-09-11 | 375 | builder |
 
 ## Needs a person
 
@@ -157,7 +158,7 @@ stale. Opening one either restores its date or confirms it should go.
 
 | item | date we had | age it implied |
 |---|---|---|
-| The Ethics of Using AI | 2023-02-01 | 1314 days |
+| The Ethics of Using AI | 2023-02-01 | 1328 days |
 
 ### Cells with no independent material (1)
 

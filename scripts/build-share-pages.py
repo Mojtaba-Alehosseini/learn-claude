@@ -38,32 +38,33 @@ import re
 import shutil
 import sys
 
+if hasattr(sys.stdout, "reconfigure"):
+    # Windows consoles default to cp1252, and this catalogue is full of
+    # em-dashes and curly quotes. Without this a script dies printing its own
+    # finding.
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = "https://mojtaba-alehosseini.github.io/learn-claude/"
 IMAGE = SITE + "assets/og-card.png"
 OUT_DIRS = ("r", "c", "p")
 
-# A description short enough to waste the preview. The For: line alone is often one
-# clause; the site's product is that line AND the skip line, so below this the first
-# sentence of Skip if: is appended. See section 2 of the spec.
-SHORT = 120
-
-# What a preview actually shows. The title figure holds: X and LinkedIn truncate past
-# about 60 characters, and every generated title is inside it.
+# What a preview shows.
 #
-# The description figure does not. This comment used to say "most previews cut a
-# description around 200", and that number was written from memory while claiming to be
-# measured. Pasting three live pages into opengraph.xyz on 2026-09-07 got the real
-# answer: previews often show about 125 characters and truncate the rest on mobile, and
-# the resource page was flagged for it at 128.
+# Titles: X and LinkedIn truncate past about 60 characters, and every generated title is
+# inside it.
 #
-# 200 is kept for now, and the reason is a trade rather than an oversight. The For: line
-# has a median length of 104 characters, so a 125 cap keeps most of them whole - but the
-# Skip if: sentence the spec appends would then almost never fit, and losing the second
-# half of every description is the larger loss. docs/attack/FIX-33-unfurl.md holds the
-# measurement; the number moves when that trade is ruled, not before.
+# Descriptions: 160, ruled in FIX-34. The number before it was 200, typed from memory
+# under a comment claiming it was measured. Measuring it - three live pages into
+# opengraph.xyz, 2026-09-07 - gave about 125, and one debugger's heuristic is not a spec
+# either. 160 is the ruled middle, and the real check is a paste into Teams or Slack.
+#
+# The rule it serves: the For: line whole when it fits, cut on a word boundary with an
+# ellipsis when it does not, and the first sentence of Skip if: appended only when both
+# fit. Measured on the same day, the median For: line is 104 characters, so most
+# descriptions carry both halves and none is cut in the middle of a sentence.
 TITLE_MAX = 60
-DESC_MAX = 200
+DESC_MAX = 160
 
 
 def load(name):
@@ -153,10 +154,18 @@ def write_page(rel_dir, html, depth, title, description, url, route, og_type="we
 
 
 def resource_description(x):
-    who = str(x.get("who_for") or "").strip()
+    """The For: line, and the Skip if: sentence only where both fit the cap.
+
+    The old test was on the For: line alone - under 120 characters and the skip sentence
+    was appended whatever that made the total, which is how 549 of 632 pages ended up
+    past what a preview shows. The test is now on the pair, because the pair is the thing
+    a reader sees."""
+    who = " ".join(str(x.get("who_for") or "").split())
     skip = first_sentence(x.get("skip_if"))
-    if who and len(who) < SHORT and skip:
-        return "%s Skip if: %s" % (who, skip)
+    if who and skip:
+        both = "%s Skip if: %s" % (who, skip)
+        if len(both) <= DESC_MAX:
+            return both
     return who or skip or "A checked resource for learning Claude."
 
 

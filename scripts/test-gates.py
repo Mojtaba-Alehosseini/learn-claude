@@ -38,6 +38,12 @@ import subprocess
 import sys
 import tempfile
 
+if hasattr(sys.stdout, "reconfigure"):
+    # Windows consoles default to cp1252, and this catalogue is full of
+    # em-dashes and curly quotes. Without this a script dies printing its own
+    # finding.
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SKIP_DIRS = {".git", "tmp", "node_modules", "_site", "reference", "scratch-icons",
              "__pycache__"}
@@ -204,6 +210,28 @@ def plant_a_surface_that_builds_its_own_freshness_line(root):
     return "made the path page assemble its own freshness line again"
 
 
+def plant_a_description_past_the_cap(root):
+    """The generator stops capping, and the checker reads the page rather than the code.
+
+    Two halves, because either alone heals. A long For: line alone is cut by the
+    generator; removing the cut alone leaves every real description inside the cap
+    anyway. Together they put a page on disk with more characters than a preview shows,
+    which is the thing the reader would actually meet."""
+    p, items = _items(root)
+    items[0]["who_for"] = (
+        "Somebody who has to hand this to a colleague by the end of the day, wants to "
+        "know in one line whether it is worth their afternoon, and would rather read a "
+        "whole sentence than half of one.")
+    _write(p, items)
+    g = os.path.join(root, "scripts", "build-share-pages.py")
+    text = io.open(g, encoding="utf-8").read()
+    cut = "fit(resource_description(x), DESC_MAX)"
+    assert cut in text, "the generator no longer cuts the description"
+    io.open(g, "w", encoding="utf-8").write(
+        text.replace(cut, "resource_description(x)", 1))
+    return "removed the generator's cut and gave a row a long For: line"
+
+
 def plant_synonym_without_reason(root):
     """Every synonym carries the reason it exists, like every skip_if."""
     p = os.path.join(root, "data", "synonyms.json")
@@ -240,6 +268,8 @@ FAULTS = [
     ("a surface building its own freshness line",
      plant_a_surface_that_builds_its_own_freshness_line,
      "never asks for the freshness line"),
+    ("a served description past the cap", plant_a_description_past_the_cap,
+     "and the cap is"),
     ("a path step the catalogue knows is superseded", plant_superseded_path_step,
      "superseded step"),
     ("share pages keeping their placeholder head",

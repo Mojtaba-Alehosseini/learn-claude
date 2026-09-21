@@ -42,10 +42,17 @@ extension to leak an implementation detail into something people paste.
 **`/r/<id>/`**
 
 - `<title>` and `og:title`: the resource's own title, then ` — Learn Claude`.
-- `og:description` and `<meta name="description">`: the `For:` line. **If that is under 120
-  characters, the first sentence of `Skip if:` is appended**, because the two together are
-  the site's actual product — who it is for and when to skip it — and a short `For:` line
-  alone wastes the preview.
+- `og:description` and `<meta name="description">`: the `For:` line, whole where it fits
+  160 characters and cut on a word boundary with an ellipsis where it does not. **The
+  first sentence of `Skip if:` is appended only where both fit**, because the two together
+  are the site's actual product — who it is for and when to skip it — and half a sentence
+  is worse than one sentence whole.
+  Amended in FIX-34. The first rule tested the `For:` line alone against 120 and appended
+  the skip sentence whatever that made the total, which put 549 of 632 descriptions past
+  what a preview shows. The cap was 200, typed from memory under a comment claiming it was
+  measured; measuring it gave about 125 from one debugger, and 160 is the ruled middle.
+  The median `For:` line measured 104 characters on 2026-09-07, so most descriptions still
+  carry both halves.
 - `og:url` and `<link rel="canonical">`: the absolute `/r/<id>/` URL.
 - `og:type`: `article`.
 
