@@ -748,6 +748,14 @@ a.card-path:hover { text-decoration: underline; }
 /* Anything that must stay separately clickable sits above the overlay. */
 .sp-cta { position: relative; z-index: 1; }
 
+/* FIX-34 R1. So does anything that must stay selectable. The step's `why` is the
+   site's argument for putting that resource at that position - the one sentence a
+   reader would quote - and the stretched link covered it: a drag over it selected
+   nothing, and elementFromPoint returned the title's <a>. Above the overlay the text
+   selects and a click on the words does nothing, while every other part of the step
+   stays one click. Cards keep the stretched link, as D12 ruled. */
+.sp-why { position: relative; z-index: 1; }
+
 /* ----------------------------------------------------------------- tile ---- */
 /* align-self:start, or the grid stretches the tile to the height of the text
    column and six steps render as six tall coloured slabs. */
