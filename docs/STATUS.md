@@ -2,7 +2,7 @@
      this file, and a number typed here would be silently replaced. Change the
      data, then run ./build.sh. -->
 
-# Status — measured 2026-09-21
+# Status — measured 2026-09-24
 
 Every figure below is computed from `data/` at build time. Nothing here is typed.
 THE-PROJECT.md and README point at this file rather than repeating it.
@@ -114,22 +114,22 @@ comparative recommendation should not point at something a year stale.
 
 | item | publisher | published | days | level |
 |---|---|---|---|---|
-| Guidance on AI detection, and why we're disabling Turnitin | Vanderbilt University | 2023-08-16 | 1132 | basic |
-| AI prompt engineering: A deep dive | Anthropic | 2024-09-05 | 746 | confident |
-| Tips for building AI agents | Anthropic | 2025-02-13 | 585 | builder |
-| Anthropic Education Report: How University Students Use Cl | Anthropic | 2025-04-08 | 531 | basic |
-| Mastering Claude Code in 30 minutes | Anthropic | 2025-05-22 | 487 | confident |
-| Lesson 1: Introduction to AI Fluency \| AI Fluency: Framewo | Anthropic | 2025-06-12 | 466 | never-used |
-| Lesson 2B: The 4D Framework \| AI Fluency: Framework & Foun | Anthropic | 2025-06-12 | 466 | never-used |
-| Lesson 7: Effective prompting techniques (Deep Dive) \| AI  | Anthropic | 2025-06-12 | 466 | basic |
-| The Model Context Protocol (MCP) | Anthropic | 2025-06-16 | 462 | builder |
-| Advancing Claude for Education | Anthropic | 2025-07-09 | 439 | basic |
-| Claude for Small Business (Back-Office AI, honest review) | Eigent AI | 2025-07-29 | 419 | basic |
-| Prompting 101 \| Code w/ Claude | Anthropic | 2025-07-31 | 417 | basic |
-| Claude Code best practices \| Code w/ Claude | Anthropic | 2025-07-31 | 417 | confident |
-| Using AI for Writing Feedback | Northeastern University | 2025-08-01 | 416 | basic |
-| Anthropic Education Report: how educators use Claude | Anthropic | 2025-08-27 | 390 | basic |
-| Writing effective tools for agents - with agents | Anthropic | 2025-09-11 | 375 | builder |
+| Guidance on AI detection, and why we're disabling Turnitin | Vanderbilt University | 2023-08-16 | 1135 | basic |
+| AI prompt engineering: A deep dive | Anthropic | 2024-09-05 | 749 | confident |
+| Tips for building AI agents | Anthropic | 2025-02-13 | 588 | builder |
+| Anthropic Education Report: How University Students Use Cl | Anthropic | 2025-04-08 | 534 | basic |
+| Mastering Claude Code in 30 minutes | Anthropic | 2025-05-22 | 490 | confident |
+| Lesson 1: Introduction to AI Fluency \| AI Fluency: Framewo | Anthropic | 2025-06-12 | 469 | never-used |
+| Lesson 2B: The 4D Framework \| AI Fluency: Framework & Foun | Anthropic | 2025-06-12 | 469 | never-used |
+| Lesson 7: Effective prompting techniques (Deep Dive) \| AI  | Anthropic | 2025-06-12 | 469 | basic |
+| The Model Context Protocol (MCP) | Anthropic | 2025-06-16 | 465 | builder |
+| Advancing Claude for Education | Anthropic | 2025-07-09 | 442 | basic |
+| Claude for Small Business (Back-Office AI, honest review) | Eigent AI | 2025-07-29 | 422 | basic |
+| Prompting 101 \| Code w/ Claude | Anthropic | 2025-07-31 | 420 | basic |
+| Claude Code best practices \| Code w/ Claude | Anthropic | 2025-07-31 | 420 | confident |
+| Using AI for Writing Feedback | Northeastern University | 2025-08-01 | 419 | basic |
+| Anthropic Education Report: how educators use Claude | Anthropic | 2025-08-27 | 393 | basic |
+| Writing effective tools for agents - with agents | Anthropic | 2025-09-11 | 378 | builder |
 
 ## Needs a person
 
@@ -182,7 +182,7 @@ stale. Opening one either restores its date or confirms it should go.
 
 | item | date we had | age it implied |
 |---|---|---|
-| The Ethics of Using AI | 2023-02-01 | 1328 days |
+| The Ethics of Using AI | 2023-02-01 | 1331 days |
 
 ### Cells with no independent material (1)
 

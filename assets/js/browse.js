@@ -237,7 +237,7 @@
                    !sel.officials.length;
     var text = LC.countText(n);
     if (onlyRole && sel.roles.length === 1) {
-      text = n + " resources for " + LC.ROLE[sel.roles[0]];
+      text = n + " resources for " + LC.roleNoun(sel.roles[0]);
     } else if (searching) {
       /* The applied-filter chips already show which role is on, so naming it again here
          only makes a live-region announcement longer. Attribute the count to the query
@@ -400,7 +400,7 @@
     if (!offer) return;
     el.thin.innerHTML =
       '<div class="empty prose"><strong>Only ' + n + ' at “' +
-      LC.esc(LC.LEVEL[sel.levels[0]]) + '” for ' + LC.esc(LC.ROLE[sel.roles[0]]) +
+      LC.esc(LC.LEVEL[sel.levels[0]]) + '” for ' + LC.esc(LC.roleNoun(sel.roles[0])) +
       '.</strong>The level below, “' + LC.esc(LC.LEVEL[offer.below]) + '”, has ' +
       offer.more + '. ' + offerHTML(offer.below) + '</div>';
   }

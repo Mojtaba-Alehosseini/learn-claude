@@ -189,6 +189,8 @@ def main():
 
     roles = label_map("ROLE")
     levels = label_map("LEVEL")
+    # The sentence form, where the chip word will not carry one. See LC.ROLE_NOUN.
+    nouns = label_map("ROLE_NOUN")
 
     for d in OUT_DIRS:
         shutil.rmtree(os.path.join(ROOT, d), ignore_errors=True)
@@ -212,10 +214,10 @@ def main():
             desc = ("Start with " + ", ".join(titles) + "."
                     if titles else
                     "Everything we have checked for %s who has %s."
-                    % (role_label, level_label))
+                    % (nouns.get(role, role_label), level_label))
             write_page("c/%s/%s" % (role, level), br_shell, 3,
                        suffixed("Claude for %s who has %s"
-                                % (role_label, level_label)),
+                                % (nouns.get(role, role_label), level_label)),
                        fit(desc, DESC_MAX),
                        "%sc/%s/%s/" % (SITE, role, level),
                        {"role": role, "level": level})

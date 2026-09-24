@@ -33,7 +33,7 @@
   }
 
   function whoFor(p) {
-    var labels = (p.roles || []).map(function (r) { return LC.ROLE[r] || r; });
+    var labels = (p.roles || []).map(function (r) { return LC.roleNoun(r); });
     if (!labels.length) return "";
     return '<p class="path-stats">For ' + LC.esc(labels.join(", ")) + '</p>';
   }
@@ -79,7 +79,7 @@
       return;
     }
 
-    var label = role && LC.ROLE[role] ? LC.ROLE[role] : null;
+    var label = role && LC.ROLE[role] ? LC.roleNoun(role) : null;
     var mine = label ? paths.filter(function (p) { return namesRole(p, role); }) : [];
     var rest = label ? paths.filter(function (p) { return !namesRole(p, role); }) : paths;
 
@@ -189,7 +189,7 @@
   function one(p, role) {
     var rows = stepsWithItems(p);
     document.title = p.title + " — Learn Claude";
-    var label = role && LC.ROLE[role] ? LC.ROLE[role] : null;
+    var label = role && LC.ROLE[role] ? LC.roleNoun(role) : null;
     var qs = role ? "?role=" + encodeURIComponent(role) : "";
 
     /* "← All paths" said how to leave and not where you were. */

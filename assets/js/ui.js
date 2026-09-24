@@ -40,6 +40,24 @@
      every cost value in this catalogue that is not `free` is `free-account`,
      `paid-once` or `subscription`, so pairing it with the plain word "free" answers
      a question nobody who reads the chip is asking. */
+  /* The chip labels answer "Who are you?" and three of them answer it with what the
+     reader does rather than what they are called: "not a coder", "working with data",
+     "running a business". That reads right on a chip and falls apart in a sentence -
+     the served cell pages went out titled "Claude for working with data who has built
+     things with it", which is the title that unfurls when somebody pastes the link.
+
+     So the sentence form is its own map, and only where the chip word will not do. A
+     role missing from here uses its chip label, which is the common case. */
+  LC.ROLE_NOUN = {
+    "non-technical": "a non-coder",
+    "data-analyst": "an analyst",
+    "business-founder": "a business owner"
+  };
+
+  LC.roleNoun = function (role) {
+    return LC.ROLE_NOUN[role] || LC.ROLE[role] || role;
+  };
+
   LC.COST = {
     "free": "free", "free-account": "sign-up needed",
     "paid-once": "pay once", "subscription": "subscription"
